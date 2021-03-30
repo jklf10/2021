@@ -1,0 +1,257 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>代码规范——缩进</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>新手学编程（基础认知篇）</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 什么是编程语言.html">01. 什么是编程语言</a>
+    </li>
+    <li class="">
+      <a href="02. 主流的编程语言和应用场景.html">02. 主流的编程语言和应用场景</a>
+    </li>
+    <li class="">
+      <a href="03. 为什么存在那么多种编程语言.html">03. 为什么存在那么多种编程语言</a>
+    </li>
+    <li class="">
+      <a href="04. 代码规范——命名.html">04. 代码规范——命名</a>
+    </li>
+    <li class="">
+      <a href="05. 代码规范——注释.html">05. 代码规范——注释</a>
+    </li>
+    <li class="">
+      <a href="06. 代码规范——缩进.html">06. 代码规范——缩进</a>
+    </li>
+    <li class="">
+      <a href="07. 代码规范——空格.html">07. 代码规范——空格</a>
+    </li>
+    <li class="">
+      <a href="08. 认识错误和异常.html">08. 认识错误和异常</a>
+    </li>
+    <li class="">
+      <a href="09. 异常处理.html">09. 异常处理</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. 代码规范——缩进</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="缩进">缩进</h2>
+<p><br/><br />
+<strong>缩进是指在每一行代码左端空出一部分长度，使读者可以更清晰地从外观上看出程序的逻辑结构，厘清控制流程（条件、循环等）与其内部、外部代码之间的关系。</strong></p>
+<p>缩进在大多数编程语言中并不是必要条件，而只是作为辅助。<strong>不过，部分语言，比如Python，使用缩进来定义代码块。</strong>在这类语言中，缩进对编译器或解释器有意义，而不仅仅是代码风格问题。</p>
+<p>下面是同一段C语言代码有缩进和无缩进的代码样式，虽然它们的运行效果相同，但在缺少缩进的情况下，这段代码的逻辑结构变的难以辨别。</p>
+<h3 id="有缩进的代码样式">有缩进的代码样式</h3>
+<pre><code>int main(int argc, char *argv[])  
+{  
+   int value = rand() % 2;  
+
+   if (value == 0) {  
+       call_function_a();  
+       call_function_b();  
+   } else {  
+       call_function_c();  
+   }  
+}  </code></pre>
+<h3 id="无缩进的代码样式">无缩进的代码样式</h3>
+<pre><code>int main(int argc, char *argv[])  {  
+int value = rand() % 2;  
+if (value &gt; 25) {  
+call_a_function();  
+call_another_function();  
+} else {call_b_function(); }} </code></pre>
+<h2 id="练习：修改以下代码使其缩进正确。">练习：修改以下代码使其缩进正确。</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#693033-indentation-py" class="nav-item nav-link  active show" id="tab-693033-indentation-py" data-toggle="tab" role="tab"
+      aria-controls="693033-indentation-py" aria-selected="true">indentation.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="693033-indentation-py" aria-labelledby="tab-693033-indentation-py" role="tabpanel">
+      <pre><code></code># 请修改以下Python代码的缩进方式，使其正常运行。
+
+tokens &#x3D; [&#x27;&lt;greeting&gt;&#x27;, &#x27;Hello World!&#x27;, &#x27;&lt;/greeting&gt;&#x27;]
+
+count &#x3D; 0
+
+#### 待修改区域（仅调整缩进，无需修改代码内容）####
+for token in tokens:
+if token[0] &#x3D;&#x3D; &#x27;&lt;&#x27; and token[-1] &#x3D;&#x3D; &#x27;&gt;&#x27;:
+count +&#x3D; 1
+#### 待修改区域 ####
+
+print (count)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="建议：">建议：</h3>
+<p>使用<strong>空格</strong>进行缩进，不要在代码中使用<code>Tab</code>来进行缩进，更不要混用空格和<code>Tab</code>。因为不同编辑器对<code>Tab</code>键的解释不同，使用空格可以避免这个问题。如果习惯使用<code>Tab</code>，请先设定编辑器将Tab自动转为空格。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. 代码规范——空格.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. 代码规范——缩进')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

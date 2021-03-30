@@ -1,0 +1,1057 @@
+{
+  "data": {
+    "lesson": {
+      "id": 691698,
+      "key": "b9e420a6-0143-495f-a8c2-2b1fc6526c70",
+      "title": "新手学编程（基础认知篇）",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "在本节课，你将学习关于编程语言的基础知识，了解代码规范，常见的错误和异常。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 691700,
+          "key": "3d37f534-5b15-4b5a-b8ae-7dc41c4daf92",
+          "title": "什么是编程语言",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3d37f534-5b15-4b5a-b8ae-7dc41c4daf92",
+            "completed_at": "2018-10-03T15:41:22.559Z",
+            "last_viewed_at": "2018-10-06T11:08:52.956Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691701,
+              "key": "346ccb0f-3186-49ae-9dd4-419a441eeed2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 你知道世界上一共有多少种人类语言吗？  \n《语言学及语言交际工具问题手册》提供的人类语言总量是5561种，除此之外，有很多种语言文字已经在世界上消失了。\n\n正如我们使用“中文”、“英文”等各种语言与人类进行沟通一样，**编程语言（Programming Language）**是我们向计算机发出指令时所使用的语言。  \n\n## 那么，世界上一共有多少种编程语言呢?  \n通过维基百科，我们可以查询到600多种。虽然编程语言的种类如此众多，但总的来说可以分成**机器语言、汇编语言、高级语言**三大类。  \n<ul>\n<li>**[机器语言](https://zh.wikipedia.org/wiki/%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80)**是用二进制代码表示的，计算机能直接识别和执行的一种机器指令的集合。比如```0000```代表加载，```0001```代表储存。同时，由于程序全是0和1组成的指令代码，直观性极差，绝大多数的程序员并不会学习机器语言。\n<li>**[汇编语言](https://zh.wikipedia.org/wiki/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80)**是机器语言二进制指令的文本形式。比如，加法指令```00000011```写成汇编语言就是 ADD。只要还原成二进制，汇编语言就可以被 CPU 直接执行。由于汇编语言是直接面向处理器（Processor）的程序设计语言，它所操作的对象不是具体的数据，而是寄存器或储存器，这使得汇编语言的执行速度比其他语言快，但同时也使编程更加复杂。因此在实际应用中，经常与高级语言配合使用，提高程序的执行速度和效率。\n<li>**[高级语言](https://zh.wikipedia.org/wiki/%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80)**是以人类的日常语言为基础的一种编程语言，使用一般人易于接受的文字来表示，有较高的可读性和可移植性。高级语言并不特指某一种具体的语言，而是包括很多编程语言，如流行的 Java，Python，C#，Pascal等，都属于高级语言。\n</ul>",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691704,
+              "key": "fd9ec1cd-41ab-489d-a052-99eebd532692",
+              "title": "连线题： 猜猜以下语句分别是什么语言",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fd9ec1cd-41ab-489d-a052-99eebd532692",
+                "completed_at": "2018-10-06T11:12:35.069Z",
+                "last_viewed_at": "2018-10-06T11:12:35.069Z",
+                "unstructured": "{\"answer_ids\":[\"a1534151816536\",\"a1534151887835\",\"a1534151900283\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": " 猜猜以下语句分别是什么语言？"
+                },
+                "concepts_label": "代码",
+                "answers_label": "编程语言",
+                "concepts": [
+                  {
+                    "text": "1000100111011000",
+                    "correct_answer": {
+                      "id": "a1534151816536",
+                      "text": "机器语言"
+                    }
+                  },
+                  {
+                    "text": "Mov ax，bx",
+                    "correct_answer": {
+                      "id": "a1534151887835",
+                      "text": "汇编语言"
+                    }
+                  },
+                  {
+                    "text": "print 'Hello, world!'",
+                    "correct_answer": {
+                      "id": "a1534151900283",
+                      "text": "高级语言"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1534151900283",
+                    "text": "高级语言"
+                  },
+                  {
+                    "id": "a1534151923779",
+                    "text": "自然语言"
+                  },
+                  {
+                    "id": "a1534151887835",
+                    "text": "汇编语言"
+                  },
+                  {
+                    "id": "a1534151816536",
+                    "text": "机器语言"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 691705,
+          "key": "60f18069-d856-4a1d-997a-47200897bade",
+          "title": "主流的编程语言和应用场景",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "60f18069-d856-4a1d-997a-47200897bade",
+            "completed_at": "2018-10-06T11:12:37.620Z",
+            "last_viewed_at": "2018-10-06T11:12:38.677Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 691706,
+              "key": "ed46b01c-73b0-4b95-84c0-e4ccc75f1a49",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "上一节的课程中提到，世界上现存的编程语言有600多种。看到这一数字可能让你感到有些不知所措，不知道从哪里开始学习。  \n接下来我们将介绍几种对初学者比较友好的主流编程语言，你可以结合自己学习编程的目标和方向，选择合适的语言，开启你的编程之路。\n\n## [Python](https://www.python.org/)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 691709,
+              "key": "8ddc8c47-407f-4bc4-a7bd-7482f2f9702a",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b714eeb_python-logo/python-logo.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8ddc8c47-407f-4bc4-a7bd-7482f2f9702a",
+              "caption": "",
+              "alt": "",
+              "width": 470,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 691716,
+              "key": "eef05d97-b09f-4586-a977-ed46500bcc29",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  受欢迎度：❤❤❤❤  **\n\n**用途：**Python 可以被用于各类领域，比如，Web 开发、游戏开发、AI人工智能技术、学术研究及科学领域等等。Python语言具有极高的可读性和灵活性，在中国，正被逐渐纳入中小学教材和高考科目。  \n\n**特点：**Python语法简洁清晰，特色之一是强制用空白符(white space)作为语句缩进。Python具有丰富和强大的库。它常被昵称为胶水语言，能够把用其他语言制作的各种模块（尤其是C/C++）很轻松地联结在一起。  \n\n## [Java](https://www.java.com/)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 692452,
+              "key": "a15fd17b-c089-4280-af68-4a47b11dd776",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b729f33_e5ac15c48c1659b04db393fdc3a2e2fe/e5ac15c48c1659b04db393fdc3a2e2fe.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a15fd17b-c089-4280-af68-4a47b11dd776",
+              "caption": "",
+              "alt": "",
+              "width": 360,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 692453,
+              "key": "8e92a09f-3eff-4d31-a73d-c3de72425d8d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤❤❤ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \t受欢迎度：❤❤❤❤❤**\n\n**用途：**根据TIOBE的数据，自90年代创建以来，Java一直是最受欢迎的语言。Java是一门通用型的语言，可以编写桌面应用程序、Web应用程序、分布式系统和嵌入式系统应用程序等。  \n\n**特点：**Java具有简单性、面向对象、分布式、健壮性、安全性、平台独立与可移植性、多线程、动态性等特点。换成人类语言来归纳，Java受欢迎主要因为它几乎可以在所有系统上运行，其中绝大多数的Android应用程序都是用Java构建的。加上它能够向后兼容，易于维护，又有良好的可移植性，拥有庞大的用户群，相信在很长一段时间内，它都会被广泛使用。\n\n## [C](https://en.wikipedia.org/wiki/C_(programming_language)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 692455,
+              "key": "2e3ae209-ffd1-4af7-98cd-f968ea760238",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b72a16f_c/c.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2e3ae209-ffd1-4af7-98cd-f968ea760238",
+              "caption": "",
+              "alt": "",
+              "width": 200,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 692458,
+              "key": "da30206a-accc-4179-8a8a-6c751266e69c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤❤❤\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 受欢迎度：❤❤❤❤❤  **\n\n**用途：**C语言是一门通用计算机编程语言，一般用来底层开发，如操作系统，嵌入式开发，或者要求效率，高可移植性的地方。\n\n**特点：**C是迄今为止最常用的最古老，最受欢迎的编程语言之一，也是汽车，电子和其他设备中嵌入式系统最流行的语言。相比Python，学习C语言可以充分了解计算机相关知识。学会了C语言后，你可以方便的学会几乎一切编程语言。  \n## [JavaScript](https://www.javascript.com/)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 692460,
+              "key": "f53296a5-d292-472f-af68-64e3d1948b32",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b72a24d_learn-javascript/learn-javascript.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f53296a5-d292-472f-af68-64e3d1948b32",
+              "caption": "",
+              "alt": "",
+              "width": 180,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 692461,
+              "key": "10a2aad9-167b-4864-820e-4ebf010f0f23",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤❤\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;受欢迎度：❤❤❤❤**\n\n**用途**：JavaScript 最初只能用于网站前端开发，而且是前端开发的唯一语言，没有可替代性。近年来由于 Node.js 的流行，JavaScript 在网站后台开发中也占有了一席之地，并且迅速打入移动开发领域。\n\n**特点：**JavaScript 也是 GitHub 社区最受欢迎的编程语言，它的入门难度较低，可在任何浏览器上开发及调试，不需要安装额外的软件。\n## [PHP](http://www.php.net/)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 692463,
+              "key": "294c0f8a-2318-45c4-9757-e4b84199d044",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b72a303_php/php.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/294c0f8a-2318-45c4-9757-e4b84199d044",
+              "caption": "",
+              "alt": "",
+              "width": 200,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 692467,
+              "key": "3f3f4fdf-dd83-4eeb-9688-c8c5ea0817e2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤❤\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;受欢迎度：❤❤❤❤**\n\n**用途：**PHP是一种服务器端的脚本语言，可广泛用在网站开发，API接口开发，服务器端开发，广告系统开发，内部OA系统开发，移动端后台开发，游戏开发等。\n\n**特点：**PHP的语法结构非常简单，开发速度快，部署和维护都极其简单。但相应的，和其他语言相比，PHP的错误处理考虑的不够周全。\n## [Ruby](https://www.ruby-lang.org/en/)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 692468,
+              "key": "a6e6f8e0-da0d-4f5a-9d1d-4cde79be8f69",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b72a7b3_main-qimg-bf864bc5278fd4f4facdf39673bb6d37/main-qimg-bf864bc5278fd4f4facdf39673bb6d37.gif",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a6e6f8e0-da0d-4f5a-9d1d-4cde79be8f69",
+              "caption": "",
+              "alt": "",
+              "width": 331,
+              "height": 119,
+              "instructor_notes": null
+            },
+            {
+              "id": 692469,
+              "key": "44ae1d67-0aa6-4326-8f54-84f50e5c266a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤❤\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;受欢迎度：❤❤❤**\n\n**用途：**Ruby 是一门免费的、简单的、直观的、可扩展的、可移植的、解释的脚本语言，用于快速而简单的面向对象编程。许多硅谷公司就是建立在 Ruby 上，包括 Airbnb，Twitch，GitHub 和 Twitter。\n\n**特点：**“减少编程时候的不必要的琐碎时间，令编写程序的人高兴”，是设计Ruby语言的Matz的一个首要的考虑。因此Ruby和Python一样，都是公认的最好的入门语言。\n## [Objective-C](https://zh.wikipedia.org/wiki/Objective-C)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693012,
+              "key": "29e3c3d0-b31c-4aa5-aaa4-81143eb50ce0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b738caa_objc/objc.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/29e3c3d0-b31c-4aa5-aaa4-81143eb50ce0",
+              "caption": "",
+              "alt": "",
+              "width": 200,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 693013,
+              "key": "c36785cd-bc29-4697-93f8-643a644d001d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤❤❤\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\t受欢迎度：❤❤❤**\n\n**用途：**Objective-C是由苹果开发的种面向对象的编程语言，主要用于OS X 和 iOS 操作系统，及其相关API、Cocoa 和Cocoa Touch的主要编程语言。\n\n**特点：**Objective-C是一个用C写成很小的运行库，因此Objective-C学起来不是特别容易，因为你需要同时了解一些C语言的知识。\n## [Go](https://golang.org/)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693015,
+              "key": "af669b27-3168-43aa-a8da-3a2ec66221e6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b739046_1200px-go-logo-aqua.svg/1200px-go-logo-aqua.svg.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/af669b27-3168-43aa-a8da-3a2ec66221e6",
+              "caption": "",
+              "alt": "",
+              "width": 300,
+              "height": 100,
+              "instructor_notes": null
+            },
+            {
+              "id": 693016,
+              "key": "9129fb0b-17fe-4fc5-837c-55c2fe8acb43",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤❤ \t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\t受欢迎度：❤❤**\n\n**用途：**Go语言是2009年由Google开发的开源编程语言，主要用于服务器端的编程。它提供了海量并行的支持，因此对于游戏服务端的开发特别有利。\n\n**特点：**使用Go编译的程序可以媲美C或C++代码的速度，而且更加安全、支持并行进程。Go的代码风格与Java比较相似，对于Java开发者来说，应该能够轻松学会Go。\n## [SQL](https://zh.wikipedia.org/zh-hans/SQL)\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693017,
+              "key": "881aae52-7f22-41d2-8c75-94229258ee8f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b73929b_zzhhiulntduf29-ixmiu/zzhhiulntduf29-ixmiu.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/881aae52-7f22-41d2-8c75-94229258ee8f",
+              "caption": "",
+              "alt": "",
+              "width": 400,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 693019,
+              "key": "575cb25b-7d5c-4d90-80ae-b6c17beeba00",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**学习难度：❤\t &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\t\t受欢迎度：❤❤❤❤**\n\n**用途：**SQL是结构化查询语言（Structured Query Language）的简称，用于存取数据以及查询、更新和管理关系数据系统。如今，SQL语言也被应用于人工智能领域等很多其他领域的数据检索中。\n\n**特点：**SQL语言简洁，易学易用：在ANSI标准中，只包含了94个英文单词，核心功能只用6个动词，语法接近英语口语。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 693020,
+          "key": "361569a4-8ae1-471d-9cf9-7d1d023ca80c",
+          "title": "为什么存在那么多种编程语言",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "361569a4-8ae1-471d-9cf9-7d1d023ca80c",
+            "completed_at": "2018-10-06T11:16:00.548Z",
+            "last_viewed_at": "2018-10-06T11:16:00.348Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693021,
+              "key": "cb0f8fe9-d399-4ed3-bbeb-46c95f9da3af",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 为什么世界上存在这么多种编程语言呢？\n\n<br/>\n**一个主要的原因是，不同的领域对开发有不同的需求，不同的任务需要用到不同的工具。**\n\n比如你需要对数据进行大量的查询和修改操作，那么SQL语言就是很好的选择；而如果你想进行嵌入式开发，那么C语言就可以胜任。\n\n现在你理解了为什么有这么多的编程语言，也就不用再纠结于这么多的编程语言要如何选择。你要做的，只是根据不同的应用场景，选择合适的编程语言。\n\n**下表是各种应用场景中常用的编程语言，供你参考：**\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693022,
+              "key": "ce30eb15-58fa-4b9c-a3a4-7605c11a2d67",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "|**应用场景 **| **编程语言** | \n| ------ | ------ |\n| 应用程序开发| C，C#，C++，Java，Visual Basic，Tcl | \n| AI人工智能开发 | AIML，Haskell，C++，Prolog，Python，Lisp，Java|\n|数据库开发|SQL，Oracle，MySQL，FoxPro|\n|游戏开发|C，C#，C++，DarkBASIC，Java，unity|\n|Android端APP开发|Java，Kotlin|\n|iOS端APP开发|Objective-C，Swift|\n|前端开发|HTML，CSS，JavaScript，Node.js|\n|服务器端web应用开发|PHP，Python，Ruby，JavaScript|\n|脚本开发|AutoHotkey，awk，bash，Batch file，Perl，Python，Tcl|\n|数据科学和算法设计|Python，Matlab，R，SAS，SQL，Scala|\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 693023,
+          "key": "a7d244a0-1ad6-4a28-a086-7a98620e257a",
+          "title": "代码规范——命名",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a7d244a0-1ad6-4a28-a086-7a98620e257a",
+            "completed_at": "2018-10-06T11:17:27.045Z",
+            "last_viewed_at": "2018-10-06T11:17:27.171Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693024,
+              "key": "ba40f0ed-80c4-4815-b2a7-6f870b205cc2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "简洁、干净的代码，不仅在质量上更为可靠，也为后期维护、升级奠定了良好基础。在阅读和修改别人的代码时，若该代码拥有良好的代码风格，那么阅读者也会更加容易读懂和上手。\n\n我们将介绍适用于任何编程语言的代码规范，希望你能仔细阅读，在写下第一行代码时就开始遵循以下原则。\n\n## 命名\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693025,
+              "key": "72c72e32-7222-475c-a44c-55b3603c34ba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Dos\n- 变量、函数或类的名称必须**言之有物**，它应该告诉读者，它的功能是什么，它应该怎么用。\n- **使用可搜索的名称**。试想一下，在几万行代码中搜索```capitalized_name```是很容易的，但要找出命名为 ```a ```或``` e ```的变量可就麻烦了，因为它们是最常出现的字母，在每个程序、每段代码中都可能出现。由此可见，搜得到的长名称优于自造的短名称。\n\n### Don'ts\n- 代码中的命名**严禁使用拼音和英文混合**的方式，当然更**不允许使用中文**。\n- **不要使用过长的命名。**当然，一个言之有物的命名和一个简短的命名之间可能存在一些冲突，这时就需要你用最精炼的词语来表达最丰富的含义。如果实在做不到，那言之有物的优先级更高一些。比如 ```how_heavy_is_the_car ```就不如``` car_weight ```来的简洁。\n- 尽量不要使用单词缩写或首字母缩写，只有当标识符过长时才考虑使用单词缩写。**不要自创缩写**，尽量使用被广泛接受的缩写。比如把```Message```缩写成```Msg```，把```Quantity```缩写成```Qty```是可以接受的，但缩写成```Mes```和```Quan```却是不可接受的。\n- 不要以数字系列命名，比如 ```value1, value2,..., valueN```。\n- 不要用**L**的**小写字母 l**和**大写字母 O **作为变量名，因为他们看起来和数字“壹”、“零”太过相似。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693026,
+              "key": "45857e08-ca68-4ddb-b16c-136680a74622",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "以下是一个变量名造成误导的极端例子：\n```py\nsome_value = l\nif 0==1:\n\tsome_value = O1\nelse:\n\tl = 01\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693027,
+              "key": "28639e4a-fd11-4654-8e4d-e91de7221017",
+              "title": "matching：命名是否合理并指出原因",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "28639e4a-fd11-4654-8e4d-e91de7221017",
+                "completed_at": "2018-10-06T11:24:00.713Z",
+                "last_viewed_at": "2018-10-06T11:24:00.713Z",
+                "unstructured": "{\"answer_ids\":[\"a1534305576090\",\"a1534305734239\",\"a1534305632037\",\"a1534305772840\",\"a1534305789632\",\"a1534305819498\",\"a1534305834745\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请指出以下命名是好坏并指出原因"
+                },
+                "concepts_label": "命名",
+                "answers_label": "判断",
+                "concepts": [
+                  {
+                    "text": "item1",
+                    "correct_answer": {
+                      "id": "a1534305576090",
+                      "text": "坏的命名：数字系列"
+                    }
+                  },
+                  {
+                    "text": "order_id",
+                    "correct_answer": {
+                      "id": "a1534305632037",
+                      "text": "好的命名"
+                    }
+                  },
+                  {
+                    "text": "getHomeAddress",
+                    "correct_answer": {
+                      "id": "a1534305734239",
+                      "text": "好的命名"
+                    }
+                  },
+                  {
+                    "text": "ANJ",
+                    "correct_answer": {
+                      "id": "a1534305772840",
+                      "text": "坏的命名：首字母缩写"
+                    }
+                  },
+                  {
+                    "text": "youzheng_bianma",
+                    "correct_answer": {
+                      "id": "a1534305789632",
+                      "text": "坏的命名：拼音命名"
+                    }
+                  },
+                  {
+                    "text": "days_in_month",
+                    "correct_answer": {
+                      "id": "a1534305819498",
+                      "text": "好的命名"
+                    }
+                  },
+                  {
+                    "text": "number_of_days_in_a_month",
+                    "correct_answer": {
+                      "id": "a1534305834745",
+                      "text": "坏的命名：命名过长"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1534305789632",
+                    "text": "坏的命名：拼音命名"
+                  },
+                  {
+                    "id": "a1534305819498",
+                    "text": "好的命名"
+                  },
+                  {
+                    "id": "a1534305734239",
+                    "text": "好的命名"
+                  },
+                  {
+                    "id": "a1534305576090",
+                    "text": "坏的命名：数字系列"
+                  },
+                  {
+                    "id": "a1534305865301",
+                    "text": "坏的命名：使用了字母O"
+                  },
+                  {
+                    "id": "a1534305834745",
+                    "text": "坏的命名：命名过长"
+                  },
+                  {
+                    "id": "a1534305632037",
+                    "text": "好的命名"
+                  },
+                  {
+                    "id": "a1534305772840",
+                    "text": "坏的命名：首字母缩写"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 693028,
+          "key": "30147463-7c4a-4bbb-b70d-ae79e086f2e0",
+          "title": "代码规范——注释",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30147463-7c4a-4bbb-b70d-ae79e086f2e0",
+            "completed_at": "2018-10-06T11:24:04.526Z",
+            "last_viewed_at": "2018-10-06T11:24:05.622Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693029,
+              "key": "71ffcb64-ec42-4a24-8678-b4b123cc417d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 注释\n<br/>\n我们希望代码本身就能清晰的表达它在干什么，而不需要任何注释。\n\n但如果你写的类、函数等需要被别人调用，亦或是代码涉及到比较深层的专业知识，那么，配上注释对保持代码的可读性是至关重要的。 ```注：为保证示例的丰富性，本章节选用了多种编程语言的范例代码块，在学习过程中不必过度关注语法，了解通用的代码规范即可。```\n- 每个**类的定义**和**函数的声明**处都应附带一份注释来描述其功能和用法（除非它们非常简洁短小），并且提醒读者在正确使用此类、函数时应当考虑的因素。当然，也可以在注释里放一小段代码来演示类和函数的基本用法。  \n\n```\nclass SampleClass(object):\n    \"\"\"Summary of class here.\n\n    Longer class information....\n    Longer class information....\n\n    Attributes:\n        likes_spam: A boolean indicating if we like SPAM or not.\n        eggs: An integer count of the eggs we have laid.\n    \"\"\"\n\n    def __init__(self, likes_spam=False):\n        \"\"\"Inits SampleClass with blah.\"\"\"\n        self.likes_spam = likes_spam\n        self.eggs = 0\n\n    def public_method(self):\n        \"\"\"Performs operation blah.\"\"\"\n```\n- 对于复杂的操作，可以在**代码块上面**写上若干行注释。对于不是一目了然的代码，应在其**行尾**添加注释。\n\n``` python\n# 将数据中存在“|”的字符串拆分为列表。\ncol_names = [col for col in df] # 提取df的列名\nfor col in col_names: # 循环处理带“|”的数据\n    try: \n        if '|' in df[col][0]:\n            df[col] = df[col].apply(lambda x:str(x).split('|'))\n    except:\n        pass\n```\n- 但请务必注意，**不要用注释来描述代码**，要假设阅读代码的人比你更专业， 他只是不知道你的代码意图。以下是一个错误示范：\n\n```C\n// Utility method that returns when this.closed is true. Throws an exception\n// if the timeout is reached.\nPublic synchronized void waitForClose (final long timeoutMillis)\nThrows Exception\n{\n\tif(!closed)\n\t{\n\t\twait(timeoutMillis);\n\t\tif(!closed)\n\t\t\tThrow new Exception(“MockResponseSender could not be closed”);\n\t}\n}\n\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 693031,
+          "key": "dfec0494-a895-43c6-9364-bf1aedd21c21",
+          "title": "代码规范——缩进",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dfec0494-a895-43c6-9364-bf1aedd21c21",
+            "completed_at": "2018-10-06T11:27:44.611Z",
+            "last_viewed_at": "2018-10-06T11:27:44.482Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693032,
+              "key": "8007f36f-5b53-44fd-927e-c0c2113f51d9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 缩进\n<br/>\n**缩进是指在每一行代码左端空出一部分长度，使读者可以更清晰地从外观上看出程序的逻辑结构，厘清控制流程（条件、循环等）与其内部、外部代码之间的关系。**\n\n缩进在大多数编程语言中并不是必要条件，而只是作为辅助。**不过，部分语言，比如Python，使用缩进来定义代码块。**在这类语言中，缩进对编译器或解释器有意义，而不仅仅是代码风格问题。\n\n下面是同一段C语言代码有缩进和无缩进的代码样式，虽然它们的运行效果相同，但在缺少缩进的情况下，这段代码的逻辑结构变的难以辨别。\n\n### 有缩进的代码样式\n\n```\nint main(int argc, char *argv[])  \n{  \n   int value = rand() % 2;  \n       \n   if (value == 0) {  \n       call_function_a();  \n       call_function_b();  \n   } else {  \n       call_function_c();  \n   }  \n}  \n```\n### 无缩进的代码样式\n\n```\nint main(int argc, char *argv[])  {  \nint value = rand() % 2;  \nif (value > 25) {  \ncall_a_function();  \ncall_another_function();  \n} else {call_b_function(); }} \n```\n## 练习：修改以下代码使其缩进正确。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693033,
+              "key": "21b8dafb-bccb-4532-95ac-0093dc038a27",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "21b8dafb-bccb-4532-95ac-0093dc038a27",
+                "completed_at": "2018-10-06T11:28:47.791Z",
+                "last_viewed_at": "2018-10-06T11:29:29.567Z",
+                "unstructured": "{\"indentation.py\":\"# 请修改以下Python代码的缩进方式，使其正常运行。\\r\\n\\r\\ntokens = ['<greeting>', 'Hello World!', '</greeting>']\\r\\n\\r\\ncount = 0\\r\\n\\r\\n#### 待修改区域（仅调整缩进，无需修改代码内容）####\\r\\n    for token in tokens:\\r\\n    if token[0] == '<' and token[-1] == '>':\\r\\n    count += 1\\r\\n#### 待修改区域 ####\\r\\n\\r\\nprint (count)\"}"
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "4998143463260160",
+                "initial_code_files": [
+                  {
+                    "text": "# 请修改以下Python代码的缩进方式，使其正常运行。\r\n\r\ntokens = ['<greeting>', 'Hello World!', '</greeting>']\r\n\r\ncount = 0\r\n\r\n#### 待修改区域（仅调整缩进，无需修改代码内容）####\r\nfor token in tokens:\r\nif token[0] == '<' and token[-1] == '>':\r\ncount += 1\r\n#### 待修改区域 ####\r\n\r\nprint (count)",
+                    "name": "indentation.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 693034,
+              "key": "0ba84c08-6931-4f1b-ba41-e10c590d8642",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 建议：\n使用**空格**进行缩进，不要在代码中使用```Tab```来进行缩进，更不要混用空格和```Tab```。因为不同编辑器对```Tab```键的解释不同，使用空格可以避免这个问题。如果习惯使用```Tab```，请先设定编辑器将Tab自动转为空格。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 693035,
+          "key": "75acb423-f96e-452d-91ac-9c0420e344b2",
+          "title": "代码规范——空格",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "75acb423-f96e-452d-91ac-9c0420e344b2",
+            "completed_at": "2018-10-06T11:29:42.273Z",
+            "last_viewed_at": "2018-10-06T11:29:43.362Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693036,
+              "key": "abf35baa-39a5-4df0-8397-6e5bf012c9c3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 空格\n最后，介绍标点两边空格使用的标准排版规范。\n\n- 括号内不要有空格",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693037,
+              "key": "2f326344-346d-4c65-a2f5-19e2b80367b2",
+              "title": "单选题：括号内不要有空格",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2f326344-346d-4c65-a2f5-19e2b80367b2",
+                "completed_at": "2018-10-06T11:29:55.029Z",
+                "last_viewed_at": "2018-10-06T11:29:55.029Z",
+                "unstructured": "{\"selected_id\":\"a1534315968077\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下语句符合代码规范的是？",
+                "answers": [
+                  {
+                    "id": "a1534315968077",
+                    "text": "```spam(ham[1], {eggs: 2}, [])```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534316052018",
+                    "text": "```spam( ham[ 1 ], { eggs: 2 }, [ ] )```",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 693038,
+              "key": "144a08f4-0e8c-4fe9-ab8d-95441e3208ec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "- 在**[二元操作符](https://technet.microsoft.com/zh-cn/library/czs2584d)**两边都加上一个空格, 比如赋值(=), 比较(==, <, >, !=, <>, <=, >=), 布尔(and, or, not)，在**参数和[一元操作符](https://baike.baidu.com/item/%E4%B8%80%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/3273371)**之间则不加空格。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693042,
+              "key": "60151730-53dc-48a0-9c5a-dcb32bbab465",
+              "title": "练习：二元操作符",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "60151730-53dc-48a0-9c5a-dcb32bbab465",
+                "completed_at": "2018-10-06T11:31:16.719Z",
+                "last_viewed_at": "2018-10-06T11:37:29.576Z",
+                "unstructured": "{\"selected_ids\":[\"a1534316850149\",\"a1534316922377\"],\"is_correct\":false}"
+              },
+              "question": {
+                "prompt": "以下语句符合代码规范的有？",
+                "answers": [
+                  {
+                    "id": "a1534316850149",
+                    "text": "```x = -5```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534316907657",
+                    "text": "```x=-5```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534316922377",
+                    "text": "```+ + x```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534316944771",
+                    "text": "```++x```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534316953666",
+                    "text": "```if (x && !y)```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534316980930",
+                    "text": "```if (x && ! y)```",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 693040,
+              "key": "4b45f484-384f-4b39-add8-660d1ca707e4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "- 不要在逗号, 分号, 冒号前面加空格, 但应该在它们后面加(行尾除外)。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693043,
+              "key": "1b5e49ee-175c-4340-a04b-4f89f846f095",
+              "title": "练习：以下语句符合代码规范的有？",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1b5e49ee-175c-4340-a04b-4f89f846f095",
+                "completed_at": "2018-10-06T11:37:59.965Z",
+                "last_viewed_at": "2018-10-06T11:38:11.187Z",
+                "unstructured": "{\"selected_ids\":[\"a1534317110303\",\"a1534317180480\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下语句符合代码规范的有？",
+                "answers": [
+                  {
+                    "id": "a1534317110303",
+                    "text": "```print x, y```",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534317142848",
+                    "text": "```print x , y```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534317157834",
+                    "text": "```if x == 4 :```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534317180480",
+                    "text": "```if x == 4:```",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 693044,
+              "key": "2ac98040-a060-46d8-aab7-c87831c576c0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "- 当’=’用于指示关键字参数或默认参数值时, 不要在其两侧使用空格。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693045,
+              "key": "3d987244-6a0a-497a-8f09-8274abeb154c",
+              "title": "判断：以下语句符合代码规范的有？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3d987244-6a0a-497a-8f09-8274abeb154c",
+                "completed_at": "2018-10-06T11:39:03.226Z",
+                "last_viewed_at": "2018-10-06T11:39:03.226Z",
+                "unstructured": "{\"selected_id\":\"a1534317370291\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下语句符合代码规范的是？",
+                "answers": [
+                  {
+                    "id": "a1534317330322",
+                    "text": "```def complex(real, imag = 0.0): return magic(r = real, i = imag)```",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534317370291",
+                    "text": "```def complex(real, imag=0.0): return magic(r=real, i=imag)```",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 693050,
+              "key": "c75c9466-fe2d-4199-8334-31cef0a03ed7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "- 不要用空格来**垂直对齐**多行间的标记（=，#，//）, 因为这种对齐方式把我们的目光从重要的东西上拉开。比如下面的命名列表就会让你从上到下阅读变量名，而忽视了他们的**类型**。\n```\nPublic FitNesseExpediter(   Socket s, \n                              FitNesseContext context) throws Exception\n{\n    this.context =            context;\n    socket =                  s;\n    input =\t\t\t       s.getInputStream();\n    output =\t\t\t      s.getOutputStream();\n    requestParsingTimeLimit = 10000;\t\n}\n```\t",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 693058,
+          "key": "6a9e89e6-434b-4d95-a23a-48df55d2e875",
+          "title": "认识错误和异常",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6a9e89e6-434b-4d95-a23a-48df55d2e875",
+            "completed_at": "2018-10-06T11:39:55.753Z",
+            "last_viewed_at": "2018-10-06T11:51:19.855Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693059,
+              "key": "27fc4b1c-def2-4ed6-910f-0525b366b0ab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 什么是错误和异常\n\n当你迈出编程第一步后，可能很快就会遭遇到程序报错。但请不用担心，就像与人交流时会因为发音、语法等造成误解一样，当计算机不能理解你表达的思想，而只是按照你交给的指令执行时，就会导致报警和出错。\n\n我们认为即使是熟练的程序员，也很难一次编写出没有 bug 的程序。这时，我们要做的就是读懂报错信息，用计算机所能理解的语法来修改你的表述。\n\n\n下面是当你编写第一个```Hello，world！```程序时就可能遭遇的Bug，下图以Python环境为例来拆解报错信息：\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693063,
+              "key": "ec94759e-f114-48c5-a4c2-308e2a53d864",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b73f306_1/1.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ec94759e-f114-48c5-a4c2-308e2a53d864",
+              "caption": "",
+              "alt": "",
+              "width": 935,
+              "height": 326,
+              "instructor_notes": null
+            },
+            {
+              "id": 693065,
+              "key": "fb4987cc-8811-4a1e-9f0a-0fdf035bccfa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "上面这个语句由于没为```print```的内容加上括号而导致了语法错误。\n- File指出了错误所在的文件；\n- line1说明错误发生在代码的第一行；\n- 向上的小箭头标识错误位置；\n- ```SyntaxError```说明它是一个语法错误，后面紧接着的是关于语法错误的提示信息。\n\n## Python标准异常\n当程序检测到一个错误时，解释器无法继续执行下去，于是抛出提示信息，这就是异常。\n### 练习：上网搜一搜，下表中列出的分别是哪类异常。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693070,
+              "key": "b6d69991-6f4d-4a5c-b8c4-200e49009a9d",
+              "title": "练习：异常",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b6d69991-6f4d-4a5c-b8c4-200e49009a9d",
+                "completed_at": "2018-10-06T11:44:59.476Z",
+                "last_viewed_at": "2018-10-06T11:45:05.311Z",
+                "unstructured": "{\"answer_ids\":[\"a1534325893433\",\"a1534325976802\",\"a1534326011761\",\"a1534326230632\",\"a1534326027395\",\"a1534326059778\"],\"is_correct\":false}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配异常类型"
+                },
+                "concepts_label": "异常类型",
+                "answers_label": "异常原因",
+                "concepts": [
+                  {
+                    "text": "TypeError",
+                    "correct_answer": {
+                      "id": "a1534325893433",
+                      "text": "类型错误（不同类型之间的操作造成）"
+                    }
+                  },
+                  {
+                    "text": "ZeroDivisionError",
+                    "correct_answer": {
+                      "id": "a1534325976802",
+                      "text": "数学运算时除数为0"
+                    }
+                  },
+                  {
+                    "text": "IndexError",
+                    "correct_answer": {
+                      "id": "a1534326011761",
+                      "text": "索引超出序列范围"
+                    }
+                  },
+                  {
+                    "text": "IndentationError",
+                    "correct_answer": {
+                      "id": "a1534326027395",
+                      "text": "缩进错误，常见于Tab和Space混用"
+                    }
+                  },
+                  {
+                    "text": "IOError",
+                    "correct_answer": {
+                      "id": "a1534326059778",
+                      "text": "输入输出错误（比如你要读的文件不存在）"
+                    }
+                  },
+                  {
+                    "text": "OSError",
+                    "correct_answer": {
+                      "id": "a1534326070132",
+                      "text": "操作系统产生的异常"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1534326212113",
+                    "text": "语法错误"
+                  },
+                  {
+                    "id": "a1534326230632",
+                    "text": "访问一个不存在的变量"
+                  },
+                  {
+                    "id": "a1534325976802",
+                    "text": "数学运算时除数为0"
+                  },
+                  {
+                    "id": "a1534326011761",
+                    "text": "索引超出序列范围"
+                  },
+                  {
+                    "id": "a1534325893433",
+                    "text": "类型错误（不同类型之间的操作造成）"
+                  },
+                  {
+                    "id": "a1534326059778",
+                    "text": "输入输出错误（比如你要读的文件不存在）"
+                  },
+                  {
+                    "id": "a1534326070132",
+                    "text": "操作系统产生的异常"
+                  },
+                  {
+                    "id": "a1534326027395",
+                    "text": "缩进错误，常见于Tab和Space混用"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 693071,
+          "key": "a5809b64-476a-44ca-8883-00f7b962ccf0",
+          "title": "异常处理",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a5809b64-476a-44ca-8883-00f7b962ccf0",
+            "completed_at": "2018-10-06T11:45:10.157Z",
+            "last_viewed_at": "2018-10-06T11:51:15.515Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693072,
+              "key": "69b014ce-519d-4d78-9523-371b955584e5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "如果通过报错信息，能够推测出问题出现的模块和原因，就可以着手开始修复代码了；但如果bug没有这么容易抓住，不妨尝试一下几种新手友好的抓虫方法：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 790432,
+              "key": "d4149ece-3b43-4397-900d-840693d59cb9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/December/5c0397a2_img-3418/img-3418.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d4149ece-3b43-4397-900d-840693d59cb9",
+              "caption": "",
+              "alt": "",
+              "width": 600,
+              "height": 450,
+              "instructor_notes": null
+            },
+            {
+              "id": 790433,
+              "key": "b6c93954-1d0e-42c2-9623-73e3c228a0ee",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "- **二分定位法：**把现有程序一点点注释掉，运行查看是否仍然报错，逐渐缩小Bug范围。\n- **IDE调试：**你可以通过加[断点](https://en.wikipedia.org/wiki/Breakpoint)、[单步调试](https://baike.baidu.com/item/%E5%8D%95%E6%AD%A5%E8%B0%83%E8%AF%95/4652909)的方式，通过获取清晰的中间结果，来确定你的代码逻辑是否符合预期。\n- **小黄鸭调试法：**在程序的调试和除错过程中，在桌上放一只小黄鸭（或其他任何东西），耐心地向小黄鸭解释每一行程序的作用，以此来激发灵感与发现矛盾。\n- 在Python入门课程中，你还会学习使用```Try / Except ```语句来捕捉异常，在解释器中进行实验等更多调试技巧。\n\n最后，如果对于某些bug实在没有头绪或者不知道从哪里下手，最好的方法就是上网搜索。\n\n大多数程序员会将他们遇到的问题发布在专业论坛上，你可以通过搜索报错信息的关键字，查看别人分享的经验和文章。如果你遇到的问题完全搜索不到，还可以到[Stack Overflow](https://stackoverflow.com/) 等网站进行求助。关于搜索和提问的建议，我们将在下一章节做具体介绍。\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>异常处理</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>新手学编程（基础认知篇）</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 什么是编程语言.html">01. 什么是编程语言</a>
+    </li>
+    <li class="">
+      <a href="02. 主流的编程语言和应用场景.html">02. 主流的编程语言和应用场景</a>
+    </li>
+    <li class="">
+      <a href="03. 为什么存在那么多种编程语言.html">03. 为什么存在那么多种编程语言</a>
+    </li>
+    <li class="">
+      <a href="04. 代码规范——命名.html">04. 代码规范——命名</a>
+    </li>
+    <li class="">
+      <a href="05. 代码规范——注释.html">05. 代码规范——注释</a>
+    </li>
+    <li class="">
+      <a href="06. 代码规范——缩进.html">06. 代码规范——缩进</a>
+    </li>
+    <li class="">
+      <a href="07. 代码规范——空格.html">07. 代码规范——空格</a>
+    </li>
+    <li class="">
+      <a href="08. 认识错误和异常.html">08. 认识错误和异常</a>
+    </li>
+    <li class="">
+      <a href="09. 异常处理.html">09. 异常处理</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. 异常处理</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>如果通过报错信息，能够推测出问题出现的模块和原因，就可以着手开始修复代码了；但如果bug没有这么容易抓住，不妨尝试一下几种新手友好的抓虫方法：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/img-3418.jpg" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li><strong>二分定位法：</strong>把现有程序一点点注释掉，运行查看是否仍然报错，逐渐缩小Bug范围。</li>
+<li><strong>IDE调试：</strong>你可以通过加<a href="https://en.wikipedia.org/wiki/Breakpoint" rel="noopener noreferrer" target="_blank">断点</a>、<a href="https://baike.baidu.com/item/%E5%8D%95%E6%AD%A5%E8%B0%83%E8%AF%95/4652909" rel="noopener noreferrer" target="_blank">单步调试</a>的方式，通过获取清晰的中间结果，来确定你的代码逻辑是否符合预期。</li>
+<li><strong>小黄鸭调试法：</strong>在程序的调试和除错过程中，在桌上放一只小黄鸭（或其他任何东西），耐心地向小黄鸭解释每一行程序的作用，以此来激发灵感与发现矛盾。</li>
+<li>在Python入门课程中，你还会学习使用<code>Try / Except</code>语句来捕捉异常，在解释器中进行实验等更多调试技巧。</li>
+</ul>
+<p>最后，如果对于某些bug实在没有头绪或者不知道从哪里下手，最好的方法就是上网搜索。</p>
+<p>大多数程序员会将他们遇到的问题发布在专业论坛上，你可以通过搜索报错信息的关键字，查看别人分享的经验和文章。如果你遇到的问题完全搜索不到，还可以到<a href="https://stackoverflow.com/" rel="noopener noreferrer" target="_blank">Stack Overflow</a> 等网站进行求助。关于搜索和提问的建议，我们将在下一章节做具体介绍。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. 异常处理')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

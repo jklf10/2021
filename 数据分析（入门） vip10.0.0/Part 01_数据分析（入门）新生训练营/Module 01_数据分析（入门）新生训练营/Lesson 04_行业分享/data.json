@@ -1,0 +1,173 @@
+{
+  "data": {
+    "lesson": {
+      "id": 431279,
+      "key": "09be69fe-ce7f-43ee-ac3a-d1780eb16bc6",
+      "title": "行业分享",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在本课中，将由几位数据分析师和数据科学家来了解数据分析工作的内容和他们的从业经验。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/09be69fe-ce7f-43ee-ac3a-d1780eb16bc6/431279/1544199696085/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E7%9A%84%E7%94%9F%E6%B4%BB+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/09be69fe-ce7f-43ee-ac3a-d1780eb16bc6/431279/1544199692186/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E7%9A%84%E7%94%9F%E6%B4%BB+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 431274,
+          "key": "0eeeb7bb-ca8c-4545-ae07-7da888a6ba44",
+          "title": "前言",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0eeeb7bb-ca8c-4545-ae07-7da888a6ba44",
+            "completed_at": "2018-07-27T03:38:59.740Z",
+            "last_viewed_at": "2018-10-06T11:07:58.147Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431258,
+              "key": "68c38751-7776-4e1c-ae3c-aad8c9a61eaf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 行业访谈\n\n由于此课程旨在帮助你开始或推进数据科学的职业生涯，因此清楚了解数据分析师和数据科学家的工作对你来说非常重要。在接下来的章节中，你将观看一系列业内人士访谈。他们会介绍数据分析师的工作内容以及他们的职业生涯。你会听到来自不同行业的人士分享他们的经验和观点。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431277,
+          "key": "8de80327-cd35-4132-b2cb-77ec75c42ce1",
+          "title": "行业分享：Lada Adamic",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8de80327-cd35-4132-b2cb-77ec75c42ce1",
+            "completed_at": "2018-07-27T03:39:14.938Z",
+            "last_viewed_at": "2020-02-23T01:28:55.931Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431263,
+              "key": "8c13867d-4148-470f-ada4-df12fbfb8f12",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lada Adamic，数据科学家\n\n观看下面的视频，Lada Adamic 在其中谈论了她对 Facebook 模因的分析。这是数据分析师和科学家们所做的有趣工作的一个很好例子。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431264,
+              "key": "f1c8816e-2a8c-475e-9d00-fa72a6013133",
+              "title": "Lada 的钱袋模因 - 使用 R 进行数据分析",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Isa_FGQrvgs",
+                "china_cdn_id": "Isa_FGQrvgs.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431275,
+          "key": "a7fd1d3d-6d33-4de6-9a76-472696ecce49",
+          "title": "行业分享：Jessica Kirkpatrick",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a7fd1d3d-6d33-4de6-9a76-472696ecce49",
+            "completed_at": "2018-07-27T03:42:57.759Z",
+            "last_viewed_at": "2020-01-02T19:49:05.784Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431259,
+              "key": "b08afc51-ea79-46cf-9b53-8076f09bbd36",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Jessica Kirkpatrick，一名在职数据科学家（现就职于 Slack）\n\n观看下面的视频，Jessica 谈论了她为何成为一名数据科学家，她如何看待自己的角色，以及为想要成为分析师的学生提供建议。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431260,
+              "key": "2e8512cb-f433-49ef-8660-40b0171056d5",
+              "title": "数据科学家访谈",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kNnFA5hxI2Q",
+                "china_cdn_id": "kNnFA5hxI2Q.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431276,
+          "key": "8d1f75c7-f3c1-4563-af90-fd6a15573e52",
+          "title": "行业分享：Sinthuja Nagalingam",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8d1f75c7-f3c1-4563-af90-fd6a15573e52",
+            "completed_at": "2018-07-27T03:45:57.542Z",
+            "last_viewed_at": "2020-01-02T19:49:08.484Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431261,
+              "key": "1623eb3b-8302-4ed1-96ca-d58a6ca657ad",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Sinthuja Nagalingam，萨米特公立学校的数据分析经理\n\n观看下面的视频，Sinthuja 在其中解释了她为何热爱数据分析工作。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431262,
+              "key": "4e397d49-f8ce-451d-b74a-ea2df8c31919",
+              "title": "业内人士 Sinthuja 访谈",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "R5XBQ7dSz7w",
+                "china_cdn_id": "R5XBQ7dSz7w.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

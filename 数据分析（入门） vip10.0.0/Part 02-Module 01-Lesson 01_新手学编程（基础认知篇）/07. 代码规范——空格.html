@@ -1,0 +1,370 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>代码规范——空格</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>新手学编程（基础认知篇）</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 什么是编程语言.html">01. 什么是编程语言</a>
+    </li>
+    <li class="">
+      <a href="02. 主流的编程语言和应用场景.html">02. 主流的编程语言和应用场景</a>
+    </li>
+    <li class="">
+      <a href="03. 为什么存在那么多种编程语言.html">03. 为什么存在那么多种编程语言</a>
+    </li>
+    <li class="">
+      <a href="04. 代码规范——命名.html">04. 代码规范——命名</a>
+    </li>
+    <li class="">
+      <a href="05. 代码规范——注释.html">05. 代码规范——注释</a>
+    </li>
+    <li class="">
+      <a href="06. 代码规范——缩进.html">06. 代码规范——缩进</a>
+    </li>
+    <li class="">
+      <a href="07. 代码规范——空格.html">07. 代码规范——空格</a>
+    </li>
+    <li class="">
+      <a href="08. 认识错误和异常.html">08. 认识错误和异常</a>
+    </li>
+    <li class="">
+      <a href="09. 异常处理.html">09. 异常处理</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. 代码规范——空格</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="空格">空格</h2>
+<p>最后，介绍标点两边空格使用的标准排版规范。</p>
+<ul>
+<li>括号内不要有空格</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>单选题：括号内不要有空格</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>以下语句符合代码规范的是？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1534315968077" name="693037" id="a1534315968077">
+        <label for="a1534315968077"><p><code>spam(ham[1], {eggs: 2}, [])</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1534316052018" name="693037" id="a1534316052018">
+        <label for="a1534316052018"><p><code>spam( ham[ 1 ], { eggs: 2 }, [ ] )</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    ```spam(ham[1], {eggs: 2}, [])```
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>在<strong><a href="https://technet.microsoft.com/zh-cn/library/czs2584d" rel="noopener noreferrer" target="_blank">二元操作符</a></strong>两边都加上一个空格, 比如赋值(=), 比较(==, <, >, !=, &lt;&gt;, <=, >=), 布尔(and, or, not)，在<strong>参数和<a href="https://baike.baidu.com/item/%E4%B8%80%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/3273371" rel="noopener noreferrer" target="_blank">一元操作符</a></strong>之间则不加空格。</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>练习：二元操作符</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>以下语句符合代码规范的有？</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1534316850149" name="693042" id="a1534316850149">
+      <label for="a1534316850149"><p><code>x = -5</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534316907657" name="693042" id="a1534316907657">
+      <label for="a1534316907657"><p><code>x=-5</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534316922377" name="693042" id="a1534316922377">
+      <label for="a1534316922377"><p><code>+ + x</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534316944771" name="693042" id="a1534316944771">
+      <label for="a1534316944771"><p><code>++x</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534316953666" name="693042" id="a1534316953666">
+      <label for="a1534316953666"><p><code>if (x &amp;&amp; !y)</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534316980930" name="693042" id="a1534316980930">
+      <label for="a1534316980930"><p><code>if (x &amp;&amp; ! y)</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>```x = -5```</li>
+      <li>```++x```</li>
+      <li>```if (x && !y)```</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>不要在逗号, 分号, 冒号前面加空格, 但应该在它们后面加(行尾除外)。</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>练习：以下语句符合代码规范的有？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>以下语句符合代码规范的有？</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1534317110303" name="693043" id="a1534317110303">
+      <label for="a1534317110303"><p><code>print x, y</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534317142848" name="693043" id="a1534317142848">
+      <label for="a1534317142848"><p><code>print x , y</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534317157834" name="693043" id="a1534317157834">
+      <label for="a1534317157834"><p><code>if x == 4 :</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1534317180480" name="693043" id="a1534317180480">
+      <label for="a1534317180480"><p><code>if x == 4:</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>```print x, y```</li>
+      <li>```if x == 4:```</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>当’=’用于指示关键字参数或默认参数值时, 不要在其两侧使用空格。</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>判断：以下语句符合代码规范的有？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>以下语句符合代码规范的是？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1534317330322" name="693045" id="a1534317330322">
+        <label for="a1534317330322"><p><code>def complex(real, imag = 0.0): return magic(r = real, i = imag)</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1534317370291" name="693045" id="a1534317370291">
+        <label for="a1534317370291"><p><code>def complex(real, imag=0.0): return magic(r=real, i=imag)</code></p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    ```def complex(real, imag=0.0): return magic(r=real, i=imag)```
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <ul>
+<li>不要用空格来<strong>垂直对齐</strong>多行间的标记（=，#，//）, 因为这种对齐方式把我们的目光从重要的东西上拉开。比如下面的命名列表就会让你从上到下阅读变量名，而忽视了他们的<strong>类型</strong>。</li>
+</ul>
+<pre><code>Public FitNesseExpediter(   Socket s, 
+                              FitNesseContext context) throws Exception
+{
+    this.context =            context;
+    socket =                  s;
+    input =                   s.getInputStream();
+    output =                  s.getOutputStream();
+    requestParsingTimeLimit = 10000;    
+}</code></pre>
+<pre><code></code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08. 认识错误和异常.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. 代码规范——空格')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

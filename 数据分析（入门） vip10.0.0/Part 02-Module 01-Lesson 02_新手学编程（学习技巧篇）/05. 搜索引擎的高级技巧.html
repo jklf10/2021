@@ -1,0 +1,267 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>搜索引擎的高级技巧</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>新手学编程（学习技巧篇）</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 搜索意识.html">01. 搜索意识</a>
+    </li>
+    <li class="">
+      <a href="02. 搜索引擎的选择.html">02. 搜索引擎的选择</a>
+    </li>
+    <li class="">
+      <a href="03. 搜索关键词的选择.html">03. 搜索关键词的选择</a>
+    </li>
+    <li class="">
+      <a href="04. 搜索结果的甄选.html">04. 搜索结果的甄选</a>
+    </li>
+    <li class="">
+      <a href="05. 搜索引擎的高级技巧.html">05. 搜索引擎的高级技巧</a>
+    </li>
+    <li class="">
+      <a href="06. 提问渠道.html">06. 提问渠道</a>
+    </li>
+    <li class="">
+      <a href="07. 像程序员一样提问.html">07. 像程序员一样提问</a>
+    </li>
+    <li class="">
+      <a href="08. 学习编程，如何记笔记？.html">08. 学习编程，如何记笔记？</a>
+    </li>
+    <li class="">
+      <a href="09. 编程思维和初学者心态.html">09. 编程思维和初学者心态</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. 搜索引擎的高级技巧</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="精确匹配搜索">精确匹配搜索</h2>
+<p>使用<strong>双引号 “”</strong>，在搜索框中键入<code>TypeError: 'tuple' object does not support item assignment</code>，可以得到该段文字连在一起的结果，如果你想要一个没有方差的精确异常，那么这可以剔除掉结果中令你讨厌的部分。</p>
+<h2 id="去除搜索">去除搜索</h2>
+<p>比如当你搜索Pascal这个编程语言时，会出现大量关于pascal作为压力单位的搜索结果。那么你只需要键入<code>pascal -unit</code> 就可以返回包含<code>pascal</code>但不包含<code>unit</code>的搜索结果。注意减号前面必须有空格，后面必须没空格。</p>
+<h2 id="文件类型搜索">文件类型搜索</h2>
+<p>使用<strong>filetype</strong>，在搜索框中键入<code>filetype:pdf 机器学习</code>可以搜索出有关机器学习内容pdf文档，而且这些文档基本都是可直接下载。还可以变换为其他的如<code>filetype:doc</code>、<code>filetype:ppt</code>、<code>filetype:xls</code>等等，注意其中的冒号为<strong>英文的冒号</strong>。</p>
+<h2 id="站内搜索">站内搜索</h2>
+<p>使用<strong>site</strong>，在搜索框中键入<code>site:zhihu.com 无人驾驶</code>,可以在知乎搜索有关无人驾驶的一些资料信息，这个特别适用针对某些信息可能在哪些网站上出现的一个快速搜索方法，注意要<strong>使用英文冒号，网站名称不用加www</strong>。</p>
+<h2 id="标题中搜索">标题中搜索</h2>
+<p>使用<strong>intitle</strong>，在搜索框中键入<code>intitle: python 教程</code>，表示搜索结果的标题都必须含有<strong>python</strong>和<strong>教程</strong>两个关键字，这种方式可以帮助你排除无关网页。同理还可以使用限定词<code>inurl:</code>在 url 链接中搜索，以及<code>intext:</code>在网页主体中搜索。</p>
+<h2 id="通配符-">通配符 *</h2>
+<p>使用<strong>星号 * ，填补搜索关键词中的缺失部分</strong>，不论缺失的是一连串单词的其中一个还是一个单词的某一部分。此外，当你希望搜索一篇确定性偏低的文章时，也可以使用星号填补缺失部分。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>连线题：搜索</p></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>使用下面哪个搜索关键词组合，最容易得到理想的搜索结果？</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>“深度学习 语音合成 论文”</p></button>
+  <button class="btn btn-primary"><p>filetype:pdf Speech Synthesizers  LSTM</p></button>
+  <button class="btn btn-primary"><p>“java.lang.ClassCastException” site: stackoverflow.com</p></button>
+  <button class="btn btn-primary"><p>java lang Class Cast Exception 报错</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>想寻找的内容</p>
+      </th>
+      <th>
+        <p>搜索关键词组合</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>寻找一篇LSTM深度学习算法在语音合成领域的英文论文</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>想知道报错 java.lang.ClassCastException 的解决方案</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>想寻找的内容</p>
+        </th>
+        <th>
+          <p>搜索关键词组合</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>寻找一篇LSTM深度学习算法在语音合成领域的英文论文</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>filetype:pdf Speech Synthesizers  LSTM</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>想知道报错 java.lang.ClassCastException 的解决方案</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>“java.lang.ClassCastException” site: stackoverflow.com</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. 提问渠道.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 搜索引擎的高级技巧')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

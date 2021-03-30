@@ -1,0 +1,239 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>代码规范——注释</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>新手学编程（基础认知篇）</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 什么是编程语言.html">01. 什么是编程语言</a>
+    </li>
+    <li class="">
+      <a href="02. 主流的编程语言和应用场景.html">02. 主流的编程语言和应用场景</a>
+    </li>
+    <li class="">
+      <a href="03. 为什么存在那么多种编程语言.html">03. 为什么存在那么多种编程语言</a>
+    </li>
+    <li class="">
+      <a href="04. 代码规范——命名.html">04. 代码规范——命名</a>
+    </li>
+    <li class="">
+      <a href="05. 代码规范——注释.html">05. 代码规范——注释</a>
+    </li>
+    <li class="">
+      <a href="06. 代码规范——缩进.html">06. 代码规范——缩进</a>
+    </li>
+    <li class="">
+      <a href="07. 代码规范——空格.html">07. 代码规范——空格</a>
+    </li>
+    <li class="">
+      <a href="08. 认识错误和异常.html">08. 认识错误和异常</a>
+    </li>
+    <li class="">
+      <a href="09. 异常处理.html">09. 异常处理</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. 代码规范——注释</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="注释">注释</h2>
+<p><br/><br />
+我们希望代码本身就能清晰的表达它在干什么，而不需要任何注释。</p>
+<p>但如果你写的类、函数等需要被别人调用，亦或是代码涉及到比较深层的专业知识，那么，配上注释对保持代码的可读性是至关重要的。 <code>注：为保证示例的丰富性，本章节选用了多种编程语言的范例代码块，在学习过程中不必过度关注语法，了解通用的代码规范即可。</code></p>
+<ul>
+<li>每个<strong>类的定义</strong>和<strong>函数的声明</strong>处都应附带一份注释来描述其功能和用法（除非它们非常简洁短小），并且提醒读者在正确使用此类、函数时应当考虑的因素。当然，也可以在注释里放一小段代码来演示类和函数的基本用法。  </li>
+</ul>
+<pre><code>class SampleClass(object):
+    """Summary of class here.
+
+    Longer class information....
+    Longer class information....
+
+    Attributes:
+        likes_spam: A boolean indicating if we like SPAM or not.
+        eggs: An integer count of the eggs we have laid.
+    """
+
+    def __init__(self, likes_spam=False):
+        """Inits SampleClass with blah."""
+        self.likes_spam = likes_spam
+        self.eggs = 0
+
+    def public_method(self):
+        """Performs operation blah."""</code></pre>
+<ul>
+<li>对于复杂的操作，可以在<strong>代码块上面</strong>写上若干行注释。对于不是一目了然的代码，应在其<strong>行尾</strong>添加注释。</li>
+</ul>
+<pre><code># 将数据中存在“|”的字符串拆分为列表。
+col_names = [col for col in df] # 提取df的列名
+for col in col_names: # 循环处理带“|”的数据
+    try: 
+        if '|' in df[col][0]:
+            df[col] = df[col].apply(lambda x:str(x).split('|'))
+    except:
+        pass</code></pre>
+<ul>
+<li>但请务必注意，<strong>不要用注释来描述代码</strong>，要假设阅读代码的人比你更专业， 他只是不知道你的代码意图。以下是一个错误示范：</li>
+</ul>
+<pre><code class="C language-C">// Utility method that returns when this.closed is true. Throws an exception
+// if the timeout is reached.
+Public synchronized void waitForClose (final long timeoutMillis)
+Throws Exception
+{
+    if(!closed)
+    {
+        wait(timeoutMillis);
+        if(!closed)
+            Throw new Exception(“MockResponseSender could not be closed”);
+    }
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. 代码规范——缩进.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 代码规范——注释')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

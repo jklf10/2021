@@ -1,0 +1,196 @@
+{
+  "data": {
+    "lesson": {
+      "id": 458833,
+      "key": "0e3408d5-b6dc-466e-af1f-c4349935d1cb",
+      "title": "欢迎来到纳米学位",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "数据分析纳米学位的毕业要求、课程团队以及其他课程相关的重要信息。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/0e3408d5-b6dc-466e-af1f-c4349935d1cb/458833/1544199004733/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/0e3408d5-b6dc-466e-af1f-c4349935d1cb/458833/1544199002058/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 431269,
+          "key": "38aaf3ea-6b30-4755-9a3a-231f28c997ab",
+          "title": "认识课程团队",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "38aaf3ea-6b30-4755-9a3a-231f28c997ab",
+            "completed_at": "2018-07-27T03:35:37.441Z",
+            "last_viewed_at": "2018-10-06T11:07:37.062Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431231,
+              "key": "47e44600-6605-436b-88fb-c95b0790e94b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b41534_wave/wave.gif",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/47e44600-6605-436b-88fb-c95b0790e94b",
+              "caption": "",
+              "alt": "",
+              "width": 960,
+              "height": 540,
+              "instructor_notes": null
+            },
+            {
+              "id": 431232,
+              "key": "847d8646-c234-454e-adda-e73ab4e9b65b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 认识课程团队！\n\n优达学城有众多讲师来为你的数据科学之旅提供帮助。下面是其中一些讲师，从左到右分别为:\n\n* **Sam Nelson，产品主管:** Sam 与优达学城的行业合作伙伴合作，确保此项目有助于学生实现目标。 \n* **Mat Leonard，课程主管:** Mat 负责监督课程，以确保我们教授最具相关性的技能。他也是数据可视化课程的讲师。\n* **Jessica Park，项目经理:** Jessica 负责确保项目的一切顺利运行，包括与我们的课程开发人员、课程主管和外部合作伙伴协作。\n* **Paola Gonzalez，学生体验助理:** Paola 负责确保学生的所有问题都得到回答，并在项目中帮助他们成功。\n* **Mike Yi，学生体验主管:** Mike 与评审员及导师合作，确保学生在项目过程时获得及时的帮助和反馈。\n* **Trish McCallister，内容主管:** Trish 在整个项目中管理所有视频和其他学习资料的制作。\n* **Eric Elliott，社区经理:** Eric 在整个计划中管理学生 Slack 社区和其他社区计划。\n* 未提供照片的: 有些讲师未包含在上图中。在第 1 学期：**Philip Mallory** 与 **Charlie Turner** 将带你学习 Python。** Juno Lee** 将向你介绍数据分析过程，以及如何使用 Python 分析数据。Sebastian，优达学城创始人，将带你深入了解统计及其应用。在第 2 学期：**David Venturi** 将向你介绍数据整理和数据收集、评估和清理过程。**Chris Saden** 将引导你通过探索性数据分析从数据中提取隐藏的见解。\n\n能够与你一起踏上这段学习之旅，我们倍感荣幸！这将是乐趣无穷的过程，我很高兴与你同行。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 149450,
+          "key": "35511891150923",
+          "title": "如何提交项目",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "35511891150923",
+            "completed_at": "2018-07-27T03:36:08.863Z",
+            "last_viewed_at": "2018-10-06T11:07:40.160Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 148239,
+              "key": "3551189115",
+              "title": "如何提交项目？",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "jCJa_VP6qgg",
+                "china_cdn_id": "jCJa_VP6qgg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 281625,
+          "key": "592f478e-11db-41e9-9925-e68edfd270b6",
+          "title": "诚信和决心",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "592f478e-11db-41e9-9925-e68edfd270b6",
+            "completed_at": "2018-07-27T03:37:35.870Z",
+            "last_viewed_at": "2018-10-06T11:07:42.230Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 280384,
+              "key": "d38a0767-1ccc-41d6-9b35-dde99c0de5b8",
+              "title": "诚信和决心",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zCOr3O50gQM",
+                "china_cdn_id": "zCOr3O50gQM.mp4"
+              }
+            },
+            {
+              "id": 280385,
+              "key": "b2d20736-0cbf-4896-92e6-e3fe439a7776",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 诚信准则\n\n### 要在纳米学位课程中保持良好信誉，你必须遵守以下诚信准则：\n\n*我在此确认我提交的所有项目作业均由我个人完成。相应地，我将记录和引述我提交的项目中来自网站、书籍、论坛、博文、Github 库或任何其他来源的部分的出处，并解释使用它们的原因。我明白在我的纳米学位授予之前，我需要通过毕业面试，通过视频通话向优达学城导师解释我完成的项目。*\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 280386,
+              "key": "8062939b-9be2-4f75-b897-d145d81e30fb",
+              "title": "诚信和决心",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8062939b-9be2-4f75-b897-d145d81e30fb",
+                "completed_at": "2018-07-27T03:38:37.928Z",
+                "last_viewed_at": "2018-07-27T03:38:37.928Z",
+                "unstructured": "{\"selected_ids\":[\"a1485211354625\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "请在阅读完上方诚信准则后勾选下方方框。",
+                "answers": [
+                  {
+                    "id": "a1485211354625",
+                    "text": "我已阅读、理解并承诺遵守诚信准则。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 595058,
+          "key": "0444f23b-b6dc-40f5-bf4c-c5b545850502",
+          "title": "本地化服务",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0444f23b-b6dc-40f5-bf4c-c5b545850502",
+            "completed_at": "2018-07-27T03:38:39.606Z",
+            "last_viewed_at": "2018-10-06T11:07:50.785Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 595059,
+              "key": "39ba506e-d16b-4191-abe3-ae98fb439cf9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "为了带给中国同学更好的体验，优达学城（中国）的课程经理团队会针对中国学生特定的需求对课程进行一些本地化的修改，并会根据硅谷的最新课程内容定期对课程内容进行更新。所以在课程中可能会出现少数中英文并不完全一致的现象，请同学理解。\n\n如果同学在此期间有任何不佳的体验，请以**【数据分析课程中英文不一致】**为标题发邮件反馈给：support@youdaxue.com。\n\n本课程的学习服务由中国区学员关怀与体验团队提供，建议学习时间、课程有效期以中文版为准，英文材料供大家学习时参考。",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

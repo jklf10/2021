@@ -1,0 +1,154 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.650
+In terms of your work at Facebook,
+
+00:00:01.650 --> 00:00:04.260
+what are some recent projects that you've been working on?
+
+00:00:04.260 --> 00:00:11.350
+So, one thing I'm really fascinated by is how information flows through networks.
+
+00:00:11.350 --> 00:00:15.750
+So, in my early work this was just how web pages link together,
+
+00:00:15.750 --> 00:00:22.170
+but with online social networks being such a prevalent means of communicating these days,
+
+00:00:22.170 --> 00:00:25.320
+there's a lot of transmission from individual to individual,
+
+00:00:25.320 --> 00:00:27.510
+from individual to their social network,
+
+00:00:27.510 --> 00:00:31.455
+and there are these things called memes which are ideas that
+
+00:00:31.455 --> 00:00:35.895
+seem to almost take advantage of this to replicate themselves.
+
+00:00:35.895 --> 00:00:38.970
+So, some Facebook status updates for example,
+
+00:00:38.970 --> 00:00:42.375
+will have a little piece of text that says,
+
+00:00:42.375 --> 00:00:44.895
+"Copy and paste or re-post
+
+00:00:44.895 --> 00:00:50.730
+or post this so that all your friends will see if you agree with the statement."
+
+00:00:50.730 --> 00:00:54.810
+One interesting thing about memes is that they tend to recur over time,
+
+00:00:54.810 --> 00:00:57.210
+so sometimes you see meme and it's like,
+
+00:00:57.210 --> 00:01:00.000
+"Oh yeah, I saw that one a year ago, now it's back."
+
+00:01:00.000 --> 00:01:01.320
+And how does it come back?
+
+00:01:01.320 --> 00:01:04.275
+So, we looked at one particular meme,
+
+00:01:04.275 --> 00:01:08.250
+this is the money bags meme which says that, "This year,
+
+00:01:08.250 --> 00:01:11.535
+October has five Fridays, Saturdays and Sundays",
+
+00:01:11.535 --> 00:01:14.520
+this happens only once every 823 years,
+
+00:01:14.520 --> 00:01:16.365
+and this is a lucky occurrence, bla,bla,bla.
+
+00:01:16.365 --> 00:01:18.615
+And anyone who actually looks it up sees that
+
+00:01:18.615 --> 00:01:21.630
+this kind of occurrence is much more frequent, and in fact,
+
+00:01:21.630 --> 00:01:24.330
+you'll have different variance of the mean, for example,
+
+00:01:24.330 --> 00:01:26.460
+here in red you have the one that says,
+
+00:01:26.460 --> 00:01:28.410
+"July has five Friday,
+
+00:01:28.410 --> 00:01:31.095
+Saturday, Sundays", and this is true in 2011.
+
+00:01:31.095 --> 00:01:34.605
+And if you just look at this plot which will
+
+00:01:34.605 --> 00:01:38.129
+on a linear scale show you the counts for this meme,
+
+00:01:38.129 --> 00:01:41.350
+it may appear as though it just disappears completely in between.
+
+00:01:41.350 --> 00:01:44.310
+So, you might think well, maybe it's being introduced
+
+00:01:44.310 --> 00:01:48.180
+from some other source and not Facebook,
+
+00:01:48.180 --> 00:01:51.270
+but the weird thing is that the meme is adapted to Facebook,
+
+00:01:51.270 --> 00:01:53.385
+it says "Copy and paste",
+
+00:01:53.385 --> 00:01:56.190
+which doesn't make so much sense for other media.
+
+00:01:56.190 --> 00:02:00.570
+So, is it possible that the meme is actually staying within Facebook,
+
+00:02:00.570 --> 00:02:03.975
+but in very low numbers, and then flares up?
+
+00:02:03.975 --> 00:02:06.540
+Instead of using a linear scale,
+
+00:02:06.540 --> 00:02:07.890
+use a log scale.
+
+00:02:07.890 --> 00:02:13.650
+Here at the same time you can see counts that are 100,000 and counts that are ten.
+
+00:02:13.650 --> 00:02:16.480
+And so, here when you look you can see that
+
+00:02:16.480 --> 00:02:19.510
+even though there's a rapid decay and interests,
+
+00:02:19.510 --> 00:02:21.965
+it actually looks like it's maybe power-law,
+
+00:02:21.965 --> 00:02:25.335
+and you can see the meme persisting in low numbers,
+
+00:02:25.335 --> 00:02:28.405
+and then different variants perhaps being prompted
+
+00:02:28.405 --> 00:02:33.385
+by a resurgence of this meme then subsequently occurring.
+
+00:02:33.385 --> 00:02:38.590
+These were done in ggplot just with a simple line geome,
+
+00:02:38.590 --> 00:02:42.970
+and grouping by their particular meme variant,
+
+00:02:42.970 --> 00:02:48.280
+and then re-scaling the y-axis to log in one of the versions.
+

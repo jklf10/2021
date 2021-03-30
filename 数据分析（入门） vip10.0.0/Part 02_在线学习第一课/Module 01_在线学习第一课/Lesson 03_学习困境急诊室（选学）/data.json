@@ -1,0 +1,303 @@
+{
+  "data": {
+    "lesson": {
+      "id": 515669,
+      "key": "7b887287-16fb-41c8-84ea-7ff0ee886756",
+      "title": "学习困境急诊室（选学）",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "在这里你可以根据需要，选修破解各种学习困境的实用技巧。我们也为你提供了不同技能对应的书籍和有用的链接。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 693387,
+          "key": "9f953e6f-dc23-4ebc-b9d4-7a336e7686d9",
+          "title": "目标实现不了，怎么办？",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9f953e6f-dc23-4ebc-b9d4-7a336e7686d9",
+            "completed_at": "2018-10-03T15:41:37.847Z",
+            "last_viewed_at": "2018-10-13T12:10:31.063Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693388,
+              "key": "07ae7890-d8c0-4c1b-89fb-681ae735b40e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "大家还记得自己今年新年的时候定了什么目标了吗？如果还记得，这些目标实现了吗？\n\n为了不让自己定下的目标成为立下的flag，优达在此推荐一个目标设置方法——**SMART原则**，让你可以更好地设定合理目标。\n\n## 什么是SMART原则？",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693389,
+              "key": "fe753c50-b92b-4f31-9310-f4807fee6f6b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b7547d8_smart/smart.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/fe753c50-b92b-4f31-9310-f4807fee6f6b",
+              "caption": "",
+              "alt": "",
+              "width": 300,
+              "height": 300,
+              "instructor_notes": null
+            },
+            {
+              "id": 693390,
+              "key": "5cbe4b48-99ad-4ea5-b4ca-091a9b068ba3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**SMART**是五个英文单词的缩写：\n- S表示目标必须是具体的，\n- M表示目标必须是可以衡量的，\n- A表示目标必须是可以达成的，\n- R代表目标必须是有关的，\n- T代表目标必须有明确的截止期限。\n\n### 具体性（S）\n具体性是指要用明确而具体的语言清楚地说明**要达成的行为标准**，在涉及到次数的时候应该使用**明确的数值**，而不能泛泛地使用“多次”或“迅速”等通用性词汇。\n\n在实际目标设置过程中，你可以通过回答**六个Ｗ**问题来帮助你将目标具体化：\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693391,
+              "key": "6834b996-018e-4a4d-b085-19a30c864443",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b754935_6w/6w.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6834b996-018e-4a4d-b085-19a30c864443",
+              "caption": "",
+              "alt": "",
+              "width": 800,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 693646,
+              "key": "a48d9674-596b-4776-89bb-76698db7fed2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 可衡量性（M）\n\n可衡量性是指目标的进度是可以跟踪的。如果一个目标的进度无法跟踪，或者说你也无法知道已经完成了多少工作，离最终实现还有多远，那这个目标就无法管理了。\n\n怎样检查一个目标是不是可衡量的呢？你可以问自己下面的问题：\n- 我已经完成了多少工作？\n- 我还需要做多少工作才能完成目标？\n- 距离最后的实现还有多远？\n\n其实这又回到了第一个特征，如果你的目标具体，那你的目标一般来说也是可以衡量的。\n\n### 可达成性（A）\n\n目标必须是可以达成的，或者说是可以实现的。\n\n我们常说：可以制定跳起来“摘桃子”的目标，但不能制定跳起来“摘星星”的目标。这就要求我们制定出的目标通过相关人员的努力最终能够被实现，而不是超出我们的能力范围以外。例如下面这目标是一个具体并且可衡量的目标：\n>我一个月内要在国内建造十座千米高的金字塔。这个目标具有明确的时间和地点以及需要完成的任务，也可以用建成多少米来衡量其进度。但这个目标就目前的科技而言无法实现，因此它不具有可达成性。\n\n但有时候，制定一些可达成的目标也没有意义：\n>我明年读完某本书的一页书。我们并不是为了制定目标而制定目标，制定目标是为了实现自己的理想，因此一个目标必须是自己经过大量的努力才能实现的，这样的目标才能推动我们向前。\n\n### 相关性（R）\n\n相关性指的是实现此目标与其他目标的关联情况。\n\n如果实现了这个目标但和其他目标关联不大，或者说完全没有关联，那么这个目标的设定就是不相关的，对于其他目标的发展可能没有帮助。\n\n当然，这里说的相关性是指和自己个人发展方面如工作和学习上的相关性。如果在兴趣爱好上设置目标，则并不需要那么严谨地遵守相关性的要求。毕竟很多兴趣爱好和工作、学习是不相关的，但是这些内容也可以对个人的综合发展起到帮助。\n\n### 时限性（T）\n\n目标的时限性就是指目标的完成是有时间限制的。\n\n没有时间限制的目标没办法考核，或带来考核的不公平。我们应该避免使用诸如“以后有一天“或者”最终“等不确定的词汇。\n>例如有人定目标的时候会说：我放假了读三本书。这样的目标已经具有比较明确的时间，但时间还不够精确，很多同学往往会拖到假期结束的时候才开始看书。正确的目标应该是：我放假了要读完三本书，每天读五页。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693647,
+              "key": "d6991201-f0d7-4698-ba63-b59641222b74",
+              "title": "多选题：目标",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d6991201-f0d7-4698-ba63-b59641222b74",
+                "completed_at": "2018-10-06T13:25:35.599Z",
+                "last_viewed_at": "2018-10-06T13:26:19.891Z",
+                "unstructured": "{\"selected_ids\":[\"a1534482494521\",\"a1534482527546\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "请选出你认为符合SMART原则的目标。",
+                "answers": [
+                  {
+                    "id": "a1534482465922",
+                    "text": "下学期我要尽可能的多看课外书。 ",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534482494521",
+                    "text": "今年我每周要健身，每个星期健身两次，每次锻炼1个小时。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534482504145",
+                    "text": "电话来了立即接听。 ",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534482515559",
+                    "text": "我要在一天之内瘦掉10斤。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534482527546",
+                    "text": "我要在优达人工智能编程基础的课程通关截止日期前顺利完成四个项目。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 693648,
+          "key": "90d08001-d7b6-41cf-ae5d-a3baf2e98528",
+          "title": "学了就忘，怎么办？",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "90d08001-d7b6-41cf-ae5d-a3baf2e98528",
+            "completed_at": "2018-10-06T13:26:24.525Z",
+            "last_viewed_at": "2018-10-13T12:10:27.856Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 693650,
+              "key": "838ef499-03ea-42af-8202-330cb4803b93",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在学习过程中，大家是否有这样的情况：好不容易学会了一个知识点，可没过多久，又忘记了。就好像大学里的突击考试，两三天内看完一本书，虽然考试能够通过，可考完试这些知识就忘得一干二净。其实这些现象都是正常的，遗忘在记忆过程中是非常正常的生理现象。\n\n要想摆脱这个困境，就需要我们**合理“记忆”**并**减少“遗忘”**。\n\n## 合理记忆\n常用的有效记忆方法有理解记忆、联想记忆、对比记忆、实践记忆等。我们可以通过这些方法来加深学习时的记忆，下面就来一一介绍一下这几个方法吧。\n\n### 理解记忆\n**理解记忆，顾名思义，就是将知识点充分理解后进行记忆。**在记忆时，首先需要理解知识点的基本含义，借助已有的知识经验，通过思维进行分析综合，把握各个知识点的内在逻辑关系，使其纳入已有的知识结构中，以便记忆。\n\n>比如，我们在学习if条件语句时，需要理解我们写if语句的意义，是为了判断if语句后的条件是否为真，然后再执行下一步的语句。\n\n### 联想记忆\n在心理学中，学习一个新的知识点时，通过联想记忆刺激大脑，脑中会浮现另一个相似或者相关联的事物，从而帮助我们更好地记忆。在背英语单词时，就会常常使用到联想记忆。\n\n### 对比记忆\n**对比记忆，是指在学习一个知识点时，我们会将与其相关或相反的另一个知识点进行结合记忆。**\n>比如，学习一门外语，我们会尝试记忆这个单词本身和它的反义词，往往“一对一对”地进行记忆。这样在我们掌握了一个单词以后，另一个单词也就自然掌握了。\n\n>再比如我们学习for和while的循环语句时，会发现同样是循环，for需要有一个特定次数作为循环条件，而while 重复的条件不一定是特定的次数，只要条件满足即可。\n\n### 实践记忆\n古人云：“纸上得来终觉浅，绝知此事要躬行”。只有将**理论和实践相结合**，记忆才更加长久且有效。\n\n## 减少遗忘\n大家应该都听说过艾宾浩斯遗忘曲线吧？人的遗忘速度受到知识的难易程度、个体的精神情况（如睡眠质量、受压力程度）和复习次数的影响。对于学习某样新事物，人的遗忘速度一般如下图所示：\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693651,
+              "key": "9e7355ae-f088-4fd5-b53a-3db5fc14d8a6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b765ca7_memory1/memory1.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9e7355ae-f088-4fd5-b53a-3db5fc14d8a6",
+              "caption": "",
+              "alt": "",
+              "width": 300,
+              "height": 300,
+              "instructor_notes": null
+            },
+            {
+              "id": 693652,
+              "key": "318d669b-c343-4785-a42c-43e3733e5476",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们可以看到，在学习一件新事物或者一个新知识时，遗忘速度往往是先快后慢的，在一天内，记忆就会骤降80%，而随着更长时间的推移，记忆的数量会缓慢减少。\n\n想要减少遗忘，我们就需要利用遗忘曲线的特征，定期回顾知识点。随着重复次数的增加，知识点的记忆就会更牢固，遗忘的速度也会随之减缓，就如下图所示的那样。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693653,
+              "key": "188fdfae-647e-4bda-8082-74cfbdc4c2e5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/August/5b765cd3_memory2/memory2.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/188fdfae-647e-4bda-8082-74cfbdc4c2e5",
+              "caption": "",
+              "alt": "",
+              "width": 300,
+              "height": 300,
+              "instructor_notes": null
+            },
+            {
+              "id": 693654,
+              "key": "61110c89-d622-468e-8901-cfc8e79908df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们会发现在学习新知识后的12小时内进行回忆，可很快恢复记忆。这时你花10分钟可能就可以记起所学内容，而如果你要等到10天后，可能花1个小时的复习还不一定能达到同样的效果。与其日后\"吃力不讨好\"，不如就在学习新知识点后及时复习，这样即节省了复习时间又达到了良好的记忆效果，我们何乐而不为呢？",
+              "instructor_notes": ""
+            },
+            {
+              "id": 693655,
+              "key": "f454a335-fe25-4666-ad37-63afad865ed3",
+              "title": "多选：记忆",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f454a335-fe25-4666-ad37-63afad865ed3",
+                "completed_at": "2018-10-06T13:27:34.048Z",
+                "last_viewed_at": "2018-10-06T13:27:34.048Z",
+                "unstructured": "{\"selected_ids\":[\"a1534483758808\",\"a1534483763344\",\"a1534483772562\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下哪些方法可以帮助我们避免“学了就忘”的情况？",
+                "answers": [
+                  {
+                    "id": "a1534483706612",
+                    "text": "不需要思考知识点，直接死记硬背",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534483742937",
+                    "text": "在学习新知识的一周后再进行复习",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1534483758808",
+                    "text": "利用图像联想法记忆单词",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534483763344",
+                    "text": "定期多多复习，回顾知识点",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1534483772562",
+                    "text": "学习编程时，利用实战项目巩固理论知识",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 573459,
+          "key": "c750a01c-d548-497c-b9ce-64a4ce09f1e2",
+          "title": "常用工具、在线资源和书籍",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c750a01c-d548-497c-b9ce-64a4ce09f1e2",
+            "completed_at": "2018-07-06T09:25:54.307Z",
+            "last_viewed_at": "2018-10-13T12:10:26.464Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 573460,
+              "key": "8428dd99-e23f-4d9d-9c88-3c2878a306aa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 常用工具\n\n### Python代码调试工具\n在编写程序的时候，好的调试工具能够助你一臂之力，减少调试的困难，提高调试效率。\n\nPythontutor（http://www.pythontutor.com/visualize.html#mode=edit ）：PythonTutor是一个免费公开的Python代码调试平台，你可以在左侧输入代码，点击Visualize Execution可以观测所有变量的值，方便debug。\n（需要注意的是，如果你定义了一个函数，想要排查函数的错误，则必须写一行代码运行函数才能进行可视化）\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 573462,
+              "key": "5ea85fe3-4f1c-4c57-a8bc-01fd155e923e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 在线资源和书籍\n\n### 编程相关\n- （英）优质程序员必选论坛：https://stackoverflow.com/\n- （英）Python官方文档：https://docs.python.org/3/\n- （中）SQL基础：http://www.w3school.com.cn/sql/index.asp\n- （中）菜鸟Python教程：http://www.runoob.com/python3/python3-tutorial.html\n- （中）Python基础：廖雪峰教程https://www.liaoxuefeng.com\n- （英）Python教程：https://python.swaroopch.com/basics.html\n\n### 数据分析相关\n- （中）《O'Reilly深入浅出系列》：https://book.douban.com/series/10044\n- （中）国家公开数据库：http://data.stats.gov.cn/index.htm\n- （中）指数平台：http://index.baidu.com/ 、 https://alizs.taobao.com/ 、 http://www.umeng.com/\n- （中）《利用Python进行数据分析》：https://book.douban.com/subject/25779298/\n- （英）数据科学和机器学习公开数据集（建议毕业后拓展）：https://www.kaggle.com/\n- （英）亚马逊aws跨科学云数据平台（建议毕业后拓展）：http://aws.amazon.com/cn/datasets/?nc1=h_ls\n\n### 补充课程\n-  [计算机科学导论 单项课程](https://cn.udacity.com/course/intro-to-computer-science--cs101)  \n**难度：初级  \n先修知识及要求：本课程不需要任何计算机编程先修知识，欢迎初学者！ **  \n在这门计算机编程入门课程中，你将通过搭建自己的常用 Web 应用，掌握并练习主要的计算机科学概念。你将会学习功能强大却又非常易学、应用十分广泛的 Python，在搭建自己的搜索引擎和社交网络的过程中探索计算机科学基础知识。  \n\n\n- [统计学入门 单项课程](https://cn.udacity.com/course/intro-to-statistics--st101)  \n**难度：初级  \n先修知识及要求：学习本课程不需要统计学背景知识。熟悉如何计算平均值、中数和数字求模等代数知识会对学习本课有所帮助。  **  \n统计学从数据中提取意义。在本课中，我们将介绍数据关系可视化的方法，以及使用数学来理解关系的系统性方法。\n\n\n- [如何使用 Git 和 GitHub 单项课程](https://cn.udacity.com/course/how-to-use-git-and-github--ud775)  \n**难度：初级  \n先修知识及要求：虽然本课程不涉及编程，但学员应该具备一定的编程或标记语言经验。此外，学员们应熟悉使用命令行。  **  \n本课程由优达学城与 GitHub 共同制作，介绍进行版本控制的基础知识，重点讲解 Git 版本控制系统以及 GitHub 协作平台。\n\n### 代码风格指南\n- [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)\n- [Google 开源项目风格指南 (中文版)](https://zh-google-styleguide.readthedocs.io/en/latest/)\n\n### 题库网站\n- LeetCode 中文题库：https://leetcode-cn.com/problemset/all/\n- Python Code Examples：https://www.programcreek.com/python/\n\n### 技术交流社区\n- 国外交流社区  \n[Stack Overflow](https://stackoverflow.com/)：全球最火的IT技术问答交流社区\n- 国内交流社区  \n[Segmentfault](https://segmentfault.com/questions)：和Stack Overflow类似的国内交流社区  \n[V2EX](https://www.v2ex.com/)：汇集各类话题的交流社区，程序员们的交流胜地  \n[CSDN](https://www.csdn.net/)：专业的IT技术平台，有丰富的学习资料共享和活跃的社区  \n\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}
