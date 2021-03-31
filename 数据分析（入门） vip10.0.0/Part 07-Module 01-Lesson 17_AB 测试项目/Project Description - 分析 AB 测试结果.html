@@ -1,0 +1,198 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>分析 A/B 测试结果</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>A/B 测试项目</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 项目详情.html">01. 项目详情</a>
+    </li>
+    <li class="">
+      <a href="02. 测试 1：导入并查看数据集.html">02. 测试 1：导入并查看数据集</a>
+    </li>
+    <li class="">
+      <a href="03. 测试 2：如何处理数据混乱.html">03. 测试 2：如何处理数据混乱</a>
+    </li>
+    <li class="">
+      <a href="04. 测试 3：查看更新后的数据集.html">04. 测试 3：查看更新后的数据集</a>
+    </li>
+    <li class="">
+      <a href="05. 测试 4：概率分析.html">05. 测试 4：概率分析</a>
+    </li>
+    <li class="">
+      <a href="06. 问题 5：假设检验.html">06. 问题 5：假设检验</a>
+    </li>
+    <li class="">
+      <a href="07. AB 测试工作区.html">07. A/B 测试工作区</a>
+    </li>
+    <li class="">
+      <a href="Project Description - 分析 AB 测试结果.html">Project Description - 分析 A/B 测试结果</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - 分析 AB 测试结果.html">Project Rubric - 分析 A/B 测试结果</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">分析 A/B 测试结果</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+    
+    <p>这一实战项目主要涵盖统计课程知识，希望你在做项目时能全面巩固所有相关知识 。 祝你好运！</p>
+<h3 id="简介">简介</h3>
+<p>A / B 测试是数据分析师和数据科学家经常做的工作之一，非常重要。本项目模拟了一家电子商务网站运行的 A / B 测试的结果。你的目标是帮助公司分析并判断他们是否应该运行新的页面，或保留旧的页面，还是应该延长试验时间再来做决策。</p>
+<p>在提交项目前需要检查项目是否符合<a href="https://review.udacity.com/#!/rubrics/1331/view" rel="noopener noreferrer" target="_blank">审阅标准</a>。</p>
+<hr />
+<p>如果你看到这个页面，那么你应该已经完成了 Jupyter Notebook 上的所有问题，准备好了一个.html文档的副本。在完成提交之前，请阅读以下几点做最终检查。 如果还没有完成项目，请返回上一页，在你的系统上设置好 Python，然后完成项目。</p>
+<h1 id="项目审阅标准">项目审阅标准</h1>
+<p>你的项目将由一位优达学城的审阅专家根据<a href="https://review.udacity.com/#!/rubrics/1331/view" rel="noopener noreferrer" target="_blank">项目审阅标准</a>进行评估。提交前请一定仔细阅读，确保你提交的内容符合规范，这也有助于你培养良好的编码习惯。</p>
+<h1 id="收集提交材料">收集提交材料</h1>
+<p>如果确认不再修改 notebook，你应该将其保存为容易读取的格式。你可以使用<strong>File - > Download as - > HTML（.html）</strong>菜单将 Notebook 保存为.html 文件。如果出现“No module name”错误，请打开终端并尝试使用<code>pip install &lt;module_name&gt;</code> 安装缺少的模块（在模块名称中不包括“<”or“>”或其他文字）。</p>
+<p>请同时提交原始 Notebook 和 Notebook 的 HTML 或 PDF 副本以供审阅。你不需要在提交中包含任何数据文件。如果你参考了其他网站、书籍和其他资源来帮助你解决项目中的任务，请确保记录在项目中。建议你在 Notebook 报告末尾的 Markdown 单元格中添加“参考资源”部分，或者可以包含一个记录参考文件出处的<code>readme.txt</code>文件。</p>
+<h1 id="提交项目">提交项目</h1>
+<p>准备就绪后，你可以点击“提交项目”按钮进入项目提交页面。你可以将文件作为 .zip 压缩文件进行提交，也可以链接到包含项目文件的GitHub 仓库。如果你使用 GitHub，请注意，你提交的内容将是提交时链接仓库的快照。建议你将每个项目保存在一个单独的仓库中，以避免任何混淆的可能。</p>
+<p>项目评估一般在一周以内。一旦你提交的项目被审阅，你将收到一封电子邮件。如果你在提交项目时遇到任何问题，或者希望查看提交的状态，请发送电子邮件至 support@youdaxue.com。</p>
+<p>中文版Notebook可以通过<a href="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5ae2df6a_analyze-ab-test-results-notebook-zh-0/analyze-ab-test-results-notebook-zh-0.ipynb" rel="noopener noreferrer" target="_blank">这里</a>下载。（右键-&gt;另存为）</p>
+  
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('分析 A/B 测试结果')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
