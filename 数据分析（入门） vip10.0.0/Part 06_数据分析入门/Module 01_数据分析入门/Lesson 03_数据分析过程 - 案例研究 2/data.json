@@ -1,0 +1,2168 @@
+{
+  "data": {
+    "lesson": {
+      "id": 432122,
+      "key": "f81a3576-0665-4721-a8bb-ba50c80c04ac",
+      "title": "数据分析过程 - 案例研究 2",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "研究一个更具挑战性的燃料经济性数据集，并更多地了解数据分析中的问题和策略。继续强化你的 Python 数据分析技能。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/f81a3576-0665-4721-a8bb-ba50c80c04ac/432122/1544466052971/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B+-+%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6+2+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/f81a3576-0665-4721-a8bb-ba50c80c04ac/432122/1544466050582/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B+-+%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6+2+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 432050,
+          "key": "141d2553-c273-47d4-9377-3d489c63bd47",
+          "title": "课程概述",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "141d2553-c273-47d4-9377-3d489c63bd47",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Fuel-Economy-Datasets",
+                "uri": "https://video.udacity-data.com/topher/2020/February/5e576975_fuel-economy-datasets/fuel-economy-datasets.zip"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431667,
+              "key": "0d5fd1c3-f144-4677-a342-ff6ea7c2c8d9",
+              "title": "课程概述",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "2X8GJyZUlDo",
+                "china_cdn_id": "2X8GJyZUlDo.mp4"
+              }
+            },
+            {
+              "id": 431668,
+              "key": "ddba9cbb-ba3c-4d7e-afb5-2b5ac9c1d64b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在第二个案例研究中，你将分析[由环境保护局 (EPA) 提供的燃料经济性数据](https://www.epa.gov/compliance-and-fuel-economy-data/data-cars-used-testing-fuel-economy)。\n### 什么是燃料经济性？\n摘自维基百科关于_汽车燃料经济性_的[页面](https://en.wikipedia.org/wiki/Fuel_economy_in_automobiles)：\n> 汽车的燃料经济性是车辆行驶距离与消耗的燃料量之间的燃料效率关系。消耗量可以用行使一段距离所需的燃料量，或者消耗的每单位燃料所走的距离来表示。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432056,
+          "key": "7d92db40-34c2-47f4-a7b4-5200cbdd40f8",
+          "title": "数据概述",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7d92db40-34c2-47f4-a7b4-5200cbdd40f8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431669,
+              "key": "e01697ac-28e5-4c66-aaae-a13f1a1ee21a",
+              "title": "数据概述",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "u_qB4w4kL1o",
+                "china_cdn_id": "u_qB4w4kL1o.mp4"
+              }
+            },
+            {
+              "id": 431670,
+              "key": "28867780-261b-434b-9a44-c5e28c1fc05e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们将在学习的过程中更详细地了解这些特征。现在，我们清楚我们使用的数据是什么，那么让我们来回答一些问题。你将在下一部分找到每个特征的简要说明来为你提供帮助。\n\n以下是此视频的网页:\n- [EPA 燃料经济性练习](https://www.epa.gov/compliance-and-fuel-economy-data/data-cars-used-testing-fuel-economy)\n- [能源部燃料经济数据](http://www.fueleconomy.gov/feg/download.shtml/)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 980863,
+              "key": "d1cb0e90-454f-49bc-94a2-9c341fa0cebc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你实际上不需要自己从这些网站下载任何文件。所需的数据在课程中均已为你提供。 如果你确实希望下载数据集以在本地运行，可以在教室的“资源”文件夹中找到它们。 此外，你还可以通过单击笔记本左上角的Jupyter徽标进入文件目录，单击要选择的文件旁边的框，然后单击“download”按钮来下载教室工作区中的任何文件。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432060,
+          "key": "52dfc223-968f-4c5a-9177-4730bc0c5944",
+          "title": "数据属性",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "52dfc223-968f-4c5a-9177-4730bc0c5944",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431671,
+              "key": "9965ddf2-3e68-43aa-8fc3-d3881953d9a0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 使用文档来了解数据\n以下是你在上一个视频中看到的文件。使用它们来帮助你回答以下问题。\n- [README.txt 下载链接](http://www.fueleconomy.gov/feg/epadata/Readme.txt)\n- [PDF 链接](http://www.fueleconomy.gov/feg/EPAGreenGuide/GreenVehicleGuideDocumentation.pdf)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431672,
+              "key": "ac4e7af5-713c-4d6f-b72d-7baa07250689",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ac4e7af5-713c-4d6f-b72d-7baa07250689",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "发动机排量的单位是什么？",
+                "answers": [
+                  {
+                    "id": "a1507049576259",
+                    "text": "升",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507049590801",
+                    "text": "立方英寸",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507049596898",
+                    "text": "立方厘米",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431673,
+              "key": "85643bd5-378a-4b9b-9691-8cf3e8cbfd71",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "85643bd5-378a-4b9b-9691-8cf3e8cbfd71",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配每个特征的含义。"
+                },
+                "concepts_label": "特征",
+                "answers_label": "含义",
+                "concepts": [
+                  {
+                    "text": "Stnd",
+                    "correct_answer": {
+                      "id": "a1507049634645",
+                      "text": "车辆排放标准代码"
+                    }
+                  },
+                  {
+                    "text": "Cyl",
+                    "correct_answer": {
+                      "id": "a1507049657909",
+                      "text": "发动机气缸数"
+                    }
+                  },
+                  {
+                    "text": "Trans",
+                    "correct_answer": {
+                      "id": "a1507049683478",
+                      "text": "传动类型"
+                    }
+                  },
+                  {
+                    "text": "Sales Area（销售区域）",
+                    "correct_answer": {
+                      "id": "a1507049738703",
+                      "text": "认证区域代码"
+                    }
+                  },
+                  {
+                    "text": "Cert Region（认证区域）",
+                    "correct_answer": {
+                      "id": "a1507049739288",
+                      "text": "认证区域代码"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507049739288",
+                    "text": "认证区域代码"
+                  },
+                  {
+                    "id": "a1507049826475",
+                    "text": "Method of Transportation"
+                  },
+                  {
+                    "id": "a1507049752663",
+                    "text": "Manufacturing Location"
+                  },
+                  {
+                    "id": "a1507049634645",
+                    "text": "车辆排放标准代码"
+                  },
+                  {
+                    "id": "a1507049683478",
+                    "text": "传动类型"
+                  },
+                  {
+                    "id": "a1507049657909",
+                    "text": "发动机气缸数"
+                  },
+                  {
+                    "id": "a1507049771526",
+                    "text": "Cycles"
+                  },
+                  {
+                    "id": "a1507049777774",
+                    "text": "Manufacturer Identification Code"
+                  },
+                  {
+                    "id": "a1507049738703",
+                    "text": "认证区域代码"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431674,
+              "key": "857541eb-e53c-442f-8462-f429eacc4cc9",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "857541eb-e53c-442f-8462-f429eacc4cc9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "SmartWay 认证的根据是什么？",
+                "answers": [
+                  {
+                    "id": "a1507313222523",
+                    "text": "温室气体得分",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507313238574",
+                    "text": "综合 MPG",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507313254728",
+                    "text": "空气污染得分",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507313270737",
+                    "text": " 燃料类型",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507313296095",
+                    "text": "位置",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432064,
+          "key": "27792912-17a7-48b0-a87d-151509df7402",
+          "title": "提问",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "27792912-17a7-48b0-a87d-151509df7402",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431675,
+              "key": "948f02bb-c994-467a-af0f-36726758e6ce",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 燃料经济性数据\n该信息由美国环境保护局、流动源办公室、美国国家车辆与燃料排放实验室提供。\n\n|属性|描述|\n|-|\n|Model|车辆品牌和型号|\n|Displ|发动机排量 - 发动机的大小（升）|\n|Cyl|特定发动机中的气缸数|\n|Trans|传动类型和齿轮数|\n|Drive|驱动轴类型（2WD = 2 轮驱动，4WD = 4 轮/全轮驱动）|\n|Fuel|燃油类型|\n|Cert Region*|认证区域代码|\n|Sales Area**|认证区域代码|\n|Stnd|车辆排放标准代码（[在此](https://www.epa.gov/greenvehicles/federal-and-california-light-duty-vehicle-emissions-standards-air-pollutants)查看车辆排放标准）|\n|Stnd Description*|车辆排放标准说明|\n|Underhood ID |这是一个 12 位数的识别号码，可以在发动机舱排放标签上找到。EPA 要求使用此号码指定其\"测定组\"或\"发动机系列\"。|\n|Veh Class|EPA 车辆类型|\n|Air Pollution Score|空气污染评分（烟雾等级）|\n|City MPG|估计的城市 mpg（英里/加仑）|\n|Hwy MPG|估计的高速公路 mpg（英里/加仑）|\n|Cmb MPG|估计的综合 mpg（英里/加仑）|\n|Greenhouse Gas Score|温室气体等级|\n|SmartWay|是、否或 Elite|\n|Comb CO2*|城市/高速公路综合二氧化碳尾气排放量（以克/英里为单位）|\n\n\\* 不包括在 2008 数据集内\n** 不包括在 2018 数据集内",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431676,
+              "key": "4012d9cd-3072-4ebe-9afc-8569def04145",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4012d9cd-3072-4ebe-9afc-8569def04145",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "以下哪个是我们可以对此数据提出的相关问题？",
+                "answers": [
+                  {
+                    "id": "a1506631388083",
+                    "text": "SmartWay 车辆是否更贵？",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506631736599",
+                    "text": "是否有更多车型使用替代燃料来源？价格是多少？",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507050022019",
+                    "text": "各车辆类型在燃料经济性方面的改进有多大？",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507050024854",
+                    "text": "SmartWay 车辆的特点是什么？",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507050025326",
+                    "text": "哪些特征与更好的燃料经济性相关联？",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507697577182",
+                    "text": "对于 2008 年生产且 2018 年仍在生产中的车型，mpg 有多少改进，哪些车辆的改进最多？",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432072,
+          "key": "3416ba9c-db9f-4b66-ac3c-dc9547255d0c",
+          "title": "评估数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3416ba9c-db9f-4b66-ac3c-dc9547255d0c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431677,
+              "key": "8565a0d1-81f5-42cb-b876-c4a3f832fddd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 评估数据\n在 Jupyter notebook 中使用 Pandas，探索 `all_alpha_08.csv` 和 `all_alpha_18.csv`，以回答 notebook 下面有关这些数据集特征的练习问题：\n- 每个数据集中的样本数\n- 每个数据集中的列数\n- 每个数据集中重复的行数\n- 列的数据类型\n- 具有缺失值的特征\n- 每个数据集中特征的非空唯一值的数量\n- 这些唯一值都是什么，以及每个的计数\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431678,
+              "key": "85054589-b6ad-4d3b-9a2d-4df415e3f10c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewb5fd87e9",
+              "pool_id": "jupyter",
+              "view_id": "b5fd87e9-7b5d-45ea-b114-0e8bed5464fa",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/assessing.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431679,
+              "key": "40519be5-dfaa-4f18-b9d5-000a4a8703c4",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "40519be5-dfaa-4f18-b9d5-000a4a8703c4",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "在 2008 年的数据集中查找以下每一项的正确计数"
+                },
+                "concepts_label": "特征",
+                "answers_label": "计数",
+                "concepts": [
+                  {
+                    "text": "样本数",
+                    "correct_answer": {
+                      "id": "a1507046833311",
+                      "text": "2404"
+                    }
+                  },
+                  {
+                    "text": "列数",
+                    "correct_answer": {
+                      "id": "a1507046961296",
+                      "text": "18"
+                    }
+                  },
+                  {
+                    "text": "重复行数",
+                    "correct_answer": {
+                      "id": "a1507047005981",
+                      "text": "25"
+                    }
+                  },
+                  {
+                    "text": "具有缺失值的行数",
+                    "correct_answer": {
+                      "id": "a1507048619163",
+                      "text": "199"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507047162995",
+                    "text": "1611"
+                  },
+                  {
+                    "id": "a1507047183526",
+                    "text": "1"
+                  },
+                  {
+                    "id": "a1507047163658",
+                    "text": "26"
+                  },
+                  {
+                    "id": "a1507046833311",
+                    "text": "2404"
+                  },
+                  {
+                    "id": "a1507047161780",
+                    "text": "3889"
+                  },
+                  {
+                    "id": "a1507047177754",
+                    "text": "4"
+                  },
+                  {
+                    "id": "a1507048619163",
+                    "text": "199"
+                  },
+                  {
+                    "id": "a1507046961296",
+                    "text": "18"
+                  },
+                  {
+                    "id": "a1507047005981",
+                    "text": "25"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431680,
+              "key": "1c6c1f89-39f9-4897-9a9d-9bfe7c7eab9a",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1c6c1f89-39f9-4897-9a9d-9bfe7c7eab9a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "在 2018 年的数据集中查找以下每一项的正确计数"
+                },
+                "concepts_label": "特征",
+                "answers_label": " 计数",
+                "concepts": [
+                  {
+                    "text": "样本数",
+                    "correct_answer": {
+                      "id": "a1507627020650",
+                      "text": "1611"
+                    }
+                  },
+                  {
+                    "text": " 列数",
+                    "correct_answer": {
+                      "id": "a1507627061569",
+                      "text": "18"
+                    }
+                  },
+                  {
+                    "text": " 重复行数",
+                    "correct_answer": {
+                      "id": "a1507627076044",
+                      "text": "0"
+                    }
+                  },
+                  {
+                    "text": " 具有缺失值的行数",
+                    "correct_answer": {
+                      "id": "a1507627076768",
+                      "text": "2"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507627173817",
+                    "text": "32"
+                  },
+                  {
+                    "id": "a1507627172510",
+                    "text": "15"
+                  },
+                  {
+                    "id": "a1507627076044",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1507627061569",
+                    "text": "18"
+                  },
+                  {
+                    "id": "a1507627076768",
+                    "text": "2"
+                  },
+                  {
+                    "id": "a1507627171545",
+                    "text": "2404"
+                  },
+                  {
+                    "id": "a1507627020650",
+                    "text": "1611"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431681,
+              "key": "24fd2094-42f6-4ba6-8af8-8338668245c9",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "24fd2094-42f6-4ba6-8af8-8338668245c9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "将每个特征和数据类型相匹配（其中一些可能不理想）"
+                },
+                "concepts_label": "特征",
+                "answers_label": "数据类型",
+                "concepts": [
+                  {
+                    "text": "Cyl (2018)",
+                    "correct_answer": {
+                      "id": "a1507047680045",
+                      "text": "浮点型"
+                    }
+                  },
+                  {
+                    "text": "Cyl (2008)",
+                    "correct_answer": {
+                      "id": "a1507047693665",
+                      "text": "字符串"
+                    }
+                  },
+                  {
+                    "text": "城市 MPG（两个）",
+                    "correct_answer": {
+                      "id": "a1507047726568",
+                      "text": "字符串"
+                    }
+                  },
+                  {
+                    "text": "温室气体得分 (2008)",
+                    "correct_answer": {
+                      "id": "a1507047788857",
+                      "text": "字符串"
+                    }
+                  },
+                  {
+                    "text": "温室气体得分 (2018)",
+                    "correct_answer": {
+                      "id": "a1507047854883",
+                      "text": "整型"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507047896492",
+                    "text": " 布尔型变量"
+                  },
+                  {
+                    "id": "a1507047788857",
+                    "text": "字符串"
+                  },
+                  {
+                    "id": "a1507047894372",
+                    "text": "整型"
+                  },
+                  {
+                    "id": "a1507047854883",
+                    "text": "整型"
+                  },
+                  {
+                    "id": "a1507047693665",
+                    "text": "字符串"
+                  },
+                  {
+                    "id": "a1507047680045",
+                    "text": "浮点型"
+                  },
+                  {
+                    "id": "a1507047901060",
+                    "text": "布尔型变量"
+                  },
+                  {
+                    "id": "a1507047891743",
+                    "text": "浮点型"
+                  },
+                  {
+                    "id": "a1507047726568",
+                    "text": "字符串"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431682,
+              "key": "5974d68a-60e5-4da7-8a61-8a046e4f44a9",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5974d68a-60e5-4da7-8a61-8a046e4f44a9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配以下每个特征的非空唯一值的数量："
+                },
+                "concepts_label": "特征",
+                "answers_label": "# 唯一值",
+                "concepts": [
+                  {
+                    "text": "SmartWay (2008)",
+                    "correct_answer": {
+                      "id": "a1507048763818",
+                      "text": "2"
+                    }
+                  },
+                  {
+                    "text": "SmartWay (2018)",
+                    "correct_answer": {
+                      "id": "a1507048764376",
+                      "text": "3"
+                    }
+                  },
+                  {
+                    "text": "Sales Area（销售区域）(2008)",
+                    "correct_answer": {
+                      "id": "a1507048897431",
+                      "text": "3"
+                    }
+                  },
+                  {
+                    "text": "Cert Region（认证区域）(2018)",
+                    "correct_answer": {
+                      "id": "a1507048906151",
+                      "text": "2"
+                    }
+                  },
+                  {
+                    "text": "Trans (2008)",
+                    "correct_answer": {
+                      "id": "a1507048951765",
+                      "text": "14"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507048906151",
+                    "text": "2"
+                  },
+                  {
+                    "id": "a1507048998580",
+                    "text": "5"
+                  },
+                  {
+                    "id": "a1507048897431",
+                    "text": "3"
+                  },
+                  {
+                    "id": "a1507048763818",
+                    "text": "2"
+                  },
+                  {
+                    "id": "a1507049004594",
+                    "text": "42"
+                  },
+                  {
+                    "id": "a1507048764376",
+                    "text": "3"
+                  },
+                  {
+                    "id": "a1507049006957",
+                    "text": "18"
+                  },
+                  {
+                    "id": "a1507048951765",
+                    "text": "14"
+                  },
+                  {
+                    "id": "a1507048994941",
+                    "text": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431683,
+              "key": "3c722844-7c97-4876-9b07-a2102223873c",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3c722844-7c97-4876-9b07-a2102223873c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "2008 年和 2018 年数据集中的 `Cyl` 列有何不同？",
+                "answers": [
+                  {
+                    "id": "a1507049039124",
+                    "text": "数据类型",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507049098957",
+                    "text": "格式",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507049099486",
+                    "text": " 唯一值的数量",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507049099981",
+                    "text": "含义",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431684,
+              "key": "fa471ed8-842b-4f02-afd1-e98d36dac8f6",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fa471ed8-842b-4f02-afd1-e98d36dac8f6",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "这些燃料类型中的每一个存在于哪里？"
+                },
+                "concepts_label": "燃料类型",
+                "answers_label": " 数据集",
+                "concepts": [
+                  {
+                    "text": "Gasoline（汽油）",
+                    "correct_answer": {
+                      "id": "a1507049287467",
+                      "text": "两者都有"
+                    }
+                  },
+                  {
+                    "text": "Ethanol/Gas（乙醇/汽油）",
+                    "correct_answer": {
+                      "id": "a1507049316429",
+                      "text": "两者都有"
+                    }
+                  },
+                  {
+                    "text": "Gasoline/Electricity（汽油/电力）",
+                    "correct_answer": {
+                      "id": "a1507049318667",
+                      "text": "2018"
+                    }
+                  },
+                  {
+                    "text": "CNG（压缩天然气 ）",
+                    "correct_answer": {
+                      "id": "a1507049320624",
+                      "text": "2008"
+                    }
+                  },
+                  {
+                    "text": "Electricity（电力）",
+                    "correct_answer": {
+                      "id": "a1507049366164",
+                      "text": "2018"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507049320624",
+                    "text": "2008"
+                  },
+                  {
+                    "id": "a1507049318667",
+                    "text": "2018"
+                  },
+                  {
+                    "id": "a1507049287467",
+                    "text": "两者都有"
+                  },
+                  {
+                    "id": "a1507049366164",
+                    "text": "2018"
+                  },
+                  {
+                    "id": "a1507049403243",
+                    "text": "两者都有"
+                  },
+                  {
+                    "id": "a1507049316429",
+                    "text": "两者都有"
+                  },
+                  {
+                    "id": "a1507049405852",
+                    "text": "2008"
+                  },
+                  {
+                    "id": "a1507049410879",
+                    "text": "两者都不"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432078,
+          "key": "eeae3103-aab8-49e5-a90d-d1e2a86a482e",
+          "title": "清理列标签",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "eeae3103-aab8-49e5-a90d-d1e2a86a482e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Cleaning-Column-Labels",
+                "uri": "https://video.udacity-data.com/topher/2018/June/5b1687f8_cleaning-column-labels/cleaning-column-labels.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431685,
+              "key": "7f98addb-7c39-4ee6-a77e-9c73cb43fb0f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 清理列标签\n### 1. 删除无关列\n删除不一致（不同时存在于两个数据集中）的特征或与我们的问题无关的列。使用 [Pandas 的 drop](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.drop.html) 函数。\n\n##### 要删除的列：\n- 2008 数据集中: `'Stnd'、'Underhood ID'、'FE Calc Appr'、'Unadj Cmb MPG'`\n- 2018 数据集中: `'Stnd'、'Stnd Description'、'Underhood ID'、'Comb CO2'`\n\n### 2. 重命名列\n- 将 2008 数据集中的\"Sales Area\"\"列标签改为\"Cert Region\"以确保一致性。\n- 重命名所有列标签以空格替换为下划线，并将所有内容转换为小写。（在 Python 中，下划线比空格更好用。例如，空格不允许你使用 `df.column_name` 代替 `df['column_name']` 来选择列，或使用 `query()`。保持小写和下划线一致也使列名更好记。）",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486706,
+              "key": "59ceb63a-a5f9-4205-94b8-1c26bbac5a46",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view0dc834be",
+              "pool_id": "jupyter",
+              "view_id": "0dc834be-ce5f-40fb-a9bb-2c475ba6fb3a",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/cleaning_column_labels-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 432079,
+          "key": "9a5cc4aa-e5e9-495f-b64c-52aba3be6740",
+          "title": "过滤、丢空、去重",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9a5cc4aa-e5e9-495f-b64c-52aba3be6740",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Query-Filter",
+                "uri": "https://video.udacity-data.com/topher/2018/June/5b16886b_query-filter/query-filter.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431687,
+              "key": "db8a6070-fb08-45c6-a0cf-2b864662f513",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 过滤、丢空、去重\n\n### 1. 过滤\n为保持一致性，仅比较加州认证的汽车。使用 `query` 过滤两个数据集，仅选择 `cert_region` 为 `CA` 的行。然后，删除 `cert_region' 列，因为它不再提供任何有用的信息（我们知道每个值都是 'CA'）。\n\n### 2. 丢空\n删除两个数据集中包含缺失值的任何行。\n\n### 3. 去重\n删除两个数据集中的任何重复行。\n\n## 练习提示\n本课程中涉及的练习题中的原始数据是前一个练习题的输出(to_csv的文件)。**你需要将上个练习题的数据下载下来，然后上传到下一个练习题的workspace中**。因为每个练习题中的workspace是相互独立的。（后面的练习题同理）",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486711,
+              "key": "61c3d282-0863-48ed-a280-db60fa3c109e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewea205a79",
+              "pool_id": "jupyter",
+              "view_id": "ea205a79-8315-4b1d-a0f3-f7676f739c5b",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/query_filter-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431689,
+              "key": "1158f051-7bd2-44fc-ac66-78e1663e8f1b",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1158f051-7bd2-44fc-ac66-78e1663e8f1b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "在按认证区域过滤后，匹配关于新数据集中以下特征的值。"
+                },
+                "concepts_label": "特征",
+                "answers_label": "值",
+                "concepts": [
+                  {
+                    "text": "2008 年数据集中的样本数",
+                    "correct_answer": {
+                      "id": "a1507052003550",
+                      "text": "1084"
+                    }
+                  },
+                  {
+                    "text": "2018 年数据集中的样本数",
+                    "correct_answer": {
+                      "id": "a1507052046112",
+                      "text": "798"
+                    }
+                  },
+                  {
+                    "text": "两个数据集中的列数",
+                    "correct_answer": {
+                      "id": "a1507052052834",
+                      "text": "13"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507052635475",
+                    "text": "10"
+                  },
+                  {
+                    "id": "a1507052003550",
+                    "text": "1084"
+                  },
+                  {
+                    "id": "a1507052052834",
+                    "text": "13"
+                  },
+                  {
+                    "id": "a1507052067537",
+                    "text": "2404"
+                  },
+                  {
+                    "id": "a1507052065421",
+                    "text": "14"
+                  },
+                  {
+                    "id": "a1507052046112",
+                    "text": "798"
+                  },
+                  {
+                    "id": "a1507052604576",
+                    "text": "1611"
+                  },
+                  {
+                    "id": "a1507052631842",
+                    "text": "823"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432088,
+          "key": "d51390c1-0716-49e3-9606-5ea08317d425",
+          "title": "检查数据类型",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d51390c1-0716-49e3-9606-5ea08317d425",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431690,
+              "key": "85287190-15cc-4ee8-b2e4-4d1d2e7d7770",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "  # 检查数据类型\n使用此 Jupyter notebook 检查每个数据集中特征的数据类型，并考虑应该做何更改，以使它们实用和（在两个数据集之间）一致。使用它来帮助你回答下面的练习问题。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431691,
+              "key": "ffa5cc1d-28b9-4208-ae16-2ee0dce99510",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewb5fd87e9",
+              "pool_id": "jupyter",
+              "view_id": "4bb6a6a3-f1aa-4155-b384-cfeec6eb4082",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/inspect_datatypes.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431692,
+              "key": "b9fa3bf6-9eae-4c3d-a52a-f0a415276936",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b9fa3bf6-9eae-4c3d-a52a-f0a415276936",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "以下哪项更改，会使两个数据集中的 `cyl` 列更清晰和一致？",
+                "answers": [
+                  {
+                    "id": "a1507064778338",
+                    "text": "从 2008 的 cyl 列中的字符串中提取整型值。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507064826383",
+                    "text": "将 2018 的 cyl 列中的浮点型转换为整型。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507064894343",
+                    "text": "将 2018 的列中的浮点型转换为格式化字符串。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507064969155",
+                    "text": " 无变更。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431693,
+              "key": "6b22de29-470c-454e-aa08-a5b617487aab",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6b22de29-470c-454e-aa08-a5b617487aab",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "以下哪项更改会使两个数据集中的 `air_pollution_score` 列一致？",
+                "answers": [
+                  {
+                    "id": "a1507065104535",
+                    "text": "将 2008 的列中的字符串转换为浮点型。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065117889",
+                    "text": "将 2018 的列中的整型转换为浮点型。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065127103",
+                    "text": "将 2008 的列中的字符串转换为整型。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431694,
+              "key": "afcf1e59-b5a8-4def-96f3-3cfbc6326a61",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "afcf1e59-b5a8-4def-96f3-3cfbc6326a61",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "以下哪些特征需要从字符串转换为浮点数？",
+                "answers": [
+                  {
+                    "id": "a1507065219636",
+                    "text": "city_mpg (2008)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065247264",
+                    "text": "city_mpg (2018)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065247802",
+                    "text": "hwy_mpg (2008)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065248309",
+                    "text": "hwy_mpg (2018)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065248826",
+                    "text": "cmb_mpg (2008)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065249367",
+                    "text": "cmb_mpg (2018)",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431695,
+              "key": "bb00cbf4-0e6d-4a29-9da3-90a171484f32",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bb00cbf4-0e6d-4a29-9da3-90a171484f32",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "哪项更改会使两个数据集中的 `greenhouse_gas_score` 列一致？",
+                "answers": [
+                  {
+                    "id": "a1507065304121",
+                    "text": "将 2008 的列中的字符串转换为整型。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507065310250",
+                    "text": "将 2018 的列中的整型转换为浮点型。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507065344203",
+                    "text": "将 2008 的列中的浮点型转换为整型。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432087,
+          "key": "b5db784c-2d5a-4222-8fff-030543744a5b",
+          "title": "修正数据类型第 1 部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b5db784c-2d5a-4222-8fff-030543744a5b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Fix-Datatypes-Cyl",
+                "uri": "https://video.udacity-data.com/topher/2018/June/5b168bb6_fix-datatypes-cyl/fix-datatypes-cyl.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431696,
+              "key": "da2c706a-c0df-4da5-a6f3-3f6be33df382",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 修正数据类型\n\n在接下来的三个部分中，你将进行以下更改，以使数据类型一致和实用。\n\n## 解决 `cyl` 数据类型\n- 2008: 从字符串中提取整型。\n- 2018: 将浮点型转换为整型。\n\n## 解决 `air_pollution_score` 数据类型\n- 2008: 将字符串转换为浮点型。\n- 2018: 将整型转换为浮点型。\n\n## 解决 `city_mpg`、`hwy_mpg`、`cmb_mpg` 数据类型\n- 2008 和 2018: 将字符串转换为浮点型。\n\n## 解决 `greenhouse_gas_score` 数据类型\n- 2008: 从浮点型转换为整型。\n\n\n在第一部分，你将解决第一个问题，修正 `cyl` 数据类型。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486714,
+              "key": "dc5c20ef-367d-44d1-9396-af6c274c68f3",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view5deae603",
+              "pool_id": "jupyter",
+              "view_id": "5deae603-133a-4c8c-b4a6-7e536b7b42db",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/fix_datatypes_cyl-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 432097,
+          "key": "1c0a837e-0cbd-4d48-8acf-9aa0b80aa252",
+          "title": "修正数据类型第 2 部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1c0a837e-0cbd-4d48-8acf-9aa0b80aa252",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Fix-Datatypes-Air-Pollution",
+                "uri": "https://video.udacity-data.com/topher/2018/June/5b168bd5_fix-datatypes-air-pollution/fix-datatypes-air-pollution.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431698,
+              "key": "757e65be-76aa-42ad-9a0b-722b80a2f045",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " # 修正数据类型第 2 部分\n接下来，你要修正 `air pollution` 的数据类型。这一个涉及一个棘手步骤，但提供了一些提示。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486730,
+              "key": "39c8c40f-f7a2-4095-bb0e-878747bac389",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewbc24350e",
+              "pool_id": "jupyter",
+              "view_id": "bc24350e-e97c-48f4-8209-1fc3b71d3971",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/fix_datatypes_air_pollution-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431700,
+              "key": "e073157e-5f6a-4376-bf9e-fc6b2f3b1b99",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e073157e-5f6a-4376-bf9e-fc6b2f3b1b99",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配新数据集的维度的新值"
+                },
+                "concepts_label": "特征",
+                "answers_label": "值",
+                "concepts": [
+                  {
+                    "text": "2008 数据集中的行数",
+                    "correct_answer": {
+                      "id": "a1507736403462",
+                      "text": "987"
+                    }
+                  },
+                  {
+                    "text": "2008 数据集中的列数",
+                    "correct_answer": {
+                      "id": "a1507736444384",
+                      "text": "13"
+                    }
+                  },
+                  {
+                    "text": "2018 数据集中的行数",
+                    "correct_answer": {
+                      "id": "a1507736446615",
+                      "text": "832"
+                    }
+                  },
+                  {
+                    "text": "2018 数据集中的列数",
+                    "correct_answer": {
+                      "id": "a1507736447249",
+                      "text": "13"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507736444384",
+                    "text": "13"
+                  },
+                  {
+                    "id": "a1507736560749",
+                    "text": "2404"
+                  },
+                  {
+                    "id": "a1507736569346",
+                    "text": "14"
+                  },
+                  {
+                    "id": "a1507736562751",
+                    "text": "1611"
+                  },
+                  {
+                    "id": "a1507736403462",
+                    "text": "987"
+                  },
+                  {
+                    "id": "a1507736446615",
+                    "text": "832"
+                  },
+                  {
+                    "id": "a1507736447249",
+                    "text": "13"
+                  },
+                  {
+                    "id": "a1507736571793",
+                    "text": "923"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432101,
+          "key": "a9445b4c-a044-4d0e-8a30-95ff3f236eab",
+          "title": "修正数据类型第 3 部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a9445b4c-a044-4d0e-8a30-95ff3f236eab",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Fix-Datatypes-Mpg-Greenhouse",
+                "uri": "https://video.udacity-data.com/topher/2018/June/5b168bf2_fix-datatypes-mpg-greenhouse/fix-datatypes-mpg-greenhouse.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431701,
+              "key": "3fa0094c-dcda-497d-b6cc-7c3ce4c4702f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 修正数据类型第 3 部分\n在最后一部分，你将修正 mpg 和温室气体得分列的数据类型。\n\n完成这些最终修正后，请检查两个数据集中所有特征的数据类型，以确认我们之前指定的所有更改成功实施。这里再次提供它们以供参考:\n\n## 修正 `cyl` 数据类型\n- 2008: 从字符串中提取整型。\n- 2018: 将浮点型转换为整型。\n\n## 修正 `air_pollution_score` 数据类型\n- 2008: 将字符串转换为浮点型。\n- 2018: 将整型转换为浮点型。\n\n## 修正 `city_mpg`、`hwy_mpg`、`cmb_mpg` 数据类型\n- 2008 and 2018: 将字符串转换为浮点型。\n\n## 修正 `greenhouse_gas_score` 数据类型\n- 2008: 将浮点型转换为整型。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486731,
+              "key": "c95a1391-fd35-446b-8395-f7f6f9cbe006",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view39e03db3",
+              "pool_id": "jupyter",
+              "view_id": "39e03db3-e5c7-4a29-b530-37cdc19ceb32",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/fix_datatypes_mpg_greenhouse-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431703,
+              "key": "5e07cb1c-e7a7-4fca-9239-8e6ffcd88b24",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5e07cb1c-e7a7-4fca-9239-8e6ffcd88b24",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "`cyl` 现在的类型为 `int`",
+                "`air_pollution_score` 现在的类型为 `float`",
+                "`city_mpg`、`hwy_mpg` 和 `cmb_mpg` 现在的类型为 `float`",
+                "`greenhouse_gas_score` 现在的类型为 `int`"
+              ],
+              "positive_feedback": "棒极了！",
+              "video_feedback": null,
+              "description": "确认 BOTH 数据集的以下数据类型！"
+            }
+          ]
+        },
+        {
+          "id": 432102,
+          "key": "70a33a7d-7761-45f7-ac31-31968ef16bb4",
+          "title": "使用可视化探索数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "70a33a7d-7761-45f7-ac31-31968ef16bb4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431704,
+              "key": "ece04685-fd68-4b45-b5ba-ce3988e268b1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 使用可视化探索数据\n在 Jupyter notebook 中使用直方图和散点图探索 `clean_08.csv` 和 `clean_18.csv`。然后，回答 notebook 下的练习问题。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431705,
+              "key": "62e22584-85b4-407b-99e5-90a2844b7f8a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewb5fd87e9",
+              "pool_id": "jupyter",
+              "view_id": "e903848a-9052-4242-9c0f-6bb85485b117",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/exploring_visuals.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431706,
+              "key": "a2b1f2fb-0e02-4921-9e3d-ac3cc59b4e8a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a2b1f2fb-0e02-4921-9e3d-ac3cc59b4e8a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "比较 2008 年至 2018 年温室气体排放量的分布情况。",
+                "answers": [
+                  {
+                    "id": "a1507057878358",
+                    "text": " 两者的分布都为正态分布。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507057899099",
+                    "text": "两者的分布都为右偏态。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507057910952",
+                    "text": "2008 年的分布更偏向左边。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507057935762",
+                    "text": "2018 年的分布更偏向左边。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431707,
+              "key": "33b3fd39-5834-4e3c-b07a-05947147c589",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "33b3fd39-5834-4e3c-b07a-05947147c589",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "从 2008 年到 2018 年，综合 mpg 的分布是如何变化的？",
+                "answers": [
+                  {
+                    "id": "a1507058077201",
+                    "text": "保持不变",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507058096349",
+                    "text": "朝相反的方向偏态",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507058111034",
+                    "text": "变得更偏向右边",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507058120900",
+                    "text": "逐渐接近正态分布",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431708,
+              "key": "55f481b0-20bf-4c90-976b-66f7b95a8c65",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "55f481b0-20bf-4c90-976b-66f7b95a8c65",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "描述排量和综合 mpg 之间的相关性。",
+                "answers": [
+                  {
+                    "id": "a1507057720732",
+                    "text": "正相关",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507057742409",
+                    "text": "负相关",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507057746469",
+                    "text": "无相关性",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431709,
+              "key": "a777419c-0897-4d3e-ab25-def8c48ec5e3",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a777419c-0897-4d3e-ab25-def8c48ec5e3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "描述温室气体得分与综合 mpg 之间的相关性。",
+                "answers": [
+                  {
+                    "id": "a1507057775502",
+                    "text": "正相关",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507057789287",
+                    "text": "负相关",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507057792467",
+                    "text": "无相关性",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432103,
+          "key": "e5e683c5-33c5-4fb8-b4f6-55e525a4b9cf",
+          "title": " 结论和可视展示",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e5e683c5-33c5-4fb8-b4f6-55e525a4b9cf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Drawing-Conclusions-Solutions",
+                "uri": "https://video.udacity-data.com/topher/2018/May/5af94d39_drawing-conclusions-solutions/drawing-conclusions-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431710,
+              "key": "2efd4c8e-edca-4b4f-9862-73b3da922cc8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 结论和可视展示\n得出结论并创建可视效果，以在 Jupyter notebook 中传达结果！确保解决以下问题。\n\n__Q1:__ 与2008年相比，2018年是否有更多的车型（去重后）使用替代能源？比例增长了多少？\n\n__Q2:__ 各车辆类别（veh_class）在燃料经济性方面的改进（mpg 的增长）是多少？\n\n__Q3:__ SmartWay 车辆的特点是什么？它们是否随时间推移发生了改变？（mpg，温室气体排放量）\n\n__Q4:__ 哪些特征与更好的燃料经济性 (mpg) 相关联？\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 488746,
+              "key": "b71337b2-7aef-4ef5-888a-c86305f4dae6",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view390147e1",
+              "pool_id": "jupyter",
+              "view_id": "390147e1-194b-4838-adf4-8d56a513170a",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/drawing_conclusions-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431712,
+              "key": "795d1b28-d23c-4baa-b47b-c60250a01142",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 最后一个问题！\n### 第 5 个问题：对于 2008 年生产且 2018 年仍在生产中的车型，mpg 有多少改进，哪些车辆的改进最多？\n\n这个问题是关于 2008 年以来不断更新换代且 2018 年仍在生产的车型。要回答此问题，我们需要找到两个数据集中都存在的车型，那么先让我们来了解如何将两个数据集合并。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432109,
+          "key": "ed54f015-311a-483e-9df8-89751cdece2b",
+          "title": "合并类型",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ed54f015-311a-483e-9df8-89751cdece2b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431713,
+              "key": "029f8bdd-a8bc-4e50-8b7c-f817d488aedc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 合并类型\n目前为止，我们学习了如何附加数据帧 (Dataframe)。现在，我们将学习 [Pandas Merges](https://pandas.pydata.org/pandas-docs/stable/merging.html#database-style-dataframe-joining-merging)，这是合并数据帧 dataframe 的另一种方式。这类似于数据库风格的 \"join\"。如果你熟悉 SQL，这个[与 SQL 的比较](https://pandas.pydata.org/pandas-docs/stable/comparison_with_sql.html#compare-with-sql-join) 可以帮助你将它们联系起来。\n\n这里介绍了 Pandas 中的四种合并类型。下文中，\"键\"指我们将进行连接的两个 dataframe 中的共同列。\n1. 内联 - 使用两个 dataframe 中的键的交集。\n2. 外联 - 使用两个 dataframe 的键的并集。\n3. 左联 - 仅使用来自左 dataframe 的键。\n4. 右联 - 仅使用来自右 dataframe的键。\n\n以下是可视化每种类型的图表。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431714,
+              "key": "36b24e19-d409-4551-b743-362a28246e46",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d3e866_inner-outer/inner-outer.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/36b24e19-d409-4551-b743-362a28246e46",
+              "caption": "",
+              "alt": "",
+              "width": 2560,
+              "height": 1440,
+              "instructor_notes": null
+            },
+            {
+              "id": 431715,
+              "key": "8494f6e1-19aa-467d-9300-3d96e2671308",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d3e874_left-right/left-right.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8494f6e1-19aa-467d-9300-3d96e2671308",
+              "caption": "",
+              "alt": "",
+              "width": 2560,
+              "height": 1440,
+              "instructor_notes": null
+            },
+            {
+              "id": 431716,
+              "key": "1304d3bd-b1d8-4e27-afc7-2b91267560a8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[在此](https://pandas.pydata.org/pandas-docs/stable/merging.html#database-style-dataframe-joining-merging)阅读 Pandas Merges 的文档。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432111,
+          "key": "3e505c9b-574f-4386-9e46-3e29b766507a",
+          "title": "合并数据集",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3e505c9b-574f-4386-9e46-3e29b766507a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Merging-Data",
+                "uri": "https://video.udacity-data.com/topher/2018/June/5b168c55_merging-data/merging-data.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431717,
+              "key": "9738d1f2-60e7-4f31-95ab-195b1cecebaa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 合并数据集\n### 1. 重命名 2008 列，以在合并后与 2018 列进行区分\n为此，请使用 Pandas 的 rename() 和 lambda 函数。查看[这里](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.rename.html)的示例 。在 lambda 函数中，取列标签的前 10 个字符，并将其与 `_2008` 连接起来。（仅取前 10 个字符，以避免列名过长。）\n\nlambda 函数看起来应该是这样的: `lambda x: x[:10] + \"_2008\"`\n\n在你的 `rename` 中，不要忘了在添加 lambda 函数时指定参数 `columns=`！\n\n### 2. 执行内部合并\n要回答最后一个问题，我们只想知道同型号的汽车有何更新，以及新车型的 mpg 与旧型号的 mpg 相比如何。\n\n执行内部合并，左侧为 `model_2008` 和右侧为 `model`。[在此](https://pandas.pydata.org/pandas-docs/stable/merging.html#database-style-dataframe-joining-merging)查看 Pandas 的 merge 函数文档 。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486737,
+              "key": "9c07e910-2a22-43de-9ea5-db7903681e2a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewb691b339",
+              "pool_id": "jupyter",
+              "view_id": "b691b339-1ff2-47ec-bf70-89d3ed003933",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/merging_data-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431719,
+              "key": "967efd1d-a638-4bcd-9e0d-dc96e53a09b0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "967efd1d-a638-4bcd-9e0d-dc96e53a09b0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "你新合并的数据集中有多少列？",
+                "answers": [
+                  {
+                    "id": "a1507739453858",
+                    "text": "13",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507739476163",
+                    "text": "26",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507739480973",
+                    "text": "27",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507739556637",
+                    "text": "32",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432112,
+          "key": "85b7a81c-b387-4068-b37d-cf54b9543996",
+          "title": "合并数据集的结果",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "85b7a81c-b387-4068-b37d-cf54b9543996",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Results Merged Solutions",
+                "uri": "https://video.udacity-data.com/topher/2020/February/5e576a9d_results-merged-solutions/results-merged-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431720,
+              "key": "ce072080-2514-4256-8fea-42d2ce4716d0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 合并数据集的结果\n使用下面的 notebook ，回答有关合并后数据集的最后一个问题。\n\n___问题 6: 对于 2008 年生产且 2018 年仍在生产中的车型，mpg 有多少改进，哪些车辆的改进最多？___\n\n以下是回答此问题的步骤。\n\n### 1. 创建一个新的数据帧 `model_mpg`，包含每个唯一车型在 2008 年和 2018 年的平均综合 mpg 值\n要这样做，按车型分组，并找到每个车型的平均 `cmb_mpg_2008` 和平均 `cmb_mpg`。\n\n### 2. 创建一个新列 `mpg_change`，包含 mpg 的变更\n用 2018 年的平均 mpg 中减去 2008 年的平均 mpg，以获得 mpg 的变化值\n\n### 3. 找到改进最多的车辆\n找到最大的 mpg 变化值，然后使用查询或索引找到对应的车型！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486739,
+              "key": "253c639e-98e7-4a33-83e9-c15dd3b6c0e4",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewf8a8f428",
+              "pool_id": "jupyter",
+              "view_id": "f8a8f428-e825-4a9f-8401-6780197ccd85",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/results_merged-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 432113,
+          "key": "6569f2f6-787a-4ebe-b3bc-3e7eba11a165",
+          "title": " 总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6569f2f6-787a-4ebe-b3bc-3e7eba11a165",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431722,
+              "key": "946ad158-5587-43e5-b139-0795e705f82b",
+              "title": " 总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "D_ioSXAre1A",
+                "china_cdn_id": "D_ioSXAre1A.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

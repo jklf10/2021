@@ -1,0 +1,377 @@
+{
+  "data": {
+    "lesson": {
+      "id": 432123,
+      "key": "a346dcfb-58cd-43ec-b786-fec1022155f0",
+      "title": "数据分析的编程工作流",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "该内容向你介绍在 Python 中进行分析的不同工作流程：IPython 的命令行界面、在文本编辑器中编写脚本，以及在终端中运行脚本。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 432117,
+          "key": "c7b6ae78-1aff-4caa-a1ab-74ff2229d44a",
+          "title": "课程概述",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c7b6ae78-1aff-4caa-a1ab-74ff2229d44a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431723,
+              "key": "52815542-a8dc-4c4d-a773-9fa0224a69a4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 课程概述\n首先，__恭喜__你完成了数据分析课和两个案例研究！现在，你已经获得了使用 Python 和描述性统计分析实际数据集的一些实践经验，下面是一个简短的课程，将向你介绍在 Jupyter notebook 之外执行分析的工作流程。 \n\nJupyter notebook 是你需要掌握的一项强大工具，但绝对还有其他可用的环境和工作流程，来帮助你更好地执行分析。这里只是快速地介绍几个概念，以确保你了解运行 Python 的不同方式，以及如何从中选择。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432118,
+          "key": "35b42164-ba00-4d0b-aa32-bc96d65c3997",
+          "title": "使用 IPython 进行分析",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "35b42164-ba00-4d0b-aa32-bc96d65c3997",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431724,
+              "key": "47a2ff24-b37b-4352-bdd1-e59c2387eef8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 关于 IPython\n[IPython](https://ipython.org/) 提供了我们在 Jupyter Notebook 中使用的交互式 Python 内核。事实上，我们可以在 Jupyter Notebook 之外，通过我们终端上的命令行界面使用 IPython。这对于快速修改、探索、实验，甚至是运行 Python 脚本来说都非常方便，真的很棒！\n\n你可以[在此](http://jupyter.readthedocs.io/en/latest/architecture/how_jupyter_ipython_work.html) 阅读有关 IPython 和 Jupyter Notebook 工作原理的更多信息。你也可以[在此](http://ipython.readthedocs.io/en/stable/) 找到官方 IPython 文档。\n\n要使用 IPython 的命令行界面，只需在终端键入 `ipython` 即可。如果你已经安装了 Jupyter Notebook ，这应该可以工作。像我们一直在 Jupyter Notebook 中一样，我们会先导入包并加载数据集。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431725,
+              "key": "b81593b9-9bce-4194-a042-7ce6f406fd4f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dcd9af_ipython-a1/ipython-a1.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b81593b9-9bce-4194-a042-7ce6f406fd4f",
+              "caption": "",
+              "alt": "",
+              "width": 2018,
+              "height": 856,
+              "instructor_notes": null
+            },
+            {
+              "id": 431726,
+              "key": "f9308477-574c-4d32-a4fa-da61c6dd4b99",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "即使在终端，我们仍然可以使用 `head` 以相同的方式查看数据集。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431727,
+              "key": "6ba56bfa-1734-49d9-8eb3-317116bc210a",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dcd9cd_ipython-a2/ipython-a2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6ba56bfa-1734-49d9-8eb3-317116bc210a",
+              "caption": "",
+              "alt": "",
+              "width": 2008,
+              "height": 1202,
+              "instructor_notes": null
+            },
+            {
+              "id": 431728,
+              "key": "fab674c4-6058-47ee-9ed6-cd7e6f3b8ba5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "即使在 IPython 中，你仍然可以使用命令行命令！所以我们可以执行一些操作，比如检查我们的目录，以查找其他文件并重命名它们。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431729,
+              "key": "4fa62fa7-6336-4dfb-8e57-244b85f1d5a6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dcc4cf_ipython-a3/ipython-a3.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4fa62fa7-6336-4dfb-8e57-244b85f1d5a6",
+              "caption": "",
+              "alt": "",
+              "width": 2012,
+              "height": 452,
+              "instructor_notes": null
+            },
+            {
+              "id": 431730,
+              "key": "df77e01e-7a32-4fc0-97bc-0adef8a4f37f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在终端使用 IPython 非常便于快速更改文件。例如，你可能想在发送 csv 文件之前更改数据集中的列名称。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431731,
+              "key": "4c0ea7df-19a4-4738-addb-0c5af91ea383",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dcc4d9_ipython-a4/ipython-a4.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4c0ea7df-19a4-4738-addb-0c5af91ea383",
+              "caption": "",
+              "alt": "",
+              "width": 2018,
+              "height": 628,
+              "instructor_notes": null
+            },
+            {
+              "id": 431732,
+              "key": "7730fdf5-a1da-48c4-9e9e-ddcc41623700",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这里的可视化也是一样的，除了没有 `% matplotlib inline`，因为这是特定于 Jupyter notebook 的。要显示我们的可视化，我们需要调用 `plt.show()`.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431733,
+              "key": "5c58bf37-7f06-4074-8cc2-e3024e696f6e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dcc4e4_ipython-a5/ipython-a5.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5c58bf37-7f06-4074-8cc2-e3024e696f6e",
+              "caption": "",
+              "alt": "",
+              "width": 2004,
+              "height": 216,
+              "instructor_notes": null
+            },
+            {
+              "id": 431734,
+              "key": "42e3eed6-40df-40df-aa22-84d938da5128",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "输入它将像这样在另一个窗口中打开此图。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431735,
+              "key": "4a7810eb-0e81-4f04-ad6e-3fbdca680e95",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dcc509_ipython-a6/ipython-a6.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4a7810eb-0e81-4f04-ad6e-3fbdca680e95",
+              "caption": "",
+              "alt": "",
+              "width": 2016,
+              "height": 1198,
+              "instructor_notes": null
+            },
+            {
+              "id": 431736,
+              "key": "5ee8b8c4-ccc1-4239-8d79-63a44a827133",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我经常在 IPython 中做的一件事，是练习或实验不同的函数、算法或 Python。有时候，我甚至快速查看这里，以便在阅读文档之前记住函数的工作原理（虽然阅读文档也是一个非常好的了解函数的方法！）",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431737,
+              "key": "cfbd091b-b923-466d-97a1-e4d01f73814e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dcc514_ipython-a7/ipython-a7.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cfbd091b-b923-466d-97a1-e4d01f73814e",
+              "caption": "",
+              "alt": "",
+              "width": 2008,
+              "height": 202,
+              "instructor_notes": null
+            },
+            {
+              "id": 431738,
+              "key": "173309c2-f2c9-4e99-870a-d21f9a83029b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这只是一个简单概述，让你认识使用新 Python 练习数据分析技能的不同工具。如果你想了解更多信息，请务必查看上面链接的文档！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432119,
+          "key": "f5f868ba-3bb1-4bb3-92c4-91a5d634bcc0",
+          "title": "编写分析脚本",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f5f868ba-3bb1-4bb3-92c4-91a5d634bcc0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431739,
+              "key": "84cdf6a2-1467-42da-ab95-20589f5f2d63",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 编写分析脚本\n\n能够编写和运行脚本对于编程任务和项目非常重要。\n\n你可以在文本编辑器中编写代码，然后在终端中运行该文件。以下是打印收入普查数据集列名称的简单示例。如果你使用右边所示的代码将文件保存为 .py 文件，则可以如左图所示运行它。确保你保存在该文件的同一个目录中！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431740,
+              "key": "e72d4368-b6d0-45b2-8246-2e6d35d7bb2d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dd0e0c_script-columns-simple/script-columns-simple.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e72d4368-b6d0-45b2-8246-2e6d35d7bb2d",
+              "caption": "",
+              "alt": "",
+              "width": 1280,
+              "height": 698,
+              "instructor_notes": null
+            },
+            {
+              "id": 431741,
+              "key": "d7b794be-81b0-425c-8652-37a741ec2304",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你最好将分析功能分组到函数中并在主函数中运行它们。这有助于组织代码并尽可能泛化。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431742,
+              "key": "d9b1b1c9-c92a-4d04-aa20-dcf24597a121",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dd0e1a_script-columns-functions/script-columns-functions.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d9b1b1c9-c92a-4d04-aa20-dcf24597a121",
+              "caption": "",
+              "alt": "",
+              "width": 1280,
+              "height": 697,
+              "instructor_notes": null
+            },
+            {
+              "id": 431743,
+              "key": "c167d3cc-dd59-428a-86b2-f7a4e7b2683c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "下面的脚本创建了一个包含高收入和低收入人群的双重年龄直方图。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431744,
+              "key": "b353833c-bcd1-4d3e-8dc9-844007225cc7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dd0f08_script-plot/script-plot.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b353833c-bcd1-4d3e-8dc9-844007225cc7",
+              "caption": "",
+              "alt": "",
+              "width": 1280,
+              "height": 697,
+              "instructor_notes": null
+            },
+            {
+              "id": 431745,
+              "key": "20f21cab-eecc-4406-8b00-eac6d2534c1e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你可以想象如果我们有更多的双重直方图，可以如何重复使用 `plot_hist`。此函数甚至可以更加泛化。如果我们为这个数据集创建了许多可视化的脚本，主函数中的查询逻辑应该可以转到另一个函数。如果这个项目变得很大，我们甚至可以将我们的代码分成不同的文件或模块，使其更加有条理。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431746,
+              "key": "2edf761f-677a-4437-a82d-55dee610e2cf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这些只是介绍不同工作流程的简单示例。终端编写和运行脚本是非常灵活和强大的编程方式。这是比 Jupyter notebook 更为理想的开发环境 - Jupyter notebook 也非常有用，但更适合于报告等。\n\n我强烈建议你尽快熟悉一个好的文本编辑器，并使用终端。然后，你便可以自动化脚本，每天早上从数据库中提取数据，获取信息！即使你不喜欢这些花哨的东西，熟悉好的文本编辑器和使用终端仍然是非常有价值的。",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

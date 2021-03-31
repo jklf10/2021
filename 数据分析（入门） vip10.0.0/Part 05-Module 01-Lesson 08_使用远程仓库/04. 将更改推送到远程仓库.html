@@ -1,0 +1,364 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>将更改推送到远程仓库</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>使用远程仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 远程仓库.html">02. 远程仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 添加远程仓库.html">03. 添加远程仓库</a>
+    </li>
+    <li class="">
+      <a href="04. 将更改推送到远程仓库.html">04. 将更改推送到远程仓库</a>
+    </li>
+    <li class="">
+      <a href="05. 从远程仓库拉取修改.html">05. 从远程仓库拉取修改</a>
+    </li>
+    <li class="">
+      <a href="06. Pull 与 Fetch.html">06. Pull 与 Fetch</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. 将更改推送到远程仓库</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L1 - Git Push 理论</p></h3>
+  <video controls>
+  <source src="04. L1 - Git Push 理论-21TvMEtMRys.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="04. L1 - Git Push 理论-21TvMEtMRys.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="04. L1 - Git Push 理论-21TvMEtMRys.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. L1 - Git Push 理论-21TvMEtMRys.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. L1 - Git Push 理论-21TvMEtMRys.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="查看-commit">查看 commit</h2>
+<p>让我们来看看我的仓库中的 commit 。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-project-commits.png" alt="_终端正在显示项目 commit 的日志。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端正在显示项目 commit 的日志。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我使用了以下 log 命令来显示这些 commit </p>
+<pre><code class="bash language-bash">$ git log --oneline --graph --decorate --all</code></pre>
+<p>不过这些 commit 仅位于本地仓库，还未推送到远程仓库。当 commit 推送到远程仓库后，日志中将出现远程分支指示符。由于日志中当前没有远程分支指示符，我们便可以说远程仓库中没有 commit 。但是为了百分百确定，我们来看看 GitHub 上的远程仓库，看看是否存在一些 commit 。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-project-github-no-commits.png" alt="_远程仓库不包含任何 commit ，所以 GitHub 显示出仓库的设置页面。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>远程仓库不包含任何 commit ，所以 GitHub 显示出仓库的设置页面。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>由于我们还未向 GitHub 推送任何 commit 更新，它仍然在向我们显示设置屏幕，告诉我们如何将本地仓库连接到远程仓库并推送一些 commit 。由于我们看到的仍然是设置屏幕，因此可以知道远程仓库中没有 commit 。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="推送-commits">推送 commits</h2>
+<p>要将本地 commits 推送到远程仓库，你需要使用 <code>git push</code> 命令。你要提供远程仓库简写名以及用于容纳你的 commit 的分支名：</p>
+<pre><code class="bash language-bash">$ git push &lt;remote-shortname&gt; &lt;branch&gt;</code></pre>
+<p>我的远程仓库的简写名为 <code>origin</code>，并且我想推送的 commit 位于<code>master</code>分支上。那么，我要使用以下命令将我的 commit 推送到 GitHub 上的远程仓库：</p>
+<pre><code class="bash language-bash">$ git push origin master</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-project-push-commits.png" alt="_终端现在正在显示 &#x60;git push&#x60; 命令。它向我索取用户名、密码（不显示出来），然后显示关于它如何推送 commit 的信息。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端现在正在显示 <code>git push</code> 命令。它向我索取用户名、密码（不显示出来），然后显示关于它如何推送 commit 的信息。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>有几点需要注意：</p>
+<ul>
+<li>你可能需要输入用户名和密码，这取决于你如何配置 GitHub 的以及使用的远程 URL 。<ul>
+<li>如果你使用的是 HTTP 版本（而不是 <code>ssh</code> 版本）的远程仓库，就需要提供用户名和密码。</li>
+<li>如果你配置 GitHub 使用 SSH 协议，并提供过 SSH 密匙，就不需要执行上一步。如果你对使用 SSH 连接 GitHub 感兴趣，请参阅<a href="https://help.github.com/articles/connecting-to-github-with-ssh/" rel="noopener noreferrer" target="_blank">使用 SSH 连接 GitHub 文档</a>。</li></ul></li>
+<li>如果你要输入用户名和密码，用户名会在输入后显示出来，但密码不会显示。只需继续输入密码，完成后按 Enter 键即可。<ul>
+<li>如果你的密码出错，不用担心，它会让你重新输入</li></ul></li>
+<li>Git 会压缩文件使之变小，然后将其推送至远程仓库</li>
+<li>这里创建了一个新分支，在页面底部可看到<code>[new branch]</code>，后面是 <code>master  -&gt; master</code></li>
+</ul>
+<p>现在我们来看 GitHub:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-project-on-github.png" alt="_我的整个项目都位于 GitHub 上！_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>我的整个项目都位于 GitHub 上！</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们的项目位于 GitHub 上 - 这太酷了，也让我们的工作变得很轻松！GitHub 有一个很棒的功能，即它会自动显示 README 文件的内容，这非常有用。</p>
+<p>GitHub 还会显示很多关于我们仓库的详细信息。现在它显示仓库中有：</p>
+<ul>
+<li>三个 commit </li>
+<li>一个分支 </li>
+<li>一名贡献者</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-project-on-github-focus.png" alt="_ GitHub 上的项目主页显示关于仓库的信息。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>_ GitHub 上的项目主页显示关于仓库的信息。_</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在继续之前，我们来检查一下本地仓库，看看在推送更改后它有何变化。</p>
+<p>运行以下命令：</p>
+<pre><code class="bash language-bash">$ git log --oneline --graph --decorate --all</code></pre>
+<p><em>注意：确认已包含 <code>--decorate</code> 和 <code>--all</code> 选项。</em></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-04-commit-count-local.png" alt="_终端显示运行 &#x60;git log --oneline --graph --decorate --all&#x60; 后的结果。现在出现了 &#x60;origin/master&#x60; 跟踪分支。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示运行 <code>git log --oneline --graph --decorate --all</code> 后的结果。现在出现了 <code>origin/master</code> 跟踪分支。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>现在我们输出中有一个标记 (marker)！该标记为 <code>origin/master</code>，并被称为<strong>跟踪分支</strong>。跟踪分支的名称包含远程仓库的简写名及分支名称。所以跟踪分支 <code>origin/master</code> 告诉我们远程仓库 <code>origin</code> 有一个 <code>master</code> 分支，指向 commit  <code>9b7d28f</code>（并包含 <code>9b7d28f</code> 前的所有 commit ）。这非常有用，因为这意味着我们可以在本地仓库跟踪远程仓库的信息！</p>
+<p>需要<strong>注意的一点</strong>是，这个 <code>origin/master</code> 跟踪分支并不能实时表现被跟踪分支在远程仓库上的位置。如果我们之外的其他人对远程仓库做了更改，我们本地仓库中的 <code>origin/master</code> 跟踪分支不会移动。我们必须告诉它检查更新，<strong>它才会</strong>移动。我们将在下一部分介绍如何操作。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p><code>git push</code> 命令用于从本地仓库向远程仓库推送 commit 。</p>
+<pre><code class="bash language-bash">$ git push origin master</code></pre>
+<p><code>git push</code> 命令需要：</p>
+<ul>
+<li>你想向其推送 commit 的远程仓库的简写名</li>
+<li>包含你想推送的 commit 的分支</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. 从远程仓库拉取修改.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 将更改推送到远程仓库')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

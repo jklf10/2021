@@ -1,0 +1,342 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>压制 commit</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>与远程仓库保持同步</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 创建 Pull Request.html">02. 创建 Pull Request</a>
+    </li>
+    <li class="">
+      <a href="03. 与源项目保持同步.html">03. 与源项目保持同步</a>
+    </li>
+    <li class="">
+      <a href="04. 管理活跃 PR.html">04. 管理活跃 PR</a>
+    </li>
+    <li class="">
+      <a href="05. 压制 commit.html">05. 压制 commit</a>
+    </li>
+    <li class="">
+      <a href="06. 总结.html">06. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. 压制 commit</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L3 - 压制介绍</p></h3>
+  <video controls>
+  <source src="05. L3 - 压制介绍-mRbeT2XVL9w.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="05. L3 - 压制介绍-mRbeT2XVL9w.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="05. L3 - 压制介绍-mRbeT2XVL9w.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. L3 - 压制介绍-mRbeT2XVL9w.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. L3 - 压制介绍-mRbeT2XVL9w.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>要将 commit 压制在一起，我们要使用非常强大的 <code>git rebase</code> 命令。这是我<strong>最爱的</strong>命令之一，但我的确用了<strong>很久</strong>才掌握它。起初，我很难搞清楚它的工作原理，然后（在网上读了无数警告之后），我开始害怕实际使用它，因为担心它会不可逆转地破坏我的项目的 Git 历史。</p>
+<p>但是现在我想告诉你，<code>git rebase</code> 实际并没有那么难，你可以勇敢地对你的仓库进行更改，而无需担心造成任何损害！（&lt;-- 听起来相当鼓舞人心，对不对？！）我们首先概述一下压制的工作原理，然后将实际使用 <code>git rebase</code> 命令进行一些压制。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - 压制理论</p></h3>
+  <video controls>
+  <source src="05. L3 - 压制理论-H5JqcdIB5y0.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="05. L3 - 压制理论-H5JqcdIB5y0.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="05. L3 - 压制理论-H5JqcdIB5y0.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. L3 - 压制理论-H5JqcdIB5y0.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. L3 - 压制理论-H5JqcdIB5y0.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我使用的命令是：</p>
+<pre><code class="bash language-bash">$ git rebase -i HEAD~3</code></pre>
+<h2 id="rebase-命令">rebase 命令</h2>
+<p><code>git rebase</code> 命令会将 commit 移动到一个<strong>新基底（base）</strong>上。在命令 <code>git rebase -i HEAD~3</code> 中，我们告诉 Git 使用 <code>HEAD~3</code> 作为其他所有 commit （<code>HEAD~2</code>、<code>HEAD~1</code> 和 <code>HEAD</code>）将连接到的基底。</p>
+<p>命令中的 <code>-i</code> 代表"交互式"。你<em>可以</em>在非交互模式下执行 rebase。在你学习如何 rebase 时，我明确建议你进行<em>交互式</em> rebase。</p>
+<h3 id="祖先引用">祖先引用</h3>
+<p>简短回顾一下，<code>HEAD</code> 表示你当前的位置（它可以指向多个东西，但通常会指向分支名称或直接指向一个 commit 的 SHA）。这里的 <code>~3</code> 指"三个之前"，所以 <code>HEAD~3</code> 将是你当前所在的 commit 向前三个的 commit。我们将在 <code>git rebase</code> 命令中使用对 commit的这种相对引用。</p>
+<p>我来演示一下如何使用此命令将三个目标 commit 组合成一个。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - 压制操作</p></h3>
+  <video controls>
+  <source src="05. L3 - 压制操作-cL6ehKtJLUM.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="05. L3 - 压制操作-cL6ehKtJLUM.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="05. L3 - 压制操作-cL6ehKtJLUM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. L3 - 压制操作-cL6ehKtJLUM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. L3 - 压制操作-cL6ehKtJLUM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>在该命令中：</p>
+<pre><code class="bash language-bash">$ git rebase -i HEAD~3</code></pre>
+<p><code>HEAD~3</code> 是即将被变基的 commit 的新基底的祖先引用。</p>
+<p>以下哪项可以作为基底引用？</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1493144164979" name="339302" id="a1493144164979">
+      <label for="a1493144164979"><p>SHA</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1493144244997" name="339302" id="a1493144244997">
+      <label for="a1493144244997"><p>分支名称</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1493144253355" name="339302" id="a1493144253355">
+      <label for="a1493144253355"><p>标签名称</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>SHA</li>
+      <li>分支名称</li>
+      <li>标签名称</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="强制推送">强制推送</h3>
+<p>在此视频中，我必要要强行推送分支。我不得不这样做，因为 GitHub 试图阻止我意外删除 commit。因为我使用了 <code>git rebase</code> 命令，实际上<strong>清除</strong>三个分别记录我添加了佛罗里达、巴黎和苏格兰的 commit。我使用 <code>git rebase</code> 将这些 commit 合并或<strong>压制</strong>为单个 commit。</p>
+<p>使用 <code>git rebase</code> 会创建一个具有新 SHA 的新 commit。当我尝试使用 <code>git push</code> 将此 commit 推送至 GitHub 时，GitHub 知道接受此推送会删除那三个单独 commit，所以它拒绝了。因此，我不得不使用 <code>git push -f</code> <strong>强制推送</strong>这些 commit。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h3 id="⚠️-强行推送-⚠️">⚠️ 强行推送 ⚠️</h3>
+</blockquote>
+<blockquote>
+  <p>在这个例子中，强行推送我的 commit 非常必要。如果你尝试推送 commit 而 GitHub 拒绝了它们，这实际上是对你的一种帮助，确保你已经审查过正在推送的 commit <strong>和</strong> GitHub 上的 commit，以验证你不会意外覆盖你在远程仓库上存储的内容！</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="rebase-命令">rebase 命令</h2>
+<p>来看看你可以使用 <code>git rebase</code> 执行哪些不同的命令：</p>
+<ul>
+<li>使用 <code>p</code> 或 <code>pick</code> – 使 commit 保持原样</li>
+<li>使用 <code>r</code> 或 <code>reword</code> –&nbsp;保留 commit 的内容，但修改 commit 说明</li>
+<li>使用 <code>e</code> 或 <code>edit</code> – 保留 commit 的内容，但先不要执行 commit，以便：<ul>
+<li>添加新内容或文件</li>
+<li>删除内容或文件</li>
+<li>修改即将 commit 的内容 </li></ul></li>
+<li>使用 <code>s</code> 或 <code>squash</code> – 将此 commit 的更改结合到之前的 commit 中（列表中位于其上面的 commit ）</li>
+<li>使用 <code>f</code> 或 <code>fixup</code> – 将此 commit 的更改结合到前一个 commit 中，但删除提交说明</li>
+<li>使用 <code>x</code> 或 <code>exec</code> – 运行 shell 命令</li>
+<li>使用 <code>d</code> 或 <code>drop</code> – 删除 commit</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="何时变基">何时变基</h2>
+<p>可以看到，<code>git rebase</code> 命令非常强大。它可以帮助你编辑提交说明、重新排序 commit、合并 commit 等，真的是一款非常强大的工具。现在的问题是"应该<strong>何时</strong>进行变基？"。 </p>
+<p>每当你对 commit 进行变基，Git 将<strong>为每个 commit</strong> 创建一个新的 SHA！这有很大的影响。对于 Git，SHA 为 commit 的标识符，因此不同的标识符代表着不同的 commit，<strong>无论内容是否发生了变化。</strong> </p>
+<p>如果你已推送了你想进行变基的 commit，则不应变基。如果你在与其他开发者协作，那么他们可能已经在使用你推送的 commit。如果你随后使用 <code>git rebase</code> 来进行更改，并强行推送 commit，则其他开发者现在将无法与远程仓库同步。他们需要对自己的 Git 仓库进行一些复杂的手术，使它们的仓库回到工作状态……甚至可能连这一点都做不了；他们可能得抛弃之前的所有工作，使用你新变基过且强制推送的 commit 重新开始。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p><code>git rebase</code> 命令可以用来做很多事情。</p>
+<pre><code class="bash language-bash"># 交互式 rebase
+$ git rebase -i &lt;base&gt;
+
+# 交互式地将 commit 变基到我们当前所在的 commit 向前三个的 commit
+$ git rebase -i HEAD~3</code></pre>
+<p>在 commit 的交互式列表中，所有 commit 都以 <code>pick</code> 开头，但你可以使用其他命令（<code>reword</code>、<code>edit</code>、<code>squash</code>、<code>fixup</code>、<code>exec</code> 和 <code>drop</code>）进行变换。</p>
+<p>我建议你在变基<strong>之前</strong>创建一个备份（backup）分支，这样便能很容易返回到之前的状态。如果你对变基的结果满意，则可以删除 <code>backup</code> 分支！</p>
+<h3 id="进一步研究">进一步研究</h3>
+<ul>
+<li>Git 分支 - 变基：<a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing" rel="noopener noreferrer" target="_blank">英</a>|<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA" rel="noopener noreferrer" target="_blank">中</a>：来自 GitBook</li>
+<li><a href="https://git-scm.com/docs/git-rebase" rel="noopener noreferrer" target="_blank">git-rebase</a>：来自 Git 文档 (<strong>英</strong>)</li>
+<li><a href="https://www.atlassian.com/git/tutorials/rewriting-history#git-rebase" rel="noopener noreferrer" target="_blank">https://www.atlassian.com/git/tutorials/rewriting-history#git-rebase</a>：来自 Atlassian 博客 (<strong>英</strong>)</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. 总结.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 压制 commit')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,428 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fork 仓库</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>使用其他开发者的仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. fork 仓库.html">02. fork 仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 查看现有工作.html">03. 查看现有工作</a>
+    </li>
+    <li class="">
+      <a href="04. 确定你的任务.html">04. 确定你的任务</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. fork 仓库</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>fork 仓库 - 什么是 Fork？</p></h3>
+  <video controls>
+  <source src="02. fork 仓库 - 什么是 Fork？-z4mkVwqVztc.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="02. fork 仓库 - 什么是 Fork？-z4mkVwqVztc.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="02. fork 仓库 - 什么是 Fork？-z4mkVwqVztc.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. fork 仓库 - 什么是 Fork？-z4mkVwqVztc.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. fork 仓库 - 什么是 Fork？-z4mkVwqVztc.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在版本控制术语中，如果你 "fork" 一个仓库，则是指<strong>复制</strong>它。特别是当你 fork 属于别人的仓库时，你将制作<strong>他们</strong>仓库的完全一样的副本，之后这个副本便变成<strong>你的</strong>。</p>
+<p>"fork" 的概念也不同于"克隆"。在克隆仓库时，你也会获得完全一样的仓库副本，但克隆发生在<strong>本地</strong>计算机上，并且克隆的是<strong>远程</strong>仓库。当你 fork 仓库时，会创建<strong>远程</strong>仓库的一份新副本。新副本也是一个<strong>远程</strong>仓库，但它现在属于你。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="有-fork-子命令吗？">有 <code>fork</code> 子命令吗？</h2>
+<p>fork 不在命令行上执行；也不存在 <code>git fork</code> 命令。你可以尝试运行以下命令:</p>
+<pre><code class="bash language-bash">$ git fork</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l2-02-git-fork-error.png" alt="_终端上正在运行&#x60;git fork&#x60;（不存在！）命令。Git 没有 &#x60;fork&#x60; 子命令，所以它的回应是建议使用替代命令。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端上正在运行<code>git fork</code>（不存在！）命令。Git 没有 <code>fork</code> 子命令，所以它的回应是建议使用替代命令。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>如你所见，尝试运行 <code>git fork</code> 命令会产生错误。（另外，<code>fsck</code> 并不是粗话，它表示"文件系统检测"，指的是审核文件的一致性。）</p>
+<h2 id="修改克隆的仓库">修改克隆的仓库</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>请执行以下步骤并回答下面的问题。</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--0">
+        <label for="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--0"><p>使用 <code>git clone</code> 克隆 Lam 的 my-travel-plans 项目</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--1">
+        <label for="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--1"><p>至少对它进行一项修改</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--2">
+        <label for="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--2"><p>提交更改</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--3">
+        <label for="4d4a375a-1e39-4cff-ab47-7ba2b2440a98--3"><p>使用 <code>git push</code> 将你的更改推送回 Lam 的项目</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很好，你完成了所有这些步骤！现在请回答下面的问题。</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>你能否成功将更改推送到了远程仓库？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1492729065474" name="339229" id="a1492729065474">
+        <label for="a1492729065474"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492729071965" name="339229" id="a1492729071965">
+        <label for="a1492729071965"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    否
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>在你尝试推送后显示的输出行中，有一行包含 "fatal" 一词。那么，该词之后的内容是什么？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1492729106475" name="339230" id="a1492729106475">
+        <label for="a1492729106475"><p>你没有正确的权限</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492729131365" name="339230" id="a1492729131365">
+        <label for="a1492729131365"><p>无法访问</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492729133018" name="339230" id="a1492729133018">
+        <label for="a1492729133018"><p>你是所有者吗？</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492729138160" name="339230" id="a1492729138160">
+        <label for="a1492729138160"><p>尝试使用其他帐户</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    无法访问
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们可以从这个小实验中看出，如果一个仓库不属于你的帐户，那么你便不具有修改它的权限。 </p>
+<p>这里 fork 就要派上用场了！你不能直接修改原仓库，但如果你将仓库 fork 到自己的帐户中，便拥有完全控制权了。</p>
+<h3 id="fork-lam-的项目">fork Lam 的项目</h3>
+<p>我将自己克隆 Lam 的项目。我的帐户没有直接编辑她的仓库的权限，所以我要将此仓库 fork 到我自己的帐户。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>请登录你的 GitHub 帐户，然后按以下步骤操作：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="bfebd9e4-4223-4022-bbf8-8dc72e564fa0--0">
+        <label for="bfebd9e4-4223-4022-bbf8-8dc72e564fa0--0"><p>在你的浏览器中转至 <a href="https://github.com/udacity/course-collaboration-travel-plans" rel="noopener noreferrer" target="_blank">Lam 的 my-travel-plans 项目</a></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="bfebd9e4-4223-4022-bbf8-8dc72e564fa0--1">
+        <label for="bfebd9e4-4223-4022-bbf8-8dc72e564fa0--1"><p>点击 fork 按钮将她的仓库复制到你的帐户</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="bfebd9e4-4223-4022-bbf8-8dc72e564fa0--2">
+        <label for="bfebd9e4-4223-4022-bbf8-8dc72e564fa0--2"><p>确认现在你的仓库中列出了 Lam 的项目</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很好，你完成了所有这些步骤！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们来看看仓库的名称：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l2-02-clone-linked-to-fork.png" alt="_fork 项目后你的 GitHub 配置文件名称旁边会显示新的项目名称。此外，名称下面还会说明原始项目所在的位置。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>fork 项目后你的 GitHub 配置文件名称旁边会显示新的项目名称。此外，名称下面还会说明原始项目所在的位置。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>可以看到我的帐户名 (richardkalehoff) 和仓库名称是如何显示的。并且，在仓库名称下，显示 "forked from udacity/course-collaboration-travel-plans"。这表明此项目在<strong>我的</strong>帐户中，但它与复制自的原始项目有联系。</p>
+<p>挺不错的，对吧！现在你可以 fork GitHub 上的任何公共仓库 - 即你可以将仓库复制到自己的帐户中，并对获得的副本拥有完全控制权。</p>
+<p>那么，不如你自己动手 fork 几个仓库练习一下吧！这里有几个你可以尝试：</p>
+<ul>
+<li><a href="https://github.com/udacity/course-git-blog-project" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-git-blog-project</a></li>
+<li><a href="https://github.com/udacity/frontend-nanodegree-styleguide" rel="noopener noreferrer" target="_blank">https://github.com/udacity/frontend-nanodegree-styleguide</a></li>
+<li><a href="https://github.com/GoogleChrome/lighthouse" rel="noopener noreferrer" target="_blank">https://github.com/GoogleChrome/lighthouse</a></li>
+<li><a href="https://github.com/jquery/jquery" rel="noopener noreferrer" target="_blank">https://github.com/jquery/jquery</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="fork-推送拉取">fork 推送/拉取</h2>
+<p>因为 fork 仓库会使你在自己的帐户中拥有一份副本，所以你可以将其克隆到你的计算机，对其进行更改，然后将这些更改推送回 fork 的仓库。但记住，它会将更改推送回<strong>你的</strong>远程仓库，而不是被 fork 的<strong>原始</strong>远程仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L2 - 推送到 Fork</p></h3>
+  <video controls>
+  <source src="02. L2 - 推送到 Fork-WRgNpr19t48.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="02. L2 - 推送到 Fork-WRgNpr19t48.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="02. L2 - 推送到 Fork-WRgNpr19t48.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. L2 - 推送到 Fork-WRgNpr19t48.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. L2 - 推送到 Fork-WRgNpr19t48.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p>fork 是一种在托管服务上完成的操作，如 GitHub。fork 仓库会创建与原始仓库完全相同的副本，并将该副本移动到你的帐户。你对 fork 的仓库拥有完全控制权。修改 fork 的仓库不会更改原始仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 查看现有工作.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. fork 仓库')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

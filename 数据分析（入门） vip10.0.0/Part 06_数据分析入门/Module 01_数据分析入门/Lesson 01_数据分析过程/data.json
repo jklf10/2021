@@ -1,0 +1,2320 @@
+{
+  "data": {
+    "lesson": {
+      "id": 432120,
+      "key": "e18a5529-84f8-4e5c-a431-3b74d98df969",
+      "title": "数据分析过程",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "了解数据分析过程，并练习使用 Python 及其强大的数据分析包来研究不同的数据集。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/e18a5529-84f8-4e5c-a431-3b74d98df969/432120/1544465964687/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/e18a5529-84f8-4e5c-a431-3b74d98df969/432120/1544465958885/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 431749,
+          "key": "720c0d39-c39f-443a-a3e4-869c8a2dfa3b",
+          "title": "Juno Lee 讲师",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "720c0d39-c39f-443a-a3e4-869c8a2dfa3b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431534,
+              "key": "735eb89a-706d-4ba6-834c-414f141f020f",
+              "title": "讲师 Juno Lee 介绍",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "to8Pp3PCOZo",
+                "china_cdn_id": "to8Pp3PCOZo.mp4"
+              }
+            },
+            {
+              "id": 463217,
+              "key": "fe550eb2-4a92-4688-94b9-b3f6c77c8412",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在本课程中，我们会大量使用 Jupyter Notebook。在之前的项目中，相信你已经有所涉及，你可以访问\n [这里](https://classroom.udacity.com/nanodegrees/nd002-cn-basic/parts/91b5b867-4a7f-49c5-b658-57521a8de12d/modules/e95ca0b1-2716-4f45-bf4b-781653e885e5/lessons/c6a12f2e-63f2-4007-a2c3-dd3e5f06f3cb/concepts/4cdc5a26-1e54-4a69-8eb4-f15e37aaab7b) 再次回顾相关的内容。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431751,
+          "key": "af5a2298-880b-409c-bf0b-57a27158a99a",
+          "title": "课程概述",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "af5a2298-880b-409c-bf0b-57a27158a99a",
+            "completed_at": "2019-03-16T11:28:14.953Z",
+            "last_viewed_at": "2020-01-04T15:45:40.569Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431535,
+              "key": "f8f28058-f6e2-435d-b54a-fdae3a46e99d",
+              "title": "课程概述",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1EzlGH4Biu0",
+                "china_cdn_id": "1EzlGH4Biu0.mp4"
+              }
+            },
+            {
+              "id": 431536,
+              "key": "b09c2914-6bde-45ab-a2b7-57f3cfbd7ee5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 课程概述\n\n这是 Python 数据分析三个课程系列的第一部分。在本课中，你将学习数据分析过程，并使用 Python 和 Pandas 调查不同的数据集。在接下来的两课中，你将进行案例研究，在其中深入分析两个数据集，并了解有关 NumPy、Pandas 和 Matplotlib 的更多知识。\n\n本课程旨在帮助你理解数据分析过程中的每个步骤。**你在本课程中需要完成一些简单的编程练习，但是更加深入的课程内容你会在纳米学位的后续课程中依次学到。**\n\n#### Python编程\n这些课程的学习需要你对Python熟练。下面是两个很棒的学习Python编程技能的免费课程！\n\n- [Intro to Computer Science](https://www.udacity.com/course/intro-to-computer-science--cs101) 学习if 语句，循环，函数，列表，集合和字典。\n- [Programming Foundations with Python](https://www.udacity.com/course/programming-foundations-with-python--ud036) 学习Python中的类，对象，模块。\n\n#### 其他有用的资源\n- [NumPy and Pandas by Udacity](https://classroom.udacity.com/courses/ud170) 学习 NumPy 和 Pandas。\n- [Python for Data Analysis](http://www.ruxizhang.com/uploads/4/4/0/2/44023465/python_for_data_analysis.pdf) 是最好的学习 **NumPy**, **pandas**, **Matplotlib** 的资源之一。它由这几个库的创始人 Wes McKinney 所撰写，这是使用这些库的详尽指南。\n\n在接下来的纳米学位中你将会用到这些技能。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431747,
+          "key": "69a13ef5-0388-4c9f-92c5-9f9c6b41a3ab",
+          "title": "数据分析师解决的问题",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "69a13ef5-0388-4c9f-92c5-9f9c6b41a3ab",
+            "completed_at": "2018-07-02T04:06:38.193Z",
+            "last_viewed_at": "2019-08-09T11:46:26.010Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431528,
+              "key": "5d018661-09df-4ce9-ac43-2123de50efbc",
+              "title": "数据分析师解决的问题",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zbjRiYSSR_Y",
+                "china_cdn_id": "zbjRiYSSR_Y.mp4"
+              }
+            },
+            {
+              "id": 431529,
+              "key": "53fcfc50-04a6-4ed1-891d-a57c253fe347",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "高质量的数据分析，可以使我们获得非常有价值的结果！\n\n### 数据分析的应用\n\n- 百万数据告诉你[第一次约会用来了解对方的最佳问题](http://blog.okcupid.com/index.php/the-best-questions-for-first-dates/)\n- 看看[沃尔玛如何使用大数据分析来增加销量](http://www.dezyre.com/article/how-big-data-analysis-helped-increase-walmart-s-sales-turnover/109)\n- 你还可以了解Bill James 如何[将数据分析应用于棒球](https://en.wikipedia.org/wiki/Bill_James)\n- 以及[数据分析如何帮助设计药物](http://www.numerate.com/numerates-ranking-technology-pharmaceutical-rd-gains-u-s-patent/)\n- 这篇[Facebook 博客](https://research.fb.com/exposure-to-diverse-information-on-facebook-2/)(需科学上网) 和另一篇[文章](https://github.com/udacity/new-dand-basic-china/blob/master/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%A5%E9%97%A8/%E9%A1%B9%E7%9B%AE-%E6%8E%A2%E7%B4%A2%E6%95%B0%E6%8D%AE%E9%9B%86/exposure-to-ideologically-diverse.pdf) 介绍如何用数据分析社交媒体上的意识形态",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431748,
+          "key": "a0eb502e-5774-4be5-b895-3af7121a2bb7",
+          "title": "设置编程环境",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a0eb502e-5774-4be5-b895-3af7121a2bb7",
+            "completed_at": "2019-03-16T11:30:25.674Z",
+            "last_viewed_at": "2019-04-09T07:52:55.543Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431530,
+              "key": "f9ef797f-050c-490e-8813-08c7d5960c0b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Anaconda 和 Jupyter Notebooks\n如果你不熟悉 Anaconda 和 Jupyter Notebooks，请学习我们在选做部分提供的关于 Anaconda 和 Jupyter notebooks的简短课程，来设置你的计算机。你将学习如何为本课程设置环境，这将用到 Python 3.6、Jupyter Notebook、NumPy、Pandas、Matplotlib 和 Seaborn。\n\n我们建议你下载并安装 [Anaconda](https://www.continuum.io/downloads)，即使你的计算机上已经安装了 Python。它包含大量专为数据科学构建的库和软件，而你将在此课程中用到它们，但其中一些若没有 Anaconda 会很难安装。Anaconda 还会使你在计算机上[设置不同的环境](https://conda.io/docs/user-guide/tasks/manage-environments.html) 变得非常容易，让你可以在不用的 Python 和包之间轻松切换！比如，你开发的一个项目可能要求 Python 2.7，而另一个要求 Python 3.6 以及不同的依赖项。上面链接中，关于 Anaconda 和 Jupyter Notebooks 的课程涵盖了这一点。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431531,
+              "key": "fa1c3e0f-7dbe-4b98-afc0-f143d0b23fd6",
+              "title": "准备好了吗？",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fa1c3e0f-7dbe-4b98-afc0-f143d0b23fd6",
+                "completed_at": "2019-03-30T05:55:18.324Z",
+                "last_viewed_at": "2019-03-30T05:55:21.781Z",
+                "unstructured": "{\"selected_ids\":[0,1,2,3]}"
+              },
+              "tasks": [
+                "安装 Python 3.6（最好用 Anaconda）",
+                "安装本课程所需的 Python 包：NumPy、Pandas、Matplotlib、Seaborn",
+                "安装 Jupyter Notebook（安装 Anaconda 时自带）",
+                "了解如何使用 Jupyter Notebook"
+              ],
+              "positive_feedback": "你已准备就绪！下面让我们来了解数据分析过程！",
+              "video_feedback": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 431750,
+          "key": "14dc2deb-45a2-49a7-baa0-82203738e14a",
+          "title": "数据分析过程概述",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "14dc2deb-45a2-49a7-baa0-82203738e14a",
+            "completed_at": "2018-07-02T04:06:42.878Z",
+            "last_viewed_at": "2019-04-09T07:52:58.399Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431532,
+              "key": "285d17f5-71f4-45bb-b928-4d9f8689c04d",
+              "title": "数据分析过程 (DAP) 概述",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qdV4sifMmWI",
+                "china_cdn_id": "qdV4sifMmWI.mp4"
+              }
+            },
+            {
+              "id": 431533,
+              "key": "eeff411f-36c2-479a-b8f0-8082d5705406",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们将数据分析过程组织为五个步骤：提问、整理、探索、得出结论和传达结果。以下是关键要点的概述，但你可以选择跳过。我们将在后面的部分中演练每一步，所以你将很快熟悉整个过程。\n\n#### 第 1 步：提问\n你要么获取一批数据，然后根据它提问，要么先提问，然后根据问题收集数据。在这两种情况下，好的问题可以帮助你将精力集中在数据的相关部分，并帮助你得出有洞察力的分析。\n\n#### 第 2 步：整理数据\n你通过三步来获得所需的数据：收集，评估，清理。你收集所需的数据来回答你的问题，评估你的数据来识别数据质量或结构中的任何问题，并通过修改、替换或删除数据来清理数据，以确保你的数据集具有最高质量和尽可能结构化。\n\n#### 第 3 步：执行 EDA（探索性数据分析）\n你可以探索并扩充数据，以最大限度地发挥你的数据分析、可视化和模型构建的潜力。探索数据涉及在数据中查找模式，可视化数据中的关系，并对你正在使用的数据建立直觉。经过探索后，你可以删除异常值，并从数据中创建更好的特征，这称为特征工程。\n\n#### 第 4 步：得出结论（或甚至是做出预测）\n这一步通常使用机器学习或推理性统计来完成，不在本课程范围内，本课的重点是使用描述性统计得出结论。\n\n\n#### 第 5 步：传达结果\n你通常需要证明你发现的见解及传达意义。或者，如果你的最终目标是构建系统，则通常需要分享构建的结果，解释你得出设计结论的方式，并报告该系统的性能。传达结果的方法有多种：报告、幻灯片、博客帖子、电子邮件、演示文稿，甚至对话。数据可视化总会给你呈现很大的价值。\n\n在使用 Python 对真实数据集执行每个步骤之前，让我们来熟悉每一步！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 677095,
+              "key": "6dabf0f3-7158-443d-8f88-7e9c9919211d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Juno 讲师在3分59秒提到的统计学的课程在 “数据分析（入门）纳米学位” 中，机器学习的课程在 “机器学习工程师纳米学位” 和 “数据科学家纳米学位” 第一学期中。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431752,
+          "key": "8997910f-5a0b-4416-bfdc-0b01a3d92d5a",
+          "title": "练习：数据分析过程",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8997910f-5a0b-4416-bfdc-0b01a3d92d5a",
+            "completed_at": "2018-07-02T04:06:44.539Z",
+            "last_viewed_at": "2019-04-12T08:22:02.138Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431538,
+              "key": "73be693d-85e8-40b3-a34a-2109882a5325",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 数据分析过程练习\n让我们通过对数据分析过程的每一步提问，来了解所有步骤。我们将使用来自 [Kaggle 的单车共享需求](https://www.kaggle.com/c/bike-sharing-demand) 竞赛的数据。此数据集给出了自华盛顿特区实施“首都共享单车”计划以来的两年，自行车的每小时租金数据。下面是此数据前 5 行的屏幕截图。*注意：* 此数据集做了轻微修改。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431539,
+              "key": "9be9e666-13b3-4a26-9242-3a26085966ae",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b2701c_5.dap-quiz-img1/5.dap-quiz-img1.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9be9e666-13b3-4a26-9242-3a26085966ae",
+              "caption": "*点击图片以放大！*",
+              "alt": "",
+              "width": 1951,
+              "height": 378,
+              "instructor_notes": null
+            },
+            {
+              "id": 431540,
+              "key": "7f24a2a6-9139-4af4-b41d-ec8a5e22d7d4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用下表来帮助你回答第一个问题。每个特征都是数据集中的一列。\n\n|__特征__|__描述__|\n|---|---|\n|日期时间 datetime|小时 + 时间戳 \n|季节 season|1 = 春季、2 = 夏季、3 = 秋季、4 = 冬季  \n|假期 holiday|该天是否为假日 \n|工作日 workingday|该天是否既不是周末，也不是假日  \n|天气 weather*|1、2、3、4（参见下面的描述）\n|温度 temp|摄氏度温度\n|环境温度 atemp|\"感觉\"温度（摄氏度）  \n|湿度 humidity|相对湿度 \n|风速 windspeed|风速 \n|游客 casual|非注册用户使用共享单车的数量\n|会员 registered|注册用户使用共享单车的数量\n|总计 count|总使用次数\n\n##### * 天气特征关键字\n\n1 = 晴朗、少云、局部多云  \n\n2 = 薄雾 + 多云、薄雾 + 碎云、薄雾 + 少云、薄雾  \n\n3 = 小雪、小雨 + 雷雨 + 散云、小雨 + 散云 \n\n4 = 大雨 + 冰粒 + 雷雨 + 薄雾、雪 + 大雾",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431541,
+              "key": "79acee8b-0bba-4e4f-bf31-1b42edf25eb0",
+              "title": "提问步骤",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "79acee8b-0bba-4e4f-bf31-1b42edf25eb0",
+                "completed_at": "2018-07-02T04:22:28.312Z",
+                "last_viewed_at": "2019-03-30T05:58:28.535Z",
+                "unstructured": "{\"selected_ids\":[\"a1501516549234\",\"a1501516641548\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "### 提问步骤\n\n根据上面给出的有可能影响每小时租用自行车数量的变量数据，可以提出哪些相关问题？（可多选）",
+                "answers": [
+                  {
+                    "id": "a1501516549234",
+                    "text": "哪些属性在预测租用自行车的数量方面最为重要？",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501516626815",
+                    "text": "哪种类型的自行车最常租用？",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501516641548",
+                    "text": "如果目标是使整个星期的租用数量呈现平稳状态，共享单车公司应该在一周中的哪天开展促销活动？",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501516659937",
+                    "text": "给定车站是否应该提供更多自行车，以最大化利润？",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431542,
+              "key": "20d8f7a2-caa6-402d-8db8-540bfb9b76b6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b2750b_5.dap-quiz-img2/5.dap-quiz-img2.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/20d8f7a2-caa6-402d-8db8-540bfb9b76b6",
+              "caption": "*对下一个问题有用的每个列的统计数据*",
+              "alt": "",
+              "width": 1793,
+              "height": 415,
+              "instructor_notes": null
+            },
+            {
+              "id": 667326,
+              "key": "db85bf1f-38df-4084-b322-f54f4cbacef3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "25%、50%、75%指的是四分位数（Quartile）。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431543,
+              "key": "911cd3a8-3e51-4fbf-ad3f-a709c304f6bd",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b275da_screen-shot-2017-09-08-at-4.51.27-am/screen-shot-2017-09-08-at-4.51.27-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/911cd3a8-3e51-4fbf-ad3f-a709c304f6bd",
+              "caption": "*\\# 每个列的非空值和数据类型*",
+              "alt": "",
+              "width": 1570,
+              "height": 616,
+              "instructor_notes": null
+            },
+            {
+              "id": 667325,
+              "key": "3814acaf-29ee-42f2-a4ef-146333a4b092",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "下面是对上面这幅图含义的详细解读，理解此图会对你完成和理解实战项目有帮助。\n\n在此图中，有4列是 float - 浮点型，7列是 int - 整型，1列是object - 对象。其中datetime经过打印查看，确定类型为 str - 字符串。\n\nPython 中的数据类型会在“第三天：Python 数字和字符串”中有更加详细的解释。\n\n<img src=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2018/July/5b5f0d54_1532955718978/1532955718978.jpg\">",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431544,
+              "key": "51766077-f3c5-473d-9aee-f2e3cbee91f6",
+              "title": "整理步骤",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "51766077-f3c5-473d-9aee-f2e3cbee91f6",
+                "completed_at": "2018-07-02T04:28:01.744Z",
+                "last_viewed_at": "2019-03-30T05:58:37.148Z",
+                "unstructured": "{\"selected_ids\":[\"a1501533138708\",\"a1501533144642\",\"a1501533105789\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "### 整理步骤\n\n在继续分析前，可以看到此 Kaggle 单车共享数据有何需要解决的潜在问题？（可多选）",
+                "answers": [
+                  {
+                    "id": "a1501533105789",
+                    "text": "日期未采用日期格式",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501533138708",
+                    "text": "一些值缺失",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501533144642",
+                    "text": "温度值远远超出了地球上的现实范围",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501533153236",
+                    "text": "天气不能用数值表示",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431545,
+              "key": "80bfecdb-6881-4bab-9233-f7fc54cbd3a5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/59a13504_5.dap-quiz-img5/5.dap-quiz-img5.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/80bfecdb-6881-4bab-9233-f7fc54cbd3a5",
+              "caption": "*租赁的自行车数量与星期几、温度和湿度的散点图*",
+              "alt": "",
+              "width": 4920,
+              "height": 1399,
+              "instructor_notes": null
+            },
+            {
+              "id": 431546,
+              "key": "bf5c2f7a-6ccb-4e28-a8ef-d44a2e7bf49f",
+              "title": "探索步骤",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bf5c2f7a-6ccb-4e28-a8ef-d44a2e7bf49f",
+                "completed_at": "2018-07-02T04:33:31.718Z",
+                "last_viewed_at": "2019-03-30T05:58:51.714Z",
+                "unstructured": "{\"selected_id\":\"a1501533318549\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "### 探索步骤\n根据这些散点图，这三个特征中的哪一个似乎最有助于预测计数？（提示：可以考虑下 x 轴数据和 y 轴数据的关系，如果有明显的相关性，比如 y 随 x 的增大而变大或减小，则说明有助于预测；反之，如果数据并无明显趋势，则说明无法凭借这个特征预测）\n\n名词解释：\nDay of week 星期几\nTemp 温度\nHumidity 湿度",
+                "answers": [
+                  {
+                    "id": "a1501533301786",
+                    "text": "星期几",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501533318549",
+                    "text": "温度",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501533323837",
+                    "text": "湿度",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431547,
+              "key": "31cd176c-2a93-4e1c-8277-a61f662d8bc8",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/59a13758_5.dap-quiz-img6/5.dap-quiz-img6.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/31cd176c-2a93-4e1c-8277-a61f662d8bc8",
+              "caption": "*计数与温度散点图，及下一个问题的最佳匹配直线*",
+              "alt": "",
+              "width": 1800,
+              "height": 1200,
+              "instructor_notes": null
+            },
+            {
+              "id": 431548,
+              "key": "ac904d45-c9c9-42dc-a7ce-9ab52ee0da6a",
+              "title": "得出结论步骤",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ac904d45-c9c9-42dc-a7ce-9ab52ee0da6a",
+                "completed_at": "2018-07-02T04:48:37.249Z",
+                "last_viewed_at": "2019-03-30T06:00:19.443Z",
+                "unstructured": "{\"selected_id\":\"a1501533415707\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "### 得出结论步骤\n\n根据这个自行车租赁与温度关系回归图表，如果温度从 2 摄氏度升至 30 摄氏度，你认为会有多少额外的自行车被租用？",
+                "answers": [
+                  {
+                    "id": "a1501533388583",
+                    "text": "50 辆自行车",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501533415707",
+                    "text": "250 辆自行车",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501533419906",
+                    "text": "500 辆自行车",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501533422620",
+                    "text": "550 辆自行车",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431549,
+              "key": "4a4ffd42-fcc5-4605-9ebd-6d4db978061b",
+              "title": "传达结果步骤",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4a4ffd42-fcc5-4605-9ebd-6d4db978061b",
+                "completed_at": "2018-07-02T04:58:30.248Z",
+                "last_viewed_at": "2019-03-30T06:00:27.712Z",
+                "unstructured": "{\"selected_ids\":[\"a1501533488282\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "### 传达结果步骤\n\n下面的哪种方法能够最有效地传递你从共享单车数据中得出的结论？",
+                "answers": [
+                  {
+                    "id": "a1501533456153",
+                    "text": "温度与湿度等特征的相关性散点图",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501533488282",
+                    "text": "一份书面报告，详细说明了预测自行车租赁量的最重要变量",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501533499201",
+                    "text": "不同温度的回归方程图",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 431753,
+          "key": "a4cdd504-1b3a-4a7f-b2ca-c887f21a76b3",
+          "title": "包概述",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a4cdd504-1b3a-4a7f-b2ca-c887f21a76b3",
+            "completed_at": "2019-03-16T11:30:45.607Z",
+            "last_viewed_at": "2019-03-30T06:01:02.901Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431551,
+              "key": "bdcb955f-c6e1-48e5-ba3b-ed04bb7995bd",
+              "title": "包概述",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "sCQoQsmI3F0",
+                "china_cdn_id": "sCQoQsmI3F0.mp4"
+              }
+            },
+            {
+              "id": 431552,
+              "key": "d89a45f4-8246-4fd4-8633-b8857ac4165e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Python 被视为数据科学标准语言的最主要原因之一在于其强大的包。[NumPy](http://www.numpy.org/)、[Pandas](https://pandas.pydata.org/) 和 [Matplotlib](https://matplotlib.org/) 是数据分析的三个核心包，我们将在本课程中学习使用它们。\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431758,
+          "key": "cfbd41b9-9b30-445f-8e1a-bfe5b20aaff7",
+          "title": "包概述练习",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cfbd41b9-9b30-445f-8e1a-bfe5b20aaff7",
+            "completed_at": "2019-03-16T11:31:43.705Z",
+            "last_viewed_at": "2019-03-30T06:21:59.459Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431553,
+              "key": "28c538c9-346b-44a4-8e97-29df59e652e9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 包练习",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431554,
+              "key": "7d48fc99-3605-40de-b7cf-509c7469d3a8",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7d48fc99-3605-40de-b7cf-509c7469d3a8",
+                "completed_at": "2019-03-16T11:31:55.779Z",
+                "last_viewed_at": "2019-03-30T06:02:28.104Z",
+                "unstructured": "{\"selected_ids\":[\"a1504106796082\",\"a1504106900814\",\"a1504107003106\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "以下关于 Python 包的陈述哪个是正确的？",
+                "answers": [
+                  {
+                    "id": "a1504106796082",
+                    "text": "你可以通过导入包来为代码添加函数和类",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504106878425",
+                    "text": "如果不使用包，使用代码会更好",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504106900814",
+                    "text": "软件包是人们编写的模块或 Python 文件的集合",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504107003106",
+                    "text": "使用包可以简化和优化许多任务",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431555,
+              "key": "32dc061a-dfc9-4a08-b362-7cd4c05c23e7",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "32dc061a-dfc9-4a08-b362-7cd4c05c23e7",
+                "completed_at": "2019-03-16T11:32:08.862Z",
+                "last_viewed_at": "2019-03-30T06:02:31.490Z",
+                "unstructured": "{\"selected_id\":\"a1504870544663\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这是使用来自包的函数的合理方式吗？\n```python\nimport some_package as sp\ndo_something()\n```",
+                "answers": [
+                  {
+                    "id": "a1504870526423",
+                    "text": "是",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504870544663",
+                    "text": "否",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431556,
+              "key": "d17b50f9-4fd5-411b-8e30-bfa12f70e861",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d17b50f9-4fd5-411b-8e30-bfa12f70e861",
+                "completed_at": "2019-03-16T11:32:11.590Z",
+                "last_viewed_at": "2019-03-30T06:02:32.778Z",
+                "unstructured": "{\"selected_id\":\"a1504869622864\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这是使用来自包的函数的合理方式吗？\n```python\nimport some_package as sp\nsp.do_something()\n```",
+                "answers": [
+                  {
+                    "id": "a1504869622864",
+                    "text": "是",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504869695881",
+                    "text": "否",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431557,
+              "key": "3c48455e-d467-4098-973b-94f6d82df4af",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3c48455e-d467-4098-973b-94f6d82df4af",
+                "completed_at": "2019-03-16T11:32:18.192Z",
+                "last_viewed_at": "2019-03-30T06:02:35.983Z",
+                "unstructured": "{\"selected_id\":\"a1504869829057\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这是使用来自包的函数的合理方式吗？\n```python\nimport some_package as sp\nsome_package.do_something()\n```",
+                "answers": [
+                  {
+                    "id": "a1504869797614",
+                    "text": "是",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504869829057",
+                    "text": "否",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431558,
+              "key": "aa4c2ebb-e8d5-4877-802d-435d4d78cda7",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "aa4c2ebb-e8d5-4877-802d-435d4d78cda7",
+                "completed_at": "2019-03-16T11:32:24.323Z",
+                "last_viewed_at": "2019-03-30T06:02:38.922Z",
+                "unstructured": "{\"selected_id\":\"a1504869730143\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这是使用来自包的函数的合理方式吗？\n```python\nimport some_package\nsome_package.do_something()\n```",
+                "answers": [
+                  {
+                    "id": "a1504869730143",
+                    "text": "是",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504869765553",
+                    "text": "否",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431559,
+              "key": "86ed1571-91b8-456b-b244-5949243d1495",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "86ed1571-91b8-456b-b244-5949243d1495",
+                "completed_at": "2019-03-16T11:32:30.293Z",
+                "last_viewed_at": "2019-03-30T06:02:41.731Z",
+                "unstructured": "{\"selected_id\":\"a1504869881509\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这是使用来自包的函数的合理方式吗？\n```python\nimport some_package as randomlongaliasthatmakesnosense\nrandomlongaliasthatmakesnosense.do_something()\n```",
+                "answers": [
+                  {
+                    "id": "a1504869846583",
+                    "text": "是",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504869881509",
+                    "text": "否",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431560,
+              "key": "983f933d-991a-4f05-9ca4-68c8ef675fbb",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "983f933d-991a-4f05-9ca4-68c8ef675fbb",
+                "completed_at": "2019-03-16T11:33:14.201Z",
+                "last_viewed_at": "2019-03-30T06:02:49.408Z",
+                "unstructured": "{\"selected_ids\":[\"a1504107295800\",\"a1504107363171\",\"a1504107380363\",\"a1504107383892\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "如果在使用新包时遇到错误，你可以通过什么方法解决问题？",
+                "answers": [
+                  {
+                    "id": "a1504107295800",
+                    "text": "通过 Google 搜索问题答案",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504107363171",
+                    "text": "阅读函数的文档",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504107380363",
+                    "text": "检查 Stack Overflow 是否有类似的错误/问题",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504107383892",
+                    "text": "向他人求助",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 431759,
+          "key": "860259eb-4183-4a7a-b99b-eddfe6b5bec7",
+          "title": "提问",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "860259eb-4183-4a7a-b99b-eddfe6b5bec7",
+            "completed_at": "2019-03-16T11:32:40.374Z",
+            "last_viewed_at": "2019-03-30T06:21:57.660Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431561,
+              "key": "e73f63e9-a7c1-4eee-825f-afd75ec13c8e",
+              "title": "提问",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EvhIgrXtOao",
+                "china_cdn_id": "EvhIgrXtOao.mp4"
+              }
+            },
+            {
+              "id": 431562,
+              "key": "f85a40d3-61a9-4318-8aec-c2c0dd8e4e2a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "让我们对来自威斯康星大学普通外科实验室的[肿瘤数据](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29) 提问。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431777,
+          "key": "5d8eea93-d20f-4b54-9ba0-963cbbb521bf",
+          "title": "数据集问题",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5d8eea93-d20f-4b54-9ba0-963cbbb521bf",
+            "completed_at": "2019-03-16T11:33:18.942Z",
+            "last_viewed_at": "2019-07-27T13:50:29.150Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431563,
+              "key": "69e247bc-88bc-434c-ac69-b3fb6f04e2c3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们使用 Pandas 来分析此数据！在 Jupyter notebook 中运行这些代码单元。你可以根据这些信息提出哪些有效的问题？（Jupyter notebook 下有关于数据集中的列的更多信息。）",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431564,
+              "key": "69669800-7cc8-4ea0-9912-7c108e903994",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view1de7b6c0",
+              "pool_id": "jupyter",
+              "view_id": "76528036-4c73-4e4a-b6c9-ac2131b61681",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "defaultPath": "/notebooks/questions.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431565,
+              "key": "d86f0438-381a-480f-9ed1-711154df9127",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 来自威斯康星大学 UCI 机器学习实验室的乳癌（诊断）数据集\n#### 属性信息：\n1. 身份识别号 \n2. 诊断（M =恶性，B =良性）\n3. 30 个特征 \n\n对每个细胞核计算了以下十个特征。我们对于每一个特征各自创建了一个列，用于得出平均值、标准误差和最大值。[（来源）](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)\n\n|__特征__|Attributes|__描述__|\n|---|---|\n|半径| radius|从中心到边界点的距离的平均值|\n|纹理| texture|灰度值的标准偏差|\n|周长| perimeter||\n|面积| area||\n|平滑度| smoothness|半径长度的局部变|\n|紧凑度| compactness|周长<sup>2</sup> / 面积 - 1.0|\n|凹度| concavity|轮廓凹部的严重性|\n|凹点| concave points|轮廓的凹部数|\n|对称| symmetry||\n|分形维数| fractal dimension|\"近似海岸线\" - 1|",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431566,
+              "key": "966179e1-028e-438e-8b0e-47c4e0f7f7f2",
+              "title": "",
+              "semantic_type": "ReflectAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "966179e1-028e-438e-8b0e-47c4e0f7f7f2",
+                "completed_at": "2019-03-30T06:08:04.761Z",
+                "last_viewed_at": "2019-03-30T06:08:04.761Z",
+                "unstructured": "{\"answer\":\"特征\"}"
+              },
+              "question": {
+                "title": null,
+                "semantic_type": "TextQuestion",
+                "evaluation_id": null,
+                "text": "你会提什么问题？"
+              },
+              "answer": {
+                "text": "你会如何回答这些问题？你会使用此数据集的哪些部分来解决每个问题？",
+                "video": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 431776,
+          "key": "a4efbc20-3342-421b-a975-be4f9558ab0a",
+          "title": "数据整理和 EDA（探索性数据分析）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a4efbc20-3342-421b-a975-be4f9558ab0a",
+            "completed_at": "2019-03-16T11:34:49.624Z",
+            "last_viewed_at": "2019-07-27T14:06:23.426Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431567,
+              "key": "cdf2d987-eaec-4765-909d-befb8120ccdc",
+              "title": "数据整理和 EDA",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EQXfxbUup0o",
+                "china_cdn_id": "EQXfxbUup0o.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431779,
+          "key": "2ed26676-b91c-42d4-b0b0-8aaecd03314c",
+          "title": "收集数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2ed26676-b91c-42d4-b0b0-8aaecd03314c",
+            "completed_at": "2019-03-16T11:35:20.042Z",
+            "last_viewed_at": "2019-07-27T14:06:26.320Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431568,
+              "key": "3f28bc62-09ba-4eb5-a989-7d68b0745242",
+              "title": "收集数据",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "JsVg95-amjI",
+                "china_cdn_id": "JsVg95-amjI.mp4"
+              }
+            },
+            {
+              "id": 431569,
+              "key": "8b69d33a-57a2-477d-ad1a-dea00dd9e1c2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "以下是本文中提及的有用文本编辑器的链接。\n- [Atom](https://atom.io/)\n- [Sublime](https://www.sublimetext.com/)\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 431803,
+          "key": "de10746b-91f3-4449-995e-91532160eb1c",
+          "title": "阅读 CSV 文件",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "de10746b-91f3-4449-995e-91532160eb1c",
+            "completed_at": "2019-03-16T11:36:28.918Z",
+            "last_viewed_at": "2019-07-27T14:06:28.266Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Reading-Csv-Solutions",
+                "uri": "https://video.udacity-data.com/topher/2018/May/5af94d97_reading-csv-solutions/reading-csv-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 480788,
+              "key": "0439f412-c80d-4c7d-9906-899a0836913d",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd2de7070",
+              "pool_id": "jupyter",
+              "view_id": "d2de7070-dfd3-439e-a928-65734bd07e55",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/reading_csv-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 431788,
+          "key": "1465740f-52d8-44b6-879d-6d2ac23d84ab",
+          "title": "评估和理解",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1465740f-52d8-44b6-879d-6d2ac23d84ab",
+            "completed_at": "2019-03-16T11:40:07.676Z",
+            "last_viewed_at": "2019-07-27T14:10:30.384Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Assessing-Solutions",
+                "uri": "https://video.udacity-data.com/topher/2018/July/5b5019c3_assessing-solutions/assessing-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 485818,
+              "key": "66b65cef-24aa-4878-b936-6d84c5dbaaa8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd2de7070",
+              "pool_id": "jupyter",
+              "view_id": "c0ad4f11-3bf8-4a1a-830f-9ed0581ffc80",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/assessing-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 431809,
+          "key": "e6765bac-8bf9-428d-82e2-f3904aa67f48",
+          "title": "评估和理解练习",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e6765bac-8bf9-428d-82e2-f3904aa67f48",
+            "completed_at": "2019-03-16T11:57:30.143Z",
+            "last_viewed_at": "2019-07-27T14:12:22.794Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431572,
+              "key": "21e37c97-f496-480a-a5e9-b901b3351f6d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用你到目前为止所学的函数，在下面的 Jupyter notebook 中探索 `census_income_data.csv`，以回答 notebook 下面关于这些数据集特征的练习问题：\n- 行数\n- 列数\n- 几列的数据类型\n- 缺失值的列\n- education 唯一值的数量\n- 平均年龄\n- 每周小时数的第 75 个百分位数\n\n此数据最初来自[这里](https://archive.ics.uci.edu/ml/datasets/Census+Income)。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 681832,
+              "key": "4c30bb54-bb5b-4024-9877-937c11716030",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd2de7070",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-S17H8wBEQ",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/assessing_quiz-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431574,
+              "key": "71c37d4e-aa1d-4b6d-991e-2a63639adf6e",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "71c37d4e-aa1d-4b6d-991e-2a63639adf6e",
+                "completed_at": "2019-03-16T12:04:20.595Z",
+                "last_viewed_at": "2019-03-16T12:04:20.595Z",
+                "unstructured": "{\"answer\":\"32561\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "此数据集中有多少行？",
+                "matchers": [
+                  {
+                    "expression": "^\\s*32,?561\\s*$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431575,
+              "key": "51e4599e-a0e5-47bc-a8cf-5918ca5bcfb9",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "51e4599e-a0e5-47bc-a8cf-5918ca5bcfb9",
+                "completed_at": "2019-03-16T12:04:24.608Z",
+                "last_viewed_at": "2019-03-16T12:04:24.608Z",
+                "unstructured": "{\"answer\":\"15\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "此数据集中有多少列？",
+                "matchers": [
+                  {
+                    "expression": "^\\s*15\\s*$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431576,
+              "key": "3fd83924-43d9-4029-aa86-c8265eb32c69",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3fd83924-43d9-4029-aa86-c8265eb32c69",
+                "completed_at": "2019-03-16T12:04:28.708Z",
+                "last_viewed_at": "2019-03-30T06:28:06.813Z",
+                "unstructured": "{\"answer_ids\":[\"a1504115224680\",\"a1504115236552\",\"a1504115238105\",\"a1504392249333\",\"a1504115450442\",\"a1504115234904\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配每列的正确数据类型"
+                },
+                "concepts_label": "列",
+                "answers_label": "数据类型",
+                "concepts": [
+                  {
+                    "text": "age",
+                    "correct_answer": {
+                      "id": "a1504115224680",
+                      "text": "int"
+                    }
+                  },
+                  {
+                    "text": "workclass",
+                    "correct_answer": {
+                      "id": "a1504115234904",
+                      "text": "string"
+                    }
+                  },
+                  {
+                    "text": "education",
+                    "correct_answer": {
+                      "id": "a1504115236552",
+                      "text": "string"
+                    }
+                  },
+                  {
+                    "text": "relationship",
+                    "correct_answer": {
+                      "id": "a1504115238105",
+                      "text": "string"
+                    }
+                  },
+                  {
+                    "text": "hours-per-week",
+                    "correct_answer": {
+                      "id": "a1504115450442",
+                      "text": "int"
+                    }
+                  },
+                  {
+                    "text": "income",
+                    "correct_answer": {
+                      "id": "a1504392249333",
+                      "text": "string"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1504115234904",
+                    "text": "string"
+                  },
+                  {
+                    "id": "a1504392285712",
+                    "text": "class"
+                  },
+                  {
+                    "id": "a1504392301663",
+                    "text": "boolean"
+                  },
+                  {
+                    "id": "a1504115450442",
+                    "text": "int"
+                  },
+                  {
+                    "id": "a1504392249333",
+                    "text": "string"
+                  },
+                  {
+                    "id": "a1504115224680",
+                    "text": "int"
+                  },
+                  {
+                    "id": "a1504392292424",
+                    "text": "function"
+                  },
+                  {
+                    "id": "a1504115236552",
+                    "text": "string"
+                  },
+                  {
+                    "id": "a1504115238105",
+                    "text": "string"
+                  },
+                  {
+                    "id": "a1504392289284",
+                    "text": "float"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431577,
+              "key": "64dd55f1-7e43-4700-b7a5-836a51055b97",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "64dd55f1-7e43-4700-b7a5-836a51055b97",
+                "completed_at": "2019-03-16T12:04:32.996Z",
+                "last_viewed_at": "2019-03-30T06:28:13.975Z",
+                "unstructured": "{\"selected_ids\":[\"a1504392521395\",\"a1504392526464\",\"a1504392531997\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪些列缺失值？",
+                "answers": [
+                  {
+                    "id": "a1504115491151",
+                    "text": "age",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392521395",
+                    "text": "workclass",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504392523691",
+                    "text": "fnlwgt",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392524472",
+                    "text": "education",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392525041",
+                    "text": "education-num",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392525927",
+                    "text": "marital-status",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392526464",
+                    "text": "occupation",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504392527066",
+                    "text": "relationship",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392527663",
+                    "text": "race",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392529038",
+                    "text": "sex",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392529631",
+                    "text": "capital-gain",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392530795",
+                    "text": "capital-loss",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392531346",
+                    "text": "hours-per-week",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504392531997",
+                    "text": "native-country",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504392532664",
+                    "text": "income",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1505773692575",
+                    "text": "以上列都没有缺失值",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431578,
+              "key": "3f0ee3c3-00a2-490d-b36f-8de49eef068b",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3f0ee3c3-00a2-490d-b36f-8de49eef068b",
+                "completed_at": "2019-03-16T12:05:20.978Z",
+                "last_viewed_at": "2019-03-16T12:05:20.978Z",
+                "unstructured": "{\"answer\":\"16\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "`education`列有多少唯一值？",
+                "matchers": [
+                  {
+                    "expression": "^\\s*16\\s*$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431579,
+              "key": "282b87bc-19d8-4894-82a9-5f84af960359",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "282b87bc-19d8-4894-82a9-5f84af960359",
+                "completed_at": "2019-03-16T12:06:00.711Z",
+                "last_viewed_at": "2019-03-16T12:06:00.711Z",
+                "unstructured": "{\"answer\":\"39\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "平均年龄四舍五入到最接近的整数是多少？",
+                "matchers": [
+                  {
+                    "expression": "^\\s*39\\s*$"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431580,
+              "key": "dc4f1e40-b4fd-4e38-bd0e-526779aa45f2",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "dc4f1e40-b4fd-4e38-bd0e-526779aa45f2",
+                "completed_at": "2019-03-16T12:07:48.881Z",
+                "last_viewed_at": "2019-03-16T12:07:48.881Z",
+                "unstructured": "{\"answer\":\"45\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "此数据集每周小时数的第 75 个百分位数是多少？",
+                "matchers": [
+                  {
+                    "expression": "^\\s*45\\s*$"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 431811,
+          "key": "f84efd3c-5570-4f24-b976-ea38de1f37cb",
+          "title": "清理数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f84efd3c-5570-4f24-b976-ea38de1f37cb",
+            "completed_at": "2019-03-16T12:07:56.616Z",
+            "last_viewed_at": "2019-07-27T14:19:03.118Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431581,
+              "key": "6d8ae73e-dc2f-43c1-a625-137fbab4c4f5",
+              "title": "清理数据",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AJF5smH1TJU",
+                "china_cdn_id": "AJF5smH1TJU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431812,
+          "key": "72eaeb2a-7257-41e9-8e4d-9779ccb7e24f",
+          "title": "清理示例",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "72eaeb2a-7257-41e9-8e4d-9779ccb7e24f",
+            "completed_at": "2019-03-16T12:08:13.852Z",
+            "last_viewed_at": "2019-07-27T14:19:05.546Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431582,
+              "key": "501320d9-855a-4abc-b6da-04fad24d05ba",
+              "title": "清理示例",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7bnSPYtPDzQ",
+                "china_cdn_id": "7bnSPYtPDzQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431810,
+          "key": "7388b4a2-84fb-4753-b1e7-89e8618afbb0",
+          "title": "清理练习",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7388b4a2-84fb-4753-b1e7-89e8618afbb0",
+            "completed_at": "2019-03-16T14:15:12.707Z",
+            "last_viewed_at": "2019-07-27T14:19:07.316Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Cleaning-Practice-Solutions",
+                "uri": "https://video.udacity-data.com/topher/2018/July/5b500514_cleaning-practice-solutions/cleaning-practice-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 485816,
+              "key": "36cf5958-bb04-47f8-ae1f-1e244954b225",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd2de7070",
+              "pool_id": "jupyter",
+              "view_id": "3f4c5c35-92e5-417a-a4b4-d3e561b8e993",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/cleaning_practice-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 431813,
+          "key": "3b919130-c7de-48bd-b49d-b111381e5dba",
+          "title": "用可视化探索数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3b919130-c7de-48bd-b49d-b111381e5dba",
+            "completed_at": "2019-03-16T14:28:08.872Z",
+            "last_viewed_at": "2019-07-27T14:22:14.682Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431584,
+              "key": "a5e082bc-b6df-44a7-b2a3-bf5e963ab42a",
+              "title": "用可视化探索数据",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0i_9t4Wi0Og",
+                "china_cdn_id": "0i_9t4Wi0Og.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431819,
+          "key": "0c0880b0-7aaf-40b5-9ad7-e76b48701f81",
+          "title": "使用 Pandas 绘图",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0c0880b0-7aaf-40b5-9ad7-e76b48701f81",
+            "completed_at": "2019-03-16T14:28:22.969Z",
+            "last_viewed_at": "2019-07-27T14:22:16.539Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431585,
+              "key": "1a788e6b-c3c2-481c-854b-31b4cc8a8b08",
+              "title": "使用 Pandas 绘图",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kR7KZFqciFE",
+                "china_cdn_id": "kR7KZFqciFE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431828,
+          "key": "e5643888-0e2d-4ca6-83c1-38f7d8fe1674",
+          "title": "练习： 用可视化探索数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e5643888-0e2d-4ca6-83c1-38f7d8fe1674",
+            "completed_at": "2019-03-17T01:11:11.987Z",
+            "last_viewed_at": "2019-07-27T14:22:17.653Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Visuals-Quiz-Solutions",
+                "uri": "https://video.udacity-data.com/topher/2018/May/5af94f4f_visuals-quiz-solutions/visuals-quiz-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431588,
+              "key": "e73f8ae6-6d49-45ca-a452-8c5b838b170f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用目前为止所学的函数，在 Jupyter notebook 中探索 `powerplant_data_edited.csv` 并进行可视化，以回答notebook 下关于以下信息的练习问题：\n- 温度和电气输出之间的关系\n- 湿度分布\n- 特征与最多的异常值\n\n不要忘记包含允许你在notebook 中查看可视化的行！\n\n在工作区中运行代码时可能会出现 FileNotFoundError，这是因为`powerplant_data_edited.csv` 文件并非直接可以运行的数据，而是你通过完成之前练习题 (13. 阅读 CSV 文件) 生成的数据。你需要回到此练习中，完成此练习，点击工作区左上角的 jupyter，从中找到对应的数据文件下载；再回到本工作区中，点击工作区左上角的 jupyter，将下载后的数据上传到本课程中练习的工作区中。\n\n补充名词解释：\n* AT (Temperature)：温度\n* AP (Ambient Pressure)：环境压力\n* RH (Relative Humidity)：相对湿度\n* V (Exhaust Vacuum)：排气真空\n* EP/PE (Electrical output)：电气输出\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 485821,
+              "key": "f9d3a73d-ce7f-4c9a-bb16-9d2ae9c9dc64",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd2de7070",
+              "pool_id": "jupyter",
+              "view_id": "46b48470-6d3a-4a0b-b64c-76b5153ec35a",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/visuals_quiz-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431589,
+              "key": "8c3d3d3e-bd6f-473b-b2fb-9e70522a53c5",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8c3d3d3e-bd6f-473b-b2fb-9e70522a53c5",
+                "completed_at": "2019-03-17T00:40:59.618Z",
+                "last_viewed_at": "2019-03-30T06:39:46.794Z",
+                "unstructured": "{\"selected_id\":\"a1504470116824\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "温度和电气输出之间的关系是什么？",
+                "answers": [
+                  {
+                    "id": "a1504470099427",
+                    "text": "正相关",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504470116824",
+                    "text": "负相关",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504470117352",
+                    "text": "无相关性",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431587,
+              "key": "3e796e2e-8af9-4b85-a152-f471b83aec26",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3e796e2e-8af9-4b85-a152-f471b83aec26",
+                "completed_at": "2019-03-17T00:40:58.963Z",
+                "last_viewed_at": "2019-03-30T06:39:49.122Z",
+                "unstructured": "{\"selected_id\":\"a1504470151584\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "湿度变化是否为正态分布？",
+                "answers": [
+                  {
+                    "id": "a1504470146163",
+                    "text": "是",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504470151584",
+                    "text": "否",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431590,
+              "key": "86a325e5-5d79-4d3c-89ca-3d5e308638b1",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "86a325e5-5d79-4d3c-89ca-3d5e308638b1",
+                "completed_at": "2019-03-17T00:41:24.744Z",
+                "last_viewed_at": "2019-03-30T06:39:54.115Z",
+                "unstructured": "{\"selected_id\":\"a1504470198712\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪个变量似乎具有最多的异常值？",
+                "answers": [
+                  {
+                    "id": "a1504470189311",
+                    "text": "温度",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504470198712",
+                    "text": "环境压力",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504470205639",
+                    "text": " 相对湿度",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504470255039",
+                    "text": "排气真空",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 431830,
+          "key": "b21b6b16-c752-4df5-aa70-3b8c7ebb0ba6",
+          "title": "得出结论",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b21b6b16-c752-4df5-aa70-3b8c7ebb0ba6",
+            "completed_at": "2019-03-17T00:43:10.942Z",
+            "last_viewed_at": "2019-07-27T14:35:38.128Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431591,
+              "key": "1d062a56-00ad-405a-a44e-3917c2b4a99f",
+              "title": "得出结论",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Glctk6ahdFU",
+                "china_cdn_id": "Glctk6ahdFU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431831,
+          "key": "6a5e601b-c600-4ef3-a53a-23655666f1dc",
+          "title": "得出结论示例",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6a5e601b-c600-4ef3-a53a-23655666f1dc",
+            "completed_at": "2019-03-17T00:43:20.631Z",
+            "last_viewed_at": "2019-07-27T14:35:39.473Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431592,
+              "key": "c51591a6-0299-401c-8636-1f016fa89e0f",
+              "title": "得出结论示例",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yAl58ccwyvU",
+                "china_cdn_id": "yAl58ccwyvU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431840,
+          "key": "c0fd9fc2-7e0d-4f2f-b68a-c3d097489145",
+          "title": "练习：得出结论",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c0fd9fc2-7e0d-4f2f-b68a-c3d097489145",
+            "completed_at": "2019-03-17T00:44:34.944Z",
+            "last_viewed_at": "2019-07-27T14:35:40.354Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Conclusions-Quiz-Solutions",
+                "uri": "https://video.udacity-data.com/topher/2018/May/5af94e77_conclusions-quiz-solutions/conclusions-quiz-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431593,
+              "key": "44ce11e7-650b-4780-a13f-ff14a57b3063",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "下面是一个 Jupyter notebook ，你将在此探索 `store_data.csv`，这是一个关于不同杂货店每周销量的练习数据集。请使用你所学的知识回答以下问题。在 Jupyter notebook 下的练习中提交你的答案。\n\n根据商店销售数据，使用 Python 来得出关于这些商店业绩的结论。\n- 哪家商店最后一个月的总销售额最高？\n- 哪家商店的平均销售额最高？\n- 哪家商店在 2016 年 3 月 13 日这个星期的销量最高？\n- 商店 C 在哪个星期销量最差？\n- 哪家商店在最近 3 个月内销量最高？\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486197,
+              "key": "83586ab2-875b-4dbf-a3e2-60ffae051705",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd2de7070",
+              "pool_id": "jupyter",
+              "view_id": "07c9ccf3-7b44-4a18-a79a-1c670ce67cda",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/conclusions_quiz-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 431595,
+              "key": "e99260e9-5df9-4436-bcd8-c2ca1b73f4bc",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e99260e9-5df9-4436-bcd8-c2ca1b73f4bc",
+                "completed_at": "2019-03-17T00:50:34.850Z",
+                "last_viewed_at": "2019-03-30T06:46:38.296Z",
+                "unstructured": "{\"selected_id\":\"a1504633121450\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪家商店上月的总销售额最高？",
+                "answers": [
+                  {
+                    "id": "a1504633121450",
+                    "text": "商店 A",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504633132417",
+                    "text": "商店 B",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633134612",
+                    "text": "商店 C",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633136721",
+                    "text": "商店 D",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633139063",
+                    "text": "商店 E",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431596,
+              "key": "4c797b21-3f11-4393-96bd-fb8e6540c708",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4c797b21-3f11-4393-96bd-fb8e6540c708",
+                "completed_at": "2019-03-17T00:50:48.367Z",
+                "last_viewed_at": "2019-03-30T06:46:43.345Z",
+                "unstructured": "{\"selected_id\":\"a1504633168033\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪家商店的平均销售额最高？",
+                "answers": [
+                  {
+                    "id": "a1504633159182",
+                    "text": "商店 A",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633168033",
+                    "text": "商店 B",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504633169273",
+                    "text": "商店 C",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633170265",
+                    "text": "商店 D",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633172525",
+                    "text": "商店 E",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431597,
+              "key": "031f9035-5eb8-4b8f-8399-7d26de5cc3bb",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "031f9035-5eb8-4b8f-8399-7d26de5cc3bb",
+                "completed_at": "2019-03-17T00:52:29.877Z",
+                "last_viewed_at": "2019-03-30T06:46:47.000Z",
+                "unstructured": "{\"selected_id\":\"a1504633229439\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "哪家商店在 2016 年 3 月 13 日这个星期的销量最高？",
+                "answers": [
+                  {
+                    "id": "a1504633217589",
+                    "text": "商店 A",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633225939",
+                    "text": "商店 B",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633227183",
+                    "text": "商店 C",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633229439",
+                    "text": "商店 D",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504633233222",
+                    "text": "商店 E",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431598,
+              "key": "4d39cf30-21c7-4568-a3a8-fc9deb93757a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4d39cf30-21c7-4568-a3a8-fc9deb93757a",
+                "completed_at": "2019-03-17T00:54:44.292Z",
+                "last_viewed_at": "2019-03-30T06:46:50.153Z",
+                "unstructured": "{\"selected_id\":\"a1504633262791\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "商店 C 在哪个星期销量最差？",
+                "answers": [
+                  {
+                    "id": "a1504633262791",
+                    "text": "2014 年 7 月 6 日",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504633271583",
+                    "text": "2014 年 7 月 24 日",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633273038",
+                    "text": "2014 年 11 月 2 日",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633273713",
+                    "text": "2015 年 11 月 22 日",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633274274",
+                    "text": "2017 年 11 月 12 日",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 431599,
+              "key": "d7eafd42-41ab-47de-a851-0429770c3946",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d7eafd42-41ab-47de-a851-0429770c3946",
+                "completed_at": "2019-03-17T01:06:13.744Z",
+                "last_viewed_at": "2019-03-30T06:46:52.264Z",
+                "unstructured": "{\"selected_id\":\"a1504633553112\",\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": " 哪家商店在最近 3 个月内销量最高？",
+                "answers": [
+                  {
+                    "id": "a1504633553112",
+                    "text": "商店 A",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504633573076",
+                    "text": "商店 B",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633574499",
+                    "text": "商店 C",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633575036",
+                    "text": "商店 D",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504633575824",
+                    "text": "商店 E",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 431862,
+          "key": "782fdffa-1bb0-4a3d-a85b-4777277d8eb2",
+          "title": "传达结果",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "782fdffa-1bb0-4a3d-a85b-4777277d8eb2",
+            "completed_at": "2019-03-17T01:11:10.108Z",
+            "last_viewed_at": "2019-07-27T14:39:23.612Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431600,
+              "key": "3037cead-2042-4e79-b7f0-67a1fe6f4286",
+              "title": "传达结果",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tmAlVZCbgFA",
+                "china_cdn_id": "tmAlVZCbgFA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431863,
+          "key": "2b945c40-313d-4668-bbec-b4b0f0f41975",
+          "title": "传达结果示例",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2b945c40-313d-4668-bbec-b4b0f0f41975",
+            "completed_at": "2019-03-17T01:11:17.562Z",
+            "last_viewed_at": "2019-07-27T14:39:24.956Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431601,
+              "key": "289607b6-1495-481d-bb29-7f88d0657c9b",
+              "title": "传达结果示例",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Ae_UOATWmDM",
+                "china_cdn_id": "Ae_UOATWmDM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 431864,
+          "key": "7e6c39ef-0bb3-43a5-a98a-17afdc8818c8",
+          "title": "练习：传达结果",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7e6c39ef-0bb3-43a5-a98a-17afdc8818c8",
+            "completed_at": "2019-03-17T01:13:02.893Z",
+            "last_viewed_at": "2019-07-27T14:39:26.918Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Communicate-Quiz-Solutions",
+                "uri": "https://video.udacity-data.com/topher/2018/May/5af94eb9_communicate-quiz-solutions/communicate-quiz-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 431602,
+              "key": "9b422fb0-3489-4132-b06b-d7b1bbf1fe16",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "使用杂货店数据集 (`store_data.csv`)，创建具有适当标签、颜色和尺寸的图，来传达以下问题的结果。\n\n- 哪家商店上一个月的总销售额最高？\n- 哪家商店的平均销售额最高？\n- 哪家商店在 2016 年 3 月 13 日这个星期的销售额最高？\n- 哪家商店在最近 3 个月内销售额最高？\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 486198,
+              "key": "6bb427d3-9e0f-48a8-b4cd-ab80734a5a93",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd2de7070",
+              "pool_id": "jupyter",
+              "view_id": "2831f768-87bb-45a9-aeec-1e23f7d0aeb1",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/communicate_quiz-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 431865,
+          "key": "e055b178-facb-4f56-8201-6cd3f1e55d29",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e055b178-facb-4f56-8201-6cd3f1e55d29",
+            "completed_at": "2019-03-17T01:21:43.624Z",
+            "last_viewed_at": "2019-08-09T11:46:09.182Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 431604,
+              "key": "9b3de07d-9036-496c-b358-27be959820bc",
+              "title": "总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "xYqxZQmXCdI",
+                "china_cdn_id": "xYqxZQmXCdI.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}
