@@ -1,0 +1,502 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>练习：连通错误和 p 值</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>假设检验</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 假设检验.html">02. 假设检验</a>
+    </li>
+    <li class="">
+      <a href="03. 设置假设检验- 第一部分.html">03. 设置假设检验- 第一部分</a>
+    </li>
+    <li class="">
+      <a href="04. 设置假设检验 - 第二部分.html">04. 设置假设检验 - 第二部分</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：设置假设检验.html">05. 练习：设置假设检验</a>
+    </li>
+    <li class="">
+      <a href="06. 错误类型 - 第一部分.html">06. 错误类型 - 第一部分</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：错误类型第一部分.html">07. 练习：错误类型第一部分</a>
+    </li>
+    <li class="">
+      <a href="08. 错误类型 - 第二部分.html">08. 错误类型 - 第二部分</a>
+    </li>
+    <li class="">
+      <a href="09. 练习：错误类型第二部分.html">09. 练习：错误类型第二部分</a>
+    </li>
+    <li class="">
+      <a href="10. 错误类型 - 第三部分.html">10. 错误类型 - 第三部分</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：错误类型第三部分.html">11. 练习：错误类型第三部分</a>
+    </li>
+    <li class="">
+      <a href="12. 假设检验的一般类型.html">12. 假设检验的一般类型</a>
+    </li>
+    <li class="">
+      <a href="13. 在两种假设中如何选择？.html">13. 在两种假设中如何选择？</a>
+    </li>
+    <li class="">
+      <a href="14. 视频：模拟零假设.html">14. 视频：模拟零假设</a>
+    </li>
+    <li class="">
+      <a href="15. Notebook+ 练习：模拟零假设.html">15. Notebook+ 练习：模拟零假设</a>
+    </li>
+    <li class="">
+      <a href="16. 什么是 p 值？.html">16. 什么是 p 值？</a>
+    </li>
+    <li class="">
+      <a href="17. 视频：计算 p 值.html">17. 视频：计算 p 值</a>
+    </li>
+    <li class="">
+      <a href="18. 练习：什么是 p 值？.html">18. 练习：什么是 p 值？</a>
+    </li>
+    <li class="">
+      <a href="19. 连通错误和 p 值.html">19. 连通错误和 p 值</a>
+    </li>
+    <li class="">
+      <a href="20. 假设检验总结.html">20. 假设检验总结</a>
+    </li>
+    <li class="">
+      <a href="21. 练习：连通错误和 p 值.html">21. 练习：连通错误和 p 值</a>
+    </li>
+    <li class="">
+      <a href="22. Notebook+ 练习：得出结论.html">22. Notebook+ 练习：得出结论</a>
+    </li>
+    <li class="">
+      <a href="23. 其他要考虑的事情：如果我们样本很大怎么办？.html">23. 其他要考虑的事情：如果我们样本很大怎么办？</a>
+    </li>
+    <li class="">
+      <a href="24. 其他要考虑的事情：如果我们需要多次检验怎么办？.html">24. 其他要考虑的事情：如果我们需要多次检验怎么办？</a>
+    </li>
+    <li class="">
+      <a href="25. 其他要考虑的事情：如何对比置信区间和假设检验？.html">25. 其他要考虑的事情：如何对比置信区间和假设检验？</a>
+    </li>
+    <li class="">
+      <a href="26. Notebook+ 练习：其他要考虑的事情.html">26. Notebook+ 练习：其他要考虑的事情</a>
+    </li>
+    <li class="">
+      <a href="27. Notebook+ 练习：其他要考虑的事情.html">27. Notebook+ 练习：其他要考虑的事情</a>
+    </li>
+    <li class="">
+      <a href="28. 假设检验总结.html">28. 假设检验总结</a>
+    </li>
+    <li class="">
+      <a href="29. 文本： 总结 + 下节预告.html">29. 文本： 总结 + 下节预告</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">21. 练习：连通错误和 p 值</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>对于每个 p 值，α 配对如下；指出你是否可以拒绝零假设。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>拒绝零假设</p></button>
+  <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+  <button class="btn btn-primary"><p>拒绝零假设</p></button>
+  <button class="btn btn-primary"><p>拒绝零假设</p></button>
+  <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+  <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>p 值/α</p>
+      </th>
+      <th>
+        <p>结论</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>p 值= 0.03, α = 0.05</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>p 值 = 0.20, α = 0.01</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>p 值 = 0.10, α = 0.05</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>p 值/α</p>
+        </th>
+        <th>
+          <p>结论</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>p 值= 0.03, α = 0.05</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值 = 0.20, α = 0.01</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值 = 0.10, α = 0.05</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值= 0.03, α = 0.05</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值= 0.03, α = 0.05</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值 = 0.20, α = 0.01</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值 = 0.10, α = 0.05</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值 = 0.20, α = 0.01</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值 = 0.10, α = 0.05</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>不拒绝零假设</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>使用你掌握的 p 值和错误，匹配每个选项和正确定义。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>α</p></button>
+  <button class="btn btn-primary"><p>β</p></button>
+  <button class="btn btn-primary"><p>拒绝零假设失败</p></button>
+  <button class="btn btn-primary"><p>I 类错误</p></button>
+  <button class="btn btn-primary"><p>II 类错误</p></button>
+  <button class="btn btn-primary"><p>拒绝零假设</p></button>
+  <button class="btn btn-primary"><p>I 类错误</p></button>
+  <button class="btn btn-primary"><p>II 类错误</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>定义</p>
+      </th>
+      <th>
+        <p>术语</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>I 类错误的阈值。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>最严重的错误类型。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>认为零假设为真，但实际上备择假设为真。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>认为备择假设为真，但实际上零假设为真。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>p 值小于 α 时做出决定</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>定义</p>
+        </th>
+        <th>
+          <p>术语</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>I 类错误的阈值。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>α</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>最严重的错误类型。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>I 类错误</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>认为备择假设为真，但实际上零假设为真。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>I 类错误</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>认为零假设为真，但实际上备择假设为真。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>II 类错误</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>p 值小于 α 时做出决定</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>拒绝零假设</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>最严重的错误类型。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>I 类错误</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>认为备择假设为真，但实际上零假设为真。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>I 类错误</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>认为零假设为真，但实际上备择假设为真。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>II 类错误</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="22. Notebook+ 练习：得出结论.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('21. 练习：连通错误和 p 值')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
