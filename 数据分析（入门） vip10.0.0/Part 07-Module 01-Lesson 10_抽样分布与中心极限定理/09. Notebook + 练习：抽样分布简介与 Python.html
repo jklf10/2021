@@ -1,0 +1,439 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook + 练习：抽样分布简介与 Python</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>抽样分布与中心极限定理</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 描述统计与推论统计.html">02. 描述统计与推论统计</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：描述统计与推论统计（优达学城学生）.html">03. 练习：描述统计与推论统计（优达学城学生）</a>
+    </li>
+    <li class="">
+      <a href="04. 练习：描述统计与推论统计（百吉饼）.html">04. 练习：描述统计与推论统计（百吉饼）</a>
+    </li>
+    <li class="">
+      <a href="05. 文本：描述统计与推论统计.html">05. 文本：描述统计与推论统计</a>
+    </li>
+    <li class="">
+      <a href="06. 视频 + 练习：抽样分布简介第 I 部分.html">06. 视频 + 练习：抽样分布简介第 I 部分</a>
+    </li>
+    <li class="">
+      <a href="07. 视频 + 练习：抽样分布简介第 II 部分.html">07. 视频 + 练习：抽样分布简介第 II 部分</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：抽样分布简介第 III 部分.html">08. 视频：抽样分布简介第 III 部分</a>
+    </li>
+    <li class="">
+      <a href="09. Notebook + 练习：抽样分布简介与 Python.html">09. Notebook + 练习：抽样分布简介与 Python</a>
+    </li>
+    <li class="">
+      <a href="10. 文本：抽样分布符号法.html">10. 文本：抽样分布符号法</a>
+    </li>
+    <li class="">
+      <a href="11. 视频：符号法简介.html">11. 视频：符号法简介</a>
+    </li>
+    <li class="">
+      <a href="12. 视频：参数与统计的符号法.html">12. 视频：参数与统计的符号法</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：符号法.html">13. 练习：符号法</a>
+    </li>
+    <li class="">
+      <a href="14. 视频：其他样本分布.html">14. 视频：其他样本分布</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：两个有用的定理——大数法则.html">15. 视频：两个有用的定理——大数法则</a>
+    </li>
+    <li class="">
+      <a href="16. Notebook + 练习：大数法则.html">16. Notebook + 练习：大数法则</a>
+    </li>
+    <li class="">
+      <a href="17. 视频：两个有用的定理——中心极限定理.html">17. 视频：两个有用的定理——中心极限定理</a>
+    </li>
+    <li class="">
+      <a href="18. Notebook + 练习：中心极限定理.html">18. Notebook + 练习：中心极限定理</a>
+    </li>
+    <li class="">
+      <a href="19. Notebook + 练习：中心极限定理第 II 部分.html">19. Notebook + 练习：中心极限定理第 II 部分</a>
+    </li>
+    <li class="">
+      <a href="20. 视频：什么情况下中心极限定理无法发挥作用？.html">20. 视频：什么情况下中心极限定理无法发挥作用？</a>
+    </li>
+    <li class="">
+      <a href="21. Notebook + 练习：中心极限定理第 III 部分.html">21. Notebook + 练习：中心极限定理第 III 部分</a>
+    </li>
+    <li class="">
+      <a href="22. 视频：自助法.html">22. 视频：自助法</a>
+    </li>
+    <li class="">
+      <a href="23. 视频：自助法与中心极限定理.html">23. 视频：自助法与中心极限定理</a>
+    </li>
+    <li class="">
+      <a href="24. Notebook + 练习 自助法.html">24. Notebook + 练习: 自助法</a>
+    </li>
+    <li class="">
+      <a href="25. 视频：自助法的背景.html">25. 视频：自助法的背景</a>
+    </li>
+    <li class="">
+      <a href="26. 视频：为什么抽样分布非常重要.html">26. 视频：为什么抽样分布非常重要</a>
+    </li>
+    <li class="">
+      <a href="27. 练习 + 文本：总结 + 下节预告.html">27. 练习 + 文本：总结 + 下节预告</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Notebook + 练习：抽样分布简介与 Python</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="创建你自己的抽样分布">创建你自己的抽样分布</h3>
+<p>使用下面的 Notebook 和练习，创建你自己的抽样分布。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>匹配下面的描述和对应的数值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>0.20408</p></button>
+  <button class="btn btn-primary"><p>0.0408</p></button>
+  <button class="btn btn-primary"><p>0.60</p></button>
+  <button class="btn btn-primary"><p>0.0102</p></button>
+  <button class="btn btn-primary"><p>0.71428</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>每个抽样分布的中心应该与所有喝咖啡的 21 个学生比例相同。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>第一个样本中喝咖啡的 5 个学生比例。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>具有喝咖啡习惯的所有 21 个学生原始比例的相关方差。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>样本大小为 5 的总体中抽样分布方差。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>样本大小为 20 的总体中抽样分布方差。</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>具有喝咖啡习惯的所有 21 个学生原始比例的相关方差。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.20408</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>样本大小为 5 的总体中抽样分布方差。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.0408</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>第一个样本中喝咖啡的 5 个学生比例。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.60</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>样本大小为 20 的总体中抽样分布方差。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.0102</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>每个抽样分布的中心应该与所有喝咖啡的 21 个学生比例相同。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.71428</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>匹配对应理论值的定义和你在这个例子中见到的比例。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>p(1-p)/20</p></button>
+  <button class="btn btn-primary"><p>p(1-p)</p></button>
+  <button class="btn btn-primary"><p>p</p></button>
+  <button class="btn btn-primary"><p>p(1-p)/10000</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>定义</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>样本分布的平均数</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>原值 1,0 的方差。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>20 个随机选择的数值计算出来的比例方差重复 10,000 次。</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>定义</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>20 个随机选择的数值计算出来的比例方差重复 10,000 次。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>p(1-p)/20</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>原值 1,0 的方差。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>p(1-p)</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>样本分布的平均数</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>p</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. 文本：抽样分布符号法.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Notebook + 练习：抽样分布简介与 Python')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

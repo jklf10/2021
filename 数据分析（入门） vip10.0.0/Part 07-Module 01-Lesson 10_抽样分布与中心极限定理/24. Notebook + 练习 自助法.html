@@ -1,0 +1,325 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook + 练习: 自助法</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>抽样分布与中心极限定理</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 描述统计与推论统计.html">02. 描述统计与推论统计</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：描述统计与推论统计（优达学城学生）.html">03. 练习：描述统计与推论统计（优达学城学生）</a>
+    </li>
+    <li class="">
+      <a href="04. 练习：描述统计与推论统计（百吉饼）.html">04. 练习：描述统计与推论统计（百吉饼）</a>
+    </li>
+    <li class="">
+      <a href="05. 文本：描述统计与推论统计.html">05. 文本：描述统计与推论统计</a>
+    </li>
+    <li class="">
+      <a href="06. 视频 + 练习：抽样分布简介第 I 部分.html">06. 视频 + 练习：抽样分布简介第 I 部分</a>
+    </li>
+    <li class="">
+      <a href="07. 视频 + 练习：抽样分布简介第 II 部分.html">07. 视频 + 练习：抽样分布简介第 II 部分</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：抽样分布简介第 III 部分.html">08. 视频：抽样分布简介第 III 部分</a>
+    </li>
+    <li class="">
+      <a href="09. Notebook + 练习：抽样分布简介与 Python.html">09. Notebook + 练习：抽样分布简介与 Python</a>
+    </li>
+    <li class="">
+      <a href="10. 文本：抽样分布符号法.html">10. 文本：抽样分布符号法</a>
+    </li>
+    <li class="">
+      <a href="11. 视频：符号法简介.html">11. 视频：符号法简介</a>
+    </li>
+    <li class="">
+      <a href="12. 视频：参数与统计的符号法.html">12. 视频：参数与统计的符号法</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：符号法.html">13. 练习：符号法</a>
+    </li>
+    <li class="">
+      <a href="14. 视频：其他样本分布.html">14. 视频：其他样本分布</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：两个有用的定理——大数法则.html">15. 视频：两个有用的定理——大数法则</a>
+    </li>
+    <li class="">
+      <a href="16. Notebook + 练习：大数法则.html">16. Notebook + 练习：大数法则</a>
+    </li>
+    <li class="">
+      <a href="17. 视频：两个有用的定理——中心极限定理.html">17. 视频：两个有用的定理——中心极限定理</a>
+    </li>
+    <li class="">
+      <a href="18. Notebook + 练习：中心极限定理.html">18. Notebook + 练习：中心极限定理</a>
+    </li>
+    <li class="">
+      <a href="19. Notebook + 练习：中心极限定理第 II 部分.html">19. Notebook + 练习：中心极限定理第 II 部分</a>
+    </li>
+    <li class="">
+      <a href="20. 视频：什么情况下中心极限定理无法发挥作用？.html">20. 视频：什么情况下中心极限定理无法发挥作用？</a>
+    </li>
+    <li class="">
+      <a href="21. Notebook + 练习：中心极限定理第 III 部分.html">21. Notebook + 练习：中心极限定理第 III 部分</a>
+    </li>
+    <li class="">
+      <a href="22. 视频：自助法.html">22. 视频：自助法</a>
+    </li>
+    <li class="">
+      <a href="23. 视频：自助法与中心极限定理.html">23. 视频：自助法与中心极限定理</a>
+    </li>
+    <li class="">
+      <a href="24. Notebook + 练习 自助法.html">24. Notebook + 练习: 自助法</a>
+    </li>
+    <li class="">
+      <a href="25. 视频：自助法的背景.html">25. 视频：自助法的背景</a>
+    </li>
+    <li class="">
+      <a href="26. 视频：为什么抽样分布非常重要.html">26. 视频：为什么抽样分布非常重要</a>
+    </li>
+    <li class="">
+      <a href="27. 练习 + 文本：总结 + 下节预告.html">27. 练习 + 文本：总结 + 下节预告</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">24. Notebook + 练习: 自助法</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="自助法">自助法</h3>
+<p>所以你可能没有注意到在这节课中已经使用过自助法抽样了，在之前二项式事件和掷骰子课程中也使用过。实际上，如果你抛硬币是正面或掷骰子出现 6，你可以继续抛掷得到这些数值，表明选中后还可以放回。</p>
+<p>为了更清楚一些，你可以在 Notebook 中使用自助抽样完成一些任务，包括放回抽样的一些任务。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p><strong>问题 1.</strong> 从上面 Notebook ** 中使用结果值，选择正确的表述。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1508525458675" name="462139" id="a1508525458675">
+      <label for="a1508525458675"><p>一旦选定一个数值，它无法再被选中。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1508525820094" name="462139" id="a1508525820094">
+      <label for="a1508525820094"><p>抽样是自助抽样的例子。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1508525995130" name="462139" id="a1508525995130">
+      <label for="a1508525995130"><p>在这个样本中，可以随机选中所有数值。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>抽样是自助抽样的例子。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p><strong>问题 2.</strong> 选择你在上面 <strong>2.</strong> 运行代码时相关正确表述。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1508526388061" name="462140" id="a1508526388061">
+      <label for="a1508526388061"><p>这是自助抽样的例子。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1508528866392" name="462140" id="a1508528866392">
+      <label for="a1508528866392"><p>代码被打断。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1508528871991" name="462140" id="a1508528871991">
+      <label for="a1508528871991"><p><code>replace=False</code> 部分导致我们无法从仅有的 6 个数值中选择 20 次。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1508528915628" name="462140" id="a1508528915628">
+      <label for="a1508528915628"><p>这是不放回抽样的例子。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>代码被打断。</li>
+      <li>`replace=False` 部分导致我们无法从仅有的 6 个数值中选择 20 次。</li>
+      <li>这是不放回抽样的例子。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="25. 视频：自助法的背景.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('24. Notebook + 练习: 自助法')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
