@@ -1,0 +1,527 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>标签</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>标签、分支和合并</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 标签.html">02. 标签</a>
+    </li>
+    <li class="">
+      <a href="03. 分支.html">03. 分支</a>
+    </li>
+    <li class="">
+      <a href="04. 高效分支.html">04. 高效分支</a>
+    </li>
+    <li class="">
+      <a href="05. 合并.html">05. 合并</a>
+    </li>
+    <li class="">
+      <a href="06. 合并冲突.html">06. 合并冲突</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 标签</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>到目前为止，我们在这门课程中学习的都是具体的 git 命令。我们详细了解了这些命令的工作方式，以及在终端上运行这些命令后的输出结果。</p>
+<p>现在我们从宏观层面了解下 git 标签在仓库中的作用。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 03 打标签概述</p></h3>
+  <video controls>
+  <source src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 03 打标签概述-D4VdXT72ASE.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 03 打标签概述-D4VdXT72ASE.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 03 打标签概述-D4VdXT72ASE.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 03 打标签概述-D4VdXT72ASE.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 03 打标签概述-D4VdXT72ASE.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="目前所处的位置">目前所处的位置</h2>
+<p>你可以在任一项目中执行这些步骤，我将在 <code>new-git-project</code> 项目中执行。</p>
+<p>我们来看看该项目到目前为止的 git log 输出结果：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-log-pre-tag.png" alt="_终端显示运行 &#x60;git log --oneline&#x60; 后的输出结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示运行 <code>git log --oneline</code> 后的输出结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-tag-命令">git tag 命令</h2>
+<p>注意所显示的结果（只需注意 SHA 和 commit 消息）</p>
+<p>我们将使用 <code>git tag</code> 命令与仓库的标签进行交互：</p>
+<pre><code class="bash language-bash">$ git tag -a v1.0</code></pre>
+<p>上述命令将打开代码编辑器，并等待你为标签输入信息。输入"Ready for content"怎么样？</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-editor-with-tag-message.png" alt="_代码编辑器正在等待提供标签信息。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>代码编辑器正在等待提供标签信息。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>注意：在上述命令 (<code>git tag -a v1.0</code>) 中，使用了 <code>-a</code> 选项。该选项告诉 git 创建一个带注释的标签。如果你没有提供该选项（即 <code>git tag v1.0</code>），那么它将创建一个轻量级标签。</p>
+</blockquote>
+<blockquote>
+  <p>建议使用带注释的标签，因为它们包含了大量的额外信息，例如：</p>
+  <ul>
+  <li>标签创建者</li>
+  <li>标签创建日期</li>
+  <li>标签消息</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <p>因此，你应该始终使用带注释的标签。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="验证标签">验证标签</h2>
+<p>保存并退出编辑器后，命令行上什么也不会显示。那么如何知道已经向项目中添加了标签呢？只需输入 <code>git tag</code>，命令行会显示仓库中的所有标签。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-tag.png" alt="_终端显示了 &#x60;git tag&#x60; 命令的输出结果，并列出了 &#x60;v1.0&#x60; 标签。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git tag</code> 命令的输出结果，并列出了 <code>v1.0</code> 标签。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们已经验证了该标签位于仓库中，但是我们想知道它位于仓库的哪个位置。为此，我们需要调用一直在使用的 <code>git log</code>！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>能看到标签吗？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>根据你对 <code>git log</code> 命令的了解，能在日志输出中看到标签吗？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487117600936" name="338973" id="a1487117600936">
+        <label for="a1487117600936"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487117607351" name="338973" id="a1487117607351">
+        <label for="a1487117607351"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    否
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-log-的---decorate-选项">git log 的 --decorate 选项</h2>
+<p>正如你所了解的，<code>git log</code> 是一个非常强大的工具，可以让我们查看仓库的 commit。我们已经学习了几个选项，现在该学习一个新的选项了。<code>--decorate</code> 选项将显示默认视图隐藏起来的一些详情。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>马上去试试运行 <code>git log --decorate</code> 吧！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-git-213-中---decorate-选项的变化--💡">💡 Git 2.13 中 <code>--decorate</code> 选项的变化  💡</h2>
+</blockquote>
+<blockquote>
+  <p>在 2.13 版 git 中，<code>log</code> 命令已改为自动启用 <code>--decorate</code> 选项。这意味着，你不需要在命令中包含 <code>--decorate</code> 选项，因为它已经自动包含了！因此下面的命令输出结果完全一样：</p>
+</blockquote>
+<blockquote>
+<pre><code class="shell language-shell">$ git log --decorate
+$ git log</code></pre>
+</blockquote>
+<blockquote>
+  <p>请参阅 <a href="https://github.com/git/git/blob/v2.13.0/Documentation/RelNotes/2.13.0.txt#L176-L177" rel="noopener noreferrer" target="_blank">2.13 版本说明 - 英</a>。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-log-decorate.png" alt="_终端显示了 &#x60;git log --decorate&#x60; 命令的输出结果。现在的日志输出显示了新建的标签。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --decorate</code> 命令的输出结果。现在的日志输出显示了新建的标签。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>标签信息位于第一行的末尾：</p>
+<pre><code class="bash language-bash">commit 6fa5f34790808d9f4dccd0fa8fdbc40760102d6e (HEAD -&gt; master, tag: v1.0)</code></pre>
+<p>看见输出结果显示的 <code>tag: v1.0</code> 了吗？这就是标签！标签与 commit 相绑定。因此，该标签与 commit 的 SHA 位于同一行。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="head---master">HEAD -&gt; master?</h2>
+</blockquote>
+<blockquote>
+  <p>你是否注意到，日志中除了显示标签信息之外，<code>--decorate</code> 还显示了 <code>HEAD -&gt; master</code>？这是关于分支的信息！接下来我们将了解 git 中的分支。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="删除标签">删除标签</h2>
+<p>如果将标签消息中的某个字打错了，或标签名称打错了（输入 <code>v0.1</code>，而不是 <code>v1.0</code>），如何修正这个错误？最简单的方法是删除这个标签并重新创建。</p>
+<p>可以通过输入 <code>-d</code> 选项 （表示 delete 删除！）加上标签名称来删除 git 标签：</p>
+<pre><code class="bash language-bash">$ git tag -d v1.0</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-tag-delete.png" alt="_终端显示了使用 &#x60;-d&#x60; 选项删除某个标签。所运行的命令为 &#x60;git tag -d v1.0&#x60;。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了使用 <code>-d</code> 选项删除某个标签。所运行的命令为 <code>git tag -d v1.0</code>。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>标签在哪里？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>默认情况下，git 标签不会出现在日志中。哪一选项用于在 <code>git log</code> 的输出中显示标签信息？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487117898240" name="338984" id="a1487117898240">
+        <label for="a1487117898240"><p>--show-tags</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487117911707" name="338984" id="a1487117911707">
+        <label for="a1487117911707"><p>--tags</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487117912363" name="338984" id="a1487117912363">
+        <label for="a1487117912363"><p>--display-all</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487117912891" name="338984" id="a1487117912891">
+        <label for="a1487117912891"><p>--decorate</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    --decorate
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>删除该标签？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>下面的哪个命令将删除标签 <code>v-1</code>？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487117949183" name="338986" id="a1487117949183">
+        <label for="a1487117949183"><p>git tag --delete v-1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487117956923" name="338986" id="a1487117956923">
+        <label for="a1487117956923"><p>git remove v-1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487117957429" name="338986" id="a1487117957429">
+        <label for="a1487117957429"><p>git tag -d v-1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487117958062" name="338986" id="a1487117958062">
+        <label for="a1487117958062"><p>git delete v-1</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    git tag -d v-1
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="向以前的-commit-添加标签">向以前的 commit 添加标签</h2>
+<p>运行 <code>git tag -a v1.0</code> 将为最近的 commit 添加标签。但是如果你想向仓库中很久之前的 Commit 添加标签呢？</p>
+<p>只需提供要添加标签的 commit 的 SHA 即可！</p>
+<pre><code class="bash language-bash">$ git tag -a v1.0 a87984</code></pre>
+<p>（在弹出代码编辑器以便让你提供标签消息之后）此命令将向 SHA 为 <code>a87084</code> 的 commit 添加标签 <code>v1.0</code>。借助这一技巧，你可以为整个 git 仓库中的任何 commit 添加标签！很强大吧？并且只需在你已经知道的 git 标签命令中加上 commit 的 SHA 即可。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>对以前的 commit 添加标签？</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>根据以下 <code>git log --oneline</code> 信息，要向提交说明为 "style page header" 的 commit 添加标签 <code>beta</code>，你会运行哪个命令？</p>
+<pre><code class="bash language-bash">2a9e9f3 add breakpoint for large-sized screens
+137a0bd add breakpoint for medium-sized screens
+c5ee895 add space around page edge
+b552fa5 style page header
+f8c87c7 convert social links from text to images</code></pre></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-tag-小结">git tag 小结</h2>
+<p>总结下，<code>git tag</code> 命令用来标记特定的 commit 。当添加新的 commit 时，标签不会移动。</p>
+<pre><code class="shell language-shell">$ git tag -a beta</code></pre>
+<p>此命令将：</p>
+<ul>
+<li><p>向最近的 commit 添加标签</p></li>
+<li><p>如果提供了 SHA，则向具体的 commit 添加标签</p></li>
+</ul>
+<h3 id="深入研究">深入研究</h3>
+<ul>
+<li><p>git 基础知识 - 添加标签：<a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging" rel="noopener noreferrer" target="_blank">英</a>|<a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE" rel="noopener noreferrer" target="_blank">中</a> git 图书</p></li>
+<li><p><a href="https://git-scm.com/docs/git-tag" rel="noopener noreferrer" target="_blank">git tag - 英</a> git 文档</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 分支.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 标签')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

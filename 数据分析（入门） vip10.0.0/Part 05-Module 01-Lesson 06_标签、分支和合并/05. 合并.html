@@ -1,0 +1,429 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>合并</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>标签、分支和合并</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 标签.html">02. 标签</a>
+    </li>
+    <li class="">
+      <a href="03. 分支.html">03. 分支</a>
+    </li>
+    <li class="">
+      <a href="04. 高效分支.html">04. 高效分支</a>
+    </li>
+    <li class="">
+      <a href="05. 合并.html">05. 合并</a>
+    </li>
+    <li class="">
+      <a href="06. 合并冲突.html">06. 合并冲突</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. 合并</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>注意，主题分支（例如 <code>sidebar</code>）的作用是让你做出不影响 <code>master</code> 分支的更改。当你在主题分支上做出更改后，如果觉得不想要该分支上的更改，则可以删掉该分支，或者你决定要保留更改，则可以将该分支上的更改与其他分支上的更改合并。</p>
+<p>将分支组合到一起称为<strong>合并</strong>。</p>
+<p>git 可以自动将不同分支上的更改合并到一起。这种分支和合并功能正是 git 的强大之处！你可以在分支上做出小的或大的更改，然后使用 git 合并这些更改。</p>
+<p>我们来看看理论原理。注意 git 中的两种合并：普通<strong>合并</strong>和<strong>快进合并</strong>。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 71 合并</p></h3>
+  <video controls>
+  <source src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 71 合并-gQiWicrreJg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 71 合并-gQiWicrreJg.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 71 合并-gQiWicrreJg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 71 合并-gQiWicrreJg.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 71 合并-gQiWicrreJg.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>快速检查</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>我们快速检查下我们的起点是否一样。请检查以下各项：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="b4fee657-95fc-4f5e-9d94-b228ac99e0bb--0">
+        <label for="b4fee657-95fc-4f5e-9d94-b228ac99e0bb--0"><p>我位于 <code>new-git-project</code> 项目中</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b4fee657-95fc-4f5e-9d94-b228ac99e0bb--1">
+        <label for="b4fee657-95fc-4f5e-9d94-b228ac99e0bb--1"><p>我已检出 <code>master</code> 分支</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b4fee657-95fc-4f5e-9d94-b228ac99e0bb--2">
+        <label for="b4fee657-95fc-4f5e-9d94-b228ac99e0bb--2"><p><code>git status</code> 的输出结果包括文本 <code>working directory clean</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>我们开始吧！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-了解分支-⚠️">⚠️ 了解分支 ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>当你要合并分支时，务必知道当前位于哪个分支上。注意，合并分支会提交 commit。</p>
+</blockquote>
+<blockquote>
+  <p>现在我们不知道如何撤消更改。下节课将介绍这一技巧，但是如果你在错误的分支上进行了合并，可以使用以下命令撤消合并：</p>
+</blockquote>
+<blockquote>
+  <p><code>git reset --hard HEAD^</code></p>
+</blockquote>
+<blockquote>
+  <p>（确保包含 <code>^</code> 字符！它属于“相对 commit 引用”并表示“父 级 commit”。我们将在下节课学习相对 commit 引用。）</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="合并指令">合并指令</h2>
+<p><code>git merge</code> 指令用来合并 git 分支：</p>
+<pre><code class="bash language-bash">$ git merge &lt;name-of-branch-to-merge-in&gt;</code></pre>
+<pre><code>     </code></pre>
+<p>发生合并时，git 将：</p>
+<ul>
+<li><p>查看将合并的分支</p></li>
+<li><p>查看分支的历史记录并寻找两个分支的 commit 历史记录中都有的单个 commit</p></li>
+<li><p>将单个分支上更改的代码行合并到一起</p></li>
+<li><p>提交一个 commit 来记录合并操作</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="快进合并">快进合并</h3>
+<p>在我们的项目中，我们检出了 <code>master</code> 分支，我希望它拥有 <code>footer</code> 分支上的更改。用语言描述的话就是“我想要合并 <code>footer</code> 分支。”。注意表述“合并…”；在进行合并时，另一个分支上的更改将出现在当前检出的分支上。</p>
+<p>我再强调下，当我们合并时，我们将其他分支合并到当前（检出的）分支上。我们不是将两个分支合并到一个新的分支上。也不是将当前分支合并到其他分支上。</p>
+<p>因为 <code>footer</code> 直接在 <code>master</code> 前面，因此这种合并最简单。将 <code>footer</code> 合并到 <code>master</code> 中将导致<strong>快进合并</strong>（Fast-forward merge）。快进合并将使当前检出的分支向前移动，直到它指向与另一个分支（这里是 <code>footer</code>）指向的 commit 一样为止。</p>
+<p>要合并 <code>footer</code> 分支，运行：</p>
+<pre><code class="bash language-bash">$ git merge footer</code></pre>
+<p>在运行该命令后，我的终端显示结果如下所示：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-merge-fast-forward.gif" alt="_终端显示了将 &#x60;footer&#x60; 分支合并到 &#x60;master&#x60; 分支后的结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了将 <code>footer</code> 分支合并到 <code>master</code> 分支后的结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>分支位于同一个位置？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>再看看仓库，现在你已经将两个分支合并到一起了。<code>master</code> 分支和 <code>footer</code> 分支指向同一 commit 吗？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487197986349" name="339039" id="a1487197986349">
+        <label for="a1487197986349"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487198027495" name="339039" id="a1487198027495">
+        <label for="a1487198027495"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    是
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 进行普通合并</p>
+<p>终于完成快进合并流程了！也没那么难，对吧？</p>
+<p>但是你可能会说“当然简单了，所有 commit 都已经在那，分支指针只是向前移动了！”…说的对，这是最简单的合并。 </p>
+<p>现在我们将进行更常见的合并，其中两个分支完全不一样。你会惊讶地发现，实际合并 <code>sidebar</code> 这样的独特分支，操作是完全一样的！</p>
+<p>要合并 <code>sidebar</code> 分支，确保你位于 <code>master</code> 分支上，并运行：</p>
+<pre><code class="bash language-bash">$ git merge sidebar</code></pre>
+<p>因为合并的是两个完全不一样的分支，因此将提交 commit。在进行 commit 时，需要提供 commit 消息。因为这是合并 commit，因此已经提供了默认消息。你也可以更改消息，但通常都会直接使用默认的合并 commit 消息。因此当你的代码编辑器打开并包含该消息时，直接关闭编辑器以确认使用该 commit 消息。</p>
+<p>在使用默认 commit 消息后，我的终端如下所示：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-merge-sidebar.png" alt="_终端显示了合并 &#x60;sidebar&#x60; 分支后的结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了合并 <code>sidebar</code> 分支后的结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>就这么多合并操作！很简单吧？你可能读过很多让分支和合并显得非常复杂的文档，但实际上并没有那么难。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>哪个分支会移动？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>现在做个简短的小练习，看看你是否理解了合并的操作原理。 </p>
+<p>假设某个仓库有以下 4 个分支：</p>
+<ul>
+<li>master          </li>
+<li>allisons-mobile-footer-fix           </li>
+<li>nav-updates           </li>
+<li>jonathans-seo-changes</li>
+</ul>
+<p><code>master</code> 和 <code>allisons-mobile-footer-fix</code> 上的更改需要合并到一起。如果 HEAD 指向 <code>allisons-mobile-footer-fix</code>，在进行合并时，哪个分支将移动？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487198316971" name="339043" id="a1487198316971">
+        <label for="a1487198316971"><p>master</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487198333854" name="339043" id="a1487198333854">
+        <label for="a1487198333854"><p>allisons-mobile-footer-fix</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487198335177" name="339043" id="a1487198335177">
+        <label for="a1487198335177"><p>nav-updates</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487198357539" name="339043" id="a1487198357539">
+        <label for="a1487198357539"><p>jonathans-seo-changes</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    allisons-mobile-footer-fix
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="如果合并失败了呢？">如果合并失败了呢？</h2>
+<p>我们刚刚执行的合并能够成功合并。git 能够灵活地合并不同分支上的大量工作。但是，有时候也无法合并分支。如果在进行合并时失败了，则称为<strong>合并冲突（merge conflict）</strong>。我们将在下节课了解合并冲突及其背后的原因，并学习如何解决冲突。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="合并小结">合并小结</h2>
+<p>总结下，<code>git merge</code> 命令用来在 git 中合并分支：</p>
+<pre><code class="bash language-bash">$ git merge &lt;other-branch&gt;</code></pre>
+<p>合并有以下两种类型：</p>
+<ul>
+<li><p>快进合并 – 要合并的分支必须位于检出分支前面。检出分支的指针将向前移动，指向另一分支所指向的同一 commit。</p></li>
+<li><p>普通类型的合并</p>
+<ul>
+<li>两个完全不同的分支被合并</li>
+<li>创建一个合并 commit</li></ul>
+<h3 id="深入研究">深入研究</h3></li>
+<li><p>分支合并：<a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#Basic-Merging" rel="noopener noreferrer" target="_blank">英</a>|<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" rel="noopener noreferrer" target="_blank">中</a> git 图书</p></li>
+<li><p><a href="https://git-scm.com/docs/git-merge" rel="noopener noreferrer" target="_blank">git-merge</a> git 文档 (<strong>英</strong>)</p></li>
+<li><p><a href="https://www.atlassian.com/git/tutorials/git-merge" rel="noopener noreferrer" target="_blank">git 合并</a> Atlassian 博客 (<strong>英</strong>)</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. 合并冲突.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 合并')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

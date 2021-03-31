@@ -1,0 +1,199 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>更改最后一个 commit</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>撤消更改</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 更改最后一个 commit.html">02. 更改最后一个 commit</a>
+    </li>
+    <li class="">
+      <a href="03. 还原 commit.html">03. 还原 commit</a>
+    </li>
+    <li class="">
+      <a href="04. 重置 commit.html">04. 重置 commit</a>
+    </li>
+    <li class="">
+      <a href="05. 总结.html">05. 总结</a>
+    </li>
+    <li class="">
+      <a href="06. 课程小结.html">06. 课程小结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 更改最后一个 commit</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="更改最后一个-commit">更改最后一个 commit</h2>
+<p>你已经使用 <code>git commit</code> 命令提交了大量的 commit。现在，借助 <code>--amend</code> 选项，你可以更改最近的 commit。</p>
+<pre><code class="bash language-bash">$ git commit --amend</code></pre>
+<p>如果你的工作目录没有内容（也就是仓库中没有任何未 commit 的更改），那么运行 <code>git commit --amend</code> 将使你能够重新提供 commit 消息。代码编辑器将打开，并显示原始 commit 消息。只需纠正拼错的单词或重新表述即可！然后保存文件并关闭编辑器，以便采用新的 commit 消息。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="向-commit-中添加忘记的文件">向 commit 中添加忘记的文件</h2>
+<p>此外，<code>git commit --amend</code> 使你能够包含忘记包含的文件（或文件更改）。假设你更新了整个网站的导航链接颜色。commit 了该更改，并以为完事了。但是后来发现深藏在页面上的一个特殊导航链接没有新的颜色。你可以执行新的 commit 并更新该链接的颜色，但是这样就会出现两个 commit 执行完全相同的任务（更改链接颜色）。</p>
+<p>相反，你可以修改最后一个 commit（更新所有其他链接颜色的 commit）以包含这个忘记的链接。要包含忘记的链接，只需：</p>
+<ul>
+<li>编辑文件</li>
+<li>保存文件</li>
+<li>暂存文件</li>
+<li>运行 <code>git commit --amend</code></li>
+</ul>
+<p>你对必要的 CSS 和/或 HTML 文件作出了更改，以便修正被遗忘的链接样式，然后保存所有被修改的文件，并使用 <code>git add</code> 暂存所有被修改的文件（就像要提交新的 commit 那样！），但是你可以运行 <code>git commit --amend</code> 来更新最近的 commit，而不是创建新的 commit。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 还原 commit.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 更改最后一个 commit')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

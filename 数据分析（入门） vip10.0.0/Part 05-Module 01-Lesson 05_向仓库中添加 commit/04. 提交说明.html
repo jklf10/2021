@@ -1,0 +1,330 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>提交说明</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>向仓库中添加 commit</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. git add.html">02. git add</a>
+    </li>
+    <li class="">
+      <a href="03. git commit.html">03. git commit</a>
+    </li>
+    <li class="">
+      <a href="04. 提交说明.html">04. 提交说明</a>
+    </li>
+    <li class="">
+      <a href="05. git diff.html">05. git diff</a>
+    </li>
+    <li class="">
+      <a href="06. 让 git 忽略某些文件.html">06. 让 git 忽略某些文件</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. 提交说明</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="良好的提交说明">良好的提交说明</h2>
+<p>我们来思考一个问题：</p>
+<blockquote>
+  <p>如何编写良好的提交说明？为何要编写好的提交说明？</p>
+</blockquote>
+<p>问的好！花点时间编写良好的提交说明，再怎么强调这一点都不为过。</p>
+<p>何为好的提交说明呢？问的好，很多人发表过关于这一问题的文章，比如： <a href="https://chris.beams.io/posts/git-commit/" rel="noopener noreferrer" target="_blank">如何编写 Git Commit Message - 英</a>|<a href="https://www.jianshu.com/p/0117334c75fc" rel="noopener noreferrer" target="_blank">译文</a> 、<a href="http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html" rel="noopener noreferrer" target="_blank">Commit message 和 Change log 编写指南</a>。在编写好的提交说明时，需要注意以下几个事项：</p>
+<p><strong>建议</strong></p>
+<ul>
+<li><p>消息篇幅简短（少于 60 个字符）</p></li>
+<li><p>解释提交的作用（不是如何更改或为何更改！）</p></li>
+</ul>
+<p><strong>禁忌</strong></p>
+<ul>
+<li><p>请勿解释为何做出了这些更改（下文会深入讲解这一点）</p></li>
+<li><p>请勿解释如何进行了更改（这是 <code>git log -p</code> 的目的！）</p></li>
+<li><p>请勿使用单词"and"</p></li>
+<li><p>如果你必须使用 "and"，则你的提交说明可能进行了太多的更改，将这些更改拆分为独立的 commit</p></li>
+<li><p>例如 "make the background color pink <em>and</em> increase the size of the sidebar"</p></li>
+</ul>
+<p>在编写提交说明时，我喜欢用以下短语造句："This commit will…"。你可以补充完整该句子并作为提交说明使用。</p>
+<p>最重要的是，在编写提交说明时<strong>保持一致性</strong>！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>这是一条好的提交说明吗？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>根据如何书写好的提交说明的相关指南，判断以下提交说明是否符合规范？</p>
+<p>"Update the footer to copyright information"</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487113793808" name="338903" id="a1487113793808">
+        <label for="a1487113793808"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487113803413" name="338903" id="a1487113803413">
+        <label for="a1487113803413"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    是
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>这是一条好的提交说明吗？2</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>下面的提交说明符合规范吗？</p>
+<p>"Add a <p> tag to the body"</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487113839649" name="338905" id="a1487113839649">
+        <label for="a1487113839649"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487113848784" name="338905" id="a1487113848784">
+        <label for="a1487113848784"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    否
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>这是一条好的提交说明吗？3</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>下面的提交说明符合规范吗？</p>
+<p>"Add changes to app.js"</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487113935491" name="338906" id="a1487113935491">
+        <label for="a1487113935491"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487113941609" name="338906" id="a1487113941609">
+        <label for="a1487113941609"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    否
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 解释原因</p>
+<p>如果你需要解释为何进行了提交，也可以！</p>
+<p>在编写提交说明时，第一行是消息本身。消息之后空一行，然后输入正文或说明，包括关于为何需要该 commit 的原因详情（例如 URL 链接）。</p>
+<p>以下是编辑提交说明时屏幕可能显示的内容：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-commit-details-section.png" alt="_代码编辑器显示提交说明编辑窗口。输入了消息，接着空了一行，然后是对说明消息的描述。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>代码编辑器显示提交说明编辑窗口。输入了消息，接着空了一行，然后是对说明消息的描述。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>提交说明的详情描述部分包含在 <code>git log</code> 中。要查看带有详情描述的提交说明，请参阅博客项目仓库并查看 commit <code>8a11b3f</code>。</p>
+<p>但是 <code>git log --oneline</code> 中仅包含了说明（第一行）！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 优达学城的提交样式要求</p>
+<p>正如我之前提到的，编写提交说明的方式有多种。如果你属于某个团队，他们可能已经制定了提交说明编写方式。在优达学城，我们也有自己的提交说明标准。你可以参阅我们的 <a href="https://github.com/udacity/frontend-nanodegree-styleguide-zh/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%BA%B3%E7%B1%B3%E5%AD%A6%E4%BD%8D%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97%20-%20Git.md" rel="noopener noreferrer" target="_blank">git 提交说明样式指南</a>。</p>
+<p>如果你没有选择某种提交说明样式，可以使用我们的样式。但是如果你正在处理现有的项目，则使用他们的现有样式。与实际团队保持一致比与我们保持一致更为重要！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="下一个是-git-diff！">下一个是 git diff！</h2>
+<p>在下一部分，我们将学习一个新的工具（具有相似的输出！）。此工具可以在进行提交之前告诉我们已对文件进行了什么样的更改！</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. git diff.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 提交说明')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

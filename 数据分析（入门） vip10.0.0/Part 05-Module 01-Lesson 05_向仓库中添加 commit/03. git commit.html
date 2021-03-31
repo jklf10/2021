@@ -1,0 +1,516 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>git commit</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>向仓库中添加 commit</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. git add.html">02. git add</a>
+    </li>
+    <li class="">
+      <a href="03. git commit.html">03. git commit</a>
+    </li>
+    <li class="">
+      <a href="04. 提交说明.html">04. 提交说明</a>
+    </li>
+    <li class="">
+      <a href="05. git diff.html">05. git diff</a>
+    </li>
+    <li class="">
+      <a href="06. 让 git 忽略某些文件.html">06. 让 git 忽略某些文件</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. git commit</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>快速检测</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>我们即将提交首个 commit，先进行以下验证以确保我们的项目设置相同：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="636f709d-2359-4938-a881-cbe7b214845e--0">
+        <label for="636f709d-2359-4938-a881-cbe7b214845e--0"><p><code>index.html</code> 文件存在，并包含起始代码</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="636f709d-2359-4938-a881-cbe7b214845e--1">
+        <label for="636f709d-2359-4938-a881-cbe7b214845e--1"><p><code>app.css</code> 文件存在于 <code>css</code> 文件夹中</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="636f709d-2359-4938-a881-cbe7b214845e--2">
+        <label for="636f709d-2359-4938-a881-cbe7b214845e--2"><p><code>app.js</code> 文件存在于 <code>js</code> 文件夹中</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="636f709d-2359-4938-a881-cbe7b214845e--3">
+        <label for="636f709d-2359-4938-a881-cbe7b214845e--3"><p>所有三个文件都已暂存</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 最后一次 git 状态检查</p>
+<p>如果你尚未向工作目录添加任何文件或修改任何现有文件，则不会有任何被修改内容，但是为了进行确认，我们需要在提交 commit 之前再次快速运行下 <code>git status</code>，以确保项目是我们预期的状态。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-status-all-files.png" alt="_终端显示 index.html、css/app.css 和 js/app.js 已被暂存，并准备好被提交。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示 index.html、css/app.css 和 js/app.js 已被暂存，并准备好被提交。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="提交-commit">提交 Commit</h2>
+<p>我们开始提交吧！</p>
+<p>要在 git 中提交 commit，你需要使用 <code>git commit</code> 命令，但是先别运行这条命令。运行这条命令将会打开你在第一节课配置的代码编辑器。如果你尚未运行以下命令：</p>
+<pre><code class="bash language-bash">$ git config --global core.editor &lt;your-editor's-config-went-here&gt;</code></pre>
+<p>回到 git 配置步骤并让 git 使用你所选的编辑器。</p>
+<p>如果你尚未执行这一步骤并且已经运行 <code>git commit</code>，那么 git 可能会默认使用 Vim 编辑器。Vim 很受 Unix 或 Linux 系统用户的欢迎，但是对新用户来说，并不太好用。这门课程肯定不推荐使用该编辑器。请参阅这篇关于<a href="https://discussions.udacity.com/t/escaping-from-vim-in-the-command-line/235917" rel="noopener noreferrer" target="_blank">如何退出 Vim</a> 的帖子，了解如何回到普通的命令提示符界面。</p>
+<p>如果你配置了编辑器，那么可以使用 <code>git commit</code> 命令提交 commit：</p>
+<pre><code class="bash language-bash">$ git commit</code></pre>
+<p>注意，你的编辑器应该会打开并且会出现以下界面：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-commit-editor.png" alt="_代码编辑器显示默认的 commit 消息内容，并等待提供提交说明。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>代码编辑器显示默认的 commit 消息内容，并等待提供提交说明。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="终端冻结了">终端冻结了</h2>
+<p>如果你快速切回终端，会看到终端冻结了，并等待你在弹出的代码编辑器完成编辑。不用担心。当我们向代码编辑器添加必要的内容，并最终关闭代码编辑器窗口后，终端将不再冻结，并回到正常状况。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-commit-terminal-hangs.png" alt="_终端显示 &#x60;git commit&#x60;，但是似乎被挂起并在等待中。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示 <code>git commit</code>，但是似乎被挂起并在等待中。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="代码编辑器-commit-消息解释说明">代码编辑器 Commit 消息解释说明</h2>
+<p>回到代码编辑器。我的编辑器显示了以下内容：</p>
+<pre><code class="bash language-bash"># Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+# new file:   css/app.css
+# new file:   index.html
+# new file:   js/app.js
+#</code></pre>
+<p>第一段精确地告诉了我们需要执行的操作 - 我们需要为该 commit 提供一条消息。此外 ，任何以字符 <code>#</code> 开头的行将被忽略。在后面还提示：这将是初始 commit。最后，给出了将提交 commit 的文件列表。</p>
+<p>因为这是存储库的第一个 commit，我们将使用 commit 消息 "Initial commit"。文本 "Initial commit" 并不特殊，只是第一个 commit 的常用消息。如果你想使用其他消息，完全可以！</p>
+<p>在代码编辑器的第一行输出 commit 消息：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-commit-initial-commit.png" alt="_在第一行输入了提交说明的代码编辑器。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>在第一行输入了提交说明的代码编辑器。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="完成提交">完成提交</h2>
+<p>现在保存文件并关闭编辑器窗口（只关闭面板/标签页还不够，你还需要关闭 <code>git commit</code> 命令打开的代码编辑器窗口）。</p>
+<p>现在回到终端，你应该能看到类似于以下内容的界面：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-commit-finished.png" alt="_关闭代码编辑器后的终端。它显示了新 commit 的 SHA 以及关于该 commit 的信息，例如被添加的文件以及添加了多少行代码。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>关闭代码编辑器后的终端。它显示了新 commit 的 SHA 以及关于该 commit 的信息，例如被添加的文件以及添加了多少行代码。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="终于提交了第一个-commit，恭喜！">终于提交了第一个 commit，恭喜！</h2>
+<p>你刚刚提交了第一个 commit - 哇！ 🙌🏼  有何感受？是不是有点虎头蛇尾的感觉。说实话，当我第一次提交 commit 时，我的感受就如同</p>
+<blockquote>
+  <p>“等等…就这样？只是把将要进行提交的文件添加到了暂存区，然后运行 'git commit'？”</p>
+</blockquote>
+<p>答案是 “是的”。是的，就这些内容。一开始，你会觉得版本控制是一个要克服的庞大障碍，然后才能成为真正的程序员/开发者/设计师等等。但是当你理解术语（我认为是最具挑战的部分）后，实际运用版本控制就不是那么可怕了。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="使用--m-选项绕过编辑器">使用 <code>-m</code> 选项绕过编辑器</h2>
+</blockquote>
+<blockquote>
+  <p>提示：如果你要编写的提交说明很简短，不想等打开代码编辑器后再输入信息，可以直接在命令行中使用 <code>-m</code> 选项传入信息：</p>
+</blockquote>
+<blockquote>
+<pre><code class="bash language-bash">$ git commit -m "Initial commit"</code></pre>
+</blockquote>
+<blockquote>
+  <p>在上述示例中，文本<code>"Initial commit"</code>被作为提交说明信息。但是注意，不能为 commit 提供信息的描述（description），只能提供信息部分（message）。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="第二个-commit---添加更改">第二个 commit - 添加更改</h2>
+<p>我们已经短暂休息了一下，现在提交第二个 commit！将以下内容添加到 <code>index.html</code> 中的 <code>body</code> 标记中：</p>
+<pre><code class="html language-html">&lt;header&gt;
+   &lt;h1&gt;Expedition&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+<p>下一步是什么？没错，运行 <code>git status</code>！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-status-modified-files.png" alt="_终端显示了 &#x60;git status&#x60; 命令的结果。它显示了&quot;Changes not staged for commit&quot;部分，其中包含修改后的&quot;index.html&quot;文件。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git status</code> 命令的结果。它显示了"Changes not staged for commit"部分，其中包含修改后的"index.html"文件。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>提示：如果你运行了 <code>git status</code>，但是没有看到 <code>index.html</code> 已更改，确保文件已被保存。我经常在修改文件以后忘记保存文件！我觉得修改文件后是否记得保存是衡量真正的专业人士的标准。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="具有多个作用的-git-add">具有多个作用的 git add</h2>
+<p>我们修改了文件。git 看到该文件已被修改。到目前为止，一切正常。注意，要提交 commit，待提交的文件必须位于暂存区。要将文件从工作目录移到暂存区，我们应该使用哪个命令？答对了，是 <code>git add</code>！</p>
+<p>我们使用 <code>git add</code> 向暂存区添加了新建的文件，同样的，我们也能使用同一命令将修改的文件暂存。</p>
+<p>现在使用 <code>git add</code> 命令将文件移到暂存区，并使用 <code>git status</code> 验证文件是否位于暂存区。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="第二个-commit">第二个 commit</h2>
+<p>现在我们的文件已经具有可以提交的更改，让我们提交第二个 commit 吧！使用 <code>git commit</code> 命令提交 commit，并添加提交说明 <code>Add header to blog</code>。</p>
+<p>现在，你可能会问自己：“Richard 为何会这样书写提交说明？” 或 “何为好的提交说明？”。问的好，我们将在下一部分探讨这些问题！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>会对文件进行 commit 吗？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>假设你有一个个人博客，并且想要更改文章标题的颜色。</p>
+<ul>
+<li>你修改了 HTML 文件并为每个标题设定了一个类</li>
+<li>你修改了 CSS 文件，添加了新的类并为其设定了颜色</li>
+<li>你保存了所有文件</li>
+<li>你在终端运行了 <code>git commit</code></li>
+</ul>
+<p>用于输入提交说明的代码编辑器会打开吗？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487113380630" name="338899" id="a1487113380630">
+        <label for="a1487113380630"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487113398908" name="338899" id="a1487113398908">
+        <label for="a1487113398908"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    否
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="commit-中应该包含什么内容">commit 中应该包含什么内容</h2>
+<p>我一直在告诉你要创建什么文件，提供需要要包含的内容，并告诉你何时应该进行 commit。但是你自己知道应该在 Commit 中包含什么内容，以及何时/多久进行 commit 吗？</p>
+<p><strong>关键在于使每个 commit 都有其侧重点。</strong>每个 commit 应该记录一项更改。这种说法可能比较主观（完全没问题），但是每个 commit 应该只对项目的一个方面做出更改。</p>
+<p>这并不限制可以添加/删除多少行代码或添加/删除/修改多少个文件。假设你想更改侧栏，并向其中添加新的图片。你可能会：</p>
+<ul>
+<li><p>向项目文件中添加新的图片</p></li>
+<li><p>更改 HTML</p></li>
+<li><p>添加/修改 CSS 以包含新图片</p></li>
+</ul>
+<p>完全可以使用一个 commit 记录所有这些更改！</p>
+<p>但是，一个 commit 不应包含不相关的更改，更改侧栏，然后重新描述脚注内容。这两项更改相互没有关系，不应包含在同一 commit 中。先进行一项更改，提交该更改，然后再进行第二项更改。这样的话，如果一个更改有 bug，你需要撤消该更改时，则不用同时撤消另一个更改。</p>
+<p>我认为在判断应该在 commit 中包含什么内容时，最好的方法是思考下“如果该 commit 中的所有更改都清空了，会怎样？”。如果删除了某个 commit，应该只撤消一项更改。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>别担心，commit 不会随机地被清除。        </p>
+</blockquote>
+<blockquote>
+  <p>在后面的课程中，我们将学习使用 git 撤消 commit 中进行的更改，以及如何谨慎地手动删除最后提交的一个 commit。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-commit-小结">git commit 小结</h2>
+<p><code>git commit</code> 命令会取出暂存区的文件并保存到仓库中。</p>
+<pre><code class="bash language-bash">$ git commit</code></pre>
+<p>此命令：</p>
+<ul>
+<li><p>将打开配置中指定的代码编辑器</p></li>
+<li><p>（请参阅第一节课中的 git 配置流程，了解如何配置编辑器）</p></li>
+</ul>
+<p>在代码编辑器中：</p>
+<ul>
+<li><p>必须提供提交说明</p></li>
+<li><p>以 <code>#</code> 开头的行是注释，将不会被记录</p></li>
+<li><p>添加提交说明后保存文件</p></li>
+<li><p>关闭编辑器以进行提交</p></li>
+</ul>
+<p>然后使用 <code>git log</code> 检查你刚刚提交的 commit！</p>
+<h3 id="深入研究">深入研究</h3>
+<ul>
+<li><p><a href="https://help.github.com/articles/associating-text-editors-with-git/" rel="noopener noreferrer" target="_blank">将文本编辑器与 git 相关联 - 英</a> GitHub 帮助文档</p></li>
+<li><p>起步 - 初次运行 Git 前的配置 (git book)：<a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" rel="noopener noreferrer" target="_blank">英</a> | <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE" rel="noopener noreferrer" target="_blank">中</a> </p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. 提交说明.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. git commit')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

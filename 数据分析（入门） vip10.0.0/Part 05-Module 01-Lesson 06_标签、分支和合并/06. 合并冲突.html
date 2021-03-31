@@ -1,0 +1,484 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>合并冲突</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>标签、分支和合并</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 标签.html">02. 标签</a>
+    </li>
+    <li class="">
+      <a href="03. 分支.html">03. 分支</a>
+    </li>
+    <li class="">
+      <a href="04. 高效分支.html">04. 高效分支</a>
+    </li>
+    <li class="">
+      <a href="05. 合并.html">05. 合并</a>
+    </li>
+    <li class="">
+      <a href="06. 合并冲突.html">06. 合并冲突</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. 合并冲突</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="有时候合并会失败">有时候合并会失败</h2>
+<p>大部分情况下，git 将能够成功地合并分支。但是，有时候 git 无法完全自动地进行合并。合并失败时，就称为<strong>合并冲突</strong>。</p>
+<p>如果出现合并冲突，git 将尝试尽可能合并多的内容，然后将留下特殊选项（例如 <code>&gt;&gt;&gt;</code> 和 <code>&lt;&lt;&lt;</code>），告诉你（没错，告诉作为程序员的你！）需要从何处手动修复。 </p>
+<h3 id="什么导致了合并冲突">什么导致了合并冲突</h3>
+<p>正如你所知道的，git 会跟踪文件中的代码行。如果完全相同的行在不同的文件中更改了，将产生合并冲突。例如，如果你在 <code>alternate-sidebar-style</code> 分支上并将侧栏的标题改为"Information About Me"，git 应该选择哪个标题？你在两个分支上都更改了标题，因此 git 根本不知道你要保留哪个标题。它肯定不会随机选择一个标题！</p>
+<p>我们来人为制造一个合并冲突，学习如何解决这种冲突。当你学会了后，就非常简单!当 git 不确定你要使用即将合并的分支中的哪些行时，就会出现合并冲突。因此我们需要在两个不同的分支上修改同一行，然后重设合并它们。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="人为制造合并冲突！">人为制造合并冲突！</h2>
+<p>当同一行在两个分支中都更改了时，就会出现合并冲突。我们在两个不同的分支上更改同一页面的标题：</p>
+<ul>
+<li>更改 <code>master</code> 分支上的标题</li>
+<li>在最近修改 <code>master</code> 分支的 commit 前面创建一个 <code>heading-update</code> 分支</li>
+<li>更改同一标题</li>
+<li>切换到 <code>master</code> 分支</li>
+<li>合并 <code>heading-update</code> 分支</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="在分支上更改标题-1">在分支上更改标题 1</h2>
+<p>因为 <code>master</code> 分支就像所有其他分支一样，也是个普通分支，我们在 <code>master</code> 分支上更改标题。将 <code>&lt;h1&gt;</code> 标题改为其他内容。对我来说，标题当前在第 13 行是"Adventure"，我将其改为"Quest"。</p>
+<p>做出更改后，保存文件并 commit 到仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="在分支上更改标题-2">在分支上更改标题 2</h2>
+<p>现在我们需要创建不同的分支并在该分支上更新标题。</p>
+<p>现在要注意的是，我们需要创建一个不是从 master 分支上分叉的分支。如果我们在从 master 分支上分叉的分支上做出更改，那么该更改将在此更改前面，git 将直接使用该更改，而不是使用我们刚刚在 <code>master</code> 上做出的更改。因此我们需要将该分支“放在过去”。</p>
+<p>我们创建一个位于最近 commit 之前的 commit 上的分支。使用 git log 获取上一个 commit 的 SHA，并在该 commit 上创建一个分支。在创建 <code>heading-update</code> 分支后，我的 git log 输出结果如下所示：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-merge-conflict-prep.png" alt="_终端显示了 &#x60;git log --oneline --decorate --graph --all&#x60; 的输出结果。当前被检出的分支为 &#x60;heading-update&#x60; 。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --oneline --decorate --graph --all</code> 的输出结果。当前被检出的分支为 <code>heading-update</code> 。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>现在已经创建好分支，我们只需再次更新标题。确保更改在 <code>master</code> 分支上做出更改的同一行。我将第 13 行的"Adventure"改为"Crusade"。</p>
+<p>然后保存文件，并将文件 commit 到仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-merge-conflict-prep2.png" alt="_终端显示了 &#x60;git log --oneline --decorate --graph --all&#x60; 的输出结果。&#x60;master&#x60; 分支和 &#x60;heading-update&#x60; 分支都更改了同一文件的同一行。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --oneline --decorate --graph --all</code> 的输出结果。<code>master</code> 分支和 <code>heading-update</code> 分支都更改了同一文件的同一行。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>准备合并冲突</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>我们即将导致合并冲突，确保你的进度和我的一样：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="2f5bdd8b-399e-459c-b3d3-34c87c859342--0">
+        <label for="2f5bdd8b-399e-459c-b3d3-34c87c859342--0"><p>我在 <code>master</code> 分支上做出了更改标题的 commit</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="2f5bdd8b-399e-459c-b3d3-34c87c859342--1">
+        <label for="2f5bdd8b-399e-459c-b3d3-34c87c859342--1"><p>我在 <code>heading-update</code> 分支上做出了同样更改标题的 commit</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="2f5bdd8b-399e-459c-b3d3-34c87c859342--2">
+        <label for="2f5bdd8b-399e-459c-b3d3-34c87c859342--2"><p>我目前位于 <code>master</code> 分支上</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！我们继续。</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>确保你位于 master 分支（我们也可以在另一分支上操作，但是我习惯将 <code>master</code> 分支作为主分支，让另一个分支合并到该分支上）上，并合并 <code>heading-update</code> 分支：</p>
+<pre><code class="bash language-bash">$ git merge heading-update</code></pre>
+<p>你应该看到以下结果：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-merge-conflict.png" alt="_终端显示了导致合并冲突的合并输出结果。出现单词&quot;CONFLICT&quot;，并且指出 index.html 文件中出现合并冲突。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了导致合并冲突的合并输出结果。出现单词"CONFLICT"，并且指出 index.html 文件中出现合并冲突。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="合并冲突输出结果解释">合并冲突输出结果解释</h2>
+<p>终端中显示的输出结果为：</p>
+<pre><code class="bash language-bash">$ git merge heading-update 
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.</code></pre>
+<p>注意在 <code>git merge heading-update</code> 命令之后，git 尝试合并在两个分支上都更改了的文件 (<code>index.html</code>)，但是出现冲突。此外，它告诉你发生了什么："Automatic merge failed; fix conflicts and then commit the result"。</p>
+<p>还记得 <code>git status</code> 命令吗？在处理合并冲突时，该命令将非常有用。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>合并冲突的状态？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>尝试立即运行 <code>git status</code>。终端显示了以下哪些信息？</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1487199322718" name="339057" id="a1487199322718">
+      <label for="a1487199322718"><p>You have unmerged paths</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1487199330549" name="339057" id="a1487199330549">
+      <label for="a1487199330549"><p>Unmerged paths</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1487199331117" name="339057" id="a1487199331117">
+      <label for="a1487199331117"><p>fix conflicts and run "git commit"</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1487199331717" name="339057" id="a1487199331717">
+      <label for="a1487199331717"><p>use "git add <file>…" to mark resolution</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>You have unmerged paths</li>
+      <li>Unmerged paths</li>
+      <li>fix conflicts and run "git commit"</li>
+      <li>use "git add <file>..." to mark resolution</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><code>git status</code> 的输出结果告诉我们 <code>index.html</code> 中存在合并冲突。因此在代码编辑器中查看该文件！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-merge-conflict-indicators.png" alt="_代码编辑器显示了合并冲突指示符。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>代码编辑器显示了合并冲突指示符。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="合并冲突指示符解释">合并冲突指示符解释</h2>
+<p>编辑器具有以下合并冲突指示符：</p>
+<ul>
+<li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> 此行下方的所有内容（直到下个指示符）显示了当前分支上的行</li>
+<li><code>||||||| merged common ancestors</code> 此行下方的所有内容（直到下个指示符）显示了原始行的内容</li>
+<li><code>=======</code> 表示原始行内容的结束位置，之后的所有行（直到下个指示符）是被合并的当前分支上的行的内容</li>
+<li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; heading-update</code> 是要被合并的分支（此例中是 <code>heading-update</code> 分支）上的行结束指示符</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="解决合并冲突">解决合并冲突</h2>
+<p>git 使用合并冲突指示符来告诉你两个不同分支上的哪些行导致了合并冲突，以及原始行是什么。要解决合并冲突，你需要：</p>
+<ol>
+<li>选择保留哪些行</li>
+</ol>
+<ul>
+<li>删掉所有带指示符的行</li>
+</ul>
+<p>因为某种原因，我不太喜欢现在的"Crusade"一词，但是"Quest"也不太合适。要不将标题设为"Adventurous Quest"？</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-resolve-merge-conflict.gif" alt="_代码编辑器显示合并冲突指示符已被删除，并且标题已更新。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>代码编辑器显示合并冲突指示符已被删除，并且标题已更新。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="commit-合并冲突">commit 合并冲突</h2>
+<p>删掉所有包含合并冲突指示符的行并选择保留哪个标题后，直接保存文件，并将其添加到暂存区，然后 commit！就像普通合并一样，代码编辑器会弹出，并让你提供 commit 消息。和之前一样，我们经常会使用自动生成的合并 commit 消息，因此在编辑器打开后，直接关闭编辑器并使用自动生成的 commit 消息。</p>
+<p>就这些内容！当你明白合并指示符所显示的内容后，合并冲突就没那么复杂了。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>合并冲突指示符可以被 commit 吗？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>你到目前为止已经提交了大量的 commit。如果文件中出现合并冲突，你修改并保存了文件，然后添加到暂存区并 commit 了，但是忘了删掉合并冲突指示符，git 会 commit 文件吗？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487199561900" name="339064" id="a1487199561900">
+        <label for="a1487199561900"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487199583358" name="339064" id="a1487199583358">
+        <label for="a1487199583358"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    是
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="合并冲突小结">合并冲突小结</h2>
+<p>当相同的行在要合并的不同分支上做出了更改时，就会出现合并冲突。git 将在合并途中暂停，并告诉你存在冲突，以及哪些文件存在冲突。要解决文件中的冲突：</p>
+<ul>
+<li>找到并删掉存在合并冲突指示符的所有行</li>
+<li>决定保留哪些行</li>
+<li>保存文件</li>
+<li>暂存文件</li>
+<li>提交 commit</li>
+</ul>
+<p>注意一个文件可能在多个部分存在合并冲突，因此检查整个文件中的合并冲突指示符，搜索 <code>&lt;&lt;&lt;</code> 能够帮助你找到所有这些指示符。</p>
+<h3 id="深入研究">深入研究</h3>
+<ul>
+<li>遇到冲突时的分支合并：<a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#Basic-Merge-Conflicts" rel="noopener noreferrer" target="_blank">英</a>|<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" rel="noopener noreferrer" target="_blank">中</a> git 图书</li>
+<li><a href="https://git-scm.com/docs/git-merge#_how_conflicts_are_presented" rel="noopener noreferrer" target="_blank">冲突如何被显示</a> git 文档 (<strong>英</strong>)</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. 总结.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. 合并冲突')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
