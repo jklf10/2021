@@ -1,0 +1,363 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook + 练习：回归-到你实践的时候了-第二部分</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>回归</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：机器学习简介.html">02. 视频：机器学习简介</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：机器学习综述.html">03. 练习：机器学习综述</a>
+    </li>
+    <li class="">
+      <a href="04. 视频：线性回归简介.html">04. 视频：线性回归简介</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：线性回归语言.html">05. 练习：线性回归语言</a>
+    </li>
+    <li class="">
+      <a href="06. 散点图.html">06. 散点图</a>
+    </li>
+    <li class="">
+      <a href="07. 散点图练习.html">07. 散点图练习</a>
+    </li>
+    <li class="">
+      <a href="08. 相关系数.html">08. 相关系数</a>
+    </li>
+    <li class="">
+      <a href="09. 相关系数练习.html">09. 相关系数练习</a>
+    </li>
+    <li class="">
+      <a href="10. 视频：回归线由什么决定？.html">10. 视频：回归线由什么决定？</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：回归线由什么决定？-符号练习.html">11. 练习：回归线由什么决定？-符号练习</a>
+    </li>
+    <li class="">
+      <a href="12. 练习：回归线由什么决定？？-回归线基础练习.html">12. 练习：回归线由什么决定？？-回归线基础练习</a>
+    </li>
+    <li class="">
+      <a href="13. 视频：拟合回归线.html">13. 视频：拟合回归线</a>
+    </li>
+    <li class="">
+      <a href="14. 文本：回归闭式解.html">14. 文本：回归闭式解</a>
+    </li>
+    <li class="">
+      <a href="15. 录屏视频：在 Python 里拟合回归线.html">15. 录屏视频：在 Python 里拟合回归线</a>
+    </li>
+    <li class="">
+      <a href="16. 视频：如何解释结果？.html">16. 视频：如何解释结果？</a>
+    </li>
+    <li class="">
+      <a href="17. 视频：回归线对数据的拟合效果如何？.html">17. 视频：回归线对数据的拟合效果如何？</a>
+    </li>
+    <li class="">
+      <a href="18. Notebook + 练习：如何解释结果.html">18. Notebook + 练习：如何解释结果</a>
+    </li>
+    <li class="">
+      <a href="19. Notebook + 练习：回归-到你实践的时候了-第一部分.html">19. Notebook + 练习：回归-到你实践的时候了-第一部分</a>
+    </li>
+    <li class="">
+      <a href="20. Notebook + 练习：回归-到你实践的时候了-第二部分.html">20. Notebook + 练习：回归-到你实践的时候了-第二部分</a>
+    </li>
+    <li class="">
+      <a href="21. 视频：复习.html">21. 视频：复习</a>
+    </li>
+    <li class="">
+      <a href="22. 文本：复习 + 预告.html">22. 文本：复习 + 预告</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">20. Notebook + 练习：回归-到你实践的时候了-第二部分</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>观察线性回归模型的结果，根据下列描述选择正确的数值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>0.15</p></button>
+  <button class="btn btn-primary"><p>24.02</p></button>
+  <button class="btn btn-primary"><p>0.000</p></button>
+  <button class="btn btn-primary"><p>4.128</p></button>
+  <button class="btn btn-primary"><p>0.41</p></button>
+  <button class="btn btn-primary"><p>41.28</p></button>
+  <button class="btn btn-primary"><p>1.5</p></button>
+  <button class="btn btn-primary"><p>14.9</p></button>
+  <button class="btn btn-primary"><p>412.80</p></button>
+  <button class="btn btn-primary"><p>24016</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>人均犯罪每增加 100%，房价中位数预计就会减少 <strong><em>_</em></strong> 美元。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>如果没有犯罪活动，那么房价中位数预计会是 <strong><em>_</em></strong> 美元。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><strong>__</strong>% 的房价波动可由人均犯罪来解释。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>与人均犯罪有关的 p 值 <strong>__</strong>  说明了预测房价中位数与人均犯罪有统计显著性。</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>与人均犯罪有关的 p 值 <strong>__</strong>  说明了预测房价中位数与人均犯罪有统计显著性。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.000</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>__</strong>% 的房价波动可由人均犯罪来解释。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>14.9</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>人均犯罪每增加 100%，房价中位数预计就会减少 <strong><em>_</em></strong> 美元。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>412.80</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>如果没有犯罪活动，那么房价中位数预计会是 <strong><em>_</em></strong> 美元。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>24016</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>虽然真实数据更凌乱些，但你能根据线性模型的结果和散点图，判断相关系数该为多少吗？请选择正确答案。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1510533276166" name="469402" id="a1510533276166">
+        <label for="a1510533276166"><p>0.386</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1510533305245" name="469402" id="a1510533305245">
+        <label for="a1510533305245"><p>-0.386</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1510533310550" name="469402" id="a1510533310550">
+        <label for="a1510533310550"><p>0.149</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1510533318137" name="469402" id="a1510533318137">
+        <label for="a1510533318137"><p>-0.149</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    -0.386
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="21. 视频：复习.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('20. Notebook + 练习：回归-到你实践的时候了-第二部分')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
