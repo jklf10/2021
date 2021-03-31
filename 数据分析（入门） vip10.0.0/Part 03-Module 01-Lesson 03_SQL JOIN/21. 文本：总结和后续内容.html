@@ -1,0 +1,248 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>文本：总结和后续内容</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>SQL JOIN</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：JOIN 简介.html">01. 视频：JOIN 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：为何要将数据拆分为不同的表格？.html">02. 视频：为何要将数据拆分为不同的表格？</a>
+    </li>
+    <li class="">
+      <a href="03. 视频：你的第一个 JOIN.html">03. 视频：你的第一个 JOIN</a>
+    </li>
+    <li class="">
+      <a href="04. 文本 + 练习：你的首个 JOIN.html">04. 文本 + 练习：你的首个 JOIN</a>
+    </li>
+    <li class="">
+      <a href="05. 解决方案：你的首个 JOIN.html">05. 解决方案：你的首个 JOIN</a>
+    </li>
+    <li class="">
+      <a href="06. Text ERD 提醒.html">06. Text: ERD 提醒</a>
+    </li>
+    <li class="">
+      <a href="07. 文本 主键和外键.html">07. 文本: 主键和外键</a>
+    </li>
+    <li class="">
+      <a href="08. 练习：主外键关系.html">08. 练习：主外键关系</a>
+    </li>
+    <li class="">
+      <a href="09. 文本 + 练习：JOIN 回顾.html">09. 文本 + 练习：JOIN 回顾</a>
+    </li>
+    <li class="">
+      <a href="10. 视频：别名.html">10. 视频：别名</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：JOIN 问题（第一部分）.html">11. 练习：JOIN 问题（第一部分）</a>
+    </li>
+    <li class="">
+      <a href="12. 解决方案：JOIN 问题（第一部分）.html">12. 解决方案：JOIN 问题（第一部分）</a>
+    </li>
+    <li class="">
+      <a href="13. 视频：其他 JOIN 的目的.html">13. 视频：其他 JOIN 的目的</a>
+    </li>
+    <li class="">
+      <a href="14. 视频：LEFT JOIN 和 RIGHT JOIN’.html">14. 视频：LEFT JOIN 和 RIGHT JOIN’</a>
+    </li>
+    <li class="">
+      <a href="15.  文本：其他 JOIN 注意事项.html">15.  文本：其他 JOIN 注意事项</a>
+    </li>
+    <li class="">
+      <a href="16. LEFT 和 RIGHT JOIN.html">16. LEFT 和 RIGHT JOIN</a>
+    </li>
+    <li class="">
+      <a href="17. 解决方案： LEFT 和 RIGHT JOIN .html">17. 解决方案： LEFT 和 RIGHT JOIN </a>
+    </li>
+    <li class="">
+      <a href="18. 视频：JOIN 和过滤.html">18. 视频：JOIN 和过滤</a>
+    </li>
+    <li class="">
+      <a href="19. 练习：最后的检测.html">19. 练习：最后的检测</a>
+    </li>
+    <li class="">
+      <a href="20. 解决方案：最后的检测.html">20. 解决方案：最后的检测</a>
+    </li>
+    <li class="">
+      <a href="21. 文本：总结和后续内容.html">21. 文本：总结和后续内容</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">21. 文本：总结和后续内容</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="总结">总结</h1>
+<h3 id="主键和外键">主键和外键</h3>
+<p>你学习了在连接数据库中的表格时与主键和外键相关的关键要素：</p>
+<ul>
+<li><p><strong>主键</strong> - 对于表格中的每行都是唯一的。主键通常是数据库中的第一列（就像 Parch &amp; Posey 数据库中每个表格的 <strong>id</strong> 列）。</p></li>
+<li><p><strong>外键</strong> - 是出现在另一个表格中的<strong>主键</strong>，允许行不是唯一的行。</p></li>
+</ul>
+<p>数据库的数据设置非常重要，但通常不是数据分析师的职责。这一过程称为<strong>数据库规范化</strong>。</p>
+<h3 id="join">JOIN</h3>
+<p>在这节课，你学习了如何使用 <strong>JOIN</strong> 组合多个表格的数据。你将最常用到的三个 <strong>JOIN</strong> 语句为：</p>
+<ol>
+<li><strong>JOIN</strong> - 一种 <strong>INNER JOIN</strong>，仅获取在两个表格中都存在的数据。</li>
+<li><strong>LEFT JOIN</strong> - 用于获取 <strong>FROM</strong> 中的表格中的所有行，即使它们不存在于 <strong>JOIN</strong> 语句中。</li>
+<li><strong>RIGHT JOIN</strong> - 用于获取 <strong>JOIN</strong> 中的表格中的所有行，即使它们不存在于 <strong>FROM</strong> 语句中。</li>
+</ol>
+<p>还有几个没有讲解的高级 <strong>JOIN</strong>，它们仅适用于非常特定的情况。<a href="http://www.sqlservertutorial.net/sql-server-basics/sql-server-union/" rel="noopener noreferrer" target="_blank">UNION 和 UNION ALL</a>、<a href="http://www.sqlservertutorial.net/sql-server-basics/sql-server-cross-join/" rel="noopener noreferrer" target="_blank">CROSS JOIN</a> 和比较难的 <a href="http://www.sqlservertutorial.net/sql-server-basics/sql-server-self-join/" rel="noopener noreferrer" target="_blank">SELF JOIN</a>。这些内容比较深奥，这门课程不会再过多介绍，但是有必要知道这些连接方法是存在的，它们在特殊情况下比较实用。</p>
+<h3 id="别名">别名</h3>
+<p>你学习了可以使用 <strong>AS</strong> 或直接对表格和列设定别名。这样可以减少要输入的字符数，同时确保列标题可以描述表格中的数据。</p>
+<h1 id="后续内容">后续内容</h1>
+<p>下节课的主题是<strong>聚合</strong>数据。你已经学到了很多知识，但是可能依然觉得 <strong>SQL</strong> 与<strong>统计学</strong>和使用 <strong>Excel</strong> 等平台不太相关。聚合函数将使你能够编写更复杂的 SQL 查询，并回答以下等问题：</p>
+<ul>
+<li>哪个<strong>渠道</strong>产生的收入更高？</li>
+<li>哪个<strong>客户</strong>具有商品量最多的订单？</li>
+<li>哪个<strong>销售代表</strong>的订单量最多？或订单量最少？他们有多少订单？</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('21. 文本：总结和后续内容')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

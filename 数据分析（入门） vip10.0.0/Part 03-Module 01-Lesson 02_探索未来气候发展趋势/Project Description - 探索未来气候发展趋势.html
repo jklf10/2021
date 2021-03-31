@@ -1,0 +1,210 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>探索未来气候发展趋势</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>探索未来气候发展趋势</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 项目说明.html">01. 项目说明</a>
+    </li>
+    <li class="">
+      <a href="02. 使用 SQL 访问数据.html">02. 使用 SQL 访问数据</a>
+    </li>
+    <li class="">
+      <a href="03. 关于诚信准则的说明.html">03. 关于诚信准则的说明</a>
+    </li>
+    <li class="">
+      <a href="Project Description - 探索未来气候发展趋势.html">Project Description - 探索未来气候发展趋势</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - 探索未来气候发展趋势.html">Project Rubric - 探索未来气候发展趋势</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">探索未来气候发展趋势</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+    
+    <p>如果你已经来到这个页面上，那么你应该已经完成了对当地和全球温度趋势的探索。恭喜！ 在提交项目之前，请务必检查以下几点：</p>
+<p>*请以PDF格式提交你的项目。 你的报告应包括分析中每一步骤的文档，描述当地和全球温度数据的折线图，以及你对趋势的观察结果。<br />
+*不要忘记查看<a href="https://review.udacity.com/#!/rubrics/1299/view" rel="noopener noreferrer" target="_blank">审核标准</a>！ 审阅导师将使用审核标准来评估你的项目，因此在提交之前请确保它符合所有要求。</p>
+<p>一旦检查了上述内容，点击下面的“提交项目”按钮进入项目提交页面。 提交项目后，你最多可能需要等待一周时间才能得到评估结果。 大多数情况下，速度要快得多！ 与此同时，你可以随时继续学习该课程的其他部分！</p>
+<p><code>注意</code>：如果你选择<code>上传ZIP文件</code>，请提前将项目文件（本项目要求为PDF文件）压缩成格式为<code>zip</code>的压缩文件，<strong>否则无法选择本地文件</strong>。</p>
+<h1 id="探索未来气候发展趋势--项目说明">探索未来气候发展趋势- 项目说明</h1>
+<h3 id="总结摘要">总结摘要</h3>
+<p>在这个项目中，你将分析当地和全球温度数据，并将你居住地的温度趋势与全球总体温度趋势对比。</p>
+<h3 id="说明">说明</h3>
+<p>你的目标是创建一个可视化文件，并准备一份文档，描述全球温度趋势与距离你所居住的最近的大城市的温度趋势之间的相似之处和不同之处。要做到这一点，你需要按照以下步骤：</p>
+<ul>
+<li><p>在数据库中 <strong>提取数据</strong>。在下一节中有一个连接到数据库的工作区。你需要输出世界的温度数据以及距离你所居住的最近的大城市的温度数据。你可以在<code>city_list (城市列表)</code>表中找到城市和国家的列表。要与数据库进行交互，你需要编写一个SQL查询。</p>
+<ul>
+<li><p>编写一个  SQL 查询来提取城市级别的数据，导出为CSV。</p></li>
+<li><p>编写一个  SQL 查询来提取全球数据，导出为CSV。</p></li>
+<li><p>用任何你感觉最方便的工具打开** CSV **。我们建议使用 Excel 或 Google 工作表，但欢迎你使用其他工具，如Python或R。</p></li>
+<li><p>创建<strong>一个折线图</strong>，将城市的温度与全球温度进行比较。确保绘制<em>移动平均值</em>，而不是年平均值，让线条平滑展现，使趋势更明显（上节课的最后一个页面是如何在电子表格中做到这一点）。</p></li>
+<li><p>对世界平均值与城市平均值之间的相似性和差异以及总体趋势** 进行观察**。这里有一些问题，让你开始想一想。</p></li>
+<li><p>与全球平均水平相比，你的城市平均温度是否更高还是更低？这种差异是否一直保持一致？</p></li>
+<li><p>“随着时间的推移，你的城市气温的变化与全球平均值的变化相比如何呢？</p></li></ul></li>
+<li><p>整体趋势是什么样子？&nbsp;世界越来越热还是更冷？&nbsp;过去几百年的趋势是否一致？</p></li>
+</ul>
+<h3 id="提交">提交</h3>
+<p>你的提交应该是一个PDF，其中包括：</p>
+<ul>
+<li>** 纲要**以便展示让图表数据可视化的步骤，例如：<br />
+&nbsp;&nbsp; * 你每一步使用什么工具？ （Python，SQL，Excel等）<br />
+&nbsp;&nbsp; * 你是如何计算移动平均线的？<br />
+&nbsp;&nbsp; * 在决定如何将趋势可视化时，你考虑的关键是什么？</li>
+<li><strong>线图</strong>，包含当地和全球温度趋势<ul>
+<li>至少** 四个观察发现**是关于趋势的相似性和/或差异的</li></ul></li>
+</ul>
+<h3 id="审阅标准">审阅标准</h3>
+<p>优达学城审阅专家将根据项目<a href="https://review.udacity.com/#!/rubrics/1125/view" rel="noopener noreferrer" target="_blank">审阅标准</a>来评估你的项目。在完成项目之际，请以审阅标准作为指导，然后在提交之前快速进行自我评估。</p>
+<p>如果你在这个页面上，那么你应该已经完成​​了对当地和全球温度趋势的探索。恭喜！在提交项目之前，请务必检查以下几点：</p>
+<p>*请以PDF格式提交你的项目。你的报告应包括分析每一步骤的文档，描述当地和全球温度数据的折线图以及你对趋势的观察结果。<br />
+*不要忘记查看<a href="https://review.udacity.com/#!/rubrics/1125/view" rel="noopener noreferrer" target="_blank">审阅标准</a>! 审阅专家将使用审阅标准评估你的工作，因此在提交之前，请确保你的项目符合所有要求。</p>
+<p>一旦你检查完上述内容，点击下面的“提交项目”按钮进入项目提交页面。提交项目后，最多可能需要一周时间才能评估。大多数情况下，审阅速度要快得多！与此同时，你可以随时继续学习该课程的其他部分！</p>
+<p><code>注意</code>：如果你选择<code>上传ZIP文件</code>，请提前将项目文件（本项目要求为PDF文件）压缩成格式为<code>zip</code>的压缩文件，<strong>否则无法选择本地文件</strong>。</p>
+  
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('探索未来气候发展趋势')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

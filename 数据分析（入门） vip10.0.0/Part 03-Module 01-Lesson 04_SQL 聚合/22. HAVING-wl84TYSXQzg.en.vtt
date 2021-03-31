@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.640
+Imagine yourself as an account manager at Parch and
+
+00:00:02.640 --> 00:00:05.445
+Posey working with the company's largest accounts.
+
+00:00:05.445 --> 00:00:08.730
+You might want to identify the total sales for accounts with over
+
+00:00:08.730 --> 00:00:11.400
+250,000 in sales to better understand
+
+00:00:11.400 --> 00:00:14.475
+the proportion of revenue that comes from these large accounts.
+
+00:00:14.474 --> 00:00:19.129
+To get this list, let's first get the sum of sales for each account.
+
+00:00:19.129 --> 00:00:20.789
+We'll order them in descending order,
+
+00:00:20.789 --> 00:00:25.119
+so we can see all the highest value accounts at the top of the result set.
+
+00:00:25.120 --> 00:00:30.285
+Now, let's filter that down to just the accounts with more than 250,000 in sales.
+
+00:00:30.285 --> 00:00:38.835
+You'll notice that the WHERE clause isn't exactly built for this.
+
+00:00:38.835 --> 00:00:42.769
+The WHERE clause won't
+
+00:00:42.770 --> 00:00:46.592
+work for this because it doesn't allow you to filter on aggregate columns,
+
+00:00:46.591 --> 00:00:49.320
+that's where the HAVING clause comes in.
+
+00:00:49.320 --> 00:00:52.409
+The HAVING clause always goes after
+
+00:00:52.409 --> 00:01:03.037
+the GROUP BY statement.
+
+00:01:03.037 --> 00:01:11.655
+You'll also notice that you'll always have a GROUP BY statement,
+
+00:01:11.655 --> 00:01:16.965
+because HAVING is always going to be used with an aggregate function.
+
+00:01:16.965 --> 00:01:20.790
+This filters the query down to just the account
+
+00:01:20.790 --> 00:01:24.690
+ID's with more than 250,000 in total sales.
+
+00:01:24.689 --> 00:01:26.024
+One thing to keep in mind,
+
+00:01:26.025 --> 00:01:30.450
+is that this is really only useful when grouping by one or more columns.
+
+00:01:30.450 --> 00:01:33.045
+If you're aggregating across the entire data set,
+
+00:01:33.045 --> 00:01:35.120
+the output is only one line anyway,
+
+00:01:35.120 --> 00:01:37.120
+so there's no need to filter beyond that.
+

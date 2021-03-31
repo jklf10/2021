@@ -1,0 +1,324 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>练习：HAVING</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>SQL 聚合</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频 聚合简介.html">01. 视频: 聚合简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频 NULL 简介.html">02. 视频: NULL 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 视频 NULL 和聚合.html">03. 视频: NULL 和聚合</a>
+    </li>
+    <li class="">
+      <a href="04. 视频 + 文本：第一个聚合函数 - COUNT.html">04. 视频 + 文本：第一个聚合函数 - COUNT</a>
+    </li>
+    <li class="">
+      <a href="05. 视频 COUNT 与 NULL.html">05. 视频: COUNT 与 NULL</a>
+    </li>
+    <li class="">
+      <a href="06. 视频 SUM.html">06. 视频: SUM</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：SUM.html">07. 练习：SUM</a>
+    </li>
+    <li class="">
+      <a href="08. 解决方案：SUM.html">08. 解决方案：SUM</a>
+    </li>
+    <li class="">
+      <a href="09. 视频 MIN 与 MAX.html">09. 视频: MIN 与 MAX</a>
+    </li>
+    <li class="">
+      <a href="10. 视频 AVG.html">10. 视频: AVG</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：MIN、MAX 与 AVG.html">11. 练习：MIN、MAX 与 AVG</a>
+    </li>
+    <li class="">
+      <a href="12. 解决方案 MIN、MAX 与 AVG.html">12. 解决方案: MIN、MAX 与 AVG</a>
+    </li>
+    <li class="">
+      <a href="13. 视频 GROUP BY.html">13. 视频: GROUP BY</a>
+    </li>
+    <li class="">
+      <a href="14. 练习：GROUP BY.html">14. 练习：GROUP BY</a>
+    </li>
+    <li class="">
+      <a href="15. 解决方案：GROUP BY.html">15. 解决方案：GROUP BY</a>
+    </li>
+    <li class="">
+      <a href="16. 视频 GROUP BY（第二部分）.html">16. 视频: GROUP BY（第二部分）</a>
+    </li>
+    <li class="">
+      <a href="17. 练习：GROUP BY（第二部分）.html">17. 练习：GROUP BY（第二部分）</a>
+    </li>
+    <li class="">
+      <a href="18. 解决方案：GROUP BY（第二部分）.html">18. 解决方案：GROUP BY（第二部分）</a>
+    </li>
+    <li class="">
+      <a href="19. 视频 DISTINCT.html">19. 视频: DISTINCT</a>
+    </li>
+    <li class="">
+      <a href="20. 练习：DISTINCT.html">20. 练习：DISTINCT</a>
+    </li>
+    <li class="">
+      <a href="21. 解决方案：DISTINCT.html">21. 解决方案：DISTINCT</a>
+    </li>
+    <li class="">
+      <a href="22. 视频：HAVING.html">22. 视频：HAVING</a>
+    </li>
+    <li class="">
+      <a href="23. 练习：HAVING.html">23. 练习：HAVING</a>
+    </li>
+    <li class="">
+      <a href="24. 解决方案：HAVING.html">24. 解决方案：HAVING</a>
+    </li>
+    <li class="">
+      <a href="25. 视频 DATE 函数.html">25. 视频: DATE 函数</a>
+    </li>
+    <li class="">
+      <a href="26. 视频 DATE 函数 II.html">26. 视频: DATE 函数 II</a>
+    </li>
+    <li class="">
+      <a href="27. 练习：DATE 函数.html">27. 练习：DATE 函数</a>
+    </li>
+    <li class="">
+      <a href="28. 解决方案：DATE 函数.html">28. 解决方案：DATE 函数</a>
+    </li>
+    <li class="">
+      <a href="29. 视频 CASE 语句.html">29. 视频: CASE 语句</a>
+    </li>
+    <li class="">
+      <a href="30. 视频 CASE 与聚合.html">30. 视频: CASE 与聚合</a>
+    </li>
+    <li class="">
+      <a href="31. 练习：CASE.html">31. 练习：CASE</a>
+    </li>
+    <li class="">
+      <a href="32. 解决方案：CASE.html">32. 解决方案：CASE</a>
+    </li>
+    <li class="">
+      <a href="33. 文本 总结.html">33. 文本: 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">23. 练习：HAVING</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>经常你会对 <strong>WHERE</strong> 和 <strong>HAVING</strong> 之间的差别感到困惑。关于 <strong>HAVING</strong> 和 <strong>WHERE</strong> 的语句，请选出以下所有正确语句。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505845998283" name="403574" id="a1505845998283">
+      <label for="a1505845998283"><p><strong>WHERE</strong> 子集根据逻辑条件对返回的数据进行筛选。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505846090728" name="403574" id="a1505846090728">
+      <label for="a1505846090728"><p><strong>WHERE</strong> 出现在 <strong>FROM</strong>，<strong>JOIN</strong> 和 <strong>ON</strong> 条件之后，但是在 <strong>GROUP BY</strong> 之前。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505846120686" name="403574" id="a1505846120686">
+      <label for="a1505846120686"><p><strong>HAVING</strong> 出现在 <strong>GROUP BY</strong> 条件之后，但是在 <strong>ORDER BY</strong> 条件之前。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505846169235" name="403574" id="a1505846169235">
+      <label for="a1505846169235"><p><strong>HAVING</strong> 和 <strong>WHERE</strong> 相似，但是它适合涉及聚合的逻辑语句。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>**WHERE** 子集根据逻辑条件对返回的数据进行筛选。</li>
+      <li>**WHERE** 出现在 **FROM**，**JOIN** 和 **ON** 条件之后，但是在 **GROUP BY** 之前。</li>
+      <li>**HAVING** 出现在 **GROUP BY** 条件之后，但是在 **ORDER BY** 条件之前。</li>
+      <li>**HAVING** 和 **WHERE** 相似，但是它适合涉及聚合的逻辑语句。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="问题：having">问题：HAVING</h3>
+<p>根据以下 <strong>SQL</strong> 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。  </p>
+<ol>
+<li><p>有多少位<strong>销售代表</strong>需要管理超过 5 个客户？<br><br></p></li>
+<li><p>有多少个<strong>客户</strong>具有超过 20 个订单？<br><br></p></li>
+<li><p>哪个客户的订单最多？<br><br></p></li>
+<li><p>有多少个客户在所有订单上消费的总额超过了 30,000 美元？<br><br></p></li>
+<li><p>有多少个客户在所有订单上消费的总额不到 1,000 美元？<br><br></p></li>
+<li><p>哪个客户消费的最多？<br><br></p></li>
+<li><p>哪个客户消费的最少？<br><br></p></li>
+<li><p>哪个客户使用 <code>facebook</code> 作为与消费者沟通的<strong>渠道</strong>超过 6 次？<br><br></p></li>
+<li><p>哪个客户使用 <code>facebook</code> 作为沟通<strong>渠道</strong>的次数最多？<br><br></p></li>
+<li><p>哪个渠道是客户最常用的渠道？</p></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="24. 解决方案：HAVING.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('23. 练习：HAVING')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.300 --> 00:00:02.710
+In order to group by day,
+
+00:00:02.710 --> 00:00:07.570
+we'll need to adjust all the times on April 1, 2017 to read.
+
+00:00:07.570 --> 00:00:16.600
+2017-04-01 00:00:00. That way,
+
+00:00:16.600 --> 00:00:20.530
+when we group by date, we get every event that occurred for all hours,
+
+00:00:20.530 --> 00:00:22.375
+minutes, and seconds of April 1.
+
+00:00:22.375 --> 00:00:26.923
+They'll all be grouped together into the same grouping.
+
+00:00:26.922 --> 00:00:30.292
+We can do this using the DATE_TRUNC function.
+
+00:00:30.292 --> 00:00:35.429
+Let's start by grouping by occurred_at without any truncation.
+
+00:00:35.429 --> 00:00:39.484
+As you can see, this doesn't help us much at all.
+
+00:00:39.484 --> 00:00:43.475
+If we replace each instance of occurred_at with a truncated version,
+
+00:00:43.475 --> 00:00:53.875
+we'll get a result set that sums the quantities of standard paper by day.
+
+00:00:53.875 --> 00:00:56.369
+It's important to group by the same metric that's included in
+
+00:00:56.369 --> 00:00:59.640
+the SELECT statement to assure your results are consistent.
+
+00:00:59.640 --> 00:01:02.310
+In some databases, it's possible to group by a
+
+00:01:02.310 --> 00:01:06.210
+'year' but truncate on 'day' in the SELECT statement.
+
+00:01:06.209 --> 00:01:07.799
+This is something most people only do by
+
+00:01:07.799 --> 00:01:10.664
+accident as it provides results that are confusing and,
+
+00:01:10.665 --> 00:01:14.895
+in many cases, wrong for the type of question you're trying to answer.
+
+00:01:14.894 --> 00:01:17.325
+The easiest way to make sure you group correctly,
+
+00:01:17.325 --> 00:01:21.469
+is to use column numbers instead of retyping the exact functions.
+
+00:01:21.469 --> 00:01:26.609
+DATE_TRUNC can be used to aggregate at very granular levels, like SECOND.
+
+00:01:26.609 --> 00:01:28.019
+That might be useful if you're working with
+
+00:01:28.019 --> 00:01:30.989
+server logs while many events happen in a given second.
+
+00:01:30.989 --> 00:01:32.234
+Most of the time though,
+
+00:01:32.234 --> 00:01:36.215
+you'll use this to aggregate at intervals that makes sense from a business perspective;
+
+00:01:36.215 --> 00:01:39.344
+day, week, month, quarter, and year.
+
+00:01:39.344 --> 00:01:42.094
+Here we can see different truncations.
+
+00:01:42.094 --> 00:01:45.420
+Notice that if our 'month' or 'day' are 01,
+
+00:01:45.420 --> 00:01:49.724
+there's no change made to these values, as you can see.
+
+00:01:49.724 --> 00:01:54.884
+There are some cases where you might want to just pull out a given part of the date.
+
+00:01:54.885 --> 00:01:57.210
+For example, if you want to know what day of
+
+00:01:57.209 --> 00:01:59.744
+the week Parch and Posie's website sees the most traffic,
+
+00:01:59.745 --> 00:02:01.837
+you wouldn't want to use DATE_TRUNC.
+
+00:02:01.837 --> 00:02:03.245
+To get the day of the week,
+
+00:02:03.245 --> 00:02:05.215
+you'd have to use DATE_PART.
+
+00:02:05.215 --> 00:02:09.439
+DATE_PART allows you to pull the part of the date that you're interested in.
+
+00:02:09.439 --> 00:02:11.794
+But notice that regardless of year,
+
+00:02:11.794 --> 00:02:14.309
+a DATE_PART would provide the same month for an event that
+
+00:02:14.310 --> 00:02:17.750
+happens in April 2016 and April 2017,
+
+00:02:17.750 --> 00:02:20.893
+where a DATE_TRUNC would differentiate these events.
+
+00:02:20.893 --> 00:02:24.300
+Let's explore this example using Parch and Posie's data.
+
+00:02:24.300 --> 00:02:26.844
+On what day of the week are the most sales made?
+
+00:02:26.844 --> 00:02:29.900
+Let's start by figuring out the day of the week for each order.
+
+00:02:29.900 --> 00:02:32.580
+DOW stands for Day Of Week,
+
+00:02:32.580 --> 00:02:34.860
+and returns a value from zero to six,
+
+00:02:34.860 --> 00:02:37.885
+where zero is Sunday and six is Saturday.
+
+00:02:37.884 --> 00:02:39.539
+Now that we have this column,
+
+00:02:39.539 --> 00:02:43.854
+we can aggregate to figure out the day with the most reams of paper sold.
+
+00:02:43.854 --> 00:02:47.259
+We'll order it by the sum in descending order so that
+
+00:02:47.259 --> 00:02:52.289
+the day with the most sales will be at the top of the result set.
+
+00:02:57.889 --> 00:03:01.449
+Looks like the most paper was ordered on
+
+00:03:01.449 --> 00:03:04.369
+Sunday and the least paper was ordered on Thursday.
+

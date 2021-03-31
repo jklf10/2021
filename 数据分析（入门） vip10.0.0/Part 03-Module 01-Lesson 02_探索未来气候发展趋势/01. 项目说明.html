@@ -1,0 +1,217 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>项目说明</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>探索未来气候发展趋势</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 项目说明.html">01. 项目说明</a>
+    </li>
+    <li class="">
+      <a href="02. 使用 SQL 访问数据.html">02. 使用 SQL 访问数据</a>
+    </li>
+    <li class="">
+      <a href="03. 关于诚信准则的说明.html">03. 关于诚信准则的说明</a>
+    </li>
+    <li class="">
+      <a href="Project Description - 探索未来气候发展趋势.html">Project Description - 探索未来气候发展趋势</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - 探索未来气候发展趋势.html">Project Rubric - 探索未来气候发展趋势</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. 项目说明</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/earth.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="概览">概览</h3>
+<p>在这个项目中，我们将分析本地和全球的气温数据，并比较你居住地的气温走向与全球气温走向。</p>
+<h3 id="说明">说明</h3>
+<p>你的任务是让数据可视化，描述全球气温走向和最接近你居住地的大城市气温走向之间的相似性与差异。所以需要按照以下步骤操作：</p>
+<ul>
+<li>从数据库中 <strong>提取数据</strong>。我们将在下一节介绍一个工作区，这个工作区与数据库连接。你需要导出世界气温数据以及最接近你居住地的大城市气温数据。<code>city_list</code> 表是城市和国家列表。想要与数据库交互，就需要编写一个 SQL 查询。<ul>
+<li>编写 SQL 查询，提取城市数据，导出到 CSV 文件。</li>
+<li>编写一个 SQL 查询来提取全球数据，并导出到 CSV 文件。</li></ul></li>
+<li><strong>用任何你喜欢使用的工具打开 CSV</strong>，建议使用 Excel 或 Google 表格，但也欢迎使用其他工具，如 Python 或 R。</li>
+<li><strong>创建一个线条图</strong>，将你所在城市的气温与全球气温比较。确保绘制 <em>移动平均值</em> 而不是年平均值，使线条平滑，使气温走向便于观察</li>
+<li><strong>观察</strong> 世界平均气温与你所在城市平均气温之间的相似性和差异，以及整体趋势。可以通过这些问题开始。<ul>
+<li>与全球平均气温相比，你所在城市平均气温是比较热还是比较冷？长期气温差异是否一致？</li>
+<li>“长期以来，你所在城市气温变化与全球平均气温变化相比如何？”</li>
+<li>整体趋势如何？世界越来越热还是越来越冷了？气温走向与过去几百年的走向是否一致？</li></ul></li>
+</ul>
+<h3 id="提交项目">提交项目</h3>
+<p>应提交 PDF 格式的文件，其中包括：</p>
+<ul>
+<li><strong>准备在图表中可视化数据而采取的大致步骤</strong>，例如：<ul>
+<li>在每个步骤中，你都使用了哪些工具？（Python、SQL、Excel 等）</li>
+<li>请在报告中附上你所有用到的SQL语句或Python代码。</li>
+<li>你是如何计算移动平均值的？</li>
+<li>在决定如何可视化气温走向时，你的主要考虑因素是什么？</li></ul></li>
+<li>表示本地和全球气温走向的<strong>线图</strong></li>
+<li>关于气温走向的相似性和/或差异方面，至少需要提供 <strong>四个问题和观察结论</strong></li>
+</ul>
+<h3 id="审阅标准">审阅标准</h3>
+<p>优达学城审阅专家将根据 <a href="https://review.udacity.com/#!/rubrics/1299/view" rel="noopener noreferrer" target="_blank">项目审阅标准</a> 来评估你完成的项目。当你完成项目后，请以审阅标准为参考，记得在提交之前先进行自我评估。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. 使用 SQL 访问数据.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. 项目说明')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

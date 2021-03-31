@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.620 --> 00:00:04.830
+If we want to segment our data into even more granular chunks,
+
+00:00:04.830 --> 00:00:07.595
+we can group by multiple columns.
+
+00:00:07.594 --> 00:00:10.259
+Imagine yourself as a marketing manager at Parch and Posey,
+
+00:00:10.259 --> 00:00:14.910
+trying to understand how each account interacted with various advertising channels.
+
+00:00:14.910 --> 00:00:18.204
+Which channels are driving traffic and leading to purchases?
+
+00:00:18.204 --> 00:00:21.149
+Are we investing in channels that aren't worth the cost?
+
+00:00:21.149 --> 00:00:24.629
+How much traffic are we obtaining from each channel?
+
+00:00:24.629 --> 00:00:28.469
+One way we might begin to look into these questions is to count up all of
+
+00:00:28.469 --> 00:00:33.655
+the events for each channel for each account ID.
+
+00:00:33.655 --> 00:00:37.420
+It looks like the really useful information here is in the events column.
+
+00:00:37.420 --> 00:00:43.135
+Let's reorder this to highlight the highest volume channels for each account.
+
+00:00:43.134 --> 00:00:49.674
+You'll notice that account ID comes before events in the ORDER BY clause.
+
+00:00:49.674 --> 00:00:51.399
+Here in the results,
+
+00:00:51.399 --> 00:00:54.144
+you can see that these are ordered first by account ID,
+
+00:00:54.145 --> 00:00:57.000
+then by events within the account ID.
+
