@@ -1,0 +1,257 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>项目知识点回顾</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>挑战实战 - 北上广 PM 2.5 分析</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 项目说明.html">01. 项目说明</a>
+    </li>
+    <li class="">
+      <a href="02. 项目概述.html">02. 项目概述</a>
+    </li>
+    <li class="">
+      <a href="03. 项目工作区.html">03. 项目工作区</a>
+    </li>
+    <li class="">
+      <a href="04. 项目知识点回顾.html">04. 项目知识点回顾</a>
+    </li>
+    <li class="">
+      <a href="Project Description - 中国五个城市的 PM 2.5 分析.html">Project Description - 中国五个城市的 PM 2.5 分析</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - 中国五个城市的 PM 2.5 分析.html">Project Rubric - 中国五个城市的 PM 2.5 分析</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. 项目知识点回顾</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>下面是本项目中用到的一些重要的函数和方法。如果有感兴趣，你可以查看下面的表格来理解代码在项目中的功能。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <table>
+<thead>
+<tr>
+<th id=""></th>
+<th id="目的">目的</th>
+<th id="函数/方法">函数/方法</th>
+<th id="例子">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>导入包</td>
+<td><a href="https://docs.python.org/2/tutorial/modules.html#importing-from-a-package" rel="noopener noreferrer" target="_blank">import</a></td>
+<td><code>import pandas as pd</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>导入数据</td>
+<td>Pandas - <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html" rel="noopener noreferrer" target="_blank">read_csv</a></td>
+<td><code>Shanghai_data = pd.read_csv('ShanghaiPM20100101_20151231.csv')</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>查看数据的前几列</td>
+<td>Pandas - <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.head.html" rel="noopener noreferrer" target="_blank">head</a></td>
+<td><code>Shanghai_data.head()</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>查看数据信息</td>
+<td>Pandas - <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.info.html" rel="noopener noreferrer" target="_blank">info</a></td>
+<td><code>Shanghai_data.info()</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>查看数据类型</td>
+<td><a href="https://docs.python.org/2/library/types.html" rel="noopener noreferrer" target="_blank">type</a></td>
+<td><code>print(type(Shanghai_data['cbwd'][0]))</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>内容替换</td>
+<td><a href="https://www.pythoncentral.io/pythons-string-replace-method-replacing-python-strings/" rel="noopener noreferrer" target="_blank">replace</a></td>
+<td><code>Shanghai_data.columns = [c.replace(' ', '_') for c in Shanghai_data.columns] Shanghai_data.head()</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>映射</td>
+<td><a href="http://book.pythontips.com/en/latest/map_filter.html" rel="noopener noreferrer" target="_blank">map</a></td>
+<td><code>Shanghai_data['season'] = Shanghai_data['season'].map({1:'Spring', 2:'Summer', 3:'Autumn', 4: 'Winter'})</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>删除缺失值</td>
+<td><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.dropna.html" rel="noopener noreferrer" target="_blank">dropna</a></td>
+<td><code>Shanghai_data['PM_Jingan'].dropna()</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>分裂</td>
+<td><a href="http://python-reference.readthedocs.io/en/latest/docs/str/split.html" rel="noopener noreferrer" target="_blank">split</a></td>
+<td><code>df['city'] = val.split('P')[0]</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td>聚合</td>
+<td>Pandas - <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html" rel="noopener noreferrer" target="_blank">groupby</a></td>
+<td><code>data.groupby(key)['PM_US_Post'].mean().plot(kind = 'bar', color = color)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 项目知识点回顾')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

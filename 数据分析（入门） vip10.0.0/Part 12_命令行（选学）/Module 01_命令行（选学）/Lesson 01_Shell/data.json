@@ -1,0 +1,1149 @@
+{
+  "data": {
+    "lesson": {
+      "id": 869723,
+      "key": "4e62440f-57bf-4b6f-a041-44084b22ff5d",
+      "title": "Shell",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/4e62440f-57bf-4b6f-a041-44084b22ff5d/738078/1544291133146/Shell+Workshop+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/4e62440f-57bf-4b6f-a041-44084b22ff5d/738078/1544291127846/Shell+Workshop+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 868922,
+          "key": "ae7d1597-11c5-480a-90cc-5af2c4ef80f7",
+          "title": "Unix Shell 简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ae7d1597-11c5-480a-90cc-5af2c4ef80f7",
+            "completed_at": "2019-05-14T07:14:10.695Z",
+            "last_viewed_at": "2019-05-14T07:14:10.768Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 866725,
+              "key": "6de5f08c-07e5-42db-90db-5413ebf73d4c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 简介\n作为一位数据科学家，您将使用命令行执行各种任务。我们认为熟悉命令行界面（CLI）是非常重要。 熟练使用 CLI 可以帮助你更好地理解计算机的内部工作方式。\n\n我们将带着你熟悉所有细节，所以如果你之前从未使用过它们，请不要担心！我们强烈建议你学习这个免费的 Shell Workshop 课程，在那里你将学习如何使用 Unix Shell 命令，还可以通过此课程快速复习如何使用命令行。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369933,
+          "key": "68acb17b-161c-42f8-9c1e-fc1460eca322",
+          "title": "欢迎！",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "68acb17b-161c-42f8-9c1e-fc1460eca322",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369892,
+              "key": "e44b765f-ffbb-4594-b21e-7f6ccea0b35c",
+              "title": "Shell 简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "-EtN5oD8MM0",
+                "china_cdn_id": "-EtN5oD8MM0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 369932,
+          "key": "bda4a9b5-46e3-4ce9-b58d-90eded438522",
+          "title": "Windows：安装 Git Bash",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bda4a9b5-46e3-4ce9-b58d-90eded438522",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369888,
+              "key": "1a1a79fd-6862-46fc-bf0e-e7c86d8b38d6",
+              "title": "Ud206 002 P0 Windows：安装 Git Bash",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UQZvV6VTlGQ",
+                "china_cdn_id": "UQZvV6VTlGQ.mp4"
+              }
+            },
+            {
+              "id": 369889,
+              "key": "4ba231f3-2fab-4377-9ff1-09af28702431",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**提醒：本页面仅针对 Windows 设备！Mac 和 Linux 用户请跳到下个页面！**\n\n从以下网页上下载 Git：https://git-scm.com/download/win\n\nWindows 10 中已经有新的 Linux 兼容性系统，叫做 **Windows Subsystem for Linux (WSL)**。它是运行在 Windows 系统中的实验性迷你 Linux-OS，就像虚拟机。你可以从中访问你的 Windows 文件，但是在 Linux 和 Windows 之间分享文件存在一定的风险。未来，WSL 可能更加稳定，**但是现在，对于这门课程我们将使用 Git Bash。**\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369890,
+              "key": "e60ecaa0-0112-40a4-b2c1-076d853f8b0a",
+              "title": "在你的 Windows 电脑上安装 Git Bash",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e60ecaa0-0112-40a4-b2c1-076d853f8b0a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "我已从 git-scm.com 下载 Git",
+                "我已安装 Git。",
+                "我已找到 Git Bash 应用并运行该应用。",
+                "我已根据我的需求调整字体。"
+              ],
+              "positive_feedback": "很棒！现在你的 Windows 计算机上已经具有兼容 Unix 的 shell。",
+              "video_feedback": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 369931,
+          "key": "9fbb976b-dc7b-4584-a656-b05ab9d7a0c3",
+          "title": "打开终端",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9fbb976b-dc7b-4584-a656-b05ab9d7a0c3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369891,
+              "key": "67213a57-4d75-4a1a-90b2-a1b04e4fe094",
+              "title": "Ud206 003 Shell P1 - 打开终端",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4q6Vtym-nno",
+                "china_cdn_id": "4q6Vtym-nno.mp4"
+              }
+            },
+            {
+              "id": 369893,
+              "key": "afbaf7d3-fe98-4e90-9b19-bcceef1ebbd3",
+              "title": "打开终端！",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "afbaf7d3-fe98-4e90-9b19-bcceef1ebbd3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "我已经在另一个窗口中打开终端。"
+              ],
+              "positive_feedback": "现在看看可以对其采取哪些操作。",
+              "video_feedback": null,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "id": 369935,
+          "key": "329dfdb1-9552-4abe-ba9f-565659db4fe7",
+          "title": "你的第一个命令 (echo)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "329dfdb1-9552-4abe-ba9f-565659db4fe7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369894,
+              "key": "812f3025-4262-4b76-a78f-52748cf67955",
+              "title": "Ud206 004 Shell P2 - 你的第一个命令",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ggf5WhOYy1U",
+                "china_cdn_id": "ggf5WhOYy1U.mp4"
+              }
+            },
+            {
+              "id": 369895,
+              "key": "5a1fdd88-1de4-4e73-a7a5-d5408bf59333",
+              "title": "echo",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5a1fdd88-1de4-4e73-a7a5-d5408bf59333",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "当你运行以下命令时，你认为会发生什么： \n`echo $COLUMNS x $LINES`  \n(Try it!)",
+                "answers": [
+                  {
+                    "id": "a1489702654681",
+                    "text": "终端使美元乘以美元。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489702678549",
+                    "text": "shell 告诉我我的终端有多大。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489702679172",
+                    "text": "shell 告诉我它有多大。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489702679836",
+                    "text": "终端正在清除我的文件。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 495475,
+              "key": "6a89b08c-f299-48b7-8a95-af1bf52bbf96",
+              "title": "Ud206 005 Shell P2.1 - Echo Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7NJC7C8MmdY",
+                "china_cdn_id": "7NJC7C8MmdY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 369938,
+          "key": "a2752f68-82cf-4988-8992-eb891c92f994",
+          "title": "浏览目录 (ls, cd, ..)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a2752f68-82cf-4988-8992-eb891c92f994",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369904,
+              "key": "8cba726a-7e62-41b1-ad16-15e121489ee6",
+              "title": "Ud206 006 Shell P3 - 浏览目录",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "i9Xp94DmdB8",
+                "china_cdn_id": "i9Xp94DmdB8.mp4"
+              }
+            },
+            {
+              "id": 369905,
+              "key": "573b6953-893d-467e-a3f3-5a5ec95dbca6",
+              "title": "ls 和 cd",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "573b6953-893d-467e-a3f3-5a5ec95dbca6",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "哪些命令会列出 `Pictures` 目录下的内容？?  \n选择所有正确的选项",
+                "answers": [
+                  {
+                    "id": "a1489702884747",
+                    "text": "`ls Pictures`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489702897285",
+                    "text": "`cd Pictures; ls`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489702914396",
+                    "text": "`ls Pictures/../Pictures`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 369934,
+          "key": "79e6c6b2-93e5-48c6-ad78-0bf5c854ab2b",
+          "title": "当前工作目录 (pwd)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79e6c6b2-93e5-48c6-ad78-0bf5c854ab2b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369896,
+              "key": "dac97b12-c314-4400-a26e-e9765ad55d0d",
+              "title": "Ud206 007 Shell P4 - 当前工作目录",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "X7dsy3oMHp0",
+                "china_cdn_id": "X7dsy3oMHp0.mp4"
+              }
+            },
+            {
+              "id": 369897,
+              "key": "53cd0163-8f9b-4b97-a16b-534d10f42bc9",
+              "title": "简洁性",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "53cd0163-8f9b-4b97-a16b-534d10f42bc9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "为何 shell 命令都非常简短？",
+                "answers": [
+                  {
+                    "id": "a1489703106691",
+                    "text": "要输入的内容更少。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703116847",
+                    "text": "更容易记住。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489703117523",
+                    "text": "让 Unix 专家看起来很神奇。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 369936,
+          "key": "65c5c01a-3c5a-4f31-b3ce-6cef130d972b",
+          "title": "参数和选项 (ls -l)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "65c5c01a-3c5a-4f31-b3ce-6cef130d972b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369898,
+              "key": "2fcf7ce1-146b-4e04-b230-3711fd2bf905",
+              "title": "Ud206 008 Shell P5 - 参数",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UX9mzq11Mmg",
+                "china_cdn_id": "UX9mzq11Mmg.mp4"
+              }
+            },
+            {
+              "id": 369899,
+              "key": "7eca78c8-6c12-43a5-8c16-4b4f22efb7fc",
+              "title": "调查 `ls -l`",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7eca78c8-6c12-43a5-8c16-4b4f22efb7fc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "你可以从 `ls -l` 中找到哪些信息？要回答该问题，你可以需要调查下；使用你最喜欢的搜索引擎。\n",
+                "answers": [
+                  {
+                    "id": "a1489703312453",
+                    "text": "列出的每个文件或目录的名称。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703331303",
+                    "text": "文件上次修改日期和时间。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703331960",
+                    "text": "文件的大小（字节）。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703332604",
+                    "text": "是否检测文件有没有病毒。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 369900,
+              "key": "8bdb45ab-1284-4e08-b858-f7ee97ec7348",
+              "title": "寻找 bear",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8bdb45ab-1284-4e08-b858-f7ee97ec7348",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果你想列出所有名称以单词 `bear` 开头的文件，该如何操作？",
+                "answers": [
+                  {
+                    "id": "a1489703472992",
+                    "text": "`ls bear`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489703506625",
+                    "text": "`ls *.bear`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489703507258",
+                    "text": "`ls bear*`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703507833",
+                    "text": "`ls *bear*`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489703508493",
+                    "text": "不知道",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 369937,
+          "key": "d56564be-f4fe-41a7-8378-508338ecb28a",
+          "title": "整理文件 (mkdir, mv)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d56564be-f4fe-41a7-8378-508338ecb28a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369901,
+              "key": "173b5b8a-15db-4cdd-ad32-b6c1db9571bd",
+              "title": "Ud206 009 Shell P6 - 整理文件",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NZsYyzzpJXA",
+                "china_cdn_id": "NZsYyzzpJXA.mp4"
+              }
+            },
+            {
+              "id": 369903,
+              "key": "01008773-0ea8-43bf-a254-30287f79252d",
+              "title": "再移回来",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "01008773-0ea8-43bf-a254-30287f79252d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "假设我改变了主意，想要将 `epub` 文件从 `Documents/Books` 移回到 `Documents`。如何操作？我当前的工作目录是我的主目录，`Documents` 位于该目录中。 \n请标记每个可行的答案：\n",
+                "answers": [
+                  {
+                    "id": "a1489703663112",
+                    "text": "`mv 'Documents/Books' Documents`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489703688713",
+                    "text": "`mv 'Documents/Books'/* Documents`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703689341",
+                    "text": "`cd Documents; mv 'Books'/*.epub .`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703689961",
+                    "text": "`cd 'Documents/Books'; mv * ..`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489703846914",
+                    "text": "`mv 'Documents/Books/*' Documents`",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 495477,
+              "key": "6df17bb9-dc42-46ef-8f08-010a8eafebb6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 练习题答案",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495476,
+              "key": "9bd9b811-727a-4b6e-9c28-194a949b3cad",
+              "title": "Ud206 010 Shell P6.1 - Mv Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "guJf4041gYI",
+                "china_cdn_id": "guJf4041gYI.mp4"
+              }
+            },
+            {
+              "id": 369902,
+              "key": "a8d37a62-9950-4ce3-ad44-ffa93e2b6456",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "顺便提下，在 shell 中引用内容时，请始终使用直引号。如果你输入到终端窗口中，将会获得相关内容。但是，如果从网页或文档中进行复制，一定要小心不是`“弯引号”`。弯引号在 shell 中_不可行_。\n\n在 shell 中，单引号和双引号的作用不太一样。如果不确定使用哪种引号，请选择单引号。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369943,
+          "key": "0e019f34-19bf-4d63-bbf3-789074bfe268",
+          "title": "下载 (curl)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0e019f34-19bf-4d63-bbf3-789074bfe268",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369916,
+              "key": "49cab642-5109-46ac-8d24-fb61d6358644",
+              "title": "Ud206 011 Shell P7 - 下载",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "h7FhU1f4TgE",
+                "china_cdn_id": "h7FhU1f4TgE.mp4"
+              }
+            },
+            {
+              "id": 495480,
+              "key": "2cde177f-5de0-416b-9bd0-50104bb9022c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "大家练习的时候可以将视频中的 `http://google.com` 替换成国内的一些网址哦，例如 `http://cn.udacity.com`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 495481,
+              "key": "2b06a69b-7a46-4d68-9ef3-808f61054894",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "2b06a69b-7a46-4d68-9ef3-808f61054894",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "下载 `dictionary.txt`",
+                "prompt": "\n\n输入一个shell命令去下载 http://t.cn/RYkeaZi ，并将它保存为文件 `dictionary.txt`。记住要遵循Web重定向。\n\n你需要在自己的计算机上运行这个命令下载文件，为后续练习做准备。",
+                "semantic_type": "CodeGradedQuestion",
+                "evaluation_id": "5704451990618112"
+              },
+              "answer": null
+            },
+            {
+              "id": 369918,
+              "key": "80908d34-fa60-4979-b9a7-39a4556ce4e9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 解决方案：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369919,
+              "key": "7426956a-7c7c-4663-80bf-50a61196b0f8",
+              "title": "Ud206 011 Shell P7.1 - 下载解决方案",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1oEJUA-b0kE",
+                "china_cdn_id": "1oEJUA-b0kE.mp4"
+              }
+            },
+            {
+              "id": 369920,
+              "key": "816cfd26-1a96-499a-9772-c151e7ffaf8d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### 提醒：\n细心的同学可能已经发现，上方解决方案视频中所使用的链接和练习题提供的并不一致，这是由于视频中提供的链接国内无法正常访问，所以替换成了另一个文件完全相同但地址不同的链接。\n\n顺便提下，很多 URL 中都有特殊字符，例如 `&` 符号，它在 shell 中有特殊的含义。因此我始终将这些 URL 放在引号内，虽然这些示例没有引号也可行，但是有必要养成良好的习惯。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369939,
+          "key": "d2ad83b4-3fe3-41da-9073-ba27662c4650",
+          "title": "查看文件 (cat, less)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d2ad83b4-3fe3-41da-9073-ba27662c4650",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369906,
+              "key": "0ce1517e-a7fa-45e7-84b7-9c351bb856dc",
+              "title": "Ud206 013 Shell P8 - 查看文件",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "hPPVMKqbQV0",
+                "china_cdn_id": "hPPVMKqbQV0.mp4"
+              }
+            },
+            {
+              "id": 369907,
+              "key": "ef6b54fd-d362-4dcf-9c44-abdbdf3f5ad0",
+              "title": "What's the next word?",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ef6b54fd-d362-4dcf-9c44-abdbdf3f5ad0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "使用 `dictionary.txt` 文件和 `less` 命令找出该字典中单词 `goobers` 之后的下个单词。",
+                "matchers": [
+                  {
+                    "expression": "^good$"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 369940,
+          "key": "e3962523-75ee-4b58-93bf-0ade6a0fe786",
+          "title": "删除内容 (rm, rmdir)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e3962523-75ee-4b58-93bf-0ade6a0fe786",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369908,
+              "key": "5d0d1656-f74b-40c1-ba14-7fefe2766eb7",
+              "title": "Ud206 014 Shell P9 - 删除内容",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "it19PvJarbk",
+                "china_cdn_id": "it19PvJarbk.mp4"
+              }
+            },
+            {
+              "id": 369909,
+              "key": "6a26da50-2486-4a3f-af12-b2489fb35b51",
+              "title": "Good file, bad face",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6a26da50-2486-4a3f-af12-b2489fb35b51",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "你有四个文件，名称分别为：\n1. `Good File`\n2. `Bad Name Good File`\n3. `Bad File`\n4. `Good Name Bad Face`\n\n你想删掉第 3 个和第 4 个文件，并保留第 1 个和第 2 个文件。下面的两个命令可以实现这一操作，请选择：",
+                "answers": [
+                  {
+                    "id": "a1489704901326",
+                    "text": "`rm 'Bad File' 'Good Name Bad Face'`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1489704929921",
+                    "text": "`rm *Bad*`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489704930729",
+                    "text": "`rm Bad!Good`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489704931490",
+                    "text": "`rm *'Bad F'*\f`",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 369941,
+          "key": "5e1f6045-6824-4c73-8ba1-07ce6c9f54a8",
+          "title": "搜索和管道 (grep, wc)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5e1f6045-6824-4c73-8ba1-07ce6c9f54a8",
+            "completed_at": "2019-05-14T07:14:13.171Z",
+            "last_viewed_at": "2019-05-26T13:34:04.254Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369910,
+              "key": "e8885826-0fcf-43d5-845c-7ae93c0ac520",
+              "title": "Ud206 016 Shell P10 - 搜索和管道",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AWpVScp9z4s",
+                "china_cdn_id": "AWpVScp9z4s.mp4"
+              }
+            },
+            {
+              "id": 369911,
+              "key": "5b62e8b5-fd40-4ae0-aefb-4e2659d0eceb",
+              "title": "查找 `ibo`",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5b62e8b5-fd40-4ae0-aefb-4e2659d0eceb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "`dictionary.txt` 中有多少个单词符合规律 `ibo`？\n",
+                "matchers": [
+                  {
+                    "expression": "22"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 369912,
+              "key": "de73b556-2650-49e2-9a04-4fa23a2c360a",
+              "title": "grep 模式叫做什么？",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "de73b556-2650-49e2-9a04-4fa23a2c360a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "请调查下！使用 `grep` 不仅可以匹配单词。`grep` 的功能具有一个特定的术语。\n\n请使用你喜爱的搜索引擎调查研究下，了解这些规律叫做什么。",
+                "matchers": [
+                  {
+                    "expression": "^[Rr]eg.*[Ee]x.*"
+                  },
+                  {
+                    "expression": ".*[Gg]lob.*"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 369942,
+          "key": "717cf4a6-fde3-4412-8303-d2a1de8646c8",
+          "title": "Shell 和环境变量",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "717cf4a6-fde3-4412-8303-d2a1de8646c8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369913,
+              "key": "14263128-a059-4243-b6d9-20e2f5726963",
+              "title": "Ud206 017 Shell P11 - 变量",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "xe4_Mue2qmk",
+                "china_cdn_id": "xe4_Mue2qmk.mp4"
+              }
+            },
+            {
+              "id": 369914,
+              "key": "9653713b-aee1-4cf6-a7e5-1a4b4ad5e341",
+              "title": "Shell 或环境？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9653713b-aee1-4cf6-a7e5-1a4b4ad5e341",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "你认为 `PWD` 变量是 shell 变量还是环境变量？\n\n（不知道它是什么？试试 `echo $PWD`。）",
+                "answers": [
+                  {
+                    "id": "a1489706549683",
+                    "text": "Shell 变量",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1489706572500",
+                    "text": "环境变量",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 369915,
+              "key": "2c36d1b8-40a1-49aa-9ddf-dce2b651a96d",
+              "title": "显示两个变量",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2c36d1b8-40a1-49aa-9ddf-dce2b651a96d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "写一个 shell 命令，使用 `echo` 显示变量 `LOGNAME` 和 `PWD` 的内容，并在二者之间留个空格。\n",
+                "matchers": [
+                  {
+                    "expression": "echo \\$LOGNAME \\$PWD"
+                  },
+                  {
+                    "expression": "echo LOGNAME PWD"
+                  },
+                  {
+                    "expression": "echo \\$logname \\$pwd"
+                  },
+                  {
+                    "expression": "echo logname pwd"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 369944,
+          "key": "e8bb8107-2004-4d27-a053-cc7c277cd20b",
+          "title": "起始文件 (.bash_profile)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e8bb8107-2004-4d27-a053-cc7c277cd20b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369921,
+              "key": "3e6b4ba3-5dda-4d38-bfc9-0f1d9181deec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369922,
+              "key": "769e63a4-d559-4014-8d31-2930c155351e",
+              "title": "Ud206 018 P12 起始文件 (.bash_profile)",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "-zF-XebfzBE",
+                "china_cdn_id": "-zF-XebfzBE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 369945,
+          "key": "ce6e3ca6-768e-4498-a511-f0bd9f046a74",
+          "title": "控制 shell 提示符 ($PS1)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ce6e3ca6-768e-4498-a511-f0bd9f046a74",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369923,
+              "key": "6df6cc2c-bff5-4fc1-84e0-09035a31c69a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369924,
+              "key": "2a41be52-1c37-45ef-bb59-aa4a59abc414",
+              "title": "Ud206 020 Shell P13 控制 shell 提示符 ($PS1)",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "nnqvRZ-Fx3k",
+                "china_cdn_id": "nnqvRZ-Fx3k.mp4"
+              }
+            },
+            {
+              "id": 369925,
+              "key": "d8b79b4b-84a0-4bb3-b428-e7795e66ca0b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在本视频快结束时，有一个我用来构建长而复杂的 `$PS1` 提示符的工具的屏幕截图。该工具由 Julien Ricard 构建，网址为 http://bashrcgenerator.com by。请试试！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369946,
+          "key": "640986e9-1da4-4a4f-9bba-3d9927062389",
+          "title": "别名",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "640986e9-1da4-4a4f-9bba-3d9927062389",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369926,
+              "key": "f5437d1b-ccef-487a-aa32-b037172cfe29",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369927,
+              "key": "f1c7c3bd-239d-4e18-90d1-8cf373911700",
+              "title": "Ud206 021 Shell P14 别名",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kINmpgXxayM",
+                "china_cdn_id": "kINmpgXxayM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 369947,
+          "key": "aa9e3767-3477-483e-8568-5c1ca02be009",
+          "title": "继续学习！",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aa9e3767-3477-483e-8568-5c1ca02be009",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369928,
+              "key": "3df1bb65-487d-4d00-aaf0-3d617d932e37",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369929,
+              "key": "925bbfbc-1696-4959-83ae-9645cd93e898",
+              "title": "Ud206 022 Shell 讲习班结尾部分",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "68twTPXPrx0",
+                "china_cdn_id": "68twTPXPrx0.mp4"
+              }
+            },
+            {
+              "id": 369930,
+              "key": "2d9ba1a8-26ca-4b8e-af9a-8d030f1d511f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Shell 资源\n\n* [Shell脚本编程30分钟入门](https://github.com/qinjx/30min_guides/blob/master/shell.md#%E6%8F%92%E5%85%A5)\n* [Bash 学院](http://www.bash.academy/)<sub style=\"font-size: 0.75em;\">(英)</sub>\n* [Bash 初学者指南](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/)<sub style=\"font-size: 1px;\">(英)</sub>\n* [Bash 编程指南](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)<sub style=\"font-size: 1px;\">(英)</sub>\n* [Regexr — 学习正则表达式](http://regexr.com/)<sub style=\"font-size: 1px;\">(英)</sub>\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

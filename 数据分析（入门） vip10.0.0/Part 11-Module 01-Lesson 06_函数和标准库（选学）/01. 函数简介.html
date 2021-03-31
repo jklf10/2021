@@ -1,0 +1,216 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数简介</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>函数和标准库（选学）</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 函数简介.html">01. 函数简介</a>
+    </li>
+    <li class="">
+      <a href="02. 定义函数 I.html">02. 定义函数 I</a>
+    </li>
+    <li class="">
+      <a href="03. 定义函数 II.html">03. 定义函数 II</a>
+    </li>
+    <li class="">
+      <a href="04. 定义函数 III.html">04. 定义函数 III</a>
+    </li>
+    <li class="">
+      <a href="05. 默认参数.html">05. 默认参数</a>
+    </li>
+    <li class="">
+      <a href="06. 变量作用域.html">06. 变量作用域</a>
+    </li>
+    <li class="">
+      <a href="07. 标准库.html">07. 标准库</a>
+    </li>
+    <li class="">
+      <a href="08. 解决方案：标准库.html">08. 解决方案：标准库</a>
+    </li>
+    <li class="">
+      <a href="09. 第三方库.html">09. 第三方库</a>
+    </li>
+    <li class="">
+      <a href="10. 使用在线资源.html">10. 使用在线资源</a>
+    </li>
+    <li class="">
+      <a href="11. 数据分析中常用的包概述.html">11. 数据分析中常用的包概述</a>
+    </li>
+    <li class="">
+      <a href="12. 包概述练习.html">12. 包概述练习</a>
+    </li>
+    <li class="">
+      <a href="13. 写在最后的话.html">13. 写在最后的话</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. 函数简介</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>欢迎学习函数课程！之前我们使用了几个Python的内置函数，在这节课中我们将自己编写函数并使用。</p>
+<h3 id="什么是函数？">什么是函数？</h3>
+<p>函数是一段用来封装任务的使用代码。封装是指用一个简单的命令执行一系列步骤的方式。例如，你想要制作一块蛋糕，你需要准备面粉、糖霜、鸡蛋等一系列的材料，并用特定的方式将配料混合在一起，放置一段时间，将混合后的材料放到烤箱中制作，然后将烤制好的蛋糕冷却。在计算机编程中，函数能够将所有的流程封装到一个命令中，在这个例子中，我们需要定义一个bake_cake函数，将所有的原料作为input放到这个函数中，蛋糕就是我们的output。今后，只要我们想要制作蛋糕，就只需要给定输入，并执行这个函数就可以了，而不用关心具体的细节。函数还可以帮助我们整理和优化代码，尤其是减少重复性的代码。让我们来尝试一下吧！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/function-machine2.svg.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. 定义函数 I.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. 函数简介')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
