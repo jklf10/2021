@@ -1,0 +1,312 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>使用 Groupby 得出结论</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>数据分析过程 - 案例研究 1</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程概述.html">01. 课程概述</a>
+    </li>
+    <li class="">
+      <a href="02. 数据概述.html">02. 数据概述</a>
+    </li>
+    <li class="">
+      <a href="03. 提问.html">03. 提问</a>
+    </li>
+    <li class="">
+      <a href="04. 收集数据.html">04. 收集数据</a>
+    </li>
+    <li class="">
+      <a href="05. 评估数据.html">05. 评估数据</a>
+    </li>
+    <li class="">
+      <a href="06. 附加数据和 NumPy.html">06. 附加数据和 NumPy</a>
+    </li>
+    <li class="">
+      <a href="07. 附加数据.html">07. 附加数据</a>
+    </li>
+    <li class="">
+      <a href="08. 附加数据的故障排除.html">08. 附加数据的故障排除</a>
+    </li>
+    <li class="">
+      <a href="09. 重命名列.html">09. 重命名列</a>
+    </li>
+    <li class="">
+      <a href="10. 附加数据（续）.html">10. 附加数据（续）</a>
+    </li>
+    <li class="">
+      <a href="11. 使用可视化探索数据.html">11. 使用可视化探索数据</a>
+    </li>
+    <li class="">
+      <a href="12. Pandas Groupby.html">12. Pandas Groupby</a>
+    </li>
+    <li class="">
+      <a href="13. 使用 Groupby 得出结论.html">13. 使用 Groupby 得出结论</a>
+    </li>
+    <li class="">
+      <a href="14. Pandas Query.html">14. Pandas Query</a>
+    </li>
+    <li class="">
+      <a href="15. 使用 Query 得出结论.html">15. 使用 Query 得出结论</a>
+    </li>
+    <li class="">
+      <a href="16. 类型和质量图 - 第 1 部分.html">16. 类型和质量图 - 第 1 部分</a>
+    </li>
+    <li class="">
+      <a href="17. 类型和质量图 - 第 2 部分.html">17. 类型和质量图 - 第 2 部分</a>
+    </li>
+    <li class="">
+      <a href="18. Matplotlib 示例.html">18. Matplotlib 示例</a>
+    </li>
+    <li class="">
+      <a href="19. 使用 Matplotlib 绘图.html">19. 使用 Matplotlib 绘图</a>
+    </li>
+    <li class="">
+      <a href="20. 使用 Matplotlib 绘制类型和质量图.html">20. 使用 Matplotlib 绘制类型和质量图</a>
+    </li>
+    <li class="">
+      <a href="21. 总结.html">21. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. 使用 Groupby 得出结论</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="使用-groupby-得出结论">使用 Groupby 得出结论</h1>
+<p>在下面的notebook 中，你将使用 Pandas 的 <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html" rel="noopener noreferrer" target="_blank">groupby</a> 函数调查有关此数据的两个问题。以下是回答每个问题的提示：</p>
+<h3 id="问题-1：某种类型的葡萄酒（红葡萄酒或白葡萄酒）是否代表更高的品质？">问题 1：某种类型的葡萄酒（红葡萄酒或白葡萄酒）是否代表更高的品质？</h3>
+<p>对于此问题，将红葡萄酒的平均质量与白葡萄酒的平均质量等级进行比较。要这样做，先按颜色分组，然后找到每组的平均质量等级。</p>
+<h3 id="问题-2：哪个水平的酸度（ph-值）获得的平均评级最高？">问题 2：哪个水平的酸度（pH 值）获得的平均评级最高？</h3>
+<p>这个问题比较棘手，因为不同于<code>颜色</code>有明确的分类可以分组（红葡萄酒和白葡萄酒），<code>pH 值</code>是一个没有明确类别的定量变量。但是，有一个简单的解决方案。你可以通过创建自己的类别，从定量变量创建一个分类变量。<a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.cut.html" rel="noopener noreferrer" target="_blank">Pandas 的 cut</a>  函数可以让你将数据"切分"为组。你可以使用它，创建具有以下类别的名为<code>acidity_levels</code>的新列：</p>
+<h4 id="酸度水平：">酸度水平：</h4>
+<ol>
+<li>高: 最低 25% 时的 pH 值</li>
+<li>中等偏高: 25% - 50% 时的 pH 值</li>
+<li>中: 50% - 75% 时的 pH 值</li>
+<li>低: 最高 75% 时的 pH 值</li>
+</ol>
+<p>在这里，数据在 25%、50% 和 75% 三个百分比处做了拆分。记住，你可以使用 Pandas 的 <code>describe()</code> 函数获得这些数字！创建这四个类别后，你可以使用 groupby 获得每个酸度水平的平均质量评级。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>红葡萄酒的平均质量是否大于、小于或等于白葡萄酒的平均质量？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1506122114736" name="431648" id="a1506122114736">
+        <label for="a1506122114736"><p>大于</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506122148876" name="431648" id="a1506122148876">
+        <label for="a1506122148876"><p>小于</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506122151197" name="431648" id="a1506122151197">
+        <label for="a1506122151197"><p>等于</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    小于
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>哪个水平的酸度获得最高的平均评级？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1506122439341" name="431649" id="a1506122439341">
+        <label for="a1506122439341"><p>高</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506122515559" name="431649" id="a1506122515559">
+        <label for="a1506122515559"><p>中等偏高</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506122516138" name="431649" id="a1506122516138">
+        <label for="a1506122516138"><p>中</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1506122516700" name="431649" id="a1506122516700">
+        <label for="a1506122516700"><p>低</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    低
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. Pandas Query.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. 使用 Groupby 得出结论')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1006 @@
+{
+  "data": {
+    "lesson": {
+      "id": 462025,
+      "key": "33860189-96c0-40cf-8f12-5772c8b8c790",
+      "title": "Python 概率练习",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "利用上节课所学知识，应用到 Python 实践中。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/33860189-96c0-40cf-8f12-5772c8b8c790/462025/1544461788919/Python+%E6%A6%82%E7%8E%87%E7%BB%83%E4%B9%A0+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/33860189-96c0-40cf-8f12-5772c8b8c790/462025/1544461786439/Python+%E6%A6%82%E7%8E%87%E7%BB%83%E4%B9%A0+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 461961,
+          "key": "3596f172-fbca-46cf-b195-f7d498ffb7f2",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3596f172-fbca-46cf-b195-f7d498ffb7f2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461923,
+              "key": "1e6fd63c-fc46-4807-9c58-d45ba962440c",
+              "title": "Python 概率简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "tFMdvAN7WDY",
+                "china_cdn_id": "tFMdvAN7WDY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 461984,
+          "key": "bde5b7e2-a23c-4634-8615-36b185058348",
+          "title": "模拟掷硬币",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bde5b7e2-a23c-4634-8615-36b185058348",
+            "completed_at": "2019-03-13T05:24:37.616Z",
+            "last_viewed_at": "2019-03-13T05:35:52.744Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461949,
+              "key": "c90522c3-68cf-4aeb-8129-35df730dae49",
+              "title": "模拟掷硬币",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "7YtQNZ3iy6o",
+                "china_cdn_id": "7YtQNZ3iy6o.mp4"
+              }
+            },
+            {
+              "id": 461938,
+              "key": "5f90b88b-ded3-405a-bcf0-28ef5a438bd4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你可以在下面的 Jupyter Notebook 中练习上述内容。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461945,
+              "key": "20bdf923-a001-416b-b6cd-7bd0368308f9",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewde2cb70c",
+              "pool_id": "jupyter",
+              "view_id": "de2cb70c-024a-4aa3-88c2-cde9b062dfe9",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/simulating_coin_flips.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 461985,
+          "key": "082a0720-832d-4d49-a960-2213436aa131",
+          "title": "概率练习",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "082a0720-832d-4d49-a960-2213436aa131",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Probability Solutions",
+                "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/October/59e2cffc_probability-solutions/probability-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 461946,
+              "key": "ace7d7d8-8534-45b3-a0d1-ea2feb5b0483",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 概率练习\n在这个练习中，你将模拟掷硬币和掷骰子，计算下列结果的比例。\n1. 两次均衡掷硬币得到两次正面\n2. 三次均衡掷硬币得到一次正面\n3. P(H) = 0.6 时三次非均衡掷硬币得到一次正面\n4. 一次掷骰子得到偶数\n5. 两次掷骰子得到相同值\n\n然后，你在下面的练习中对比这些比例的概率。\n\n模拟掷硬币时，0 代表正面，1 代表反面。模拟掷骰子时，使用正确的整数，匹配标准六面骰子上的数字。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461948,
+              "key": "c1571820-7bce-4704-9d39-c3d4366d1aca",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewde2cb70c",
+              "pool_id": "jupyter",
+              "view_id": "9616ba06-720e-433c-a341-ed3e961c8f1c",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/probability.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 461951,
+              "key": "85723111-9050-40d7-a917-5fa498ce90a0",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "85723111-9050-40d7-a917-5fa498ce90a0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请使用在模拟数据中观察到的比例，去猜测下列结果的概率。"
+                },
+                "concepts_label": "结果",
+                "answers_label": "概率",
+                "concepts": [
+                  {
+                    "text": "两次均衡掷硬币得到两次正面",
+                    "correct_answer": {
+                      "id": "a1508015476157",
+                      "text": "0.25"
+                    }
+                  },
+                  {
+                    "text": "三次均衡掷硬币得到一次正面",
+                    "correct_answer": {
+                      "id": "a1508015634090",
+                      "text": "0.375"
+                    }
+                  },
+                  {
+                    "text": "P(H) = 0.6 时三次非均衡掷硬币得到一次正面",
+                    "correct_answer": {
+                      "id": "a1508024648959",
+                      "text": "0.288"
+                    }
+                  },
+                  {
+                    "text": " 一次掷骰子得到偶数",
+                    "correct_answer": {
+                      "id": "a1508024649622",
+                      "text": "0.5"
+                    }
+                  },
+                  {
+                    "text": "两次掷骰子得到相同值",
+                    "correct_answer": {
+                      "id": "a1508024650376",
+                      "text": "0.167"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1508024650376",
+                    "text": "0.167"
+                  },
+                  {
+                    "id": "a1508015886542",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1508015837537",
+                    "text": "0.083"
+                  },
+                  {
+                    "id": "a1508015476157",
+                    "text": "0.25"
+                  },
+                  {
+                    "id": "a1508024727620",
+                    "text": "1"
+                  },
+                  {
+                    "id": "a1508024739710",
+                    "text": "0.75"
+                  },
+                  {
+                    "id": "a1508024649622",
+                    "text": "0.5"
+                  },
+                  {
+                    "id": "a1508015634090",
+                    "text": "0.375"
+                  },
+                  {
+                    "id": "a1508015880290",
+                    "text": "0.333"
+                  },
+                  {
+                    "id": "a1508024732625",
+                    "text": "0.6"
+                  },
+                  {
+                    "id": "a1508024648959",
+                    "text": "0.288"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 461952,
+              "key": "a5e1c154-59f2-41ea-9fbe-f566238fb6b2",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a5e1c154-59f2-41ea-9fbe-f566238fb6b2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "计算每个结果的概率。它们是否与你模拟数据中的比例相匹配呢？",
+                "answers": [
+                  {
+                    "id": "a1508025382057",
+                    "text": "是",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1508025418763",
+                    "text": "否",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 461988,
+          "key": "25a5cedf-9df4-4ba5-a33f-be5b6028c9db",
+          "title": "模拟多次掷硬币",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "25a5cedf-9df4-4ba5-a33f-be5b6028c9db",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461954,
+              "key": "1130df44-db35-4f0a-ad1b-4fcad3f97de6",
+              "title": "模拟多次掷硬币",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AqpWQIj2V5Y",
+                "china_cdn_id": "AqpWQIj2V5Y.mp4"
+              }
+            },
+            {
+              "id": 461955,
+              "key": "8b01783f-d551-44d5-9b36-5b41dc8b19b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你可以再次使用下列代码，熟悉这些知识点。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461956,
+              "key": "e33b5cc3-0956-4ee9-a7a9-94f9915cc7bc",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewde2cb70c",
+              "pool_id": "jupyter",
+              "view_id": "61eb0647-d2fa-43e1-9e5c-5ba72b439852",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/simulating_many_coin_flips.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 461993,
+          "key": "2c87518c-73ec-4b5f-bf1d-4f7af4e73b97",
+          "title": "二项分布测试",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2c87518c-73ec-4b5f-bf1d-4f7af4e73b97",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Binomial Distributions Solutions",
+                "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/October/59e2d00a_binomial-distributions-solutions/binomial-distributions-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 461957,
+              "key": "2ddf9061-5213-457e-b804-3e754f24f407",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#  二项分布测试\n在这个测试中，你将使用 `np.random.binomial` 计算下列结果的比例。\n1. 一次均衡掷硬币得到正面\n2. 五次均衡掷硬币得到一次正面\n3. 十次均衡掷硬币得到四次正面\n4. P(H) = 0.8 时五次不均衡掷硬币得到五次正面\n5. P(H) = 0.15 时十次不均衡掷硬币得到得到三次及三次以上正面\n\n然后，你在下面的练习中对比这些比例的概率。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461958,
+              "key": "b98b1b2c-a5bb-43bc-be58-4bd7f52c5230",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewde2cb70c",
+              "pool_id": "jupyter",
+              "view_id": "c25485e8-4796-45b1-bb7f-62473c0b756c",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/binomial_distributions.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 461959,
+              "key": "e1ffa3b6-01b5-489c-8a23-1c6c2c25745a",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e1ffa3b6-01b5-489c-8a23-1c6c2c25745a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请使用在模拟数据中观察到的比例，去猜测下列结果的概率。"
+                },
+                "concepts_label": "结果",
+                "answers_label": "概率",
+                "concepts": [
+                  {
+                    "text": "一次均衡掷硬币得到正面",
+                    "correct_answer": {
+                      "id": "a1508030820250",
+                      "text": "0.5"
+                    }
+                  },
+                  {
+                    "text": "五次均衡掷硬币得到一次正面",
+                    "correct_answer": {
+                      "id": "a1508030834979",
+                      "text": "0.156"
+                    }
+                  },
+                  {
+                    "text": "十次均衡掷硬币得到四次正面",
+                    "correct_answer": {
+                      "id": "a1508030835747",
+                      "text": "0.205"
+                    }
+                  },
+                  {
+                    "text": "P(H) = 0.8 时五次不均衡掷硬币得到五次正面",
+                    "correct_answer": {
+                      "id": "a1508030836400",
+                      "text": "0.328"
+                    }
+                  },
+                  {
+                    "text": "P(H) = 0.15 时十次不均衡掷硬币得到三次及三次以上正面",
+                    "correct_answer": {
+                      "id": "a1508030837255",
+                      "text": "0.180"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1508030836400",
+                    "text": "0.328"
+                  },
+                  {
+                    "id": "a1508030837255",
+                    "text": "0.180"
+                  },
+                  {
+                    "id": "a1508031278116",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1508030834979",
+                    "text": "0.156"
+                  },
+                  {
+                    "id": "a1508031280405",
+                    "text": "1"
+                  },
+                  {
+                    "id": "a1508030820250",
+                    "text": "0.5"
+                  },
+                  {
+                    "id": "a1508031288692",
+                    "text": "0.2"
+                  },
+                  {
+                    "id": "a1508031282994",
+                    "text": "0.130"
+                  },
+                  {
+                    "id": "a1508031294733",
+                    "text": "0.45"
+                  },
+                  {
+                    "id": "a1508030835747",
+                    "text": "0.205"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 461960,
+              "key": "deec49b5-5745-4c78-999f-499240d21c0e",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "deec49b5-5745-4c78-999f-499240d21c0e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "计算每个结果的概率。它们是否与你模拟数据中的比例相匹配呢？",
+                "answers": [
+                  {
+                    "id": "a1508031578355",
+                    "text": "是",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1508031587912",
+                    "text": "否",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 462004,
+          "key": "1e0fae90-b071-496b-811b-2c1166695ca5",
+          "title": "癌症测试结果",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1e0fae90-b071-496b-811b-2c1166695ca5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Cancer Test Results Solutions",
+                "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/October/59e2d019_cancer-test-results-solutions/cancer-test-results-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 461967,
+              "key": "df0a042d-d649-4009-b78a-9896225d9088",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 癌症测试结果\n在这部分，你会看到病人癌症测试结果和是否真正患癌症的模拟数据集。在 Jupyter Notebook 中查找 `cancer_test_data.csv` 回答下列问题。\n\n- 总共有多少病人？\n- 多少病人患癌症？\n- 多少病人没有患癌症？\n- 患癌症的病人比例是多少？\n- 没有患癌症的病人比例是多少？\n\n\n- 癌症患者测试为阳性的病人比例是多少？\n- 癌症患者测试为阴性的病人比例是多少？\n- 非癌症患者测试为阳性的病人比例是多少？\n- 非癌症患者测试为阴性的病人比例是多少？\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461968,
+              "key": "f9f3ed73-ccd4-4b01-b354-fe1905d44214",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewde2cb70c",
+              "pool_id": "jupyter",
+              "view_id": "99fad27c-893c-43de-9aa6-150651d33f72",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/cancer_test_results.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 461969,
+              "key": "000b7a23-05ff-4d62-94c6-d28cb653d1e5",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "000b7a23-05ff-4d62-94c6-d28cb653d1e5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配下列每个问题的正确答案。"
+                },
+                "concepts_label": "问题",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "总共有多少病人？",
+                    "correct_answer": {
+                      "id": "a1508027840140",
+                      "text": "2914"
+                    }
+                  },
+                  {
+                    "text": "多少病人患癌症？",
+                    "correct_answer": {
+                      "id": "a1508027910540",
+                      "text": "306"
+                    }
+                  },
+                  {
+                    "text": "多少病人没有患癌症？",
+                    "correct_answer": {
+                      "id": "a1508027912176",
+                      "text": "2608"
+                    }
+                  },
+                  {
+                    "text": "患癌症的病人比例是多少？",
+                    "correct_answer": {
+                      "id": "a1508027913575",
+                      "text": "0.105"
+                    }
+                  },
+                  {
+                    "text": " 没有患癌症的病人比例是多少？",
+                    "correct_answer": {
+                      "id": "a1508027914521",
+                      "text": "0.895"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1508028044839",
+                    "text": "0.234"
+                  },
+                  {
+                    "id": "a1508028061819",
+                    "text": "1739"
+                  },
+                  {
+                    "id": "a1508028043939",
+                    "text": "0.562"
+                  },
+                  {
+                    "id": "a1508027910540",
+                    "text": "306"
+                  },
+                  {
+                    "id": "a1508027840140",
+                    "text": "2914"
+                  },
+                  {
+                    "id": "a1508027912176",
+                    "text": "2608"
+                  },
+                  {
+                    "id": "a1508027913575",
+                    "text": "0.105"
+                  },
+                  {
+                    "id": "a1508028046888",
+                    "text": "589"
+                  },
+                  {
+                    "id": "a1508027914521",
+                    "text": "0.895"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 461970,
+              "key": "905e1a80-cb8e-4e50-92f5-98d00b2e7050",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "905e1a80-cb8e-4e50-92f5-98d00b2e7050",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配下列每个问题的正确答案。"
+                },
+                "concepts_label": "问题",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "癌症患者测试为阳性的病人比例是多少？",
+                    "correct_answer": {
+                      "id": "a1508028275254",
+                      "text": "0.905"
+                    }
+                  },
+                  {
+                    "text": "癌症患者测试为阴性的病人比例是多少？",
+                    "correct_answer": {
+                      "id": "a1508028282927",
+                      "text": "0.095"
+                    }
+                  },
+                  {
+                    "text": "非癌症患者测试为阳性的病人比例是多少？",
+                    "correct_answer": {
+                      "id": "a1508028283729",
+                      "text": "0.204"
+                    }
+                  },
+                  {
+                    "text": "非癌症患者测试为阴性的病人比例是多少？",
+                    "correct_answer": {
+                      "id": "a1508028285193",
+                      "text": "0.796"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1508028285193",
+                    "text": "0.796"
+                  },
+                  {
+                    "id": "a1508028433738",
+                    "text": "0.372"
+                  },
+                  {
+                    "id": "a1508028435985",
+                    "text": "0.123"
+                  },
+                  {
+                    "id": "a1508028283729",
+                    "text": "0.204"
+                  },
+                  {
+                    "id": "a1508028435061",
+                    "text": "0.563"
+                  },
+                  {
+                    "id": "a1508028275254",
+                    "text": "0.905"
+                  },
+                  {
+                    "id": "a1508028282927",
+                    "text": "0.095"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 461997,
+          "key": "d05061c9-efe7-46bf-a135-011ee6773b6d",
+          "title": "条件概率与贝叶斯规则测试",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d05061c9-efe7-46bf-a135-011ee6773b6d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Conditional Probability Bayes Rule Solutions",
+                "uri": "http://video.udacity-data.com.s3.amazonaws.com/topher/2017/October/59e2d029_conditional-probability-bayes-rule-solutions/conditional-probability-bayes-rule-solutions.ipynb"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 461962,
+              "key": "badc22f5-bd2e-4065-8280-ec3ba8988705",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 条件概率与贝叶斯规则测试\n在前面部分中，你在癌症结果数据集中发现了以下比例。\n- 患癌症病人： __0.105__\n- 没有患癌症病人： __0.895__\n- 检测结果为阳性的患癌病人： __0.905__\n- 检测结果为阴性的患癌病人： __0.095__\n- 没有患癌但检测结果为阳性的病人概率：__0.204__\n- 没有患癌且检测结果为阴性的病人概率： __0.796__\n\n根据观察数据中的上述比例，我们可以假定以下概率。\n\n|概率|含义|\n|--|--|\n|__P(cancer) = 0.105__|患癌症病人的概率|\n|__P(~cancer) = 0.895__|没有患癌症病人的概率|\n|__P(positive&#124;cancer) = 0.905__|检测结果为阳性的患癌病人概率|\n|__P(negative&#124;cancer) = 0.095__|检测结果为阴性的患癌病人概率|\n|__P(positive&#124;~cancer) = 0.204__|没有患癌但检测结果为阳性的病人概率|\n|__P(negative&#124;~cancer) = 0.796__|没有患癌且检测结果为阴性的病人概率|\n\n## 练习问题\n利用上面的概率和贝叶斯规则，计算下面的概率。\n1. 检测结果为阳性的病人患癌概率，或 P(cancer|positive)\n2. 检测结果为阳性的病人没有患癌概率，或 P(~cancer|positive)\n3. 检测结果为阴性的病人患癌概率，或 P(cancer|negative)\n4. 检测结果为阴性的病人没有患癌概率，或 P(~cancer|negative)\n\n然后，利用 Jupyter Notebook 对比这些结果和数据集的正确比例。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461963,
+              "key": "5d90f277-12b8-46fa-b9b6-7defb91b8ae3",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5d90f277-12b8-46fa-b9b6-7defb91b8ae3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "利用上面的概率和贝叶斯规则，计算下面的概率。"
+                },
+                "concepts_label": "概率",
+                "answers_label": "值",
+                "concepts": [
+                  {
+                    "text": "P(cancer|positive)",
+                    "correct_answer": {
+                      "id": "a1508032690749",
+                      "text": "0.342"
+                    }
+                  },
+                  {
+                    "text": "P(~cancer|positive)",
+                    "correct_answer": {
+                      "id": "a1508032750854",
+                      "text": "0.658"
+                    }
+                  },
+                  {
+                    "text": "P(cancer|negative)",
+                    "correct_answer": {
+                      "id": "a1508032752148",
+                      "text": "0.014"
+                    }
+                  },
+                  {
+                    "text": "P(~cancer|negative)",
+                    "correct_answer": {
+                      "id": "a1508032752856",
+                      "text": "0.986"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1508032752856",
+                    "text": "0.986"
+                  },
+                  {
+                    "id": "a1508034957549",
+                    "text": "0.389"
+                  },
+                  {
+                    "id": "a1508034963373",
+                    "text": "0.674"
+                  },
+                  {
+                    "id": "a1508032752148",
+                    "text": "0.014"
+                  },
+                  {
+                    "id": "a1508032690749",
+                    "text": "0.342"
+                  },
+                  {
+                    "id": "a1508032750854",
+                    "text": "0.658"
+                  },
+                  {
+                    "id": "a1508034972263",
+                    "text": "0.236"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 461965,
+              "key": "fe39b9ca-1ede-48d8-8562-10d897fdd044",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewde2cb70c",
+              "pool_id": "jupyter",
+              "view_id": "ca5ba468-a4fc-4762-ab57-2816c4a074dd",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/conditional_probability_bayes_rule.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 461964,
+              "key": "c9586930-8c36-456b-83a9-dc17442e8109",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c9586930-8c36-456b-83a9-dc17442e8109",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "这些比例是否与你之前计算的比例一致呢？",
+                "answers": [
+                  {
+                    "id": "a1508033819851",
+                    "text": "是",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1508033844305",
+                    "text": "否",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 461998,
+          "key": "80f2f699-8c2a-4f7b-b48b-682f03cfd595",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80f2f699-8c2a-4f7b-b48b-682f03cfd595",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461966,
+              "key": "d1c212f0-18ac-498a-8304-9aeb3bbea77d",
+              "title": "Python 概率总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4JYar5GykXk",
+                "china_cdn_id": "4JYar5GykXk.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

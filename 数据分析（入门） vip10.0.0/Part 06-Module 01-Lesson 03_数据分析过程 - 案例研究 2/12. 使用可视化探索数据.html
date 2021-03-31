@@ -1,0 +1,350 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>使用可视化探索数据</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>数据分析过程 - 案例研究 2</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程概述.html">01. 课程概述</a>
+    </li>
+    <li class="">
+      <a href="02. 数据概述.html">02. 数据概述</a>
+    </li>
+    <li class="">
+      <a href="03. 数据属性.html">03. 数据属性</a>
+    </li>
+    <li class="">
+      <a href="04. 提问.html">04. 提问</a>
+    </li>
+    <li class="">
+      <a href="05. 评估数据.html">05. 评估数据</a>
+    </li>
+    <li class="">
+      <a href="06. 清理列标签.html">06. 清理列标签</a>
+    </li>
+    <li class="">
+      <a href="07. 过滤、丢空、去重.html">07. 过滤、丢空、去重</a>
+    </li>
+    <li class="">
+      <a href="08. 检查数据类型.html">08. 检查数据类型</a>
+    </li>
+    <li class="">
+      <a href="09. 修正数据类型第 1 部分.html">09. 修正数据类型第 1 部分</a>
+    </li>
+    <li class="">
+      <a href="10. 修正数据类型第 2 部分.html">10. 修正数据类型第 2 部分</a>
+    </li>
+    <li class="">
+      <a href="11. 修正数据类型第 3 部分.html">11. 修正数据类型第 3 部分</a>
+    </li>
+    <li class="">
+      <a href="12. 使用可视化探索数据.html">12. 使用可视化探索数据</a>
+    </li>
+    <li class="">
+      <a href="13.  结论和可视展示.html">13.  结论和可视展示</a>
+    </li>
+    <li class="">
+      <a href="14. 合并类型.html">14. 合并类型</a>
+    </li>
+    <li class="">
+      <a href="15. 合并数据集.html">15. 合并数据集</a>
+    </li>
+    <li class="">
+      <a href="16. 合并数据集的结果.html">16. 合并数据集的结果</a>
+    </li>
+    <li class="">
+      <a href="17.  总结.html">17.  总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. 使用可视化探索数据</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="使用可视化探索数据">使用可视化探索数据</h1>
+<p>在 Jupyter notebook 中使用直方图和散点图探索 <code>clean_08.csv</code> 和 <code>clean_18.csv</code>。然后，回答 notebook 下的练习问题。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>比较 2008 年至 2018 年温室气体排放量的分布情况。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1507057878358" name="431706" id="a1507057878358">
+        <label for="a1507057878358"><p>两者的分布都为正态分布。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507057899099" name="431706" id="a1507057899099">
+        <label for="a1507057899099"><p>两者的分布都为右偏态。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507057910952" name="431706" id="a1507057910952">
+        <label for="a1507057910952"><p>2008 年的分布更偏向左边。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507057935762" name="431706" id="a1507057935762">
+        <label for="a1507057935762"><p>2018 年的分布更偏向左边。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    2008 年的分布更偏向左边。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>从 2008 年到 2018 年，综合 mpg 的分布是如何变化的？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1507058077201" name="431707" id="a1507058077201">
+        <label for="a1507058077201"><p>保持不变</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507058096349" name="431707" id="a1507058096349">
+        <label for="a1507058096349"><p>朝相反的方向偏态</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507058111034" name="431707" id="a1507058111034">
+        <label for="a1507058111034"><p>变得更偏向右边</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507058120900" name="431707" id="a1507058120900">
+        <label for="a1507058120900"><p>逐渐接近正态分布</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    变得更偏向右边
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>描述排量和综合 mpg 之间的相关性。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1507057720732" name="431708" id="a1507057720732">
+        <label for="a1507057720732"><p>正相关</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507057742409" name="431708" id="a1507057742409">
+        <label for="a1507057742409"><p>负相关</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507057746469" name="431708" id="a1507057746469">
+        <label for="a1507057746469"><p>无相关性</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    负相关
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>描述温室气体得分与综合 mpg 之间的相关性。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1507057775502" name="431709" id="a1507057775502">
+        <label for="a1507057775502"><p>正相关</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507057789287" name="431709" id="a1507057789287">
+        <label for="a1507057789287"><p>负相关</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1507057792467" name="431709" id="a1507057792467">
+        <label for="a1507057792467"><p>无相关性</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    正相关
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13.  结论和可视展示.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. 使用可视化探索数据')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

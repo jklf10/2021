@@ -1,0 +1,2752 @@
+{
+  "data": {
+    "lesson": {
+      "id": 469693,
+      "key": "b7ae43e6-204a-4816-a177-6c75115cae5f",
+      "title": "逻辑回归",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "学习如何在 python 里应用逻辑回归、如何解释结果并判断模型拟合效果。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/b7ae43e6-204a-4816-a177-6c75115cae5f/469693/1544461680538/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/b7ae43e6-204a-4816-a177-6c75115cae5f/469693/1544461671473/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92+Subtitles.zip"
+          },
+          {
+            "name": "14 Logistic Regression",
+            "uri": "https://video.udacity-data.com/topher/2017/November/5a1c88aa_14-logistic-regression/14-logistic-regression.zip"
+          },
+          {
+            "name": "Data",
+            "uri": "https://video.udacity-data.com/topher/2017/November/5a1c88bd_data/data.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 469660,
+          "key": "f4fcfbc9-30ea-4086-b732-75a278dcdb59",
+          "title": "视频：简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f4fcfbc9-30ea-4086-b732-75a278dcdb59",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469617,
+              "key": "cae41167-1a72-4fe8-8385-de2ac3149564",
+              "title": "逻辑回归简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "P_f2RjjnPEg",
+                "china_cdn_id": "P_f2RjjnPEg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469661,
+          "key": "9699889c-81cc-4f6e-9eff-ae19dec29b95",
+          "title": "视频：拟合逻辑回归",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9699889c-81cc-4f6e-9eff-ae19dec29b95",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469618,
+              "key": "ddc2685e-9046-4b8c-9a12-186762428ab8",
+              "title": "拟合逻辑回归",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Dg0rBDQnIYg",
+                "china_cdn_id": "Dg0rBDQnIYg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469662,
+          "key": "911c15fb-05c0-4c49-b657-2edf0fb5a483",
+          "title": "练习：逻辑回归小测",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "911c15fb-05c0-4c49-b657-2edf0fb5a483",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469622,
+              "key": "4a3752c7-3364-4814-8173-2af35540c9cf",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4a3752c7-3364-4814-8173-2af35540c9cf",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "根据下列关于线性回归和逻辑回归的描述，选择正确答案。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "能预测范围在 0 和 1 之间的概率。",
+                    "correct_answer": {
+                      "id": "a1511472435282",
+                      "text": "逻辑回归"
+                    }
+                  },
+                  {
+                    "text": "能预测范围在正无穷与负无穷之间的任意值",
+                    "correct_answer": {
+                      "id": "a1511472567885",
+                      "text": "线性回归"
+                    }
+                  },
+                  {
+                    "text": "解释变量可以是分类变量或定量变量。",
+                    "correct_answer": {
+                      "id": "a1511472607142",
+                      "text": "两者都是"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511472435282",
+                    "text": "逻辑回归"
+                  },
+                  {
+                    "id": "a1511472717681",
+                    "text": "线性回归"
+                  },
+                  {
+                    "id": "a1511472607142",
+                    "text": "两者都是"
+                  },
+                  {
+                    "id": "a1511472722780",
+                    "text": "逻辑回归"
+                  },
+                  {
+                    "id": "a1511472712510",
+                    "text": "两者都不是"
+                  },
+                  {
+                    "id": "a1511472567885",
+                    "text": "线性回归"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469663,
+          "key": "28777848-e025-4ffe-aea6-9c08d814512a",
+          "title": "视频：在 Python 中拟合逻辑回归",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "28777848-e025-4ffe-aea6-9c08d814512a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469621,
+              "key": "dc69bf9d-9c76-45ce-a32b-8fb2b3d41e96",
+              "title": "在 Python 中拟合逻辑回归",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "baQf-XiZQQ4",
+                "china_cdn_id": "baQf-XiZQQ4.mp4"
+              }
+            },
+            {
+              "id": 1008916,
+              "key": "886abb47-d779-4651-b11a-f2fc1ad99ec4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "说明：请使用 results.summary2() 代替 results.summary()",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469666,
+          "key": "d08b6817-6c8a-427c-ba0b-bd8e5f76d667",
+          "title": "Notebook + 练习：在 Python 中拟合逻辑回归",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d08b6817-6c8a-427c-ba0b-bd8e5f76d667",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543113,
+              "key": "b40e1407-d021-4f95-b5f7-4dd1cc4b81a8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view763620dd",
+              "pool_id": "jupyter",
+              "view_id": "763620dd-6cb5-47f3-87bf-f1f93c6f45d6",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Fitting_Logistic_Regression-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469624,
+              "key": "eaf534d8-7c20-43db-a267-b8effba9b046",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "eaf534d8-7c20-43db-a267-b8effba9b046",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请根据下列描述选出正确的数值。"
+                },
+                "concepts_label": "描述",
+                "answers_label": " 数值",
+                "concepts": [
+                  {
+                    "text": "诈骗交易的比例",
+                    "correct_answer": {
+                      "id": "a1511732855503",
+                      "text": "0.012"
+                    }
+                  },
+                  {
+                    "text": "诈骗交易的平均`持续时间`",
+                    "correct_answer": {
+                      "id": "a1511732895399",
+                      "text": "4.62"
+                    }
+                  },
+                  {
+                    "text": "`工作日`交易的比例",
+                    "correct_answer": {
+                      "id": "a1511732915504",
+                      "text": "0.345"
+                    }
+                  },
+                  {
+                    "text": "非诈骗交易的平均`持续时间`",
+                    "correct_answer": {
+                      "id": "a1511732931802",
+                      "text": "30.01"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511732895399",
+                    "text": "4.62"
+                  },
+                  {
+                    "id": "a1511733142819",
+                    "text": "0.655"
+                  },
+                  {
+                    "id": "a1511733289756",
+                    "text": "0.988"
+                  },
+                  {
+                    "id": "a1511732855503",
+                    "text": "0.012"
+                  },
+                  {
+                    "id": "a1511732915504",
+                    "text": "0.345"
+                  },
+                  {
+                    "id": "a1511732931802",
+                    "text": "30.01"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469665,
+          "key": "abb70d31-e43d-4cf2-bbe8-3c96f765bd92",
+          "title": "视频：解释结果——第一部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "abb70d31-e43d-4cf2-bbe8-3c96f765bd92",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469619,
+              "key": "bd0276ce-cd23-4d4f-bdf3-3ccbc6d487b3",
+              "title": "解释结果",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UPOxxbKu6CQ",
+                "china_cdn_id": "UPOxxbKu6CQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469664,
+          "key": "c5af4b47-e3b7-47fb-8941-a4abfcc6a665",
+          "title": "录屏视频：解释结果——第二部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c5af4b47-e3b7-47fb-8941-a4abfcc6a665",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469620,
+              "key": "038af92c-8e98-4fcc-8dfe-1cb1365606ce",
+              "title": "在 Python 里解释结果",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IY88UTiJltQ",
+                "china_cdn_id": "IY88UTiJltQ.mp4"
+              }
+            },
+            {
+              "id": 1008915,
+              "key": "d6a8e0bf-cdc8-4d29-8e35-1887f06cf9da",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "说明：请使用 results.summary2() 代替 results.summary()",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469667,
+          "key": "e4823a4d-17de-4e84-8e67-1c5f5b0275d2",
+          "title": "Notebook + 练习：解释结果",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e4823a4d-17de-4e84-8e67-1c5f5b0275d2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543115,
+              "key": "aa43ad24-3da9-4689-8128-2b59801f442c",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view87b4203d",
+              "pool_id": "jupyter",
+              "view_id": "87b4203d-153f-42d3-a8f2-2d7875cfa66d",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Interpret_Results-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469626,
+              "key": "cb7c3256-5753-407d-9b72-f728da8c0932",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cb7c3256-5753-407d-9b72-f728da8c0932",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "下列是一些关于录取数据集的说法，请选出所有正确选项。",
+                "answers": [
+                  {
+                    "id": "a1511743075290",
+                    "text": "为了获得`声望` 的逻辑递归模型，我们需要加入 4 个虚拟变量。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511743123617",
+                    "text": "为了获得`声望` 逻辑递归模型，我们需要加入 3 个虚拟变量。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1511743128225",
+                    "text": " 最常见的声望值为 2。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1511743939410",
+                    "text": "最常见的声望值为 3。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469627,
+              "key": "f037722d-4dda-42c3-88b1-54622d86e54f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f037722d-4dda-42c3-88b1-54622d86e54f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "观察下方回归模型里那些看起来与被录取有统计显著性的变量，请问下列哪些说法是正确的？",
+                "answers": [
+                  {
+                    "id": "a1511749273908",
+                    "text": "所有变量都有统计显著性。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1511749317461",
+                    "text": "有些变量有统计显著性。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511749330981",
+                    "text": "没有变量有统计显著性。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469628,
+              "key": "c97d0563-683c-4d55-928b-c7b343b2db09",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c97d0563-683c-4d55-928b-c7b343b2db09",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "观察结果，根据解释选出正确的数值。"
+                },
+                "concepts_label": "解释",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望最低的学生，他就多了 ______ 的可能被录取。",
+                    "correct_answer": {
+                      "id": "a1511749417548",
+                      "text": "4.73 倍"
+                    }
+                  },
+                  {
+                    "text": "在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望倒数第二的学生，他就多了 ______ 的可能被录取。",
+                    "correct_answer": {
+                      "id": "a1511749802878",
+                      "text": "3.81 倍"
+                    }
+                  },
+                  {
+                    "text": "在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望第二的学生，他就多了 ______ 的可能被录取。",
+                    "correct_answer": {
+                      "id": "a1511749804976",
+                      "text": "1.97 倍"
+                    }
+                  },
+                  {
+                    "text": "其它变量不变的情况下，gpa 每增加一个单位，学生的录取概率就增加了 ______。",
+                    "correct_answer": {
+                      "id": "a1511749906817",
+                      "text": "2.18 倍"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511750089496",
+                    "text": "0.21 倍"
+                  },
+                  {
+                    "id": "a1511749802878",
+                    "text": "3.81 倍"
+                  },
+                  {
+                    "id": "a1511750063245",
+                    "text": "0.26 倍"
+                  },
+                  {
+                    "id": "a1511749804976",
+                    "text": "1.97 倍"
+                  },
+                  {
+                    "id": "a1511749417548",
+                    "text": "4.73 倍"
+                  },
+                  {
+                    "id": "a1511750058099",
+                    "text": "0.51 倍"
+                  },
+                  {
+                    "id": "a1511750307132",
+                    "text": "0.78 倍"
+                  },
+                  {
+                    "id": "a1511749906817",
+                    "text": "2.18 倍"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469668,
+          "key": "dea505c3-e0bb-4f7f-bcd8-f2ac75e0cfb0",
+          "title": "视频：模型诊断+性能指标",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dea505c3-e0bb-4f7f-bcd8-f2ac75e0cfb0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469629,
+              "key": "4eeb90fc-fc27-4503-9e77-478dc9b2fed0",
+              "title": "模型诊断",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XsYFAtzF6e4",
+                "china_cdn_id": "XsYFAtzF6e4.mp4"
+              }
+            },
+            {
+              "id": 469630,
+              "key": "4a2eb69d-11eb-4c54-868d-a6137c3578d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这两节课涉及的一些概念可查看 [机器学习纳米学位课程](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009) 。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 152462,
+          "key": "30057385840923",
+          "title": "混淆矩阵",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30057385840923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151003,
+              "key": "3005738584",
+              "title": "混淆矩阵",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3005738584",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "bgyN3RO2ICo",
+                  "china_cdn_id": "bgyN3RO2ICo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "混淆矩阵",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/pxpiuKi_GhxZ4JKmiMsA2foYC996VHGMJp2i4nXQB3tuzMoVh6bEEgHiOcBQAa1cdmeDgUo6mwaJ4SPupp7w=s0#w=1436&h=805",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3005738584",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3007188710",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.14191084788029926,
+                      "y": 0.35854351441241683
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.23864167705735662,
+                      "y": 0.35296563192904656
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.14099516832917705,
+                      "y": 0.5318736141906873
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.24468126558603492,
+                      "y": 0.5250485033259423
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "bEAaNv-CBQ4",
+                  "china_cdn_id": "bEAaNv-CBQ4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152459,
+          "key": "30237485770923",
+          "title": "混淆矩阵练习 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30237485770923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151001,
+              "key": "3023748577",
+              "title": "混淆矩阵练习 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3023748577",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Nn_8kCRYn2k",
+                  "china_cdn_id": "Nn_8kCRYn2k.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "混淆矩阵练习 1",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/X5PlNGFanbtN9tR1TdL6MjnQKWeBaS0tACGpuNhC6jiWsUlKIXfdwbiCrH8--BQKKJ1Zi02LZJqLifnH4Q=s0#w=1436&h=807",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3023748577",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3009678880",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.14007948877805487,
+                      "y": 0.3601718403547672
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.24171991895261846,
+                      "y": 0.36010254988913526
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.14257325436408977,
+                      "y": 0.5280626385809313
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.24185629675810474,
+                      "y": 0.5211335920177383
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "obhHCeHpysw",
+                  "china_cdn_id": "obhHCeHpysw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152463,
+          "key": "30234185470923",
+          "title": "混淆矩阵练习 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30234185470923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151004,
+              "key": "3023418547",
+              "title": "混淆矩阵练习 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3023418547",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "XN1eS7boCNg",
+                  "china_cdn_id": "XN1eS7boCNg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "混淆矩阵练习 2",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/_khea7hfBgow2FLakdk0VVe7Wz8NYIdleMBu6TL1QTcBXWi7d7d2wSjR0R5lC_sObdbe-_HZMwIBmyFqqyii=s0#w=1437&h=806",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3023418547",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3050008540",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.1415601620947631,
+                      "y": 0.3615576496674058
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.24577228802992518,
+                      "y": 0.3580238359201774
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.1415406795511222,
+                      "y": 0.5326358093126385
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.24364869077306733,
+                      "y": 0.5217225609756098
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "HAQ0-Skvzmc",
+                  "china_cdn_id": "HAQ0-Skvzmc.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152464,
+          "key": "30327385670923",
+          "title": "填充混淆矩阵",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30327385670923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151005,
+              "key": "3032738567",
+              "title": "填充混淆矩阵",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3032738567",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "FwaYsmnlLM4",
+                  "china_cdn_id": "FwaYsmnlLM4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "填充混淆矩阵",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/Oofqo-tg7JHV9l4o0BmjJv9CpDsPpvlGQ5z6LmX82tBAcS8zRwOV3sewDYQp8D8MXgzhIEQeDG6voDB0_DA=s0#w=1435&h=804",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3032738567",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3016088789",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09312638580931264,
+                      "width": 0.05112219451371571,
+                      "x": 0.12466879675810474,
+                      "y": 0.30335365853658536
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.0975609756097561,
+                      "width": 0.05236907730673317,
+                      "x": 0.23119934538653367,
+                      "y": 0.3033190133037694
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09090909090909091,
+                      "width": 0.04987531172069826,
+                      "x": 0.13246181421446385,
+                      "y": 0.49722838137472286
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric4",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.0975609756097561,
+                      "width": 0.04987531172069826,
+                      "x": 0.24173940149625936,
+                      "y": 0.4905418514412417
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Lb_v4vj3TNs",
+                  "china_cdn_id": "Lb_v4vj3TNs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152467,
+          "key": "30190385690923",
+          "title": "混淆矩阵：误报",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30190385690923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151008,
+              "key": "3019038569",
+              "title": "混淆矩阵：误报",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3019038569",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "611qWzIxGmU",
+                  "china_cdn_id": "611qWzIxGmU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "混淆矩阵：误报",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/L3ztw-himesGOcDXl8pLjgYZjWc_CNwGL8RESlpXRZrjUlKUdN0ZRfd7rVa7K_MpNVjEp8OIpIMj_S5SEJ0=s0#w=1436&h=805",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3019038569",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3023678781",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.17160224438902744,
+                      "y": 0.3913871951219512
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.2860037406483791,
+                      "y": 0.3938470066518847
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.16817331670822944,
+                      "y": 0.5594165742793792
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.2813279301745636,
+                      "y": 0.5511710088691796
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Uf_KdjVT2Xg",
+                  "china_cdn_id": "Uf_KdjVT2Xg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 177696,
+          "key": "30252785660923",
+          "title": "特征脸混淆矩阵",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30252785660923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 175730,
+              "key": "3025278566",
+              "title": "特征脸混淆矩阵",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3025278566",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "-VxKwVvrNY0",
+                  "china_cdn_id": "-VxKwVvrNY0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "特征脸混淆矩阵",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/OHAbNm82aZK7noWyA-g1nN2Ctzyp5uFQh--AtOLA-1XyvWctJxCFNzXOzu-zBJnZhLGhwgLF91XuhmlIbsjB=s0#w=1433&h=806",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3025278566",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3004608562",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.43966256234413964,
+                      "y": 0.08013442350332595
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.435025716957606,
+                      "y": 0.13636363636363635
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.4337788341645885,
+                      "y": 0.2022242239467849
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.43409055486284287,
+                      "y": 0.2583841463414634
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio5",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.43290211970074816,
+                      "y": 0.32123059866962306
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio6",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.4303499064837905,
+                      "y": 0.37787555432372505
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio7",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.43095386533665836,
+                      "y": 0.43815825942350334
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "jkjr_prWyt8",
+                  "china_cdn_id": "jkjr_prWyt8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 177699,
+          "key": "30294985670923",
+          "title": "有多少 Schroeder",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985670923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 175731,
+              "key": "3029498567",
+              "title": "有多少 Schroeder",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498567",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "jO81hfubpXY",
+                  "china_cdn_id": "jO81hfubpXY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "有多少 Schroeder",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/wM1pr5EIq6hhj6AEHRPk79EbbAuqz38M7PtOChRG_2Vl4tA9c0krZvfVpX5fs6MQ3LKCGlO5FzxtQNTYhKl2=s0#w=1434&h=804",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498567",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3006898966",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.08603491271820449,
+                      "x": 0.7154574501246883,
+                      "y": 0.5780903547671841
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "T2dveKB64Ho",
+                  "china_cdn_id": "T2dveKB64Ho.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 177697,
+          "key": "30294985700923",
+          "title": "有多少 Schroeder 预测值",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985700923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 175732,
+              "key": "3029498570",
+              "title": "有多少 Schroeder 预测值",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498570",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "r8stm2et_hI",
+                  "china_cdn_id": "r8stm2et_hI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "有多少 Schroeder 预测值",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/87E-assdPznKcqIxK9ZJVwK3cKBOlCbZIA9EBlxYacq_T5B0uUqotWVdF4Cv262DbMvZH_LPdcmMqWa8kEs=s0#w=1434&h=806",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498570",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3041298589",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08425720620842572,
+                      "width": 0.0885286783042394,
+                      "x": 0.70941786159601,
+                      "y": 0.6759977827050998
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "n7gp8USw0Jw",
+                  "china_cdn_id": "n7gp8USw0Jw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 177698,
+          "key": "30294985730923",
+          "title": "正确分类查韦斯 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985730923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 175733,
+              "key": "3029498573",
+              "title": "正确分类查韦斯 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498573",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "0PFq8zoaNWU",
+                  "china_cdn_id": "0PFq8zoaNWU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "正确分类查韦斯 1",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/8zwk5QUVyr7aI9G3esG8GtYt0KY63t7Qg1r_Lunp12I0xdrlVfNl7eRZuPByguZG4ufPv-kk-EloVc6b-Yc=s0#w=1435&h=807",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498573",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3017398561",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.12094763092269327,
+                      "x": 0.4751207917705736,
+                      "y": 0.5578921840354767
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Jbqf8OBORDg",
+                  "china_cdn_id": "Jbqf8OBORDg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 177700,
+          "key": "30294985760923",
+          "title": "正确分类查韦斯 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985760923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 175734,
+              "key": "3029498576",
+              "title": "正确分类查韦斯 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498576",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "HWW9BNHnPo0",
+                  "china_cdn_id": "HWW9BNHnPo0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "正确分类查韦斯 2",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/J4WeleJ74BAGRXoxG0JUHejS14CbgJUwf7CsFX3A9_Bv0HICCFKWGZ1I-ZmbpqUosZwmx2R4-F1otGlemis=s0#w=1435&h=805",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498576",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3007308918",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.12219451371571072,
+                      "x": 0.47539354738154616,
+                      "y": 0.5727549889135255
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "hqO8kxRJdd4",
+                  "china_cdn_id": "hqO8kxRJdd4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152466,
+          "key": "30294985790923",
+          "title": "精确率和召回率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151007,
+              "key": "3029498579",
+              "title": "精确率和召回率",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "3vT0kSBCLdU",
+                "china_cdn_id": "3vT0kSBCLdU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 152470,
+          "key": "30294985800923",
+          "title": "鲍威尔精确率和召回率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985800923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151011,
+              "key": "3029498580",
+              "title": "鲍威尔精确率和召回率",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498580",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "QWWq77k-K_0",
+                  "china_cdn_id": "QWWq77k-K_0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "鲍威尔精确率和召回率测试题",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/PyqMJeMG0SM_LBXThyrHee6cDvvX_ZJVv6754LLe6XXJvjXoG6WEUwtaDAKFslflYCbf-6JxiL7JYFipPhA=s0#w=1435&h=805",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498580",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3043028606",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07317073170731707,
+                      "width": 0.09226932668329177,
+                      "x": 0.658899625935162,
+                      "y": 0.5471175166297118
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.1059850374064838,
+                      "x": 0.6424758416458853,
+                      "y": 0.6903409090909091
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "q_zfkCwRg1w",
+                  "china_cdn_id": "q_zfkCwRg1w.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152468,
+          "key": "30294985830923",
+          "title": "布什精确率和召回率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985830923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151009,
+              "key": "3029498583",
+              "title": "布什精确率和召回率",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498583",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "8fM13xqU2a8",
+                  "china_cdn_id": "8fM13xqU2a8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "布什精确率和召回率",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/Sw6ap0CIthPZp-uimKmSbDb8PIy_i2fISJ_JBK9GMoFtTotyMHJm5dn62uhc3PuSlRYyv7dqqwqVw8dwDg=s0#w=1434&h=806",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498583",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3030118734",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.08229426433915212,
+                      "x": 0.6582567019950125,
+                      "y": 0.5510670731707317
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.09850374064837905,
+                      "x": 0.6490414588528678,
+                      "y": 0.6843819290465631
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "FLpXmoHp7eE",
+                  "china_cdn_id": "FLpXmoHp7eE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152469,
+          "key": "30294985860923",
+          "title": "特征脸方法中的 True Positives",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985860923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151010,
+              "key": "3029498586",
+              "title": "特征脸方法中的 True Positives",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498586",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "bgT8sWuV2lc",
+                  "china_cdn_id": "bgT8sWuV2lc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "特征脸方法中的 True Positives",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/nhBMuAEAC5xwl9qzILKtB7VZU0arEVzFEFPklbeYPunoOlIqnWsqo5IpJa3tUwp-uhG-6-5s9pYqkpYKM3Y=s0#w=1434&h=805",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498586",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3021738574",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07538802660753881,
+                      "width": 0.09975062344139651,
+                      "x": 0.4981296758104738,
+                      "y": 0.5054739467849224
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "TWGqylKdGWs",
+                  "china_cdn_id": "TWGqylKdGWs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152472,
+          "key": "30294985900923",
+          "title": "特征脸方法中的 False Positives",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985900923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151013,
+              "key": "3029498590",
+              "title": "特征脸方法中的 False Positives",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498590",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "0bEbJ33dUis",
+                  "china_cdn_id": "0bEbJ33dUis.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "特征脸方法中的 False Positives",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/VbVPk1oeLjr-Gwfpbk5EuDgygDkb3aMAf0EgD-hcCL5GQpius7KfptkAwPnIIt4UqTvK_PxMZwcmtsds__o=s0#w=1437&h=806",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498590",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3039578581",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.08478802992518704,
+                      "x": 0.5147677680798005,
+                      "y": 0.6057026053215078
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "CMIM_Ocu8vg",
+                  "china_cdn_id": "CMIM_Ocu8vg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152471,
+          "key": "30294985930923",
+          "title": "特征脸方法中的 False Negatives",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985930923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151012,
+              "key": "3029498593",
+              "title": "特征脸方法中的 False Negatives",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498593",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "dyShKWpTo-c",
+                  "china_cdn_id": "dyShKWpTo-c.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "特征脸方法中的 False Negatives",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/C2f5w3NfeZeXxFtpC37NJVT79omAVg4PvpWoNM7a4kYle-XEnPHDFfNl2-f6KuwuJ7GBij195zGXI9EsHAAz=s0#w=1433&h=806",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498593",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3016528680",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07538802660753881,
+                      "width": 0.08478802992518704,
+                      "x": 0.4241934226932668,
+                      "y": 0.5980460088691796
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "bxDutNyYKjE",
+                  "china_cdn_id": "bxDutNyYKjE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152473,
+          "key": "30294985960923",
+          "title": "对拉姆斯菲尔德练习 TP、FP、FN",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294985960923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151014,
+              "key": "3029498596",
+              "title": "对拉姆斯菲尔德练习 TP、FP、FN",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498596",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "dBax3E1AC2s",
+                  "china_cdn_id": "dBax3E1AC2s.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "对拉姆斯菲尔德练习 TP、FP、FN",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/0sHMP-wyHDczF-rWwbL89KjAqbpU0uFsMMbpTt4_cUcuyTwAcF1N4_4Ab7uRAQ1Oj4J24sgQc2Yj4uLjrmY=s0#w=1432&h=803",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498596",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3031238602",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.06359102244389027,
+                      "x": 0.4071267144638404,
+                      "y": 0.4358370288248337
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.06234413965087282,
+                      "x": 0.40652275561097256,
+                      "y": 0.5154517738359202
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.082039911308204,
+                      "width": 0.06109725685785536,
+                      "x": 0.4003273067331671,
+                      "y": 0.6061876385809313
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "C3Fqiu6HJog",
+                  "china_cdn_id": "C3Fqiu6HJog.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152474,
+          "key": "30294986000923",
+          "title": "精确率公式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294986000923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151015,
+              "key": "3029498600",
+              "title": "精确率公式",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498600",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "CStZqZRe6Mk",
+                  "china_cdn_id": "CStZqZRe6Mk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "精确率公式",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/WEtXGJKlcurLg21-eoHj7PHM_YOC6A9lLdygSDG_aM38N8n8VD-BuF29LMFWc1HuUqjI1iC-Qz4lABuCtMc=s0#w=1431&h=806",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498600",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3022138739",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.33718438279301743,
+                      "y": 0.4500762195121951
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.33297615336658354,
+                      "y": 0.5259839246119734
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.33301511845386533,
+                      "y": 0.6078852549889135
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "8QEAYYIyopY",
+                  "china_cdn_id": "8QEAYYIyopY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 152475,
+          "key": "30294986030923",
+          "title": "召回率公式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30294986030923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151016,
+              "key": "3029498603",
+              "title": "召回率公式",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "3029498603",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "2cUiqlbt-hc",
+                  "china_cdn_id": "2cUiqlbt-hc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "召回率公式",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/u2G9xfSyXorgsqDjhfB949tKN67n_Mxgn7MCrdE-mG2YYhILogbxdFzirSEDFszNSYzQG4TEUevniGEZLJQ=s0#w=1433&h=804",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3029498603",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "3022688695",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.32769638403990026,
+                      "y": 0.4668791574279379
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.32687811720698257,
+                      "y": 0.5349916851441242
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.330404457605985,
+                      "y": 0.6121466186252772
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "j2SP83afRS0",
+                  "china_cdn_id": "j2SP83afRS0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 469669,
+          "key": "e30590d3-a3b4-4fbd-9901-892b005310ab",
+          "title": "录屏视频：在 Python 里进行模型诊断——第一部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e30590d3-a3b4-4fbd-9901-892b005310ab",
+            "completed_at": "2019-03-14T08:58:54.402Z",
+            "last_viewed_at": "2019-03-14T08:59:27.952Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469652,
+              "key": "aafc4713-8d12-4e37-b5d2-06cd98b25128",
+              "title": "在 Python 里进行模型诊断",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1Z4eorbfOOc",
+                "china_cdn_id": "1Z4eorbfOOc.mp4"
+              }
+            },
+            {
+              "id": 469653,
+              "key": "1bccf980-ca9d-4e1f-8ae5-9d5bcb8eff52",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[这里](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)是逻辑回归 sklearn 包的相关文献，另外，[这里](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)是处理混淆矩阵的相关文献。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 572118,
+              "key": "4d883842-3db6-4c8e-bdb5-bd49d608baa1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在这个视频结尾，wikipedia 中的文档实际上与 sklearn 的输出相反。预测结果位于纵列中，而实际结果位于行中。因此，\n\n|  | Predicted （预测值） |  |\n|---|---|\n| Actual（实际值）  |  0 | 1 |\n| 0  | 23  | 1  |\n| 1  |  14 |  2 |\n\n* 因此，在我们预测的未入学人数中，有 23 人未入学。\n* 在我们预测的未入学人数中，有 14 人已入学。\n* 在我们预测的已入学人数中，有 1 人未入学。\n* 在我们预测的已入学人数中，有 2 人已入学。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 572119,
+              "key": "f48888c2-3967-44dd-adf9-a0d017d475c1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 为什么使用训练测试拆分法以及一些附加文献\n\n[这里](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)是 sklearn 逻辑回归的文献。[这里](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)是混淆矩阵的参考文献。\n\n在这个视频中，你创建了一个训练测试数据集，这在机器学习中十分常见。一般来说，将数据拆分为训练数据与测试数据是一种十分有效的方法，这不仅能保证你的模型可以准确预测拟合的数据，也能预测它从未见过的数据。一旦证明你的模型能够准确预测测试数据，就可以确保它在其他预测案例中也能表现出色，比如预测未来的学生或是交易状况等等。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469670,
+          "key": "f19298a9-a462-4a08-bc28-9ca8b26d7ca6",
+          "title": "Notebook + 练习：模型诊断",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f19298a9-a462-4a08-bc28-9ca8b26d7ca6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543116,
+              "key": "cc2a1f42-8d03-4279-8cf8-4a85b0895a9d",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view6b5a8e07",
+              "pool_id": "jupyter",
+              "view_id": "6b5a8e07-3e95-4470-9c55-c30b3587e5d9",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Model_Diagnostics-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469655,
+              "key": "51f6ca83-7830-4df8-bcfb-925a658deffa",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "51f6ca83-7830-4df8-bcfb-925a658deffa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "根据混淆矩阵的结果，在下列描述旁给出相应的值。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "被正确识别为 “非录取” 的非录取数量。",
+                    "correct_answer": {
+                      "id": "a1511807232090",
+                      "text": "56"
+                    }
+                  },
+                  {
+                    "text": "被识别为 “录取” 的录取数量。",
+                    "correct_answer": {
+                      "id": "a1511807454879",
+                      "text": "2"
+                    }
+                  },
+                  {
+                    "text": "被识别为 “非录取” 的录取数量",
+                    "correct_answer": {
+                      "id": "a1511807470663",
+                      "text": "22"
+                    }
+                  },
+                  {
+                    "text": "被识别为 “录取” 的非录取数量",
+                    "correct_answer": {
+                      "id": "a1511807495754",
+                      "text": "0"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511807470663",
+                    "text": "22"
+                  },
+                  {
+                    "id": "a1511807232090",
+                    "text": "56"
+                  },
+                  {
+                    "id": "a1511807495754",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1511807454879",
+                    "text": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469656,
+              "key": "43b45c8e-5262-470f-818c-b1c48e05d14d",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "43b45c8e-5262-470f-818c-b1c48e05d14d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请选出下列问题的对应答案。"
+                },
+                "concepts_label": "问题",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "如果我们真想把得到录取的学生正确识别为 “录取”，那我们最关心什么指标？",
+                    "correct_answer": {
+                      "id": "a1511809366126",
+                      "text": "召回率"
+                    }
+                  },
+                  {
+                    "text": "如果我们只想取得是否被录取的最正确识别结果，那我们最关心什么指标？",
+                    "correct_answer": {
+                      "id": "a1511810304973",
+                      "text": "准确率"
+                    }
+                  },
+                  {
+                    "text": "测试数据的召回率是多少？",
+                    "correct_answer": {
+                      "id": "a1511810524538",
+                      "text": "0.083"
+                    }
+                  },
+                  {
+                    "text": "测试数据的精确率是多少？",
+                    "correct_answer": {
+                      "id": "a1511810593994",
+                      "text": "1.0"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511810304973",
+                    "text": "准确率"
+                  },
+                  {
+                    "id": "a1511809366126",
+                    "text": "召回率"
+                  },
+                  {
+                    "id": "a1511810593994",
+                    "text": "1.0"
+                  },
+                  {
+                    "id": "a1511810389010",
+                    "text": "精确率"
+                  },
+                  {
+                    "id": "a1511810524538",
+                    "text": "0.083"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469672,
+          "key": "03ae2991-4273-4bf6-bdde-12f31326c9b6",
+          "title": "视频：在开始机器学习之前的结语",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "03ae2991-4273-4bf6-bdde-12f31326c9b6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469657,
+              "key": "110c3be0-9b97-4858-b998-adc90ad8869d",
+              "title": "在开始机器学习之前的结语",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YkZFjZ3Fx8A",
+                "china_cdn_id": "YkZFjZ3Fx8A.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469673,
+          "key": "958dcaee-e4a4-4a74-8b6f-482937ba099a",
+          "title": "文本：复习",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "958dcaee-e4a4-4a74-8b6f-482937ba099a",
+            "completed_at": "2019-03-14T08:58:36.737Z",
+            "last_viewed_at": "2019-03-14T08:59:10.285Z",
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Practical Statistics",
+                "uri": "https://d17h27t6h515a5.cloudfront.net/topher/2017/November/5a1c8935_practical-statistics/practical-statistics.zip"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 469658,
+              "key": "844bbe52-4aa9-4d5a-b931-d958ed8cda54",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 复习\n\n以上就是实用统计学的所有内容了！这两节课讲的是多元线性回归和逻辑回归，但你看到的大多数内容已经开始朝 **数据科学** 靠拢了，也就是说，大部分内容已经超越了多数日常 **数据分析** 的范畴了。不过，我希望这两节课的一些挑战给你带来了愉快的体验。\n\n这两节课初步介绍的两种办法——多元线性回归和逻辑回归，只是监督机器学习的一部分。你可以从[优达学城免费课程](https://classroom.udacity.com/courses/ud120)中了解更多，又或者可以在[机器学习纳米学位课程](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009) 中查看项目回顾以及优达学城的社区信息。\n\n在本课中，我们学习了逻辑回归，你学到了：\n\n1. 如何使用 python 来实现逻辑回归，用 statsmodels 和 sklearn 包来预测二元分类反应值。<br><br>\n\n2. 如何解释 statsmodels 逻辑回归输出的系数。<br><br>\n\n3. 如何用多个指标来评估模型效果。<br><br>\n\n4. 如何在 python 里评估模型拟合效果。\n\n你已经学到了很多了！恭喜你！祝你在项目中取得好成绩！\n\n**逻辑回归** 课程中 **抽样分布** 的 notebook 方案和数据可见本页底部。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469671,
+          "key": "2caa48a7-a7f0-4d9a-ad88-12f8cdf739e9",
+          "title": "视频：恭喜",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2caa48a7-a7f0-4d9a-ad88-12f8cdf739e9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469659,
+              "key": "d54872d7-ae93-42d9-943a-22b1281d0d99",
+              "title": "恭喜",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Qy8VYdqoxGA",
+                "china_cdn_id": "Qy8VYdqoxGA.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

@@ -1,0 +1,651 @@
+{
+  "data": {
+    "lesson": {
+      "id": 462350,
+      "key": "7b40dff8-3bcd-4145-8dca-d706ae48bd56",
+      "title": "A/B 测试项目",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "利用所学来理解电子商务网站运营 A/B 测试的结果。你的目标是帮助公司判断他们是否应该设计网站新页面。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Countries",
+            "uri": "https://video.udacity-data.com/topher/2018/April/5ad8ce98_countries/countries.csv"
+          },
+          {
+            "name": "Ab Data",
+            "uri": "https://video.udacity-data.com/topher/2018/April/5ad8ceb3_ab-data/ab-data.csv"
+          },
+          {
+            "name": "Analyze-Ab-Test-Results-Notebook-Zh-0",
+            "uri": "https://video.udacity-data.com/topher/2018/April/5ae2df6a_analyze-ab-test-results-notebook-zh-0/analyze-ab-test-results-notebook-zh-0.ipynb"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": {
+        "key": "37e27304-ad47-4eb0-a1ab-8c12f60e43d0",
+        "version": "1.0.0",
+        "locale": "zh-cn",
+        "duration": 40320,
+        "semantic_type": "Project",
+        "title": "分析 A/B 测试结果",
+        "description": "这一实战项目主要涵盖统计课程知识，希望你在做项目时能全面巩固所有相关知识 。 祝你好运！\n\n### 简介\n\nA / B 测试是数据分析师和数据科学家经常做的工作之一，非常重要。本项目模拟了一家电子商务网站运行的 A / B 测试的结果。你的目标是帮助公司分析并判断他们是否应该运行新的页面，或保留旧的页面，还是应该延长试验时间再来做决策。\n\n在提交项目前需要检查项目是否符合[审阅标准](https://review.udacity.com/#!/rubrics/1331/view)。\n\n-----\n\n如果你看到这个页面，那么你应该已经完成了 Jupyter Notebook 上的所有问题，准备好了一个.html文档的副本。在完成提交之前，请阅读以下几点做最终检查。 如果还没有完成项目，请返回上一页，在你的系统上设置好 Python，然后完成项目。\n\n# 项目审阅标准\n\n你的项目将由一位优达学城的审阅专家根据[项目审阅标准](https://review.udacity.com/#!/rubrics/1331/view)进行评估。提交前请一定仔细阅读，确保你提交的内容符合规范，这也有助于你培养良好的编码习惯。\n\n# 收集提交材料\n\n如果确认不再修改 notebook，你应该将其保存为容易读取的格式。你可以使用__File - > Download as - > HTML（.html）__菜单将 Notebook 保存为.html 文件。如果出现“No module name”错误，请打开终端并尝试使用`pip install <module_name>` 安装缺少的模块（在模块名称中不包括“<”or“>”或其他文字）。\n\n请同时提交原始 Notebook 和 Notebook 的 HTML 或 PDF 副本以供审阅。你不需要在提交中包含任何数据文件。如果你参考了其他网站、书籍和其他资源来帮助你解决项目中的任务，请确保记录在项目中。建议你在 Notebook 报告末尾的 Markdown 单元格中添加“参考资源”部分，或者可以包含一个记录参考文件出处的`readme.txt`文件。\n\n# 提交项目\n\n准备就绪后，你可以点击“提交项目”按钮进入项目提交页面。你可以将文件作为 .zip 压缩文件进行提交，也可以链接到包含项目文件的GitHub 仓库。如果你使用 GitHub，请注意，你提交的内容将是提交时链接仓库的快照。建议你将每个项目保存在一个单独的仓库中，以避免任何混淆的可能。\n\n项目评估一般在一周以内。一旦你提交的项目被审阅，你将收到一封电子邮件。如果你在提交项目时遇到任何问题，或者希望查看提交的状态，请发送电子邮件至 support@youdaxue.com。\n\n中文版Notebook可以通过[这里](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5ae2df6a_analyze-ab-test-results-notebook-zh-0/analyze-ab-test-results-notebook-zh-0.ipynb)下载。（右键->另存为）",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1331",
+        "terminal_project_id": null,
+        "resources": {
+          "files": [],
+          "google_plus_link": null,
+          "career_resource_center_link": null,
+          "coaching_appointments_link": null,
+          "office_hours_link": null,
+          "aws_provisioning_link": null
+        },
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 462343,
+          "key": "342cafa6-73f1-4226-b4ed-0171ff5bf81d",
+          "title": "项目详情",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "342cafa6-73f1-4226-b4ed-0171ff5bf81d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 462337,
+              "key": "8a012e3d-39dc-4a3f-a874-be2ae927d784",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 分析 A/B 测试结果\n\n数据分析师和数据学家经常使用 A/B 测试。如何分析A/B测试结果非常重要。\n\n在这个项目中，我们设定了一个电子商务网站运营 A/B 测试的情境。该公司设计了新网站页面，想提高用户转化率，即购买公司产品的用户数量。你的目标是通过分析来帮助公司决定他们是否应该使用新页面，还是保留原有网页或延长测试时间来进一步观测。\n\n你所需要的数据和 Jupyter Notebook 是可供下载的压缩文件，你可以从资源标签 (以及下面的 \"辅助材料\") 中获取。我们也设置了 5 个测试帮助你更好地完成项目。你可以先阅读项目 Notebook，然后返回来做测试。注意，你提交的项目必须满足 [审阅规范](https://review.udacity.com/#!/rubrics/1331/view) 中的所有要求。 ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 462345,
+          "key": "15f9af80-9dde-4358-bbbb-3f7a5fc9659b",
+          "title": "测试 1：导入并查看数据集",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "15f9af80-9dde-4358-bbbb-3f7a5fc9659b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462338,
+              "key": "67802006-4dfc-4265-98ff-6bcd61992380",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "67802006-4dfc-4265-98ff-6bcd61992380",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "导入并查看数据，将正确答案拖入右边的框里进行匹配。"
+                },
+                "concepts_label": "问题",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "数据集的行数",
+                    "correct_answer": {
+                      "id": "a1506393510915",
+                      "text": "294478"
+                    }
+                  },
+                  {
+                    "text": "数据集的用户数量（不同的user_id数）",
+                    "correct_answer": {
+                      "id": "a1506393606136",
+                      "text": "290584"
+                    }
+                  },
+                  {
+                    "text": "转化用户的占比",
+                    "correct_answer": {
+                      "id": "a1506393616428",
+                      "text": "12%"
+                    }
+                  },
+                  {
+                    "text": "`new_page` 和 `treatment` 不匹配的次数",
+                    "correct_answer": {
+                      "id": "a1506393666511",
+                      "text": "3893"
+                    }
+                  },
+                  {
+                    "text": "是否有任何行空缺数值",
+                    "correct_answer": {
+                      "id": "a1506473150717",
+                      "text": "否"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1506473171347",
+                    "text": "是"
+                  },
+                  {
+                    "id": "a1506393666511",
+                    "text": "3893"
+                  },
+                  {
+                    "id": "a1506393510915",
+                    "text": "294478"
+                  },
+                  {
+                    "id": "a1506396283773",
+                    "text": "201012"
+                  },
+                  {
+                    "id": "a1506396274027",
+                    "text": "0.1%"
+                  },
+                  {
+                    "id": "a1506393606136",
+                    "text": "290584"
+                  },
+                  {
+                    "id": "a1506473150717",
+                    "text": "否"
+                  },
+                  {
+                    "id": "a1506393616428",
+                    "text": "12%"
+                  },
+                  {
+                    "id": "a1506396297978",
+                    "text": "4823"
+                  },
+                  {
+                    "id": "a1506396265076",
+                    "text": "10%"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 462344,
+          "key": "3535df99-d7d1-4c24-816c-4b5586ed9d7a",
+          "title": "测试 2：如何处理数据混乱",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3535df99-d7d1-4c24-816c-4b5586ed9d7a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462340,
+              "key": "06868620-c3ca-4a1a-a987-aaee022a92b3",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "06868620-c3ca-4a1a-a987-aaee022a92b3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果某些行的`landing_page`列 和 `group` 列不匹配，该如何处理？（即，`treatment` 不是匹配 `new_page` 的行或 `control` 不是匹配 `old_page` 的行）",
+                "answers": [
+                  {
+                    "id": "a1506473331366",
+                    "text": "对于那些行的 `group`进行随机赋值，`treatment` 或 `control` 。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506479193622",
+                    "text": "以 `landing_page`列为准，修改`group`值。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506479194428",
+                    "text": "使用 `ab` 一列。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506479195192",
+                    "text": "对所有行都赋值 `control`。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506479254938",
+                    "text": "对所有行赋值 `treatment` 。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506479323834",
+                    "text": "删除这些行，不使用这些混乱数据。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 462346,
+          "key": "2538f32f-2c0f-47d9-a42c-fd7ee359f156",
+          "title": "测试 3：查看更新后的数据集",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2538f32f-2c0f-47d9-a42c-fd7ee359f156",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462339,
+              "key": "461b23b3-1ad4-45fd-a2d6-bddf34781704",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "461b23b3-1ad4-45fd-a2d6-bddf34781704",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "查看更新后的数据集，将正确答案拖入右边的框中进行匹配。"
+                },
+                "concepts_label": "问题",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "df2 的用户数量（不同的 `user_id`）。",
+                    "correct_answer": {
+                      "id": "a1506468417140",
+                      "text": "290584"
+                    }
+                  },
+                  {
+                    "text": "df2 中有一个重复的 user_id，是什么？",
+                    "correct_answer": {
+                      "id": "a1506468467666",
+                      "text": "773192"
+                    }
+                  },
+                  {
+                    "text": "这个重复的 user_id 对应的`landing_page`信息是什么 ？",
+                    "correct_answer": {
+                      "id": "a1506468491177",
+                      "text": "new_page"
+                    }
+                  },
+                  {
+                    "text": "这个重复的 user_id 对应的`group`信息是什么 ？",
+                    "correct_answer": {
+                      "id": "a1506469338079",
+                      "text": "treatment"
+                    }
+                  },
+                  {
+                    "text": "这个重复的 user_id 对应的`converted`数值是什么 ？",
+                    "correct_answer": {
+                      "id": "a1506469366938",
+                      "text": "0"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1506469338079",
+                    "text": "treatment"
+                  },
+                  {
+                    "id": "a1506469710424",
+                    "text": "control"
+                  },
+                  {
+                    "id": "a1506469700310",
+                    "text": "1"
+                  },
+                  {
+                    "id": "a1506468491177",
+                    "text": "new_page"
+                  },
+                  {
+                    "id": "a1506469366938",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1506469716006",
+                    "text": "186389"
+                  },
+                  {
+                    "id": "a1506469706001",
+                    "text": "old_page"
+                  },
+                  {
+                    "id": "a1506468467666",
+                    "text": "773192"
+                  },
+                  {
+                    "id": "a1506468417140",
+                    "text": "290584"
+                  },
+                  {
+                    "id": "a1506469729007",
+                    "text": "4472259874"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 462348,
+          "key": "2d61ddd8-73ac-495a-8431-3b3c4d5cb820",
+          "title": "测试 4：概率分析",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2d61ddd8-73ac-495a-8431-3b3c4d5cb820",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462341,
+              "key": "faf65f7c-7cbd-4185-ac98-e5e2b24b18d9",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "faf65f7c-7cbd-4185-ac98-e5e2b24b18d9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "将正确答案拖入右边的框里进行匹配。"
+                },
+                "concepts_label": "问题",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "用户转化的总体概率",
+                    "correct_answer": {
+                      "id": "a1507174584688",
+                      "text": "0.1196"
+                    }
+                  },
+                  {
+                    "text": "Control 组的用户转化率",
+                    "correct_answer": {
+                      "id": "a1507175167886",
+                      "text": "0.1204"
+                    }
+                  },
+                  {
+                    "text": "Treatment 组的用户转化率",
+                    "correct_answer": {
+                      "id": "a1507175207761",
+                      "text": "0.1188"
+                    }
+                  },
+                  {
+                    "text": "用户收到 new page 的概率。",
+                    "correct_answer": {
+                      "id": "a1507175233601",
+                      "text": "0.5001"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507175233601",
+                    "text": "0.5001"
+                  },
+                  {
+                    "id": "a1507175269255",
+                    "text": "0.6432"
+                  },
+                  {
+                    "id": "a1507174584688",
+                    "text": "0.1196"
+                  },
+                  {
+                    "id": "a1507175167886",
+                    "text": "0.1204"
+                  },
+                  {
+                    "id": "a1507175283985",
+                    "text": "0.003"
+                  },
+                  {
+                    "id": "a1507175207761",
+                    "text": "0.1188"
+                  },
+                  {
+                    "id": "a1507175273997",
+                    "text": "1.0"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 462347,
+          "key": "e352d3f5-9e8f-4b92-b7df-1723f73c59b9",
+          "title": "问题 5：假设检验",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e352d3f5-9e8f-4b92-b7df-1723f73c59b9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 462342,
+              "key": "ff9721f3-d64b-4083-875a-e6d512d70d6a",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "ff9721f3-d64b-4083-875a-e6d512d70d6a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "你可以在这里验证你的 ** 第 II 部分 问题 2** 答案。将正确答案拖入右边的框里进行匹配。"
+                },
+                "concepts_label": "问题",
+                "answers_label": "答案",
+                "concepts": [
+                  {
+                    "text": "零假设下的 **p_new** 是多少？",
+                    "correct_answer": {
+                      "id": "a1507175439246",
+                      "text": "0.1196"
+                    }
+                  },
+                  {
+                    "text": "零假设下的 **p_old** 是多少？",
+                    "correct_answer": {
+                      "id": "a1507175622857",
+                      "text": "0.1196"
+                    }
+                  },
+                  {
+                    "text": "**n_new** 是多少？",
+                    "correct_answer": {
+                      "id": "a1507175654204",
+                      "text": "145310"
+                    }
+                  },
+                  {
+                    "text": "**n_old** 是多少？",
+                    "correct_answer": {
+                      "id": "a1507175671349",
+                      "text": "145274"
+                    }
+                  },
+                  {
+                    "text": "零假设下的 **p_new 与 p_old** 的差异值是多少？（ **p_new - p_old** ）",
+                    "correct_answer": {
+                      "id": "a1507175676990",
+                      "text": "0"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1507175654204",
+                    "text": "145310"
+                  },
+                  {
+                    "id": "a1507175671349",
+                    "text": "145274"
+                  },
+                  {
+                    "id": "a1507175889048",
+                    "text": "0.12039"
+                  },
+                  {
+                    "id": "a1507175871005",
+                    "text": "0.1188"
+                  },
+                  {
+                    "id": "a1507175893499",
+                    "text": "0.0016"
+                  },
+                  {
+                    "id": "a1507175778641",
+                    "text": "0.12039"
+                  },
+                  {
+                    "id": "a1507175439246",
+                    "text": "0.1196"
+                  },
+                  {
+                    "id": "a1507175676990",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1507175932522",
+                    "text": "-0.0016"
+                  },
+                  {
+                    "id": "a1507175622857",
+                    "text": "0.1196"
+                  },
+                  {
+                    "id": "a1507175792375",
+                    "text": "0.1188"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 698711,
+          "key": "b9170bf2-4481-4190-94f2-116577eee21e",
+          "title": "A/B 测试工作区",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b9170bf2-4481-4190-94f2-116577eee21e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 698716,
+              "key": "09736e39-f768-4ba0-a79c-ff26ef3c78e0",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewem5u1rbs6hs",
+              "pool_id": "jupyter",
+              "view_id": "jupyter-4hby5yh1id6",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowGrade": false,
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/analyze-ab-test-results-notebook-zh-0.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

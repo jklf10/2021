@@ -1,0 +1,3095 @@
+{
+  "data": {
+    "lesson": {
+      "id": 469635,
+      "key": "49462f74-b030-4bb6-bf67-8281c9181404",
+      "title": "多元线性回归",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "学习在 python 里应用多元线性回归、解释回归结果并判断模型拟合效果。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/49462f74-b030-4bb6-bf67-8281c9181404/469635/1544461273297/%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/49462f74-b030-4bb6-bf67-8281c9181404/469635/1544461266594/%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92+Subtitles.zip"
+          },
+          {
+            "name": "13 MLR",
+            "uri": "https://video.udacity-data.com/topher/2017/November/5a1a2cdc_13-mlr/13-mlr.zip"
+          },
+          {
+            "name": "Data",
+            "uri": "https://video.udacity-data.com/topher/2017/November/5a1a2d07_data/data.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 469586,
+          "key": "aed0973e-5233-4f90-800d-e6dd32b63a04",
+          "title": "视频：简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aed0973e-5233-4f90-800d-e6dd32b63a04",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469500,
+              "key": "335209a9-805a-466a-a250-814d82c2033d",
+              "title": "多元线性回归简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "b26v8HK-8-o",
+                "china_cdn_id": "b26v8HK-8-o.mp4"
+              }
+            },
+            {
+              "id": 469502,
+              "key": "ddf6e691-2891-46be-b109-50cc8f63b5cb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[统计学习简介](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf)全文请见链接。\n\n其中，第 3 章探讨了本课涉及的许多概念。文本涉及的编程操作均是在 R 中进行的，但本课程会继续使用 Python 来进行编程。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469585,
+          "key": "761ba542-6c1a-45a0-a04b-588871ef07ce",
+          "title": "视频：多元线性回归",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "761ba542-6c1a-45a0-a04b-588871ef07ce",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469503,
+              "key": "2af70b60-3aa4-4d5c-83bd-b0014c6ae49b",
+              "title": "多元线性回归",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rvYZp99nj6c",
+                "china_cdn_id": "rvYZp99nj6c.mp4"
+              }
+            },
+            {
+              "id": 469504,
+              "key": "8a766a95-6dde-40d0-bc8a-837bb8669aad",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "若想进修，可观看[可汗学院线性代数免费课程](https://www.khanacademy.org/math/linear-algebra)。\n\n本课程的课外材料也有线性代数和 numpy 进修课程可供学习。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469589,
+          "key": "ccd132fe-6af6-42fe-8b26-4bf1584eb9e9",
+          "title": "录屏视频：拟合多元线性回归模型",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ccd132fe-6af6-42fe-8b26-4bf1584eb9e9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469513,
+              "key": "c47f3115-7374-459d-9e88-5f341cfeaeeb",
+              "title": "拟合多元线性回归模型",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EZNvBF66_b0",
+                "china_cdn_id": "EZNvBF66_b0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469590,
+          "key": "0d51be5a-1be5-4035-ad5f-1dcd49129566",
+          "title": "Notebook + 练习：拟合多元线性回归模型",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0d51be5a-1be5-4035-ad5f-1dcd49129566",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543093,
+              "key": "515ecb3c-0bae-4b23-8e18-20c76a3aa2b8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view23709feb",
+              "pool_id": "jupyter",
+              "view_id": "23709feb-8dd2-4d47-af0c-23690b58b141",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Multiple_Linear_Regression_Introduction-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469515,
+              "key": "387dc94d-c9ec-4139-b3d2-f480eb7cbf3a",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "387dc94d-c9ec-4139-b3d2-f480eb7cbf3a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "根据简单线性回归模型的结果，判断每个变量与预测价格是否具统计显著性，选出正确答案。"
+                },
+                "concepts_label": "变量",
+                "answers_label": "是否具有统计显著性",
+                "concepts": [
+                  {
+                    "text": "卧室",
+                    "correct_answer": {
+                      "id": "a1510601746581",
+                      "text": "具有统计显著性"
+                    }
+                  },
+                  {
+                    "text": "浴室",
+                    "correct_answer": {
+                      "id": "a1510602055310",
+                      "text": "具有统计显著性"
+                    }
+                  },
+                  {
+                    "text": "面积",
+                    "correct_answer": {
+                      "id": "a1510602062193",
+                      "text": "具有统计显著性"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1510602055310",
+                    "text": "具有统计显著性"
+                  },
+                  {
+                    "id": "a1510602149379",
+                    "text": "无统计显著性"
+                  },
+                  {
+                    "id": "a1510602062193",
+                    "text": "具有统计显著性"
+                  },
+                  {
+                    "id": "a1510601746581",
+                    "text": "具有统计显著性"
+                  },
+                  {
+                    "id": "a1510602161643",
+                    "text": "无统计显著性"
+                  },
+                  {
+                    "id": "a1510602159761",
+                    "text": "无统计显著性"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469516,
+              "key": "3177210b-ff38-4aa4-b869-0503e3d8116f",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3177210b-ff38-4aa4-b869-0503e3d8116f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果把三个简单线性回归模型的决定系数加起来，会有什么结果？",
+                "answers": [
+                  {
+                    "id": "a1510602511742",
+                    "text": "小于 1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510602944698",
+                    "text": "刚好等于 1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510602951714",
+                    "text": " 大于 1",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510602956430",
+                    "text": "我们无从得知。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469517,
+              "key": "4f587b55-60ca-4e00-9e40-987427fbba97",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4f587b55-60ca-4e00-9e40-987427fbba97",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "用所有变量建立多元线性回归模型，根据模型结果，观察每个变量与预测价格的关系是否有统计显著性，选出正确答案。"
+                },
+                "concepts_label": "变量",
+                "answers_label": "是否具有统计显著性",
+                "concepts": [
+                  {
+                    "text": "卧室",
+                    "correct_answer": {
+                      "id": "a1510604744724",
+                      "text": "无统计显著性"
+                    }
+                  },
+                  {
+                    "text": "浴室",
+                    "correct_answer": {
+                      "id": "a1510604779446",
+                      "text": "无统计显著性"
+                    }
+                  },
+                  {
+                    "text": "面积",
+                    "correct_answer": {
+                      "id": "a1510604782795",
+                      "text": "具有统计显著性"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1510604744724",
+                    "text": "无统计显著性"
+                  },
+                  {
+                    "id": "a1510604798126",
+                    "text": "具有统计显著性"
+                  },
+                  {
+                    "id": "a1510604799510",
+                    "text": "具有统计显著性"
+                  },
+                  {
+                    "id": "a1510604779446",
+                    "text": "无统计显著性"
+                  },
+                  {
+                    "id": "a1510604782795",
+                    "text": "具有统计显著性"
+                  },
+                  {
+                    "id": "a1510604801140",
+                    "text": "无统计显著性"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469518,
+              "key": "d7e39cc8-92b8-4577-a8b0-fad3080264f6",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d7e39cc8-92b8-4577-a8b0-fad3080264f6",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "把所有变量添加到一个多元线性回归模型中，你会得到什么样的决定系数？请选出正确答案。",
+                "answers": [
+                  {
+                    "id": "a1510605592656",
+                    "text": "小于 1。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510605691162",
+                    "text": "刚好等于 1。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510605700803",
+                    "text": "大于 1。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510605706658",
+                    "text": "我们无从得知。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469519,
+              "key": "47431bee-0a79-4693-a9fe-7219f4991380",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "47431bee-0a79-4693-a9fe-7219f4991380",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "把 **风格** 加入到多元线性回归模型中，会出现如下的结果：",
+                "answers": [
+                  {
+                    "id": "a1510606134940",
+                    "text": "模型里会多了一个与风格有关的系数。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510606169482",
+                    "text": "模型里会多了若干与每个风格水平有关的系数。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510606181784",
+                    "text": "模型是拟合的，但统计汇总没有输出。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510606211571",
+                    "text": "出错了，因为不能把对象放到多元线性回归模型中。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469591,
+          "key": "76b1a9e9-0cc5-40f8-a45d-a189cab90d6e",
+          "title": "录屏视频 + 文本：多元线性回归的工作原理是什么？",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "76b1a9e9-0cc5-40f8-a45d-a189cab90d6e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469520,
+              "key": "b984db71-e228-4df6-95cf-2ebaf38e046b",
+              "title": "多元线性回归的工作原理是什么？",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bvM6eUYyurA",
+                "china_cdn_id": "bvM6eUYyurA.mp4"
+              }
+            },
+            {
+              "id": 469521,
+              "key": "2c53b58b-af53-40e3-a039-8dca49d327df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "视频末尾提及的文本见下方。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469522,
+              "key": "dfdee63f-15a1-4c77-9915-75f6f308da33",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 在多元线性回归里，我们要如何找到 “正确” 的系数\n\n在简单线性回归那一节中，你知道了我们为什么要最小化每个实际数据点与模型预测值之间的平方距离。\n\n但在多元线性回归中，我们要找的数据点所处的空间实际上不仅仅是二维的。\n\n总而言之，重点在于我们可以计算 <span class=\"mathquill\">(X'X)^-X'y</span> ，从而找出最优 <span class=\"mathquill\">\\beta</span> 预测值。\n\n在接下来的视频中，你将使用 statsmodel 来求得系数，这些系数会与上一概念涉及的系数相似，但你还要用上述等式来解出该系数，证明所得系数不是凭空捏造出来的。\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469587,
+          "key": "c7377454-d8cc-4d9e-b90a-ab16bbe1f76e",
+          "title": "视频：多元线性回归的模型结果",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c7377454-d8cc-4d9e-b90a-ab16bbe1f76e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469505,
+              "key": "5d8ff0f2-3a77-4a1c-9f17-5da7e5d0f9fd",
+              "title": "多元线性回归的模型结果",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "qRD3OVX8UMM",
+                "china_cdn_id": "qRD3OVX8UMM.mp4"
+              }
+            },
+            {
+              "id": 469506,
+              "key": "5e995d30-437a-4282-8bc9-b1b9c4fa66c4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " 在本视频中，所有系数都为正值，因此我们可以将各系数解释为： **在模型其它变量不变的情况下，解释变量每增加一个单位，反应变量会随之增加的预测幅度。**\n\n不过，一般来说，系数可能是正值，也可能是负值，因此，每个系数都是 “在模型其它变量不变的情况下，解释变量每增加一个单位，反应变量会随之发生的预测 **变化**”。 \n\n这个解释和你在上一节课看到的十分相似，只是多了很简单的一句：**“在其它变量不变的情况下”**，也就是说，只有当与系数有关的变量增加 1，反应变量才会变化，但其它变量都不会变化。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469588,
+          "key": "3a7ff57b-a8f5-4ec6-9344-bf2dfa60ff8b",
+          "title": "练习：解释多元线性回归的系数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3a7ff57b-a8f5-4ec6-9344-bf2dfa60ff8b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469507,
+              "key": "8c244d65-0c24-46d2-96f8-2161b9778eef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解释与定量变量有关的系数\n\n接下来我们要开始接触同时涉及数学、代码和现实三者的材料了。在探讨代码问题之前，我们得先解决所有基本问题，这一点很重要。 ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469508,
+              "key": "77e77479-1745-448f-9a6c-3b2d818d130b",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "77e77479-1745-448f-9a6c-3b2d818d130b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "假设我们要根据某公司的会计信息来预测某支股票的价格，请将下列变量类别分别拖拽到相应的变量名旁边。"
+                },
+                "concepts_label": "变量名",
+                "answers_label": "变量类别",
+                "concepts": [
+                  {
+                    "text": "雇员数",
+                    "correct_answer": {
+                      "id": "a1512494352319",
+                      "text": "定量变量"
+                    }
+                  },
+                  {
+                    "text": "总部所在国家",
+                    "correct_answer": {
+                      "id": "a1512494433527",
+                      "text": "分类变量"
+                    }
+                  },
+                  {
+                    "text": "公司所在行业",
+                    "correct_answer": {
+                      "id": "a1512494459027",
+                      "text": "分类变量"
+                    }
+                  },
+                  {
+                    "text": "资产总值",
+                    "correct_answer": {
+                      "id": "a1512494465886",
+                      "text": "定量变量"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1512494659743",
+                    "text": "分类变量"
+                  },
+                  {
+                    "id": "a1512494459027",
+                    "text": "分类变量"
+                  },
+                  {
+                    "id": "a1512494672187",
+                    "text": "定量变量"
+                  },
+                  {
+                    "id": "a1512494667927",
+                    "text": "定量变量"
+                  },
+                  {
+                    "id": "a1512494663660",
+                    "text": "分类变量"
+                  },
+                  {
+                    "id": "a1512494433527",
+                    "text": "分类变量"
+                  },
+                  {
+                    "id": "a1512494465886",
+                    "text": "定量变量"
+                  },
+                  {
+                    "id": "a1512494352319",
+                    "text": "定量变量"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469509,
+              "key": "ff2043b2-c70f-4cf0-ad77-768e8430e4a4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ### 想象一下……\n\n我们要从上述四个方面入手，建立一个线性模型，如果要预测的是每个公司的股价，根据你到目前为止学到的知识，你觉得可以往模型里加入哪些变量？",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469510,
+              "key": "e7046d12-7571-429a-a270-43655bf1b1d5",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e7046d12-7571-429a-a270-43655bf1b1d5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "就你目前所学的知识来看，下列变量中，哪些可以直接放到多元线性回归模型里？请在正确答案前打钩。",
+                "answers": [
+                  {
+                    "id": "a1512494713697",
+                    "text": "雇员数",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512494778696",
+                    "text": "总部所在国家",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512494792847",
+                    "text": "公司所在行业",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512494800608",
+                    "text": " 资产总值",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469512,
+              "key": "6d6037bc-e1da-412b-924c-58eff416cd2a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 想象一下……\n\n我们用 <span class=\"mathquill\">x_1</span> ，即 **雇员数** 和 <span class=\"mathquill\">x_2</span>，即 **资产总值** 来拟合一个多元线性回归模型，从而预测 <span class=\"mathquill\">y</span> ，即 **股价**。\n\n我们的线性模型结构如下：\n\n<span class=\"mathquill\">\\hat{y} = b_0 + b_1x_1 + b_2x_2</span>\n\n其中：\n\n* <span class=\"mathquill\">b_0 = -3.20 </span>\n* <span class=\"mathquill\">b_1 =  0.60 </span>\n* <span class=\"mathquill\">b_2 =  0.24 </span>\n\n根据上述信息，回答下列练习的问题。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469511,
+              "key": "5ba915db-3ec4-485f-839d-fcd6f6860c13",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5ba915db-3ec4-485f-839d-fcd6f6860c13",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据多元线性回归模型的结果，下列哪个解释是正确的？请在正确选项前打钩。",
+                "answers": [
+                  {
+                    "id": "a1512495906793",
+                    "text": "如果某公司没有雇员也没有资产，那我们预测其股价为 -3.20。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512495997572",
+                    "text": "在资产总值不变的情况下，我们预测某公司每增加一位雇员，其股价就会上升 0.60。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512496073525",
+                    "text": "在雇员数不变的情况下，我们预测资产总值每增加一个单位，股价就会上升 0.24。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512496124368",
+                    "text": "我们可以接着往模型里添加变量，这些系数的解释基本不受影响，但在解释时，我们需要在 “保持不变” 的部分中添加新增的变量。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469592,
+          "key": "46600ea0-fda4-45ab-a555-3a9ecc71fecb",
+          "title": "视频：虚拟变量",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "46600ea0-fda4-45ab-a555-3a9ecc71fecb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469523,
+              "key": "0d6a0242-a5d9-4b49-89c0-23ba413c929d",
+              "title": "虚拟变量",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "-QTgDd-fZuA",
+                "china_cdn_id": "-QTgDd-fZuA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469593,
+          "key": "cc3449d3-0d5c-447c-adb9-4a5b4d391761",
+          "title": "文本：虚拟变量",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cc3449d3-0d5c-447c-adb9-4a5b4d391761",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469524,
+              "key": "ec104339-bbf9-41b0-80fc-8681c615d937",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 虚拟变量的数学原理\n\n在上个视频中，你知道了要往线性模型里添加分类变量，就需要把分类变量转变为 **虚拟变量**。\n\n转化后，你需要舍弃一个 **虚拟列**，才能得到 [满秩](https://www.cds.caltech.edu/~murray/amwiki/index.php/FAQ:_What_does_it_mean_for_a_non-square_matrix_to_be_full_rank%3F) 矩阵。\n\n回想一下回归系数闭式解那节内容，我们得用 <span class=\"mathquill\">(X'X)^-X'y</span> 来预测 <span class=\"mathquill\">\\beta</span> 值。\n\n为了逆转 <span class=\"mathquill\">(X'X)</span>，矩阵 <span class=\"mathquill\">X</span> 一定要是满秩的，也就是说，所有 <span class=\"mathquill\">X</span> 的列都必须线性独立。\n\n创建虚拟变量时，如果你不舍弃掉一列，那你就得不到稳定解，从 python 里得到的结果也不会可靠到哪去。下个概念会有示例，你将从中了解不舍弃一个虚拟列的话，会有什么后果。\n\n本文重点在于 **如果你要用 0 、1 编码来创建虚拟变量，你就得舍弃一个虚拟列，确保所得矩阵是满秩的（这样你从 python 里得到的解才会是可靠的。）**\n\n之所以要这么做，原因就在于线性代数的本质，更具体地说，要逆转矩阵，你手里的矩阵必须是满秩的 （也就是所有列都得线性独立），因此，你得舍弃掉一个虚拟列，方能得到线性独立的各列 （和一个满秩矩阵）。\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469594,
+          "key": "605f3ff7-425a-487f-9946-3f22147718dc",
+          "title": "虚拟变量",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "605f3ff7-425a-487f-9946-3f22147718dc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469525,
+              "key": "41b842e7-9a87-4079-bd38-17da100a1e60",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "41b842e7-9a87-4079-bd38-17da100a1e60",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果你想往回归模型里添加一个分类变量，说明路灯的颜色：**红色**、 **黄色** 以及 **绿色**，那你要往线性回归模型里添加多少个虚拟变量列呢？",
+                "answers": [
+                  {
+                    "id": "a1512497823173",
+                    "text": "1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512497827143",
+                    "text": "2",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512497828713",
+                    "text": "3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512497830262",
+                    "text": "4",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469526,
+              "key": "9a6273c8-c368-4a02-9565-a4478d82e549",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9a6273c8-c368-4a02-9565-a4478d82e549",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果有这么个分类变量，变量有两个水平，分别为 **是** 和 **不是**，请问要使用该变量的话，需要往线性模型里添加多少个虚拟变量呢？",
+                "answers": [
+                  {
+                    "id": "a1512498195812",
+                    "text": "1",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512498259173",
+                    "text": "2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512498262498",
+                    "text": "3",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469527,
+              "key": "55005327-e4c9-48bd-b507-7f3958d9835c",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "55005327-e4c9-48bd-b507-7f3958d9835c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "想象你是餐厅老板，餐厅的评级有：很好、好、还行、差、很差。你想根据这个评级来了解小费情况，所以建立了一个线性模型，那么请问 **你的模型里总共有多少个系数？**",
+                "answers": [
+                  {
+                    "id": "a1512497862913",
+                    "text": "3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512498004853",
+                    "text": "4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1512498006299",
+                    "text": "5",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512498007801",
+                    "text": "6",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469528,
+              "key": "24b4f58d-9f28-43a6-9a82-396a5de40981",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "24b4f58d-9f28-43a6-9a82-396a5de40981",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "关于我们加入多元线性回归模型的虚拟变量，下列哪些说法是正确的？其中， X 代表之前录屏视频定义的 X 矩阵。**请勾选所有正确选项。**",
+                "answers": [
+                  {
+                    "id": "a1512499139642",
+                    "text": "要加入 X 矩阵的虚拟变量数总是等于相应分类变量水平数减 1 的值。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512499151556",
+                    "text": "之所以要舍弃一个虚拟变量，是为了保证所有列都是线性独立的。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512499160805",
+                    "text": "之所以要舍弃一个虚拟变量，是为了保证 X'X 的数量积是可逆的。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1512499169738",
+                    "text": "之所以要舍弃一个虚拟变量，是为了保证 X 是满秩矩阵。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469595,
+          "key": "2d6fdb24-ce3b-4893-a6ba-46d551eba7a6",
+          "title": "录屏视频：虚拟变量",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2d6fdb24-ce3b-4893-a6ba-46d551eba7a6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469529,
+              "key": "7c825579-4b26-46fb-8e1f-2b26998797d7",
+              "title": "虚拟变量",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TxP_TD0kbOo",
+                "china_cdn_id": "TxP_TD0kbOo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469596,
+          "key": "d8903a98-7fde-4e1b-823e-2edc0e296864",
+          "title": "Notebook + 练习：虚拟变量",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d8903a98-7fde-4e1b-823e-2edc0e296864",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543094,
+              "key": "c3079dff-13a2-4db3-b4cc-c9803ea6af6a",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewd26584f3",
+              "pool_id": "jupyter",
+              "view_id": "d26584f3-a9a1-4d30-b2f2-e597068c3236",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/DummyVariables-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469531,
+              "key": "d914053c-1270-44e2-b778-4e7c0a249b82",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d914053c-1270-44e2-b778-4e7c0a249b82",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据第 1 个问题得出的线性模型结果，勾选出下列所有的正确选项。",
+                "answers": [
+                  {
+                    "id": "a1510616512740",
+                    "text": "截距的置信区间在一个非常非常大的负数与一个非常非常大的正数之间。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510616648849",
+                    "text": " A 住宅区斜率的置信区间在一个非常非常大的负数与一个非常非常大的正数之间。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510616683972",
+                    "text": "B 住宅区斜率的置信区间在一个非常非常大的负数与一个非常非常大的正数之间。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510616694235",
+                    "text": "C 住宅区斜率的置信区间在一个非常非常大的负数与一个非常非常大的正数之间。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469532,
+              "key": "38116d3f-21e6-4162-ad15-231cd640e388",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "38116d3f-21e6-4162-ad15-231cd640e388",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "根据第 2 个问题得出的多元线性回归模型的结果，比较不同住宅区住宅之间的差异，选出与各住宅区相匹配的描述。"
+                },
+                "concepts_label": "住宅区",
+                "answers_label": "描述",
+                "concepts": [
+                  {
+                    "text": "A",
+                    "correct_answer": {
+                      "id": "a1510617531555",
+                      "text": "本住宅区的平均房价是三个住宅区中 **第二** 贵的。"
+                    }
+                  },
+                  {
+                    "text": "B",
+                    "correct_answer": {
+                      "id": "a1510617829908",
+                      "text": "本住宅区的平均房价是 **最** 贵的。"
+                    }
+                  },
+                  {
+                    "text": "C",
+                    "correct_answer": {
+                      "id": "a1510617833157",
+                      "text": "本住宅区的平均房价是 **最不** 贵的。"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1510617531555",
+                    "text": "本住宅区的平均房价是三个住宅区中 **第二** 贵的。"
+                  },
+                  {
+                    "id": "a1510617829908",
+                    "text": "本住宅区的平均房价是 **最** 贵的。"
+                  },
+                  {
+                    "id": "a1510617833157",
+                    "text": "本住宅区的平均房价是 **最不** 贵的。"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469533,
+              "key": "62a37d7d-1347-41de-81c5-e87cf337e11c",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "62a37d7d-1347-41de-81c5-e87cf337e11c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据 notebook 问题 2 里得出的结果，从下列说法中选出正确答案。",
+                "answers": [
+                  {
+                    "id": "a1510618139991",
+                    "text": "具有统计显著性的证据表明： B 住宅区的平均房价不同于 A 住宅区的平均房价",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510618313918",
+                    "text": "具有统计显著性的证据表明：A 住宅区的平均房价不同于 C 住宅区的平均房价。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510618341650",
+                    "text": "具有统计显著性的证据表明：B 住宅区的平均房价不同于 C 住宅区的平均房价。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469534,
+              "key": "3f476ce2-a587-4105-8581-09efa741f3aa",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3f476ce2-a587-4105-8581-09efa741f3aa",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "根据上面问题 4 得到的多元线性回归模型的结果，按描述选出相应的数值。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "______% 的价格变动可由基于卧室、浴室、住宅区和住宅风格四个变量而创建的线性模型来解释。",
+                    "correct_answer": {
+                      "id": "a1510620660399",
+                      "text": "80.9"
+                    }
+                  },
+                  {
+                    "text": "其它变量不变的情况下，一间住宅每增加一个卧室，我们就可预测其价格会增加 ______。",
+                    "correct_answer": {
+                      "id": "a1510621041115",
+                      "text": "173200"
+                    }
+                  },
+                  {
+                    "text": "其它变量不变的情况下，一间住宅每增加一个浴室，我们就可预测其价格会增加 ______。",
+                    "correct_answer": {
+                      "id": "a1510621110506",
+                      "text": "99960"
+                    }
+                  },
+                  {
+                    "text": "其它条件不变的情况下，我们预测维多利亚式住宅价格要比 ______ 住宅多 ______。",
+                    "correct_answer": {
+                      "id": "a1510621855436",
+                      "text": "ranch, 70560"
+                    }
+                  },
+                  {
+                    "text": "其它条件不变的情况下，我们预测 C 住宅区的房价要比 ______ 住宅区的房价少 ______。",
+                    "correct_answer": {
+                      "id": "a1510621864683",
+                      "text": "7168, A"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1510621835752",
+                    "text": "9996"
+                  },
+                  {
+                    "id": "a1510621864683",
+                    "text": "7168, A"
+                  },
+                  {
+                    "id": "a1510626959931",
+                    "text": "7168,  B"
+                  },
+                  {
+                    "id": "a1510620660399",
+                    "text": "80.9"
+                  },
+                  {
+                    "id": "a1510626950363",
+                    "text": "70560, lodge"
+                  },
+                  {
+                    "id": "a1510621855436",
+                    "text": "ranch, 70560"
+                  },
+                  {
+                    "id": "a1510621041115",
+                    "text": "173200"
+                  },
+                  {
+                    "id": "a1510621049229",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1510621110506",
+                    "text": "99960"
+                  },
+                  {
+                    "id": "a1510621044736",
+                    "text": "8.1"
+                  },
+                  {
+                    "id": "a1510621829403",
+                    "text": "17320"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469597,
+          "key": "4491b470-6c2b-4662-81b8-8b3d3f4390c5",
+          "title": "视频：复习虚拟变量",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4491b470-6c2b-4662-81b8-8b3d3f4390c5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469535,
+              "key": "308b6f11-1c3f-479e-8ff4-bf786abbe81f",
+              "title": "复习虚拟变量",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "r7Lek8rsIcg",
+                "china_cdn_id": "r7Lek8rsIcg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469598,
+          "key": "9814e26c-2845-4d09-bf4f-c8d0b4a417de",
+          "title": "【选修】 Notebook + 练习：其它编码",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9814e26c-2845-4d09-bf4f-c8d0b4a417de",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469536,
+              "key": "63eeda43-177a-4766-b8dc-2729740d93cb",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view2ea72d37",
+              "pool_id": "jupyter",
+              "view_id": "2ea72d37-2df0-4359-927d-0e0634eacf47",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/One_Zero_Negative_One%20Coding.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469537,
+              "key": "425c51fc-ef08-4ff7-b3f8-b6d40b9e0223",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "425c51fc-ef08-4ff7-b3f8-b6d40b9e0223",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "根据你在上面拟合的两个模型，请在下列解释空白处填写正确的数值。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "_____% 的价格变动可由住宅风格来解释。",
+                    "correct_answer": {
+                      "id": "a1510767763475",
+                      "text": "33.9"
+                    }
+                  },
+                  {
+                    "text": "不管住宅风格如何，平均房价的预测值都是 _____。",
+                    "correct_answer": {
+                      "id": "a1510768764777",
+                      "text": "642100"
+                    }
+                  },
+                  {
+                    "text": "其它条件不变的情况下，我们预测每座维多利亚式住宅的价格会上涨 ____。",
+                    "correct_answer": {
+                      "id": "a1510769483865",
+                      "text": "本空无解，因为这不是任何系数的解释。"
+                    }
+                  },
+                  {
+                    "text": "其它条件不变的情况下，和乡间小屋相比，我们预测维多利亚式住宅的价格要高 _____。",
+                    "correct_answer": {
+                      "id": "a1510770463763",
+                      "text": "741100"
+                    }
+                  },
+                  {
+                    "text": "其他条件不变的情况下，和平均房价相比，我们预测维多利亚式住宅的价格要高 ______。",
+                    "correct_answer": {
+                      "id": "a1510774019547",
+                      "text": "404000"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1510767763475",
+                    "text": "33.9"
+                  },
+                  {
+                    "id": "a1510768764777",
+                    "text": "642100"
+                  },
+                  {
+                    "id": "a1510774019547",
+                    "text": "404000"
+                  },
+                  {
+                    "id": "a1510770463763",
+                    "text": "741100"
+                  },
+                  {
+                    "id": "a1510769483865",
+                    "text": "本空无解，因为这不是任何系数的解释。"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469538,
+              "key": "9b5786e0-d14e-4048-99d9-04602a70f20d",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9b5786e0-d14e-4048-99d9-04602a70f20d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "要用 1、0 编码预测基准类别，你要用到截距；而用 1、0、-1 编码时，你则得让各分类系数分别乘以 -1，从而填补缺失的分类。知道了这一点，请问用 1、0、-1 编码模型预测出来的乡间小屋平均房价是多少？",
+                "answers": [
+                  {
+                    "id": "a1510778338872",
+                    "text": "305050",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510778662732",
+                    "text": "270100",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510778686577",
+                    "text": "642100",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510778692480",
+                    "text": "Not enough information to find.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469599,
+          "key": "e69f2749-dae6-47ca-a11b-bb88c03fc2c9",
+          "title": "视频：潜在问题",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e69f2749-dae6-47ca-a11b-bb88c03fc2c9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469539,
+              "key": "5b1f4c5a-7d2d-463c-81cf-809c9836f109",
+              "title": "潜在问题",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lGwB6YRThbI",
+                "china_cdn_id": "lGwB6YRThbI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469600,
+          "key": "df69d406-341a-4dd1-827d-31a85e9d8ac1",
+          "title": "文本：线性模型假设",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "df69d406-341a-4dd1-827d-31a85e9d8ac1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469540,
+              "key": "431e0bf3-15b0-45de-94b8-de11041c7289",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 模型假设及相应的解决方法\n\n之前的视频曾提到 [统计学习简介](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf) 一书，其中就提到了如下五个假设：\n\n1. 因变量-自变量关系的非线性\n2. 误差项的相关性\n3. 非恒定方差和正态分布误差\n4. 异常值/高杠杆点\n5. 共线性\n\n本文总结了判断上述问题是否存在的方法以及相应的解决办法。这是统计学家面试时经常提出的问题，但该问题是否有实际意义取决于你创建模型的目的。在接下来的概念中，我们会更仔细地研究某些相关知识点，因为我觉得我们需要额外注意那些，但下方为你列出了各知识点的详尽介绍，我们先来仔细看看下文涉及的每一项。\n\n#### 线性\n\n线性是假设因变量和自变量之间真的存在可用线性模型解释的关系。如果线性假设不为真，那你的预测结果就不会很准确，此外，与系数有关的线性关系也就没什么用了。\n\n为了评估某段线性关系是否合理，一个很实用的方法是做预测值 <span class=\"mathquill\">(\\hat{y})</span> 的残差 <span class=\"mathquill\">(y - \\hat{y})</span> 图。如果图中出现多个曲线部分，那就意味着线性模型实际上可能并不拟合数据，自变量和因变量存在其它关系。创建非线性模型的办法有很多（甚至可以线性模型的形式来创建），其中几种办法会在本课后面的内容中提及。\n\n在本页底部的图片里，这些称为 **偏差** 模型。理想来说，我们想要的是像图片左上角残差图那样的随机散点图。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469541,
+              "key": "f7d6d982-192b-41f9-be90-ec6de021fb14",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### 相关误差\n\n如果我们是随时间变化来收集的数据（比如预测未来股价或利率），或数据与空间有关（如预测洪涝或干旱地区），那就很容易出现相关误差。通常，我们可以用过去数据点提供的信息（针对与时间有关的数据）或用相邻数据点提供的信息（针对与空间有关的数据）来提高预测结果。\n\n不考虑相关误差的主要问题在于：往往你会利用这一相关性，得到更好的未来事件预测数据或空间关联事件预测数据。\n\n要判断是否有相关误差，最常用的方法是观察收集数据的域。要是你不确定的话，你可以试试一个叫 [Durbin-Watson](https://en.wikipedia.org/wiki/Durbin%E2%80%93Watson_statistic) 的检验方法，人们常用该测试来评估误差相关性是否造成问题。还有 [ARIMA 或 ARMA](http://www.statsref.com/HTML/index.html?arima.html) 模型，人们常用这两个模型来利用误差相关性，以便做出更佳预测。\n\n#### 非恒定方差和正态分布误差\n\n你预测的值不同，得到的预测值范围也不同，那就意味着方差不恒定。非恒定方差对预测好坏影响不大，但会导致置信区间和 p 值不准确，这种时候，在预测值接近实际值的那部分区域，系数的置信区间会太泛，而在预测值较远离实际值的区域则会太窄。\n\n通常来说，对数函数（或使用其它反应变量的变换方式）能够 “摆脱” 非恒定方差，而要选择合适的变换方式，我们一般会用 [Box-Cox](http://www.statisticshowto.com/box-cox-transformation/)。\n\n用预测值的残差图也可以评估非恒定方差。在本页底部的图片中，非恒定方差的标签为 **异方差**。理想来说，我们要的是一个有异方差残差的无偏模型（其异方差残差在一定数值范围内保持不变）。\n\n虽然本文并不探讨残差的正态性，如果你想创建可靠的置信区间，正态性回归假设就十分重要了，更多相关信息详见 [这里](http://www.itl.nist.gov/div898/handbook/pri/section2/pri24.htm)。\n\n#### 异常值/杠杆点\n\n异常值和杠杆点是远离数据正常趋势的点。这些点会对你的解造成很大的影响，在现实中，这些点甚至可能是错误的。如果从不同来源收集数据，你就可能在记录或收集过程中造成某些数据值出错。\n\n异常值也可能是准确真实的数据点，而不一定是测量或数据输入错误。在这种情况下，'修复'就会变得更为主观。要如何处理这些异常值往往取决于你的分析目的。线性模型，特别是使用最小二乘法的线性模型，比较容易受到影响，也就是说，大异常值可能会大幅度地左右我们的结果。当然，异常值也有一些解决技巧，也就是我们常说的 **正则化**。本课不会谈及这些技巧，但在 [机器学习纳米学位免费课程](https://classroom.udacity.com/courses/ud120)中，我们对这些技巧做了粗略的介绍。\n\n而在宾夕法尼亚州立大学提供的完整回归课程里，就有特别长的篇幅在探讨杠杆点的问题，详见 [这里](https://onlinecourses.science.psu.edu/stat501/node/336)。\n\n#### 共线性（多重共线性）\n\n如果我们的自变量彼此相关，就会出现多重共线性。多重共线性的一个主要问题在于：它会导致简单线性回归系数偏离我们想要的方向。\n\n要判断是否有多重共线性，最常见的办法是借助二变量图或 **方差膨胀因子 (即 VIFs)**。下一概念我们就要更深入地探讨多重共线性，因而在此不做赘述。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469542,
+              "key": "d32e8be5-39dc-49ec-91e4-080716bd688d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/November/5a0d2a76_resid-plots/resid-plots.gif",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d32e8be5-39dc-49ec-91e4-080716bd688d",
+              "caption": "",
+              "alt": "",
+              "width": 567,
+              "height": 424,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 469601,
+          "key": "11f71035-3e54-43b2-a276-c2c65ebb82c2",
+          "title": "录屏视频：多重共线性与 VIF",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "11f71035-3e54-43b2-a276-c2c65ebb82c2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469543,
+              "key": "ec69fbca-7a46-418f-885b-402abd02dd6b",
+              "title": "多重共线性与 VIF",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wbtrXMusDe8",
+                "china_cdn_id": "wbtrXMusDe8.mp4"
+              }
+            },
+            {
+              "id": 469544,
+              "key": "ad121b6c-1a47-4385-80ad-4b36eefc18ec",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[VIFs](https://etav.github.io/python/vif_factor_python.html) 相关网站以供参考。\n\n在本课程中，同学们只需要了解到多重共线性的原理，以及解决策略即可。其他内容可以作为选修内容。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469602,
+          "key": "f4e0c62f-21ed-437e-a90a-258aebea93ff",
+          "title": "视频：多重共线性与 VIF",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f4e0c62f-21ed-437e-a90a-258aebea93ff",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469545,
+              "key": "cc4d9c91-6319-41b0-a748-ad5663cc3861",
+              "title": "多重共线性与 VIF",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "uiF3UcDWwPI",
+                "china_cdn_id": "uiF3UcDWwPI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469603,
+          "key": "aa9f6f56-8aaf-49c7-a93b-235624a56d3a",
+          "title": "Notebook + 练习：多重共线性与 VIF",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aa9f6f56-8aaf-49c7-a93b-235624a56d3a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543095,
+              "key": "d796b38d-ef32-4cde-a963-cd0c1116ab81",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view8603d417",
+              "pool_id": "jupyter",
+              "view_id": "8603d417-8802-40dc-b926-72d652296171",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Multicollinearity&VIFs-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469547,
+              "key": "b130fcdf-3d76-466c-9ad0-ebd41f178ea5",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b130fcdf-3d76-466c-9ad0-ebd41f178ea5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据第一个问题的散点图矩阵，观察下列说法，选出所有正确选项。",
+                "answers": [
+                  {
+                    "id": "a1510871400117",
+                    "text": "看起来自变量彼此相关。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510871934559",
+                    "text": "看起来最相关的变量是卧室数和浴室数。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510871935293",
+                    "text": "要用这三个变量来预测房价，并不涉及多重共线性的问题。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469548,
+              "key": "0a34997a-ed82-4eed-bde5-f49ec1aa406c",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0a34997a-ed82-4eed-bde5-f49ec1aa406c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "观察你的多元线性回归模型，请选出所有有关模型系数的正确说法。",
+                "answers": [
+                  {
+                    "id": "a1510872742441",
+                    "text": "随着卧室数增加，我们预测房价会上升。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510872800858",
+                    "text": "随着浴室数增加，我们预测房价会上升。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510872813373",
+                    "text": "随着住宅面积的增加，我们预测房价会上升",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469549,
+              "key": "e308324a-0437-464d-a53a-487a9e3be4ba",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e308324a-0437-464d-a53a-487a9e3be4ba",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": " 根据 VIF，下列哪些说法所讲的操作是正确的？",
+                "answers": [
+                  {
+                    "id": "a1510879052094",
+                    "text": "因为所有变量的 VIF 都大于 10，所以我们需要删除模型里的所有变量。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510879112651",
+                    "text": "因为卧室和浴室变量的 VIF 都大于 10，所以我们应该删除卧室和浴室。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1510879131731",
+                    "text": "因为卧室和浴室变量的 VIF 都大于 10，所以我们应该删除卧室或浴室。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510879149369",
+                    "text": "虽然我们可以保留模型里的所有变量，不过各个变量的 VIF 都会很高，而只要删除其中一个变量，就能减小决定系数。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469550,
+              "key": "f80d0deb-6dbc-4e7a-8b27-3a1b53a4c1ca",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f80d0deb-6dbc-4e7a-8b27-3a1b53a4c1ca",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据最终结果，勾选下列所有正确的说法。",
+                "answers": [
+                  {
+                    "id": "a1510879971213",
+                    "text": "现在所有 VIF 都小于 10。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510880030261",
+                    "text": "正如我们所预料的，现在所有系数都是正值了。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1510880048434",
+                    "text": "决定系数有两个数位保持不变，意味着模型里并不需要卧室和浴室同时存在。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469604,
+          "key": "f67b9d0c-8f1a-4b8f-b8a3-25d4dc82a2f5",
+          "title": "【选修】视频：高阶项",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f67b9d0c-8f1a-4b8f-b8a3-25d4dc82a2f5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469551,
+              "key": "5fb9c52c-4d65-4d06-8a6c-5be077f371a9",
+              "title": "交互与高阶项",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "AOfXMiJgo48",
+                "china_cdn_id": "AOfXMiJgo48.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469605,
+          "key": "88806955-71d7-4ac2-a724-f73bbd62f29c",
+          "title": "【选修】录屏视频 + 文本：高阶项",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "88806955-71d7-4ac2-a724-f73bbd62f29c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469552,
+              "key": "7090a386-2d32-400f-b9dc-36757c47a070",
+              "title": "交互与高阶项",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gMHwogzqPOk",
+                "china_cdn_id": "gMHwogzqPOk.mp4"
+              }
+            },
+            {
+              "id": 469553,
+              "key": "0591b610-103a-4a17-917f-f25567a0e086",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 要怎么确定高阶项？\n\n在创建具备 **二阶**、**三阶** 甚至更高阶变量的模型时，基本上我们要看的是解释变量和反应变量的关系里有多少条曲线。\n\n如果像下图一样，图中曲线折了一个弯，那你会想添加一个二阶项到模型里，因为我们可以明显地发现，只用一条线来拟合这个关系并不能得到最佳效果。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469554,
+              "key": "5bb76227-0e8b-4e6a-b5be-74ef12af2484",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/January/58868097_quadraticlinearregression/quadraticlinearregression.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5bb76227-0e8b-4e6a-b5be-74ef12af2484",
+              "caption": "",
+              "alt": "",
+              "width": 541,
+              "height": 435,
+              "instructor_notes": null
+            },
+            {
+              "id": 469555,
+              "key": "0bb40827-f2df-4e47-8e13-58a891dc3f47",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "当解释变量和反应变量的关系折了两个弯，我们就会想添加一个三阶的关系，如下图所示。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 469556,
+              "key": "d5d7721a-67ff-4542-9c47-bdfccb153a22",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/December/5a25c33e_resid2/resid2.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d5d7721a-67ff-4542-9c47-bdfccb153a22",
+              "caption": "https://tamino.wordpress.com/2011/03/31/so-what/",
+              "alt": "",
+              "width": 1024,
+              "height": 667,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 469606,
+          "key": "f99b8016-25fb-4e8f-b312-7dc7cc16daef",
+          "title": "【选修】视频：解释交互项",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f99b8016-25fb-4e8f-b312-7dc7cc16daef",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469557,
+              "key": "c2cf92ea-e084-44a4-9a6b-3cb0fcd209f0",
+              "title": "解释交互项",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "XV6S2srsdxw",
+                "china_cdn_id": "XV6S2srsdxw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469607,
+          "key": "fb7b82f0-47fa-4ec7-a55f-766b52afc361",
+          "title": "【选修】Notebook + 练习：解释模型系数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fb7b82f0-47fa-4ec7-a55f-766b52afc361",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543096,
+              "key": "7a1cf45d-55d3-4d23-8e05-5ed9edbb1c32",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view60be44dc",
+              "pool_id": "jupyter",
+              "view_id": "60be44dc-f0f1-4ae1-b0b9-8ff81bb2befe",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Interpreting_Model_Coefficients-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469559,
+              "key": "cd0171db-6750-4500-94fa-789437457147",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "cd0171db-6750-4500-94fa-789437457147",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "观察第一个模型，根据描述选出相应的值。"
+                },
+                "concepts_label": " 描述",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "其它变量不变的情况下，A 住宅区的房价与 C 住宅区的房价的预测差距。",
+                    "correct_answer": {
+                      "id": "a1511384580853",
+                      "text": "-194.25"
+                    }
+                  },
+                  {
+                    "text": "（其它变量不变的情况下），住宅面积每增加一个单位，我们就预测房价会增加 _____？",
+                    "correct_answer": {
+                      "id": "a1511384808137",
+                      "text": "348.74"
+                    }
+                  },
+                  {
+                    "text": "如果某住宅是乡间小屋，位于 C 住宅区，面积为 0，那我们就会预测出这个房价。",
+                    "correct_answer": {
+                      "id": "a1511384905887",
+                      "text": "-198300"
+                    }
+                  },
+                  {
+                    "text": "其它变量不变的情况下，维多利亚式住宅和乡间小屋式住宅之间的房价预测差距为 _______。",
+                    "correct_answer": {
+                      "id": "a1511385033103",
+                      "text": "乡间小屋要贵 6262.73。"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511384580853",
+                    "text": "-194.25"
+                  },
+                  {
+                    "id": "a1511385722669",
+                    "text": "无法回答"
+                  },
+                  {
+                    "id": "a1511385736673",
+                    "text": "无法回答"
+                  },
+                  {
+                    "id": "a1511384905887",
+                    "text": "-198300"
+                  },
+                  {
+                    "id": "a1511384808137",
+                    "text": "348.74"
+                  },
+                  {
+                    "id": "a1511385033103",
+                    "text": "乡间小屋要贵 6262.73。"
+                  },
+                  {
+                    "id": "a1511385710102",
+                    "text": "维多利亚式住宅要贵 6262.73。"
+                  },
+                  {
+                    "id": "a1511385731307",
+                    "text": "无法回答"
+                  },
+                  {
+                    "id": "a1511385726931",
+                    "text": "无法回答"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469560,
+              "key": "de6abc35-cb7c-48f5-9b22-8f76df03248b",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "de6abc35-cb7c-48f5-9b22-8f76df03248b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "观察第二个模型的结果，根据下列描述选择相应的数值。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "住宅面积每增加一个单位，我们就预测房价会增加 _____。",
+                    "correct_answer": {
+                      "id": "a1511390038504",
+                      "text": "看情况。"
+                    }
+                  },
+                  {
+                    "text": "住宅平方面积每增加一个单位，房价预计会增加 ______。",
+                    "correct_answer": {
+                      "id": "a1511390612423",
+                      "text": "看情况。"
+                    }
+                  },
+                  {
+                    "text": "根据结果来看，你觉得添加一个面积高阶项有利于预测房价吗？",
+                    "correct_answer": {
+                      "id": "a1511390662037",
+                      "text": "不觉得"
+                    }
+                  },
+                  {
+                    "text": "其它变量不变的情况下，牧场式住宅和乡间小屋的房价差别预计为 _______。",
+                    "correct_answer": {
+                      "id": "a1511390828997",
+                      "text": "9917.25"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511390612423",
+                    "text": "看情况。"
+                  },
+                  {
+                    "id": "a1511390038504",
+                    "text": "看情况。"
+                  },
+                  {
+                    "id": "a1511390654120",
+                    "text": "0.0029"
+                  },
+                  {
+                    "id": "a1511390662037",
+                    "text": "不觉得"
+                  },
+                  {
+                    "id": "a1511390962193",
+                    "text": "看情况。"
+                  },
+                  {
+                    "id": "a1511390732279",
+                    "text": "觉得"
+                  },
+                  {
+                    "id": "a1511390828997",
+                    "text": "9917.25"
+                  },
+                  {
+                    "id": "a1511390592206",
+                    "text": "334.01"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469561,
+              "key": "4348f4f6-0564-49ce-998c-ab7685a2cd02",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4348f4f6-0564-49ce-998c-ab7685a2cd02",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据你得出的结果，从下列选项中选出最佳答案。如果回答本问题需要拟合新模型，请尽情拟合。",
+                "answers": [
+                  {
+                    "id": "a1511391472769",
+                    "text": "第一个模型最好，因为它的决定系数高。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511391506112",
+                    "text": "第二个模型最好，因为第一个模型所有的负系数显然是错的。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511391569426",
+                    "text": "第二个最好，因为变量更少些。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511392379218",
+                    "text": "最佳模型可能只涉及面积和一个虚拟变量，该虚拟变量应该是关于 B 住宅区与其它住宅区的比较变量。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469608,
+          "key": "8c0447ee-0f9d-4862-b276-e6e3238f5f0f",
+          "title": "视频：特征工程与特征选择——第一部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8c0447ee-0f9d-4862-b276-e6e3238f5f0f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469562,
+              "key": "fd725e05-b885-4839-8fd6-079c0fe33354",
+              "title": "特征工程与特征选择——第一部分",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kz5aO6dl7Gk",
+                "china_cdn_id": "kz5aO6dl7Gk.mp4"
+              }
+            },
+            {
+              "id": 469563,
+              "key": "d838c52c-8b1f-4dc9-bc5b-9293113c8c66",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Sebastian 和 Katie 讲授的 [这个](https://classroom.udacity.com/courses/ud120) 课程是个很好的学习途径，能帮你更好地理解本课程末尾涉及的许多概念，也对你接下来更深入地理解机器学习很有帮助。'\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469609,
+          "key": "348a16b1-f2ad-4cc6-a118-423483aca3e9",
+          "title": "录屏视频：特征工程与特征选择——第一部分",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "348a16b1-f2ad-4cc6-a118-423483aca3e9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469564,
+              "key": "d0740d4b-f272-4527-ace7-0c5e36e15b51",
+              "title": "特征工程与特征选择",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Lifwq7p7nx4",
+                "china_cdn_id": "Lifwq7p7nx4.mp4"
+              }
+            },
+            {
+              "id": 469565,
+              "key": "d54091a0-029f-4f2e-aaa4-d3935d37a03b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "若要查看有关特征工程的 Sklearn 文献，请点 [这里](http://scikit-learn.org/stable/modules/preprocessing.html)，有关在 pandas 里处理缺失值的其它文献，请点 [这里](https://pandas.pydata.org/pandas-docs/stable/missing_data.html)。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469610,
+          "key": "e351fc4b-27c9-4f6e-86fa-57850de31884",
+          "title": "Notebook + 练习：特征工程与特征选择",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e351fc4b-27c9-4f6e-86fa-57850de31884",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543097,
+              "key": "b47488cc-512f-41fb-9bec-5d94e269efd1",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view5842657c",
+              "pool_id": "jupyter",
+              "view_id": "5842657c-ffc5-40e8-b659-e4e2d120878f",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Feature_Engineering-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469567,
+              "key": "4acdd023-82c7-4ed8-96b5-1ee7a7cf3bbb",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "4acdd023-82c7-4ed8-96b5-1ee7a7cf3bbb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "运行线性模型时，你会得到哪些结果？",
+                "answers": [
+                  {
+                    "id": "a1511490816904",
+                    "text": "出错了，因为缺乏数据，所以算法不能收敛。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1511490869985",
+                    "text": "出错了，这是列中字符串引起的。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511490888318",
+                    "text": "成功了，我们得到了结果。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469568,
+              "key": "71bba253-5256-41ca-b020-be510fbc55ce",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "71bba253-5256-41ca-b020-be510fbc55ce",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "填充好缺失值后，下列哪项说法最符合线性模型的结果？",
+                "answers": [
+                  {
+                    "id": "a1511562071102",
+                    "text": "出错了，因为缺乏数据，所以算法不能收敛。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511562402676",
+                    "text": "出错了，这是列中字符串引起的。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511562403552",
+                    "text": "成功了，我们得到了结果。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469569,
+              "key": "b618c27a-964c-43f2-bac2-f852301e1705",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "b618c27a-964c-43f2-bac2-f852301e1705",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "正则化数据后，观察结果，根据描述选出相应的值。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "在 'x4' 中，所有返回值都是 _____，这是因为每个值都是一样的 （所以都等于平均值）。",
+                    "correct_answer": {
+                      "id": "a1511564726688",
+                      "text": "0"
+                    }
+                  },
+                  {
+                    "text": "列 'x3' 中，最大的值为 _____，意味着它比本列的平均值大 _____ 个标准差。",
+                    "correct_answer": {
+                      "id": "a1511564816757",
+                      "text": "2.2"
+                    }
+                  },
+                  {
+                    "text": "列 'x2' 中，有 _____ 个值等于平均值，我们都知道，这是因为最后的数据框里有这么多个 0。",
+                    "correct_answer": {
+                      "id": "a1511564900176",
+                      "text": "2"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511564954848",
+                    "text": "3"
+                  },
+                  {
+                    "id": "a1511564960259",
+                    "text": "1.4"
+                  },
+                  {
+                    "id": "a1511564726688",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1511564952749",
+                    "text": "1"
+                  },
+                  {
+                    "id": "a1511564816757",
+                    "text": "2.2"
+                  },
+                  {
+                    "id": "a1511564900176",
+                    "text": "2"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469611,
+          "key": "fb5c40e8-0ba2-4088-a5b2-7bf502ed3e60",
+          "title": "视频：模型拟合",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fb5c40e8-0ba2-4088-a5b2-7bf502ed3e60",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469570,
+              "key": "771610ab-876c-4e90-81c1-1b9aaa679bb9",
+              "title": "模型拟合",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OWMjIKUsu4k",
+                "china_cdn_id": "OWMjIKUsu4k.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469612,
+          "key": "a9454a21-b71b-4497-8bda-4e6b6969adfa",
+          "title": "视频：交叉验证",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a9454a21-b71b-4497-8bda-4e6b6969adfa",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469571,
+              "key": "0f7ed157-a024-4e6d-abff-3776a720c128",
+              "title": "交叉验证",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kMd8isOBW1k",
+                "china_cdn_id": "kMd8isOBW1k.mp4"
+              }
+            },
+            {
+              "id": 469572,
+              "key": "d649f371-64e1-41ca-93e5-0e502de353f5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "下一个概念 k 折交叉验证由 Sebastian 的视频讲解，这也属于优达学城的免费课程，你可以点 [这里](https://classroom.udacity.com/courses/ud120) 来学习该课程。本课由 Katie 讲授，所以有些参考不是很恰当，但他还是很好地解释了交叉验证的工作原理。\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 152495,
+          "key": "29483488390923",
+          "title": "K 折交叉验证",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "29483488390923",
+            "completed_at": "2019-03-14T08:58:18.748Z",
+            "last_viewed_at": "2019-07-21T17:33:55.199Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 151036,
+              "key": "2948348839",
+              "title": "K 折交叉验证",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "这里Sebastian所说的数据集其实是指训练数据集，他说的测试集其实是指训练数据当中的验证集。",
+              "user_state": {
+                "node_key": "2948348839",
+                "completed_at": "2019-07-21T17:39:34.430Z",
+                "last_viewed_at": "2019-07-21T17:39:34.430Z",
+                "unstructured": "{\"radio1\":true,\"radio2\":false,\"radio3\":true,\"radio4\":false,\"radio5\":false,\"radio6\":true}"
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "TIgfjmp-4BA",
+                  "china_cdn_id": "TIgfjmp-4BA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "K 折交叉验证",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/EVsmT5qSPe0SzVnTTJwbVsnAq_UJsMdELBgYxFS_xLCAMV_hYdvzE4supO_3ADgoky_i1EC7rT1tmSeHA0x-=s0#w=1437&h=808",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2948348839",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "2980648814",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5271197007481296,
+                      "y": 0.39779656319290463
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7954138092269327,
+                      "y": 0.38234478935698446
+                    }
+                  },
+                  {
+                    "group": "group2",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5167549875311721,
+                      "y": 0.5222422394678492
+                    }
+                  },
+                  {
+                    "group": "group2",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7995635910224439,
+                      "y": 0.49975748337028825
+                    }
+                  },
+                  {
+                    "group": "group3",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio5",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5243531795511222,
+                      "y": 0.631825110864745
+                    }
+                  },
+                  {
+                    "group": "group3",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio6",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8030899314214464,
+                      "y": 0.6071230598669624
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ADNFKiAjmWA",
+                  "china_cdn_id": "ADNFKiAjmWA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 469613,
+          "key": "6b17dabf-262f-4bc3-b563-ea6ba8a4e412",
+          "title": "录屏视频：模型评估",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6b17dabf-262f-4bc3-b563-ea6ba8a4e412",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469574,
+              "key": "f42e5bef-c491-4f0d-8857-f07067fe56de",
+              "title": "模型拟合",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0b_MPwzOrTc",
+                "china_cdn_id": "0b_MPwzOrTc.mp4"
+              }
+            },
+            {
+              "id": 469575,
+              "key": "814aedf7-afff-47dc-8e31-13575d4a1cf3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[这里](http://scikit-learn.org/stable/modules/cross_validation.html) 是本视频涉及的参考文献。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 469614,
+          "key": "a65f7f43-0f6f-412e-a84d-126d39da4dd9",
+          "title": "Notebook + 练习：案例研究 I",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a65f7f43-0f6f-412e-a84d-126d39da4dd9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 543098,
+              "key": "4fc856ac-32a1-4c65-b20e-3e22feba33af",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewbdecdcd0",
+              "pool_id": "jupyter",
+              "view_id": "bdecdcd0-b153-4d78-ac05-1ca40e295a6c",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/Case_Study-zh.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 469577,
+              "key": "7ddcf15f-00aa-4db3-b799-abcf910613cc",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7ddcf15f-00aa-4db3-b799-abcf910613cc",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "根据描述选出相应的值。"
+                },
+                "concepts_label": " 描述",
+                "answers_label": "数值",
+                "concepts": [
+                  {
+                    "text": "数据集的缺失值数。",
+                    "correct_answer": {
+                      "id": "a1511574720587",
+                      "text": "0"
+                    }
+                  },
+                  {
+                    "text": "数据集的分类变量数。",
+                    "correct_answer": {
+                      "id": "a1511574777014",
+                      "text": "0"
+                    }
+                  },
+                  {
+                    "text": " 数据集的年龄中位数。",
+                    "correct_answer": {
+                      "id": "a1511639283514",
+                      "text": "77.95"
+                    }
+                  },
+                  {
+                    "text": "观察 `CHAS` 一列，沿着查尔斯河的住宅占多大比例？",
+                    "correct_answer": {
+                      "id": "a1511640245518",
+                      "text": "7%"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511640299146",
+                    "text": "0%"
+                  },
+                  {
+                    "id": "a1511639283514",
+                    "text": "77.95"
+                  },
+                  {
+                    "id": "a1511639425189",
+                    "text": "69.03"
+                  },
+                  {
+                    "id": "a1511640245518",
+                    "text": "7%"
+                  },
+                  {
+                    "id": "a1511574720587",
+                    "text": "0"
+                  },
+                  {
+                    "id": "a1511574777014",
+                    "text": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469578,
+              "key": "36c10fb6-bdf0-4339-87fd-ebe0c36464b9",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "36c10fb6-bdf0-4339-87fd-ebe0c36464b9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "观察每对观测数据的相关性，根据描述选出相应的值。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "变量",
+                "concepts": [
+                  {
+                    "text": "这个变量与 `房价中位数`（MedianHomePrice）的线性相关性最强。",
+                    "correct_answer": {
+                      "id": "a1511643686513",
+                      "text": "LSTAT"
+                    }
+                  },
+                  {
+                    "text": "这个变量与 `TAX` 的相关性最强。",
+                    "correct_answer": {
+                      "id": "a1511644110474",
+                      "text": "RAD"
+                    }
+                  },
+                  {
+                    "text": "如果你想用其它所有的变量来预测 `房价中位数`，你觉得多重共线性会是问题吗？",
+                    "correct_answer": {
+                      "id": "a1511644275739",
+                      "text": "Yes"
+                    }
+                  },
+                  {
+                    "text": "这个变量与 `NOX` 的相关性最强。",
+                    "correct_answer": {
+                      "id": "a1511644349630",
+                      "text": "DIS"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511644110474",
+                    "text": "RAD"
+                  },
+                  {
+                    "id": "a1511644342352",
+                    "text": "No"
+                  },
+                  {
+                    "id": "a1511644089169",
+                    "text": "RM"
+                  },
+                  {
+                    "id": "a1511644514249",
+                    "text": "INDUS"
+                  },
+                  {
+                    "id": "a1511644345183",
+                    "text": "Maybe"
+                  },
+                  {
+                    "id": "a1511643686513",
+                    "text": "LSTAT"
+                  },
+                  {
+                    "id": "a1511644275739",
+                    "text": "Yes"
+                  },
+                  {
+                    "id": "a1511644349630",
+                    "text": "DIS"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469579,
+              "key": "a6b985f5-9f0c-4911-90dd-304004c0b1d0",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a6b985f5-9f0c-4911-90dd-304004c0b1d0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "观察由线性模型得出的 p 值，标注下列变量为具统计 `显著性` 或 `无显著性`。"
+                },
+                "concepts_label": "变量",
+                "answers_label": "统计显著性",
+                "concepts": [
+                  {
+                    "text": "B",
+                    "correct_answer": {
+                      "id": "a1511655321297",
+                      "text": "显著性"
+                    }
+                  },
+                  {
+                    "text": "NOX",
+                    "correct_answer": {
+                      "id": "a1511655563529",
+                      "text": "显著性"
+                    }
+                  },
+                  {
+                    "text": "INDUS",
+                    "correct_answer": {
+                      "id": "a1511655566940",
+                      "text": "无显著性"
+                    }
+                  },
+                  {
+                    "text": "AGE",
+                    "correct_answer": {
+                      "id": "a1511655570174",
+                      "text": "无显著性"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1511655566940",
+                    "text": "无显著性"
+                  },
+                  {
+                    "id": "a1511655321297",
+                    "text": "显著性"
+                  },
+                  {
+                    "id": "a1511655563529",
+                    "text": "显著性"
+                  },
+                  {
+                    "id": "a1511655570174",
+                    "text": "无显著性"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469580,
+              "key": "38f3d72b-9951-4559-a684-40f51732abb0",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "38f3d72b-9951-4559-a684-40f51732abb0",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "假设你真的很在乎 `RAD` 和 `INDUS` 变量，而且你认为最好把模型的所有 VIF 值都限制在 4 以内，那么你会删除哪些变量呢？",
+                "answers": [
+                  {
+                    "id": "a1511658770544",
+                    "text": "你需要删除 `NOX`、 `TAX`、 `RAD` 和 `INDUS`，因为这四个变量的 VIF 都大于 4。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511658773444",
+                    "text": "你肯定需要删除 `TAX` 和 `RAD`，删掉后另外两个 VIF 就会变小。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511658908462",
+                    "text": "你需要删除 `TAX` 和 `NOX`，删掉后另外两个 VIF 就会变小。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1511658935696",
+                    "text": "我们可以试着一次删除一个变量，看看删掉哪个能最大程度地减小 VIF。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469581,
+              "key": "1244b567-0ab8-40c5-a565-365dda9ea5da",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1244b567-0ab8-40c5-a565-365dda9ea5da",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "把第二个模型的结果同第一个模型的进行比较，选出下列所有正确的说法。",
+                "answers": [
+                  {
+                    "id": "a1511659407829",
+                    "text": "现在第二个模型的所有变量都具有显著性。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511659458123",
+                    "text": "根据 p 值，我们应该删除 `RAD`，但保留其它变量。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1511659492195",
+                    "text": "绝对是第一个模型好些，因为它的决定系数更高。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 469582,
+              "key": "7931aca2-7a5b-4670-aee9-7159b6d726e3",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7931aca2-7a5b-4670-aee9-7159b6d726e3",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "这三个模型中，哪个对测试数据的预测效果更好？",
+                "answers": [
+                  {
+                    "id": "a1511664175981",
+                    "text": "使用所有变量的全模型。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1511664227447",
+                    "text": "删除了 ''AGE''、''NOX'' 和 ''TAX''的模型。",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1511664279105",
+                    "text": "删除了 ''AGE''、''NOX''、''TAX'' 和 ''RAD''的模型。",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 469615,
+          "key": "b6643be3-e95f-41f1-ad3a-68966c574f19",
+          "title": "视频：复习",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b6643be3-e95f-41f1-ad3a-68966c574f19",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469583,
+              "key": "d0454f4c-abe8-4225-a6cb-41411b4665c6",
+              "title": "复习",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "VM6GGNC2q8I",
+                "china_cdn_id": "VM6GGNC2q8I.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 469616,
+          "key": "107321ba-246c-49f5-9da3-6c74b14c430b",
+          "title": "文本：复习",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "107321ba-246c-49f5-9da3-6c74b14c430b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 469584,
+              "key": "4a52ec5a-cb2a-404f-aee8-aee18d8ef8fc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 复习\n\n本课程讲解了 **大量** 知识。\n\n1. 你学习了如何在 python 里创建多元线性回归模型，创建方法其实与上节课创建简单线性回归模型十分类似。<br><br>\n\n2. 你学习了如何编码虚拟数据并解释相应的系数。<br><br>\n\n3. 你学习了高阶项，也知道了高阶项会怎么影响系数解释。<br><br>\n\n4. 你知道了多元线性回归模型需要交互项意味着什么，也学习了如何确定其它高阶项。但这里需要重申一次，涉及到交互项和高阶项，直接解释系数的重要性就居于其次了，你的模型将更侧重于预测效果，所以其解释效果有所降低。<br><br>\n\n5. 你学习了模型假设，我们还进一步探讨了多重共线性。你学习了方差膨胀因子，也知道了多重共线性会如何影响模型系数和标准误差。<br><br>\n\n6. 你学习了模型选择和特征工程技巧。<br><br>\n\n7. 你学习了交叉验证，知道要如何把测试集拆分成训练-测试集，从而判断模型最好要保留哪些解释变量。\n\n本课讲解的许多知识都是机器学习的核心技巧，但我们只是接触到冰山一角而已，优达学城有一整个课程专门讲授机器学习，在该课程中，你可以更深入地学习本课涉及的诸多知识点。\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

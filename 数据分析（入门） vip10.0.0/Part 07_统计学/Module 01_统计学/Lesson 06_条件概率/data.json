@@ -1,0 +1,1057 @@
+{
+  "data": {
+    "lesson": {
+      "id": 461716,
+      "key": "7ddcb2e7-82be-4b2c-acc0-3e251914ac23",
+      "title": "条件概率",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "并不是所有事件都是独立的。学习相关事件的概率规则。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/7ddcb2e7-82be-4b2c-acc0-3e251914ac23/461716/1544461458083/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/7ddcb2e7-82be-4b2c-acc0-3e251914ac23/461716/1544461452155/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 461633,
+          "key": "741b3bd9-3051-4a13-b211-82209677db12",
+          "title": "条件概率简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "741b3bd9-3051-4a13-b211-82209677db12",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461572,
+              "key": "fd04d668-aabf-4819-9007-569c2b4a7f03",
+              "title": "条件概率简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Ok8948Wcbmo",
+                "china_cdn_id": "Ok8948Wcbmo.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 256799,
+          "key": "487293710923",
+          "title": "癌症案例 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487293710923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256265,
+              "key": "48729371",
+              "title": "癌症例子 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48729371",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "mFfbts1lAEo",
+                  "china_cdn_id": "mFfbts1lAEo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症例子 1",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/M_5WqNtVlQEZ5MMTjpQzvcJLUyJw31C0x7nLx8JOTQR62wH3Y8kvQxho7hB9STitqL2QFkTzeYMgZPhe7jE=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48729371",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48716288",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183301414",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.08728179551122195,
+                      "x": 0.78125,
+                      "y": 0.25
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "E1ph6NP3_v4",
+                  "china_cdn_id": "E1ph6NP3_v4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256801,
+          "key": "487236390923",
+          "title": "癌症例子2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236390923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256267,
+              "key": "48723639",
+              "title": "癌症例子 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48723639",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "FV_hc3MzS_8",
+                  "china_cdn_id": "FV_hc3MzS_8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症例子 2",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/whIxkfDntcypE6B4lmSigDBEJbuf2hH-OFy522GFYcxRBhnIKdDAPiwxns70h8nO-KugHhD8xqlKRuBOyQ4=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723639",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48632848",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183339506",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.10972568578553615,
+                      "x": 0.798784289276808,
+                      "y": 0.7115091463414634
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "VLLG0rYC7To",
+                  "china_cdn_id": "VLLG0rYC7To.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256800,
+          "key": "486789140923",
+          "title": "癌症例子 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486789140923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256266,
+              "key": "48678914",
+              "title": "癌症例子 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48678914",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Iz4ViIg9ZlQ",
+                  "china_cdn_id": "Iz4ViIg9ZlQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症例子 3",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/IjJdXIUiN1C1lOgVOnI1O4w8kyjbvA5sKNpQeotjXENsaU4FgmE64w1WMIeqru5guYQXCfs3VwcOZEhdaA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48678914",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48641639",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183371951",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08869179600886919,
+                      "width": 0.09725685785536159,
+                      "x": 0.32291666666666674,
+                      "y": 0.28703703703703703
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Rf6WfB_1EJQ",
+                  "china_cdn_id": "Rf6WfB_1EJQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256802,
+          "key": "486977510923",
+          "title": "癌症例子 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486977510923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256268,
+              "key": "48697751",
+              "title": "癌症例子 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48697751",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "pL8Bf6tck_A",
+                  "china_cdn_id": "pL8Bf6tck_A.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症例子 4",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/HrbGQ5xB1huNYerWkXWNIpp64dyx7QTDYIRVpKfFuvBvpTKUlY9_KwneR9-70UmuHy8AOceFFj-8GCCe1w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48697751",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48739228",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183498088",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.09975062344139651,
+                      "x": 0.3206437032418953,
+                      "y": 0.3459672949002217
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "udduksMWMB4",
+                  "china_cdn_id": "udduksMWMB4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256803,
+          "key": "486928260923",
+          "title": "癌症例子 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486928260923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256269,
+              "key": "48692826",
+              "title": "癌症例子 5",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48692826",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "fqt7NIvMB0s",
+                  "china_cdn_id": "fqt7NIvMB0s.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症例子 5",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/i49V-hp6_wwsg9NAIJdNKrp0MqZeobaoMuvRvZiTl1BJwyCYEIrfGop-C3Cq801BWz7FaT6CWnmxxWgh6CA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48692826",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48716290",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183525167",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.10224438902743142,
+                      "x": 0.3270924251870324,
+                      "y": 0.4156042128603104
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ys9w-NNKCcU",
+                  "china_cdn_id": "ys9w-NNKCcU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256804,
+          "key": "486987400923",
+          "title": "癌症例子 6",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486987400923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256270,
+              "key": "48698740",
+              "title": "癌症例子 6",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48698740",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "iyE5h48qPFQ",
+                  "china_cdn_id": "iyE5h48qPFQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症例子 6",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/RqmOxpR34PIQhLUgGnNq6KtGuKfrs_EOUfsKH88pfHwZXdzifrw5fVf8Akd3moYK77AocHV1YQFmuRrX-z0=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48698740",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48271966",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183572282",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.1130820399113082,
+                      "width": 0.10349127182044887,
+                      "x": 0.3206437032418953,
+                      "y": 0.5015590354767184
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-lC9xztr4zA",
+                  "china_cdn_id": "-lC9xztr4zA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256805,
+          "key": "487214940923",
+          "title": "癌症例子 7",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487214940923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256271,
+              "key": "48721494",
+              "title": "癌症例子 7",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "注意： 列出的四个概率为 0.09、0.01、0.18 和 0.72。",
+              "user_state": {
+                "node_key": "48721494",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "cw_zgQbAWNU",
+                  "china_cdn_id": "cw_zgQbAWNU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Cancer Example 7",
+                "alt_text": "",
+                "background_image": "//lh6.ggpht.com/mM53JGRMro8DfXsOEwbgNealEWwKRjsZD93EFKeX7nitr6yaylMfT3XGbfNM66tWrB_d17Y7wdFNC8-xbpw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48721494",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734324",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183605829",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.09850374064837905,
+                      "x": 0.34000935162094764,
+                      "y": 0.6700388026607539
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "jPspIs-fNxg",
+                  "china_cdn_id": "jPspIs-fNxg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256806,
+          "key": "486987410923",
+          "title": "癌症例子 8",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486987410923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256272,
+              "key": "48698741",
+              "title": "癌症例子 8",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "注意，列出的四个概率是 0.09、0.01、0.18 和 0.72。",
+              "user_state": {
+                "node_key": "48698741",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "7k5oAaZamCA",
+                  "china_cdn_id": "7k5oAaZamCA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症例子 8",
+                "alt_text": "",
+                "background_image": "//lh6.ggpht.com/xoUtUbF5H7JVdSUx53ImAbjYGUou-kSk-1wGOvIPoB5eYZ-d2Q61PyvpU0wjQVeHDojLVgM8U5PHcUJb_w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48698741",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48271967",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183632830",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.15077605321507762,
+                      "width": 0.16209476309226933,
+                      "x": 0.6675498753117207,
+                      "y": 0.7611904101995566
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "btGdX0ZpkNU",
+                  "china_cdn_id": "btGdX0ZpkNU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256807,
+          "key": "487202500923",
+          "title": "全概率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487202500923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256273,
+              "key": "48720250",
+              "title": "全概率",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "YSYpzFR4k1I",
+                "china_cdn_id": "YSYpzFR4k1I.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 256808,
+          "key": "487236400923",
+          "title": "两个硬币 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236400923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256274,
+              "key": "48723640",
+              "title": "两个硬币 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48723640",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "QIQBb4nLsHc",
+                  "china_cdn_id": "QIQBb4nLsHc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "两个硬币 1",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/eqqYv89IoXo3EB0nUFLZCPf3qs25GxUDjXQ0-8CN-JiBDsSBpYbGPYBGEVkCTl5qpF5t3eRTRow1vw49nvLi=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723640",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48632846",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183694153",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.12416851441241686,
+                      "width": 0.08728179551122195,
+                      "x": 0.33128117206982544,
+                      "y": 0.3044969512195122
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341183709206",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.12195121951219512,
+                      "width": 0.09226932668329177,
+                      "x": 0.16439370324189526,
+                      "y": 0.45523835920177386
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "SYnYIjLpbjE",
+                  "china_cdn_id": "SYnYIjLpbjE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256810,
+          "key": "486938400923",
+          "title": "两个硬币 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486938400923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256275,
+              "key": "48693840",
+              "title": "两个硬币 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "视频更正： 在答案视频 0:42 秒处，Sebastian 想要真正表达的是 “ 0.5 * 0.9 “， 而不是 ” 0.5 * 0.95 “ ",
+              "user_state": {
+                "node_key": "48693840",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "tI0J14yQr1s",
+                  "china_cdn_id": "tI0J14yQr1s.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "两个硬币 2",
+                "alt_text": "",
+                "background_image": "//lh6.ggpht.com/iseSFLoaHAs5m4wG4wiGCreh6cET5PCwKAfeTXrzBLUfBnfwUgm4sJgtUy8dcZHnDgTwB4puGY3kQrP8zwc=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48693840",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48734186",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183755219",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09534368070953436,
+                      "width": 0.11596009975062344,
+                      "x": 0.8325280548628429,
+                      "y": 0.031146064301552107
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "hoVOT8qcQ7c",
+                  "china_cdn_id": "hoVOT8qcQ7c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256809,
+          "key": "486957990923",
+          "title": "两个硬币 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486957990923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256276,
+              "key": "48695799",
+              "title": "两个硬币 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "内容澄清：你只从包里拿出一枚硬币，然后将那一枚硬币翻转两次，然后依次观察正面和反面。",
+              "user_state": {
+                "node_key": "48695799",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GO6kbL3QRBE",
+                  "china_cdn_id": "GO6kbL3QRBE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "两个硬币 3",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/2wgFBe5JZr5tXFgerAA_GvqudvfEJDxAfBlKRXL_h8KkNlB6zIy0fx1SJVEtgbTmeF1cgAXtvNGJlMtV5g=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48695799",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48652467",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341183791354",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.13303769401330376,
+                      "width": 0.12344139650872818,
+                      "x": 0.840886066084788,
+                      "y": 0.21490437915742794
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "JIWv5fU3GLA",
+                  "china_cdn_id": "JIWv5fU3GLA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256811,
+          "key": "487015560923",
+          "title": "两个硬币 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487015560923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256277,
+              "key": "48701556",
+              "title": "两个硬币 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "内容澄清： 整个过程具体是这样， 你以0.5的概率选择一枚硬币之后，将这枚硬币翻转两次，得到两次tail的概率",
+              "user_state": {
+                "node_key": "48701556",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "cDub-OOrIRE",
+                  "china_cdn_id": "cDub-OOrIRE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "两个硬币 4",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/Q2JugAhAnqpu8ZhxMri1K8pe3Cm_3sgijVP7ZZed3Siw_jLSxjyuV8t9NT8SZFrThM3mTMU_aLzaFsQ2iQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48701556",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48720246",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341184050692",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.11751662971175167,
+                      "width": 0.13341645885286782,
+                      "x": 0.55794108478803,
+                      "y": 0.08488082039911309
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "9R44IyZ-aQI",
+                  "china_cdn_id": "9R44IyZ-aQI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256812,
+          "key": "487392360923",
+          "title": "条件概率小结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487392360923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256278,
+              "key": "48739236",
+              "title": "条件概率小结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yepMH9VswI8",
+                "china_cdn_id": "yepMH9VswI8.mp4"
+              }
+            },
+            {
+              "id": 626224,
+              "key": "3dfba215-0240-4380-93bb-87609b6efd40",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "46\"书写的“TET”，应该是“TEST”。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 461647,
+          "key": "dac5629c-7c17-48be-8fed-1796953d1326",
+          "title": "文本：总结 + 下节预告",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dac5629c-7c17-48be-8fed-1796953d1326",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461634,
+              "key": "a367f876-63cb-4576-9d69-5c4a6e6bbb8b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 条件概率\n\n在这节课中你学习到了条件概率。通常事件并不像掷硬币和骰子一样是独立的。实际上，某个事件的结果依赖于之前的事件。\n\n例如，得到阳性检验测试结果的概率依赖于你是否具有某种特殊条件。如果具备条件，测试结果就是阳性的。我们通过以下方式用公式表示任意两个事件的条件概率：\n\n<span class='mathquill'>P(A|B) = \\frac{P(A\\text{ }\\cap\\text{ }B)}{P(B)}</span>\n\n在这个例子中，我们得到下列内容：\n\n<span class='mathquill'>P(positive|disease) = \\frac{P(\\text{positive }\\cap\\text{ disease})}{P(disease)}</span>\n\n其中 <span class='mathquill'>|</span> 代表 \"鉴于\"，<span class='mathquill'>\\cap</span> 代表 \"和\".  \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 461635,
+              "key": "e15992f8-ab1a-4d1d-bf83-57be48c10261",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 下节预告 \n\n你将在下节课中使用贝叶斯法则进行更多条件概率的联系。如果你使用这里的例子很舒服，下节课就会轻松很多。如果你觉得不舒服，下节课是练习的好机会，你可以通过更多例子来巩固这里的知识。",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

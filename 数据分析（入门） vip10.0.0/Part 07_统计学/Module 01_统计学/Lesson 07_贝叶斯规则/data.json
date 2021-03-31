@@ -1,0 +1,3179 @@
+{
+  "data": {
+    "lesson": {
+      "id": 462053,
+      "key": "9a02a699-1edb-42cf-9df4-10ec39895262",
+      "title": "贝叶斯规则",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "学习概率中最流行的一种规则：贝叶斯规则。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/9a02a699-1edb-42cf-9df4-10ec39895262/462053/1544461816094/%E8%B4%9D%E5%8F%B6%E6%96%AF%E8%A7%84%E5%88%99+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/9a02a699-1edb-42cf-9df4-10ec39895262/462053/1544461805054/%E8%B4%9D%E5%8F%B6%E6%96%AF%E8%A7%84%E5%88%99+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 256814,
+          "key": "483698470923",
+          "title": "贝叶斯法则",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483698470923",
+            "completed_at": "2019-03-13T05:17:50.983Z",
+            "last_viewed_at": "2019-11-07T20:11:15.603Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256279,
+              "key": "48369847",
+              "title": "贝叶斯规则",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "CohZnkZMOxE",
+                "china_cdn_id": "CohZnkZMOxE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 256815,
+          "key": "487590180923",
+          "title": "癌症检测",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487590180923",
+            "completed_at": "2019-03-13T05:18:26.552Z",
+            "last_viewed_at": "2019-07-17T04:35:42.227Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256280,
+              "key": "48759018",
+              "title": "癌症检测",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "问题如下：假定人口总体的 1% 患癌。如果患癌，检测结果为阳性的可能性为 90%，如果不患癌，检测结果为阴性的可能性为 90%，在这种情景下，如果你的测试结果为阳性，患癌的概率是多少？",
+              "user_state": {
+                "node_key": "48759018",
+                "completed_at": "2019-03-13T05:21:41.243Z",
+                "last_viewed_at": "2019-03-13T05:21:41.243Z",
+                "unstructured": "{\"1341184245801\":false,\"1341184254240\":true,\"1341184260708\":false}"
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "CNpSrdnYvbo",
+                  "china_cdn_id": "CNpSrdnYvbo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症检测",
+                "alt_text": "",
+                "background_image": "//lh4.ggpht.com/LZNqeNhmdNJ1DFggGUAjeY93PKzmdRJN5Xdeim6xeRCgHvo3veH99_IWw_eV_c9xlk7OHacJL33ygcA81Ona=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48759018",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48480558",
+                "widgets": [
+                  {
+                    "group": "multipleChoice2",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "1341184245801",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.558156894679696,
+                      "y": 0.3919522200772201
+                    }
+                  },
+                  {
+                    "group": "multipleChoice2",
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "1341184254240",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.558156894679696,
+                      "y": 0.5030465733590733
+                    }
+                  },
+                  {
+                    "group": "multipleChoice2",
+                    "initial_value": "false",
+                    "label": "option5",
+                    "marker": "1341184260708",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.5572916666666666,
+                      "y": 0.6269003378378378
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "FnNveASivMA",
+                  "china_cdn_id": "FnNveASivMA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256813,
+          "key": "487236370923",
+          "title": "先验与后验",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236370923",
+            "completed_at": "2019-07-17T04:39:58.650Z",
+            "last_viewed_at": "2019-07-17T04:39:58.509Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256281,
+              "key": "48723637",
+              "title": "先验与后验",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "纠正：0:45 处，癌症例子的后验应写为 P(C, Pos)，而不是 P(C|Pos)，非癌症例子的后验应写为 P(~C, Pos)，而不是 P(~C|Pos)。  ",
+              "user_state": {
+                "node_key": "48723637",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "o2Tpws5C2Eg",
+                  "china_cdn_id": "o2Tpws5C2Eg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "先验与后验",
+                "alt_text": "",
+                "background_image": "//lh5.ggpht.com/UhtJW0E9_fXUg7ozi4fRhUv8DjGd0uQbw6pQoOh5BEkfhfmQWUe5nTfred9mShnmMz26dTt69WZ3IBmb66E=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723637",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48609553",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341184346007",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.1084788029925187,
+                      "x": 0.6549436753528773,
+                      "y": 0.5883204633204633
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341184356165",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.08425720620842572,
+                      "width": 0.08977556109725686,
+                      "x": 0.873914223669924,
+                      "y": 0.5532094594594594
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "GlmS_jox08s",
+                  "china_cdn_id": "GlmS_jox08s.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256816,
+          "key": "484529790923",
+          "title": "归一化 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256282,
+              "key": "48452979",
+              "title": "归一化 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452979",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "9SbUxcyDTaQ",
+                  "china_cdn_id": "9SbUxcyDTaQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "归一化 1",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/c90oUzLWpJhetgUyHV78XMdGOIWhnsQK-NUZvjp83u972qK5gVySdZkZolAjbqmN7yyUrlPCWoKO_k3eVLvc=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452979",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48296523",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341188272791",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07538802660753881,
+                      "width": 0.10473815461346633,
+                      "x": 0.765625,
+                      "y": 0.527358832046332
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "5Tbd3_a5Vug",
+                  "china_cdn_id": "5Tbd3_a5Vug.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256817,
+          "key": "482999910923",
+          "title": "归一化 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "482999910923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256283,
+              "key": "48299991",
+              "title": "归一化 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48299991",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "WYA5Zbf8HC4",
+                  "china_cdn_id": "WYA5Zbf8HC4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "归一化 2",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/UOJyb_00JXuM0JT1LliPo34rHHF-yMmaBzNXB4I04BrEhpCQw-6EmkJE_sJD7iLpupVKfAqXOog6_t26f6Y=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48299991",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48311832",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341189208992",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.12344139650872818,
+                      "x": 0.5729166666666666,
+                      "y": 0.679385859073359
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-pOzdj6pnbA",
+                  "china_cdn_id": "-pOzdj6pnbA.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256818,
+          "key": "487441150923",
+          "title": "归一化 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487441150923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256284,
+              "key": "48744115",
+              "title": "归一化 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48744115",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "V96RcbbVP7Q",
+                  "china_cdn_id": "V96RcbbVP7Q.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "归一化 3",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/P_kixdVa1nml8gjwXpeuc9f9j_wTjxNwzJQLbkxKRK_qED4tZsDOjnGqCUtz5IBoedhqOfsMK23h31C6f24=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48744115",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48310768",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341189299431",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.0598669623059867,
+                      "width": 0.13216957605985039,
+                      "x": 0.5729166666666666,
+                      "y": 0.7962962962962963
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "etrUbOAoh1U",
+                  "china_cdn_id": "etrUbOAoh1U.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256819,
+          "key": "487093190923",
+          "title": "全概率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487093190923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256285,
+              "key": "48709319",
+              "title": "全概率",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48709319",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "_hXCgF-aMB0",
+                  "china_cdn_id": "_hXCgF-aMB0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "全概率",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/dSGFLhKGtkptrVOj3T_U8FgA882EpCJ5ulGamMu5J0qaubXxnW8ODwDCwiDduPCekf4uEZ_-wuztJbOLYg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48709319",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48743074",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341189350325",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.082039911308204,
+                      "width": 0.08603491271820449,
+                      "x": 0.8385416666666666,
+                      "y": 0.7013754826254827
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "fAaE5K9OZJc",
+                  "china_cdn_id": "fAaE5K9OZJc.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256821,
+          "key": "487092840923",
+          "title": "贝叶斯法则图表",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487092840923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256287,
+              "key": "48709284",
+              "title": "贝叶斯法则图表",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "b8M9CWxRyQ4",
+                "china_cdn_id": "b8M9CWxRyQ4.mp4"
+              }
+            },
+            {
+              "id": 693074,
+              "key": "83bbfa0b-447a-4b7b-bc14-ee2e0c1315de",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "视频1m2s处，“或除法混算”，改为“或除法运算”",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 256820,
+          "key": "484805600923",
+          "title": "等效线路图",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484805600923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256286,
+              "key": "48480560",
+              "title": "等效线路图",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "aUFWZ2uJuBE",
+                "china_cdn_id": "aUFWZ2uJuBE.mp4"
+              }
+            },
+            {
+              "id": 1003547,
+              "key": "17c39b5c-77e6-44bb-a9af-0b1b1d495514",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "So, this should be stated as:\n\nP(Pos, C) = P(Pos|C) P(C)\nP(Neg, C) = P(Neg|C) P(C)\nP(Pos, ~C) = P(Pos|~C) P(~C)\nP(Neg, ~C) = P(Neg|~C) P(~C)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 256822,
+          "key": "484806070923",
+          "title": "癌症概率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806070923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256288,
+              "key": "48480607",
+              "title": "癌症概率",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480607",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "CMQBKuYjPBM",
+                  "china_cdn_id": "CMQBKuYjPBM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "癌症概率",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/aN4P3yt1cJv3RFpb86aUyb9ya90fqZ-SxgIPS6nzyoJoIGGaA2SHmmaE70B-uPN6oxnGb2nupmCfcLcYqg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480607",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48292975",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341189501852",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.10723192019950124,
+                      "x": 0.5987377850162866,
+                      "y": 0.04241071428571429
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341189529725",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.06208425720620843,
+                      "width": 0.11221945137157108,
+                      "x": 0.6009093376764386,
+                      "y": 0.13848334942084942
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer3",
+                    "marker": "1341189565224",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.06430155210643015,
+                      "width": 0.11845386533665836,
+                      "x": 0.609375,
+                      "y": 0.22182673745173745
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "7ZLe_JP5wRY",
+                  "china_cdn_id": "7ZLe_JP5wRY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256823,
+          "key": "487093200923",
+          "title": "概率给定测试",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487093200923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256289,
+              "key": "48709320",
+              "title": "概率给定测试",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48709320",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "41HCYR-NW-w",
+                  "china_cdn_id": "41HCYR-NW-w.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "概率给定测试",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/2f0_lyrrSF-foBWwZ7EXogs_t6ubxd4ZdcpLnejjrF0utJFFsYf9KdLpV6Jlemfs4MQLw0b6cBt6ZDs9GQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48709320",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48709280",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341189623008",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06208425720620843,
+                      "width": 0.13092269326683292,
+                      "x": 0.5520833333333334,
+                      "y": 0.36111111111111105
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341189630692",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.13466334164588528,
+                      "x": 0.5520833333333334,
+                      "y": 0.4537037037037037
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "omC0zbJyzUY",
+                  "china_cdn_id": "omC0zbJyzUY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256824,
+          "key": "487236380923",
+          "title": "归一化",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487236380923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256290,
+              "key": "48723638",
+              "title": "归一化",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48723638",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "G9yQ_URDrDQ",
+                  "china_cdn_id": "G9yQ_URDrDQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "归一化",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/ythAsKNKB4kGtBz83hpiSisZZhjCCw_MJJ0GmQ-0-bW4rH1_ytb3gJrKTtsQxKqSZn951kTXDyVVJDgLFQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48723638",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48629196",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341190058788",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.13466334164588528,
+                      "x": 0.5520833333333334,
+                      "y": 0.5532094594594594
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "W5i-gRAvZxs",
+                  "china_cdn_id": "W5i-gRAvZxs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256827,
+          "key": "484529800923",
+          "title": "归一化概率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529800923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256293,
+              "key": "48452980",
+              "title": "归一化概率",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "请给出你的答案，其中至少包含 4 位小数点，并进行恰当地四舍五入。",
+              "user_state": {
+                "node_key": "48452980",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "V_Gqm42WodI",
+                  "china_cdn_id": "V_Gqm42WodI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "归一化概率",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/SfFdEMtOLFmCW-BYUvQ8ez3KkuLFsrNRbYc2DjBJWYEp88iqTRABesJsZ5UkmtDfCPafE76exsCWPBgsbg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452980",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48704300",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "regexAnswer4 Field",
+                    "marker": "1341274231452",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.12344139650872818,
+                      "x": 0.5486054560260586,
+                      "y": 0.6627956081081081
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341190150611",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.12468827930174564,
+                      "x": 0.5488232543640897,
+                      "y": 0.7760878603104213
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "yYqN9Mf4jqw",
+                  "china_cdn_id": "yYqN9Mf4jqw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256825,
+          "key": "487441160923",
+          "title": "疾病检测 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487441160923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256291,
+              "key": "48744116",
+              "title": "疾病检测 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48744116",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "05upwXtARuo",
+                  "china_cdn_id": "05upwXtARuo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "疾病检测 1",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/5lrjjt-ifEZGK-S969OljHzizCxYFDENR4c-Bl2dnv33HdI_lK5iQSAQyABshZbR58ymw7GImU3FmfcL0Q=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48744116",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48230510",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341192152587",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.10972568578553615,
+                      "x": 0.5989583333333334,
+                      "y": 0.03854971042471043
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341192170577",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.1172069825436409,
+                      "x": 0.5995181867535287,
+                      "y": 0.13269184362934364
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer3",
+                    "marker": "1341192201548",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.11970074812967581,
+                      "x": 0.6095955483170467,
+                      "y": 0.21989623552123552
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "qDGSvvabN18",
+                  "china_cdn_id": "qDGSvvabN18.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256826,
+          "key": "487043450923",
+          "title": "疾病检测 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487043450923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256292,
+              "key": "48704345",
+              "title": "疾病检测 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48704345",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GsneDVJB75E",
+                  "china_cdn_id": "GsneDVJB75E.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "疾病检测 2",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/sVjTnDCMwK9QguTOMJaN20GOY7AVOaJouPsB2SCyt0Ha9tVXYIMwEXVEC4XwVQ2WUiaaGbH_F-LUB51d_Gk=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48704345",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48198838",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341192522423",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06430155210643015,
+                      "width": 0.14214463840399003,
+                      "x": 0.5520833333333334,
+                      "y": 0.3607022200772201
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "FQM7i07EqGo",
+                  "china_cdn_id": "FQM7i07EqGo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256828,
+          "key": "487550520923",
+          "title": "疾病检测 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487550520923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256294,
+              "key": "48755052",
+              "title": "疾病检测 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48755052",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "PfEYA6z-19w",
+                  "china_cdn_id": "PfEYA6z-19w.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "疾病检测 3",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/vvL2n6YcEQgHp20ySNxNfFdhAblf601eM7fILJ93tP3JVohDkUkZxJqRWapCMLgv2NfCgsCNh7CiZxHXMg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48755052",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48240998",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341192590182",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.057649667405764965,
+                      "width": 0.13466334164588528,
+                      "x": 0.546875,
+                      "y": 0.4552364864864865
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "a61GPGk-Qy4",
+                  "china_cdn_id": "a61GPGk-Qy4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256829,
+          "key": "483118800923",
+          "title": "疾病检测 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118800923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256295,
+              "key": "48311880",
+              "title": "疾病检测 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311880",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "ztkKTrMZHXg",
+                  "china_cdn_id": "ztkKTrMZHXg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "疾病检测 4",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/Npuagrap8UnC-9JRFJ83q7VmvWAfPdhl0-wiXHpi51Q7Y9lhRSBYQhDOUk3fLva2SmiB18zd2BEs42G13_w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311880",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48011955",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341192701389",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.14089775561097256,
+                      "x": 0.546875,
+                      "y": 0.5570704633204633
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "UERKMwmkAsM",
+                  "china_cdn_id": "UERKMwmkAsM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256831,
+          "key": "484806080923",
+          "title": "疾病检测 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806080923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256296,
+              "key": "48480608",
+              "title": "疾病检测 5",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "答案请输入4位小数",
+              "user_state": {
+                "node_key": "48480608",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "4qW7a5E74No",
+                  "china_cdn_id": "4qW7a5E74No.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "疾病检测 5",
+                "alt_text": "",
+                "background_image": "//lh5.ggpht.com/yHhXeL0E8NlP8y7eVo2AfzGtF6rv8UkzOuzbmtrtj0dxVdR8uSalOocIAmZnYZHjblOI9v1LGBA_bxr8peXV=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480608",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48480561",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341201660724",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07538802660753881,
+                      "width": 0.13591022443890274,
+                      "x": 0.546875,
+                      "y": 0.6639418436293436
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341201676687",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.13092269326683292,
+                      "x": 0.546875,
+                      "y": 0.7808277027027027
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "nUxwwMNKIYo",
+                  "china_cdn_id": "nUxwwMNKIYo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256832,
+          "key": "487093210923",
+          "title": "疾病检测 6",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487093210923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256297,
+              "key": "48709321",
+              "title": "疾病检测 6",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48709321",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "cdFrLeXIkZU",
+                  "china_cdn_id": "cdFrLeXIkZU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "疾病检测 6",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/UhvBm-aiIvVbPv0NmnwPd-Ds7KkIaSQPVP_Uw1ge_Q4axux41YwxO4BJY76oVlaHWlcXuZqRLLwkSw-C2T15=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48709321",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48737119",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341201914009",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.13591022443890274,
+                      "x": 0.545789223669924,
+                      "y": 0.6643339768339769
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341201924212",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.057649667405764965,
+                      "width": 0.13840399002493767,
+                      "x": 0.546875,
+                      "y": 0.7924107142857143
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "OdVAt79eQak",
+                  "china_cdn_id": "OdVAt79eQak.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256830,
+          "key": "484805560923",
+          "title": "贝叶斯法则小结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484805560923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256298,
+              "key": "48480556",
+              "title": "贝叶斯法则小结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "RgXQ8GRsjfc",
+                "china_cdn_id": "RgXQ8GRsjfc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 256833,
+          "key": "484806090923",
+          "title": "机器人传感 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806090923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256299,
+              "key": "48480609",
+              "title": "机器人传感 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480609",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "_DjfTytro6I",
+                  "china_cdn_id": "_DjfTytro6I.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 1",
+                "alt_text": "",
+                "background_image": "//lh5.ggpht.com/FR95FaxX-VQR1lpldD3s9n45ZpwQaUB049XOk0l3_JbokfFUw6gcwgGy9u-2odH0yR9LQKu6vuM9mftZlQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480609",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48198839",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341202691221",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.057649667405764965,
+                      "width": 0.12219451371571072,
+                      "x": 0.7465221226927253,
+                      "y": 0.729156611969112
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341202750417",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.0598669623059867,
+                      "width": 0.11845386533665836,
+                      "x": 0.7486936753528773,
+                      "y": 0.8510497104247104
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-TBAfU1cjRU",
+                  "china_cdn_id": "-TBAfU1cjRU.mp4"
+                }
+              }
+            },
+            {
+              "id": 542560,
+              "key": "9476624c-9296-4b78-a54a-e8d6509e6837",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 步骤细分\n\n了解解决方案的逐步细分很重要。让我们回顾一下解决方案视频中的内容。\n\n\n#### 先验概率\n\n机器人完全不知道自己在哪里，先验概率如下\n\n<span class=\"mathquill\">P(\\text{at red} ) = 0.5</span>\n\n<span class=\"mathquill\">P(\\text{at green} ) = 0.5</span>\n\n#### 条件概率\n\n机器人传感器不是十全十美的。 仅仅因为机器人*看见* 红色，并 **不代表** 机器人是*在*红色格子中。 \n\n<span class=\"mathquill\">P(\\text{see red} | \\text{at red} ) = 0.8</span>\n\n<span class=\"mathquill\">P(\\text{see green} | \\text{at green} ) = 0.8</span>\n\n#### 后验概率\n从先验概率和后验概率中，我们需要计算机器人看见红色之后的后验概率：\n\n1. <span class=\"mathquill\">P(\\text{at red} | \\text{see red} )</span>\n\n2. <span class=\"mathquill\">P(\\text{at green} | \\text{see red} )</span>\n\n提示，贝叶斯法则如下所示:\n\n<span class=\"mathquill\">P(A|B ) = \\frac{P(B|A) \\cdot  P(A)}{P(B)}</span>\n\n我们可以将贝叶斯法则中的 A 和B 替换掉，显示为：\n\n<span class=\"mathquill\">P(\\text{at red}|\\text{see red} ) = \\frac{P(\\text{see red}|\\text{at red})  \\cdot P(\\text{at red})}{P(\\text{see red})}</span>\n\n现在，我们了解先验概率和条件概率后，可以改写为：\n\n<span class=\"mathquill\">P(\\text{at red}|\\text{see red} ) = \\frac{0.8  \\cdot 0.5}{P(\\text{see red})}</span>\n\n不过我们还不知道一件事！我们看见红色的概率是多少？ 答案是 0.5。我可以用两种方式来证明，一是直观预测，二是数学。 \n\n#### 为什么 P(see red) 是0.5?\n\n##### 方式1：直观预测\n\n当然是 0.5！不然呢? 机器人有 50％ 的概率认为自己在红色格子里，有50％的概率认为自己在绿色格子里。当然，它的传感器是不可靠的，但不可靠性是对称的，而**不是**错误地看到任何一种颜色。\n所以无论看到红色的可能性是多少，这也将是看到绿色的可能性。由于这两种颜色是唯一可能的颜色，所以看到每种颜色的概率一定是 50％ ！\n\n\n##### 方式 2: 数学 （全概率法则）\n机器人看到红色有以下两种情况。\n1. 当机器人处于红色格子并且其传感器正常工作时。\n2. 当机器人在绿色格子中，其传感器犯了一个错误。\n我只需要把这两个概率加起来就可以得到红色的总概率。\n\n<span class=\"mathquill\">P(\\text{see red} ) = P(\\text{at red}) \\cdot P(\\text{see red} | \\text{at red}) + P(\\text{at green}) \\cdot P(\\text{see red} | \\text{at green})</span>\n\n我可以由此得出答案：\n\n<span class=\"mathquill\">P(\\text{see red} ) = 0.5 \\cdot 0.8 + 0.5 \\cdot 0.2 </span>\n\n<span class=\"mathquill\">P(\\text{see red} ) = 0.4 + 0.1 </span>\n\n<span class=\"mathquill\">P(\\text{see red} ) = 0.5  </span>\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 256834,
+          "key": "484529810923",
+          "title": "机器人传感 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529810923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256300,
+              "key": "48452981",
+              "title": "机器人传感 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452981",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "t22oDruXhuo",
+                  "china_cdn_id": "t22oDruXhuo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 2",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/xqA_15XO42LpiTgVAxdSzzLjvXLNkPLTkc9t-fC1AyO6AaWoGVexQofh0rAWck5K12VI4mo3mdNR5Co6JQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452981",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48726280",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341202862121",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.082039911308204,
+                      "width": 0.1259351620947631,
+                      "x": 0.7465221226927253,
+                      "y": 0.72722611003861
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341202872932",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.08425720620842572,
+                      "width": 0.11845386533665836,
+                      "x": 0.7465221226927253,
+                      "y": 0.8481841216216216
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "aBBmlnd7okQ",
+                  "china_cdn_id": "aBBmlnd7okQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256835,
+          "key": "483118810923",
+          "title": "机器人传感 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118810923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256301,
+              "key": "48311881",
+              "title": "机器人传感 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311881",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "-6l4_oprDOk",
+                  "china_cdn_id": "-6l4_oprDOk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 3",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/7ZTatHmY3XkQDi_uRY9yyf-RRos4L91Qle99vAiGtpTxJ_-9ZgjpEmThok5VlzImeaU2VORVVM3sa0ekJnQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311881",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48445276",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341202919823",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.11346633416458853,
+                      "x": 0.747828447339848,
+                      "y": 0.72722611003861
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341202929338",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.11346633416458853,
+                      "x": 0.75,
+                      "y": 0.844715250965251
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "m1LSU9SPZ2k",
+                  "china_cdn_id": "m1LSU9SPZ2k.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256836,
+          "key": "484806100923",
+          "title": "机器人传感 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806100923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256302,
+              "key": "48480610",
+              "title": "机器人传感 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480610",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "vasdN2Gol0M",
+                  "china_cdn_id": "vasdN2Gol0M.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 4",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/XL2mYBUxXV9dowF4e7qph8XlTaOBqRkkxBBNhiSGb2I4j5dx-3ZBDW4mrcb-VTQB-4gUkXNs-71gZIYm2AA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480610",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48241000",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341203085771",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06651884700665188,
+                      "width": 0.11471321695760599,
+                      "x": 0.34375,
+                      "y": 0.560539333976834
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "d_fbDqAGVdE",
+                  "china_cdn_id": "d_fbDqAGVdE.mp4"
+                }
+              }
+            },
+            {
+              "id": 672083,
+              "key": "3ad8bc14-10e6-4850-848c-084eb7653145",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在视频36‘‘处“在格子中看到红色的概率”应为“在格子中看到绿色的概率”。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 256837,
+          "key": "484529820923",
+          "title": "机器人传感 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529820923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256303,
+              "key": "48452982",
+              "title": "机器人传感 5",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452982",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "tIrqdYTT_9Q",
+                  "china_cdn_id": "tIrqdYTT_9Q.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 5",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/qocNzNuu2ycQhvHXtag3yrPWrU538DVFoMWwWF7eIhEv7sbYhEIH56hHX2MV7p_6p_Hd8UdU7AXJPiUeAg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452982",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48686674",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341203324803",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06651884700665188,
+                      "width": 0.10723192019950124,
+                      "x": 0.3385416666666667,
+                      "y": 0.6608651061776062
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "PGG9agooCvw",
+                  "china_cdn_id": "PGG9agooCvw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256839,
+          "key": "483118820923",
+          "title": "机器人传感 6",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "483118820923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256304,
+              "key": "48311882",
+              "title": "机器人传感 6",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48311882",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Se-ddM2Wdac",
+                  "china_cdn_id": "Se-ddM2Wdac.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 6",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/5NbP5SmVVsXjXkZZ6nceawSWNO4gGDSjiC_WcIvFLHcLgsa2l1d-lykKTTL5GelASz9BbPTdr0GwxNDR8iI=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48311882",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48311831",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341203413544",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.11970074812967581,
+                      "x": 0.33202700868621066,
+                      "y": 0.7623069498069498
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "hXyXlk0gYzk",
+                  "china_cdn_id": "hXyXlk0gYzk.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256838,
+          "key": "484806110923",
+          "title": "机器人传感 7",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484806110923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256305,
+              "key": "48480611",
+              "title": "机器人传感 7",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48480611",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "goEMc0w58xM",
+                  "china_cdn_id": "goEMc0w58xM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 7",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/Z2vJu6j6aWchsde6cnAbFslhfpxlHGdxSlqp8TKsG8Axu0BRtVHSzTC2VOSki1zosdTtAhJ0zPBegYLkebw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48480611",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48646780",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341203454674",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08869179600886919,
+                      "width": 0.12468827930174564,
+                      "x": 0.3333163680781759,
+                      "y": 0.8807613416988417
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "clFL503NPyY",
+                  "china_cdn_id": "clFL503NPyY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256840,
+          "key": "484529830923",
+          "title": "机器人传感 8",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484529830923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256306,
+              "key": "48452983",
+              "title": "机器人传感 8",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48452983",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "hyAQ28MYmc4",
+                  "china_cdn_id": "hyAQ28MYmc4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "机器人传感 8",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/nnw0g-Kf5_bA9TykXHrSCPwwaTfGptX9FdBl0oBFE8rQm4wiv-Y7JDhXXFZuXDFmLONFFgk8N6fcxDDUMpey=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48452983",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48240997",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341203506526",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.10099750623441396,
+                      "x": 0.765625,
+                      "y": 0.5185185185185185
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer2",
+                    "marker": "1341203535472",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.06651884700665188,
+                      "width": 0.09850374064837905,
+                      "x": 0.766710776330076,
+                      "y": 0.6068412162162162
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer3",
+                    "marker": "1341203561246",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.06873614190687362,
+                      "width": 0.09600997506234414,
+                      "x": 0.765625,
+                      "y": 0.6994449806949807
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "lmuonrQp_lM",
+                  "china_cdn_id": "lmuonrQp_lM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256841,
+          "key": "487033160923",
+          "title": "归纳总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487033160923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256307,
+              "key": "48703316",
+              "title": "归纳总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "SdMk3aROgSc",
+                "china_cdn_id": "SdMk3aROgSc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 256842,
+          "key": "482999920923",
+          "title": "练习：Sebastian 在家的概率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "482999920923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256308,
+              "key": "48299992",
+              "title": "练习：Sebastian 在家的概率",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48299992",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "TtmQ7YCw_1Y",
+                  "china_cdn_id": "TtmQ7YCw_1Y.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Sebastian 在家的概率",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/oNNjoBIV8L9Jvxb7hlMSv1aUb0MVYC4LGX27M2WHZz8sXbwKXIoOYSutGs6zYG8_pdJZs1hMr8ocQLd8yvI=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48299992",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48230509",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1341203845289",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09090909090909091,
+                      "width": 0.1396508728179551,
+                      "x": 0.5416666666666666,
+                      "y": 0.5570704633204633
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "R4zq6mPPMxs",
+                  "china_cdn_id": "R4zq6mPPMxs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 437465,
+          "key": "38b9ce6c-2be9-4834-a5ec-63af1bfab08a",
+          "title": "学习目标：条件概率",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "38b9ce6c-2be9-4834-a5ec-63af1bfab08a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 437130,
+              "key": "d43356b1-5894-4764-b4f6-ca7216923dba",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 学习目标：条件概率\n\n我们使用以下注释：\n* <span class=\"mathquill\">P(A)</span> 表示 \"A 的概率\"\n* <span class=\"mathquill\">P(\\neg A)</span> 表示 \"非 A 的概率\"\n*  <span class=\"mathquill\">P(A,B)</span> 表示 \"A **和** B 同时发生的 概率\" 并且 \n* <span class=\"mathquill\">P(A|B)</span> 表示 \"**条件为** B 时 A 发生的概率\"。\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437132,
+              "key": "bbd4b92c-9192-4886-aee8-da3272df6196",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bbd4b92c-9192-4886-aee8-da3272df6196",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果 A 和 B 是 **独立** 事件 并且 P(A) = 0.2 和 P(B) = 0.1，P(A,B) 是什么？",
+                "answers": [
+                  {
+                    "id": "a1500933809643",
+                    "text": "0.3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500933853061",
+                    "text": "0.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500933864301",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500933873835",
+                    "text": "0.02",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500934245043",
+                    "text": "信息不全，无法回答",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934252103",
+                    "text": "我不知道",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437133,
+              "key": "bf2510ed-d972-4bc7-8c57-0eebcac68a20",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "bf2510ed-d972-4bc7-8c57-0eebcac68a20",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果 A 和 B 是 **非独立** 事件，并且 P(A) = 0.2 和 P(B) = 0.1，P(A, B) 是什么？",
+                "answers": [
+                  {
+                    "id": "a1500934320168",
+                    "text": "0.3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934362471",
+                    "text": "0.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934365406",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934367815",
+                    "text": "0.02",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1500934373758",
+                    "text": "信息不全，无法回答",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1500934382848",
+                    "text": "我不知道",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437134,
+              "key": "6ebe4de5-9d32-4366-ae96-8e4f91c10e3a",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "6ebe4de5-9d32-4366-ae96-8e4f91c10e3a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果 A 和 B 是非独立事件，并且 P(A) = 0.2，P(B) = 0.1，且 P(B|A) = 0.3，P(A|B) 是什么？",
+                "answers": [
+                  {
+                    "id": "a1501874471170",
+                    "text": "0.0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874502444",
+                    "text": "0.01",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874506318",
+                    "text": "0.02",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874509252",
+                    "text": "0.03",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874512125",
+                    "text": "0.04",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874514979",
+                    "text": "0.06",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874518093",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874521685",
+                    "text": "0.2",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874524401",
+                    "text": "0.3",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874527603",
+                    "text": "0.4",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874531914",
+                    "text": "0.6",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501874537090",
+                    "text": "1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875737595",
+                    "text": "我不知道",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437135,
+              "key": "b051b23d-6011-4e11-a4ec-635053e9c157",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 注释：\n剩下的问题用两个硬币进行处理。 \n\n**硬币 1** 是均衡的。 抛这枚硬币得到的 **正面概率是 0.5，反面概率是 0.5。**\n\n**硬币 2** 是不均衡的。 抛这枚硬币得到的 **正面概率是 0.9，反面概率是 0.1。**",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437136,
+              "key": "631f7d39-394a-4fa6-8318-cb34eea679ca",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "631f7d39-394a-4fa6-8318-cb34eea679ca",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "你 *随机* 拿起其中一枚硬币 (相当于你拿起硬币 1 或 2)，然后抛掷硬币。得到正面的概率是多少？",
+                "answers": [
+                  {
+                    "id": "a1501874811948",
+                    "text": "0.1",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874904998",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874907722",
+                    "text": "0.45",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874911216",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874913735",
+                    "text": "0.6",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874923317",
+                    "text": "0.7",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501874925688",
+                    "text": "0.8",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874932492",
+                    "text": "0.9",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874936267",
+                    "text": "1.0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501874945392",
+                    "text": "1.4",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437137,
+              "key": "5ce8fe81-0b55-40d5-be90-cdf3016c9a6e",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5ce8fe81-0b55-40d5-be90-cdf3016c9a6e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "你随机拿起一枚硬币，抛掷两次。\n\n两次都是反面的概率是多少？",
+                "answers": [
+                  {
+                    "id": "a1501874970316",
+                    "text": "0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875184479",
+                    "text": "0.09",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875225805",
+                    "text": "0.13",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501875228988",
+                    "text": "0.21",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875234698",
+                    "text": "0.35",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875240651",
+                    "text": "0.44",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875254040",
+                    "text": "0.5",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501875762758",
+                    "text": "我不知道",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 437462,
+          "key": "761d9818-192d-4c9e-a09f-d51507abe2ce",
+          "title": "降低不确定性",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "761d9818-192d-4c9e-a09f-d51507abe2ce",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 437120,
+              "key": "0c4605e6-4163-494b-afba-6f13ad22b18a",
+              "title": "降低不确定性",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zuFMhmKQ--o",
+                "china_cdn_id": "zuFMhmKQ--o.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 437459,
+          "key": "d87e7735-a50a-4645-a1c6-0ce8a50720bc",
+          "title": "贝叶斯法则和机器人学",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d87e7735-a50a-4645-a1c6-0ce8a50720bc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 437121,
+              "key": "0ce0b2e6-307f-4d02-bba0-6a04a49c2ec0",
+              "title": "贝叶斯法则和机器人学",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "meNSO42JF6I",
+                "china_cdn_id": "meNSO42JF6I.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 437464,
+          "key": "9996d9fe-afd6-4946-901a-4a4ec07b777a",
+          "title": "学习传感器数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9996d9fe-afd6-4946-901a-4a4ec07b777a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 437122,
+              "key": "54f38549-6ebd-4583-b2a4-e96d8b7e45b1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 初始场景",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437123,
+              "key": "d37a8a08-9168-4168-8838-e65e82d08c32",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/59821cb6_screen-shot-2017-08-02-at-11.40.37-am/screen-shot-2017-08-02-at-11.40.37-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d37a8a08-9168-4168-8838-e65e82d08c32",
+              "caption": "路线图和初始定位预测",
+              "alt": null,
+              "width": 400,
+              "height": 300,
+              "instructor_notes": null
+            },
+            {
+              "id": 437124,
+              "key": "cb6bac9e-7201-450d-8014-760e0a82deb4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们对 (上图所示) 汽车所在的路线图了解很少。我们也有 GPS 初始测量；GPS 信号表明汽车位于红点位置。然而这个 GPS 测量并不准确，误差达 5 米。所以这辆汽车可能停在红点周围半径 5 米的任何地方。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437126,
+              "key": "30fd6dd1-16a0-4ab6-bb73-2f9da84630b0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 传感器\n\n然后我们通过汽车的传感器收集数据。无人驾驶汽车主要使用以下三种传感器观察世界：\n* **摄像头**：可以拍摄视频，\n* **光学雷达**：是基于光学的传感器，\n* **雷达**：使用无线电波。\n\n所有这些传感器探测周围物体和场景。\n\n无人驾驶汽车也有许多 **内部传感器**，可以测量汽车行驶的速度和方向、车轮方向，甚至是车内温度！\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437125,
+              "key": "f6a415a6-33e4-496e-b849-f3d18fd550fe",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 传感器测量\n\n假设我们的传感器探测到地形和汽车行驶的具体信息，如下：\n* 这辆汽车可能在方圆半径 5 米的任何地方，\n* 汽车正在爬坡行驶，\n* 汽车左侧有棵树，\n* 汽车车轮指向右边。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437127,
+              "key": "5a4bc59b-9042-4f13-b4bb-80560ec8c205",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在只了解这些传感器测量的情况下，请检查下方地图，并回答下列测试问题。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437128,
+              "key": "8d65715c-3b6b-45b5-9027-73e631270b5b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/59821ebb_screen-shot-2017-08-02-at-11.49.10-am/screen-shot-2017-08-02-at-11.49.10-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8d65715c-3b6b-45b5-9027-73e631270b5b",
+              "caption": "含有其他传感器数据的路线图",
+              "alt": null,
+              "width": 962,
+              "height": 756,
+              "instructor_notes": null
+            },
+            {
+              "id": 437129,
+              "key": "8b35a3c0-81b6-4d17-966c-2f4ad342fe9e",
+              "title": "更新后的定位预测",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "8b35a3c0-81b6-4d17-966c-2f4ad342fe9e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "通过考虑传感器测量和初始定位预测，上述地图中哪个点最有可能是我们汽车的位置呢？（注：这条路是单行道）",
+                "answers": [
+                  {
+                    "id": "a1501700064133",
+                    "text": "A",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501700142097",
+                    "text": "B",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501700144567",
+                    "text": "C",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501700146024",
+                    "text": "D",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501700149323",
+                    "text": "E",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 437463,
+          "key": "02ca4cd3-f06b-4466-817d-bbb68cf851e0",
+          "title": "使用传感器数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "02ca4cd3-f06b-4466-817d-bbb68cf851e0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 437131,
+              "key": "1f500ecc-b4e2-4ecb-8407-f560750a4c0f",
+              "title": "使用传感器数据",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vhl-SADfti8",
+                "china_cdn_id": "vhl-SADfti8.mp4"
+              }
+            },
+            {
+              "id": 693366,
+              "key": "abb0b38c-41f7-466b-80e3-8c0865300ca3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "视频48s处，“先验信仰” 应为 “先验信息”",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 437466,
+          "key": "d0e067b6-9913-4ac2-9e33-4e927fb99034",
+          "title": "学习目标 - 贝叶斯法则",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d0e067b6-9913-4ac2-9e33-4e927fb99034",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 437138,
+              "key": "b2b8642c-fb3b-407a-aa23-37d47efd0b34",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 学习目标 -  贝叶斯法则\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 542545,
+              "key": "2e726bf9-9477-441f-94f7-15e598087b88",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "以下问题将有助于你回顾在“贝叶斯法则”章节中学习到的知识。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437139,
+              "key": "0de00a9d-7f88-49b2-ba03-3dfa5114845c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 预备知识\n\n**对于问题 1-3，假定你已经具备以下知识**：\n\n你希望得出一辆汽车看见*黄色* 的交通信号灯就停下来的概率是多少。   \n\n* 经验数据告诉你，一辆汽车在交通灯交叉路口停车的概率是 <span class=\"mathquill\">P(S) = 0.40</span>。  \n\n* 同时你了解到，基于经验数据，交通灯是黄色（而不是红色或绿色）的概率是 <span class=\"mathquill\">P(Y) = 0.10</span>。  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437140,
+              "key": "6f6fc284-8496-4a84-b954-211d57eb3c84",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598266e3_screen-shot-2017-08-02-at-4.57.01-pm/screen-shot-2017-08-02-at-4.57.01-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6f6fc284-8496-4a84-b954-211d57eb3c84",
+              "caption": "车辆在黄灯前停车",
+              "alt": "",
+              "width": 500,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 437141,
+              "key": "255a8666-459d-4f17-b52d-0852dd2d297e",
+              "title": "交通灯 q1",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "255a8666-459d-4f17-b52d-0852dd2d297e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "当汽车停在十字路口时，数据显示，灯光为黄色的时间占比为 12%。所以，如果我们知道一辆车停了下来，那么有 12% 的可能性是黄灯。  这被称为*条件概率*。\n\n给定上面的 P(S) 和 P(Y)，如何用符号表示这个条件概率？  ",
+                "answers": [
+                  {
+                    "id": "a1501205087553",
+                    "text": "P(S|Y) = 0.12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205208596",
+                    "text": "P(S) =0.12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205220196",
+                    "text": "P(Y|S) = 0.12",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501205348531",
+                    "text": "P(Y,S) = 0.12",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437142,
+              "key": "7efc0f6f-69a2-49fd-aa92-dcf170e752b1",
+              "title": "交通灯 q2",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7efc0f6f-69a2-49fd-aa92-dcf170e752b1",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据习题1中提供的信息，回答以下问题：如果交通信号灯为黄色，那么汽车停下的可能性是多少？  \n",
+                "answers": [
+                  {
+                    "id": "a1501205676465",
+                    "text": "0.04",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205679478",
+                    "text": "0.33",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205687122",
+                    "text": "0.40",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205694825",
+                    "text": "0.48",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501205722004",
+                    "text": "0.50",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501205725639",
+                    "text": "0.52",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437145,
+              "key": "01865a23-444d-4bae-ad4d-43662c7b96c8",
+              "title": "交通灯 q3",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "01865a23-444d-4bae-ad4d-43662c7b96c8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "我们知道，在交叉路口停车和黄色交通灯是相关事件，那么 P(S) 和 P(Y) 分别是什么？  ",
+                "answers": [
+                  {
+                    "id": "a1501206083765",
+                    "text": "后验概率",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501206294159",
+                    "text": "经验概率",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501206298641",
+                    "text": "先验概率",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501206305385",
+                    "text": "总概率",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437143,
+              "key": "017f0993-0cb3-4370-936c-ea956cbe7e9d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 问题 4 和 5 是不同场景。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437144,
+              "key": "f9cd9ad8-9147-44db-aa65-74563c96bb3c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**问题 4 的预备知识：**\n\n在一条四车道的高速公路上，汽车行驶速度要么快，要么不快。  快的汽车应该在最左边的车道。  \n\n* 在任何时候，都有 20% 的车辆在最左边的车道。  \n\n* 总体上，高速公路上有 40% 的车辆被归类为快速行驶。  \n\n* 在最左边车道的所有车辆中，90% 的车辆正在快速行驶。  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437146,
+              "key": "9ca50be1-5f68-42a1-a4a2-8bd6f6208a56",
+              "title": "贝叶斯 q2",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9ca50be1-5f68-42a1-a4a2-8bd6f6208a56",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "根据以上信息，如果汽车行驶速度很快，那么它位于最左边车道的概率是多少？  ",
+                "answers": [
+                  {
+                    "id": "a1501207155576",
+                    "text": "0.125",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501207184220",
+                    "text": "0.25",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501207191438",
+                    "text": "0.45",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501207193943",
+                    "text": "0.55",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 437147,
+              "key": "b1660ffc-937e-410b-af33-12d4a91579a4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "贝叶斯法则不仅用于将传感器数据纳入估计过程，它也经常用于将测试数据纳入到医疗诊断中。 \n\n**问题 5 的预备知识：**\n\n* 在所有人口中，有 1% 得了癌症。\n* 90％ 的癌症患者在接受癌症检测的血液检测结果为阳性，这意味着 90% 的可能性检测出癌症。  \n* 5% 的人会有误报，也就是说有 5% 的可能性，会出现该检测在人们没有癌症的时候呈现阳性结果的情况。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 437148,
+              "key": "1ac5de50-9605-4f99-ac78-8e3ba55af0f2",
+              "title": "Bayes q3",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1ac5de50-9605-4f99-ac78-8e3ba55af0f2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "鉴于上述数据，如果一个人的癌症检测结果为阳性，那么他患癌症的概率是多少？  （注意：答案四舍五入到最接近的 4 位小数）。  ",
+                "answers": [
+                  {
+                    "id": "a1501208084691",
+                    "text": "0.1125",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501208101776",
+                    "text": "0.1538",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1501208108511",
+                    "text": "0.2687",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1501208112575",
+                    "text": "0.8924",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 461878,
+          "key": "fd6f52b0-9490-4a56-9eee-1c024944271c",
+          "title": "贝叶斯规则总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fd6f52b0-9490-4a56-9eee-1c024944271c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461843,
+              "key": "c56862e3-3f1e-47b5-835f-1e03a55122ab",
+              "title": "贝叶斯规则总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vlfDGCD8w0s",
+                "china_cdn_id": "vlfDGCD8w0s.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

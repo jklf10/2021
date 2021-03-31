@@ -1,0 +1,1241 @@
+{
+  "data": {
+    "lesson": {
+      "id": 462051,
+      "key": "dbd37b8d-f8e0-4708-a919-4b5cebe5ccaf",
+      "title": "二项分布",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "学习概率中最流行的一种分布之一：二项分布。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/dbd37b8d-f8e0-4708-a919-4b5cebe5ccaf/462051/1577692661976/%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/dbd37b8d-f8e0-4708-a919-4b5cebe5ccaf/462051/1577692655476/%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 256977,
+          "key": "486966560923",
+          "title": "二项式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486966560923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256444,
+              "key": "48696656",
+              "title": "二项式",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48696656",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "3koDdc9r73E",
+                  "china_cdn_id": "3koDdc9r73E.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二项式",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/WPP-V6zJGul2LtGBix-KVh-XNPlqDZv5RRMW8kZGCCIl4dbXSyQV-VcnuXaY2F2cgsrdqd3oJZu9tpnuSFXP=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48696656",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48750011",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342215930352",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.10349127182044887,
+                      "x": 0.3898067331670823,
+                      "y": 0.35521757206208426
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "x1yamZeOMPY",
+                  "china_cdn_id": "x1yamZeOMPY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256979,
+          "key": "487263790923",
+          "title": "正反面",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487263790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256445,
+              "key": "48726379",
+              "title": "正反面",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48726379",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "yo55zJtJQwo",
+                  "china_cdn_id": "yo55zJtJQwo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "正反面",
+                "alt_text": "",
+                "background_image": "//lh4.ggpht.com/G7GjTjg59eajoHQ5qUhT-35IWmHf8p5OvcpLEhfC0nTUQ-d4CeC7oUIBIEmhlf65IrbVAVKdYB0gA2kIRNk=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48726379",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48741083",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342216310312",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.057649667405764965,
+                      "width": 0.10473815461346633,
+                      "x": 0.3870986596009975,
+                      "y": 0.36852134146341464
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "iyX0-eXStbw",
+                  "china_cdn_id": "iyX0-eXStbw.mp4"
+                }
+              }
+            },
+            {
+              "id": 842736,
+              "key": "3b3ada88-e601-4f67-86f8-60c3e4c9e543",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "问题：掷4次硬币，在所有可能出现的结果里，有多少种结果是正面和反面出现的次数一样? ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 256980,
+          "key": "487174420923",
+          "title": "正反面 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487174420923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256446,
+              "key": "48717442",
+              "title": "正反面 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48717442",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "S87Z5DgPJeo",
+                  "china_cdn_id": "S87Z5DgPJeo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "正反面 2",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/eVp6bC4IMCX-P9NsTC3pMeV9UUsHlTKzq6ivDNjegAlyoYpnk1MNLHWv3CXc3Sz4MTb8eQoxVuEDbsv3IA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48717442",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48713571",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342215987446",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.10224438902743142,
+                      "x": 0.3969191096634093,
+                      "y": 0.3718930984555985
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "vLhdJtXx060",
+                  "china_cdn_id": "vLhdJtXx060.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256981,
+          "key": "484039640923",
+          "title": "掷硬币 5 次出现 1 次正面",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484039640923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256447,
+              "key": "48403964",
+              "title": "掷硬币 5 次出现 1 次正面",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48403964",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "VEfOdACY9rA",
+                  "china_cdn_id": "VEfOdACY9rA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "掷硬币 5 次出现 1 次正面",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/SpjGE7r4igfBhYJeaZL31Z8qlsfPveuLsLOrvF0l_qewpAFVMlmxES_IHyA-1a19LtdE6jqyxnJ7vPxG0usS=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48403964",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48736116",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342216004773",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.10349127182044887,
+                      "x": 0.3958333333333333,
+                      "y": 0.3738236003861004
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "4LVRNqpdxsw",
+                  "china_cdn_id": "4LVRNqpdxsw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256983,
+          "key": "484039650923",
+          "title": "掷硬币 5 次出现 2 次正面",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "484039650923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256448,
+              "key": "48403965",
+              "title": "掷硬币 5 次出现 2 次正面",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48403965",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "lhhUjxnbad8",
+                  "china_cdn_id": "lhhUjxnbad8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "掷硬币 5 次出现 2 次正面",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/hznSFvFPB0m8VwfnAELh-tEIhttqD4bXM0gjZ72YaCyR59LJl2lWAT_Om5RlkehfjRRdIpxkiz3D9Q5NyZKs=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48403965",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48745039",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342216435549",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.09975062344139651,
+                      "x": 0.3988701140065147,
+                      "y": 0.3718930984555985
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "69je8wHh2mQ",
+                  "china_cdn_id": "69je8wHh2mQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256984,
+          "key": "487025070923",
+          "title": "掷硬币 5 次出现 3 次正面",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487025070923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256449,
+              "key": "48702507",
+              "title": "掷硬币 5 次出现 3 次正面",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48702507",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "1PHs2w_NNTg",
+                  "china_cdn_id": "1PHs2w_NNTg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "掷硬币 5 次出现 3 次正面",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/XEHjdWFExsQguM2YTGWQIjyMYDhvztIVU2m5Eeue4fO1PereKu_0Vj9TOPFA9niR3nG1PVIU_i-ytPvY-g=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48702507",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48665990",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342216461480",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.05543237250554324,
+                      "width": 0.09975062344139651,
+                      "x": 0.3936617806731813,
+                      "y": 0.37575410231660233
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "pOKmt4w8T3g",
+                  "china_cdn_id": "pOKmt4w8T3g.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256982,
+          "key": "487283760923",
+          "title": "掷硬币 10 次出现 5 次正面",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487283760923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256450,
+              "key": "48728376",
+              "title": "掷硬币 10 次出现 5 次正面",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48728376",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "mOPFQlKBg2M",
+                  "china_cdn_id": "mOPFQlKBg2M.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "掷硬币 10 次出现 5 次正面",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/8zmv5mO4niv3-F6mBJYzpsFk8WaxlhARc4IyIqNOYTPeUC8gLDTDL7CxeRvrL6OgaZwTU-axvjdOqZ6I3ExJ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48728376",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48632799",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342216485015",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.06651884700665188,
+                      "width": 0.12094763092269327,
+                      "x": 0.39561278501628666,
+                      "y": 0.37575410231660233
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Qm4KTLfFMzo",
+                  "china_cdn_id": "Qm4KTLfFMzo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256985,
+          "key": "487471570923",
+          "title": "公式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487471570923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256451,
+              "key": "48747157",
+              "title": "公式",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48747157",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "DTdS-LlMTQ0",
+                  "china_cdn_id": "DTdS-LlMTQ0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "公式",
+                "alt_text": null,
+                "background_image": "//lh5.ggpht.com/5R0sZTN70v71qsG3ODR6LCZAW6NmOyLEGklPrKai9wmNF3YuCifSl1koDTxLweJQYhjOkmIKAI0tkiZJnPE=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48747157",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48746014",
+                "widgets": [
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option2",
+                    "marker": "1342216835434",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.652992671009772,
+                      "y": 0.393882722007722
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option3",
+                    "marker": "1342216838921",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.7944828990228013,
+                      "y": 0.38229971042471045
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option4",
+                    "marker": "1342216842386",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.65082111834962,
+                      "y": 0.558608832046332
+                    }
+                  },
+                  {
+                    "group": "multipleChoice1",
+                    "initial_value": "false",
+                    "label": "option5",
+                    "marker": "1342216845625",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": 5,
+                    "placement": {
+                      "height": 0.04,
+                      "width": 0.04,
+                      "x": 0.7977402280130294,
+                      "y": 0.5547478281853282
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "yTr8zCHdo5M",
+                  "china_cdn_id": "yTr8zCHdo5M.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256986,
+          "key": "487431780923",
+          "title": "排列",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487431780923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256452,
+              "key": "48743178",
+              "title": "排列",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48743178",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GeINbOOYkF8",
+                  "china_cdn_id": "GeINbOOYkF8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "排列",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/pMhKN_6LcIEHdRooYoXq9v0TDTvj8QW_9gHiTgaPqI9f138HWGWPYzIjTZesPsZatUxIWWf44dQ6AXF_NDE=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48743178",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48632800",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342216879264",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10643015521064302,
+                      "width": 0.13341645885286782,
+                      "x": 0.4394510043431053,
+                      "y": 0.37690033783783783
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "NRPcnpmFCg8",
+                  "china_cdn_id": "NRPcnpmFCg8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256987,
+          "key": "487372550923",
+          "title": "二项式 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487372550923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256453,
+              "key": "48737255",
+              "title": "二项式 1",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "注意：视频中拼写错误，正面朝上的次数的概率 应该是 P(#heads = 1)，而不是P(#heads)= 1。后者的意思是概率值为1。",
+              "user_state": {
+                "node_key": "48737255",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "RBfFHxEjsIU",
+                  "china_cdn_id": "RBfFHxEjsIU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二项式 1",
+                "alt_text": "",
+                "background_image": "//lh6.ggpht.com/dwRVqP1enwRt2WjgyxWXui7od6GZMyQQbHUOM2REkfUmfeOZVCcCkb8ayFs0duzTiF7HolnPGViDgpS0r-Hg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48737255",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48746015",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342217010654",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.1371571072319202,
+                      "x": 0.66101723669924,
+                      "y": 0.6010497104247104
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "07vOaYwecII",
+                  "china_cdn_id": "07vOaYwecII.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256988,
+          "key": "486966570923",
+          "title": "二项式 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486966570923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256454,
+              "key": "48696657",
+              "title": "二项式 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "注意：视频中拼写错误，正面朝上的次数为3的概率 应该表达为 P(#heads = 3)，而不是P(#heads)= 3。后者的意思是概率值为3。",
+              "user_state": {
+                "node_key": "48696657",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "d4LWnxyvrTQ",
+                  "china_cdn_id": "d4LWnxyvrTQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二项式 2",
+                "alt_text": "",
+                "background_image": "//lh3.ggpht.com/r5aCpk_OCO-11Yw93igQjhSzQWnid__qQxHCUqGOA8m7MbQ07sWGLt4zmhJ20fBszBPunf_uGPICZ7U0bT1u=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48696657",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48716247",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342217076321",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08869179600886919,
+                      "width": 0.13216957605985039,
+                      "x": 0.6666497014115093,
+                      "y": 0.6087717181467182
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Uy7b3aMPnEY",
+                  "china_cdn_id": "Uy7b3aMPnEY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256991,
+          "key": "486468750923",
+          "title": "二项式 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "486468750923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256456,
+              "key": "48646875",
+              "title": "二项式 3",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48646875",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Jp2xJOtNQZ0",
+                  "china_cdn_id": "Jp2xJOtNQZ0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二项式 3",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/uRw6RKpKCv3h8b63qL2T8Atw5F24f7Qw1cvOlwhccaVTinn-TBkKXFu52bp2k2JzPNA9exNc6WPO6Eisjg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48646875",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48635652",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342217209465",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.09090909090909091,
+                      "width": 0.13466334164588528,
+                      "x": 0.6625441096634094,
+                      "y": 0.5995113416988417
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "YIELbuet-ZE",
+                  "china_cdn_id": "YIELbuet-ZE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256990,
+          "key": "487471590923",
+          "title": "二项式 4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487471590923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256457,
+              "key": "48747159",
+              "title": "二项式 4",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48747159",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "mvJUNYfHngY",
+                  "china_cdn_id": "mvJUNYfHngY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二项式 4",
+                "alt_text": null,
+                "background_image": "//lh3.ggpht.com/6tQGpUTdx7M5h9VyKX8PFZeVaqd236pceLtQ0xiv8Q7tN4kLqfiHp7ra6iR4E4ugvztrgf0htYVGoS9vXrg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48747159",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48204962",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342217144778",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08425720620842572,
+                      "width": 0.13591022443890274,
+                      "x": 0.66101723669924,
+                      "y": 0.6014418436293436
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "lPrKmvckG4E",
+                  "china_cdn_id": "lPrKmvckG4E.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256989,
+          "key": "487277020923",
+          "title": "二项式 5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "487277020923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256455,
+              "key": "48727702",
+              "title": "二项式 5",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48727702",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "yof0QiP2mzk",
+                  "china_cdn_id": "yof0QiP2mzk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二项式 5",
+                "alt_text": null,
+                "background_image": "//lh4.ggpht.com/1z4EGni6TwHiaFm0rMwf2zX_NykYfizIwV7lzcHHn_ymX30OYzlPzK8eoNev2mvrzskN4sKJIx-gAYVwWQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48727702",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48738100",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342220060800",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.10421286031042129,
+                      "width": 0.14962593516209477,
+                      "x": 0.6542238154613467,
+                      "y": 0.5871674057649667
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "8jcCGD986jk",
+                  "china_cdn_id": "8jcCGD986jk.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 256992,
+          "key": "485327960923",
+          "title": "二项式 6",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "485327960923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 256458,
+              "key": "48532796",
+              "title": "二项式 6",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "48532796",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "CQHRYIU6v9Q",
+                  "china_cdn_id": "CQHRYIU6v9Q.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二项式 6",
+                "alt_text": null,
+                "background_image": "//lh6.ggpht.com/l7ieGY_uQRQTamp-upau82viqLPJ0s3kco7tToCwYfi6ANwLB8Vmji_6SdSb0YkafO_mkdffGr4343NJ3A=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/48532796",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "48750006",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "0",
+                    "label": "textAnswer1",
+                    "marker": "1342219117706",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.08869179600886919,
+                      "width": 0.14214463840399003,
+                      "x": 0.6588456840390879,
+                      "y": 0.597972972972973
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "n_OrWrZ8tKY",
+                  "china_cdn_id": "n_OrWrZ8tKY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 461844,
+          "key": "aafbaa6c-dcef-493e-a579-15ba6fbd3f57",
+          "title": "二项式总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aafbaa6c-dcef-493e-a579-15ba6fbd3f57",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461780,
+              "key": "2006c693-8d7e-4ac0-8009-8a59ecf32053",
+              "title": "二项分布总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "9gjCYs8f_PU",
+                "china_cdn_id": "9gjCYs8f_PU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 461847,
+          "key": "d75ae533-4a65-4b15-a8b6-2694b9cf049e",
+          "title": "文本：总结 + 下节预告",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d75ae533-4a65-4b15-a8b6-2694b9cf049e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 461781,
+              "key": "f5ae1fd6-f1bb-455e-841f-8c20f72294bf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 二项分布\n\n**二项分布** 帮助我们决定一系列独立的 '掷硬币等事件' 概率。\n\n与二项分布相关的 [概率质量函数](https://en.wikipedia.org/wiki/Probability_mass_function) 具有以下形式：\n\n<span class='mathquill'>P(X = x) = \\frac{n!}{x!(n-x)!}p^x(1-p)^{n-x}</span>\n\n其中 **n** 是事件数量， **x** 是 \"成功\" 的数量，**p** 是 \"成功\" 的概率。\n\n我们现在可以使用这个分布决定下列事件的概率：\n\n* 掷硬币 10 次出现 3 次正面的概率。\n* 掷硬币 10 次出现 8 次以上正面的概率。\n* 掷硬币 20 次不出现正面的概率。\n\n### 下节预告\n\n\n事实上你可能在实践中处理数据，通常会使用二项分布。所以计算这些概率并不重要 (即使在一些情况下非常有帮助)。更重要的是，你要了解二项分布的用途，因为它出现在机器学习的许多模型中，可以通过跟踪两个可能事件，悄悄接近我们的数据集。你可以在 **Python 概率练习** 一课进行更多相关练习。\n\n二项分布中你看到最流行的地方之一是 [逻辑回归](https://en.wikipedia.org/wiki/Logistic_regression)，你将会在统计课的最后一节课中学到这个内容。\n\n在接下来的部分中，你将开始解决非独立事件。我们目前所见到的事件不会相互影响，但在现实世界中远比这些复杂。下节课将介绍相依的概念，你将会在下面一部分学习更多贝叶斯规则。",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}
