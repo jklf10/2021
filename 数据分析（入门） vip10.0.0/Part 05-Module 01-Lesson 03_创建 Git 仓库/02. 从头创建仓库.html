@@ -1,0 +1,365 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>从头创建仓库</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>创建 Git 仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 从头创建仓库.html">02. 从头创建仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 克隆现有仓库.html">03. 克隆现有仓库</a>
+    </li>
+    <li class="">
+      <a href="04. 判断仓库的状态.html">04. 判断仓库的状态</a>
+    </li>
+    <li class="">
+      <a href="05. 总结.html">05. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 从头创建仓库</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在对 Git 仓库进行 commit 或执行任何其他操作之前，需要一个实际存在的仓库。要使用 Git 新建一个仓库，我们将使用 <code>git init</code> 命令。</p>
+<p><code>init</code> 子命令是"initialize"（初始化）的简称，这个命令很有用，因为它将进行所有仓库初始设置。稍后我们将了解它的作用。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="所需的命令">所需的命令</h2>
+</blockquote>
+<blockquote>
+  <p>注意！我们将在这节课使用以下终端命令：</p>
+  <ul>
+  <li><code>ls</code> - 用来列出文件和目录</li>
+  <li><code>mkdir</code> - 用来新建目录</li>
+  <li><code>cd</code> - 用来更改目录</li>
+  <li><code>rm</code> - 用来删除文件和目录</li>
+  </ul>
+</blockquote>
+<blockquote>
+  
+</blockquote>
+<blockquote>
+  <p>如果你不知道如何使用它们，请参阅我们的 <a href="https://www.udacity.com/course/linux-command-line-basics--ud595" rel="noopener noreferrer" target="_blank">Linux 命令行基础</a> 课程！</p>
+</blockquote>
+<blockquote>
+  
+</blockquote>
+<blockquote>
+  <p>我们还会涉及的一个概念是当前目录，即你的 shell 正在查看的目录。使用 cd 可以更改工作目录，使用 <code>ls</code>（单独使用）会列出工作目录下的文件。如果你忘记 shell 的当前工作目录，可以使用 <code>pwd</code> 命令（表示 print working directory 输出工作目录）输出该目录的名称。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="创建课程目录">创建课程目录</h2>
+<p>我们将为本课程新建一个项目。因为我们都是专业人士，因此我们希望我们的项目具有条理性。如果你已经在计算机上有一个放置所有项目的文件夹，则可以继续这么做。我会将所有的工作文件存储在目录 <code>udacity-git-course</code> 下。</p>
+<p>如果你想跟着我一起操作：</p>
+<ul>
+<li><p>创建一个目录，叫做 <code>udacity-git-course</code></p></li>
+<li><p>在该目录中，创建另一个目录，叫做 <code>new-git-project</code></p></li>
+<li><p>使用 <code>cd</code> 命令移到 <code>new-git-project</code> 目录下</p></li>
+</ul>
+<p>如果你和我一样喜欢复制粘贴，则在终端上运行以下命令：- <code>mkdir -p udacity-git-course/new-git-project &amp;&amp; cd $_</code>（在运行此命令前，确保使用 <code>cd</code> 命令转到你想将这些文件存储到的位置。例如，如果你想将文件存储到桌面上，则使用 <code>cd</code> 转到桌面，然后再运行该命令。）</p>
+<p>一切准备好后，你的终端应该位于 <code>new-git-project</code> 目录中，并看起来如下所示：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l2-new-git-project.png" alt="_位于 new-git-project 目录下的终端应用。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>位于 new-git-project 目录下的终端应用。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-init">git init</h2>
+<p>很棒！我们已经准备好，并且可以开始使用 <code>git init</code> 命令了！</p>
+<p>这是最简单的命令之一。你只需在终端上运行 <code>git init</code>。就这么多内容，立即试试吧！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l2-git-init.gif" alt="_终端显示 &#x60;git init&#x60; 命令正在运行。该命令会在当前目录下初始化生成一个空的 Git 仓库。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示 <code>git init</code> 命令正在运行。该命令会在当前目录下初始化生成一个空的 Git 仓库。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>提示符更改？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>运行 <code>git init</code> 了吗？如果没有，现在就运行吧，因为这道练习会用到该命令！</p>
+<p>运行 <code>git init</code> 之后，应该会出现一段文字："Initialized empty Git repository in"，后面是一个路径。问题是，提示符有任何改变吗？如果有改变，是什么？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1485550964594" name="338765" id="a1485550964594">
+        <label for="a1485550964594"><p>是的，我看到单词 master 了。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485550981096" name="338765" id="a1485550981096">
+        <label for="a1485550981096"><p>没有，看起来完全一样。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    是的，我看到单词 master 了。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## git init 命令的作用</p>
+<p>运行 <code>git init</code> 命令会初始化 Git 跟踪所有内容会用到的所有必要文件和目录。所有这些文件都存储在叫做 <code>.git</code>（注意开头有个 <code>.</code>，表示在 Mac/Linux 上，它将是一个隐藏目录）的目录下。这个 <code>.git</code> 目录是一个库！Git 会将所有 commit 记录在这里，并跟踪所有内容！</p>
+<p>我们来大致了解下 <code>.git</code> 目录下的内容。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>警告：请勿直接修改 <code>.git</code> 目录下的任何文件。这是仓库的核心。如果你更改了文件名或文件内容，Git 可能就无法跟踪你保存在仓库中的文件，你可能会丢失很多内容！可以查看这些文件，但是请勿编辑或删除这些文件。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l2-.git-directory.png" alt="_Mac 的 Finder 窗口正在显示“.git”隐藏目录中的内容。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Mac 的 Finder 窗口正在显示“.git”隐藏目录中的内容。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-目录内容">.git 目录内容</h2>
+<p><em>我们将查看 <code>.git</code> 目录…对这门课程来说，该目录并不重要，因此不用记住任何内容，你可以在此处深入了解 Git 背后的工作原理。</em></p>
+<p>下面简要概述了 <code>.git</code> 目录下的各项内容：</p>
+<ul>
+<li><strong>config 文件</strong> - 存储了所有与项目有关的配置设置。<br></li>
+</ul>
+<p>摘自于 <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration" rel="noopener noreferrer" target="_blank">Git Book - 英</a> | <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%AE-Git" rel="noopener noreferrer" target="_blank">中文点此处</a>：<br></p>
+<blockquote>
+  <p>Git 会查看 Git 目录下你当前所使用仓库对应的配置文件（.git/config）中的配置值。这些值仅适用于当前仓库。</p>
+</blockquote>
+<p>例如，假设你将 Git 全局配置为使用你的个人电子邮箱。如果你想针对某个项目使用你的工作邮箱，则此项更改会被添加到该文件中。 </p>
+<ul>
+<li><p><strong>description 文件</strong> - 此文件仅用于 GitWeb 程序，因此可以忽略</p></li>
+<li><p><strong>hooks 目录</strong> - 我们会在此处放置客户端或服务器端脚本，以便用来连接到 Git 的不同生命周期事件</p></li>
+
+<li><p><strong>info 目录</strong> - 包含全局排除文件</p>
+<ul>
+<li><p><strong>objects 目录</strong> - 此目录将存储我们提交的所有 commit</p></li>
+
+<li><p><strong>refs 目录</strong> - 此目录存储了指向 commit 的指针（通常是“分支”和“标签”） </p></li></ul></li>
+</ul>
+<p>注意，除了 hooks 目录，你应该不会对这里的其他内容有太多的困扰。hooks 目录可以用来连接到 Git 工作流的不同部分或事件，但是在这门课程中，我们不会对此作过多介绍。</p>
+<h3 id="深入研究">深入研究</h3>
+<ul>
+<li><p>Git 内部原理 - 底层命令和高层命令 : <a href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain" rel="noopener noreferrer" target="_blank">英</a> | <a href="https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-%E5%BA%95%E5%B1%82%E5%91%BD%E4%BB%A4%E5%92%8C%E9%AB%98%E5%B1%82%E5%91%BD%E4%BB%A4" rel="noopener noreferrer" target="_blank">中</a>（进阶内容——请将此网址添加到书签中，并在以后查看）</p></li>
+<li><p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" rel="noopener noreferrer" target="_blank">自定义 Git - Git Hooks - 英</a> | <a href="https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" rel="noopener noreferrer" target="_blank">中</a></p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-init-小结">git init 小结</h2>
+<p>使用 <code>git init</code> 命令可以在当前目录下创建新的空仓库。</p>
+<pre><code class="bash language-bash">$ git init</code></pre>
+<p>运行此命令可以创建隐藏 <code>.git</code> 目录。此 <code>.git</code> 目录是仓库的核心/存储中心。它存储了所有的配置文件和目录，以及所有的 commit。</p>
+<h3 id="实用链接">实用链接</h3>
+<ul>
+<li><p><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Initializing-a-Repository-in-an-Existing-Directory" rel="noopener noreferrer" target="_blank">Git 基础 - 获取 Git 仓库 - 英</a> | <a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93" rel="noopener noreferrer" target="_blank">中</a></p></li>
+<li><p><a href="https://git-scm.com/docs/git-init" rel="noopener noreferrer" target="_blank">git init 文档 - 英</a></p></li>
+<li><p><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository" rel="noopener noreferrer" target="_blank">git init 教程 - 英</a></p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 克隆现有仓库.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 从头创建仓库')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

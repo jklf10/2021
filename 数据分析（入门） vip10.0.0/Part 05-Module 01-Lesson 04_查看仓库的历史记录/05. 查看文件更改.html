@@ -1,0 +1,426 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>查看文件更改</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>查看仓库的历史记录</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 显示仓库的 commit.html">02. 显示仓库的 commit</a>
+    </li>
+    <li class="">
+      <a href="03. 更改 git log 显示信息的方式.html">03. 更改 git log 显示信息的方式</a>
+    </li>
+    <li class="">
+      <a href="04. 查看修改后的文件.html">04. 查看修改后的文件</a>
+    </li>
+    <li class="">
+      <a href="05. 查看文件更改.html">05. 查看文件更改</a>
+    </li>
+    <li class="">
+      <a href="06. 查看特定的 commit.html">06. 查看特定的 commit</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. 查看文件更改</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="查看更改">查看更改</h2>
+<p>我们知道 <code>git log</code> 将显示仓库中的 commit，如果添加 <code>--stat</code> 选项，则可以看出修改了哪些文件以及添加/删除了多少行代码。如果能查看到底进行了哪些更改，是不是更棒？</p>
+<p>如果这不是版本控制系统的最精彩部分，那想不出还有什么更精彩的地方了！能够查看到底对文件作出了哪些更改非常重要！这使得我们能够得出结论 “这个 commit 向该按钮添加了 5 像素的圆角！”。</p>
+<p>例如，在博客项目中，commit <code>a3dc99a</code> 具有消息"center content on page"并通过添加 5 行内容修改了 CSS 文件。到底添加了哪 5 行？如何找出这 5 行？</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-git-log-stat.gif" alt="_终端中运行了命令 &#x60;git log --stat&#x60;，它显示了 commit 并显示出第一个 commit 的统计信息，显示添加了 5 行代码的 CSS 文件。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端中运行了命令 <code>git log --stat</code>，它显示了 commit 并显示出第一个 commit 的统计信息，显示添加了 5 行代码的 CSS 文件。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-log--p"><code>git log -p</code></h2>
+<p><code>git log</code> 命令具有一个可用来显示对文件作出实际更改的选项。该选项是 <code>--patch</code>，可以简写为 <code>-p</code>：</p>
+<pre><code class="bash language-bash">$ git log -p</code></pre>
+<p>运行该命令并查看显示结果。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-git-log-p.png" alt="_终端显示了 &#x60;git log -p&#x60; 命令的输出结果。注意，你的终端的颜色标记可能不同。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log -p</code> 命令的输出结果。注意，你的终端的颜色标记可能不同。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 42 Git Log -P Output Walkthru</p></h3>
+  <video controls>
+  <source src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 42 Git Log -P Output Walkthru-A8Kwocr-K8c.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 42 Git Log -P Output Walkthru-A8Kwocr-K8c.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 42 Git Log -P Output Walkthru-A8Kwocr-K8c.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 42 Git Log -P Output Walkthru-A8Kwocr-K8c.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="05. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 42 Git Log -P Output Walkthru-A8Kwocr-K8c.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-git-log-p-lines-removed-annotated.png" alt="_终端显示了 &#x60;git log -p&#x60; 命令的输出结果。请查看下面关于输出结果的详细说明。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log -p</code> 命令的输出结果。请查看下面关于输出结果的详细说明。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="带注释的-git-log--p-输出">带注释的 <code>git log -p</code> 输出</h2>
+<p>我们通过上述图片快速总结下 <code>git log -p</code> 的输出：</p>
+<ul>
+<li>🔵  -  正在显示的文件</li>
+<li>🔶  - 文件第一版的哈希值和第二版的哈希值<ul>
+<li>通常不重要，因此可以忽略</li></ul></li>
+<li>❤️  - 文件的旧版本和当前版本</li>
+<li>🔍  - 添加的行所在的位置以及添加了多少行<ul>
+<li><code>-15,83</code> 表示旧版本（用 <code>-</code> 表示）从第 15 行开始，显示了 83 行</li>
+<li><code>+15,85</code> 表示当前版本（用 <code>+</code> 表示）从第 15 行开始，现在变成了 85 行…这 85 行显示在下方</li></ul></li>
+<li>✏️  -  在 commit 中实际进行的更改<ul>
+<li>用红色标示并以减号 (<code>-</code>) 开头的行是位于文件原始版本中，但是被 commit 删除的行</li>
+<li>用绿色标示并以加号 (<code>+</code>) 开头的行是 commit 新加的行</li></ul></li>
+</ul>
+<h2 id="进一步研究">进一步研究</h2>
+<p><a href="https://git-scm.com/docs/git-diff#_generating_patches_with_p" rel="noopener noreferrer" target="_blank">使用 -p 生成补丁</a> Git 文档 (英)</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>编辑是从哪开始的？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>根据你所学的 <code>git log</code> 的 <code>-p</code> 选项方面的知识，看看 SHA 为 <code>50d835d</code> 的 commit。你应该从 <code>app.css</code> 中的哪一行开始查看，从而了解之前做了哪些更改呢？</p>
+<p>提示 - 记住，在查看 <code>git log</code> 输出时，用 <code>d</code> 键可以向下滚动半个页面，而用 <code>u</code> 键可以向上滚动半个页面。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487110111347" name="338845" id="a1487110111347">
+        <label for="a1487110111347"><p>第 63 行</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110189938" name="338845" id="a1487110189938">
+        <label for="a1487110189938"><p>第 89 行</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110190411" name="338845" id="a1487110190411">
+        <label for="a1487110190411"><p>第 127 行</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110190940" name="338845" id="a1487110190940">
+        <label for="a1487110190940"><p>第 155 行</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    第 127 行
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>添加了什么？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>使用 <code>git log</code> 命令或者调用相关的选项判断 commit <code>4a60beb</code> 添加了什么代码？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487110238309" name="338846" id="a1487110238309">
+        <label for="a1487110238309"><p>color: #352d2d;</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110269522" name="338846" id="a1487110269522">
+        <label for="a1487110269522"><p>color: #250808;</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110270006" name="338846" id="a1487110270006">
+        <label for="a1487110270006"><p>color: #333333;</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110270558" name="338846" id="a1487110270558">
+        <label for="a1487110270558"><p>color: #2e3d49;</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    color: #2e3d49;
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>组合使用选项？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p><code>git log --stat</code> 和 <code>git log -p</code> 都是非常实用的命令。如果能同时获得这两个命令的输出结果，是不是很棒？</p>
+<p>运行 <code>git log -p --stat</code> 会发生什么？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487110311845" name="338847" id="a1487110311845">
+        <label for="a1487110311845"><p>它仅显示补丁信息</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110335977" name="338847" id="a1487110335977">
+        <label for="a1487110335977"><p>它仅显示统计信息</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110336517" name="338847" id="a1487110336517">
+        <label for="a1487110336517"><p>它同时显示这两种信息，并且补丁信息显示在统计信息上方</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110338181" name="338847" id="a1487110338181">
+        <label for="a1487110338181"><p>它同时显示这两种信息，并且统计信息显示在补丁信息上方</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    它同时显示这两种信息，并且统计信息显示在补丁信息上方
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在上述视频中，我们观看了让很多代码缩进的 commit。补丁输出显示所有行先被删掉，然后在新的缩进位置又被重新添加。但是显示所有的缩进更改让我们很难发现实际添加了什么代码。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>空格更改？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p><code>-w</code> 选项对补丁信息有何作用？要获取帮助，请参阅<a href="https://git-scm.com/docs/git-diff" rel="noopener noreferrer" target="_blank">此 Git 文档页面</a>。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487110387340" name="338849" id="a1487110387340">
+        <label for="a1487110387340"><p>它以高亮文本显示非空格字符</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110448546" name="338849" id="a1487110448546">
+        <label for="a1487110448546"><p>它以粗体显示非空格更改</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110449199" name="338849" id="a1487110449199">
+        <label for="a1487110449199"><p>它会忽略空格更改</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487110449773" name="338849" id="a1487110449773">
+        <label for="a1487110449773"><p>它在单独的补丁区域显示新增/删除的内容</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+     它会忽略空格更改
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-log--p-小节"><code>git log -p</code> 小节</h2>
+<p>总结下，<code>-p</code> 选项（和 <code>--patch</code> 选项一样）用来更改 <code>git log</code> 显示信息的方式：</p>
+<pre><code class="bash language-bash">$ git log -p</code></pre>
+<p>此命令会向默认输出中添加以下信息：</p>
+<ul>
+<li><p>显示被修改的文件</p></li>
+<li><p>显示添加/删除的行所在的位置</p></li>
+<li><p>显示做出的实际更改</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. 查看特定的 commit.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 查看文件更改')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

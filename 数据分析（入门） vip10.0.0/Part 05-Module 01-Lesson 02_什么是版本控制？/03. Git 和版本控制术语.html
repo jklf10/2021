@@ -1,0 +1,304 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Git 和版本控制术语</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>什么是版本控制？</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 什么是版本控制.html">01. 什么是版本控制</a>
+    </li>
+    <li class="">
+      <a href="02. 日常开发中的版本控制.html">02. 日常开发中的版本控制</a>
+    </li>
+    <li class="">
+      <a href="03. Git 和版本控制术语.html">03. Git 和版本控制术语</a>
+    </li>
+    <li class="">
+      <a href="04. MacLinux 设置.html">04. Mac/Linux 设置</a>
+    </li>
+    <li class="">
+      <a href="05. Windows 设置步骤.html">05. Windows 设置步骤</a>
+    </li>
+    <li class="">
+      <a href="06. 总结.html">06. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Git 和版本控制术语</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Gitfinal L1 13 Git 术语</p></h3>
+  <video controls>
+  <source src="03. Gitfinal L1 13 Git 术语-bf26adzeqMM.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. Gitfinal L1 13 Git 术语-bf26adzeqMM.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. Gitfinal L1 13 Git 术语-bf26adzeqMM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Gitfinal L1 13 Git 术语-bf26adzeqMM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Gitfinal L1 13 Git 术语-bf26adzeqMM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你可以在课程资源面板中找到术语讲义。文件名称为“Git Terms PDF”，在辅助材料中也可以找到它。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="术语">术语</h2>
+<h2 id="版本控制系统--源代码管理器">版本控制系统 / 源代码管理器</h2>
+<p><strong>版本控制系统</strong>（简称 <strong>VCS</strong>）是一个管理源代码不同版本的工具。<strong>源代码管理器</strong>（简称 <strong>SCM</strong>）是版本控制系统的另一个名称。</p>
+<p>Git 是一个 SCM（因此也是 VCS！）。Git 网站的 URL 是 <a href="https://git-scm.com/" rel="noopener noreferrer" target="_blank">https://git-scm.com/</a> （注意它的域名中直接包含“SCM”！）。</p>
+<h2 id="提交（commit）">提交（Commit）</h2>
+<p>Git 将数据看做微型文件系统的一组快照。每次 <strong>commit</strong>（在 Git 中保持项目状态），它都对文件当时的状况拍照，并存储对该快照的引用。你可以将其看做游戏中的保存点，它会保存项目的文件和关于文件的所有信息。</p>
+<p>你在 Git 中的所有操作都是帮助你进行 commit，因此 commit 是 Git 中的基本单位。 </p>
+<h2 id="仓库（repository--repo）">仓库（Repository / repo）</h2>
+<p><strong>仓库</strong>是一个包含项目内容以及几个文件（在 Mac OS X 上默认地处于隐藏状态）的目录，用来与 Git 进行通信。仓库可以存储在本地，或作为远程副本存储在其他计算机上。仓库是由 commit 构成的。</p>
+<h2 id="工作目录--工作区（working-directory）">工作目录 / 工作区（Working Directory）</h2>
+<p><strong>工作目录</strong>是你在计算机的文件系统中看到的文件。当你在代码编辑器中打开项目文件时，你是在工作目录中处理文件。</p>
+<p>与这些文件形成对比的是保持在仓库中（在 commit 中！）的文件。</p>
+<p>在使用 Git 时，工作目录与命令行工具的 <em>current working directory</em> （当前工作目录）不一样，后者是 shell 当前正在查看的目录。</p>
+<h2 id="检出（checkout）">检出（Checkout）</h2>
+<p><strong>检出</strong>是指将仓库中的内容复制到工作目录下。</p>
+<h2 id="暂存区--暂存索引--索引（staging-area--staging-index--index）">暂存区 / 暂存索引 / 索引（Staging Area / Staging Index / Index）</h2>
+<p>Git 目录下的一个文件，存储的是即将进入下个 commit 内容的信息。可以将<strong>暂存区</strong>看做准备工作台，Git 将在此区域获取下个 commit。暂存索引中的文件是准备添加到仓库中的文件。</p>
+<h2 id="sha">SHA</h2>
+<p><strong>SHA</strong> 是每个 commit 的 ID 编号。以下是 commit 的 SHA 示例：<code>e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6</code>。</p>
+<p>它是一个长 40 个字符的字符串（由 0–9 和 a–f 组成），并根据 Git 中的文件或目录结构的内容计算得出。SHA 的全称是"Secure Hash Algorithm"（安全哈希算法）。如果你想了解哈希算法，请参阅我们的<a href="https://www.udacity.com/course/intro-to-computer-science--cs101" rel="noopener noreferrer" target="_blank">计算机科学入门课程</a>。</p>
+<h2 id="分支（branch）">分支（Branch）</h2>
+<p><strong>分支</strong>是从主开发流程中分支出来的新的开发流程。这种分支开发流程可以在不更改主流程的情况下继续延伸下去。</p>
+<p>回到之前关于游戏保存点的示例，你可以将分支看做在游戏中设立保存点后，尝试一个有风险的招式。如果有风险的招式不奏效，则回到保存的位置。令分支非常强大的关键之处是你可以在一个分支上设定保存点，然后切换到另一个分支并继续设定保存点。 </p>
+<p>了解这些术语后，我们将探寻使用版本控制的一般流程，从更高的层面了解如何使用 Git。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 15 Git 总体流程</p></h3>
+  <video controls>
+  <source src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 15 Git 总体流程-dVil8e0yptQ.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 15 Git 总体流程-dVil8e0yptQ.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 15 Git 总体流程-dVil8e0yptQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 15 Git 总体流程-dVil8e0yptQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 15 Git 总体流程-dVil8e0yptQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>什么被 Commit 了</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>HTML 文件在暂存区具有 HTML 和 CSS 更改，并在工作目录中具有其他 HTML 更改。根据你现目前所学的 commit 工作原理知识，如果现在 commit 的话，会 commit 什么内容？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1485546208838" name="338747" id="a1485546208838">
+        <label for="a1485546208838"><p>只有暂存区的 HTML 文件更改</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485546224180" name="338747" id="a1485546224180">
+        <label for="a1485546224180"><p>只有暂存区的 CSS 文件更改</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485546229305" name="338747" id="a1485546229305">
+        <label for="a1485546229305"><p>暂存区的 HTML 和 CSS 文件更改</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485546237338" name="338747" id="a1485546237338">
+        <label for="a1485546237338"><p>工作目录和暂存区的 HTML 文件更改</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    暂存区的 HTML 和 CSS 文件更改
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 17 总体流程 2</p></h3>
+  <video controls>
+  <source src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 17 总体流程 2-rFtUkk-sCqw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 17 总体流程 2-rFtUkk-sCqw.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 17 总体流程 2-rFtUkk-sCqw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 17 总体流程 2-rFtUkk-sCqw.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 17 总体流程 2-rFtUkk-sCqw.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 18 小结</p></h3>
+  <video controls>
+  <source src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 18 小结-xqD9ImXXXHk.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 18 小结-xqD9ImXXXHk.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 18 小结-xqD9ImXXXHk.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 18 小结-xqD9ImXXXHk.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 18 小结-xqD9ImXXXHk.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="资源">资源</h3>
+<p><a href="https://udacity.github.io/frontend-nanodegree-styleguide-zh/udacity-git-keyterms.pdf" rel="noopener noreferrer" target="_blank">优达学城 Git 关键术语</a> </p>
+<p style="font-size: 12px;">(↓英文原版请点击下方链接↓)</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. MacLinux 设置.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Git 和版本控制术语')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

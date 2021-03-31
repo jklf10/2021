@@ -1,0 +1,321 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>更改 git log 显示信息的方式</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>查看仓库的历史记录</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 显示仓库的 commit.html">02. 显示仓库的 commit</a>
+    </li>
+    <li class="">
+      <a href="03. 更改 git log 显示信息的方式.html">03. 更改 git log 显示信息的方式</a>
+    </li>
+    <li class="">
+      <a href="04. 查看修改后的文件.html">04. 查看修改后的文件</a>
+    </li>
+    <li class="">
+      <a href="05. 查看文件更改.html">05. 查看文件更改</a>
+    </li>
+    <li class="">
+      <a href="06. 查看特定的 commit.html">06. 查看特定的 commit</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. 更改 git log 显示信息的方式</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你做到了这一切，恭喜你已经走了这么远！说真的，学习 git 是一项挑战。我为你的坚持不懈而鼓掌。</p>
+<p>看看这次运行 <code>git log</code> 后的输出结果：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-git-log-output.png" alt="_终端显示了运行 &#x60;git log&#x60; 后的输出结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了运行 <code>git log</code> 后的输出结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们已经仔细了解了 <code>git log</code> 显示的详细信息。但是现在，回顾并整合一下我们之前学到的内容。</p>
+<p>思考一下这些问题：</p>
+<ul>
+<li><p><strong>SHA</strong> - <code>git log</code> 将显示每个 commit 的完整 SHA。每个 SHA 都是唯一的，因此，我不需要查看整个 SHA。只需知道前 6-8 个字符即可。如果我们能只显示 SHA 的前 5 个左右的字符，是不是会节省一些空间？</p></li>
+<li><p><strong>作者</strong> - <code>git log</code> 输出结果显示了每个 commit 的作者！其他仓库可能有多个人协作，因此情况可能不同，但是对于此仓库，只有一个人提交了所有的 commit，因此所有 commit 的作者是一样的。我们需要查看每个 commit 的作者吗？如果我们想隐藏这一信息呢？</p></li>
+<li><p><strong>日期</strong> - 默认情况下，<code>git log</code> 将显示每个 commit 的日期。但是我们真的关心 commit 的日期吗？知道日期有时会很重要，但是每次都知道日期并不十分重要，在很多情况下都可以忽略。能否隐藏该信息，以便节省空间？</p></li>
+<li><p><strong>commit 消息</strong> - 这是 commit 消息最重要的部分…我们通常都希望看到此信息</p></li>
+</ul>
+<p>如何使输出结果更简短，并节省大量空间？我们可以使用 <strong>选项</strong>。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>提示：这并不是一种命令行进程，但是选项可以用来更改程序的工作方式。例如，<code>ls</code> 命令将列出当前目录下的所有文件。<code>ls</code> 命令具有 <code>-l</code> 选项 （即 <code>ls -l</code>），它会运行相同的 <code>ls</code> 命令，但是会更改其工作方式；它会显示 <em>long</em> 格式的信息（<code>-l</code> 表示 <em>long</em>）。</p>
+</blockquote>
+<blockquote>
+  <p>选项可以用来更改程序的工作方式和显示的信息。要详细了解命令行程序和选项，请参阅我们的 <a href="https://cn.udacity.com/course/linux-command-line-basics--ud595" rel="noopener noreferrer" target="_blank">Linux 命令行基础</a> 课程。 </p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-log---oneline">git log --oneline</h2>
+<p><code>git log</code> 命令有一个选项，可以用来更改仓库信息的显示方式。该选项为 <code>--oneline</code>：</p>
+<pre><code class="bash language-bash">$ git log --oneline</code></pre>
+<p>看看输出结果有何不同！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-git-log-vs-git-log-oneline.png" alt="_两个并排显示的终端。左侧显示的是包含所有信息的 &#x60;git log&#x60; 命令的结果，右侧显示的是包含简略版 SHA 和 commit 消息的 &#x60;git log --oneline&#x60; 命令的结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>两个并排显示的终端。左侧显示的是包含所有信息的 <code>git log</code> 命令的结果，右侧显示的是包含简略版 SHA 和 commit 消息的 <code>git log --oneline</code> 命令的结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 25 Git Log Vs Git Log --Oneline Walkthru</p></h3>
+  <video controls>
+  <source src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 25 Git Log Vs Git Log --Oneline Walkthru-rn6v_QgYFnU.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 25 Git Log Vs Git Log --Oneline Walkthru-rn6v_QgYFnU.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 25 Git Log Vs Git Log --Oneline Walkthru-rn6v_QgYFnU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 25 Git Log Vs Git Log --Oneline Walkthru-rn6v_QgYFnU.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 25 Git Log Vs Git Log --Oneline Walkthru-rn6v_QgYFnU.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>退出 git log --oneline</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>你正处在 <code>git log --oneline</code> 命令中，并且想要从 <code>git log --oneline</code> 的输出结果中退出，然后返回普通的命令提示符。要回到普通的命令提示符，你应该按下键盘上的哪个键？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1486771373266" name="338826" id="a1486771373266">
+        <label for="a1486771373266"><p><code>esc</code> 键</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486771380667" name="338826" id="a1486771380667">
+        <label for="a1486771380667"><p><code>q</code> 键</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486771381172" name="338826" id="a1486771381172">
+        <label for="a1486771381172"><p><code>ctrl</code> + <code>c</code> 键</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486771381724" name="338826" id="a1486771381724">
+        <label for="a1486771381724"><p><code>ctrl</code> + <code>d</code> 键</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+     `q` 键
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 27 Confession Corner</p></h3>
+  <video controls>
+  <source src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 27 Confession Corner-xtsugblSwrU.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 27 Confession Corner-xtsugblSwrU.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 27 Confession Corner-xtsugblSwrU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 27 Confession Corner-xtsugblSwrU.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 27 Confession Corner-xtsugblSwrU.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-log---oneline-小结">git log --oneline 小结</h2>
+<p><code>--oneline</code> 选项用于更改 <code>git log</code> 显示信息的方式：</p>
+<pre><code class="bash language-bash">$ git log --oneline</code></pre>
+<p>此命令：</p>
+<ul>
+<li><p>每行显示一个 commit</p></li>
+<li><p>显示 commit 的 SHA 的前 7 个字符</p></li>
+<li><p>显示 commit 的消息</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. 查看修改后的文件.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 更改 git log 显示信息的方式')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
