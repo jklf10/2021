@@ -1,0 +1,401 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>创建和保存 NumPy ndarray</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>NumPy</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. NumPy 简介.html">02. NumPy 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 NumPy.html">03. 为何要使用 NumPy</a>
+    </li>
+    <li class="">
+      <a href="04. 创建和保存 NumPy ndarray.html">04. 创建和保存 NumPy ndarray</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：创建和保存 NumPy ndarrays.html">05. 练习：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：创建和保存 NumPy ndarrays.html">06. 解决方案：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="07. 布尔型索引、集合运算和排序.html">07. 布尔型索引、集合运算和排序</a>
+    </li>
+    <li class="">
+      <a href="08. 使用内置函数创建 ndarray.html">08. 使用内置函数创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="09. 创建 ndarray.html">09. 创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="10. 访问和删除 ndarray 中的元素及向其中插入元素.html">10. 访问和删除 ndarray 中的元素及向其中插入元素</a>
+    </li>
+    <li class="">
+      <a href="11. ndarray 切片.html">11. ndarray 切片</a>
+    </li>
+    <li class="">
+      <a href="12. 操纵 ndarray.html">12. 操纵 ndarray</a>
+    </li>
+    <li class="">
+      <a href="13. 算术运算和广播.html">13. 算术运算和广播</a>
+    </li>
+    <li class="">
+      <a href="14. 通过广播创建 ndarray.html">14. 通过广播创建 ndarray</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. 创建和保存 NumPy ndarray</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="创建-numpy-ndarray">创建 NumPy ndarray</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>NumPy 1 V1</p></h3>
+  <video controls>
+  <source src="04. NumPy 1 V1-EOHW29kDg7w.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="04. NumPy 1 V1-EOHW29kDg7w.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="04. NumPy 1 V1-EOHW29kDg7w.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="04. NumPy 1 V1-EOHW29kDg7w.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>NumPy 的核心是 <strong>ndarray</strong>，其中 <em>nd</em> 表示 n 维。ndarray 是一个多维数组，其中的所有元素类型都一样。换句话说，ndarray 是一个形状可以多样，并且可以存储数字或字符串的网格。在很多机器学习问题中，你通常都会发现需要以多种不同的方式使用 ndarray。例如，你可能会使用 ndarray 存储一个图像的像素值，然后将该图像馈送到神经网络中以进行图像分类。  </p>
+<p>但是在深入讲解 NumPy 并开始使用 NumPy 创建 ndarray 之前，我们需要在 Python 中导入 NumPy。我们可以使用 <code>import</code> 命令在 Python 中导入软件包。通常，我们使用 <code>np</code> 导入 NumPy。因此，你可以在 Jupyter notebook 中输入以下命令，导入 NumPy：</p>
+<pre><code>import numpy as np</code></pre>
+<p>我们可以通过多种方式在 NumPy 中创建 ndarray。在下面的课程中，我们将学习创建 ndarray 的两种方式：</p>
+<ol>
+<li><p>使用普通的 Python 列表</p></li>
+<li><p>使用内置 NumPy 函数</p></li>
+</ol>
+<p>在此部分，我们将通过向 NumPy <code>np.array()</code> 函数提供 Python 列表创建 ndarray。对于初学者来说，这种方法可能会造成困惑，请务必注意，<code>np.array()</code> <em>不是</em>类，它只是一个返回 ndarray 的函数。要阐明的是，这些课程中用到的示例都将使用简单的小型 ndarray。我们开始创建一维 ndarray 吧。</p>
+<pre><code># We import NumPy into Python
+import numpy as np
+
+# We create a 1D ndarray that contains only integers
+x = np.array([1, 2, 3, 4, 5])
+
+# Let's print the ndarray we just created using the print() command
+print('x = ', x)</code></pre>
+<blockquote>
+  <p>x =  [1 2 3 4 5]</p>
+</blockquote>
+<p>我们先暂停一下，了解一些实用的术语。我们将一维数组称之为<em>秩</em>为 1 的数组。通常，<em>N</em> 维数组的秩为 <em>N</em>。因此，二维数组称为秩为 2 的数组。数组的另一个重要特性是<em>形状</em>。数组的形状是指每个维度的大小。例如，秩为 2 的数组的形状对应于数组的<em>行数</em>和<em>列数</em>。你将发现，NumPy ndarray 具有特殊的<em>属性</em>，使我们能够非常直观地获取关于 ndarray 的信息。例如，可以通过 <code>.shape</code> 属性获取 ndarray 的形状。shape 属性返回一个由 n 个正整数（用于指定每个维度的大小）组成的元组。在下面的示例中，我们将创建一个秩为 1 的数组，并了解如何获取其形状、类型和元素数据类型 (<em>dtype</em>)。</p>
+<pre><code># We create a 1D ndarray that contains only integers
+x = np.array([1, 2, 3, 4, 5])
+
+# We print x
+print()
+print('x = ', x)
+print()
+
+# We print information about x
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype)</code></pre>
+<blockquote>
+  <p>x =  [1 2 3 4 5]   </p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (5,)  <br />
+  x is an object of type: class 'numpy.ndarray'   <br />
+  The elements in x are of type: int64</p>
+</blockquote>
+<p>可以看出，shape 属性返回了元组 <code>(5,)</code>，告诉我们 <code>x</code> 的秩为 1（即 <code>x</code> 只有一个维度），并且有 5 个元素。<code>type()</code> 函数告诉我们 <code>x</code> 的确是 NumPy ndarray。最后，<code>.dtype</code> 属性告诉我们 <code>x</code> 的元素作为<em>有符号 64 位整数</em>存储在内存中。NumPy 的另一个重要优势是能够处理的数据类型比 Python 列表要多。你可以在以下链接中查看 NumPy 支持的所有不同数据类型：</p>
+<p><a href="https://docs.scipy.org/doc/numpy-1.13.0/user/basics.types.html" rel="noopener noreferrer" target="_blank">NumPy 数据类型</a>  </p>
+<p>正如之前提到的，ndarray 还可以存储字符串。我们来看看如何按照之前的相同方式创建一个秩为 1 的字符串 ndarray：向 <code>np.array()</code> 函数提供 Python 字符串列表。</p>
+<pre><code># We create a rank 1 ndarray that only contains strings
+x = np.array(['Hello', 'World'])
+
+# We print x
+print()
+print('x = ', x)
+print()
+
+# We print information about x
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype)</code></pre>
+<blockquote>
+  <p>x =  ['Hello' 'World']</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (2,)  <br />
+  x is an object of type: class 'numpy.ndarray'   <br />
+  The elements in x are of type: U5</p>
+</blockquote>
+<p>可以看出，shape 属性告诉我们 <code>x</code> 现在只有 2 个元素，虽然 <code>x</code> 现在存储的是字符串，但是 <code>type()</code> 函数告诉我们 <code>x</code> 依然像之前一样是 ndarray。但是，<code>.dtype</code> 属性告诉我们 <code>x</code> 中的元素作为<em>具有 5 个字符的 Unicode 字符串</em>存储在内存中。</p>
+<p>请务必注意，Python 列表和 ndarray 之间的最大区别是：与 Python 列表不同的是，ndarray 的所有元素都必须类型相同。因此，虽然我们可以同时使用整数和字符串创建 Python 列表，但是无法在 ndarray 中同时使用这两种类型。如果向 <code>np.array()</code> 函数提供同时具有整数和字符串的 Python 列表，NumPy 会将所有元素解析为字符串。我们可以在下面的示例中见到这种情况：</p>
+<pre><code># We create a rank 1 ndarray from a Python list that contains integers and strings
+x = np.array([1, 2, 'World'])
+
+# We print the ndarray
+print()
+print('x = ', x)
+print()
+
+# We print information about x
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype)</code></pre>
+<blockquote>
+  <p>x =  ['1' '2' 'World']</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (3,)  <br />
+  x is an object of type: 'numpy.ndarray' 类  <br />
+  The elements in x are of type: U21</p>
+</blockquote>
+<p>可以看出，虽然 Python 列表具有不同的数据类型，但是 <code>x</code> 中的元素类型都一样，即<em>具有 21 个字符的 Unicode 字符串</em>。在 NumPy 简介的剩余部分，我们将不使用存储字符串的 ndarray，但是请注意，ndarray 也可以存储字符串。</p>
+<p>现在看看如何利用嵌套 Python 列表创建秩为 2 的 ndarray。</p>
+<pre><code># We create a rank 2 ndarray that only contains integers
+Y = np.array([[1,2,3],[4,5,6],[7,8,9], [10,11,12]])
+
+# We print Y
+print()
+print('Y = \n', Y)
+print()
+
+# We print information about Y
+print('Y has dimensions:', Y.shape)
+print('Y has a total of', Y.size, 'elements')
+print('Y is an object of type:', type(Y))
+print('The elements in Y are of type:', Y.dtype)</code></pre>
+<blockquote>
+  <p>Y =  <br />
+  [[ 1  2  3]  <br />
+  &nbsp;[ 4  5  6]  <br />
+  &nbsp;[ 7  8  9]  <br />
+  &nbsp;[10 11 12]]</p>
+</blockquote>
+<blockquote>
+  <p>Y has dimensions: (4, 3)  <br />
+  Y has a total of 12 elements  <br />
+  Y is an object of type: class 'numpy.ndarray'  <br />
+  The elements in Y are of type: int64</p>
+</blockquote>
+<p>可以看出，现在 shape 属性返回元组 <code>(4,3)</code>，告诉我们 <code>Y</code> 的秩为 2，有 4 行 3 列。<code>.size</code> 属性告诉我们 <code>Y</code> 共有 12 个元素。</p>
+<p>注意，当 NumPy 创建 ndarray 时，它会自动根据用于创建 ndarray 的元素的类型为其分配 <em>dtype</em>。到目前为止，我们只创建了包含整数和字符串的 ndarray。我们发现，当我们创建只有整数的 ndarray 时，NumPy 将自动为其元素分配 dtype int64。我们来看看当我们创建具有浮点数和整数的 ndarray 时，会发生什么。</p>
+<pre><code># We create a rank 1 ndarray that contains integers
+x = np.array([1,2,3])
+
+# We create a rank 1 ndarray that contains floats
+y = np.array([1.0,2.0,3.0])
+
+# We create a rank 1 ndarray that contains integers and floats
+z = np.array([1, 2.5, 4])
+
+# We print the dtype of each ndarray
+print('The elements in x are of type:', x.dtype)
+print('The elements in y are of type:', y.dtype)
+print('The elements in z are of type:', z.dtype)</code></pre>
+<blockquote>
+  <p>The elements in x are of type: int64  <br />
+  The elements in y are of type: float64  <br />
+  The elements in z are of type: float64</p>
+</blockquote>
+<p>可以看出，当我们创建只有浮点数的 ndarray 时，NumPy 将元素当做* 64 位浮点数 (float64)* 存储在内存中。但是，当我们创建同时包含浮点数和整数的 ndarray 时，就像上面的 <code>z</code> ndarray，NumPy 也会为其元素分配 <em>float64</em> dtype。这叫做<em>向上转型</em>。因为 ndarray 的所有元素都必须类型相同，因此在这种情况下，NumPy 将 <code>z</code> 中的整数向上转型为浮点数，避免在进行数学计算时丢失精度。</p>
+<p>虽然 NumPy 自动为 ndarray 选择 dtype，但是 NumPy 也允许你指定要为 ndarray 的元素分配的特定 dtype。当你在 <code>np.array()</code> 函数中创建 ndarray 时，可以使用关键字 <code>dtype</code> 指定 dtype。我们来看一个示例：</p>
+<pre><code># We create a rank 1 ndarray of floats but set the dtype to int64
+x = np.array([1.5, 2.2, 3.7, 4.0, 5.9], dtype = np.int64)
+
+# We print x
+print()
+print('x = ', x)
+print()
+
+# We print the dtype x
+print('The elements in x are of type:', x.dtype)</code></pre>
+<blockquote>
+  <p>x =  [1 2 3 4 5]</p>
+</blockquote>
+<blockquote>
+  <p>The elements in x are of type: int64</p>
+</blockquote>
+<p>可以看出，虽然用浮点数创建了 ndarray，但是通过将 dtype 指定为 int64，NumPy 通过去除小数将浮点数转换成了整数。如果你不希望 NumPy 意外地选择错误的数据类型，或者你只希望达到一定的计算精度，从而节省内存，则指定 ndarray 的数据类型很有用。</p>
+<p>创建 ndarray 后，你可能需要将其保存到文件中，以便以后读取该文件或供另一个程序使用。NumPy 提供了一种将数组保存到文件中以供日后使用的方式。我们来看看操作方式。</p>
+<pre><code># We create a rank 1 ndarray
+x = np.array([1, 2, 3, 4, 5])
+
+# We save x into the current directory as 
+np.save('my_array', x)</code></pre>
+<p>上述代码将 <code>x</code> ndarray 保存到叫做 <code>my_array.npy</code> 的文件中。你可以使用 <code>load()</code> 函数将保存的 ndarray <em>加载</em>到变量中。</p>
+<pre><code># We load the saved array from our current directory into variable y
+y = np.load('my_array.npy')
+
+# We print y
+print()
+print('y = ', y)
+print()
+
+# We print information about the ndarray we loaded
+print('y is an object of type:', type(y))
+print('The elements in y are of type:', y.dtype)</code></pre>
+<blockquote>
+  <p>y =  [1 2 3 4 5]</p>
+</blockquote>
+<blockquote>
+  <p>y is an object of type: class 'numpy.ndarray'  <br />
+  The elements in y are of type: int64</p>
+</blockquote>
+<p>从文件中加载数组时，确保包含文件名和扩展名 <code>.npy</code>，否则将出错。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. 练习：创建和保存 NumPy ndarrays.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 创建和保存 NumPy ndarray')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

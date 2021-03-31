@@ -1,0 +1,545 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>算术运算和广播</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>NumPy</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. NumPy 简介.html">02. NumPy 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 NumPy.html">03. 为何要使用 NumPy</a>
+    </li>
+    <li class="">
+      <a href="04. 创建和保存 NumPy ndarray.html">04. 创建和保存 NumPy ndarray</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：创建和保存 NumPy ndarrays.html">05. 练习：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：创建和保存 NumPy ndarrays.html">06. 解决方案：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="07. 布尔型索引、集合运算和排序.html">07. 布尔型索引、集合运算和排序</a>
+    </li>
+    <li class="">
+      <a href="08. 使用内置函数创建 ndarray.html">08. 使用内置函数创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="09. 创建 ndarray.html">09. 创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="10. 访问和删除 ndarray 中的元素及向其中插入元素.html">10. 访问和删除 ndarray 中的元素及向其中插入元素</a>
+    </li>
+    <li class="">
+      <a href="11. ndarray 切片.html">11. ndarray 切片</a>
+    </li>
+    <li class="">
+      <a href="12. 操纵 ndarray.html">12. 操纵 ndarray</a>
+    </li>
+    <li class="">
+      <a href="13. 算术运算和广播.html">13. 算术运算和广播</a>
+    </li>
+    <li class="">
+      <a href="14. 通过广播创建 ndarray.html">14. 通过广播创建 ndarray</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. 算术运算和广播</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="算术运算和广播">算术运算和广播</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>NumPy 6 V1</p></h3>
+  <video controls>
+  <source src="13. NumPy 6 V1-wtLRuGK0kW4.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="13. NumPy 6 V1-wtLRuGK0kW4.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="13. NumPy 6 V1-wtLRuGK0kW4.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="13. NumPy 6 V1-wtLRuGK0kW4.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们已经学到“ NumPy ”课程的最后一节课了。在最后一节课，我们将了解 NumPy 如何对 ndarray 进行算术运算。NumPy 允许对 ndarray 执行元素级运算以及矩阵运算。在这节课，我们将仅了解如何对 ndarray 进行元素级运算。为了进行元素级运算，NumPy 有时候会用到<em>广播</em>功能。广播一词用于描述 NumPy 如何对具有不同形状的 ndarray 进行元素级算术运算。例如，在标量和 ndarray 之间进行算术运算时，会隐式地用到广播。</p>
+<p>我们先在 ndarray 之间进行元素级加减乘除运算。为此，我们可以在 NumPy 中使用 <code>np.add()</code> 等函数，或者使用 <code>+</code> 等算术符号，后者与数学方程式的写法更像。这两种形式都执行相同的运算，唯一的区别是如果采用函数方式，函数通常都具有各种选项，可以通过关键字调整这些选项。请注意，在进行元素级运算时，对其执行运算的 ndarray 必须具有相同的形状或者可以广播。我们将在这节课的稍后阶段详细讲解这方面的知识。我们先对秩为 1 的 ndarray 执行元素级算术运算：</p>
+<pre><code># We create two rank 1 ndarrays
+x = np.array([1,2,3,4])
+y = np.array([5.5,6.5,7.5,8.5])
+
+# We print x
+print()
+print('x = ', x)
+
+# We print y
+print()
+print('y = ', y)
+print()
+
+# We perfrom basic element-wise operations using arithmetic symbols and functions
+print('x + y = ', x + y)
+print('add(x,y) = ', np.add(x,y))
+print()
+print('x - y = ', x - y)
+print('subtract(x,y) = ', np.subtract(x,y))
+print()
+print('x * y = ', x * y)
+print('multiply(x,y) = ', np.multiply(x,y))
+print()
+print('x / y = ', x / y)
+print('divide(x,y) = ', np.divide(x,y))</code></pre>
+<blockquote>
+  <p>x =  [1 2 3 4]</p>
+</blockquote>
+<blockquote>
+  <p>y =  [ 5.5  6.5  7.5  8.5]</p>
+</blockquote>
+<blockquote>
+  <p>x + y =  [  6.5   8.5  10.5  12.5]  <br />
+  add(x,y) =  [  6.5   8.5  10.5  12.5]</p>
+</blockquote>
+<blockquote>
+  <p>x - y =  [-4.5 -4.5 -4.5 -4.5]  <br />
+  subtract(x,y) =  [-4.5 -4.5 -4.5 -4.5]</p>
+</blockquote>
+<blockquote>
+  <p>x * y =  [  5.5  13.   22.5  34. ]  <br />
+  multiply(x,y) =  [  5.5  13.   22.5  34. ]</p>
+</blockquote>
+<blockquote>
+  <p>x / y =  [ 0.18181818  0.30769231  0.4         0.47058824]  <br />
+  divide(x,y) =  [ 0.18181818  0.30769231  0.4         0.47058824]</p>
+</blockquote>
+<p>我们还可以对秩为 2 的 ndarray 执行相同的元素级算术运算。同样，为了执行这些运算，ndarray 的形状必须一样或者可广播。</p>
+<pre><code># We create two rank 2 ndarrays
+X = np.array([1,2,3,4]).reshape(2,2)
+Y = np.array([5.5,6.5,7.5,8.5]).reshape(2,2)
+
+# We print X
+print()
+print('X = \n', X)
+
+# We print Y
+print()
+print('Y = \n', Y)
+print()
+
+# We perform basic element-wise operations using arithmetic symbols and functions
+print('X + Y = \n', X + Y)
+print()
+print('add(X,Y) = \n', np.add(X,Y))
+print()
+print('X - Y = \n', X - Y)
+print()
+print('subtract(X,Y) = \n', np.subtract(X,Y))
+print()
+print('X * Y = \n', X * Y)
+print()
+print('multiply(X,Y) = \n', np.multiply(X,Y))
+print()
+print('X / Y = \n', X / Y)
+print()
+print('divide(X,Y) = \n', np.divide(X,Y))</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[1 2]  <br />
+  &nbsp;[3 4]]</p>
+</blockquote>
+<blockquote>
+  <p>Y =  <br />
+  [[ 5.5  6.5]  <br />
+  &nbsp;[ 7.5  8.5]]</p>
+</blockquote>
+<blockquote>
+  <p>X + Y =  <br />
+  [[  6.5   8.5]  <br />
+  &nbsp;[ 10.5  12.5]]</p>
+</blockquote>
+<blockquote>
+  <p>add(X,Y) =  <br />
+  [[  6.5   8.5]  <br />
+  &nbsp;[ 10.5  12.5]]</p>
+</blockquote>
+<blockquote>
+  <p>X - Y =  <br />
+  [[-4.5 -4.5]  <br />
+  &nbsp;[-4.5 -4.5]]</p>
+</blockquote>
+<blockquote>
+  <p>subtract(X,Y) =  <br />
+  [[-4.5 -4.5]  <br />
+  &nbsp;[-4.5 -4.5]]</p>
+</blockquote>
+<blockquote>
+  <p>X * Y =  <br />
+  [[  5.5  13. ]  <br />
+  &nbsp;[ 22.5  34. ]]</p>
+</blockquote>
+<blockquote>
+  <p>multiply(X,Y) =  <br />
+  [[  5.5  13. ]  <br />
+  &nbsp;[ 22.5  34. ]]</p>
+</blockquote>
+<blockquote>
+  <p>X / Y =  <br />
+  [[ 0.18181818  0.30769231]  <br />
+  &nbsp;[ 0.4         0.47058824]]</p>
+</blockquote>
+<blockquote>
+  <p>divide(X,Y) =  <br />
+  [[ 0.18181818  0.30769231]  <br />
+  &nbsp;[ 0.4         0.47058824]]</p>
+</blockquote>
+<p>我们还可以同时对 ndarray 的所有元素应用数学函数，例如 <code>sqrt(x)</code>。</p>
+<pre><code># We create a rank 1 ndarray
+x = np.array([1,2,3,4])
+
+# We print x
+print()
+print('x = ', x)
+
+# We apply different mathematical functions to all elements of x
+print()
+print('EXP(x) =', np.exp(x))
+print()
+print('SQRT(x) =',np.sqrt(x))
+print()
+print('POW(x,2) =',np.power(x,2)) # We raise all elements to the power of 2</code></pre>
+<blockquote>
+  <p>x =  [1 2 3 4]</p>
+</blockquote>
+<blockquote>
+  <p>EXP(x) = [  2.71828183   7.3890561   20.08553692  54.59815003]</p>
+</blockquote>
+<blockquote>
+  <p>SQRT(x) = [ 1.  1.41421356  1.73205081  2.        ]</p>
+</blockquote>
+<blockquote>
+  <p>POW(x,2) = [ 1  4  9 16]</p>
+</blockquote>
+<p>NumPy 的另一个重要特性是具有大量不同的统计学函数。统计学函数为我们提供了关于 ndarray 中元素的统计学信息。我们来看一些示例：</p>
+<pre><code># We create a 2 x 2 ndarray
+X = np.array([[1,2], [3,4]])
+
+# We print x
+print()
+print('X = \n', X)
+print()
+
+print('Average of all elements in X:', X.mean())
+print('Average of all elements in the columns of X:', X.mean(axis=0))
+print('Average of all elements in the rows of X:', X.mean(axis=1))
+print()
+print('Sum of all elements in X:', X.sum())
+print('Sum of all elements in the columns of X:', X.sum(axis=0))
+print('Sum of all elements in the rows of X:', X.sum(axis=1))
+print()
+print('Standard Deviation of all elements in X:', X.std())
+print('Standard Deviation of all elements in the columns of X:', X.std(axis=0))
+print('Standard Deviation of all elements in the rows of X:', X.std(axis=1))
+print()
+print('Median of all elements in X:', np.median(X))
+print('Median of all elements in the columns of X:', np.median(X,axis=0))
+print('Median of all elements in the rows of X:', np.median(X,axis=1))
+print()
+print('Maximum value of all elements in X:', X.max())
+print('Maximum value of all elements in the columns of X:', X.max(axis=0))
+print('Maximum value of all elements in the rows of X:', X.max(axis=1))
+print()
+print('Minimum value of all elements in X:', X.min())
+print('Minimum value of all elements in the columns of X:', X.min(axis=0))
+print('Minimum value of all elements in the rows of X:', X.min(axis=1))</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[1 2]  <br />
+  &nbsp;[3 4]]</p>
+</blockquote>
+<blockquote>
+  <p>Average of all elements in X: 2.5  <br />
+  Average of all elements in the columns of X: [ 2.  3.]  <br />
+  Average of all elements in the rows of X: [ 1.5  3.5]</p>
+</blockquote>
+<blockquote>
+  <p>Sum of all elements in X: 10  <br />
+  Sum of all elements in the columns of X: [4 6]  <br />
+  Sum of all elements in the rows of X: [3 7]</p>
+</blockquote>
+<blockquote>
+  <p>Standard Deviation of all elements in X: 1.11803398875  <br />
+  Standard Deviation of all elements in the columns of X: [ 1.  1.]  <br />
+  Standard Deviation of all elements in the rows of X: [ 0.5  0.5]</p>
+</blockquote>
+<blockquote>
+  <p>Median of all elements in X: 2.5  <br />
+  Median of all elements in the columns of X: [ 2.  3.]  <br />
+  Median of all elements in the rows of X: [ 1.5  3.5]</p>
+</blockquote>
+<blockquote>
+  <p>Maximum value of all elements in X: 4  <br />
+  Maximum value of all elements in the columns of X: [3 4]  <br />
+  Maximum value of all elements in the rows of X: [2 4]</p>
+</blockquote>
+<blockquote>
+  <p>Minimum value of all elements in X: 1  <br />
+  Minimum value of all elements in the columns of X: [1 2]  <br />
+  Minimum value of all elements in the rows of X: [1 3]</p>
+</blockquote>
+<p>最后，我们来看看 NumPy 如何使 ndarray 中的所有元素与单个数字相加，而不使用复杂的循环。</p>
+<pre><code># We create a 2 x 2 ndarray
+X = np.array([[1,2], [3,4]])
+
+# We print x
+print()
+print('X = \n', X)
+print()
+
+print('3 * X = \n', 3 * X)
+print()
+print('3 + X = \n', 3 + X)
+print()
+print('X - 3 = \n', X - 3)
+print()
+print('X / 3 = \n', X / 3)</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[1 2]  <br />
+  &nbsp;[3 4]]</p>
+</blockquote>
+<blockquote>
+  <p>3 * X =  <br />
+  [[ 3  6]  <br />
+  &nbsp;[ 9 12]]</p>
+</blockquote>
+<blockquote>
+  <p>3 + X =  <br />
+  [[4 5]  <br />
+  &nbsp;[6 7]]</p>
+</blockquote>
+<blockquote>
+  <p>X - 3 =  <br />
+  [[-2 -1]  <br />
+  &nbsp;[ 0  1]]</p>
+</blockquote>
+<blockquote>
+  <p>X / 3 =  <br />
+  [[ 0.33333333  0.66666667]  <br />
+  &nbsp;[ 1.  1.33333333]]</p>
+</blockquote>
+<p>在上述示例中，NumPy 在后台对 ndarray 广播 <code>3</code>，使它们具有相同的形状。这样我们仅使用一行代码，就可以使 <code>X</code> 的每个元素加 3。</p>
+<p>Numpy 可以对两个形状不同的 ndarray 执行相同的操作，但是存在一些限制，如下所示。</p>
+<pre><code># We create a rank 1 ndarray
+x = np.array([1,2,3])
+
+# We create a 3 x 3 ndarray
+Y = np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+# We create a 3 x 1 ndarray
+Z = np.array([1,2,3]).reshape(3,1)
+
+# We print x
+print()
+print('x = ', x)
+print()
+
+# We print Y
+print()
+print('Y = \n', Y)
+print()
+
+# We print Z
+print()
+print('Z = \n', Z)
+print()
+
+print('x + Y = \n', x + Y)
+print()
+print('Z + Y = \n',Z + Y)</code></pre>
+<blockquote>
+  <p>x = [1 2 3]</p>
+</blockquote>
+<blockquote>
+  <p>Y =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[4 5 6]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>Z =  <br />
+  [[1]  <br />
+  &nbsp;[2]  <br />
+  &nbsp;[3]]</p>
+</blockquote>
+<blockquote>
+  <p>x + Y =  <br />
+  [[ 2  4  6]  <br />
+  &nbsp;[ 5  7  9]  <br />
+  &nbsp;[ 8 10 12]]</p>
+</blockquote>
+<blockquote>
+  <p>Z + Y =  <br />
+  [[ 2  3  4]  <br />
+  &nbsp;[ 6  7  8]  <br />
+  &nbsp;[10 11 12]]</p>
+</blockquote>
+<p>和之前一样，NumPy 能够通过沿着大的 ndarray 对更小的 ndarray 进行广播，将 1 x 3 和 3 x 1 ndarray 加到 3 x 3 ndarray 上。通常，NumPy 能够这么操作的前提是，更小的 ndarray（例如我们的示例中的 1 x 3 ndarray）可以扩展成更大的 ndarray 的形状，并且生成的广播很清晰明确。</p>
+<p>确保阅读 NumPy 文档，详细了解广播及其规则：<br />
+<a href="https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html" rel="noopener noreferrer" target="_blank">Broadcasting</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. 通过广播创建 ndarray.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. 算术运算和广播')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

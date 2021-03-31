@@ -1,0 +1,228 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NumPy 简介</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>NumPy</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. NumPy 简介.html">02. NumPy 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 NumPy.html">03. 为何要使用 NumPy</a>
+    </li>
+    <li class="">
+      <a href="04. 创建和保存 NumPy ndarray.html">04. 创建和保存 NumPy ndarray</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：创建和保存 NumPy ndarrays.html">05. 练习：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：创建和保存 NumPy ndarrays.html">06. 解决方案：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="07. 布尔型索引、集合运算和排序.html">07. 布尔型索引、集合运算和排序</a>
+    </li>
+    <li class="">
+      <a href="08. 使用内置函数创建 ndarray.html">08. 使用内置函数创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="09. 创建 ndarray.html">09. 创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="10. 访问和删除 ndarray 中的元素及向其中插入元素.html">10. 访问和删除 ndarray 中的元素及向其中插入元素</a>
+    </li>
+    <li class="">
+      <a href="11. ndarray 切片.html">11. ndarray 切片</a>
+    </li>
+    <li class="">
+      <a href="12. 操纵 ndarray.html">12. 操纵 ndarray</a>
+    </li>
+    <li class="">
+      <a href="13. 算术运算和广播.html">13. 算术运算和广播</a>
+    </li>
+    <li class="">
+      <a href="14. 通过广播创建 ndarray.html">14. 通过广播创建 ndarray</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. NumPy 简介</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="numpy-简介">NumPy 简介</h1>
+<p><strong>NumPy</strong> 是 <em>Numerical Python</em> 的简称，它是 Python 中的科学计算基本软件包。NumPy 为 Python 提供了大量数学库，使我们能够高效地进行数字计算。这些课程将简要讲解 NumPy 基本概念，并介绍一些最重要的 NumPy 功能。</p>
+<p>在下面的课程中，你将学习：</p>
+<ul>
+<li>如何导入 NumPy</li>
+<li>如何使用各种方法创建多维 NumPy ndarray</li>
+<li>如何访问和更改 ndarray 中的元素</li>
+<li>如何加载和保存 ndarray</li>
+<li>如何使用切片选择或更改 ndarray 的子集</li>
+<li>了解 ndarray 视图和副本之间的区别</li>
+<li>如何使用布尔型索引并设置操作以选择或更改 ndarray 的子集</li>
+<li>如何对 ndarray 排序</li>
+<li>如何对 ndarray 执行元素级操作</li>
+<li>了解 NumPy 如何使用广播对不同大小的 ndarray 执行操作。</li>
+</ul>
+<h1 id="下载-numpy">下载 NumPy</h1>
+<p><strong>Anaconda</strong> 中包含 NumPy。如果你的计算机尚未安装 Anaconda，请参阅 Anaconda 部分，详细了解如何在 PC 或 Mac 设备上安装 Anaconda。</p>
+<h1 id="numpy-版本">NumPy 版本</h1>
+<p>和很多 Python 软件包一样，NumPy 也会不断更新。以下课程在制作时采用的是 NumPy 1.13.0 版。你可以检查你的 NumPy 版本：在 Jupyter notebook 中输入 <code>!conda list numpy</code>，或在 Anaconda 提示符处输入 <code>conda list numpy</code>。如果你的计算机安装的是另一个版本的 NumPy，你可以通过在 Anaconda 提示符处输入 <code>conda install numpy=1.13</code> 更新你的 NumPy 版本。随着新版 NumPy 的推出，一些功能可能会过时或被替换掉，因此确保在运行代码前，安装正确的 NumPy 版本。这样可以保证代码顺利运行。</p>
+<h1 id="numpy-文档">NumPy 文档</h1>
+<p>NumPy 是一个强大的数学库，其中包含很多函数和功能。在这些入门课程中，我们将仅介绍 NumPy 的一些基本功能。如果你想深入学习 NumPy，确保参阅 NumPy 文档：</p>
+<p><a href="https://docs.scipy.org/doc/numpy-1.13.0/contents.html" rel="noopener noreferrer" target="_blank">NumPy 手册</a>  <br />
+<a href="https://docs.scipy.org/doc/numpy-1.13.0/user/index.html" rel="noopener noreferrer" target="_blank">NumPy 用户指南</a>  <br />
+<a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/index.html#reference" rel="noopener noreferrer" target="_blank">NumPy 参考资料</a>  <br />
+<a href="http://www.scipy-lectures.org/intro/numpy/index.html" rel="noopener noreferrer" target="_blank">Scipy 讲座</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 为何要使用 NumPy.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. NumPy 简介')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

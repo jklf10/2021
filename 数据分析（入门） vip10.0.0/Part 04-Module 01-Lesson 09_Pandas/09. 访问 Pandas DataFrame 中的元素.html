@@ -1,0 +1,827 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>访问 Pandas DataFrame 中的元素</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Pandas</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. Pandas 简介.html">02. Pandas 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 Pandas？.html">03. 为何要使用 Pandas？</a>
+    </li>
+    <li class="">
+      <a href="04. 创建 Pandas Series.html">04. 创建 Pandas Series</a>
+    </li>
+    <li class="">
+      <a href="05. 访问和删除 Pandas Series 中的元素.html">05. 访问和删除 Pandas Series 中的元素</a>
+    </li>
+    <li class="">
+      <a href="06. 对 Pandas Series 执行算术运算.html">06. 对 Pandas Series 执行算术运算</a>
+    </li>
+    <li class="">
+      <a href="07. 操纵 Series.html">07. 操纵 Series</a>
+    </li>
+    <li class="">
+      <a href="08. 创建 Pandas DataFrame.html">08. 创建 Pandas DataFrame</a>
+    </li>
+    <li class="">
+      <a href="09. 访问 Pandas DataFrame 中的元素.html">09. 访问 Pandas DataFrame 中的元素</a>
+    </li>
+    <li class="">
+      <a href="10. 处理 NaN.html">10. 处理 NaN</a>
+    </li>
+    <li class="">
+      <a href="11. 操纵 DataFrame.html">11. 操纵 DataFrame</a>
+    </li>
+    <li class="">
+      <a href="12. 将数据加载到 Pandas DataFrame 中.html">12. 将数据加载到 Pandas DataFrame 中</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. 访问 Pandas DataFrame 中的元素</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="访问-pandas-dataframe-中的元素">访问 Pandas DataFrame 中的元素</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Pandas 5 V1</p></h3>
+  <video controls>
+  <source src="09. Pandas 5 V1-lClsJnZn_7w.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="09. Pandas 5 V1-lClsJnZn_7w.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="09. Pandas 5 V1-lClsJnZn_7w.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="09. Pandas 5 V1-lClsJnZn_7w.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们可以通过多种不同的方式访问 Pandas DataFrame 中的元素。通常，我们可以使用行和列标签访问 DataFrame 的行、列或单个元素。我们将使用在上节课创建的同一 <code>store_items</code> DataFrame。我们来看一些示例：</p>
+<pre><code># We print the store_items DataFrame
+print(store_items)
+
+# We access rows, columns and elements using labels
+print()
+print('How many bikes are in each store:\n', store_items[['bikes']])
+print()
+print('How many bikes and pants are in each store:\n', store_items[['bikes', 'pants']])
+print()
+print('What items are in Store 1:\n', store_items.loc[['store 1']])
+print()
+print('How many bikes are in Store 2:', store_items['bikes']['store 2'])</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<blockquote>
+  <p>How many bikes are in each store:  </p>
+</blockquote>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<blockquote>
+  <p>How many bikes and pants are in each store:  </p>
+</blockquote>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">30</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">5</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<blockquote>
+  <p>What items are in Store 1:  </p>
+</blockquote>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<blockquote>
+  <p>How many bikes are in Store 2: 15</p>
+</blockquote>
+<p>请注意，在访问 DataFrame 中的单个元素时，就像上个示例一样，必须始终提供标签，并且列标签在前，格式为 <code>dataframe[column][row]</code>。例如，在检索商店 2 中的自行车数量时，我们首先使用列标签 <strong>bikes</strong>，然后使用行标签 <strong>store 2</strong>。如果先提供行标签，将出错。</p>
+<p>我们还可以通过添加行或列修改 DataFrame。我们先了解如何向 DataFrame 中添加新的列。假设我们想添加每个商店的<strong>衬衫</strong>库存。为此，我们需要向 <code>store_items</code> DataFrame 添加一个新列，表示每个商店的衬衫库存。我们来编写代码：</p>
+<pre><code># We add a new column named shirts to our store_items DataFrame indicating the number of shirts in stock at each store. We
+# will put 15 shirts in store 1 and 2 shirts in store 2
+store_items['shirts'] = [15,2]
+
+# We display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">35</td>
+  <td style="text-align:center;">15</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">2</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>可以看出，当我们添加新的列时，新列添加到了 DataFrame 的末尾。</p>
+<p>还可以使用算术运算符向 DataFrame 中的其他列之间添加新列。我们来看一个示例：</p>
+<pre><code># We make a new column called suits by adding the number of shirts and pants
+store_items['suits'] = store_items['pants'] + store_items['shirts']
+
+# We display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">35</td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">45</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">2</td>
+  <td style="text-align:center;">7</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>假设现在你开了一家新店，需要将该商店的商品库存添加到 DataFrame 中。为此，我们可以向 <code>store_items</code> Dataframe 中添加一个新行。要向 DataFrame 中添加行，我们首先需要创建新的 Dataframe，然后将其附加到原始 DataFrame 上。我们来看看代码编写方式</p>
+<pre><code># We create a dictionary from a list of Python dictionaries that will number of items at the new store
+new_items = [{'bikes': 20, 'pants': 30, 'watches': 35, 'glasses': 4}]
+
+# We create new DataFrame with the new_items and provide and index labeled store 3
+new_store = pd.DataFrame(new_items, index = ['store 3'])
+
+# We display the items at the new store
+new_store</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>现在，我们使用 <code>.append()</code> 方法将此行添加到 <code>store_items</code> DataFrame 中。</p>
+<pre><code># We append store 3 to our store_items DataFrame
+store_items = store_items.append(new_store)
+
+# We display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>注意，将新行附加到 DataFrame 后，列按照字母顺序排序了。</p>
+<p>我们还可以仅使用特定列的特定行中的数据向 DataFrame 添加新的列。例如，假设你想在商店 2 和 3 中上一批<strong>新手表</strong>，并且<strong>新手表</strong>的数量与这些商店原有手表的库存一样。我们来看看如何编写代码</p>
+<pre><code># We add a new column using data from particular rows in the watches column
+store_items['new watches'] = store_items['watches'][1:]
+
+# We display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  <th id="**new_watches**" style="text-align:center;"><strong>new watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  <td style="text-align:center;">NaN</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">10.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">35</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>我们还可以将新列插入 DataFrames 的任何位置。<code>dataframe.insert(loc,label,data)</code> 方法使我们能够将新列（具有给定列<code>标签</code>和给定<code>数据</code>）插入 <code>dataframe</code> 的 <code>loc</code> 位置。我们将名称为 <strong>shoes</strong> 的新列插入 <strong>suits</strong> 列前面。因为 <strong>suits</strong> 的数字索引值为 4，我们将此值作为 <code>loc</code>。我们来看看代码编写方式：</p>
+<pre><code># We insert a new column with label shoes right before the column with numerical index 4
+store_items.insert(4, 'shoes', [8,5,0])
+
+# we display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  <th id="**new_watches**" style="text-align:center;"><strong>new watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  <td style="text-align:center;">NaN</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">10.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">0</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">35</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>就像我们可以添加行和列一样，我们也可以删除它们。要删除 DataFrame 中的行和列，我们将使用 <code>.pop()</code> 和 <code>.drop()</code> 方法。<code>.pop()</code> 方法仅允许我们删除列，而 <code>.drop()</code> 方法可以同时用于删除行和列，只需使用关键字 <code>axis</code> 即可。我们来看一些示例：</p>
+<pre><code># We remove the new watches column
+store_items.pop('new watches')
+
+# we display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">0</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<pre><code># We remove the watches and shoes columns
+store_items = store_items.drop(['watches', 'shoes'], axis = 1)
+
+# we display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">45.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">7.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">NaN</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<pre><code># We remove the store 2 and store 1 rows
+store_items = store_items.drop(['store 2', 'store 1'], axis = 0)
+
+# we display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">NaN</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>有时候，我们可能需要更改行和列标签。我们使用 <code>.rename()</code> 方法将 <strong>bikes</strong> 列标签改为 <strong>hats</strong> </p>
+<pre><code># We change the column label bikes to hats
+store_items = store_items.rename(columns = {'bikes': 'hats'})
+
+# we display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_hats**" style="text-align:center;">** hats**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">NaN</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>现在再次使用 <code>.rename()</code> 方法更改行标签。</p>
+<pre><code># We change the row label from store 3 to last store
+store_items = store_items.rename(index = {'store 3': 'last store'})
+
+# we display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_hats**" style="text-align:center;">** hats**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>last store</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">NaN</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>你还可以将索引改为 DataFrame 中的某个列。</p>
+<pre><code># We change the row index to be the data in the pants column
+store_items = store_items.set_index('pants')
+
+# we display the modified DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id="**pants**"><strong>pants</strong></th>
+  <th id="**_hats**" style="text-align:center;">** hats**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>30</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">NaN</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="10. 处理 NaN.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. 访问 Pandas DataFrame 中的元素')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,628 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>使用内置函数创建 ndarray</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>NumPy</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. NumPy 简介.html">02. NumPy 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 NumPy.html">03. 为何要使用 NumPy</a>
+    </li>
+    <li class="">
+      <a href="04. 创建和保存 NumPy ndarray.html">04. 创建和保存 NumPy ndarray</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：创建和保存 NumPy ndarrays.html">05. 练习：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：创建和保存 NumPy ndarrays.html">06. 解决方案：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="07. 布尔型索引、集合运算和排序.html">07. 布尔型索引、集合运算和排序</a>
+    </li>
+    <li class="">
+      <a href="08. 使用内置函数创建 ndarray.html">08. 使用内置函数创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="09. 创建 ndarray.html">09. 创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="10. 访问和删除 ndarray 中的元素及向其中插入元素.html">10. 访问和删除 ndarray 中的元素及向其中插入元素</a>
+    </li>
+    <li class="">
+      <a href="11. ndarray 切片.html">11. ndarray 切片</a>
+    </li>
+    <li class="">
+      <a href="12. 操纵 ndarray.html">12. 操纵 ndarray</a>
+    </li>
+    <li class="">
+      <a href="13. 算术运算和广播.html">13. 算术运算和广播</a>
+    </li>
+    <li class="">
+      <a href="14. 通过广播创建 ndarray.html">14. 通过广播创建 ndarray</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. 使用内置函数创建 ndarray</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="使用内置函数创建-ndarray">使用内置函数创建 ndarray</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>NumPy 2 V1</p></h3>
+  <video controls>
+  <source src="08. NumPy 2 V1-F4Iyfn95G_I.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="08. NumPy 2 V1-F4Iyfn95G_I.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="08. NumPy 2 V1-F4Iyfn95G_I.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>NumPy 的一个非常节省时间的功能是使用内置函数创建 ndarray。借助这些函数，我们只需编写一行代码就能创建某些类型的 ndarray。以下是一些创建 ndarray 的最实用内置函数，你在进行 AI 编程时将遇到这些函数。</p>
+<p>我们先创建一个具有指定形状的 ndarray，其中的元素全是 0。为此，我们可以使用 <code>np.zeros()</code> 函数。函数 <code>np.zeros(shape)</code> 会创建一个全是 <code>0</code> 并且为给定<code>形状</code>的 ndarray。因此，例如如果你想创建一个秩为 2 的数组，其中包含 3 行和 4 列，你将以 <code>(行, 列)</code> 的形式将该形状传递给函数，如以下示例所示：</p>
+<pre><code># We create a 3 x 4 ndarray full of zeros. 
+X = np.zeros((3,4))
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in X are of type:', X.dtype)</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[ 0.  0.  0.  0.]  <br />
+  &nbsp;[ 0.  0.  0.  0.]  <br />
+  &nbsp;[ 0.  0.  0.  0.]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (3, 4)  <br />
+  X is an object of type: class 'numpy.ndarray'  <br />
+  The elements in X are of type: float64</p>
+</blockquote>
+<p>可以看出，<code>np.zeros()</code> 函数默认地创建一个 dtype 为 float64 的数组。你可以使用关键字 <code>dtype</code> 更改数据类型。</p>
+<p>同样，我们可以创建一个具有指定形状的 ndarray，其中的元素全是 <em>1</em>。为此，我们可以使用 <code>np.ones()</code> 函数。和 <code>np.zeros()</code> 函数一样，<code>np.ones()</code> 函数会用一个参数来指定你要创建的 ndarray 的形状。我们来看一个示例：</p>
+<pre><code># We create a 3 x 2 ndarray full of ones. 
+X = np.ones((3,2))
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in X are of type:', X.dtype) </code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[ 1.  1.]  <br />
+  &nbsp;[ 1.  1.]  <br />
+  &nbsp;[ 1.  1.]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (3, 2)  <br />
+  X is an object of type: class 'numpy.ndarray'  <br />
+  The elements in X are of type: float64</p>
+</blockquote>
+<p>可以看出，<code>np.ones()</code> 函数也默认地创建一个 dtype 为 float64 的数组。你可以使用关键字 <code>dtype</code> 更改数据类型。</p>
+<p>我们还可以创建一个具有指定形状的 ndarray，其中的元素全是我们想指定的任何数字。为此，我们可以使用 <code>np.full()</code> 函数。<code>np.full(shape, constant value)</code> 函数有两个参数。第一个参数是你要创建的 ndarray 的<code>形状</code>，第二个参数是你要向数组中填充的<code>常数值</code>。我们来看一个示例：</p>
+<pre><code># We create a 2 x 3 ndarray full of fives. 
+X = np.full((2,3), 5) 
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in X are of type:', X.dtype)  </code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[5 5 5]  <br />
+  &nbsp;[5 5 5]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (2, 3)  <br />
+  X is an object of type: class 'numpy.ndarray'  <br />
+  The elements in X are of type: int64</p>
+</blockquote>
+<p><code>np.full()</code> 函数默认地创建一个数据类型和用于填充数组的常数值相同的数组。你可以使用关键字 <code>dtype</code> 更改数据类型。</p>
+<p>稍后你将发现，线性代数中的基本数组是单位矩阵。单位矩阵是主对角线上全是 1，其他位置全是 0 的方形矩阵。函数 <code>np.eye(N)</code> 会创建一个对应于单位矩阵的方形 <code>N x N</code> ndarray。因为所有单位矩阵都是方形，因此，<code>np.eye()</code> 函数仅接受一个整数作为参数。我们来看一个示例：</p>
+<pre><code># We create a 5 x 5 Identity matrix. 
+X = np.eye(5)
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in X are of type:', X.dtype)  </code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[ 1.  0.  0.  0.  0.]  <br />
+  &nbsp;[ 0.  1.  0.  0.  0.]  <br />
+  &nbsp;[ 0.  0.  1.  0.  0.]  <br />
+  &nbsp;[ 0.  0.  0.  1.  0.]  <br />
+  &nbsp;[ 0.  0.  0.  0.  1.]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (5, 5)  <br />
+  X is an object of type: class 'numpy.ndarray'  <br />
+  The elements in X are of type: float64</p>
+</blockquote>
+<p>可以看出，<code>np.eye()</code> 函数也默认地创建一个 dtype 为 float64 的数组。你可以使用关键字 <code>dtype</code> 更改数据类型。你将在这门课程的线性代数部分深入学习单位矩阵及其用途。我们还可以使用 <code>np.diag()</code> 函数创建对角矩阵。对角矩阵是仅在主对角线上有值的方形矩阵。<code>np.diag()</code> 函数会创建一个对应于对角矩阵的 ndarray，如以下示例所示：</p>
+<pre><code># Create a 4 x 4 diagonal matrix that contains the numbers 10,20,30, and 50
+# on its main diagonal
+X = np.diag([10,20,30,50])
+
+# We print X
+print()
+print('X = \n', X)
+print()</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[10  0  0  0]  <br />
+  &nbsp;[ 0 20  0  0]  <br />
+  &nbsp;[ 0  0 30  0]  <br />
+  &nbsp;[ 0  0  0 50]]</p>
+</blockquote>
+<p>NumPy 还允许你创建在给定区间内值均匀分布的 ndarray。NumPy 的<code>np.arange()</code> 函数非常强大，可以传入一个参数、两个参数或三个参数。下面将介绍每种情况，以及如何创建不同种类的 ndarray。</p>
+<p>先仅向 <code>np.arange()</code> 中传入一个参数。如果只传入一个参数，<code>np.arange(N)</code> 将创建一个秩为 1 的 ndarray，其中包含从 <code>0</code> 到 <code>N - 1</code> 的连续整数。因此，注意，如果我希望数组具有介于 0 到 9 之间的整数，则需要将 N 设为 10，<em>而不是</em>将 N 设为 9，如以下示例所示：</p>
+<pre><code># We create a rank 1 ndarray that has sequential integers from 0 to 9
+x = np.arange(10)
+​
+# We print the ndarray
+print()
+print('x = ', x)
+print()
+
+# We print information about the ndarray
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype) </code></pre>
+<blockquote>
+  <p>x =  [0 1 2 3 4 5 6 7 8 9]</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (10,)  <br />
+  x is an object of type: class 'numpy.ndarray'  <br />
+  The elements in x are of type: int64</p>
+</blockquote>
+<p>如果传入两个参数，<code>np.arange(start,stop)</code> 将创建一个秩为 1 的 ndarray，其中包含位于半开区间 <code>[start, stop)</code> 内并均匀分布的值。也就是说，均匀分布的数字将包括 <code>start</code> 数字，但是<em>不包括</em> <code>stop</code> 数字。我们来看一个示例</p>
+<pre><code># We create a rank 1 ndarray that has sequential integers from 4 to 9. 
+x = np.arange(4,10)
+
+# We print the ndarray
+print()
+print('x = ', x)
+print()
+
+# We print information about the ndarray
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype) </code></pre>
+<blockquote>
+  <p>x =  [4 5 6 7 8 9]</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (6,)  <br />
+  x is an object of type: class 'numpy.ndarray'  <br />
+  The elements in x are of type: int64 </p>
+</blockquote>
+<p>可以看出，函数 <code>np.arange(4,10)</code> 生成了一个包含 4 但是不含 10 的整数序列。</p>
+<p>最后，如果传入三个参数，<code>np.arange(start,stop,step)</code> 将创建一个秩为 1 的 ndarray，其中包含位于半开区间 <code>[start, stop)</code> 内并均匀分布的值，<code>step</code> 表示两个相邻值之间的差。我们来看一个示例：</p>
+<pre><code># We create a rank 1 ndarray that has evenly spaced integers from 1 to 13 in steps of 3.
+x = np.arange(1,14,3)
+
+# We print the ndarray
+print()
+print('x = ', x)
+print()
+
+# We print information about the ndarray
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype) </code></pre>
+<blockquote>
+  <p>x =  [ 1  4  7 10 13]</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (5,)  <br />
+  x is an object of type: class 'numpy.ndarray'  <br />
+  The elements in x are of type: int64 </p>
+</blockquote>
+<p>可以看出，<code>x</code> 具有在 1 和 13 之间的序列整数，但是所有相邻值之间的差为 3。</p>
+<p>虽然 <code>np.arange()</code> 函数允许间隔为非整数，例如 0.3，但是由于浮点数精度有限，输出通常不一致。因此，如果需要非整数间隔，通常建议使用函数 <code>np.linspace()</code>。<code>np.linspace(start, stop, N)</code> 函数返回 <code>N</code> 个在<em>闭</em>区间 <code>[start, stop]</code> 内均匀分布的数字。即 <code>start</code> 和 <code>stop</code> 值都包括在内。此外注意，在调用 <code>np.linspace()</code> 函数时，必须至少以 <code>np.linspace(start,stop)</code> 的形式传入两个参数。在此示例中，指定区间内的默认元素数量为 <em>N= 50</em>。<code>np.linspace()</code> 比 <code>np.arange()</code> 效果更好，是因为 <code>np.linspace()</code> 使用我们希望在特定区间内的元素数量，而不是值之间的间隔。我们来看一些示例：</p>
+<pre><code># We create a rank 1 ndarray that has 10 integers evenly spaced between 0 and 25.
+x = np.linspace(0,25,10)
+
+# We print the ndarray
+print()
+print('x = \n', x)
+print()
+
+# We print information about the ndarray
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype) </code></pre>
+<blockquote>
+  <p>x = [  0.           2.77777778   5.55555556   8.33333333  11.11111111<br />
+    13.88888889  16.66666667  19.44444444  22.22222222  25.        ]</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (10,)  <br />
+  x is an object of type: class 'numpy.ndarray'  <br />
+  The elements in x are of type: float64</p>
+</blockquote>
+<p>从上述示例中可以看出，函数 <code>np.linspace(0,25,10)</code> 返回一个 ndarray，其中包含 <code>10</code> 个在闭区间 <code>[0, 25]</code> 内均匀分布的元素。还可以看出，在此示例中，起始和结束点 <code>0</code> 和 <code>25</code> 都包含在内。但是，可以不包含区间的结束点（就像 np.arange() 函数一样），方法是在 <code>np.linspace()</code> 函数中将关键字 <code>endpoint 设为 False</code> 。我们创建和上面一样的 <code>x</code> ndarray，但是这次不包含结束点：</p>
+<pre><code># We create a rank 1 ndarray that has 10 integers evenly spaced between 0 and 25,
+# with 25 excluded.
+x = np.linspace(0,25,10, endpoint = False)
+
+# We print the ndarray
+print()
+print('x = ', x)
+print()
+
+# We print information about the ndarray
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype) </code></pre>
+<blockquote>
+  <p>x =  [  0.    2.5   5.    7.5  10.   12.5  15.   17.5  20.   22.5]</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (10,)  <br />
+  x is an object of type: class 'numpy.ndarray'  <br />
+  The elements in x are of type: float64</p>
+</blockquote>
+<p>可以看出，因为排除了结束点，值之间的间隔需要更改，因为需要在给定区间内填充 10 个均匀分布的数字。</p>
+<p>到目前为止，我们仅使用了内置函数 <code>np.arange()</code> 和 <code>np.linspace()</code> 来创建秩为 1 的 ndarray。但是，我们可以将这些函数与 <code>np.reshape()</code> 函数相结合，创建秩为 2 的任何形状 ndarray。<code>np.reshape(ndarray, new_shape)</code> 函数会将给定 <code>ndarray</code> 转换为指定的 <code>new_shape</code>。请务必注意：<code>new_shape</code> 应该与给定 <code>ndarray</code> 中的元素数量保持一致。例如，你可以将秩为 1 的 6 元素 ndarray 转换为秩为 2 的 3 x 2 ndarray，或秩为 2 的 2 x 3 ndarray，因为这两个秩为 2 的数组元素总数都是 6 个。但是，你无法将秩为 1 的 6 元素 ndarray 转换为秩为 2 的 3 x 3 ndarray，因为这个秩为 2 的数组将包含 9 个元素，比原始 ndarray 中的元素数量多。我们来看一些示例：</p>
+<pre><code># We create a rank 1 ndarray with sequential integers from 0 to 19
+x = np.arange(20)
+
+# We print x
+print()
+print('Original x = ', x)
+print()
+
+# We reshape x into a 4 x 5 ndarray 
+x = np.reshape(x, (4,5))
+
+# We print the reshaped x
+print()
+print('Reshaped x = \n', x)
+print()
+
+# We print information about the reshaped x
+print('x has dimensions:', x.shape)
+print('x is an object of type:', type(x))
+print('The elements in x are of type:', x.dtype) </code></pre>
+<blockquote>
+  <p>Original x =  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]</p>
+</blockquote>
+<blockquote>
+  <p>Reshaped x =  <br />
+  [[ 0  1  2  3  4]  <br />
+  &nbsp;[ 5  6  7  8  9]  <br />
+  &nbsp;[10 11 12 13 14]  <br />
+  &nbsp;[15 16 17 18 19]]</p>
+</blockquote>
+<blockquote>
+  <p>x has dimensions: (4, 5)  <br />
+  x is an object of type: class 'numpy.ndarray'  <br />
+  The elements in x are of type: int64</p>
+</blockquote>
+<p>NumPy 的一大特性是某些函数还可以当做方法使用。这样我们便能够在一行代码中按顺序应用不同的函数。ndarray 方法和 ndarray 属性相似，它们都使用<em>点</em>记法 (<code>.</code>)。我们来看看如何只用一行代码实现上述示例中的相同结果：</p>
+<pre><code># We create a a rank 1 ndarray with sequential integers from 0 to 19 and
+# reshape it to a 4 x 5 array 
+Y = np.arange(20).reshape(4, 5)
+
+# We print Y
+print()
+print('Y = \n', Y)
+print()
+
+# We print information about Y
+print('Y has dimensions:', Y.shape)
+print('Y is an object of type:', type(Y))
+print('The elements in Y are of type:', Y.dtype) </code></pre>
+<blockquote>
+  <p>Y =  <br />
+  [[ 0  1  2  3  4]  <br />
+  &nbsp;[ 5  6  7  8  9]  <br />
+  &nbsp;[10 11 12 13 14]  <br />
+  &nbsp;[15 16 17 18 19]]</p>
+</blockquote>
+<blockquote>
+  <p>Y has dimensions: (4, 5)  <br />
+  Y is an object of type: class 'numpy.ndarray'<br />
+  The elements in Y are of type: int64 </p>
+</blockquote>
+<p>可以看出，我们获得了和之前完全一样的结果。注意，当我们将 <code>reshape()</code> 当做方法使用时，它应用为 <code>ndarray.reshape(new_shape)</code>。这样会将 <code>ndarray</code> 转换为指定形状 <code>new_shape</code>。和之前一样，请注意，<code>new_shape</code> 应该与 <code>ndarray</code> 中的元素数量保持一致。在上述示例中，函数 <code>np.arange(20)</code> 创建了一个 ndarray 并当做将被 <code>reshape()</code> 方法调整形状的 <code>ndarray</code>。因此，如果将 <code>reshape()</code> 当做方法使用，我们不需要将 <code>ndarray</code> 当做参数传递给 <code>reshape()</code> 函数，只需传递 <code>new_shape</code> 参数。</p>
+<p>同样，我们也可以使用 <code>reshape()</code> 与 <code>np.linspace()</code> 创建秩为 2 的数组，如以下示例所示。</p>
+<pre><code># We create a rank 1 ndarray with 10 integers evenly spaced between 0 and 50,
+# with 50 excluded. We then reshape it to a 5 x 2 ndarray
+X = np.linspace(0,50,10, endpoint=False).reshape(5,2)
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in X are of type:', X.dtype)</code></pre>
+<blockquote>
+  <p>X =  <br />
+  &nbsp;[[  0.   5.]  <br />
+  &nbsp;[ 10.  15.]  <br />
+  &nbsp;[ 20.  25.]  <br />
+  &nbsp;[ 30.  35.]  <br />
+  &nbsp;[ 40.  45.]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (5, 2)  <br />
+  X is an object of type: class 'numpy.ndarray'<br />
+  The elements in X are of type: float64 </p>
+</blockquote>
+<p>我们将创建的最后一种 ndarray 是<em>随机</em> ndarray。随机 ndarray 是包含随机数字的数组。在机器学习中，通常需要创建随机指标，例如，在初始化神经网络的权重时。NumPy 提供了各种随机函数来帮助我们创建任何形状的随机 ndarray。</p>
+<p>我们先使用 <code>np.random.random(shape)</code> 函数创建具有给定<code>形状</code>的 ndarray，其中包含位于半开区间 [0.0, 1.0) 内的随机浮点数。</p>
+<pre><code># We create a 3 x 3 ndarray with random floats in the half-open interval [0.0, 1.0).
+X = np.random.random((3,3))
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in x are of type:', X.dtype)</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[ 0.12379926  0.52943854  0.3443525 ]  <br />
+  &nbsp;[ 0.11169547  0.82123909  0.52864397]  <br />
+  &nbsp;[ 0.58244133  0.21980803  0.69026858]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (3, 3)  <br />
+  X is an object of type: class 'numpy.ndarray' <br />
+  The elements in X are of type: float64</p>
+</blockquote>
+<p>NumPy 还允许我们创建由特定区间内的随机整数构成的 ndarray。函数 <code>np.random.randint(start, stop, size = shape)</code> 会创建一个具有给定<code>形状</code>的 ndarray，其中包含在半开区间 <code>[start, stop)</code> 内的随机整数。我们来看一个示例：</p>
+<pre><code># We create a 3 x 2 ndarray with random integers in the half-open interval [4, 15).
+X = np.random.randint(4,15,size=(3,2))
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in X are of type:', X.dtype)</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[ 7 11]  <br />
+  &nbsp;[ 9 11]  <br />
+  &nbsp;[ 6  7]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (3, 2)  <br />
+  X is an object of type: class 'numpy.ndarray'<br />
+  The elements in X are of type: int64</p>
+</blockquote>
+<p>在某些情况下，你可能需要创建由满足特定统计学特性的随机数字组成的 ndarray。例如，你可能希望 ndarray 中的随机数字平均值为 0。NumPy 使你能够创建从各种概率分布中抽样的数字组成的随机 ndarray。例如，函数 <code>np.random.normal(mean, standard deviation, size=shape)</code> 会创建一个具有给定<code>形状</code>的 ndarray，其中包含从<code>正态</code>高斯分布（具有给定<code>均值</code>和<code>标准差</code>）中抽样的随机数字。我们来创建一个 1,000 x 1,000 ndarray，其中包含从正态分布（均值为 0，标准差为 0.1）中随机抽样的浮点数。</p>
+<pre><code># We create a 1000 x 1000 ndarray of random floats drawn from normal (Gaussian) distribution
+# with a mean of zero and a standard deviation of 0.1.
+X = np.random.normal(0, 0.1, size=(1000,1000))
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# We print information about X
+print('X has dimensions:', X.shape)
+print('X is an object of type:', type(X))
+print('The elements in X are of type:', X.dtype)
+print('The elements in X have a mean of:', X.mean())
+print('The maximum value in X is:', X.max())
+print('The minimum value in X is:', X.min())
+print('X has', (X &lt; 0).sum(), 'negative numbers')
+print('X has', (X &gt; 0).sum(), 'positive numbers')</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[ 0.04218614  0.03247225 -0.02936003 …,  0.01586796 -0.05599115  -0.03630946]  <br />
+  &nbsp;[ 0.13879995 -0.01583122 -0.16599967 …,  0.01859617 -0.08241612  0.09684025]  <br />
+  &nbsp;[ 0.14422252 -0.11635985 -0.04550231 …, -0.09748604 -0.09350044  0.02514799]  <br />
+  &nbsp;…,  <br />
+  &nbsp;[-0.10472516 -0.04643974  0.08856722 …, -0.02096011 -0.02946155  0.12930844]  <br />
+  &nbsp;[-0.26596955  0.0829783   0.11032549 …, -0.14492074 -0.00113646  -0.03566034]  <br />
+  &nbsp;[-0.12044482  0.20355356  0.13637195 …,  0.06047196 -0.04170031  -0.04957684]]</p>
+</blockquote>
+<blockquote>
+  <p>X has dimensions: (1000, 1000)  <br />
+  X is an object of type: class 'numpy.ndarray' <br />
+  The elements in X are of type: float64  <br />
+  The elements in X have a mean of: -0.000121576684405  <br />
+  The maximum value in X is: 0.476673923106  <br />
+  The minimum value in X is: -0.499114224706 <br />
+  X 具有 500562 个负数<br />
+  X 具有 499438 个正数</p>
+</blockquote>
+<p>可以看出，ndarray 中的随机数字的平均值接近 0，<code>X</code> 中的最大值和最小值与 0（平均值）保持对称，正数和负数的数量很接近。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. 创建 ndarray.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. 使用内置函数创建 ndarray')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

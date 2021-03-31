@@ -1,0 +1,765 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>处理 NaN</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Pandas</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. Pandas 简介.html">02. Pandas 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 Pandas？.html">03. 为何要使用 Pandas？</a>
+    </li>
+    <li class="">
+      <a href="04. 创建 Pandas Series.html">04. 创建 Pandas Series</a>
+    </li>
+    <li class="">
+      <a href="05. 访问和删除 Pandas Series 中的元素.html">05. 访问和删除 Pandas Series 中的元素</a>
+    </li>
+    <li class="">
+      <a href="06. 对 Pandas Series 执行算术运算.html">06. 对 Pandas Series 执行算术运算</a>
+    </li>
+    <li class="">
+      <a href="07. 操纵 Series.html">07. 操纵 Series</a>
+    </li>
+    <li class="">
+      <a href="08. 创建 Pandas DataFrame.html">08. 创建 Pandas DataFrame</a>
+    </li>
+    <li class="">
+      <a href="09. 访问 Pandas DataFrame 中的元素.html">09. 访问 Pandas DataFrame 中的元素</a>
+    </li>
+    <li class="">
+      <a href="10. 处理 NaN.html">10. 处理 NaN</a>
+    </li>
+    <li class="">
+      <a href="11. 操纵 DataFrame.html">11. 操纵 DataFrame</a>
+    </li>
+    <li class="">
+      <a href="12. 将数据加载到 Pandas DataFrame 中.html">12. 将数据加载到 Pandas DataFrame 中</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. 处理 NaN</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="处理-nan">处理 NaN</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Pandas 6 V1</p></h3>
+  <video controls>
+  <source src="10. Pandas 6 V1-GS1kj04XQcM.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="10. Pandas 6 V1-GS1kj04XQcM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="10. Pandas 6 V1-GS1kj04XQcM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="10. Pandas 6 V1-GS1kj04XQcM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>正如之前提到的，在能够使用大型数据集训练学习算法之前，我们通常需要先清理数据。也就是说，我们需要通过某个方法检测并更正数据中的错误。虽然任何给定数据集可能会出现各种糟糕的数据，例如离群值或不正确的值，但是我们几乎始终会遇到的糟糕数据类型是缺少值。正如之前看到的，Pandas 会为缺少的值分配 <code>NaN</code> 值。在这节课，我们将学习如何检测和处理 <code>NaN</code> 值。</p>
+<p>首先，我们将创建一个具有一些 <code>NaN</code> 值的 DataFrame。</p>
+<pre><code># We create a list of Python dictionaries
+items2 = [{'bikes': 20, 'pants': 30, 'watches': 35, 'shirts': 15, 'shoes':8, 'suits':45},
+{'watches': 10, 'glasses': 50, 'bikes': 15, 'pants':5, 'shirts': 2, 'shoes':5, 'suits':7},
+{'bikes': 20, 'pants': 30, 'watches': 35, 'glasses': 4, 'shoes':10}]
+
+# We create a DataFrame  and provide the row index
+store_items = pd.DataFrame(items2, index = ['store 1', 'store 2', 'store 3'])
+
+# We display the DataFrame
+store_items</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>可以清晰地看出，我们创建的 DataFrame 具有 3 个 <code>NaN</code> 值：商店 1 中有一个，商店 3 中有两个。但是，如果我们向 DataFrame 中加载非常庞大的数据集，可能有数百万条数据，那么就不太容易直观地发现 <code>NaN</code> 值的数量。对于这些情形，我们结合使用多种方法来计算数据中的 <code>NaN</code> 值的数量。以下示例同时使用了 <code>.isnull()</code> 和 <code>sum()</code> 方法来计算我们的 DataFrame 中的 <code>NaN</code> 值的数量。 </p>
+<pre><code># We count the number of NaN values in store_items
+x =  store_items.isnull().sum().sum()
+
+# We print x
+print('Number of NaN values in our DataFrame:', x)</code></pre>
+<blockquote>
+  <p>Number of NaN values in our DataFrame: 3</p>
+</blockquote>
+<p>在上述示例中，<code>.isnull()</code> 方法返回一个大小和 <code>store_items</code> 一样的<em>布尔型</em> DataFrame，并用 <code>True</code> 表示具有 <code>NaN</code> 值的元素，用 <code>False</code> 表示非 NaN 值的元素。我们来看一个示例：</p>
+<pre><code>store_items.isnull()</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">True</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">True</td>
+  <td style="text-align:center;">False</td>
+  <td style="text-align:center;">True</td>
+  <td style="text-align:center;">False</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>在 Pandas 中，逻辑值 <code>True</code> 的数字值是 1，逻辑值 <code>False</code> 的数字值是 0。因此，我们可以通过数逻辑值 <code>True</code> 的数量数出 <code>NaN</code> 值的数量。为了数逻辑值 <code>True</code> 的总数，我们使用 <code>.sum()</code> 方法两次。要使用该方法两次，是因为第一个 sum() 返回一个 Pandas Series，其中存储了列上的逻辑值 <code>True</code> 的总数，如下所示：</p>
+<pre><code>store_items.isnull().sum()</code></pre>
+<blockquote>
+  <p>bikes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0  <br />
+  glasses &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  <br />
+  pants &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0  <br />
+  shirts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  <br />
+  shoes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0  <br />
+  suits &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  <br />
+  watches &nbsp;&nbsp;&nbsp;&nbsp; 0  <br />
+  dtype: int64</p>
+</blockquote>
+<p>第二个 sum() 将上述 Pandas Series 中的 1 相加。</p>
+<p>除了数 <code>NaN</code> 值的数量之外，我们还可以采用相反的方式，我们可以数<em>非 NaN</em> 值的数量。为此，我们可以使用 <code>.count()</code> 方法，如下所示：</p>
+<pre><code># We print the number of non-NaN values in our DataFrame
+print()
+print('Number of non-NaN values in the columns of our DataFrame:\n', store_items.count())</code></pre>
+<blockquote>
+  <p>Number of non-NaN values in the columns of our DataFrame:  <br />
+  bikes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  glasses &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  <br />
+  pants &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  shirts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  <br />
+  shoes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  suits &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  <br />
+  watches &nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  dtype: int64</p>
+</blockquote>
+<p>现在我们已经知道如何判断数据集中是否有任何 <code>NaN</code> 值，下一步是决定如何处理这些 NaN 值。通常，我们有两种选择，可以<em>删除</em>或<em>替换</em> <code>NaN</code> 值。在下面的示例中，我们将介绍这两种方式。</p>
+<p>首先，我们将学习如何从 DataFrame 中删除包含任何 <code>NaN</code> 值的行或列。如果 <code>axis = 0</code>，<code>.dropna(axis)</code> 方法将删除包含 <code>NaN</code> 值的任何<em>行</em>，如果 <code>axis = 1</code>，<code>.dropna(axis)</code> 方法将删除包含 <code>NaN</code> 值的任何<em>列</em>。我们来看一些示例：</p>
+<pre><code># We drop any rows with NaN values
+store_items.dropna(axis = 0)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<pre><code># We drop any columns with NaN values
+store_items.dropna(axis = 1)</code></pre>
+<blockquote>
+  <p>|    |     ** bikes**     |  <strong>pants</strong> |  <strong>shoes</strong> | <strong>watches</strong> |<br />
+  |----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|<br />
+  |<strong>store 1</strong> |20 | 30 | 8 |  35 |<br />
+  |<strong>store 2</strong> |15 |  5 | 5 |  10 |<br />
+  |<strong>store 3</strong> |20 | 30 |  10 | 35 | </p>
+</blockquote>
+<p>注意，<code>.dropna()</code> 方法不在原地地删除具有 <code>NaN</code> 值的行或列。也就是说，原始 DataFrame 不会改变。你始终可以在 <code>dropna()</code> 方法中将关键字 <code>inplace 设为 True</code>，在原地删除目标行或列。</p>
+<p>现在，我们不再删除 <code>NaN</code> 值，而是将它们替换为合适的值。例如，我们可以选择将所有 <code>NaN</code> 值替换为 0。为此，我们可以使用 <code>.fillna()</code> 方法，如下所示。</p>
+<pre><code># We replace all NaN values with 0
+store_items.fillna(0)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">0.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">0.0</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">0.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>我们还可以使用 <code>.fillna()</code> 方法将 <code>NaN</code> 值替换为 DataFrame 中的上个值，称之为<em>前向填充</em>。在通过前向填充替换 <code>NaN</code> 值时，我们可以使用列或行中的上个值。<code>.fillna(method = 'ffill', axis)</code> 将通过前向填充 (<code>ffill</code>) 方法沿着给定 <code>axis</code> 使用上个已知值替换 <code>NaN</code> 值。我们来看一些示例：</p>
+<pre><code># We replace NaN values with the previous value in the column
+store_items.fillna(method = 'ffill', axis = 0)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>注意 <strong>store 3</strong> 中的两个 <code>NaN</code> 值被替换成了它们所在列中的上个值。但是注意， <strong>store 1</strong> 中的 <code>NaN</code> 值没有被替换掉。因为这列前面没有值，因为 <code>NaN</code> 值是该列的第一个值。但是，如果使用上个行值进行前向填充，则不会发生这种情况。我们来看看具体情形：</p>
+<pre><code># We replace NaN values with the previous value in the row
+store_items.fillna(method = 'ffill', axis = 1)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8.0</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5.0</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5.0</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">10.0</td>
+  <td style="text-align:center;">10.0</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>我们看到，在这种情形下，所有 <code>NaN</code> 值都被替换成了之前的行值。</p>
+<p>同样，你可以选择用 DataFrame 中之后的值替换 <code>NaN</code> 值，称之为<em>后向填充</em>。<code>.fillna(method = 'backfill', axis)</code> 将通过后向填充 (<code>backfill</code>) 方法沿着给定 <code>axis</code> 使用下个已知值替换 <code>NaN</code> 值。和前向填充一样，我们可以选择使用行值或列值。我们来看一些示例：</p>
+<pre><code># We replace NaN values with the next value in the column
+store_items.fillna(method = 'backfill', axis = 0)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>注意，<strong>store 1</strong> 中的 <code>NaN</code> 值被替换成了它所在列的下个值。但是注意，<strong>store 3</strong> 中的两个 <code>NaN</code> 值没有被替换掉。因为这些列中没有下个值，这些 <code>NaN</code> 值是这些列中的最后一个值。但是，如果使用下个行值进行后向填充，则不会发生这种情况。我们来看看具体情形：</p>
+<pre><code># We replace NaN values with the next value in the row
+store_items.fillna(method = 'backfill', axis = 1)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8.0</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5.0</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5.0</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">10.0</td>
+  <td style="text-align:center;">10.0</td>
+  <td style="text-align:center;">35.0</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>注意，<code>.fillna()</code> 方法不在原地地替换（填充）<code>NaN</code> 值。也就是说，原始 DataFrame 不会改变。你始终可以在 <code>fillna()</code> 函数中将关键字 <code>inplace 设为 True</code>，在原地替换 <code>NaN</code> 值。</p>
+<p>我们还可以选择使用不同的插值方法替换 <code>NaN</code> 值。例如，<code>.interpolate(method = 'linear', axis)</code> 方法将通过 <code>linear</code> 插值使用沿着给定 <code>axis</code> 的值替换 <code>NaN</code> 值。我们来看一些示例：</p>
+<pre><code># We replace NaN values by using linear interpolation using column values
+store_items.interpolate(method = 'linear', axis = 0)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">NaN</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">10</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">35</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>注意，<strong>store 3</strong> 中的两个 <code>NaN</code> 值被替换成了线性插值。但是注意，<strong>store 1</strong> 中的 <code>NaN</code> 值没有被替换掉。因为该 <code>NaN</code> 值是该列中的第一个值，因为它前面没有数据，因此插值函数无法计算值。现在，我们使用行值插入值：</p>
+<pre><code># We replace NaN values by using linear interpolation using row values
+store_items.interpolate(method = 'linear', axis = 1)</code></pre>
+<blockquote>
+  <table>
+  <thead>
+  <tr>
+  <th id=""></th>
+  <th id="**_bikes**" style="text-align:center;">** bikes**</th>
+  <th id="**glasses**" style="text-align:center;"><strong>glasses</strong></th>
+  <th id="**pants**" style="text-align:center;"><strong>pants</strong></th>
+  <th id="**shirts**" style="text-align:center;"><strong>shirts</strong></th>
+  <th id="**shoes**" style="text-align:center;"><strong>shoes</strong></th>
+  <th id="**suits**" style="text-align:center;"><strong>suits</strong></th>
+  <th id="**watches**" style="text-align:center;"><strong>watches</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><strong>store 1</strong></td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">25.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">8.0</td>
+  <td style="text-align:center;">45.0</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 2</strong></td>
+  <td style="text-align:center;">15.0</td>
+  <td style="text-align:center;">50.0</td>
+  <td style="text-align:center;">5.0</td>
+  <td style="text-align:center;">2.0</td>
+  <td style="text-align:center;">5.0</td>
+  <td style="text-align:center;">7.0</td>
+  <td style="text-align:center;">10.0</td>
+  </tr>
+  <tr>
+  <td><strong>store 3</strong></td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">4.0</td>
+  <td style="text-align:center;">30.0</td>
+  <td style="text-align:center;">20.0</td>
+  <td style="text-align:center;">10.0</td>
+  <td style="text-align:center;">22.5</td>
+  <td style="text-align:center;">35.0</td>
+  </tr>
+  </tbody>
+  </table>
+</blockquote>
+<p>和我们看到的其他方法一样，<code>.interpolate()</code> 方法不在原地地替换 <code>NaN</code> 值。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. 操纵 DataFrame.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 处理 NaN')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

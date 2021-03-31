@@ -1,0 +1,374 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>对 Pandas Series 执行算术运算</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Pandas</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. Pandas 简介.html">02. Pandas 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 Pandas？.html">03. 为何要使用 Pandas？</a>
+    </li>
+    <li class="">
+      <a href="04. 创建 Pandas Series.html">04. 创建 Pandas Series</a>
+    </li>
+    <li class="">
+      <a href="05. 访问和删除 Pandas Series 中的元素.html">05. 访问和删除 Pandas Series 中的元素</a>
+    </li>
+    <li class="">
+      <a href="06. 对 Pandas Series 执行算术运算.html">06. 对 Pandas Series 执行算术运算</a>
+    </li>
+    <li class="">
+      <a href="07. 操纵 Series.html">07. 操纵 Series</a>
+    </li>
+    <li class="">
+      <a href="08. 创建 Pandas DataFrame.html">08. 创建 Pandas DataFrame</a>
+    </li>
+    <li class="">
+      <a href="09. 访问 Pandas DataFrame 中的元素.html">09. 访问 Pandas DataFrame 中的元素</a>
+    </li>
+    <li class="">
+      <a href="10. 处理 NaN.html">10. 处理 NaN</a>
+    </li>
+    <li class="">
+      <a href="11. 操纵 DataFrame.html">11. 操纵 DataFrame</a>
+    </li>
+    <li class="">
+      <a href="12. 将数据加载到 Pandas DataFrame 中.html">12. 将数据加载到 Pandas DataFrame 中</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. 对 Pandas Series 执行算术运算</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="对-pandas-series-执行算术运算">对 Pandas Series 执行算术运算</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Pandas 3 V1</p></h3>
+  <video controls>
+  <source src="06. Pandas 3 V1-yhMT0X6YPFA.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="06. Pandas 3 V1-yhMT0X6YPFA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="06. Pandas 3 V1-yhMT0X6YPFA.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="06. Pandas 3 V1-yhMT0X6YPFA.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>和 NumPy ndarray 一样，我们可以对 Pandas Series 执行元素级算术运算。在这节课，我们将了解 Pandas Series 和单个数字之间的算术运算。我们创建一个新的 Pandas Series，用于存储只有水果的购物清单。</p>
+<pre><code># We create a Pandas Series that stores a grocery list of just fruits
+fruits= pd.Series(data = [10, 6, 3,], index = ['apples', 'oranges', 'bananas'])
+
+# We display the fruits Pandas Series
+fruits</code></pre>
+<blockquote>
+  <p>apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  dtype: int64</p>
+</blockquote>
+<p>我们现在可以通过执行基本的算术运算，修改 fruits 中的数据。我们来看一些示例：</p>
+<pre><code># We print fruits for reference
+print('Original grocery list of fruits:\n ', fruits)
+
+# We perform basic element-wise operations using arithmetic symbols
+print()
+print('fruits + 2:\n', fruits + 2) # We add 2 to each item in fruits
+print()
+print('fruits - 2:\n', fruits - 2) # We subtract 2 to each item in fruits
+print()
+print('fruits * 2:\n', fruits * 2) # We multiply each item in fruits by 2 
+print()
+print('fruits / 2:\n', fruits / 2) # We divide each item in fruits by 2
+print()</code></pre>
+<blockquote>
+  <p>Original grocery list of fruits:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  dtype: int64</p>
+</blockquote>
+<blockquote>
+  <p>fruits + 2:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5  <br />
+  dtype: int64</p>
+</blockquote>
+<blockquote>
+  <p>fruits - 2:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  <br />
+  dtype: int64</p>
+</blockquote>
+<blockquote>
+  <p>fruits * 2:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp; 12  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  <br />
+  dtype: int64</p>
+</blockquote>
+<blockquote>
+  <p>fruits / 2:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.0  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.0  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.5  <br />
+  dtype: float64</p>
+</blockquote>
+<p>我们还可以对 Pandas Series 中的所有元素应用 NumPy 中的数学函数，例如 <code>sqrt(x)</code>。</p>
+<pre><code># We import NumPy as np to be able to use the mathematical functions
+import numpy as np
+
+# We print fruits for reference
+print('Original grocery list of fruits:\n', fruits)
+
+# We apply different mathematical functions to all elements of fruits
+print()
+print('EXP(X) = \n', np.exp(fruits))
+print() 
+print('SQRT(X) =\n', np.sqrt(fruits))
+print()
+print('POW(X,2) =\n',np.power(fruits,2)) # We raise all elements of fruits to the power of 2</code></pre>
+<blockquote>
+  <p>Original grocery list of fruits:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  dtype: int64</p>
+</blockquote>
+<blockquote>
+  <p>EXP(X) =  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22026.465795  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 403.428793  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20.085537  <br />
+  dtype: float64</p>
+</blockquote>
+<blockquote>
+  <p>SQRT(X) =  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.162278  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.449490  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.732051  <br />
+  dtype: float64</p>
+</blockquote>
+<blockquote>
+  <p>POW(X,2) =  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9  <br />
+  dtype: int64</p>
+</blockquote>
+<p>Pandas 还允许我们仅对 fruits 购物清单中的部分条目应用算术运算。我们来看一些示例：</p>
+<pre><code># We print fruits for reference
+print('Original grocery list of fruits:\n ', fruits)
+print()
+
+# We add 2 only to the bananas
+print('Amount of bananas + 2 = ', fruits['bananas'] + 2)
+print()
+
+# We subtract 2 from apples
+print('Amount of apples - 2 = ', fruits.iloc[0] - 2)
+print()
+
+# We multiply apples and oranges by 2
+print('We double the amount of apples and oranges:\n', fruits[['apples', 'oranges']] * 2)
+print()
+
+# We divide apples and oranges by 2
+print('We half the amount of apples and oranges:\n', fruits.loc[['apples', 'oranges']] / 2)</code></pre>
+<blockquote>
+  <p>Original grocery list of fruits:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  <br />
+  bananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  <br />
+  dtype: int64</p>
+</blockquote>
+<blockquote>
+  <p>Amount of bananas + 2 =  5</p>
+</blockquote>
+<blockquote>
+  <p>Amount of apples - 2 =  8</p>
+</blockquote>
+<blockquote>
+  <p>We double the amount of apples and oranges:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp; 12  <br />
+  dtype: int64</p>
+</blockquote>
+<blockquote>
+  <p>We half the amount of apples and oranges:  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.0  <br />
+  oranges &nbsp;&nbsp;&nbsp;&nbsp; 3.0  <br />
+  dtype: float64</p>
+</blockquote>
+<p>你还可以对具有混合数据类型的 Pandas Series 应用算术运算，前提是该算术运算适合 Series 中的<em>所有</em>数据类型，否则会出错。我们来看看将购物清单乘以 2 会发生什么</p>
+<pre><code># We multiply our grocery list by 2
+groceries * 2</code></pre>
+<blockquote>
+  <p>eggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60  <br />
+  apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12  <br />
+  milk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YesYes  <br />
+  bread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoNo  <br />
+  dtype: object</p>
+</blockquote>
+<p>可以看出，在上述示例中，我们乘以了 2，Pandas 使每个条目的数据翻倍，包括字符串。Pandas 能够这么操作是因为，乘法运算 <code>*</code> 对数字和字符串来说都可行。如果你要应用对数字有效但是对字符串无效的运算，例如 <code>/</code>，则会出错。如果 Pandas Series 中有混合类型的数据，确保对于<em>所有</em>的元素数据类型，这些算术运算都有效。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. 操纵 Series.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. 对 Pandas Series 执行算术运算')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

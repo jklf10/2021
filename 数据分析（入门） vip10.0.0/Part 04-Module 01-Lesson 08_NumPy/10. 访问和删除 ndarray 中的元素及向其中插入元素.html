@@ -1,0 +1,561 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>访问和删除 ndarray 中的元素及向其中插入元素</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>NumPy</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 课程讲师.html">01. 课程讲师</a>
+    </li>
+    <li class="">
+      <a href="02. NumPy 简介.html">02. NumPy 简介</a>
+    </li>
+    <li class="">
+      <a href="03. 为何要使用 NumPy.html">03. 为何要使用 NumPy</a>
+    </li>
+    <li class="">
+      <a href="04. 创建和保存 NumPy ndarray.html">04. 创建和保存 NumPy ndarray</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：创建和保存 NumPy ndarrays.html">05. 练习：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：创建和保存 NumPy ndarrays.html">06. 解决方案：创建和保存 NumPy ndarrays</a>
+    </li>
+    <li class="">
+      <a href="07. 布尔型索引、集合运算和排序.html">07. 布尔型索引、集合运算和排序</a>
+    </li>
+    <li class="">
+      <a href="08. 使用内置函数创建 ndarray.html">08. 使用内置函数创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="09. 创建 ndarray.html">09. 创建 ndarray</a>
+    </li>
+    <li class="">
+      <a href="10. 访问和删除 ndarray 中的元素及向其中插入元素.html">10. 访问和删除 ndarray 中的元素及向其中插入元素</a>
+    </li>
+    <li class="">
+      <a href="11. ndarray 切片.html">11. ndarray 切片</a>
+    </li>
+    <li class="">
+      <a href="12. 操纵 ndarray.html">12. 操纵 ndarray</a>
+    </li>
+    <li class="">
+      <a href="13. 算术运算和广播.html">13. 算术运算和广播</a>
+    </li>
+    <li class="">
+      <a href="14. 通过广播创建 ndarray.html">14. 通过广播创建 ndarray</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. 访问和删除 ndarray 中的元素及向其中插入元素</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="访问和删除-ndarray-中的元素及向其中插入元素">访问和删除 ndarray 中的元素及向其中插入元素</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>NumPy 3 V1</p></h3>
+  <video controls>
+  <source src="10. NumPy 3 V1-Rt4aydeo9F8.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="10. NumPy 3 V1-Rt4aydeo9F8.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="10. NumPy 3 V1-Rt4aydeo9F8.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="10. NumPy 3 V1-Rt4aydeo9F8.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你已经知道如何创建各种 ndarray，现在将学习 NumPy 使我们如何有效地操纵 ndarray 中的数据。NumPy ndarray 是可变的，意味着 ndarray 中的元素在 ndarray 创建之后可以更改。NumPy ndarray 还可以切片，因此可以通过多种方式拆分 ndarray。例如，我们可以从 ndarray 中获取想要的任何子集。通常，在机器学习中，你需要使用切片拆分数据，例如将数据集拆分为训练集、交叉验证集和测试集。</p>
+<p>我们首先将了解如何通过索引访问或修改 ndarray 中的元素。可以在方括号 [ ] 中添加索引来访问元素。在 NumPy 中，你可以使用正索引和负索引访问 ndarray 中的元素。正索引表示从数组的开头访问元素，负索引表示从数组的末尾访问元素。我们来看看如何访问秩为 1 的 ndarray 中的元素：</p>
+<pre><code># We create a rank 1 ndarray that contains integers from 1 to 5
+x = np.array([1, 2, 3, 4, 5])
+
+# We print x
+print()
+print('x = ', x)
+print()
+
+# Let's access some elements with positive indices
+print('This is First Element in x:', x[0]) 
+print('This is Second Element in x:', x[1])
+print('This is Fifth (Last) Element in x:', x[4])
+print()
+
+# Let's access the same elements with negative indices
+print('This is First Element in x:', x[-5])
+print('This is Second Element in x:', x[-4])
+print('This is Fifth (Last) Element in x:', x[-1])</code></pre>
+<blockquote>
+  <p>x =  [1 2 3 4 5]</p>
+</blockquote>
+<blockquote>
+  <p>This is First Element in x: 1  <br />
+  This is Second Element in x: 2  <br />
+  This is Fifth (Last) Element in x: 5</p>
+</blockquote>
+<blockquote>
+  <p>This is First Element in x: 1  <br />
+  This is Second Element in x: 2  <br />
+  This is Fifth (Last) Element in x: 5</p>
+</blockquote>
+<p>注意，要访问 ndarray 中的第一个元素，我们需要使用索引 0，而不是 1。此外注意，可以同时使用正索引和负索引访问同一个元素。正如之前提到的，正索引用于从数组的开头访问元素，负索引用于从数组的末尾访问元素。</p>
+<p>现在我们看看如何更改秩为 1 的 ndarray 中的元素。方法是访问要更改的元素，然后使用 <code>=</code> 符号分配新的值：</p>
+<pre><code># We create a rank 1 ndarray that contains integers from 1 to 5
+x = np.array([1, 2, 3, 4, 5])
+
+# We print the original x
+print()
+print('Original:\n x = ', x)
+print()
+
+# We change the fourth element in x from 4 to 20
+x[3] = 20
+
+# We print x after it was modified 
+print('Modified:\n x = ', x)</code></pre>
+<blockquote>
+  <p>Original: <br />
+  x =  [1 2 3 4 5]</p>
+</blockquote>
+<blockquote>
+  <p>Modified: <br />
+  x =  [ 1  2  3 20  5]</p>
+</blockquote>
+<p>同样，我们可以访问和修改秩为 2 的 ndarray 中的特定元素。要访问秩为 2 的 ndarray 中的元素，我们需要提供两个索引，格式为 <code>[row, column]</code>。我们来看一些示例：</p>
+<pre><code># We create a 3 x 3 rank 2 ndarray that contains integers from 1 to 9
+X = np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+# We print X
+print()
+print('X = \n', X)
+print()
+
+# Let's access some elements in X
+print('This is (0,0) Element in X:', X[0,0])
+print('This is (0,1) Element in X:', X[0,1])
+print('This is (2,2) Element in X:', X[2,2])</code></pre>
+<blockquote>
+  <p>X =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[4 5 6]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>This is (0,0) Element in X: 1  <br />
+  This is (0,1) Element in X: 2  <br />
+  This is (2,2) Element in X: 9</p>
+</blockquote>
+<p>注意，索引 <code>[0, 0]</code> 是指第一行第一列的元素。</p>
+<p>可以像针对秩为 1 的 ndarray 一样修改秩为 2 的 ndarray 中的元素。我们来看一个示例：</p>
+<pre><code># We create a 3 x 3 rank 2 ndarray that contains integers from 1 to 9
+X = np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+# We print the original x
+print()
+print('Original:\n X = \n', X)
+print()
+
+# We change the (0,0) element in X from 1 to 20
+X[0,0] = 20
+
+# We print X after it was modified 
+print('Modified:\n X = \n', X)</code></pre>
+<blockquote>
+  <p>Original:  <br />
+  X =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[4 5 6]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>Modified:  <br />
+  X =  <br />
+  [[20  2  3]  <br />
+  &nbsp;[ 4  5  6]  <br />
+  &nbsp;[ 7  8  9]]</p>
+</blockquote>
+<p>现在看看如何向 ndarray 中添加元素及删除其中的元素。我们可以使用 <code>np.delete(ndarray, elements, axis)</code> 函数删除元素。此函数会沿着指定的<code>轴</code>从给定 <code>ndarray</code> 中<code>删除</code>给定的<code>元素</code>列表。对于秩为 1 的 ndarray，不需要使用关键字 <code>axis</code>。对于秩为 2 的 ndarray，<code>axis = 0</code> 表示选择<em>行</em>，<code>axis = 1</code> 表示选择<em>列</em>。我们来看一些示例：</p>
+<pre><code># We create a rank 1 ndarray 
+x = np.array([1, 2, 3, 4, 5])
+
+# We create a rank 2 ndarray
+Y = np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+# We print x
+print()
+print('Original x = ', x)
+
+# We delete the first and last element of x
+x = np.delete(x, [0,4])
+
+# We print x with the first and last element deleted
+print()
+print('Modified x = ', x)
+
+# We print Y
+print()
+print('Original Y = \n', Y)
+
+# We delete the first row of y
+w = np.delete(Y, 0, axis=0)
+
+# We delete the first and last column of y
+v = np.delete(Y, [0,2], axis=1)
+
+# We print w
+print()
+print('w = \n', w)
+
+# We print v
+print()
+print('v = \n', v)</code></pre>
+<blockquote>
+  <p>Original x =  [1 2 3 4 5]</p>
+</blockquote>
+<blockquote>
+  <p>Modified x =  [2 3 4]</p>
+</blockquote>
+<blockquote>
+  <p>Original Y =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[4 5 6]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>w =  <br />
+  [[4 5 6]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>v =  <br />
+  [[2]  <br />
+  &nbsp;[5]  <br />
+  &nbsp;[8]]</p>
+</blockquote>
+<p>现在我们来看看如何向 ndarray 中附加值。我们可以使用 <code>np.append(ndarray, elements, axis)</code> 函数向 ndarray 中附加值。该函数会将给定的<code>元素</code>列表沿着指定的<code>轴</code>附加到 <code>ndarray</code> 中。我们来看一些示例：</p>
+<pre><code># We create a rank 1 ndarray 
+x = np.array([1, 2, 3, 4, 5])
+
+# We create a rank 2 ndarray 
+Y = np.array([[1,2,3],[4,5,6]])
+
+# We print x
+print()
+print('Original x = ', x)
+
+# We append the integer 6 to x
+x = np.append(x, 6)
+
+# We print x
+print()
+print('x = ', x)
+
+# We append the integer 7 and 8 to x
+x = np.append(x, [7,8])
+
+# We print x
+print()
+print('x = ', x)
+
+# We print Y
+print()
+print('Original Y = \n', Y)
+
+# We append a new row containing 7,8,9 to y
+v = np.append(Y, [[7,8,9]], axis=0)
+
+# We append a new column containing 9 and 10 to y
+q = np.append(Y,[[9],[10]], axis=1)
+
+# We print v
+print()
+print('v = \n', v)
+
+# We print q
+print()
+print('q = \n', q)</code></pre>
+<blockquote>
+  <p>Original x =  [1 2 3 4 5]</p>
+</blockquote>
+<blockquote>
+  <p>x =  [1 2 3 4 5 6]</p>
+</blockquote>
+<blockquote>
+  <p>x =  [1 2 3 4 5 6 7 8]</p>
+</blockquote>
+<blockquote>
+  <p>Original Y =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[4 5 6]]</p>
+</blockquote>
+<blockquote>
+  <p>v =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[4 5 6]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>q =  <br />
+  [[ 1  2  3  9]  <br />
+  &nbsp;[ 4  5  6 10]]</p>
+</blockquote>
+<p>注意，当我们将行或列附加到秩为 2 的 ndarray 中时，行或列的形状必须正确，以与秩为 2 的 ndarray 的形状相符。</p>
+<p>现在我们来看看如何向 ndarray 中插入值。我们可以使用 <code>np.insert(ndarray, index, elements, axis)</code> 函数向 ndarray 中插入值。此函数会将给定的<code>元素</code>列表沿着指定的<code>轴</code>插入到 <code>ndarray</code> 中，并放在给定的<code>索引</code>前面。我们来看一些示例：</p>
+<pre><code># We create a rank 1 ndarray 
+x = np.array([1, 2, 5, 6, 7])
+
+# We create a rank 2 ndarray 
+Y = np.array([[1,2,3],[7,8,9]])
+
+# We print x
+print()
+print('Original x = ', x)
+
+# We insert the integer 3 and 4 between 2 and 5 in x. 
+x = np.insert(x,2,[3,4])
+
+# We print x with the inserted elements
+print()
+print('x = ', x)
+
+# We print Y
+print()
+print('Original Y = \n', Y)
+
+# We insert a row between the first and last row of y
+w = np.insert(Y,1,[4,5,6],axis=0)
+
+# We insert a column full of 5s between the first and second column of y
+v = np.insert(Y,1,5, axis=1)
+
+# We print w
+print()
+print('w = \n', w)
+
+# We print v
+print()
+print('v = \n', v)</code></pre>
+<blockquote>
+  <p>Original x =  [1 2 5 6 7]</p>
+</blockquote>
+<blockquote>
+  <p>x =  [1 2 3 4 5 6 7]</p>
+</blockquote>
+<blockquote>
+  <p>Original Y =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>w =  <br />
+  [[1 2 3]  <br />
+  &nbsp;[4 5 6]  <br />
+  &nbsp;[7 8 9]]</p>
+</blockquote>
+<blockquote>
+  <p>v =  <br />
+  [[1 5 2 3]  <br />
+  &nbsp;[7 5 8 9]]</p>
+</blockquote>
+<p>NumPy 还允许我们将 ndarray 上下堆叠起来，或者左右堆叠。可以使用 <code>np.vstack()</code> 函数进行垂直堆叠，或使用 <code>np.hstack()</code> 函数进行水平堆叠。请务必注意，为了堆叠 ndarray，ndarray 的形状必须相符。我们来看一些示例：</p>
+<pre><code># We create a rank 1 ndarray 
+x = np.array([1,2])
+
+# We create a rank 2 ndarray 
+Y = np.array([[3,4],[5,6]])
+
+# We print x
+print()
+print('x = ', x)
+
+# We print Y
+print()
+print('Y = \n', Y)
+
+# We stack x on top of Y
+z = np.vstack((x,Y))
+
+# We stack x on the right of Y. We need to reshape x in order to stack it on the right of Y. 
+w = np.hstack((Y,x.reshape(2,1)))
+
+# We print z
+print()
+print('z = \n', z)
+
+# We print w
+print()
+print('w = \n', w)</code></pre>
+<blockquote>
+  <p>x =  [1 2]</p>
+</blockquote>
+<blockquote>
+  <p>Y =  <br />
+  [[3 4]  <br />
+  &nbsp;[5 6]]</p>
+</blockquote>
+<blockquote>
+  <p>z =  <br />
+  [[1 2]  <br />
+  &nbsp;[3 4]  <br />
+  &nbsp;[5 6]]</p>
+</blockquote>
+<blockquote>
+  <p>w =  <br />
+  [[3 4 1]  <br />
+  &nbsp;[5 6 2]]</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. ndarray 切片.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 访问和删除 ndarray 中的元素及向其中插入元素')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
