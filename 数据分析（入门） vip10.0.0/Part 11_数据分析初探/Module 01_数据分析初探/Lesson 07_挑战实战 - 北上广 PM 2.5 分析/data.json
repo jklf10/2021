@@ -1,0 +1,174 @@
+{
+  "data": {
+    "lesson": {
+      "id": 673320,
+      "key": "28c6758e-1ba0-4c1e-aa66-a3fe88690971",
+      "title": "挑战实战 - 北上广 PM 2.5 分析",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": null,
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": null,
+      "project": {
+        "key": "082a490a-5af1-44cd-acad-630757ca5afa",
+        "version": "1.0.0",
+        "locale": "zh-cn",
+        "duration": 7200,
+        "semantic_type": "Project",
+        "title": "中国五个城市的 PM 2.5 分析",
+        "description": "# 准备好提交了吗？\n\n## 检查审阅标准\n\n你的项目将会由优达学城的审阅专家根据 [**项目审阅标准**](https://review.udacity.com/#!/rubrics/2089/view) 进行评估。在你提交项目之前，请使用[**项目审阅标准**]来检查你的项目。如果你的提交已达到所有要求，则可以提交项目。如果你发现项目还有改进的空间，请继续改进吧，直到你的项目符合审阅标准中列明的所有要求！请特别要留意，项目审阅标准中包含对代码质量的要求。在该项目中，仅仅获得正确的答案并不是最重要的，具备良好的编码习惯来得到你的解决方案也很重要。\n\n## 项目提交\n\n当你准备好，请点击“提交项目”按钮，进入项目提交页面。你可以将你的文件（html 和 ipynb 文件）作为 **a.zip **压缩文件提交。或者你可以链接到包含你项目文件的GitHub仓库。如果你使用GitHub，请注意，提交将是提交时所链接仓库的快照。建议你将每个项目保存在一个单独的仓库中，以避免任何潜在的混淆 ：如果审阅专家收到含有多个项目的文件夹，可能会对将要评估的项目有所混淆。\n\n## 项目提交之后\n\n一旦你提交了项目，你就会收到一封确认邮件。如果你对提交项目或希望检查你提交的状态有任何疑问，请及时咨询你的学习规划师。\n\n**提醒：** 在上传之前，我们建议将 zip 文件以及其内部文件的文件名改为 **英文** ，以尽可能避免上传过程中的问题发生。\n\n<img src=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2018/December/5c062532_classroom-top/classroom-top.png\">\n\nGood Luck！我期待在正式课程中与你相见！\n\n—— 你的课程导师，Kylie\n\n<img src=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2018/December/5c06253b_classroom-end/classroom-end.png\">\n\n",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "2089",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": {
+          "url": "https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5b0f8f12_ozone-pm25-monitoring-800x400/ozone-pm25-monitoring-800x400.jpg",
+          "width": 800,
+          "height": 400
+        }
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 673328,
+          "key": "c4f3e82c-acc4-4949-8611-2a3d0b13b5c3",
+          "title": "项目说明",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c4f3e82c-acc4-4949-8611-2a3d0b13b5c3",
+            "completed_at": "2018-07-02T08:32:11.317Z",
+            "last_viewed_at": "2018-07-02T08:32:09.468Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 673325,
+              "key": "1848cda9-0db2-4f04-aa70-cf58159b6460",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 项目简介\n\n接下来你要来亲自完成一个实战项目了！你要对中国五个城市的PM 2.5的数据进行分析，该数据中包含有时间、PM 2.5读数还有一些气象信息。在本项目中，你可以不考虑任何气象信息，仅从不同的维度对PM 2.5的读数展开分析即可。你不需要理解项目中的所有代码，只需要对需要回答的问题进行思考，并按照提示将代码补充完整即可。通过本项目，你可以理解数据分析的完整流程，并自己来提出和解决一些问题。让我们开始吧！\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 673324,
+              "key": "5c7e8844-3a12-444b-aa09-a3855be3adef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "###  注意\n\n在项目中，你可能看到目前并没有学习到的 Python 代码。但是请不要担心，本项目旨在于帮助你理解数据分析的过程，而并非学习编程。Python 编程的知识将会在 **数据分析（入门）** 课程中进行更加系统的学习。\n\n#### 第 1 步：提问\n你要么获取一批数据，然后根据它提问，要么先提问，然后根据问题收集数据。在这两种情况下，好的问题可以帮助你将精力集中在数据的相关部分，并帮助你得出有洞察力的分析。\n\n#### 第 2 步：整理数据\n你通过三步来获得所需的数据：收集，评估，清理。你收集所需的数据来回答你的问题，评估你的数据来识别数据质量或结构中的任何问题，并通过修改、替换或删除数据来清理数据，以确保你的数据集具有最高质量和尽可能结构化。\n\n#### 第 3 步：执行 EDA（探索性数据分析）\n你可以探索并扩充数据，以最大限度地发挥你的数据分析、可视化和模型构建的潜力。探索数据涉及在数据中查找模式，可视化数据中的关系，并对你正在使用的数据建立直觉。经过探索后，你可以删除异常值，并从数据中创建更好的特征，这称为特征工程。\n\n#### 第 4 步：得出结论（或甚至是做出预测）\n这一步通常使用机器学习或推理性统计来完成，不在本课程范围内，本课的重点是使用描述性统计得出结论。\n\n\n#### 第 5 步：传达结果\n你通常需要证明你发现的见解及传达意义。或者，如果你的最终目标是构建系统，则通常需要分享构建的结果，解释你得出设计结论的方式，并报告该系统的性能。传达结果的方法有多种：报告、幻灯片、博客帖子、电子邮件、演示文稿，甚至对话。数据可视化总会给你呈现很大的价值。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 673326,
+          "key": "3c53a9b3-3734-4da5-8ab0-0c44b7567218",
+          "title": "项目概述",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3c53a9b3-3734-4da5-8ab0-0c44b7567218",
+            "completed_at": "2018-07-02T08:35:54.616Z",
+            "last_viewed_at": "2018-07-02T08:35:52.693Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 673321,
+              "key": "07db9677-f5dc-473d-850b-95688db32143",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 项目概述\n\n在本项目中，你将会使用 Python 代码来对中国五个城市（北京、上海、广州、成都、沈阳）的 PM 2.5 的值来进行分析，体验使用数据解决问题的流程。\n\n### 项目指南\n\n请查看项目中提供的 PM 2.5 的数据集，并提出几个你非常感兴趣的问题。通过调用项目中给出的帮助函数，你可以对数据进行清理、筛选、可视化、得出结论。请参考 “项目工作区” 中的具体说明来完成项目。你可以直接在工作区中的 Jupyter Notebook 来完成项目。如果你想要在本地完成项目，你可以参考 **（选学）参考资料：Anaconda 和 Jupyter Notebook** 来进行本地环境的安装和配置。项目文件可以从工作区或者课程资源中下载，如果有任何困难，可以咨询你的专属助教。\n\n### 项目提交\n\n在本项目中，你需要完成下面的任务：\n\n1. 提出问题\n2. 调用帮助函数来筛选数据\n3. 探索和可视化数据\n4. 得出结论\n\n项目的模板已经给出，你可以直接运行已有的代码，并完成一些空格处针对你个性化探索的问题的探索。需要书写的代码之前有 ”**TO DO**“ 的标记。完成项目后，你需要同时提交 ipynb 和 html 文件。\n\n### 审阅规范\n\nUdacity 的项目审阅专家会根据 [项目提交准则](https://review.udacity.com/#!/rubrics/1864/view) 来评估你的项目. 当你完成本项目，建议你在提交之前，对照项目评估准则进行一下自我评估。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 614387,
+          "key": "0c87c7d9-7031-4ddb-991a-5ceff8c1aebd",
+          "title": "项目工作区",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0c87c7d9-7031-4ddb-991a-5ceff8c1aebd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 614386,
+              "key": "f499b915-a70c-4185-9f62-d7f05685b987",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view24d3ba7f",
+              "pool_id": "jupyter",
+              "view_id": "24d3ba7f-64dc-449c-8d65-e85817a04790",
+              "gpu_capable": false,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "ports": [],
+                    "allowSubmit": false,
+                    "defaultPath": "/notebooks/pm25project.ipynb"
+                  },
+                  "kind": "jupyter"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 673327,
+          "key": "073bdadf-aaef-4e44-98e3-ca80086f52a9",
+          "title": "项目知识点回顾",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "073bdadf-aaef-4e44-98e3-ca80086f52a9",
+            "completed_at": "2018-07-03T07:09:52.079Z",
+            "last_viewed_at": "2018-07-03T07:09:50.872Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 673322,
+              "key": "759c19eb-c0cd-4902-aa4e-b3ad3de38df4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "下面是本项目中用到的一些重要的函数和方法。如果有感兴趣，你可以查看下面的表格来理解代码在项目中的功能。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 673323,
+              "key": "5de95c83-a268-435a-b634-af87c5b337ed",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "|   | 目的          | 函数/方法         | 例子                                                                                    |\n|---|----------------|---------------------|------------------------------------------------------------------------------------------------------------|\n| 1 | 导入包         | [import](https://docs.python.org/2/tutorial/modules.html#importing-from-a-package)              | `import pandas as pd`                                                                                      |\n| 2 | 导入数据    | Pandas - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html) | `Shanghai_data = pd.read_csv('ShanghaiPM20100101_20151231.csv')`                                           |\n| 3 | 查看数据的前几列| Pandas - [head](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.head.html)     | `Shanghai_data.head()`                                                                                     |\n| 4 | 查看数据信息 | Pandas - [info](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.info.html)    | `Shanghai_data.info()`                                                                                     |\n| 5 | 查看数据类型   | [type](https://docs.python.org/2/library/types.html)              | `print(type(Shanghai_data['cbwd'][0]))`                                                                    |\n| 6 | 内容替换     | [replace](https://www.pythoncentral.io/pythons-string-replace-method-replacing-python-strings/)             | `Shanghai_data.columns = [c.replace(' ', '_') for c in Shanghai_data.columns] Shanghai_data.head()`        |\n| 7 | 映射          | [map](http://book.pythontips.com/en/latest/map_filter.html)                 | `Shanghai_data['season'] = Shanghai_data['season'].map({1:'Spring', 2:'Summer', 3:'Autumn', 4: 'Winter'})` |\n| 8 | 删除缺失值  | [dropna](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.dropna.html)            | `Shanghai_data['PM_Jingan'].dropna()`                                                                      |\n|  9 |  分裂    | [split](http://python-reference.readthedocs.io/en/latest/docs/str/split.html)               | `df['city'] = val.split('P')[0]`                                                                           |\n| 10 | 聚合    | Pandas - [groupby](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html)             | `data.groupby(key)['PM_US_Post'].mean().plot(kind = 'bar', color = color)` ",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

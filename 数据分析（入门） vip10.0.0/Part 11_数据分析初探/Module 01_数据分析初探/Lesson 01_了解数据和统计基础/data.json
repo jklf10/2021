@@ -1,0 +1,534 @@
+{
+  "data": {
+    "lesson": {
+      "id": 627420,
+      "key": "2a71259e-6a0a-443e-9263-f41100645ed1",
+      "title": "了解数据和统计基础",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "轻松掌握我们周围世界里的四大数据类型：离散、连续、定类和定序，为数据清理和可视化做好准备",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/2a71259e-6a0a-443e-9263-f41100645ed1/627420/1544461441679/%E4%BA%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/2a71259e-6a0a-443e-9263-f41100645ed1/627420/1544461439002/%E4%BA%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%9F%E8%AE%A1%E5%9F%BA%E7%A1%80+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 390347,
+          "key": "1d387d04-6a7e-4e64-ae4b-b6cfec02d784",
+          "title": "数据是什么？它为什么如此重要？",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1d387d04-6a7e-4e64-ae4b-b6cfec02d784",
+            "completed_at": "2018-07-01T16:32:18.623Z",
+            "last_viewed_at": "2019-12-08T13:20:19.575Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390052,
+              "key": "184db80e-8844-431e-82b7-4df89fcca793",
+              "title": "数据是什么？",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ldTDAjrVsA8",
+                "china_cdn_id": "ldTDAjrVsA8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 390348,
+          "key": "1e8291d3-0c73-4a80-aba3-301f9394075d",
+          "title": "数据类型（数值数据与分类数据）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1e8291d3-0c73-4a80-aba3-301f9394075d",
+            "completed_at": "2018-07-01T16:33:38.130Z",
+            "last_viewed_at": "2019-12-08T13:21:24.238Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390053,
+              "key": "02ebe83a-97bf-48d7-9cb8-09fe65c4c54f",
+              "title": "数据类型",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "gT6EYlsLZkE",
+                "china_cdn_id": "gT6EYlsLZkE.mp4"
+              }
+            },
+            {
+              "id": 390054,
+              "key": "4f3a54b6-32ff-4a43-abfa-3f239329575d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 数据类型\t\t\n   在此视频中，我们将介绍两种数据类型：**数值数据**和**分类数据**。\t\t\n    **数值**数据采用允许我们执行数学运算（例如计算狗的数量）的数值。\t\t\n    **分类**数据用于标记一个群体或一组条目（例如狗的品种 —— 牧羊犬、拉布拉多、贵宾犬等）。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 390349,
+          "key": "62e117b6-68fb-4e35-ab97-76a2464534b8",
+          "title": "练习：数据类型（数值与分类）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "62e117b6-68fb-4e35-ab97-76a2464534b8",
+            "completed_at": "2018-07-01T16:35:21.645Z",
+            "last_viewed_at": "2019-12-08T13:26:54.578Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390055,
+              "key": "a6c4a10f-e3b2-4aec-a09c-2bb4681fb6be",
+              "title": "数据类型",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a6c4a10f-e3b2-4aec-a09c-2bb4681fb6be",
+                "completed_at": "2018-07-01T16:36:22.866Z",
+                "last_viewed_at": "2019-02-12T15:00:17.031Z",
+                "unstructured": "{\"answer_ids\":[\"a1496955584977\",\"a1496955489459\",\"a1496955466163\",\"a1496955462033\",\"a1496955818526\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请确定下面的数据类型为**数值**还是**分类**？\n\n（请将下列标签 **拖拽** 到 **数据类型** 一列对应的空行中去。）"
+                },
+                "concepts_label": "变量",
+                "answers_label": "数据类型",
+                "concepts": [
+                  {
+                    "text": "邮政编码",
+                    "correct_answer": {
+                      "id": "a1496955462033",
+                      "text": "分类"
+                    }
+                  },
+                  {
+                    "text": "年龄",
+                    "correct_answer": {
+                      "id": "a1496955466163",
+                      "text": "数值"
+                    }
+                  },
+                  {
+                    "text": " 收入",
+                    "correct_answer": {
+                      "id": "a1496955489459",
+                      "text": "数值"
+                    }
+                  },
+                  {
+                    "text": "婚姻状况（单身、已婚、离婚等）",
+                    "correct_answer": {
+                      "id": "a1496955584977",
+                      "text": "分类"
+                    }
+                  },
+                  {
+                    "text": "身高",
+                    "correct_answer": {
+                      "id": "a1496955818526",
+                      "text": "数值"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1496955818526",
+                    "text": "数值"
+                  },
+                  {
+                    "id": "a1496955466163",
+                    "text": "数值"
+                  },
+                  {
+                    "id": "a1496955462033",
+                    "text": "分类"
+                  },
+                  {
+                    "id": "a1496955584977",
+                    "text": "分类"
+                  },
+                  {
+                    "id": "a1496955489459",
+                    "text": "数值"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 390056,
+              "key": "fa7a2dc4-2213-47d1-91c7-81b27035099f",
+              "title": "数据类型",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "fa7a2dc4-2213-47d1-91c7-81b27035099f",
+                "completed_at": "2018-07-01T16:37:05.201Z",
+                "last_viewed_at": "2019-02-12T15:01:04.898Z",
+                "unstructured": "{\"answer_ids\":[\"a1496953058480\",\"a1496953080455\",\"a1496952913957\",\"a1496952924657\",\"a1496953132304\"],\"is_correct\":true}"
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "请确定下面的数据类型为**数值**还是**分类**？"
+                },
+                "concepts_label": "变量",
+                "answers_label": "数据类型",
+                "concepts": [
+                  {
+                    "text": "字母成绩等级（A+、A、A-、B+、B、B-…）",
+                    "correct_answer": {
+                      "id": "a1496952913957",
+                      "text": "分类"
+                    }
+                  },
+                  {
+                    "text": "上班通勤距离\t",
+                    "correct_answer": {
+                      "id": "a1496952924657",
+                      "text": "数值"
+                    }
+                  },
+                  {
+                    "text": "调查评分（差、好、很好）",
+                    "correct_answer": {
+                      "id": "a1496953058480",
+                      "text": "分类"
+                    }
+                  },
+                  {
+                    "text": "温度",
+                    "correct_answer": {
+                      "id": "a1496953080455",
+                      "text": "数值"
+                    }
+                  },
+                  {
+                    "text": "平均速度",
+                    "correct_answer": {
+                      "id": "a1496953132304",
+                      "text": "数值"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1496952924657",
+                    "text": "数值"
+                  },
+                  {
+                    "id": "a1496952913957",
+                    "text": "分类"
+                  },
+                  {
+                    "id": "a1496953058480",
+                    "text": "分类"
+                  },
+                  {
+                    "id": "a1496953132304",
+                    "text": "数值"
+                  },
+                  {
+                    "id": "a1496953080455",
+                    "text": "数值"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 390341,
+          "key": "46136f8d-eede-4142-9189-2cbbb274cd9e",
+          "title": "数据类型（定序与定类）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "46136f8d-eede-4142-9189-2cbbb274cd9e",
+            "completed_at": "2018-07-01T16:37:08.447Z",
+            "last_viewed_at": "2019-12-08T13:42:44.255Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390048,
+              "key": "4989311b-ccf5-4227-95d3-f2aa0d5d2060",
+              "title": "分类定序与分类定类",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "k5bLaPGY2Vw",
+                "china_cdn_id": "k5bLaPGY2Vw.mp4"
+              }
+            },
+            {
+              "id": 390049,
+              "key": "b63c7063-2e56-4037-854e-a38a5a4ab5e5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 分类定序与分类定类\t\n\t\n 我们可以进一步将分类数据分为两类: **定序**与**定类**。\t\t\n         \n **分类定序**数据有排名顺序（例如与狗的互动从`很差`到`很好`排序）。\t\n\t\n  **分类定类**数据没有排序或排名（如狗的品种）。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 390350,
+          "key": "e2eac2d6-8cb3-461b-90f5-cf4cec51225b",
+          "title": "练习：数据类型（有序分类与无序分类）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e2eac2d6-8cb3-461b-90f5-cf4cec51225b",
+            "completed_at": "2018-07-01T16:42:48.336Z",
+            "last_viewed_at": "2019-12-08T13:43:35.576Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390059,
+              "key": "9a4ce5a0-4840-45a0-9fe3-556f3937a096",
+              "title": "有序分类与无序分类",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9a4ce5a0-4840-45a0-9fe3-556f3937a096",
+                "completed_at": "2018-07-01T16:43:29.005Z",
+                "last_viewed_at": "2019-02-12T15:07:22.399Z",
+                "unstructured": "{\"selected_ids\":[\"a1496953621628\",\"a1496953649715\",\"a1496953806011\",\"a1496953815750\",\"a1496953839645\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "这个小练习旨在确保你清楚理解了有序分类与无序分类两者之间的差异。以下变量全部为分类变量。你的任务是**勾选**所有**无序分类**变量，不要勾选有序分类变量。",
+                "answers": [
+                  {
+                    "id": "a1496953369203",
+                    "text": "字母成绩等级（A、B+、B、B- 等）",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1496953621628",
+                    "text": "水果类型（苹果、香蕉等）",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1496953632514",
+                    "text": "调查评级（差、好、很好）",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1496953649715",
+                    "text": "狗品种类型（德国牧羊犬、柯利牧羊犬等）",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1496953806011",
+                    "text": "电影类型（恐怖、喜剧等）",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1496953815750",
+                    "text": "性别",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1496953839645",
+                    "text": "国籍",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1496953842870",
+                    "text": "教育（高中、副学士、学士、硕士、博士等）",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 390346,
+          "key": "00e6bb8d-5d86-4529-9fb4-69dee09c9eb2",
+          "title": "数据类型（连续与离散）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "00e6bb8d-5d86-4529-9fb4-69dee09c9eb2",
+            "completed_at": "2018-07-01T16:38:12.961Z",
+            "last_viewed_at": "2019-12-08T13:38:40.010Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390050,
+              "key": "7f1cb965-4f33-4b82-8b5f-7b4340a61c08",
+              "title": "连续与离散数据",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "BzgZebZD9kk",
+                "china_cdn_id": "BzgZebZD9kk.mp4"
+              }
+            },
+            {
+              "id": 390051,
+              "key": "5d930e88-254e-4b80-b8a7-bb70610a267c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 连续与离散数据\t\t\n \n我们可以将数值数据视为**连续**或**离散**的。\t\t\n\n **连续**数据可以分为更小的单位，并且仍然存在更小的单位。一个例子就是狗的年龄 - 我们可以以年、月、日、小时、秒为单位测量年龄，但是仍然存在可以与年龄关联的更小单位。\t\t\n \n**离散**数据仅采用可数值。我们互动的狗的数量就是离散数据类型的一个例子。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 390352,
+          "key": "f418cdd6-4ae0-4837-a967-9a32f9f144a4",
+          "title": "练习：数据类型（离散与连续）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f418cdd6-4ae0-4837-a967-9a32f9f144a4",
+            "completed_at": "2018-07-01T16:43:40.478Z",
+            "last_viewed_at": "2019-12-08T13:44:16.107Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390060,
+              "key": "46f06a2f-5457-454c-8866-020af1ac7149",
+              "title": "离散与连续",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "46f06a2f-5457-454c-8866-020af1ac7149",
+                "completed_at": "2018-07-01T16:44:10.366Z",
+                "last_viewed_at": "2019-02-12T15:11:15.949Z",
+                "unstructured": "{\"selected_ids\":[\"a1499390316881\",\"a1499390505291\",\"a1499390518353\",\"a1499390534434\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "此练习旨在确保你清楚地了解数值变量中连续型变量与离散型变量之间的差别。以下全部为数值变量。你的任务是**勾选**所有**连续**变量，不要勾选离散变量。",
+                "answers": [
+                  {
+                    "id": "a1499390316881",
+                    "text": "工作通勤距离",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1499390496589",
+                    "text": "书中的页数",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1499390505291",
+                    "text": "一年中的降雨量",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1499390518353",
+                    "text": "跑完一公里的时间",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1499390524524",
+                    "text": "一周内观看的电影数",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1499390534434",
+                    "text": "一天消耗的水量",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1499390546070",
+                    "text": "你买过的手机数量",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 390351,
+          "key": "79afce77-b9da-4e0f-bba5-f35f05b8c730",
+          "title": "数据类型总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79afce77-b9da-4e0f-bba5-f35f05b8c730",
+            "completed_at": "2018-07-01T16:39:24.075Z",
+            "last_viewed_at": "2019-12-08T13:39:37.910Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 390057,
+              "key": "25ae8050-555a-4fc5-b477-906c9144ebc6",
+              "title": "数据类型总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "T-KrQoAJUpI",
+                "china_cdn_id": "T-KrQoAJUpI.mp4"
+              }
+            },
+            {
+              "id": 390058,
+              "key": "e0c07766-081a-4e82-a1c6-c6cedb7a35d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 概括\n\t\t\n下表总结了我们的数据类型。\n\n | **数据类型**  |   | | \t\t\n          |---|---|---|\t\t\n          |  **数值:** | **连续**  | **离散**  | \t\t\n          |   | 身高、年龄、收入  | 书中的页数、院子里的树、咖啡店里的狗  |\t\t\n          |   |   |   | \t\t\n          | **分类:**  | **定序**  |  **定类** | \t\t\n          |   | 字母成绩等级、调查评级  | 性别、婚姻状况、早餐食品  |\n以下是上表中分享的信息的一些细节。\n要扩展表中的信息，你可以查看以下文本。\n\n# 换个角度看\n\n要分解我们的数据类型，主要有两大块:\t\n\t\n **数值**和**分类**\t\t\n         \n **数值**可以进一步分为`连续`与`离散`。\t\t\n         \n **分类**数据可以分为`定序`与`定类`。 \t\t\n          \n你现在应该已经掌握了我们周围世界里的哪种数据属于这四大类：离散、连续、定类和定序。在后面的小节，我们将详细介绍与数值变量有关的数值总结。\n________\n\n# 数值与分类\t\t\n\n其中一些可能有点棘手 —— 虽然邮政编码是一个数字，但它们并非数值变量。如果我们将两个邮政编码加在一起，并不会从得到的新值中获得任何有用的信息。因此，这是一个分类变量。 \t\t\n       \n**身高**、**年龄**、**书中的页数**和**年收入**采用的值我们可以进行加、减和执行其他运算，来获得有用的见解。因此，这些是`数值`数据。  \t\t\n          \n**性别**、**字母成绩等级**、**早餐类型**、**婚姻状态**和**邮政编码**可以视为一组物品或个人的标签。因此，它们是`分类`数据。\n\n_____________________\n\n# 连续和离散\t\t\n \n要区分我们的数据是连续还是离散的，要看我们是否能将数据分割成更小的单元。想想时间 —— 我们可以用年、月、日、小时、分钟或秒来衡量一个事件，甚至是在秒级，我们知道仍然有更小的单位可以用来衡量时间。因此，我们知道此数据类型为连续的。**身高**、**年龄**和**收入**都是`连续数据`的例子。或者，我们知道**书中的页数**、**我数的咖啡店外的狗数量**或**院子里的树**为`离散数据`。我们可不想将狗一分为二。\n______________\n\n # 定序与定类\t\t\n\n在看定类变量时，我们发现**性别**、**婚姻状态**、**邮政编码**和**早餐食品**为`定类变量`，这种类型的数据没有相关的顺序排列。无论你早餐吃麦片粥、吐司、鸡蛋还是只喝咖啡，它并没有相关的排序。\t\t\n           \t\t\n相反，**字母成绩等级**或**调查评级**作为`定序数据`具有关联的排序。如果获得 A，它高于 A-。A- 的排名高于 B+，以此类推……定序变量在评级量表上很常见。在很多情况下，我们将这些定序变量变为数字，这样可以更容易地进行分析，稍后我们再详细说明这一点！\n__________________\n\n# 总结\t\t\n         \n在本节中，我们研究了我们会在生活中使用的不同数据类型。当我们在现实生活中使用数据时，它可能不是很干净，有时会有错字或值缺失。在这种情况下，拥有数据方面的专业知识并了解数据类型可以帮助我们清理数据。理解数据类型也可以帮助我们创建可视化来解释数据。稍后详细说明这点！",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
