@@ -1,0 +1,570 @@
+{
+  "data": {
+    "lesson": {
+      "id": 514000,
+      "key": "83e1385b-1435-44d1-99fc-1c7f46480159",
+      "title": "Github个人资料的建立及完善",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "GitHub是目前全世界范围内最广泛使用的代码托管平台，且普及度也在不断提高。通过本节内容，你将了解：\n1）GitHub的重要性；\n2）为什么要使用GitHub？\n3）如何创建及优化你的GitHub个人资料。\n",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/83e1385b-1435-44d1-99fc-1c7f46480159/514000/1544199131914/Github%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E7%9A%84%E5%BB%BA%E7%AB%8B%E5%8F%8A%E5%AE%8C%E5%96%84+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/83e1385b-1435-44d1-99fc-1c7f46480159/514000/1544199126120/Github%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E7%9A%84%E5%BB%BA%E7%AB%8B%E5%8F%8A%E5%AE%8C%E5%96%84+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 551889,
+          "key": "5c104c55-112b-4047-8157-45e9017bd9b4",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5c104c55-112b-4047-8157-45e9017bd9b4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 551890,
+              "key": "17103066-eaa6-4848-933b-35a0d22d02ca",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/February/5a8e8524_shutterstock-696061426/shutterstock-696061426.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/17103066-eaa6-4848-933b-35a0d22d02ca",
+              "caption": "",
+              "alt": "",
+              "width": 1000,
+              "height": 667,
+              "instructor_notes": null
+            },
+            {
+              "id": 551891,
+              "key": "fa8467d8-7946-42a3-afff-593532565fcd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "GitHub是目前全世界范围内最广泛使用的开源和私有软件项目托管平台，逐步成为广大开发者管理项目和发掘既有代码的首选平台。随着它普及度的不断提升，一个活跃的GitHub个人档案在求职中也起着越来越重要的参考作用，企业雇主也开始通过GitHub的代码活跃度及贡献情况来评估候选人的编程能力，尤其是针对应聘技术类职位的候选者。\n\n在这部分课程中，你将学习如何创建及改进你的GitHub个人档案，给社群内的参与者和潜在的企业雇主留下深刻的印象。\n<ol>\n<li>GitHub个人资料的重要事项</li>\n<li>如何与他人进行协作</li>\n<li>积累项目经验丰富个人“作品集”</li>\n</ol>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 514003,
+          "key": "209d5e80-f7c7-4f71-9e86-991a992231b0",
+          "title": "Github个人资料的重要事项",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "209d5e80-f7c7-4f71-9e86-991a992231b0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 514004,
+              "key": "e2a71bd3-fd81-4216-834a-11987c017416",
+              "title": "GitHub profile important items",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "<font size=4>**一个好的GitHub个人档案所需要具备的元素有：**</font>\n<ul>\n<li>个人肖像 （推荐使用）；</li>\n<li>个人信息：让GitHub社区的使用者更好地了解你；</li>\n<li>贡献的代码库：个人的成果展示；</li>\n<li>贡献图表：展示在GitHub社区的活跃度。</li>",
+              "video": {
+                "youtube_id": "prvPVTjVkwQ",
+                "china_cdn_id": "prvPVTjVkwQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 150025,
+          "key": "58315398190923",
+          "title": "出色的 GitHub 代码库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "58315398190923",
+            "completed_at": "2019-03-25T12:44:37.223Z",
+            "last_viewed_at": "2020-04-28T09:13:17.244Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 148817,
+              "key": "5831539819",
+              "title": "出色的 GitHub 代码库",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "qBi8Q1EJdfQ",
+                "china_cdn_id": "qBi8Q1EJdfQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 514006,
+          "key": "9ce47aaa-1e9d-4c45-b45b-c1d8f159bccf",
+          "title": "第一部分：用人经理如何看待GitHub",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9ce47aaa-1e9d-4c45-b45b-c1d8f159bccf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 514007,
+              "key": "1253042e-1888-4ceb-97c8-2790e2d460f7",
+              "title": "用人经理如何看GitHub - 第 1 部分",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ClLYamtaO-Q",
+                "china_cdn_id": "ClLYamtaO-Q.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 150026,
+          "key": "64958716790923",
+          "title": "快速优化 #1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "64958716790923",
+            "completed_at": "2019-03-25T12:51:05.842Z",
+            "last_viewed_at": "2020-04-28T09:13:59.238Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 148819,
+              "key": "6495871679",
+              "title": "快速修复",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "Lb9e2KemR6I",
+                "china_cdn_id": "Lb9e2KemR6I.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 514008,
+          "key": "45dc998a-b926-49a2-9e78-eeb2157b6a05",
+          "title": "快速修改你的资料",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "45dc998a-b926-49a2-9e78-eeb2157b6a05",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 514332,
+              "key": "c8cd4694-a3f6-403f-a1be-86691436ec5e",
+              "title": "Untitled",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "你可以使用这个[检查表](https://s3.cn-north-1.amazonaws.com.cn/static-documents/career_projects/GitHub%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E6%B8%85%E5%8D%95.pdf)来对照检查你的修正进度。",
+              "video": {
+                "youtube_id": "It6AEuSDQw0",
+                "china_cdn_id": "It6AEuSDQw0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 150027,
+          "key": "65214390560923",
+          "title": "编写 README",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "65214390560923",
+            "completed_at": "2019-03-25T12:52:44.877Z",
+            "last_viewed_at": "2020-04-28T09:14:30.427Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 148821,
+              "key": "6521439056",
+              "title": "如何编写README",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "注释：[编写 README 教程](https://classroom.udacity.com/courses/ud777)",
+              "video": {
+                "youtube_id": "DQEfT2Zq5_o",
+                "china_cdn_id": "DQEfT2Zq5_o.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 514009,
+          "key": "43af82e9-2e3d-43f4-b5b2-2ba20dab054a",
+          "title": "第二部分：用人经理如何看待GitHub",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43af82e9-2e3d-43f4-b5b2-2ba20dab054a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 514010,
+              "key": "70d76829-0bc1-474b-b333-bd8527fb9a59",
+              "title": "用人经理如何看GitHub - 第 2 部分",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Vvzl2J5K7-Y",
+                "china_cdn_id": "Vvzl2J5K7-Y.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 150030,
+          "key": "65265285770923",
+          "title": "提交 Commit 最佳做法",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "65265285770923",
+            "completed_at": "2019-03-25T12:55:01.960Z",
+            "last_viewed_at": "2020-04-28T09:15:00.631Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 148823,
+              "key": "6526528577",
+              "title": "提交说明最佳做法",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "正如 Art 所说，提交说明（commit messages）对于解释你为什么要这样修改代码至关重要。它不仅供你的同事或协作者查看，还供你自己将来查看。下面我们来看看编写提交说明的一些最佳做法。\n\n下面是我们在优达学城使用的说明格式。你可以在[这里](https://s3.cn-north-1.amazonaws.com.cn/static-documents/career_projects/Git+%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E6%A0%B7%E5%BC%8F%E6%8C%87%E5%8D%97.pdf)找到它以供将来参考。\n\n<pre>\n类型：主题\n\n正文\n\n脚注\n</pre>\n\n第一行是主题。它应该简要说明更改的内容。不建议使用“修复”或“执行了某些操作”这类字眼，主题需要清楚、信息丰富，并努力避免使用亵渎语言。主题不应超过 50 个字符，首字母大写，不以句点结尾。在优达学城，如果提交的类型是错误修复、功能、文档更改等，我们还会包含有关提交类型的简短注释。\n\n接下来是正文，更详细地描述你进行更改的原因。正文每行通常包含 72 个字符左右。这是为了确保在命令行上使用 git 时，提交说明能够在终端窗口中显示出来。你还需要确保主题和正文之间有一个空行。当需要创建列表时，也可以使用星号或短横线添加项目符号。\n\n有些提交的说明中不需要正文。例如，如果更正一个拼写错误，可以只有一个主题行。\n\n还可以包含脚注，这通常用于指示此提交解决哪些问题或错误。\n\n更详实的示例类似下面这样：\n\n<pre>功能：用 50 个或更少字符总结改动\n\n如有必要，提供更详细的阐释文本。将其限制在 72 个字符左右。有些情况下，第一行被视为提交的主题，其余文本被视为正文。将摘要与正文分隔开的空行至关重要（除非你完全省略正文）；如果不分隔摘要和正文，“log”、“shortlog”和“rebase”等工具可能不知所措。\n\n解释此次提交要解决的问题。重点是为什么要进行此次改动而不是如何改动（代码会说明这一点）。此次改动是否有任何副作用或其他不太直观的后果？可在此处解释这些方面。\n\n空行后面可以有更多段落。\n\n - 还可以使用项目符号分项列出\n\n - 通常使用连字符或星号作为项目符号，前面有一个空格，中间是一些空行，但惯例不尽相同\n\n如果你使用问题跟踪器，请在底部提供对问题的引用，\n例如：\n\n解决：# 123\n另请参见：# 456、# 789\n</pre>\n\n这也有例外。如果你从事的是一个开源项目，请务必遵守该项目的说明格式。这会让维护者的工作更轻松，并增加你的合并请求被接受的机会。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 150031,
+          "key": "64804050710923",
+          "title": "反思你的提交说明",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "64804050710923",
+            "completed_at": "2019-03-25T12:56:24.666Z",
+            "last_viewed_at": "2020-04-28T09:15:12.622Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 148824,
+              "key": "6480405071",
+              "title": "反思你的提交说明",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "6480405071",
+                "completed_at": "2019-03-25T12:56:52.273Z",
+                "last_viewed_at": "2019-08-08T17:06:41.077Z",
+                "unstructured": "{\"check1\":true}"
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "_0AHmKkfjTo",
+                  "china_cdn_id": "_0AHmKkfjTo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "练习",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/IN5J0B8grDh1inHvwd1tXgIj07Qfsz9y5xrLEWpH5DcdrSWt4M2fVxs5QyM4zUCsneFZ-NEGCgauOj1DsU0=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6480405071",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "6499079068",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.2653717269326683,
+                      "y": 0.26274944567627495
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": null,
+                  "china_cdn_id": "undefined.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 514011,
+          "key": "d0b1654c-5337-4ae4-a451-3350fcfea50c",
+          "title": "参与开源项目之一",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d0b1654c-5337-4ae4-a451-3350fcfea50c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 514012,
+              "key": "f84a9dd9-3aab-4893-86c7-d279f8cbd8e0",
+              "title": "Participating in open source projects",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OxL-gMTizUA",
+                "china_cdn_id": "OxL-gMTizUA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 514013,
+          "key": "7ffb20f9-b57d-4b47-91f4-4f6d31f6b0df",
+          "title": "第三部分：用人经理如何看待GitHub",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7ffb20f9-b57d-4b47-91f4-4f6d31f6b0df",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 514014,
+              "key": "1f2cb76e-ef3b-4a02-be3a-1256fc2e8013",
+              "title": "用人经理如何看GitHub - 第 3 部分",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "M6PKr3S1rPg",
+                "china_cdn_id": "M6PKr3S1rPg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 514015,
+          "key": "0d490cba-8246-4aec-95e8-41686733d7f8",
+          "title": "参与开源项目之二",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0d490cba-8246-4aec-95e8-41686733d7f8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 514016,
+              "key": "882bb2e6-784a-469d-9e1e-95ac8f42da1c",
+              "title": "Participating in open source projects 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "elZCLxVvJrY",
+                "china_cdn_id": "elZCLxVvJrY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 150035,
+          "key": "64858046490923",
+          "title": "关注代码库",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "64858046490923",
+            "completed_at": "2019-03-25T13:01:01.261Z",
+            "last_viewed_at": "2020-04-28T09:16:09.017Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 148828,
+              "key": "6485804649",
+              "title": "关注代码库",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "6485804649",
+                "completed_at": "2019-03-25T13:01:59.508Z",
+                "last_viewed_at": "2019-03-25T13:01:59.526Z",
+                "unstructured": "{\"check1\":true}"
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "U3FUxkm1MxI",
+                  "china_cdn_id": "U3FUxkm1MxI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "名称",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/wQxDLhQdVQD89L8xR27DO5rFjUHPePGeUebiFSnyyvSe4luac07WQ8qGDNCl6V3bjBbskYhRpo0YKcTiblnB=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6485804649",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "6551597473",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.24275249376558602,
+                      "y": 0.17648281596452328
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ZwMY5rAAd7Q",
+                  "china_cdn_id": "ZwMY5rAAd7Q.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 551892,
+          "key": "f00c053f-0bc1-493d-86dd-210796a84596",
+          "title": "结尾",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f00c053f-0bc1-493d-86dd-210796a84596",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 551895,
+              "key": "f3038ac6-7af1-4cca-b9ec-4c81f80481e3",
+              "title": "结尾",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "dps7Ti6Lado",
+                "china_cdn_id": "dps7Ti6Lado.mp4"
+              }
+            },
+            {
+              "id": 551893,
+              "key": "931c729c-b2cf-4cdf-ace8-f25d587de234",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "恭喜！你已经了解了一个好的GitHub个人档案所需具备的所有元素。为了进一步丰富你的GitHub档案，下一步你需要做的是： \n<ul>\n<li>如果你是GitHub使用新手，请进一步浏览\"使用Git和GitHub进行版本控制\"的课程内容；</li>\n<li>如果你已经能娴熟地使用GitHub了，祝贺你，你可以直接进入“检验心理学现象”的课程内容开始下一步的课程学习了！</li>\n</ul>\n\n请继续完善你的GitHub个人档案，并利用GitHub提交之后数据分析的项目来丰富你的代码库，你的持续更新将会为之后的GitHub个人档案实践项目打下坚实的基础。 接下来，请根据你的实际情况，继续学习吧！\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

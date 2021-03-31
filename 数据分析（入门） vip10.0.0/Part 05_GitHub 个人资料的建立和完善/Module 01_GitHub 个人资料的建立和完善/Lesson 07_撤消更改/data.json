@@ -1,0 +1,592 @@
+{
+  "data": {
+    "lesson": {
+      "id": 339109,
+      "key": "f02167ad-3ba7-40e0-a157-e5320a5b0dc8",
+      "title": "撤消更改",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "救命啊！出现故障了！但是不用担心，因为项目已经处于版本控制下了！你将学习如何撤消和修改保存到仓库中的更改。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/339109/1547629873980/%E6%92%A4%E6%B6%88%E6%9B%B4%E6%94%B9+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/f02167ad-3ba7-40e0-a157-e5320a5b0dc8/339109/1547629871914/%E6%92%A4%E6%B6%88%E6%9B%B4%E6%94%B9+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 339092,
+          "key": "50740c4a-054c-46da-910a-8d1344b18d33",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "50740c4a-054c-46da-910a-8d1344b18d33",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 338928,
+              "key": "b3d98ae1-70ba-4c81-b7c0-80ba9a86f4ec",
+              "title": "撤消更改",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Kfi7l41wUVc",
+                "china_cdn_id": "Kfi7l41wUVc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 339093,
+          "key": "e176503b-3eae-4b22-a1b3-2953bab3d5e5",
+          "title": "更改最后一个 commit",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e176503b-3eae-4b22-a1b3-2953bab3d5e5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 338929,
+              "key": "e7b6ae7b-f7b0-4709-8ff1-32bca403eaf3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 更改最后一个 commit\n\n你已经使用 `git commit` 命令提交了大量的 commit。现在，借助 `--amend` 选项，你可以更改最近的 commit。\n\n```bash\n$ git commit --amend\n```\n\n如果你的工作目录没有内容（也就是仓库中没有任何未 commit 的更改），那么运行 `git commit --amend` 将使你能够重新提供 commit 消息。代码编辑器将打开，并显示原始 commit 消息。只需纠正拼错的单词或重新表述即可！然后保存文件并关闭编辑器，以便采用新的 commit 消息。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338930,
+              "key": "1e7f5cd9-1931-4aa4-bba9-f26c4f13eaae",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 向 commit 中添加忘记的文件\n\n此外，`git commit --amend` 使你能够包含忘记包含的文件（或文件更改）。假设你更新了整个网站的导航链接颜色。commit 了该更改，并以为完事了。但是后来发现深藏在页面上的一个特殊导航链接没有新的颜色。你可以执行新的 commit 并更新该链接的颜色，但是这样就会出现两个 commit 执行完全相同的任务（更改链接颜色）。\n\n相反，你可以修改最后一个 commit（更新所有其他链接颜色的 commit）以包含这个忘记的链接。要包含忘记的链接，只需：\n* 编辑文件\n* 保存文件\n* 暂存文件\n* 运行 `git commit --amend`\n\n你对必要的 CSS 和/或 HTML 文件作出了更改，以便修正被遗忘的链接样式，然后保存所有被修改的文件，并使用 `git add` 暂存所有被修改的文件（就像要提交新的 commit 那样！），但是你可以运行 `git commit --amend` 来更新最近的 commit，而不是创建新的 commit。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 339094,
+          "key": "2e4b1c76-466d-494d-959c-a1f2aef5c7f7",
+          "title": "还原 commit",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2e4b1c76-466d-494d-959c-a1f2aef5c7f7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 338931,
+              "key": "93d715f5-9d6d-4c0a-a3c8-a9b239dad9a5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "##  什么是还原？\n\n当你告诉 git **还原（revert）** 具体的 commit 时，git 会执行和 commit 中的更改完全相反的更改。我们详细讲解下。假设 commit A 添加了一个字符，如果 git **还原** commit A，那么 git 将创建一个新的 commit，并删掉该字符。如果删掉了一个字符，那么还原该 commit 将把该内容添加回来！\n\n上节课最后讲解了合并冲突，并通过将标题设为 `Adventurous Quest` 解决了该冲突。假设现在仓库中有个 commit 将标题改为 `Quests & Crusades`。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338932,
+              "key": "f6eebf34-1af6-476e-bc3e-c39cbd6d745d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/February/58a4de9e_ud123-l6-git-revert-prep/ud123-l6-git-revert-prep.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f6eebf34-1af6-476e-bc3e-c39cbd6d745d",
+              "caption": "_终端显示了仓库日志。最近的 commit 将标题从\"Adventurous Quest\"改成了\"Quests & Crusades\"。_",
+              "alt": "",
+              "width": 1172,
+              "height": 632,
+              "instructor_notes": null
+            },
+            {
+              "id": 338933,
+              "key": "5733df47-0335-47c1-a8f3-2f8f25c62d71",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": " ## `git revert` 命令\n\n现在我创建了一个包含一些更改的 commit，我可以使用 `git revert` 命令还原它\n\n```bash\n$ git revert <SHA-of-commit-to-revert>\n```\n\n因为最近的 commit 的 SHA 是 `db7e87a`，要还原该 commit：\n我需要运行 `git revert db7e87a`（随即弹出代码编辑器，以便编辑/确认提供的 commit 消息）\n\n我将获得以下输出结果：",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338934,
+              "key": "0bd442e8-61de-4f42-a964-28f74871b666",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/February/58a4dedb_ud123-l6-git-revert-post/ud123-l6-git-revert-post.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0bd442e8-61de-4f42-a964-28f74871b666",
+              "caption": "_终端显示了还原 commit 操作的输出结果。输出结果显示了被还原的 commit 中的提交说明。它还新建了一个 commit 来记录这一更改。_",
+              "alt": "",
+              "width": 1172,
+              "height": 400,
+              "instructor_notes": null
+            },
+            {
+              "id": 338935,
+              "key": "fddaf43b-6ac5-490a-bf0d-5c8e3af9449c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你看到 `git revert` 命令的输出结果是如何告诉我们它还原了什么吗？它输出了我要求它还原的 commit 的提交说明。同时值得注意的是，它创建了新的 commit。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338936,
+              "key": "d7a2ad6f-d634-44f0-bd46-09259c3dc522",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## revert 小结\n\n总结下，`git revert` 命令用于还原之前创建的 commit：\n\n```bash\n$ git revert <SHA-of-commit-to-revert>\n```\n\n此命令：\n* 将撤消目标 commit 所做出的更改\n* 创建一个新的 commit 来记录这一更改\n\n### 深入研究\n* [git-revert](https://git-scm.com/docs/git-revert) git 文档 (**英**)\n* [git revert](https://www.atlassian.com/git/tutorials/undoing-changes) Atlassian 教程 (**英**)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 339095,
+          "key": "fed81eb7-49b4-4129-9f6b-8201e0796fd8",
+          "title": "重置 commit",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fed81eb7-49b4-4129-9f6b-8201e0796fd8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 338937,
+              "key": "03354b5e-a36f-4344-8141-c8f40d37a57a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 重置与还原\n\n初看，**重置（reset）** 似乎和 **还原（revert）** 相似，但它们实际上差别很大。还原会创建一个新的 commit，并还原或撤消之前的 commit。但是重置会清除 commit！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338938,
+              "key": "a0201847-a8d5-4df3-9c54-3b6344a4e615",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## ⚠️ 重置很危险 ⚠️\n\n > 一定要谨慎使用 git 的重置功能。这是少数几个可以从仓库中清除 commit 的命令。如果某个 commit 不再存在于仓库中，它所包含的内容也会消失。\n\n > 为了减轻你的压力，澄清下，git 会在完全清除任何内容之前，持续跟踪大约 30 天。要调用这些内容，你需要使用 `git reflog` 命令。请参阅以下链接以了解详情：\n\n> * [git-reflog (英)](https://git-scm.com/docs/git-reflog)\n* [重写历史记录 (英)](https://www.atlassian.com/git/tutorials/rewriting-history)\n* [reflog，你的安全屏障 (英)](http://gitready.com/intermediate/2009/02/09/reflog-your-safety-net.html)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338939,
+              "key": "81991f8d-5c18-458b-9ece-14532b613cf2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 相关 commit 引用\n\n你已经知道可以使用 SHA、标签、分支和特殊的 `HEAD` 指针引用 commit。有时候这些并不足够，你可能需要引用相对于另一个 commit 的 commit。例如，有时候你需要告诉 git 调用当前 commit 的前一个 commit，或者是前两个 commit。我们可以使用特殊的“祖先引用”字符来告诉 git 这些相对引用。这些字符为：\n* `^` – 表示父 commit\n* `~` – 表示第一个父 commit\n\n我们可以通过以下方式引用之前的 commit：\n* 父 commit – 以下内容表示当前 commit 的父 commit\n* HEAD^\n* HEAD~\n* HEAD~1\n* 祖父 commit – 以下内容表示当前 commit 的祖父 commit\n* HEAD^^\n* HEAD~2\n* 曾祖父 commit – 以下内容表示当前 commit 的曾祖父 commit\n* HEAD^^^\n* HEAD~3\n\n`^` 和 `~` 的区别主要体现在通过合并而创建的 commit 中。合并 commit 具有两个父级。对于合并 commit，`^` 引用用来表示第一个父 commit，而 `^2` 表示第二个父 commit。第一个父 commit 是当你运行 `git merge` 时所处的分支，而第二个父 commit 是被合并的分支。\n\n我们来看一个示例，这样更好理解。这是我的 `git log` 当前的显示结果：\n\n\n```bash\n* 9ec05ca (HEAD -> master) Revert \"Set page heading to \"Quests & Crusades\"\"\n* db7e87a Set page heading to \"Quests & Crusades\"\n*   796ddb0 Merge branch 'heading-update'\n|\\  \n| * 4c9749e (heading-update) Set page heading to \"Crusade\"\n* | 0c5975a Set page heading to \"Quest\"\n|/  \n*   1a56a81 Merge branch 'sidebar'\n|\\  \n| * f69811c (sidebar) Update sidebar with favorite movie\n| * e6c65a6 Add new sidebar content\n* | e014d91 (footer) Add links to social media\n* | 209752a Improve site heading for SEO\n* | 3772ab1 Set background color for page\n|/  \n* 5bfe5e7 Add starting HTML structure\n* 6fa5f34 Add .gitignore file\n* a879849 Add header to blog\n* 94de470 Initial commit\n```\n\n我们来看看如何引用一些之前的 commit。因为 `HEAD` 指向 `9ec05ca` commit：\n* `HEAD^` 是 `db7e87a` commit\n* `HEAD~1` 同样是 `db7e87a` commit\n* `HEAD^^` 是 `796ddb0` commit\n* `HEAD~2` 同样是 `796ddb0` commit\n* `HEAD^^^` 是 `0c5975a` commit\n* `HEAD~3` 同样是 `0c5975a` commit\n* `HEAD^^^2` 是 `4c9749e` commit（这是曾祖父的 (`HEAD^^`) 第二个父 commit (`^2`))\n\n\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338940,
+              "key": "4748ada6-eafb-46cc-a2e4-bd83464d6321",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 哪一个 commit？\n\n请使用此仓库回答以下练习问题：\n\n\n```bash\n* 9ec05ca (HEAD -> master) Revert \"Set page heading to \"Quests & Crusades\"\"\n* db7e87a Set page heading to \"Quests & Crusades\"\n*   796ddb0 Merge branch 'heading-update'\n|\\  \n| * 4c9749e (heading-update) Set page heading to \"Crusade\"\n* | 0c5975a Set page heading to \"Quest\"\n|/  \n*   1a56a81 Merge branch 'sidebar'\n|\\  \n| * f69811c (sidebar) Update sidebar with favorite movie\n| * e6c65a6 Add new sidebar content\n* | e014d91 (footer) Add links to social media\n* | 209752a Improve site heading for SEO\n* | 3772ab1 Set background color for page\n|/  \n* 5bfe5e7 Add starting HTML structure\n* 6fa5f34 Add .gitignore file\n* a879849 Add header to blog\n* 94de470 Initial commit\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338941,
+              "key": "3dd6117c-4754-4dc1-a290-cefacc642b07",
+              "title": "哪一个 commit？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "3dd6117c-4754-4dc1-a290-cefacc642b07",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "`HEAD~6` 引用的是哪一个 commit？",
+                "answers": [
+                  {
+                    "id": "a1487200543058",
+                    "text": "4c9749e",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487200564347",
+                    "text": "0c5975a",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487200565134",
+                    "text": "1a56a81",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487200566410",
+                    "text": "f69811c",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487200566949",
+                    "text": "e014d91",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487200577899",
+                    "text": "209752a",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 338942,
+              "key": "57144021-1d3b-4cda-a23c-32a8b66e3f2a",
+              "title": "",
+              "semantic_type": "ValidatedQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "57144021-1d3b-4cda-a23c-32a8b66e3f2a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "上道题答的不错，再试试这道题吧！对于相同的仓库，`HEAD~4^2` 引用的是哪个 commit？",
+                "matchers": [
+                  {
+                    "expression": "f69811c"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 338943,
+              "key": "23c9c63c-89aa-4f65-b549-f6a704295033",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## `git reset` 命令\n\n`git reset` 命令用来重置（清除）commit：\n\n```bash\n$ git reset <reference-to-commit>\n```\n\n可以用来：\n* 将 HEAD 和当前分支指针移到目标 commit\n* 清除 commit\n* 将 commit 的更改移到暂存区\n* 取消暂存 commit 的更改\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338944,
+              "key": "03375d86-763e-4711-ad00-c46827c34e5e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## git reset 的选项\n\ngit 根据所使用选项来判断是清除、暂存之前 commit 的更改，还是取消暂存之前 commit 的更改。这些选项包括：\n* `--mixed`\n* `--soft`\n* `--hard`\n\n通过动画的形式更容易理解这些选项的工作方式。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338945,
+              "key": "fff106c3-cbd2-4a43-a98e-f77faabf7897",
+              "title": "Nd016 WebND Ud123 Gitcourse BETAMOJITO L6 17 Soft Vs Medium Vs Hard Walkthrough",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "UN7ki2G2yKc",
+                "china_cdn_id": "UN7ki2G2yKc.mp4"
+              }
+            },
+            {
+              "id": 338946,
+              "key": "63aea17f-4a37-4142-88a7-2dd5e9ed08e4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## 💡 备份分支 💡\n\n> 注意，使用 `git reset` 命令将清除当前分支上的 commit。因此，如果你想跟着操作接下来出现的所有重置操作，需要在当前 commit 上创建一个分支，以便用作备份。\n\n> 在进行任何重置操作之前，我通常会在最近的 commit 上创建一个 `backup` 分支，因此如果出现错误，我可以返回这些 commit：\n\n> ```bash\n$ git branch backup\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338947,
+              "key": "60984e31-fcbb-4eb1-83c4-e2dfd811bc25",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## reset 的 `--mixed` 选项\n\n我们来看看每个选项。\n\n```bash\n* 9ec05ca (HEAD -> master) Revert \"Set page heading to \"Quests & Crusades\"\"\n* db7e87a Set page heading to \"Quests & Crusades\"\n* 796ddb0 Merge branch 'heading-update'\n```\n\n使用上述示例仓库，其中 `HEAD` 指向 `9ec05ca` 上的 `master`，运行 `git reset --mixed HEAD^` 会把 commit `9ec05ca` 中做出的更改移至工作目录中。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338948,
+              "key": "3ff45517-b0a8-42f0-b9c1-9ccb0d6b281b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/February/58a4e242_ud123-l6-git-revert-mixed/ud123-l6-git-revert-mixed.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3ff45517-b0a8-42f0-b9c1-9ccb0d6b281b",
+              "caption": "_终端显示了使用 `--mixed` 选项进行重置后的结果。更改未暂存。_",
+              "alt": "",
+              "width": 1277,
+              "height": 661,
+              "instructor_notes": null
+            },
+            {
+              "id": 338949,
+              "key": "c84501cd-8774-44d4-a75a-6f5df9cc7135",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "> ## 💡 回到正常状况💡\n\n> 如果你在重置任何内容前创建了 `backup` 分支，那么你可以轻松地让 `master` 分支指向 `backup` 分支所指向的同一 commit。你只需：\n1. 从工作目录中删除未 commit 的更改\n* 将 `backup` 合并到 `master`（这将导致快进合并并使 `master` 向上移到和 `backup` 一样的点）\n\n> ```bash\n$ git checkout -- index.html\n$ git merge backup\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338950,
+              "key": "26729e51-6ff2-4c20-bf03-8d6a566a8f87",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## reset 的 `--soft` 选项\n\n我们使用相同的几个 commit 并看看 `--soft` 选项的工作方式：\n\n```bash\n* 9ec05ca (HEAD -> master) Revert \"Set page heading to \"Quests & Crusades\"\"\n* db7e87a Set page heading to \"Quests & Crusades\"\n* 796ddb0 Merge branch 'heading-update'\n```\n\n运行 `git reset --soft HEAD^` 会把 commit `9ec05ca` 中做出的更改直接移至暂存区。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338951,
+              "key": "49c58cdd-1b50-4683-8b86-b6e2fab321ad",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/February/58a4e29a_ud123-l6-git-revert-soft/ud123-l6-git-revert-soft.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/49c58cdd-1b50-4683-8b86-b6e2fab321ad",
+              "caption": "_终端显示了使用 `--soft` 选项进行重置后的结果。更改被移到暂存区。_",
+              "alt": "",
+              "width": 1277,
+              "height": 545,
+              "instructor_notes": null
+            },
+            {
+              "id": 338952,
+              "key": "4589e92d-bb58-4d1a-869d-22a3c313b620",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## reset 的 `--hard` 选项\n\n最后再看看 `--hard` 选项（当然并非最不重要选项）：\n\n```bash\n* 9ec05ca (HEAD -> master) Revert \"Set page heading to \"Quests & Crusades\"\"\n* db7e87a Set page heading to \"Quests & Crusades\"\n* 796ddb0 Merge branch 'heading-update'\n```\n\n运行 `git reset --hard HEAD^` 将清除 commit `9ec05ca` 中做出的更改。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338953,
+              "key": "d917a9f9-665d-4e61-8c1c-2339f16af4f7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/February/58a4e2c2_ud123-l6-git-revert-hard/ud123-l6-git-revert-hard.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d917a9f9-665d-4e61-8c1c-2339f16af4f7",
+              "caption": "_终端显示了使用 `--hard` 选项进行重置后的结果。更改被清除。_",
+              "alt": "",
+              "width": 1277,
+              "height": 545,
+              "instructor_notes": null
+            },
+            {
+              "id": 338954,
+              "key": "c7f0aff8-cf01-4c47-b80f-057038d03cc5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "现在该你了！\n\n对于以下仓库：\n\n```bash\n* e014d91 (HEAD -> master, footer) Add links to social media\n* 209752a Improve site heading for SEO\n* 3772ab1 Set background color for page\n* 5bfe5e7 Add starting HTML structure\n* 6fa5f34 Add .gitignore file\n* a879849 Add header to blog\n* 94de470 Initial commit\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 338955,
+              "key": "a1229e6c-1a39-4fd1-8b41-e64e11aa8e51",
+              "title": "内容在哪？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "a1229e6c-1a39-4fd1-8b41-e64e11aa8e51",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果运行 `git reset --hard HEAD~3`，`3772ab1` commit 中的更改会怎样？更改会被移入暂存区？工作目录？还是完全被清除呢？",
+                "answers": [
+                  {
+                    "id": "a1487200983003",
+                    "text": "暂存区",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487201004561",
+                    "text": "工作目录",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487201005053",
+                    "text": "被清除",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 338956,
+              "key": "1326ce4a-19bf-48ff-a7ac-6c1a2b6f34bf",
+              "title": "内容在哪 2？",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1326ce4a-19bf-48ff-a7ac-6c1a2b6f34bf",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "如果运行 `git reset --soft HEAD^^`，`209752a` commit 中的更改将怎样？更改会进入暂存区、工作目录或完全被清除吗？",
+                "answers": [
+                  {
+                    "id": "a1487201103314",
+                    "text": " 暂存区",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1487201111082",
+                    "text": " 工作目录",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1487201111663",
+                    "text": " 被清除",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 338957,
+              "key": "3d0d5f52-3786-4275-a578-9619daa9d04e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## reset 小结\n\n总结下，`git reset` 命令被用来清除 commit：\n\n```bash\n$ git reset <reference-to-commit>\n```\n\n它可以用来：\n* 将 HEAD 和当前分支指针移到引用的 commit\n* 使用 `--hard` 选项清除 commit\n* 使用 `--soft` 选项将 commit 的更改移至暂存区\n* 使用 `--mixed` 选项取消暂存已被 commit 的更改\n\n我们通常会用到祖先引用来指代之前的 commit。祖先引用包含：\n* `^` – 表示父 commit\n* `~` – 表示第一个父 commit\n\n### 进一步研究\n* 来自 Git 文档的 [git-reset (英)](https://git-scm.com/docs/git-reset) \n* 来自 Git Blog 的 [Reset Demystified (英)](https://git-scm.com/blog) \n* 来自 Git Book 的 _祖先引用_ [英](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#Ancestry-References)|[中](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%80%89%E6%8B%A9%E4%BF%AE%E8%AE%A2%E7%89%88%E6%9C%AC)\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 339097,
+          "key": "cfec1ae1-81c7-49ca-a2e8-899449763bf4",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cfec1ae1-81c7-49ca-a2e8-899449763bf4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 338958,
+              "key": "8ac2e955-9c86-48d9-a393-90cdaec34ccb",
+              "title": "撤消更改",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "-_PPVk2UZMU",
+                "china_cdn_id": "-_PPVk2UZMU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 339098,
+          "key": "60d2b050-0b84-4342-8d76-fe9b98887839",
+          "title": "课程小结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "60d2b050-0b84-4342-8d76-fe9b98887839",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 338959,
+              "key": "43eb2745-56f5-4b65-b4ce-6af80f970ef2",
+              "title": "Gitfinal L6 30 课程小结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "twn_cheqoK8",
+                "china_cdn_id": "twn_cheqoK8.mp4"
+              }
+            },
+            {
+              "id": 338961,
+              "key": "2d89f294-bc05-41a3-92d7-e48428f1855f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 拓展你的 Git 技能\n\n* 学习相应的 GitHub 课程\n* 创建一个仓库来记录你的计算机设置 [https://dotfiles.github.io/](https://dotfiles.github.io/)\n* 为你的项目开发新的 Git 功能\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>实战项目概览</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>探索美国共享单车数据</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 项目概述.html">01. 项目概述</a>
+    </li>
+    <li class="">
+      <a href="02. 项目详情.html">02. 项目详情</a>
+    </li>
+    <li class="">
+      <a href="03. 实战项目概览.html">03. 实战项目概览</a>
+    </li>
+    <li class="">
+      <a href="04. [选修]理解数据.html">04. [选修]理解数据</a>
+    </li>
+    <li class="">
+      <a href="05. [选修] 练习题 1.html">05. [选修] 练习题 1</a>
+    </li>
+    <li class="">
+      <a href="06. [选修] 练习答案 1.html">06. [选修] 练习答案 1</a>
+    </li>
+    <li class="">
+      <a href="07. [选修]练习题 2.html">07. [选修]练习题 2</a>
+    </li>
+    <li class="">
+      <a href="08. [选修] 练习答案 2.html">08. [选修] 练习答案 2</a>
+    </li>
+    <li class="">
+      <a href="09. [选修] 练习题 3.html">09. [选修] 练习题 3</a>
+    </li>
+    <li class="">
+      <a href="10. [选修] 练习答案 3.html">10. [选修] 练习答案 3</a>
+    </li>
+    <li class="">
+      <a href="11. 代码流程.html">11. 代码流程</a>
+    </li>
+    <li class="">
+      <a href="12. 如何完成该实战项目.html">12. 如何完成该实战项目</a>
+    </li>
+    <li class="">
+      <a href="13. [工作区] 在教室内完成项目.html">13. [工作区] 在教室内完成项目</a>
+    </li>
+    <li class="">
+      <a href="14. 如何测试你的代码.html">14. 如何测试你的代码</a>
+    </li>
+    <li class="">
+      <a href="Project Description - 探索美国共享单车数据.html">Project Description - 探索美国共享单车数据</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - 探索美国共享单车数据.html">Project Rubric - 探索美国共享单车数据</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. 实战项目概览</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Bikeshare Project Walkthrough V1</p></h3>
+  <video controls>
+  <source src="03. Bikeshare Project Walkthrough V1---81WEZH6TQ.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="03. Bikeshare Project Walkthrough V1---81WEZH6TQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="CN" src="03. Bikeshare Project Walkthrough V1---81WEZH6TQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>请使用 <code>bikeshare.py</code> 提供的模板完成这个项目。你可以随意按照需要更改模板。要想通过项目，你的项目必须提供模板中说明的数据，并实现与用户的互动式体验。</p>
+<h2 id="互动式体验">互动式体验</h2>
+<p>该文件是一个脚本，它接受原始输入在终端中创建交互式体验，来回答有关数据集的问题。这种体验之所以是交互式的，是因为根据用户输入的内容，下一页面中的数据结果也会随之改变。交互式体验可以通过 <code>input()</code> 语句来进行实现，我们已经给出了 4 个提示。（提示：如果你对本要求的实现没有头绪，可以回顾 课程5：脚本编写 -&gt; 8. 在脚本中接受原始输入。）</p>
+<p>有以下三个问题会对结果产生影响：</p>
+<ol>
+<li>你想分析哪个城市的数据？输入：芝加哥，纽约，华盛顿 ( Would you like to see data for Chicago, New York, or Washington?) </li>
+<li>你想分析几月的数据？输入：全部，一月，二月…六月 ( Which month? all, january, february, … , june?) </li>
+<li>你想分析星期几的数据？输入：全部，星期一，星期二…星期日 (Which day? all, monday, tuesday, … sunday?) </li>
+</ol>
+<p>这几个问题的答案将用来确定进行数据分析的城市，同时选择过滤某个月份或星期的数据。在相应的数据集过滤和加载完毕后，用户会看到数据的统计结果，并选择重新开始或退出。输入的信息应当大小写不敏感，比如"Chicago", "CHICAGO", "chicago", “chiCago”都是有效输入。你可以使用 <code>lower()</code>, <code>upper()</code>, <code>title()</code> 等字符串方法对输入值进行处理。</p>
+<p>**请注意，<code>bikeshare.py</code> 文件是一个供你使用的模板，但你并不是必须使用它。 **只要你的文件拥有与模板相似的交互式体验，你可以随意更改它的功能。我们鼓励你改变 <code>bikeshare.py</code> 的结构（比如添加和/或删除辅助函数），让代码变得更加高效简洁！</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. [选修]理解数据.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 实战项目概览')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

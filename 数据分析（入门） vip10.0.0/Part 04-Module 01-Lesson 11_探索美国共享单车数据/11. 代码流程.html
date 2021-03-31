@@ -1,0 +1,273 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>代码流程</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>探索美国共享单车数据</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 项目概述.html">01. 项目概述</a>
+    </li>
+    <li class="">
+      <a href="02. 项目详情.html">02. 项目详情</a>
+    </li>
+    <li class="">
+      <a href="03. 实战项目概览.html">03. 实战项目概览</a>
+    </li>
+    <li class="">
+      <a href="04. [选修]理解数据.html">04. [选修]理解数据</a>
+    </li>
+    <li class="">
+      <a href="05. [选修] 练习题 1.html">05. [选修] 练习题 1</a>
+    </li>
+    <li class="">
+      <a href="06. [选修] 练习答案 1.html">06. [选修] 练习答案 1</a>
+    </li>
+    <li class="">
+      <a href="07. [选修]练习题 2.html">07. [选修]练习题 2</a>
+    </li>
+    <li class="">
+      <a href="08. [选修] 练习答案 2.html">08. [选修] 练习答案 2</a>
+    </li>
+    <li class="">
+      <a href="09. [选修] 练习题 3.html">09. [选修] 练习题 3</a>
+    </li>
+    <li class="">
+      <a href="10. [选修] 练习答案 3.html">10. [选修] 练习答案 3</a>
+    </li>
+    <li class="">
+      <a href="11. 代码流程.html">11. 代码流程</a>
+    </li>
+    <li class="">
+      <a href="12. 如何完成该实战项目.html">12. 如何完成该实战项目</a>
+    </li>
+    <li class="">
+      <a href="13. [工作区] 在教室内完成项目.html">13. [工作区] 在教室内完成项目</a>
+    </li>
+    <li class="">
+      <a href="14. 如何测试你的代码.html">14. 如何测试你的代码</a>
+    </li>
+    <li class="">
+      <a href="Project Description - 探索美国共享单车数据.html">Project Description - 探索美国共享单车数据</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - 探索美国共享单车数据.html">Project Rubric - 探索美国共享单车数据</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. 代码流程</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="to-do"><em>TO DO</em></h2>
+<p>你在对应的代码文件中（<code>bikeshare.py</code>） 中必须填写的所有代码都用以<em>“TO DO”</em>开头的注释标记。请仔细阅读该文件，大致了解脚本流程以及为了完成此项目你需要添加的代码。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="代码流程">代码流程</h2>
+<p>Python中首先执行最先出现的非函数定义和非类定义的没有缩进的代码，会从前到后执行。在 <code>bikeshare.py</code> 中，代码的执行顺序会从 <code>if __name__ == "__main__":</code>开始，执行里面的 <code>main()</code> 函数。</p>
+<p>在这个 <code>main()</code> 函数中，是一个条件为<code>True</code> 的 <code>while</code> 循环，除非被下方的 <code>if</code> 条件语句打破，循环会一直继续下去。</p>
+<p>这个条件是：</p>
+<pre><code>restart = input('\nWould you like to restart? Enter yes or no.\n') # 你是否想要重新开始？输入 yes or no。
+        if restart.lower() != 'yes': # 如果输入不为 yes
+            break # 跳出 while 循环，程序结束</code></pre>
+<p>接下来我们查看 <code>main()</code> 函数的其他部分，这些语句会被顺序执行。但是这些函数并没有被完整的定义，你需要根据项目中提示的 TO DO 来补全他们。</p>
+<pre><code># 通过用户的输入来得到要分析的 “城市，月，日”
+city, month, day = get_filters() 
+
+# 加载相应的 “城市，月，日” 的数据
+df = load_data(city, month, day) 
+
+# 计算并显示共享单车出行的最频繁时间
+time_stats(df) 
+
+# 计算并显示共享单车出行的最频繁车站
+station_stats(df) 
+
+# 计算并显示共享单车出行的总/平均时间
+trip_duration_stats(df) 
+
+# 计算并显示共享单车用户的统计信息
+user_stats(df) </code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="交互式体验">交互式体验</h2>
+<p><code>bikeshare.py</code> 文件是一个脚本，它会接受原始输入以在终端中创建交互式体验，该体验将回答关于数据集的问题。体验之所以是交互式体验，是因为根据用户的输入，上一页的问题的答案将改变！下面的四个问题将改变答案：</p>
+<ol>
+<li>你要查看芝加哥、纽约还是华盛顿特区的数据？</li>
+<li>你要按照月份、日期过滤数据，还是不过滤数据？</li>
+<li>如果按月份过滤，哪个月份？1 月？2 月？3 月？4 月？5 月？6 月？</li>
+<li>如果按日期过滤，哪个日期？</li>
+</ol>
+<p>要完成项目，请在 [工作区]在教室内完成项目 中使用<code>bikeshare.py</code>。</p>
+<p>正确地使用 NumPy 和/或 pandas 意味着需要使用向量化的运算，你暂时不需要理解这方面的概念。只需要明白你可以在 NumPy 和 pandas 中循环访问这些数据结构。但使用这两个库使我们很难评估在这门课程中讲授的核心概念（数据类型和运算符、控制流、函数等）。</p>
+<p>我们我们已经在 <code>bikeshare.py</code> 提供了一些TO DO待办事项。注意这个<code>bikeshare.py</code>文件只是一个模板，你不是必须要使用它。只要你能确保最终的功能，你可以改变模板里面的函数来实现交互式体验。</p>
+<p>交互式体验可以通过在 <code>bikeshare.py</code> 中的 <code>input()</code> 语句来进行实现，我们已经给出了 4 个提示。你需要补全 TO DO 代码以实现此交互式体验。本项目要求输入大小写不敏感，你可以使用 <code>lower()</code>, <code>upper()</code>, <code>title()</code> 等字符串方法对输入值进行处理。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="如果你遇到困难">如果你遇到困难</h2>
+<p>如果你在补全这些函数的期间遇到困难，请尝试下面几种途径：</p>
+<ol>
+<li>查看前面的课程/练习题，是否课程中有提供的示例或文档，例如: <code>pandas</code>, <code>datetime</code>；</li>
+<li>使用搜索引擎进行搜索，找到可能实现某功能的函数/方法，再对应查看该函数/方法的文档，根据文档中提供的说明或示例，了解如何进行使用；</li>
+<li>在论坛进行提问 或者 提问你的助教。</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. 如何完成该实战项目.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. 代码流程')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
