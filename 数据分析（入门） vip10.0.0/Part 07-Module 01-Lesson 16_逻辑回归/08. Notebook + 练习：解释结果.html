@@ -1,0 +1,426 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook + 练习：解释结果</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>逻辑回归</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：拟合逻辑回归.html">02. 视频：拟合逻辑回归</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：逻辑回归小测.html">03. 练习：逻辑回归小测</a>
+    </li>
+    <li class="">
+      <a href="04. 视频：在 Python 中拟合逻辑回归.html">04. 视频：在 Python 中拟合逻辑回归</a>
+    </li>
+    <li class="">
+      <a href="05. Notebook + 练习：在 Python 中拟合逻辑回归.html">05. Notebook + 练习：在 Python 中拟合逻辑回归</a>
+    </li>
+    <li class="">
+      <a href="06. 视频：解释结果——第一部分.html">06. 视频：解释结果——第一部分</a>
+    </li>
+    <li class="">
+      <a href="07. 录屏视频：解释结果——第二部分.html">07. 录屏视频：解释结果——第二部分</a>
+    </li>
+    <li class="">
+      <a href="08. Notebook + 练习：解释结果.html">08. Notebook + 练习：解释结果</a>
+    </li>
+    <li class="">
+      <a href="09. 视频：模型诊断+性能指标.html">09. 视频：模型诊断+性能指标</a>
+    </li>
+    <li class="">
+      <a href="10. 混淆矩阵.html">10. 混淆矩阵</a>
+    </li>
+    <li class="">
+      <a href="11. 混淆矩阵练习 1.html">11. 混淆矩阵练习 1</a>
+    </li>
+    <li class="">
+      <a href="12. 混淆矩阵练习 2.html">12. 混淆矩阵练习 2</a>
+    </li>
+    <li class="">
+      <a href="13. 填充混淆矩阵.html">13. 填充混淆矩阵</a>
+    </li>
+    <li class="">
+      <a href="14. 混淆矩阵：误报.html">14. 混淆矩阵：误报</a>
+    </li>
+    <li class="">
+      <a href="15. 特征脸混淆矩阵.html">15. 特征脸混淆矩阵</a>
+    </li>
+    <li class="">
+      <a href="16. 有多少 Schroeder.html">16. 有多少 Schroeder</a>
+    </li>
+    <li class="">
+      <a href="17. 有多少 Schroeder 预测值.html">17. 有多少 Schroeder 预测值</a>
+    </li>
+    <li class="">
+      <a href="18. 正确分类查韦斯 1.html">18. 正确分类查韦斯 1</a>
+    </li>
+    <li class="">
+      <a href="19. 正确分类查韦斯 2.html">19. 正确分类查韦斯 2</a>
+    </li>
+    <li class="">
+      <a href="20. 精确率和召回率.html">20. 精确率和召回率</a>
+    </li>
+    <li class="">
+      <a href="21. 鲍威尔精确率和召回率.html">21. 鲍威尔精确率和召回率</a>
+    </li>
+    <li class="">
+      <a href="22. 布什精确率和召回率.html">22. 布什精确率和召回率</a>
+    </li>
+    <li class="">
+      <a href="23. 特征脸方法中的 True Positives.html">23. 特征脸方法中的 True Positives</a>
+    </li>
+    <li class="">
+      <a href="24. 特征脸方法中的 False Positives.html">24. 特征脸方法中的 False Positives</a>
+    </li>
+    <li class="">
+      <a href="25. 特征脸方法中的 False Negatives.html">25. 特征脸方法中的 False Negatives</a>
+    </li>
+    <li class="">
+      <a href="26. 对拉姆斯菲尔德练习 TP、FP、FN.html">26. 对拉姆斯菲尔德练习 TP、FP、FN</a>
+    </li>
+    <li class="">
+      <a href="27. 精确率公式.html">27. 精确率公式</a>
+    </li>
+    <li class="">
+      <a href="28. 召回率公式.html">28. 召回率公式</a>
+    </li>
+    <li class="">
+      <a href="29. 录屏视频：在 Python 里进行模型诊断——第一部分.html">29. 录屏视频：在 Python 里进行模型诊断——第一部分</a>
+    </li>
+    <li class="">
+      <a href="30. Notebook + 练习：模型诊断.html">30. Notebook + 练习：模型诊断</a>
+    </li>
+    <li class="">
+      <a href="31. 视频：在开始机器学习之前的结语.html">31. 视频：在开始机器学习之前的结语</a>
+    </li>
+    <li class="">
+      <a href="32. 文本：复习.html">32. 文本：复习</a>
+    </li>
+    <li class="">
+      <a href="33. 视频：恭喜.html">33. 视频：恭喜</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. Notebook + 练习：解释结果</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>下列是一些关于录取数据集的说法，请选出所有正确选项。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1511743075290" name="469626" id="a1511743075290">
+      <label for="a1511743075290"><p>为了获得<code>声望</code> 的逻辑递归模型，我们需要加入 4 个虚拟变量。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1511743123617" name="469626" id="a1511743123617">
+      <label for="a1511743123617"><p>为了获得<code>声望</code> 逻辑递归模型，我们需要加入 3 个虚拟变量。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1511743128225" name="469626" id="a1511743128225">
+      <label for="a1511743128225"><p>最常见的声望值为 2。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1511743939410" name="469626" id="a1511743939410">
+      <label for="a1511743939410"><p>最常见的声望值为 3。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>为了获得`声望` 逻辑递归模型，我们需要加入 3 个虚拟变量。</li>
+      <li> 最常见的声望值为 2。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>观察下方回归模型里那些看起来与被录取有统计显著性的变量，请问下列哪些说法是正确的？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1511749273908" name="469627" id="a1511749273908">
+        <label for="a1511749273908"><p>所有变量都有统计显著性。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511749317461" name="469627" id="a1511749317461">
+        <label for="a1511749317461"><p>有些变量有统计显著性。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511749330981" name="469627" id="a1511749330981">
+        <label for="a1511749330981"><p>没有变量有统计显著性。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    所有变量都有统计显著性。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>观察结果，根据解释选出正确的数值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>0.21 倍</p></button>
+  <button class="btn btn-primary"><p>3.81 倍</p></button>
+  <button class="btn btn-primary"><p>0.26 倍</p></button>
+  <button class="btn btn-primary"><p>1.97 倍</p></button>
+  <button class="btn btn-primary"><p>4.73 倍</p></button>
+  <button class="btn btn-primary"><p>0.51 倍</p></button>
+  <button class="btn btn-primary"><p>0.78 倍</p></button>
+  <button class="btn btn-primary"><p>2.18 倍</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>解释</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望最低的学生，他就多了 <strong>__</strong> 的可能被录取。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望倒数第二的学生，他就多了 <strong>__</strong> 的可能被录取。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望第二的学生，他就多了 <strong>__</strong> 的可能被录取。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>其它变量不变的情况下，gpa 每增加一个单位，学生的录取概率就增加了 <strong>__</strong>。</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>解释</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望倒数第二的学生，他就多了 <strong>__</strong> 的可能被录取。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>3.81 倍</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望第二的学生，他就多了 <strong>__</strong> 的可能被录取。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>1.97 倍</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在其它变量不变的情况下，如果某学生的母校名望最高，那比起母校名望最低的学生，他就多了 <strong>__</strong> 的可能被录取。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>4.73 倍</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>其它变量不变的情况下，gpa 每增加一个单位，学生的录取概率就增加了 <strong>__</strong>。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>2.18 倍</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. 视频：模型诊断+性能指标.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. Notebook + 练习：解释结果')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
