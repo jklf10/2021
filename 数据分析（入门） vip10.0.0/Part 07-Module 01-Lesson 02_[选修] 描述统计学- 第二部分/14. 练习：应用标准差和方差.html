@@ -1,0 +1,436 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>练习：应用标准差和方差</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>[选修] 描述统计学- 第二部分</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 什么是离散程度测量？.html">01. 什么是离散程度测量？</a>
+    </li>
+    <li class="">
+      <a href="02. 直方图.html">02. 直方图</a>
+    </li>
+    <li class="">
+      <a href="03. 工作日与周末：有何区别？.html">03. 工作日与周末：有何区别？</a>
+    </li>
+    <li class="">
+      <a href="04. 五数概括法简介.html">04. 五数概括法简介</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：五数概括法练习.html">05. 练习：五数概括法练习</a>
+    </li>
+    <li class="">
+      <a href="06. 如果我只想用一个数字呢？.html">06. 如果我只想用一个数字呢？</a>
+    </li>
+    <li class="">
+      <a href="07. 标准差与方差简介.html">07. 标准差与方差简介</a>
+    </li>
+    <li class="">
+      <a href="08. 标准差计算.html">08. 标准差计算</a>
+    </li>
+    <li class="">
+      <a href="09. 离散程度测量（计算和单位）.html">09. 离散程度测量（计算和单位）</a>
+    </li>
+    <li class="">
+      <a href="10. 标准差和方差简介.html">10. 标准差和方差简介</a>
+    </li>
+    <li class="">
+      <a href="11. 为何要用标准差？.html">11. 为何要用标准差？</a>
+    </li>
+    <li class="">
+      <a href="12. 要点总结.html">12. 要点总结</a>
+    </li>
+    <li class="">
+      <a href="13. 进阶：标准差和方差.html">13. 进阶：标准差和方差</a>
+    </li>
+    <li class="">
+      <a href="14. 练习：应用标准差和方差.html">14. 练习：应用标准差和方差</a>
+    </li>
+    <li class="">
+      <a href="15. 习题集 1：测量离散程度的最后练习.html">15. 习题集 1：测量离散程度的最后练习</a>
+    </li>
+    <li class="">
+      <a href="16. 集中趋势和离散程度测量总结.html">16. 集中趋势和离散程度测量总结</a>
+    </li>
+    <li class="">
+      <a href="17. 形状.html">17. 形状</a>
+    </li>
+    <li class="">
+      <a href="18. 现实世界中的数据形状.html">18. 现实世界中的数据形状</a>
+    </li>
+    <li class="">
+      <a href="19. 练习：形状和异常值（有什么影响？）.html">19. 练习：形状和异常值（有什么影响？）</a>
+    </li>
+    <li class="">
+      <a href="20. 形状和异常值.html">20. 形状和异常值</a>
+    </li>
+    <li class="">
+      <a href="21. 处理异常值.html">21. 处理异常值</a>
+    </li>
+    <li class="">
+      <a href="22. 异常值处理建议.html">22. 异常值处理建议</a>
+    </li>
+    <li class="">
+      <a href="23. 练习：形状和异常值（比较分布）.html">23. 练习：形状和异常值（比较分布）</a>
+    </li>
+    <li class="">
+      <a href="24. 练习：形状和异常值（可视化）.html">24. 练习：形状和异常值（可视化）</a>
+    </li>
+    <li class="">
+      <a href="25. 练习：形状与异常值（最终练习）.html">25. 练习：形状与异常值（最终练习）</a>
+    </li>
+    <li class="">
+      <a href="26. 描述统计总结.html">26. 描述统计总结</a>
+    </li>
+    <li class="">
+      <a href="27. 描述统计与推论统计.html">27. 描述统计与推论统计</a>
+    </li>
+    <li class="">
+      <a href="28. 练习：描述统计与推论统计（优达学城学生）.html">28. 练习：描述统计与推论统计（优达学城学生）</a>
+    </li>
+    <li class="">
+      <a href="29. 练习：描述统计与推论统计（百吉饼）.html">29. 练习：描述统计与推论统计（百吉饼）</a>
+    </li>
+    <li class="">
+      <a href="30. 描述统计与推论统计总结.html">30. 描述统计与推论统计总结</a>
+    </li>
+    <li class="">
+      <a href="31. 总结.html">31. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">14. 练习：应用标准差和方差</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="投资数据">投资数据</h3>
+<p>假设我们有两个投资机会:</p>
+<table>
+<thead>
+<tr>
+<th id=""></th>
+<th id=""></th>
+<th id=""></th>
+<th id="**回报**"><strong>回报</strong></th>
+<th id=""></th>
+<th id=""></th>
+<th id=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong>第 1 年</strong></td>
+<td><strong>第 2 年</strong></td>
+<td><strong>第 3 年</strong></td>
+<td><strong>第 4 年</strong></td>
+<td><strong>第 5 年</strong></td>
+<td><strong>第 6 年</strong></td>
+</tr>
+<tr>
+<td><strong>投资 1</strong></td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td><strong>投资 2</strong></td>
+<td>12%</td>
+<td>-2%</td>
+<td>10%</td>
+<td>0%</td>
+<td>7%</td>
+<td>3%</td>
+</tr>
+</tbody>
+</table>
+<p>两项投资连续六年的回报如上所示。使用此信息回答下面的问题。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  Unknown quiz type. Please contact the developer to make it compatible with this atom type!
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="投资数据">投资数据</h3>
+<p>在前两个问题中，你应该发现了这些投资的平均回报相同！也就是说，无论你选哪个投资机会，都会预期赚到相同的金额。那么它们有何不同呢？我们来通过其他一些问题，看能否找到一些差异。</p>
+<p>再次提供上面的数据（这样你不必滚动鼠标回去查看）  </p>
+<table>
+<thead>
+<tr>
+<th id=""></th>
+<th id=""></th>
+<th id=""></th>
+<th id="**回报**"><strong>回报</strong></th>
+<th id=""></th>
+<th id=""></th>
+<th id=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong>第 1 年</strong></td>
+<td><strong>第 2 年</strong></td>
+<td><strong>第 3 年</strong></td>
+<td><strong>第 4 年</strong></td>
+<td><strong>第 5 年</strong></td>
+<td><strong>第 6 年</strong></td>
+</tr>
+<tr>
+<td><strong>投资 1</strong></td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td><strong>投资 2</strong></td>
+<td>12%</td>
+<td>-2%</td>
+<td>10%</td>
+<td>0%</td>
+<td>7%</td>
+<td>3%</td>
+</tr>
+</tbody>
+</table>
+<p>两项投资连续六年的回报如上所示。使用此信息回答下面的问题。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>使用上面的信息，勾选所有为<strong>真</strong>的陈述。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1500929790911" name="390135" id="a1500929790911">
+      <label for="a1500929790911"><p>投资 1 的风险低于投资 2 的风险。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1500929895017" name="390135" id="a1500929895017">
+      <label for="a1500929895017"><p>投资 1 的标准差小于投资 2 的标准差。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1500930072916" name="390135" id="a1500930072916">
+      <label for="a1500930072916"><p>了解每项投资所有年份的平均回报金额，可以使我们获得做出投资选择所需的所有必要信息。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>投资 1 的风险低于投资 2 的风险。</li>
+      <li>投资 1 的标准差小于投资 2 的标准差。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>根据观察的数据，上面哪项投资更有可能获得 7% 以上的收益？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1500930783324" name="390136" id="a1500930783324">
+        <label for="a1500930783324"><p>投资 1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1500930908269" name="390136" id="a1500930908269">
+        <label for="a1500930908269"><p>投资 2</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1500930912503" name="390136" id="a1500930912503">
+        <label for="a1500930912503"><p>都没可能</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1500930917196" name="390136" id="a1500930917196">
+        <label for="a1500930917196"><p>说不准</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    投资 2
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="有用见解">有用见解</h4>
+<p>上面的例子是现实世界的简化版本，但它指出了你以前可能听过的有用的东西。注意，如果你没有全部投在<strong>投资 1</strong> 或全部投在<strong>投资 2</strong>，而是分散投资在了这两个选择中，会比单独投资一个赚取更多收益。这是长期投资情况下多样化投资组合的好处。对于短期投资，你可能不需要或想要多样化。你可以选择投资 2，幸运地遇到上涨行情（12%、10% 或 7%）并获得短期收益。但是，使用相同策略，你也可能不走运地遇到下跌行情，颗粒无收甚至倒贴。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="15. 习题集 1：测量离散程度的最后练习.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('14. 练习：应用标准差和方差')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
