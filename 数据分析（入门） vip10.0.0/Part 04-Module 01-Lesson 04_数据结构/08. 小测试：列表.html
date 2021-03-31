@@ -1,0 +1,522 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小测试：列表</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>数据结构</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 列表和成员运算符.html">02. 列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：列表和成员运算符.html">03. 练习：列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：列表和成员运算符.html">04. 解决方案：列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="05. 为什么我们需要列表？.html">05. 为什么我们需要列表？</a>
+    </li>
+    <li class="">
+      <a href="06. 列表方法.html">06. 列表方法</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：列表方法.html">07. 练习：列表方法</a>
+    </li>
+    <li class="">
+      <a href="08. 小测试：列表.html">08. 小测试：列表</a>
+    </li>
+    <li class="">
+      <a href="09. 元组.html">09. 元组</a>
+    </li>
+    <li class="">
+      <a href="10. 练习：元组.html">10. 练习：元组</a>
+    </li>
+    <li class="">
+      <a href="11. 集合.html">11. 集合</a>
+    </li>
+    <li class="">
+      <a href="12. 练习：集合.html">12. 练习：集合</a>
+    </li>
+    <li class="">
+      <a href="13. 字典和恒等运算符.html">13. 字典和恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="14. 练习：字典和恒等运算符.html">14. 练习：字典和恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="15. 解决方案：字典与恒等运算符.html">15. 解决方案：字典与恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="16. 练习：字典.html">16. 练习：字典</a>
+    </li>
+    <li class="">
+      <a href="17. 什么时候使用字典？.html">17. 什么时候使用字典？</a>
+    </li>
+    <li class="">
+      <a href="18. 小测试：数据结构.html">18. 小测试：数据结构</a>
+    </li>
+    <li class="">
+      <a href="19. 复合数据结构.html">19. 复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="20. 练习：复合数据结构.html">20. 练习：复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="21. 解决方案：复合数据结构.html">21. 解决方案：复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="22. 练习题.html">22. 练习题</a>
+    </li>
+    <li class="">
+      <a href="23. 解决方案：练习题.html">23. 解决方案：练习题</a>
+    </li>
+    <li class="">
+      <a href="24. 总结.html">24. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08. 小测试：列表</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小测试">小测试</h2>
+<p>数据类型和数据结构不简单，但是很重要！ 让我们暂停一下，确保你理解它们之间的区别。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>以下哪些关于数据类型和数据结构的陈述是正确的？（多选题）</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1533088021245" name="866960" id="a1533088021245">
+      <label for="a1533088021245"><p>数据结构是可以包含不同数据类型的容器。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1533088021788" name="866960" id="a1533088021788">
+      <label for="a1533088021788"><p>数据结构只能保存相同数据类型的数据。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1533088256827" name="866960" id="a1533088256827">
+      <label for="a1533088256827"><p>列表是数据结构的一种。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1533088283720" name="866960" id="a1533088283720">
+      <label for="a1533088283720"><p>所有数据类型都是数据结构。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1533088284393" name="866960" id="a1533088284393">
+      <label for="a1533088284393"><p>所有数据结构都是数据类型。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>数据结构是可以包含不同数据类型的容器。</li>
+      <li>列表是数据结构的一种。</li>
+      <li>所有数据结构都是数据类型。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>以下哪个是列表的属性？（多选）</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1533092950997" name="866962" id="a1533092950997">
+      <label for="a1533092950997"><p>可变的</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1533092959358" name="866962" id="a1533092959358">
+      <label for="a1533092959358"><p>不可变的</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1533092959843" name="866962" id="a1533092959843">
+      <label for="a1533092959843"><p>有序的</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1533092960415" name="866962" id="a1533092960415">
+      <label for="a1533092960415"><p>无序的</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>可变的</li>
+      <li>有序的</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>接下来的两个测验将测试你对索引和切片列表的理解。我建议你先尝试回答这些问题，而不是运行这些代码。 如果你想在回答问题之后尝试运行这些代码，你可以在此页面底部找到代码编辑器。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>选择正确的语法来索引列表<code>arr</code>中的以下元素。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p><code>arr[len(arr) - 1]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[0]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[len(arr)]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[1]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[3]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[-3]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[4]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[-2]</code></p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>元素</p>
+      </th>
+      <th>
+        <p>索引语法</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>列表中的第一个元素</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>列表中的第四个元素</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>列表中的最后一个元素</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>列表中的倒数第二个元素</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>元素</p>
+        </th>
+        <th>
+          <p>索引语法</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>列表中的最后一个元素</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>arr[len(arr) - 1]</code></p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>列表中的第一个元素</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>arr[0]</code></p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>列表中的第四个元素</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>arr[3]</code></p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>列表中的倒数第二个元素</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>arr[-2]</code></p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>选择正确的语法来对列表中的以下每个元素进行切片：<code>arr = ['a'，'b'，'c'，'d'，'e'，'f'，'g']</code></p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p><code>arr[0:2]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[2:5]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[:3]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[4:]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[4:6]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[3:7]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[2:6]</code></p></button>
+  <button class="btn btn-primary"><p><code>arr[:2]</code></p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>元素</p>
+      </th>
+      <th>
+        <p>切片语法</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p><code>['c', 'd', 'e', 'f']</code></p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><code>['a', 'b', 'c']</code></p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><code>['e', 'f', 'g']</code></p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>元素</p>
+        </th>
+        <th>
+          <p>切片语法</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p><code>['a', 'b', 'c']</code></p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>arr[:3]</code></p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><code>['e', 'f', 'g']</code></p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>arr[4:]</code></p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><code>['c', 'd', 'e', 'f']</code></p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p><code>arr[2:6]</code></p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#866966-list_slicing_indexing-py" class="nav-item nav-link  active show" id="tab-866966-list_slicing_indexing-py" data-toggle="tab" role="tab"
+      aria-controls="866966-list_slicing_indexing-py" aria-selected="true">list_slicing_indexing.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="866966-list_slicing_indexing-py" aria-labelledby="tab-866966-list_slicing_indexing-py" role="tabpanel">
+      <pre><code></code>arr &#x3D; [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]
+print(arr[0])</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. 元组.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08. 小测试：列表')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

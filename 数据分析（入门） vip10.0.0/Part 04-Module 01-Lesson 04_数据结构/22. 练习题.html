@@ -1,0 +1,447 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>练习题</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>数据结构</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 列表和成员运算符.html">02. 列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：列表和成员运算符.html">03. 练习：列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：列表和成员运算符.html">04. 解决方案：列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="05. 为什么我们需要列表？.html">05. 为什么我们需要列表？</a>
+    </li>
+    <li class="">
+      <a href="06. 列表方法.html">06. 列表方法</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：列表方法.html">07. 练习：列表方法</a>
+    </li>
+    <li class="">
+      <a href="08. 小测试：列表.html">08. 小测试：列表</a>
+    </li>
+    <li class="">
+      <a href="09. 元组.html">09. 元组</a>
+    </li>
+    <li class="">
+      <a href="10. 练习：元组.html">10. 练习：元组</a>
+    </li>
+    <li class="">
+      <a href="11. 集合.html">11. 集合</a>
+    </li>
+    <li class="">
+      <a href="12. 练习：集合.html">12. 练习：集合</a>
+    </li>
+    <li class="">
+      <a href="13. 字典和恒等运算符.html">13. 字典和恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="14. 练习：字典和恒等运算符.html">14. 练习：字典和恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="15. 解决方案：字典与恒等运算符.html">15. 解决方案：字典与恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="16. 练习：字典.html">16. 练习：字典</a>
+    </li>
+    <li class="">
+      <a href="17. 什么时候使用字典？.html">17. 什么时候使用字典？</a>
+    </li>
+    <li class="">
+      <a href="18. 小测试：数据结构.html">18. 小测试：数据结构</a>
+    </li>
+    <li class="">
+      <a href="19. 复合数据结构.html">19. 复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="20. 练习：复合数据结构.html">20. 练习：复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="21. 解决方案：复合数据结构.html">21. 解决方案：复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="22. 练习题.html">22. 练习题</a>
+    </li>
+    <li class="">
+      <a href="23. 解决方案：练习题.html">23. 解决方案：练习题</a>
+    </li>
+    <li class="">
+      <a href="24. 总结.html">24. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">22. 练习题</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="练习题">练习题</h1>
+<p>以下问题是基于你在上一课中看到的相同文本，即由Rudyard Kipling撰写的诗歌第一节<em>if</em>。我们已将所有字母转换为小写，并从文本中删除标点符号，然后将此修改后的文本存储在字符串变量<code>verse</code>中。</p>
+<h1 id="测验：统计唯一的单词">测验：统计唯一的单词</h1>
+<p>此测验的任务是查找文本中唯一单词的数量。在下面的代码编辑器中，完成以下三个步骤以获得答案。</p>
+<ol>
+<li>将<code>verse</code>拆分成一系列的单词。<strong>提示：</strong> 你可以使用在上一课中学习到的字符串方法。</li>
+<li>将列表转换为仅保留列表中唯一元素的数据结构。</li>
+<li>打印容器的长度。</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#867016-count_unique_words-py" class="nav-item nav-link  active show" id="tab-867016-count_unique_words-py" data-toggle="tab" role="tab"
+      aria-controls="867016-count_unique_words-py" aria-selected="true">count_unique_words.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="867016-count_unique_words-py" aria-labelledby="tab-867016-count_unique_words-py" role="tabpanel">
+      <pre><code></code>verse &#x3D; &quot;if you can keep your head when all about you are losing theirs and blaming it on you   if you can trust yourself when all men doubt you     but make allowance for their doubting too   if you can wait and not be tired by waiting      or being lied about  don’t deal in lies   or being hated  don’t give way to hating      and yet don’t look too good  nor talk too wise&quot;
+print(verse, &#x27;\n&#x27;)
+
+# split verse into list of words
+verse_list &#x3D;
+print(verse_list, &#x27;\n&#x27;)
+
+# convert list to a data structure that stores unique elements
+verse_set &#x3D;
+print(verse_set, &#x27;\n&#x27;)
+
+# print the number of unique words
+num_unique &#x3D; 
+print(num_unique, &#x27;\n&#x27;)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>＃练习：诗歌词典<br />
+在下面的代码编辑器中，您将看到一个字典，其中包含作为键存储的“verse”中的唯一单词（仅出现过一次的单词），以及作为值存储的在“verse”中出现的次数。 使用此词典回答以下问题。 在代码编辑器下面的测验中提交这些答案。</p>
+<p>尝试使用代码回答这些问题，而不是手动查看字典！</p>
+<ol>
+<li><p>* verse_dict *中有多少个独特的单词？</p></li>
+<li><p><em>verse_dict</em>中含有"breathe"键吗？</p></li>
+<li><p>当* verse_dict *按键排序时，所创建的列表的第一个元素是什么？<br />
+<strong>提示：</strong> 使用合适的字典方法获取其键的列表，然后对该列表进行排序。使用此列表来回答接下来的问题。</p></li>
+<li><p>哪个键（单词）在* verse_dict *中的值最大？</p></li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#867018-verse_dictionary-py" class="nav-item nav-link  active show" id="tab-867018-verse_dictionary-py" data-toggle="tab" role="tab"
+      aria-controls="867018-verse_dictionary-py" aria-selected="true">verse_dictionary.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="867018-verse_dictionary-py" aria-labelledby="tab-867018-verse_dictionary-py" role="tabpanel">
+      <pre><code></code>verse_dict &#x3D;  {&#x27;if&#x27;: 3, &#x27;you&#x27;: 6, &#x27;can&#x27;: 3, &#x27;keep&#x27;: 1, &#x27;your&#x27;: 1, &#x27;head&#x27;: 1, &#x27;when&#x27;: 2, &#x27;all&#x27;: 2, &#x27;about&#x27;: 2, &#x27;are&#x27;: 1, &#x27;losing&#x27;: 1, &#x27;theirs&#x27;: 1, &#x27;and&#x27;: 3, &#x27;blaming&#x27;: 1, &#x27;it&#x27;: 1, &#x27;on&#x27;: 1, &#x27;trust&#x27;: 1, &#x27;yourself&#x27;: 1, &#x27;men&#x27;: 1, &#x27;doubt&#x27;: 1, &#x27;but&#x27;: 1, &#x27;make&#x27;: 1, &#x27;allowance&#x27;: 1, &#x27;for&#x27;: 1, &#x27;their&#x27;: 1, &#x27;doubting&#x27;: 1, &#x27;too&#x27;: 3, &#x27;wait&#x27;: 1, &#x27;not&#x27;: 1, &#x27;be&#x27;: 1, &#x27;tired&#x27;: 1, &#x27;by&#x27;: 1, &#x27;waiting&#x27;: 1, &#x27;or&#x27;: 2, &#x27;being&#x27;: 2, &#x27;lied&#x27;: 1, &#x27;don\&#x27;t&#x27;: 3, &#x27;deal&#x27;: 1, &#x27;in&#x27;: 1, &#x27;lies&#x27;: 1, &#x27;hated&#x27;: 1, &#x27;give&#x27;: 1, &#x27;way&#x27;: 1, &#x27;to&#x27;: 1, &#x27;hating&#x27;: 1, &#x27;yet&#x27;: 1, &#x27;look&#x27;: 1, &#x27;good&#x27;: 1, &#x27;nor&#x27;: 1, &#x27;talk&#x27;: 1, &#x27;wise&#x27;: 1}
+print(verse_dict, &#x27;\n&#x27;)
+
+# find number of unique keys in the dictionary
+num_keys &#x3D; 
+print(num_keys)
+
+# find whether &#x27;breathe&#x27; is a key in the dictionary
+contains_breathe &#x3D; 
+print(contains_breathe)
+
+# create and sort a list of the dictionary&#x27;s keys
+sorted_keys &#x3D; 
+
+# get the first element in the sorted list of keys
+print()
+
+# find the element with the highest value in the list of keys
+print() </code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>将正确答案与以下关于字典“verse_dict”的问题相匹配。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>'if'</p></button>
+  <button class="btn btn-primary"><p>1</p></button>
+  <button class="btn btn-primary"><p>没有</p></button>
+  <button class="btn btn-primary"><p>不存在第一个键</p></button>
+  <button class="btn btn-primary"><p>'wise'</p></button>
+  <button class="btn btn-primary"><p>YES</p></button>
+  <button class="btn btn-primary"><p>50</p></button>
+  <button class="btn btn-primary"><p>'about'</p></button>
+  <button class="btn btn-primary"><p>'and'</p></button>
+  <button class="btn btn-primary"><p>51</p></button>
+  <button class="btn btn-primary"><p>'yourself'</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>问题</p>
+      </th>
+      <th>
+        <p>解答</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>*verse_dict *中有多少个独特的单词？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><em>verse_dict</em>中含有"breathe"键吗？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p><strong>送分题：</strong> * verse_dict *中的第一个键是什么？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>当* verse_dict *按键排序时，所创建的列表的第一个元素是什么？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>哪个键（单词）在* verse_dict *中的值最大？</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>问题</p>
+        </th>
+        <th>
+          <p>解答</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p><em>verse_dict</em>中含有"breathe"键吗？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>没有</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>送分题：</strong> * verse_dict *中的第一个键是什么？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>不存在第一个键</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>当* verse_dict *按键排序时，所创建的列表的第一个元素是什么？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>'about'</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>*verse_dict *中有多少个独特的单词？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>51</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>哪个键（单词）在* verse_dict *中的值最大？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>'yourself'</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="23. 解决方案：练习题.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('22. 练习题')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

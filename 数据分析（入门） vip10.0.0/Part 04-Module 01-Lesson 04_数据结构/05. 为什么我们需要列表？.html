@@ -1,0 +1,303 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>为什么我们需要列表？</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>数据结构</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 列表和成员运算符.html">02. 列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：列表和成员运算符.html">03. 练习：列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：列表和成员运算符.html">04. 解决方案：列表和成员运算符</a>
+    </li>
+    <li class="">
+      <a href="05. 为什么我们需要列表？.html">05. 为什么我们需要列表？</a>
+    </li>
+    <li class="">
+      <a href="06. 列表方法.html">06. 列表方法</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：列表方法.html">07. 练习：列表方法</a>
+    </li>
+    <li class="">
+      <a href="08. 小测试：列表.html">08. 小测试：列表</a>
+    </li>
+    <li class="">
+      <a href="09. 元组.html">09. 元组</a>
+    </li>
+    <li class="">
+      <a href="10. 练习：元组.html">10. 练习：元组</a>
+    </li>
+    <li class="">
+      <a href="11. 集合.html">11. 集合</a>
+    </li>
+    <li class="">
+      <a href="12. 练习：集合.html">12. 练习：集合</a>
+    </li>
+    <li class="">
+      <a href="13. 字典和恒等运算符.html">13. 字典和恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="14. 练习：字典和恒等运算符.html">14. 练习：字典和恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="15. 解决方案：字典与恒等运算符.html">15. 解决方案：字典与恒等运算符</a>
+    </li>
+    <li class="">
+      <a href="16. 练习：字典.html">16. 练习：字典</a>
+    </li>
+    <li class="">
+      <a href="17. 什么时候使用字典？.html">17. 什么时候使用字典？</a>
+    </li>
+    <li class="">
+      <a href="18. 小测试：数据结构.html">18. 小测试：数据结构</a>
+    </li>
+    <li class="">
+      <a href="19. 复合数据结构.html">19. 复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="20. 练习：复合数据结构.html">20. 练习：复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="21. 解决方案：复合数据结构.html">21. 解决方案：复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="22. 练习题.html">22. 练习题</a>
+    </li>
+    <li class="">
+      <a href="23. 解决方案：练习题.html">23. 解决方案：练习题</a>
+    </li>
+    <li class="">
+      <a href="24. 总结.html">24. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. 为什么我们需要列表？</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="为什么我们需要列表？">为什么我们需要列表？</h2>
+<p><br><br />
+我们来谈谈为什么我们需要像列表这样的数据结构，以及什么时候使用它。 我们将通过华尔街的一个例子进行讨论。 </p>
+<p>在纳斯达克交易所上市的公司有每个公司名称的股票代码或缩写。 例如 Alphabet, Inc. 的股票代码是GOOGL。</p>
+<p>现在想象一下，你拥有一家公司的股票，比如微软 Microsoft，并希望能够打印出股票的股票代码。 因为它是一个值，所以可以将它存储在变量<code>microsoft</code>中，并为其赋值为<code>MSFT</code>。 像这样：</p>
+<p><code>microsoft = MSFT</code> </p>
+<p>嗯，这很方便！ 因此，现在当你想要为你持有股票的公司打印股票代码时，就可以直接使用<code>print</code>命令。<br />
+``` <br />
+print(microsoft)</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>MSFT ```</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <hr />
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>现在假设你是一名投资基金经理，并且希望打印出你在指数基金中拥有的股票（或持股）（例如，<a href="https://www.marketwatch.com/investing/fund/vinix/holdings" rel="noopener noreferrer" target="_blank">Vanguard Institutional Index Fund</a>)。指数基金包括大量公司的股票（也称为持股）。可以看到，先锋机构指数基金已持有<a href="https://investor.vanguard.com/mutual-funds/profile/VINIX" rel="noopener noreferrer" target="_blank">506控股</a>！</p>
+<p>按照之前的做法，使用单个字符串打印所有506个持股的话，需要506个字符串。 <em>这并不是我们想要的！</em>因为我们需要记住每个字符串的名称才能打印出来。<BR><br />
+你还必须考虑如何在相同的索引基金下对506个字符串进行分组。 <em>太不方便啦！</em></p>
+<p><strong>这就是体现数据结构之美的地方！ 你可以使用一个 list。</strong></p>
+<p>由于指数基金也有股票代码，你可以使用它作为列表的名称，比如说例子里的<code>VINIX</code>，并将所有持股的股票代码符号添加到该 list 中。 让我们列出<a href="https://www.marketwatch.com/investing/fund/vinix/holdings" rel="noopener noreferrer" target="_blank">Vanguard Institutional Index Fund</a>中的最大持股的几个。</p>
+<pre><code>VINIX = ['C', 'MA', 'BA', 'PG', 'CSCO', 'VZ', 'PFE', 'HD', 'INTC', 'T', 'V', 'UNH', 'WFC', 'CVX', 'BAC', 'JNJ', 'GOOGL', 'GOOG', 'BRK.B', 'XOM', 'JPM', 'FB', 'AMZN', 'MSFT', 'AAPL']```
+
+现在，打印股票代码就变得稍微容易一些了，你也不必记住字符串的名字！</code></pre>
+<p><br />
+print(VINIX[0])</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>C<br />
+      print(VINIX[1])<br />
+      MA</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<pre><code>_稍后你将学习如何更高效地打印列表中的元素._
+
+你甚至可以查看`VINIX`是否**包含**某一特定的股票&lt;br&gt;
+像这样：</code></pre>
+<p>'GE' in VINIX</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>False</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>'GOOGL' in VINIX</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>True<br />
+      ```</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p><em>我们将在本课后面再次研究华尔街的这个例子，以展示数据结构更多可使用的场景！</em></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. 列表方法.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 为什么我们需要列表？')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
