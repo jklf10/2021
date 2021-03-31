@@ -1,0 +1,1074 @@
+{
+  "data": {
+    "lesson": {
+      "id": 561640,
+      "key": "12cedc4a-517f-44f8-9b73-de46ae994a0c",
+      "title": "Numpy & Pandas - 第二部分",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在这节课中，你将继续学习 numpy 和 pandas ! ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/12cedc4a-517f-44f8-9b73-de46ae994a0c/561640/1544465990952/Numpy+%26+Pandas+-+%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/12cedc4a-517f-44f8-9b73-de46ae994a0c/561640/1544465982784/Numpy+%26+Pandas+-+%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86+Subtitles.zip"
+          },
+          {
+            "name": "Nyc Subway Weather Descriptions",
+            "uri": "https://video.udacity-data.com/topher/2018/March/5a985a58_nyc-subway-weather-descriptions/nyc-subway-weather-descriptions.pdf"
+          },
+          {
+            "name": "Numpy Pandas Cheatsheet",
+            "uri": "https://video.udacity-data.com/topher/2018/March/5a985a64_numpy-pandas-cheatsheet/numpy-pandas-cheatsheet.pdf"
+          },
+          {
+            "name": "Nyc Subway Weather",
+            "uri": "https://video.udacity-data.com/topher/2018/March/5a985d01_nyc-subway-weather/nyc-subway-weather.csv"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 176517,
+          "key": "54422617650923",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617650923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174139,
+              "key": "5442261765",
+              "title": "简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "wwzSxJvGwf0",
+                "china_cdn_id": "wwzSxJvGwf0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 176518,
+          "key": "54422617660923",
+          "title": "地铁数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617660923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174140,
+              "key": "5442261766",
+              "title": "地铁数据",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261766",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "mIn7nMR092Q",
+                  "china_cdn_id": "mIn7nMR092Q.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "地铁数据 - 练习",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/4jRiVw2LgOhHaARa02XiIhghaCJfEqJ8sjYbP9IoiEqinulNuGfrUBSimr-vXwtwHub-WoPLz23E_ynryg=s0#w=1440&h=810",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5442261766",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "5436963336",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.03578943266832918,
+                      "y": 0.5046078159645233
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.03672459476309227,
+                      "y": 0.6271133592017738
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "WCcnGQY771c",
+                  "china_cdn_id": "WCcnGQY771c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176519,
+          "key": "54422617690923",
+          "title": "二维 NumPy 数组",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617690923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174141,
+              "key": "5442261769",
+              "title": "二维 NumPy 数组",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "### 内存布局\n\n[此页面](http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#internal-memory-layout-of-an-ndarray) 介绍了 2D NumPy 数组的内存布局。",
+              "user_state": {
+                "node_key": "5442261769",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "UFcCmB7Xvvs",
+                  "china_cdn_id": "UFcCmB7Xvvs.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "二维 NumPy 数组 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5308051148",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\n\n# Subway ridership for 5 stations on 10 different days\nridership = np.array([\n    [   0,    0,    2,    5,    0],\n    [1478, 3877, 3674, 2328, 2539],\n    [1613, 4088, 3991, 6461, 2691],\n    [1560, 3392, 3826, 4787, 2613],\n    [1608, 4802, 3932, 4477, 2705],\n    [1576, 3933, 3909, 4979, 2685],\n    [  95,  229,  255,  496,  201],\n    [   2,    0,    1,   27,    0],\n    [1438, 3785, 3589, 4174, 2215],\n    [1342, 4043, 4009, 4665, 3033]\n])\n\n# Change False to True for each block of code to see what it does\n\n# Accessing elements\nif False:\n    print ridership[1, 3]\n    print ridership[1:3, 3:5]\n    print ridership[1, :]\n    \n# Vectorized operations on rows or columns\nif False:\n    print ridership[0, :] + ridership[1, :]\n    print ridership[:, 0] + ridership[:, 1]\n    \n# Vectorized operations on entire arrays\nif False:\n    a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\n    b = np.array([[1, 1, 1], [2, 2, 2], [3, 3, 3]])\n    print a + b\n\ndef mean_riders_for_max_station(ridership):\n    '''\n    Fill in this function to find the station with the maximum riders on the\n    first day, then return the mean riders per day for that station. Also\n    return the mean ridership overall for comparsion.\n    \n    Hint: NumPy's argmax() function might be useful:\n    http://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html\n    '''\n    overall_mean = None # Replace this with your code\n    mean_for_max = None # Replace this with your code\n    \n    return (overall_mean, mean_for_max)",
+                    "name": "numpy_arrays.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "dutQvWMO0AU",
+                  "china_cdn_id": "dutQvWMO0AU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176520,
+          "key": "54422617720923",
+          "title": "NumPy 轴",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617720923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174142,
+              "key": "5442261772",
+              "title": "NumPy 轴",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261772",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "k8Ru6RQJbd4",
+                  "china_cdn_id": "k8Ru6RQJbd4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "NumPy 轴 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5302262436",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\n\n# Change False to True for this block of code to see what it does\n\n# NumPy axis argument\nif False:\n    a = np.array([\n        [1, 2, 3],\n        [4, 5, 6],\n        [7, 8, 9]\n    ])\n    \n    print a.sum()\n    print a.sum(axis=0)\n    print a.sum(axis=1)\n    \n# Subway ridership for 5 stations on 10 different days\nridership = np.array([\n    [   0,    0,    2,    5,    0],\n    [1478, 3877, 3674, 2328, 2539],\n    [1613, 4088, 3991, 6461, 2691],\n    [1560, 3392, 3826, 4787, 2613],\n    [1608, 4802, 3932, 4477, 2705],\n    [1576, 3933, 3909, 4979, 2685],\n    [  95,  229,  255,  496,  201],\n    [   2,    0,    1,   27,    0],\n    [1438, 3785, 3589, 4174, 2215],\n    [1342, 4043, 4009, 4665, 3033]\n])\n\ndef min_and_max_riders_per_day(ridership):\n    '''\n    Fill in this function. First, for each subway station, calculate the\n    mean ridership per day. Then, out of all the subway stations, return the\n    maximum and minimum of these values. That is, find the maximum\n    mean-ridership-per-day and the minimum mean-ridership-per-day for any\n    subway station.\n    '''\n    max_daily_ridership = None     # Replace this with your code\n    min_daily_ridership = None     # Replace this with your code\n    \n    return (max_daily_ridership, min_daily_ridership)",
+                    "name": "numpy_axis.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "8HFOaRdDpek",
+                  "china_cdn_id": "8HFOaRdDpek.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176522,
+          "key": "54422617750923",
+          "title": "NumPy 和 Pandas 数据类型",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617750923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174143,
+              "key": "5442261775",
+              "title": "NumPy 和 Pandas 数据类型",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "seEFuJ-qvlg",
+                "china_cdn_id": "seEFuJ-qvlg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 176521,
+          "key": "54422617760923",
+          "title": "访问 DataFrame 元素",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617760923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174144,
+              "key": "5442261776",
+              "title": "访问 DataFrame 元素",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261776",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "hZp9cVuiPo0",
+                  "china_cdn_id": "hZp9cVuiPo0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "访问 DataFrame 元素 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5328928612",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\n# Subway ridership for 5 stations on 10 different days\nridership_df = pd.DataFrame(\n    data=[[   0,    0,    2,    5,    0],\n          [1478, 3877, 3674, 2328, 2539],\n          [1613, 4088, 3991, 6461, 2691],\n          [1560, 3392, 3826, 4787, 2613],\n          [1608, 4802, 3932, 4477, 2705],\n          [1576, 3933, 3909, 4979, 2685],\n          [  95,  229,  255,  496,  201],\n          [   2,    0,    1,   27,    0],\n          [1438, 3785, 3589, 4174, 2215],\n          [1342, 4043, 4009, 4665, 3033]],\n    index=['05-01-11', '05-02-11', '05-03-11', '05-04-11', '05-05-11',\n           '05-06-11', '05-07-11', '05-08-11', '05-09-11', '05-10-11'],\n    columns=['R003', 'R004', 'R005', 'R006', 'R007']\n)\n\n# Change False to True for each block of code to see what it does\n\n# DataFrame creation\nif False:\n    # You can create a DataFrame out of a dictionary mapping column names to values\n    df_1 = pd.DataFrame({'A': [0, 1, 2], 'B': [3, 4, 5]})\n    print df_1\n\n    # You can also use a list of lists or a 2D NumPy array\n    df_2 = pd.DataFrame([[0, 1, 2], [3, 4, 5]], columns=['A', 'B', 'C'])\n    print df_2\n   \n\n# Accessing elements\nif False:\n    print ridership_df.iloc[0]\n    print ridership_df.loc['05-05-11']\n    print ridership_df['R003']\n    print ridership_df.iloc[1, 3]\n    \n# Accessing multiple rows\nif False:\n    print ridership_df.iloc[1:4]\n    \n# Accessing multiple columns\nif False:\n    print ridership_df[['R003', 'R005']]\n    \n# Pandas axis\nif False:\n    df = pd.DataFrame({'A': [0, 1, 2], 'B': [3, 4, 5]})\n    print df.sum()\n    print df.sum(axis=1)\n    print df.values.sum()\n    \ndef mean_riders_for_max_station(ridership):\n    '''\n    Fill in this function to find the station with the maximum riders on the\n    first day, then return the mean riders per day for that station. Also\n    return the mean ridership overall for comparsion.\n    \n    This is the same as a previous exercise, but this time the\n    input is a Pandas DataFrame rather than a 2D NumPy array.\n    '''\n    overall_mean = None # Replace this with your code\n    mean_for_max = None # Replace this with your code\n    \n    return (overall_mean, mean_for_max)",
+                    "name": "dataframe.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "4RmQYWI8lY4",
+                  "china_cdn_id": "4RmQYWI8lY4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176523,
+          "key": "54422617790923",
+          "title": "将数据加载到 DataFrame 中",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174145,
+              "key": "5442261779",
+              "title": "将数据加载到 DataFrame 中",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "N66_j0gxuhg",
+                "china_cdn_id": "N66_j0gxuhg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 176524,
+          "key": "54422617800923",
+          "title": "计算相关性",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617800923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174146,
+              "key": "5442261780",
+              "title": "计算相关性",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "### 理解和解读相关性\n\n* [此页面](http://onlinestatbook.com/2/describing_bivariate_data/pearson.html)包含不同相关系数值的变量的部分散点图。\n* [此页面](http://rpsychologist.com/d3/correlation/)允许你使用滑块来更改相关系数，看看数据会如何呈现。\n* 皮尔逊积矩相关系数（[Pearson's r](https://en.wikipedia.org/wiki/Pearson_product-moment_correlation_coefficient)）仅测量线性相关系数！[这张图片](https://en.wikipedia.org/wiki/Correlation_and_dependence#/media/File:Correlation_examples2.svg)展示了部分不同的线性和非线性关系，以及这些关系的皮尔逊积矩相关系数会是多少。\n\n### 修正与未修正的标准偏差\n\n默认情况下，Pandas 的 `std()` 函数使用[贝塞耳校正系数](https://en.wikipedia.org/wiki/Bessel%27s_correction)来计算标准偏差。调用 `std(ddof=0)` 可以禁止使用贝塞耳校正系数。\n\n\n### 上一道练习题\n\n你使用简单启发法估算相关系数的练习题是第二节课中的“Pandas Series”练习题。\n\n### NumPy 中的皮尔逊积矩相关系数\n\nNumPy 的 [corrcoef()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.corrcoef.html) 函数可用来计算皮尔逊积矩相关系数，也简称为“相关系数”。",
+              "user_state": {
+                "node_key": "5442261780",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "isBv5D88Nso",
+                  "china_cdn_id": "isBv5D88Nso.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "计算相关系数 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5325198649",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\nfilename = '/datasets/ud170/subway/nyc_subway_weather.csv'\nsubway_df = pd.read_csv(filename)\n\ndef correlation(x, y):\n    '''\n    Fill in this function to compute the correlation between the two\n    input variables. Each input is either a NumPy array or a Pandas\n    Series.\n    \n    correlation = average of (x in standard units) times (y in standard units)\n    \n    Remember to pass the argument \"ddof=0\" to the Pandas std() function!\n    '''\n    return None\n\nentries = subway_df['ENTRIESn_hourly']\ncum_entries = subway_df['ENTRIESn']\nrain = subway_df['meanprecipi']\ntemp = subway_df['meantempi']\n\nprint correlation(entries, rain)\nprint correlation(entries, temp)\nprint correlation(rain, temp)\n\nprint correlation(entries, cum_entries)",
+                    "name": "correlation.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "yLql7kR_6GE",
+                  "china_cdn_id": "yLql7kR_6GE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176526,
+          "key": "54422617830923",
+          "title": "Pandas 轴名",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617830923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174147,
+              "key": "5442261783",
+              "title": "Pandas 轴名",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "8vr8KQuJLcQ",
+                "china_cdn_id": "8vr8KQuJLcQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 176525,
+          "key": "54422617840923",
+          "title": "DataFrame 向量化运算",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617840923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174148,
+              "key": "5442261784",
+              "title": "DataFrame 向量化运算",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "### Pandas shift()\n\nPandas shift() 函数的文档可以在[这里](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.shift.html)找到。如果你仍不确定函数的运行机制，请一边尝试一边了解！\n\n### 另一种方法\n\n还有一种方法是通过向量化运算，你还可以使用代码 `return entries_and_exits.diff()` 在单个步骤中计算答案。",
+              "user_state": {
+                "node_key": "5442261784",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "xbtnAlV0ZSA",
+                  "china_cdn_id": "xbtnAlV0ZSA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "DataFrame 向量化运算 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5358248550",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\n# Examples of vectorized operations on DataFrames:\n# Change False to True for each block of code to see what it does\n\n# Adding DataFrames with the column names\nif False:\n    df1 = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]})\n    df2 = pd.DataFrame({'a': [10, 20, 30], 'b': [40, 50, 60], 'c': [70, 80, 90]})\n    print df1 + df2\n    \n# Adding DataFrames with overlapping column names \nif False:\n    df1 = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]})\n    df2 = pd.DataFrame({'d': [10, 20, 30], 'c': [40, 50, 60], 'b': [70, 80, 90]})\n    print df1 + df2\n\n# Adding DataFrames with overlapping row indexes\nif False:\n    df1 = pd.DataFrame({'a': [1, 2, 3], 'b': [4, 5, 6], 'c': [7, 8, 9]},\n                       index=['row1', 'row2', 'row3'])\n    df2 = pd.DataFrame({'a': [10, 20, 30], 'b': [40, 50, 60], 'c': [70, 80, 90]},\n                       index=['row4', 'row3', 'row2'])\n    print df1 + df2\n\n# --- Quiz ---\n# Cumulative entries and exits for one station for a few hours.\nentries_and_exits = pd.DataFrame({\n    'ENTRIESn': [3144312, 3144335, 3144353, 3144424, 3144594,\n                 3144808, 3144895, 3144905, 3144941, 3145094],\n    'EXITSn': [1088151, 1088159, 1088177, 1088231, 1088275,\n               1088317, 1088328, 1088331, 1088420, 1088753]\n})\n\ndef get_hourly_entries_and_exits(entries_and_exits):\n    '''\n    Fill in this function to take a DataFrame with cumulative entries\n    and exits (entries in the first column, exits in the second) and\n    return a DataFrame with hourly entries and exits (entries in the\n    first column, exits in the second).\n    '''\n    return None",
+                    "name": "vectorized_operations.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "vsLtePFaOFY",
+                  "china_cdn_id": "vsLtePFaOFY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176527,
+          "key": "54422617870923",
+          "title": "DataFrame applymap()",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617870923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174149,
+              "key": "5442261787",
+              "title": "DataFrame applymap()",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "​**提示​**：你可能需要定义一个与 `.applymap()` 一起使用的辅助函数。",
+              "user_state": {
+                "node_key": "5442261787",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "lVLgiRRhFpQ",
+                  "china_cdn_id": "lVLgiRRhFpQ.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "DataFrame applymap() - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5346438550",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\n# Change False to True for this block of code to see what it does\n\n# DataFrame applymap()\nif False:\n    df = pd.DataFrame({\n        'a': [1, 2, 3],\n        'b': [10, 20, 30],\n        'c': [5, 10, 15]\n    })\n    \n    def add_one(x):\n        return x + 1\n        \n    print df.applymap(add_one)\n    \ngrades_df = pd.DataFrame(\n    data={'exam1': [43, 81, 78, 75, 89, 70, 91, 65, 98, 87],\n          'exam2': [24, 63, 56, 56, 67, 51, 79, 46, 72, 60]},\n    index=['Andre', 'Barry', 'Chris', 'Dan', 'Emilio', \n           'Fred', 'Greta', 'Humbert', 'Ivan', 'James']\n)\n    \ndef convert_grades(grades):\n    '''\n    Fill in this function to convert the given DataFrame of numerical\n    grades to letter grades. Return a new DataFrame with the converted\n    grade.\n    \n    The conversion rule is:\n        90-100 -> A\n        80-89  -> B\n        70-79  -> C\n        60-69  -> D\n        0-59   -> F\n    '''\n    return None",
+                    "name": "pandas_applymap.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Vp43h6ZRyoQ",
+                  "china_cdn_id": "Vp43h6ZRyoQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176528,
+          "key": "54422617900923",
+          "title": "DataFrame apply()",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617900923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174150,
+              "key": "5442261790",
+              "title": "DataFrame apply()",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**注意**：为使计算能够正确进行，我们应该在 `.std()` 函数中将“ddof”参数的值设置为 0。\n\n注意，计算得出的默认标准偏差类型在 numpy 的 `.std()` 和 pandas 的 `.std()` 函数之间是不同的。默认情况下，numpy 计算的是总体标准偏差，ddof = 0。另一方面，pandas 计算的是样本标准偏差，ddof = 1。如果我们知道所有的分数，那么我们就有了总体——因此，要使用 pandas 进行归一化处理，我们需要将“ddof”设置为 0。",
+              "user_state": {
+                "node_key": "5442261790",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "KSZ2XLYk4hk",
+                  "china_cdn_id": "KSZ2XLYk4hk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "DataFrame apply() - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5331600227",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\ngrades_df = pd.DataFrame(\n    data={'exam1': [43, 81, 78, 75, 89, 70, 91, 65, 98, 87],\n          'exam2': [24, 63, 56, 56, 67, 51, 79, 46, 72, 60]},\n    index=['Andre', 'Barry', 'Chris', 'Dan', 'Emilio', \n           'Fred', 'Greta', 'Humbert', 'Ivan', 'James']\n)\n\n# Change False to True for this block of code to see what it does\n\n# DataFrame apply()\nif False:\n    def convert_grades_curve(exam_grades):\n        # Pandas has a bult-in function that will perform this calculation\n        # This will give the bottom 0% to 10% of students the grade 'F',\n        # 10% to 20% the grade 'D', and so on. You can read more about\n        # the qcut() function here:\n        # http://pandas.pydata.org/pandas-docs/stable/generated/pandas.qcut.html\n        return pd.qcut(exam_grades,\n                       [0, 0.1, 0.2, 0.5, 0.8, 1],\n                       labels=['F', 'D', 'C', 'B', 'A'])\n        \n    # qcut() operates on a list, array, or Series. This is the\n    # result of running the function on a single column of the\n    # DataFrame.\n    print convert_grades_curve(grades_df['exam1'])\n    \n    # qcut() does not work on DataFrames, but we can use apply()\n    # to call the function on each column separately\n    print grades_df.apply(convert_grades_curve)\n    \ndef standardize(df):\n    '''\n    Fill in this function to standardize each column of the given\n    DataFrame. To standardize a variable, convert each value to the\n    number of standard deviations it is above or below the mean.\n    '''\n    return None",
+                    "name": "pandas_apply.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "aGEUhSRys8w",
+                  "china_cdn_id": "aGEUhSRys8w.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176529,
+          "key": "54422617930923",
+          "title": "DataFrame apply() 使用案例 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617930923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174151,
+              "key": "5442261793",
+              "title": "DataFrame apply() 使用案例 2",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261793",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "C6okqt-jf08",
+                  "china_cdn_id": "C6okqt-jf08.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "DataFrame apply() 使用案例 2 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5356068714",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'a': [4, 5, 3, 1, 2],\n    'b': [20, 10, 40, 50, 30],\n    'c': [25, 20, 5, 15, 10]\n})\n\n# Change False to True for this block of code to see what it does\n\n# DataFrame apply() - use case 2\nif False:   \n    print df.apply(np.mean)\n    print df.apply(np.max)\n    \ndef second_largest(df):\n    '''\n    Fill in this function to return the second-largest value of each \n    column of the input DataFrame.\n    '''\n    return None",
+                    "name": "pandas_apply.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "UlRN0J1lYtg",
+                  "china_cdn_id": "UlRN0J1lYtg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176534,
+          "key": "54422617960923",
+          "title": "向 Series 添加 DataFrame",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617960923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174152,
+              "key": "5442261796",
+              "title": "向 Series 添加 DataFrame",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261796",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "IaM7ybOda8k",
+                  "china_cdn_id": "IaM7ybOda8k.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "向 Series 添加 DataFrame - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5362448723",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\n# Change False to True for each block of code to see what it does\n\n# Adding a Series to a square DataFrame\nif False:\n    s = pd.Series([1, 2, 3, 4])\n    df = pd.DataFrame({\n        0: [10, 20, 30, 40],\n        1: [50, 60, 70, 80],\n        2: [90, 100, 110, 120],\n        3: [130, 140, 150, 160]\n    })\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df + s\n    \n# Adding a Series to a one-row DataFrame \nif False:\n    s = pd.Series([1, 2, 3, 4])\n    df = pd.DataFrame({0: [10], 1: [20], 2: [30], 3: [40]})\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df + s\n\n# Adding a Series to a one-column DataFrame\nif False:\n    s = pd.Series([1, 2, 3, 4])\n    df = pd.DataFrame({0: [10, 20, 30, 40]})\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df + s\n    \n\n    \n# Adding when DataFrame column names match Series index\nif False:\n    s = pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])\n    df = pd.DataFrame({\n        'a': [10, 20, 30, 40],\n        'b': [50, 60, 70, 80],\n        'c': [90, 100, 110, 120],\n        'd': [130, 140, 150, 160]\n    })\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df + s\n    \n# Adding when DataFrame column names don't match Series index\nif False:\n    s = pd.Series([1, 2, 3, 4])\n    df = pd.DataFrame({\n        'a': [10, 20, 30, 40],\n        'b': [50, 60, 70, 80],\n        'c': [90, 100, 110, 120],\n        'd': [130, 140, 150, 160]\n    })\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df + s",
+                    "name": "adding.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "K2sUmPodhqg",
+                  "china_cdn_id": "K2sUmPodhqg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176532,
+          "key": "54422617990923",
+          "title": "再次归一化每一列",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422617990923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174153,
+              "key": "5442261799",
+              "title": "再次归一化每一列",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**注意**：为使计算能够正确进行，我们应该在 `.std()` 函数中将“ddof”参数的值设置为 0。\n\n注意，计算得出的默认标准偏差类型在 numpy 的 `.std()` 和 pandas 的 `.std()` 函数之间是不同的。默认情况下，numpy 计算的是总体标准偏差，ddof = 0。另一方面，pandas 计算的是样本标准偏差，ddof = 1。如果我们知道所有的分数，那么我们就有了总体——因此，要使用 pandas 进行归一化处理，我们需要将“ddof”设置为 0。",
+              "user_state": {
+                "node_key": "5442261799",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "7NofF-s1UGY",
+                  "china_cdn_id": "7NofF-s1UGY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "再次归一化每一列 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5328309660",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\n# Adding using +\nif False:\n    s = pd.Series([1, 2, 3, 4])\n    df = pd.DataFrame({\n        0: [10, 20, 30, 40],\n        1: [50, 60, 70, 80],\n        2: [90, 100, 110, 120],\n        3: [130, 140, 150, 160]\n    })\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df + s\n    \n# Adding with axis='index'\nif False:\n    s = pd.Series([1, 2, 3, 4])\n    df = pd.DataFrame({\n        0: [10, 20, 30, 40],\n        1: [50, 60, 70, 80],\n        2: [90, 100, 110, 120],\n        3: [130, 140, 150, 160]\n    })\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df.add(s, axis='index')\n    # The functions sub(), mul(), and div() work similarly to add()\n    \n# Adding with axis='columns'\nif False:\n    s = pd.Series([1, 2, 3, 4])\n    df = pd.DataFrame({\n        0: [10, 20, 30, 40],\n        1: [50, 60, 70, 80],\n        2: [90, 100, 110, 120],\n        3: [130, 140, 150, 160]\n    })\n    \n    print df\n    print '' # Create a blank line between outputs\n    print df.add(s, axis='columns')\n    # The functions sub(), mul(), and div() work similarly to add()\n    \ngrades_df = pd.DataFrame(\n    data={'exam1': [43, 81, 78, 75, 89, 70, 91, 65, 98, 87],\n          'exam2': [24, 63, 56, 56, 67, 51, 79, 46, 72, 60]},\n    index=['Andre', 'Barry', 'Chris', 'Dan', 'Emilio', \n           'Fred', 'Greta', 'Humbert', 'Ivan', 'James']\n)\n\ndef standardize(df):\n    '''\n    Fill in this function to standardize each column of the given\n    DataFrame. To standardize a variable, convert each value to the\n    number of standard deviations it is above or below the mean.\n    \n    This time, try to use vectorized operations instead of apply().\n    You should get the same results as you did before.\n    '''\n    return None\n\ndef standardize_rows(df):\n    '''\n    Optional: Fill in this function to standardize each row of the given\n    DataFrame. Again, try not to use apply().\n    \n    This one is more challenging than standardizing each column!\n    '''\n    return None",
+                    "name": "standardize.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "WmJKPUthUPw",
+                  "china_cdn_id": "WmJKPUthUPw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176533,
+          "key": "54422618020923",
+          "title": "Pandas groupby()",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422618020923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174154,
+              "key": "5442261802",
+              "title": "Pandas groupby()",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261802",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "smBMJlpWdVI",
+                  "china_cdn_id": "smBMJlpWdVI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Pandas groupby() - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5330071257",
+                "initial_code_files": [
+                  {
+                    "text": "import matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\nimport seaborn as sns\n\nvalues = np.array([1, 3, 2, 4, 1, 6, 4])\nexample_df = pd.DataFrame({\n    'value': values,\n    'even': values % 2 == 0,\n    'above_three': values > 3 \n}, index=['a', 'b', 'c', 'd', 'e', 'f', 'g'])\n\n# Change False to True for each block of code to see what it does\n\n# Examine DataFrame\nif False:\n    print example_df\n    \n# Examine groups\nif False:\n    grouped_data = example_df.groupby('even')\n    # The groups attribute is a dictionary mapping keys to lists of row indexes\n    print grouped_data.groups\n    \n# Group by multiple columns\nif False:\n    grouped_data = example_df.groupby(['even', 'above_three'])\n    print grouped_data.groups\n    \n# Get sum of each group\nif False:\n    grouped_data = example_df.groupby('even')\n    print grouped_data.sum()\n    \n# Limit columns in result\nif False:\n    grouped_data = example_df.groupby('even')\n    \n    # You can take one or more columns from the result DataFrame\n    print grouped_data.sum()['value']\n    \n    print '\\n' # Blank line to separate results\n    \n    # You can also take a subset of columns from the grouped data before \n    # collapsing to a DataFrame. In this case, the result is the same.\n    print grouped_data['value'].sum()\n    \nfilename = '/datasets/ud170/subway/nyc_subway_weather.csv'\nsubway_df = pd.read_csv(filename)\n\n### Write code here to group the subway data by a variable of your choice, then\n### either print out the mean ridership within each group or create a plot.",
+                    "name": "groupby.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "w3D0no7E8uw",
+                  "china_cdn_id": "w3D0no7E8uw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176531,
+          "key": "54422618050923",
+          "title": "每小时入站和出站数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422618050923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174155,
+              "key": "5442261805",
+              "title": "每小时入站和出站数",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261805",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "## 使用 groupby() 计算每小时入站和出站数\n\n你在之前的测试题中，是对累计入站数的单一集合计算每小时入站和出站数。然而，在原始数据中，每个站台都有一个单独的数量集。\n\n因此，要准确计算每小时入站和出站数，有必要按每天每站台进行分组，然后计算每天每小时入站和出站数。\n\n写下能够完成此操作的一个函数。你应该使用 `apply()` 函数来调用你之前写的函数。你还应该确保将分组数据限制在入站和出站两列中，因为如果你的函数是在非数值型数据类型上被调用，那么它有可能会造成错误。\n\n如果你希望了解在 Pandas 中使用 `groupby()` 函数的更多信息，可以访问[此页面](http://pandas.pydata.org/pandas-docs/stable/groupby.html)。\n\n注意：你将无法使用此方法，在完整数据集中重新生成 `ENTRIESn_hourly` 和 `EXITSn_hourly` 列。在创建数据集时，我们做了额外的处理，删除了错误值。"
+              },
+              "question": {
+                "title": "Hourly Entries and Exits - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5335432768",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\nimport pandas as pd\n\nvalues = np.array([1, 3, 2, 4, 1, 6, 4])\nexample_df = pd.DataFrame({\n    'value': values,\n    'even': values % 2 == 0,\n    'above_three': values > 3 \n}, index=['a', 'b', 'c', 'd', 'e', 'f', 'g'])\n\n# Change False to True for each block of code to see what it does\n\n# Standardize each group\nif False:\n    def standardize(xs):\n        return (xs - xs.mean()) / xs.std()\n    grouped_data = example_df.groupby('even')\n    print grouped_data['value'].apply(standardize)\n    \n# Find second largest value in each group\nif False:\n    def second_largest(xs):\n        sorted_xs = xs.sort(inplace=False, ascending=False)\n        return sorted_xs.iloc[1]\n    grouped_data = example_df.groupby('even')\n    print grouped_data['value'].apply(second_largest)\n\n# --- Quiz ---\n# DataFrame with cumulative entries and exits for multiple stations\nridership_df = pd.DataFrame({\n    'UNIT': ['R051', 'R079', 'R051', 'R079', 'R051', 'R079', 'R051', 'R079', 'R051'],\n    'TIMEn': ['00:00:00', '02:00:00', '04:00:00', '06:00:00', '08:00:00', '10:00:00', '12:00:00', '14:00:00', '16:00:00'],\n    'ENTRIESn': [3144312, 8936644, 3144335, 8936658, 3144353, 8936687, 3144424, 8936819, 3144594],\n    'EXITSn': [1088151, 13755385,  1088159, 13755393,  1088177, 13755598, 1088231, 13756191,  1088275]\n})\n\ndef get_hourly_entries_and_exits(entries_and_exits):\n    '''\n    Fill in this function to take a DataFrame with cumulative entries\n    and exits and return a DataFrame with hourly entries and exits.\n    The hourly entries and exits should be calculated separately for\n    each station (the 'UNIT' column).\n    \n    Hint: Take a look at the `get_hourly_entries_and_exits()` function\n    you wrote in a previous quiz, DataFrame Vectorized Operations. If\n    you copy it here and rename it, you can use it and the `.apply()`\n    function to help solve this problem.\n    '''\n    return None",
+                    "name": "entries_and_exits.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "_DBUiLAC_z8",
+                  "china_cdn_id": "_DBUiLAC_z8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176530,
+          "key": "54422618070923",
+          "title": "合并 Pandas DataFrame",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422618070923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174156,
+              "key": "5442261807",
+              "title": "合并 Pandas DataFrame",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "在右侧的合并数据表中，第三和四行的加入日期应为 5/19 和 5/11，体现了注册表中的帐户关键字映射。",
+              "user_state": {
+                "node_key": "5442261807",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "_Rx9Z-uURQk",
+                  "china_cdn_id": "_Rx9Z-uURQk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "合并 Pandas DataFrame - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5352008751",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\n\nsubway_df = pd.DataFrame({\n    'UNIT': ['R003', 'R003', 'R003', 'R003', 'R003', 'R004', 'R004', 'R004',\n             'R004', 'R004'],\n    'DATEn': ['05-01-11', '05-02-11', '05-03-11', '05-04-11', '05-05-11',\n              '05-01-11', '05-02-11', '05-03-11', '05-04-11', '05-05-11'],\n    'hour': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n    'ENTRIESn': [ 4388333,  4388348,  4389885,  4391507,  4393043, 14656120,\n                 14656174, 14660126, 14664247, 14668301],\n    'EXITSn': [ 2911002,  2911036,  2912127,  2913223,  2914284, 14451774,\n               14451851, 14454734, 14457780, 14460818],\n    'latitude': [ 40.689945,  40.689945,  40.689945,  40.689945,  40.689945,\n                  40.69132 ,  40.69132 ,  40.69132 ,  40.69132 ,  40.69132 ],\n    'longitude': [-73.872564, -73.872564, -73.872564, -73.872564, -73.872564,\n                  -73.867135, -73.867135, -73.867135, -73.867135, -73.867135]\n})\n\nweather_df = pd.DataFrame({\n    'DATEn': ['05-01-11', '05-01-11', '05-02-11', '05-02-11', '05-03-11',\n              '05-03-11', '05-04-11', '05-04-11', '05-05-11', '05-05-11'],\n    'hour': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n    'latitude': [ 40.689945,  40.69132 ,  40.689945,  40.69132 ,  40.689945,\n                  40.69132 ,  40.689945,  40.69132 ,  40.689945,  40.69132 ],\n    'longitude': [-73.872564, -73.867135, -73.872564, -73.867135, -73.872564,\n                  -73.867135, -73.872564, -73.867135, -73.872564, -73.867135],\n    'pressurei': [ 30.24,  30.24,  30.32,  30.32,  30.14,  30.14,  29.98,  29.98,\n                   30.01,  30.01],\n    'fog': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n    'rain': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],\n    'tempi': [ 52. ,  52. ,  48.9,  48.9,  54. ,  54. ,  57.2,  57.2,  48.9,  48.9],\n    'wspdi': [  8.1,   8.1,   6.9,   6.9,   3.5,   3.5,  15. ,  15. ,  15. ,  15. ]\n})\n\ndef combine_dfs(subway_df, weather_df):\n    '''\n    Fill in this function to take 2 DataFrames, one with subway data and one with weather data,\n    and return a single dataframe with one row for each date, hour, and location. Only include\n    times and locations that have both subway data and weather data available.\n    '''\n    return None",
+                    "name": "combine.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "vB_Et1hz_2M",
+                  "china_cdn_id": "vB_Et1hz_2M.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176537,
+          "key": "54422618100923",
+          "title": "使用 DataFrame 绘制图形",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422618100923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174157,
+              "key": "5442261810",
+              "title": "使用 DataFrame 绘制图形",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "5442261810",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "## 使用 DataFrame 绘制图形\n\nDataFrame 也像 Pandas Series 一样拥有 plot() 方法。如果 `df` 是 DataFrame，那么 `df.plot()` 将生成线条图，其中不同颜色的每条线代表 DataFrame 中的一个变量。这种方法能使你方便快速地查看数据，特别是对于小型 DataFrame 而言，但是对于更复杂的图形，你通常会希望直接使用 matplotlib。\n\n在接下来的测试题中，根据纽约地铁数据创建你的图形，展现数据有趣的一面。例如，你可能会创建：\n\n* 雨天和晴天地铁客流量直方图。 \n* 以经纬度作为 x 和 y 轴、客流量作为气泡大小的地铁站散点图。\n    * 如果你选择此选项，你可能希望对 groupby() 使用 `as_index=False` 参数。以下测试题中有示例代码。\n* 以地铁客流量作为一个轴、降雨量或温度作为另一个轴的散点图。\n\n如果你不确定如何绘制出想要的图形，尝试在 Google 上进行搜索，或者查看 [matplotlib 文档](http://matplotlib.org/api/pyplot_api.html)。一旦你绘制出满意的图形，请分享至论坛！"
+              },
+              "question": {
+                "title": "使用 DataFrame 绘制图形 - 练习",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5325922802",
+                "initial_code_files": [
+                  {
+                    "text": "import matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\nimport seaborn as sns\n\nvalues = np.array([1, 3, 2, 4, 1, 6, 4])\nexample_df = pd.DataFrame({\n    'value': values,\n    'even': values % 2 == 0,\n    'above_three': values > 3 \n}, index=['a', 'b', 'c', 'd', 'e', 'f', 'g'])\n\n# Change False to True for this block of code to see what it does\n\n# groupby() without as_index\nif False:\n    first_even = example_df.groupby('even').first()\n    print first_even\n    print first_even['even'] # Causes an error. 'even' is no longer a column in the DataFrame\n    \n# groupby() with as_index=False\nif False:\n    first_even = example_df.groupby('even', as_index=False).first()\n    print first_even\n    print first_even['even'] # Now 'even' is still a column in the DataFrame\n\nfilename = '/datasets/ud170/subway/nyc_subway_weather.csv'\nsubway_df = pd.read_csv(filename)\n\n## Make a plot of your choice here showing something interesting about the subway data.\n## Matplotlib documentation here: http://matplotlib.org/api/pyplot_api.html\n## Once you've got something you're happy with, share it on the forums!",
+                    "name": "plotting.py"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "CDVgPA0Mv2o",
+                  "china_cdn_id": "CDVgPA0Mv2o.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 176535,
+          "key": "54067602430923",
+          "title": "三维数据",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54067602430923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174158,
+              "key": "5406760243",
+              "title": "三维数据",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 三维（3D）数据\n\n你已经处理过一维和二维数据，你可能想知道如何处理三维以上的数据。\n\n### NumPy 的 3D 数据\n\nNumPy 数组可以具有任意多的维度。就像你可以从列表中创建 1D 数组，从列表的列表中创建 2D 数组一样，你可以从列表的列表的列表中创建 3D 数组，以此类推。例如，以下代码将创建 3D 数组：\n```\na = np.array([\n    [['A1a', 'A1b', A1c'], ['A2a', 'A2b', 'A2c']],\n    [['B1a', 'B1b', 'B1c'], ['B2a', 'B2b', 'B2c']]\n])\n```\n\n### Pandas 的 3D 数据\n\nPandas 有一个叫作 Panel 的数据结构，类似 DataFrame 或 Series，只不过用于 3D 数据。如果你有兴趣，可以在这里了解 [Panel](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#panel)。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 176539,
+          "key": "54422618120923",
+          "title": "结论",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "54422618120923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 174159,
+              "key": "5442261812",
+              "title": "结论",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "### Pandas 链接\n\n* [在雪中玩耍的红色熊猫](https://www.youtube.com/watch?v=DSehQsYU9h4) \n* [大熊猫哄熊猫宝宝入睡](http://www.dailymail.co.uk/video/news/video-1085584/TOO-CUTE-Giant-Panda-puts-Baby-Panda-bed-Taipei-Zoo.html) \n* [在滑梯上玩耍的熊猫](https://www.youtube.com/watch?v=sGF6bOi1NfA)\n\nPandas 这个单词也有熊猫的意思。我们为你准备了一些可爱的熊猫视频，希望你会喜欢。你可能需要 VPN 才能访问以上视频。\n\n这些[熊猫视频](http://www.soku.com/search_video/q_%E5%8F%AF%E7%88%B1%E7%9A%84%E7%86%8A%E7%8C%AB_orderby_3_hd_6_limitdate_0?site=14&_lg=10&lengthtype=1&spm=0.0.0.0.NPlJib)不需要 VPN。 ",
+              "video": {
+                "youtube_id": "JUI9VHvwI08",
+                "china_cdn_id": "JUI9VHvwI08.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}
