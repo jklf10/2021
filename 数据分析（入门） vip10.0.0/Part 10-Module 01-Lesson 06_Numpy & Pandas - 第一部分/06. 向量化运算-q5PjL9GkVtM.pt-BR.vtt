@@ -1,0 +1,72 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.240 --> 00:00:01.980
+Todas essas respostas são aceitáveis.
+
+00:00:01.980 --> 00:00:05.640
+Na verdade, todas são implementadas
+por diferentes linguagens de programação.
+
+00:00:05.640 --> 00:00:09.370
+A primeira é uma adição de vetores,
+como definido pela álgebra linear.
+
+00:00:09.370 --> 00:00:11.940
+Primeiro, os dois primeiros números
+foram adicionados para obter 5.
+
+00:00:11.940 --> 00:00:13.900
+Depois, os dois segundos foram adicionados para obter 7.
+
+00:00:13.900 --> 00:00:17.020
+Finalmente, os dois últimos
+foram adicionados para obter 9.
+
+00:00:17.020 --> 00:00:21.090
+Esse também é o comportamento
+obtido quando você adiciona dois arrays NumPy.
+
+00:00:21.090 --> 00:00:25.010
+O segundo resultado é o resultado de
+algo chamado concatenação de lista e
+
+00:00:25.010 --> 00:00:28.070
+é isso que a adição de duas
+listas faz no Python.
+
+00:00:28.070 --> 00:00:31.510
+Uma nova lista é criada com todos
+os elementos da primeira lista
+
+00:00:31.510 --> 00:00:34.160
+seguidos por todos os elementos
+da segunda lista.
+
+00:00:34.160 --> 00:00:36.450
+E a última opção é muito comum.
+
+00:00:36.450 --> 00:00:39.400
+A maioria das linguagens implementa
+concatenação de lista.
+
+00:00:39.400 --> 00:00:41.670
+Mas, em muitas linguagens,
+você chama uma função ou
+
+00:00:41.670 --> 00:00:44.300
+usa um símbolo diferente
+do sinal de mais.
+
+00:00:44.300 --> 00:00:48.500
+Então, usar o sinal de mais com dois
+arrays ou menos daria erro.
+
+00:00:48.500 --> 00:00:52.050
+Como essa primeira opção é o que o Num Py
+faz, essa é a opção em que focaremos
+
+00:00:52.050 --> 00:00:52.950
+neste curso.
+

@@ -1,0 +1,48 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.501
+Esta é a consulta que fiz para
+encontrar a solução do problema.
+
+00:00:03.535 --> 00:00:06.133
+"Pandas add two series
+without nans".
+
+00:00:06.167 --> 00:00:07.701
+O primeiro resultado
+
+00:00:07.735 --> 00:00:11.334
+é sobre adicionar séries
+de pandas sem sofrer NaNs.
+
+00:00:11.368 --> 00:00:13.400
+Parece ser o que imagino.
+
+00:00:13.434 --> 00:00:17.232
+A primeira resposta da página
+sugere usar o "fill_value"
+
+00:00:17.266 --> 00:00:19.467
+e dá um código de exemplo.
+
+00:00:19.501 --> 00:00:20.968
+No código de exemplo,
+
+00:00:21.002 --> 00:00:26.100
+a pessoa sugere usar a função
+".add" em vez de "+".
+
+00:00:26.134 --> 00:00:30.534
+Então a função ".add" aceita
+um argumento, "fill_value=0".
+
+00:00:30.927 --> 00:00:33.501
+Vou tentar isso
+nessas duas séries.
+
+00:00:33.751 --> 00:00:36.601
+O resultado é exatamente
+o que eu esperava.
+

@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.915
+We've provided a code for you to load each variable into something called a data frame,
+
+00:00:03.915 --> 00:00:05.755
+which you'll learn about next lesson.
+
+00:00:05.755 --> 00:00:10.735
+Then this code extracted a series from each data frame corresponding to the US only.
+
+00:00:10.735 --> 00:00:13.935
+If you wanted to examine a country other than the United States,
+
+00:00:13.935 --> 00:00:15.765
+you could have changed this value.
+
+00:00:15.765 --> 00:00:17.100
+Now to make my plots,
+
+00:00:17.100 --> 00:00:19.620
+I'll add the one percent pylab inline to
+
+00:00:19.620 --> 00:00:22.205
+make my plots appear within the IPython Notebook,
+
+00:00:22.205 --> 00:00:25.695
+but if you're not using IPython Notebook you wouldn't have added this line.
+
+00:00:25.695 --> 00:00:30.570
+And then I can plot the employment in the US by calling employment_us.plot.
+
+00:00:30.570 --> 00:00:32.160
+Here, I can see that the years,
+
+00:00:32.160 --> 00:00:35.835
+which are the indexes of the series have been filled in on the x-axis,
+
+00:00:35.835 --> 00:00:39.325
+and the employment values have been filled in on the y-axis.
+
+00:00:39.325 --> 00:00:42.680
+And the same code would work for the other variables.
+

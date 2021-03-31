@@ -1,0 +1,26 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.310 --> 00:00:03.240
+A função argmax na série
+Pandas retorna o índice em que
+
+00:00:03.240 --> 00:00:04.750
+ocorre o valor máximo.
+
+00:00:05.750 --> 00:00:08.550
+Neste caso,
+o índice será o nome do país.
+
+00:00:08.550 --> 00:00:11.380
+Em seguida, para localizar o valor
+correspondente a esse país,
+
+00:00:11.380 --> 00:00:13.230
+usarei o atributo loc.
+
+00:00:13.230 --> 00:00:15.020
+E ele retornará automaticamente o país
+e o valor.
+

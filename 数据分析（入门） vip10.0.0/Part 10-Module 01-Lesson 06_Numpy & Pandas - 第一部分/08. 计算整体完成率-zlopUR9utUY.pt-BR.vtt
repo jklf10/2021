@@ -1,0 +1,86 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.140 --> 00:00:03.010
+Antes de começar esta função,
+vou pensar em como
+
+00:00:03.010 --> 00:00:05.950
+eu calcularia a
+taxa de conclusão geral de um único país.
+
+00:00:07.070 --> 00:00:10.900
+Vamos dizer que eu tenha esses dois valores para
+uma taxa de conclusão masculina e feminina.
+
+00:00:10.900 --> 00:00:14.580
+Para obter a taxa de conclusão geral,
+eu adicionaria esses dois valores e
+
+00:00:14.580 --> 00:00:16.230
+dividiria por dois.
+
+00:00:16.230 --> 00:00:18.300
+Parece que isso funciona.
+
+00:00:18.300 --> 00:00:20.530
+Em decorrência das operações de
+vetores de Numpy,
+
+00:00:20.530 --> 00:00:24.390
+posso realmente usar esta mesma
+linha exata do código de arrays.
+
+00:00:24.390 --> 00:00:25.280
+Para demonstrar isso,
+
+00:00:25.280 --> 00:00:28.720
+vou mostrar os resultados desses arrays
+mais curtos com dados de apenas 20 países.
+
+00:00:29.860 --> 00:00:33.210
+Primeiro, se eu adicionar os dois arrays juntos
+vou conseguir um array com a
+
+00:00:33.210 --> 00:00:36.660
+soma da taxa
+de conclusão masculina e feminina para cada país.
+
+00:00:36.660 --> 00:00:39.560
+Portanto, cada elemento no
+array resultante é a soma
+
+00:00:39.560 --> 00:00:42.209
+dos elementos correspondentes
+dos dois arrays anteriores.
+
+00:00:43.210 --> 00:00:45.060
+Vou nomear este array como total_array.
+
+00:00:45.060 --> 00:00:49.540
+Então, se eu dividir o array total por dois,
+vou obter um array onde cada elemento
+
+00:00:49.540 --> 00:00:52.150
+é metade do elemento
+correspondente do array total.
+
+00:00:53.170 --> 00:00:56.980
+Este é o resultado que eu queria, então
+vou rolar para cima e preencher minha função.
+
+00:00:56.980 --> 00:01:00.586
+O código desta função
+é return (female_completion +
+
+00:01:00.586 --> 00:01:02.372
+male_completion) / 2.
+
+00:01:02.372 --> 00:01:05.510
+E assim como fazer
+aritmética em números simples,
+
+00:01:05.510 --> 00:01:06.950
+adicionar parênteses é importante.
+

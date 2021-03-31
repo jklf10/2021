@@ -1,0 +1,50 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.110 --> 00:00:04.560
+Em seguida, quero falar sobre a
+diferença entre + e += no NumPy.
+
+00:00:04.560 --> 00:00:06.450
+Antes de eu dizer qual
+é a diferença,
+
+00:00:06.450 --> 00:00:09.720
+quero que você pense no
+que espera que a diferença seja.
+
+00:00:09.720 --> 00:00:15.080
+Veja estes dois trechos de código. Eles
+são os mesmo, exceto pelo fato de um dizer a +=
+
+00:00:15.080 --> 00:00:20.660
+este array
+e o outro, a = a + este array.
+
+00:00:20.660 --> 00:00:24.000
+Para cada trecho de código, selecione
+qual você acredita ser o resultado.
+
+00:00:24.000 --> 00:00:28.464
+Suas opções são: array([1, 2,
+3, 4]), array([2, 3, 4, 5])
+
+00:00:28.464 --> 00:00:31.120
+ou o código produzirá um erro.
+
+00:00:31.120 --> 00:00:33.640
+Se você não tiver certeza,
+chute ou
+
+00:00:33.640 --> 00:00:35.270
+teste para ver o resultado.
+
+00:00:35.270 --> 00:00:38.290
+O importante é não acertar
+na primeira tentativa, mas
+
+00:00:38.290 --> 00:00:39.930
+aprender a resposta
+para o futuro.
+

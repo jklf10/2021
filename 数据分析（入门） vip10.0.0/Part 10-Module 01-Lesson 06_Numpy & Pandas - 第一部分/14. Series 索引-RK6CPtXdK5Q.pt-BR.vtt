@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.180 --> 00:00:04.750
+Quais são os benefícios de usar
+uma série Pandas em vez de um array NumPy?
+
+00:00:04.750 --> 00:00:07.590
+Antes, eu mencionei que séries
+Pandas têm algumas funções extras
+
+00:00:07.590 --> 00:00:09.270
+indisponíveis em arrays NumPy.
+
+00:00:09.270 --> 00:00:11.230
+Por exemplo, a função describe.
+
+00:00:12.340 --> 00:00:15.410
+Mas a maior diferença
+entre séries Pandas e
+
+00:00:15.410 --> 00:00:19.920
+arrays NumPy é que uma série Pandas
+tem algo chamado índice.
+
+00:00:19.920 --> 00:00:21.800
+Vamos ver um exemplo.
+
+00:00:21.800 --> 00:00:23.970
+Nesta lição,
+olhamos dados de
+
+00:00:23.970 --> 00:00:26.880
+vários países diferentes e
+criei um array para reter
+
+00:00:26.880 --> 00:00:30.210
+os pontos de dados e
+outro para reter os nomes dos países.
+
+00:00:30.210 --> 00:00:33.210
+Em Pandas,
+eu só criaria uma série e
+
+00:00:33.210 --> 00:00:36.430
+usaria os pontos de dados
+como os valores da série.
+
+00:00:36.430 --> 00:00:39.960
+Depois, eu usaria os nomes dos países
+como o índice da série.
+
+00:00:39.960 --> 00:00:43.510
+Agora, vou deletar o código do array NumPy e
+imprimir a série.
+
+00:00:43.510 --> 00:00:46.850
+É possível ver que as Pandas
+ligam cada valor de índice
+
+00:00:46.850 --> 00:00:48.980
+ao ponto de dados correspondente.
+
+00:00:48.980 --> 00:00:52.910
+Como já dito, arrays NumPy são
+como versões menos claras das listas Python.
+
+00:00:54.100 --> 00:00:59.640
+Da mesma forma, uma série Pandas é como
+uma combinação entre uma lista e um dicionário.
+
+00:00:59.640 --> 00:01:04.250
+Em uma lista, elementos são armazenados em ordem
+e dá para acessá-los pela posição.
+
+00:01:04.250 --> 00:01:07.350
+Você acabou de ver que
+isso também vale para uma série.
+
+00:01:07.350 --> 00:01:10.940
+Estes valores são armazenados em ordem e
+dá para acessá-los pela posição.
+
+00:01:12.060 --> 00:01:13.520
+Já no dicionário,
+
+00:01:13.520 --> 00:01:15.930
+pode haver uma chave como
+o nome de um país
+
+00:01:15.930 --> 00:01:19.990
+e um valor como expectativa de vida,
+e dá para procurar valores pelas chaves.
+
+00:01:19.990 --> 00:01:23.620
+Já foi visto antes que
+o código life_expectancy
+
+00:01:23.620 --> 00:01:28.070
+no zero dará a expectativa de vida
+na posição zero na série.
+
+00:01:28.070 --> 00:01:31.300
+A Pandas também tem um atributo
+chamado loc que deixa você procurar
+
+00:01:31.300 --> 00:01:33.240
+valores pelo índice.
+
+00:01:33.240 --> 00:01:38.550
+Se eu executar life_expectancy.loc Angola,
+verei a expectativa de vida para a
+
+00:01:38.550 --> 00:01:43.015
+Angola, sem precisar saber a
+posição de Angola na lista.
+
+00:01:43.015 --> 00:01:46.165
+Então, o que acontece se for criada
+uma série sem especificar um índice,
+
+00:01:46.165 --> 00:01:46.935
+como foi feito antes?
+
+00:01:48.065 --> 00:01:51.995
+Os números 0, 1,
+2, e assim por diante, são usados como índices
+
+00:01:51.995 --> 00:01:53.375
+por padrão.
+
+00:01:53.375 --> 00:01:57.005
+Antes, quando acessei
+elementos usando colchetes,
+
+00:01:57.005 --> 00:02:00.870
+não ficou claro se eu estava
+acessando por índice ou posição.
+
+00:02:00.870 --> 00:02:04.060
+Agora, deve ficar claro que
+os colchetes estão acessando
+
+00:02:04.060 --> 00:02:05.250
+os elementos por posição,
+
+00:02:05.250 --> 00:02:09.500
+já que não há valor na nossa série
+de expectativa de vida com índice zero.
+
+00:02:09.500 --> 00:02:12.975
+Prefiro ser mais clara
+quando uso uma série.
+
+00:02:12.975 --> 00:02:15.850
+A Pandas tem um atributo,
+que corresponde ao loc,
+
+00:02:15.850 --> 00:02:19.480
+chamado iloc para acessar
+elementos por posição.
+
+00:02:19.480 --> 00:02:21.820
+Estas duas linhas de código
+fazem a mesma coisa, mas
+
+00:02:21.820 --> 00:02:24.960
+acho a versão que usa o iloc
+um pouco mais clara.
+
+00:02:26.300 --> 00:02:27.996
+Aliás, aí vai uma observação sobre terminologia.
+
+00:02:27.996 --> 00:02:30.060
+Neste array NumPy,
+
+00:02:30.060 --> 00:02:34.220
+muitos dizem que
+o país Albânia está no índice zero.
+
+00:02:34.220 --> 00:02:39.210
+E chamarão usando
+colchetes para acessar um elemento do array,
+
+00:02:39.210 --> 00:02:41.140
+indexando-o dentro do array.
+
+00:02:41.140 --> 00:02:43.880
+Tento evitar
+essa terminologia e
+
+00:02:43.880 --> 00:02:48.530
+chamo de posição zero em vez de
+índice zero, já que em uma série Pandas,
+
+00:02:48.530 --> 00:02:51.200
+o índice e
+a posição são diferentes.
+
+00:02:51.200 --> 00:02:54.410
+Mas fique atento, pois você pode ouvir
+o termo índice sendo usado de maneira inconsistente
+
+00:02:54.410 --> 00:02:55.520
+em outro lugar.
+
+00:02:55.520 --> 00:02:58.140
+Na próxima tela,
+quero que você reescreva a função
+
+00:02:58.140 --> 00:03:00.710
+max_employment que foi escrita no
+início desta lição.
+
+00:03:00.710 --> 00:03:03.710
+Ela encontra a maior taxa de
+emprego em certos dados, e
+
+00:03:03.710 --> 00:03:05.970
+o nome do país com
+tal taxa de emprego.
+
+00:03:05.970 --> 00:03:10.250
+Desta vez, a entrada será uma
+série, em vez de dois arrays NumPy,
+
+00:03:10.250 --> 00:03:13.400
+e o índice dela
+será os nomes dos países.
+
+00:03:13.400 --> 00:03:16.230
+Tente usar a função de argumento máximo da Pandas.
+
+00:03:16.230 --> 00:03:18.820
+Há um link para a documentação
+nas Notas do instrutor.
+

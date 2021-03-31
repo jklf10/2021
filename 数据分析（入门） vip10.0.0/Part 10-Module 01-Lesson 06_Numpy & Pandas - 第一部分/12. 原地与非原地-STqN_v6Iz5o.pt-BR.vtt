@@ -1,0 +1,61 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.250 --> 00:00:03.500
+Um termo comum para o comportamento
+que você acabou de ver é que +=
+
+00:00:03.500 --> 00:00:06.050
+opera in-loco e o + não opera.
+
+00:00:07.120 --> 00:00:07.950
+Isto é,
+
+00:00:07.950 --> 00:00:11.580
++= está armazenando todos os novos
+valores nos mesmos lugares em que os valores
+
+00:00:11.580 --> 00:00:14.780
+originais eram armazenados, em vez
+de criar um novo array para armazená-los.
+
+00:00:16.200 --> 00:00:20.110
+As operações que não ocorrem in-loco
+podem ser muito mais fáceis de pensar a respeito.
+
+00:00:20.110 --> 00:00:23.240
+Como acabou de ver,
+quando você não executa operações in-loco,
+
+00:00:23.240 --> 00:00:26.990
+as variáveis podem ser modificadas mesmo quando
+não parece que serão alteradas,
+
+00:00:26.990 --> 00:00:30.420
+como a variável b
+no exemplo anterior.
+
+00:00:30.420 --> 00:00:34.500
+Neste curso, usaremos mais
+operações que não ocorrem in-loco.
+
+00:00:34.500 --> 00:00:39.010
+Eu prefiro usar apenas + para
+adição de vetor, não +=.
+
+00:00:39.010 --> 00:00:41.710
+Este é outro local onde
+este conceito aparece.
+
+00:00:41.710 --> 00:00:43.460
+Leia todo este trecho de código e
+
+00:00:43.460 --> 00:00:45.620
+decida o que você acredita que
+a saída será.
+
+00:00:45.620 --> 00:00:48.750
+Novamente, se não tiver certeza, 
+teste-o ou faça sua melhor estimativa.
+

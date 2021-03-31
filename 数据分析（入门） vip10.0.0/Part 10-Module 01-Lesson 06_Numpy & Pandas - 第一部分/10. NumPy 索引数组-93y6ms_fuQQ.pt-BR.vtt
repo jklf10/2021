@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.270 --> 00:00:03.180
+A primeira coisa que quero fazer
+é criar um array de boolianos,
+
+00:00:03.180 --> 00:00:06.570
+indicando se cada aluno
+cancelou na primeira semana.
+
+00:00:06.570 --> 00:00:10.390
+Chamarei o array de is_paid, e ele
+conterá true para os alunos que permaneceram
+
+00:00:10.390 --> 00:00:14.050
+inscritos por, pelo menos, sete dias antes
+do cancelamento e false para os outros.
+
+00:00:15.080 --> 00:00:17.580
+Posso criar esse array
+usando operações de vetores,
+
+00:00:17.580 --> 00:00:20.520
+comparando o array days_to_cancel
+com o valor 7.
+
+00:00:20.520 --> 00:00:23.310
+Em seguida, criarei um array
+chamado paid_time.
+
+00:00:23.310 --> 00:00:25.440
+Ela apresenta o tempo gasto por
+cada aluno, mas
+
+00:00:25.440 --> 00:00:27.910
+inclui apenas os alunos pagantes.
+
+00:00:27.910 --> 00:00:29.500
+Para manter apenas os alunos pagantes,
+
+00:00:29.500 --> 00:00:32.100
+usarei is_paid como um array de
+índice em time_spent.
+
+00:00:33.110 --> 00:00:35.990
+Por fim, vou tirar a média
+desse array para obter o tempo médio
+
+00:00:35.990 --> 00:00:38.290
+gasto pelos alunos pagantes.
+
+00:00:38.290 --> 00:00:42.140
+Esse código, na verdade, pode ser todo
+simplificado para uma única linha.
+
+00:00:42.140 --> 00:00:44.540
+E, novamente,
+depois que estiver familiarizado com arrays de índice e
+
+00:00:44.540 --> 00:00:48.930
+operações de vetores, acredito que
+essa linha de código ficará bastante clara e concisa.
+
+00:00:48.930 --> 00:00:51.720
+Ela diz: verifique o tempo gasto por
+cada aluno, mas apenas
+
+00:00:51.720 --> 00:00:54.810
+os alunos que permaneceram inscritos
+pelo menos sete dias antes de cancelar.
+
+00:00:54.810 --> 00:00:56.210
+Em seguida, calcule a média desse tempo.
+

@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.290 --> 00:00:04.160
+O primeiro trecho de código imprimirá 2,
+3, 4, 5.
+
+00:00:04.160 --> 00:00:06.700
+Eu não mostrei a você a operação
+de soma igual antes, mas
+
+00:00:06.700 --> 00:00:09.110
+ela modificará o array existente.
+
+00:00:09.110 --> 00:00:11.370
+Então, antes de executar esta linha, tanto a quanto
+
+00:00:11.370 --> 00:00:15.092
+b apontarão para o mesmo array que
+contém os elementos 1, 2, 3 e 4.
+
+00:00:16.129 --> 00:00:20.570
+A execução desta linha atualiza
+os valores de 2, 3, 4 e 5.
+
+00:00:23.450 --> 00:00:25.670
+Então, agora se você imprimir a ou imprimir b,
+
+00:00:25.670 --> 00:00:28.502
+verá o mesmo resultado,
+o array 2, 3, 4, 5.
+
+00:00:29.650 --> 00:00:33.180
+O segundo trecho de código, por outro
+lado, imprimirá 1, 2, 3, 4.
+
+00:00:34.200 --> 00:00:37.080
+Novamente, a e
+b se iniciam recapitulando o mesmo array.
+
+00:00:37.080 --> 00:00:38.222
+1, 2, 3, 4.
+
+00:00:38.222 --> 00:00:45.020
+Entretanto, o operador de soma sem
+um sinal de igual primeiro cria um novo array.
+
+00:00:45.020 --> 00:00:48.840
+Os valores no novo array são 2,
+3, 4 e 5.
+
+00:00:48.840 --> 00:00:53.380
+Então, definir A igual a este novo array
+atualiza A para fazer referência ao novo array.
+
+00:00:54.390 --> 00:00:57.880
+B ainda refere-se ao array
+anterior, que não foi modificado.
+
+00:00:57.880 --> 00:01:00.900
+Então quando imprimir B,
+você obterá as saídas 1, 2, 3, 4.
+

@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.260 --> 00:00:02.500
+Todas essas respostas são aceitáveis.
+
+00:00:02.500 --> 00:00:04.410
+Primeiro, vejamos o que o Python faz.
+
+00:00:04.410 --> 00:00:07.600
+Ele cria uma lista com todos os
+valores da lista original repetidos
+
+00:00:07.600 --> 00:00:08.540
+três vezes.
+
+00:00:08.540 --> 00:00:10.580
+Um, dois, três.
+
+00:00:10.580 --> 00:00:13.490
+Agora, vejamos o comportamento
+na álgebra linear e com
+
+00:00:13.490 --> 00:00:15.020
+arrays NumPy.
+
+00:00:15.020 --> 00:00:18.320
+O primeiro elemento do vetor original
+foi multiplicado por 3 para obter
+
+00:00:18.320 --> 00:00:19.730
+o primeiro elemento do resultado.
+
+00:00:19.730 --> 00:00:23.810
+O segundo também foi multiplicado por 3.
+O terceiro foi multiplicado por 3.
+
+00:00:23.810 --> 00:00:26.220
+E a
+terceira opção é muito comum.
+
+00:00:26.220 --> 00:00:29.240
+Muitas linguagens de programação
+não permitem multiplicar uma lista
+
+00:00:29.240 --> 00:00:30.220
+ou um array por um número.
+

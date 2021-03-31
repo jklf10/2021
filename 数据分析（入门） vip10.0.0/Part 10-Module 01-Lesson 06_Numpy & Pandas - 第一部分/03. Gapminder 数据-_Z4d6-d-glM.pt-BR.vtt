@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.360 --> 00:00:03.210
+Nesta lição, vou
+usar exemplos de um novo conjunto de dados
+
+00:00:03.210 --> 00:00:07.080
+que contém informações sobre
+níveis de emprego, expectativa de vida, GDP
+
+00:00:07.080 --> 00:00:10.520
+e taxas de conclusão da escola
+em vários países.
+
+00:00:10.520 --> 00:00:13.400
+Estes dados foram coletados pelo site do
+Gapminder que está vinculado às
+
+00:00:13.400 --> 00:00:14.900
+notas do instrutor.
+
+00:00:14.900 --> 00:00:18.290
+Nesta lição, vou verificar
+o processo de análise de dados,
+
+00:00:18.290 --> 00:00:21.720
+pois quero focar em como
+usar NumPy e Pandas de forma eficaz.
+
+00:00:21.720 --> 00:00:24.740
+Vocês farão várias
+análises deste conjunto de dados, mas
+
+00:00:24.740 --> 00:00:26.680
+não necessariamente na ordem.
+
+00:00:26.680 --> 00:00:29.600
+Quero iniciar
+pensando em algumas perguntas.
+
+00:00:29.600 --> 00:00:32.320
+Na seção de downloads há
+um arquivo que explica com mais detalhes, quais
+
+00:00:32.320 --> 00:00:34.390
+dados estão disponíveis.
+
+00:00:34.390 --> 00:00:35.570
+Examine esse arquivo e
+
+00:00:35.570 --> 00:00:39.440
+pense em pelo menos cinco perguntas
+que você poderia responder usando estes dados.
+
+00:00:39.440 --> 00:00:42.220
+Depois, compartilhe as perguntas
+com seus colegas dos fóruns e
+
+00:00:42.220 --> 00:00:44.510
+quando terminar marque estas caixas.
+
+00:00:44.510 --> 00:00:47.150
+Os arquivos csv que contêm os dados
+reais também estão disponíveis na
+
+00:00:47.150 --> 00:00:49.660
+seção de download,
+caso você queira dar uma olhada.
+
+00:00:49.660 --> 00:00:52.070
+Mas isso não deve ser necessário,
+pois você poderá concluir todos
+
+00:00:52.070 --> 00:00:55.290
+os exercícios de programação desta
+lição no editor do Udacity.
+

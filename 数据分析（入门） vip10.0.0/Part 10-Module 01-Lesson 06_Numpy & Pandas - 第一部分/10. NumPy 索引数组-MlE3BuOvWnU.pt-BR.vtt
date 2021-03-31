@@ -1,0 +1,171 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.270 --> 00:00:03.700
+Há outra operação útil que você pode
+realizar quando tiver dois arrays NumPy do
+
+00:00:03.700 --> 00:00:05.120
+mesmo tamanho.
+
+00:00:05.120 --> 00:00:08.710
+Neste momento, o segundo array NumPy
+precisa conter boolianos e
+
+00:00:08.710 --> 00:00:11.190
+o primeiro pode conter qualquer tipo,
+não apenas números.
+
+00:00:12.270 --> 00:00:16.630
+Por exemplo, suponha que seu primeiro array,
+a, contém os números 1, 2,
+
+00:00:16.630 --> 00:00:19.280
+3, 4 e 5.
+
+00:00:19.280 --> 00:00:23.500
+E seu segundo array, b, contém
+os boolianos false, false, true,
+
+00:00:23.500 --> 00:00:25.050
+true e true.
+
+00:00:25.050 --> 00:00:29.550
+Então o código a[b]
+retornaria um array
+
+00:00:29.550 --> 00:00:33.610
+menor contendo apenas os elementos 3, 4
+e 5.
+
+00:00:33.610 --> 00:00:36.630
+O segundo array é chamado
+um array de índice, e
+
+00:00:36.630 --> 00:00:39.550
+estabelece quais elementos
+do primeiro array devem ser mantidos.
+
+00:00:39.550 --> 00:00:43.400
+Então, aqui não mantemos 1
+porque esse elemento era false.
+
+00:00:43.400 --> 00:00:45.530
+Não mantemos 2 porque esse elemento era false.
+
+00:00:45.530 --> 00:00:49.480
+Mas mantemos 3, 4 e
+5 porque esses são true.
+
+00:00:49.480 --> 00:00:52.440
+Quando você combina isto com as
+operações de vetores, sobre as quais você aprendeu
+
+00:00:52.440 --> 00:00:54.410
+anteriormente, isto pode ser muito útil.
+
+00:00:55.450 --> 00:00:58.425
+Neste exemplo,
+eu mantive todos elementos maiores que 2.
+
+00:00:58.425 --> 00:01:06.395
+Então, eu poderia ter criado um array
+booliano b com o código b = a &gt; 2.
+
+00:01:06.395 --> 00:01:09.770
+Eu também poderia ter criado este array
+sem usar a variável b em nenhum momento.
+
+00:01:10.940 --> 00:01:18.950
+Para fazer isto, eu usaria o código a [a&gt;2],
+e teria o mesmo resultado.
+
+00:01:18.950 --> 00:01:21.600
+Na minha opinião,
+esta parte de código é bem concisa e
+
+00:01:21.600 --> 00:01:25.830
+uma forma clara de dizer para manter todos
+elementos de a que são maiores que dois.
+
+00:01:25.830 --> 00:01:29.170
+Agora pode ser mais difícil
+entender esta parte de código do que
+
+00:01:29.170 --> 00:01:31.590
+seria para entender
+um loop.
+
+00:01:31.590 --> 00:01:33.840
+Primeiro, você precisa se lembrar
+de que é um array.
+
+00:01:33.840 --> 00:01:37.040
+Então, você precisa se lembrar que comparar
+um array a um número único é
+
+00:01:37.040 --> 00:01:40.280
+uma operação de vetores que
+retorna um array de boolianos, e
+
+00:01:40.280 --> 00:01:42.740
+você precisa se lembrar
+sobre arrays de índice.
+
+00:01:42.740 --> 00:01:45.610
+Entretanto, depois que se acostumar,
+isso pode realmente acelerar o processo para
+
+00:01:45.610 --> 00:01:46.850
+escrever seu código.
+
+00:01:46.850 --> 00:01:50.664
+E como de costume, este código será executado mais
+rápido que o loop, pois todas as operações
+
+00:01:50.664 --> 00:01:51.787
+estão implementadas em C.
+
+00:01:51.787 --> 00:01:55.137
+Para oferecer alguma prática no uso de arrays
+de índice, vou tirar um exemplo da
+
+00:01:55.137 --> 00:01:56.645
+lição anterior.
+
+00:01:56.645 --> 00:01:59.785
+Quero que você crie uma função
+que inclua dois arrays NumPy.
+
+00:01:59.785 --> 00:02:02.575
+A primeira, time_spent,
+contém o tempo total que
+
+00:02:02.575 --> 00:02:04.763
+cada estudante gasta na
+sala de aula na primeira semana.
+
+00:02:04.763 --> 00:02:07.795
+O segundo, days_to_cancel,
+
+00:02:07.795 --> 00:02:11.065
+contém o número de
+dias antes do cancelamento do estudante.
+
+00:02:11.065 --> 00:02:14.105
+Quero que você calcule a média de
+tempo gasto na primeira semana
+
+00:02:14.105 --> 00:02:18.190
+entre apenas estudantes que não
+cancelaram antes de 7 dias.
+
+00:02:18.190 --> 00:02:21.990
+Como dica, você primeiro precisa converter
+days_to_cancel em um array de
+
+00:02:21.990 --> 00:02:24.050
+boolianos que você possa
+usar como um array de índice.
+

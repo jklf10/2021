@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.270 --> 00:00:04.720
+Os índices de séries têm um efeito
+interessante nas operações de vetores.
+
+00:00:04.720 --> 00:00:06.560
+Ao adicionar dois arrays NumPy,
+
+00:00:06.560 --> 00:00:10.240
+você adiciona elementos da mesma
+posição, pois não há índice.
+
+00:00:10.240 --> 00:00:11.990
+Bem, para
+a série que você adicionou até
+
+00:00:11.990 --> 00:00:15.530
+agora, as posições e os
+índices têm sido iguais.
+
+00:00:15.530 --> 00:00:18.110
+O que você acha que aconteceria
+se esse não for caso?
+
+00:00:18.110 --> 00:00:21.820
+E se você adicionasse com base no índice
+em vez de na posição, o que você acha
+
+00:00:21.820 --> 00:00:25.790
+que aconteceria se adicionasse duas
+séries com índices diferentes?
+
+00:00:25.790 --> 00:00:26.940
+Experimente e veja.
+
+00:00:26.940 --> 00:00:30.470
+Na próxima tela, você verá o código para
+adicionar algumas séries diferentes do Pandas
+
+00:00:30.470 --> 00:00:31.810
+com índices diferentes.
+
+00:00:31.810 --> 00:00:35.050
+Confira os resultados e veja
+se você consegue descobrir o padrão.
+
+00:00:35.050 --> 00:00:38.040
+Quando você tiver uma teoria sobre como
+as operações de vetores funcionam para
+
+00:00:38.040 --> 00:00:41.380
+séries do Pandas, assista ao vídeo
+da solução para saber se você está certo.
+

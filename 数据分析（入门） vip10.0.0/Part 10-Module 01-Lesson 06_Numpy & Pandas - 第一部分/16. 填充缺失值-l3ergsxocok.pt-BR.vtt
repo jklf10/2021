@@ -1,0 +1,150 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.390 --> 00:00:02.796
+Você acabou de ver que, se
+adicionar suas séries juntas e
+
+00:00:02.796 --> 00:00:05.960
+se os índices não coincidirem,
+NaN será preenchido.
+
+00:00:05.960 --> 00:00:08.620
+Agora, em muitos casos,
+posso não querer que NaN ou
+
+00:00:08.620 --> 00:00:11.360
+um número apareça
+na minha série de resultados.
+
+00:00:11.360 --> 00:00:14.950
+Então, se eu não queria que NaNs fossem
+incluídos, como lidaria com isso?
+
+00:00:14.950 --> 00:00:19.000
+Para questões como esta, há uma
+maneira de fazer o que você quer com o Pandas, mas
+
+00:00:19.000 --> 00:00:21.740
+pode ser um pouco difícil
+descobrir que maneira é essa.
+
+00:00:21.740 --> 00:00:26.490
+Uma coisa que posso tentar é
+pesquisar no Google por "pandas remove missing values".
+
+00:00:26.490 --> 00:00:29.690
+O segundo resultado,
+dropna, parece promissor.
+
+00:00:29.690 --> 00:00:33.050
+A primeira coisa que notei sobre esta
+documentação é que ela funciona em
+
+00:00:33.050 --> 00:00:35.020
+DataFrames, não em séries.
+
+00:00:35.020 --> 00:00:37.430
+Você aprenderá sobre
+DataFrames na próxima lição.
+
+00:00:37.430 --> 00:00:40.480
+Mas a documentação do
+pandas não é sempre perfeita.
+
+00:00:40.480 --> 00:00:44.640
+Quando vi este resultado, me perguntei se
+dropna funcionaria também em uma série.
+
+00:00:44.640 --> 00:00:47.260
+Decidi tentar e acabou
+dando certo.
+
+00:00:47.260 --> 00:00:50.400
+Esta documentação
+também se refere a "axis".
+
+00:00:50.400 --> 00:00:53.710
+Novamente, você vai aprender
+sobre isso na próxima lição.
+
+00:00:53.710 --> 00:00:57.500
+Por enquanto, o fato de que esta função
+está emitindo rótulos onde alguns ou
+
+00:00:57.500 --> 00:01:00.400
+todos os dados estão faltando
+parece promissor.
+
+00:01:00.400 --> 00:01:03.998
+Então, vou tentar salvar o resultado desta
+adição à variável sum_result e
+
+00:01:03.998 --> 00:01:07.830
+depois vou executar sum_result.dropna.
+
+00:01:07.830 --> 00:01:11.680
+E, obviamente, obtenho uma nova série
+onde todos os valores faltando são removidos.
+
+00:01:11.680 --> 00:01:15.600
+Na verdade, há algumas formas diferentes
+de resolver esse problema no Pandas.
+
+00:01:15.600 --> 00:01:16.160
+Por exemplo,
+
+00:01:16.160 --> 00:01:19.940
+há uma forma de tratar valores
+ausentes como zero antes da adição.
+
+00:01:19.940 --> 00:01:23.160
+Então, o resultado de adicionar estas
+duas séries teria o valor 1 para
+
+00:01:23.160 --> 00:01:26.320
+index a, pois há um
+zero presumido na série 2.
+
+00:01:26.320 --> 00:01:29.370
+Veja se você descobre
+como fazer isso.
+
+00:01:29.370 --> 00:01:33.480
+Se você encontrar uma terceira solução para o
+problema de NaNs, ótimo.
+
+00:01:33.480 --> 00:01:37.280
+Agora, descobrir coisas assim
+pesquisando no Google pode ser difícil, mas
+
+00:01:37.280 --> 00:01:38.930
+também é muito importante.
+
+00:01:38.930 --> 00:01:40.810
+O Pandas tem muitas funcionalidades, e
+
+00:01:40.810 --> 00:01:43.090
+isso, é claro, não
+poderá cobrir todas elas.
+
+00:01:43.090 --> 00:01:44.430
+Se você não encontrar o que
+está procurando
+
+00:01:44.430 --> 00:01:46.930
+logo de cara, tente consultas diferentes.
+
+00:01:46.930 --> 00:01:49.060
+Se você ficar empacado,
+assista ao vídeo da solução.
+
+00:01:49.060 --> 00:01:51.820
+Você pode usar o teste de
+programação na próxima tela
+
+00:01:51.820 --> 00:01:53.700
+para testar se sua
+solução está funcionando.
+

@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.240 --> 00:00:03.370
+Fornecemos código para você carregar
+cada variável em algo chamado
+
+00:00:03.370 --> 00:00:06.110
+estrutura de dados,
+que você aprenderá na próxima lição.
+
+00:00:06.110 --> 00:00:09.600
+Depois, esse código extraiu uma série
+de cada estrutura de dados correspondente
+
+00:00:09.600 --> 00:00:11.000
+somente aos EUA.
+
+00:00:11.000 --> 00:00:13.950
+Se você quisesse examinar um país
+diferente dos Estados Unidos,
+
+00:00:13.950 --> 00:00:16.040
+precisaria ter alterado este valor.
+
+00:00:16.040 --> 00:00:19.500
+Agora, para criar meus gráficos,
+adicionarei as linhas %pylab inline,
+
+00:00:19.500 --> 00:00:22.260
+para meus gráficos aparecerem
+no bloco de anotações iPython.
+
+00:00:22.260 --> 00:00:25.050
+Mas se você não estiver usando o
+bloco de anotações iPython, não adicione esta linha.
+
+00:00:26.110 --> 00:00:29.620
+Depois posso criar o gráfico do emprego
+nos EUA chamando employment_us.plot.
+
+00:00:30.735 --> 00:00:33.855
+Aqui, posso ver que os anos,
+que são os índices da série,
+
+00:00:33.855 --> 00:00:36.145
+foram preenchidos no eixo x.
+
+00:00:36.145 --> 00:00:38.777
+E os valores de emprego foram
+preenchidos no eixo y.
+
+00:00:38.777 --> 00:00:41.895
+E o mesmo código funcionaria para
+as outras variáveis.
+

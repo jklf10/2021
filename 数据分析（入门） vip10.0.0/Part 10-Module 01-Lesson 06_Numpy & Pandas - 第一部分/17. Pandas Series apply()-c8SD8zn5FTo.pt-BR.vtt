@@ -1,0 +1,307 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.262 --> 00:00:03.308
+Até agora nesta lição, você
+fez cálculos em
+
+00:00:03.308 --> 00:00:05.242
+séries usando
+funções internas.
+
+00:00:05.242 --> 00:00:08.946
+Por exemplo, a função média
+e as operações de vetores.
+
+00:00:08.946 --> 00:00:12.310
+Por exemplo, plus para
+adição de vetor.
+
+00:00:12.310 --> 00:00:14.590
+Mas o que você faz quando
+quer executar um
+
+00:00:14.590 --> 00:00:17.100
+cálculo que não é
+interno do Pandas e
+
+00:00:17.100 --> 00:00:19.660
+que não pode ser executado usando
+operações de vetores simples?
+
+00:00:20.910 --> 00:00:22.240
+Como você viu antes,
+
+00:00:22.240 --> 00:00:24.780
+uma opção seria tratar
+a série como uma lista usando
+
+00:00:24.780 --> 00:00:25.670
+quatro loops ou
+
+00:00:25.670 --> 00:00:27.690
+acessando elementos
+individuais da série.
+
+00:00:28.880 --> 00:00:30.600
+Mas há outra
+opção,
+
+00:00:30.600 --> 00:00:33.520
+o Pandas tem uma função chamada
+apply() que você pode usar para
+
+00:00:33.520 --> 00:00:35.949
+realizar cálculos
+que não são internos no Pandas.
+
+00:00:37.125 --> 00:00:38.290
+Apply() utiliza uma série e
+
+00:00:38.290 --> 00:00:41.590
+uma função e cria
+uma nova série aplicando
+
+00:00:41.590 --> 00:00:44.030
+a função a cada elemento
+da série original.
+
+00:00:45.040 --> 00:00:48.300
+Por exemplo, suponha que
+a função era add 3,
+
+00:00:48.300 --> 00:00:50.240
+que utiliza um número e
+adiciona três a ele.
+
+00:00:51.390 --> 00:00:54.247
+A aplicação desta função à
+série à esquerda resultará
+
+00:00:54.247 --> 00:00:55.481
+na série à direita.
+
+00:00:55.481 --> 00:00:58.774
+Primeiro, add 3 será
+aplicada ao primeiro elemento
+
+00:00:58.774 --> 00:01:00.426
+da série resultando em quatro.
+
+00:01:00.426 --> 00:01:03.139
+Em seguida, add 3 será
+aplicada ao segundo elemento
+
+00:01:03.139 --> 00:01:05.269
+da série resultando em cinco.
+
+00:01:05.269 --> 00:01:08.460
+Em seguida, ao terceiro elemento
+da série resultando em seis e
+
+00:01:08.460 --> 00:01:08.990
+assim por diante.
+
+00:01:10.610 --> 00:01:13.700
+Se você estiver familiarizado com o
+Python, a função map apply()
+
+00:01:13.700 --> 00:01:17.190
+é exatamente a mesma, mas ela funciona
+em séries e não em listas.
+
+00:01:17.190 --> 00:01:19.740
+Se você não tiver ouvido sobre map,
+também não tem problema.
+
+00:01:19.740 --> 00:01:21.206
+Agora, neste exemplo
+de adição de três,
+
+00:01:21.206 --> 00:01:23.392
+seria melhor
+usar a adição de vetor.
+
+00:01:23.392 --> 00:01:25.870
+Se esta série fosse denominada s,
+
+00:01:25.870 --> 00:01:30.838
+você poderia criar a nova
+série com o código s+3.
+
+00:01:30.838 --> 00:01:35.586
+E isso seria a mesma
+coisa que s.apply(add 3).
+
+00:01:35.586 --> 00:01:38.998
+No entanto, apply() pode ser muito
+útil em casos onde não
+
+00:01:38.998 --> 00:01:41.699
+há nenhuma operação interna
+que faça o que você quer.
+
+00:01:42.840 --> 00:01:45.950
+Por exemplo, suponha que você tenha
+uma série de estados onde alguns
+
+00:01:45.950 --> 00:01:48.130
+estados são representados
+pelo nome completo e
+
+00:01:48.130 --> 00:01:49.470
+outros pela abreviação.
+
+00:01:50.710 --> 00:01:53.650
+Eu quero limpar os dados
+substituindo cada nome de estado completo
+
+00:01:53.650 --> 00:01:54.600
+por sua abreviação.
+
+00:01:55.680 --> 00:01:56.316
+Digamos
+
+00:01:56.316 --> 00:01:58.270
+que escrevi
+uma função que faz isso para
+
+00:01:58.270 --> 00:01:58.914
+um único estado.
+
+00:01:58.914 --> 00:02:01.202
+O código deve ser parecido
+com algo como isto.
+
+00:02:01.202 --> 00:02:04.371
+Primeiro, verifico se o valor
+já é uma abreviação.
+
+00:02:04.371 --> 00:02:06.125
+Em cujo caso,
+eu o retorno inalterado.
+
+00:02:06.125 --> 00:02:08.366
+Em seguida, verifico se
+o estado é Alabama.
+
+00:02:08.366 --> 00:02:11.267
+Em cujo caso, eu retorno a
+abreviação de Alabama e
+
+00:02:11.267 --> 00:02:12.490
+assim por diante. Você entende a ideia.
+
+00:02:13.530 --> 00:02:15.330
+Agora eu poderia criar
+uma lista vazia,
+
+00:02:15.330 --> 00:02:18.300
+fazer um loop pela série
+e chamar minha função
+
+00:02:18.300 --> 00:02:20.680
+clean_state em cada valor
+da série e
+
+00:02:20.680 --> 00:02:23.020
+acrescentar cada valor
+novo à lista.
+
+00:02:23.020 --> 00:02:25.898
+Mas provavelmente eu realmente queria que
+meus dados limpos fossem uma
+
+00:02:25.898 --> 00:02:27.429
+série panda e não uma lista, portanto
+
+00:02:27.429 --> 00:02:30.443
+eu pude converter essa lista em uma
+série no final do loop.
+
+00:02:30.443 --> 00:02:33.705
+Em vez disso, eu poderia
+usar a função apply().
+
+00:02:33.705 --> 00:02:36.357
+Primeiro, eu digito o nome
+da minha série original,
+
+00:02:36.357 --> 00:02:39.223
+que são os estados e, em seguida, eu
+chamo a função apply.
+
+00:02:39.223 --> 00:02:41.551
+E como um argumento para
+a função apply(),
+
+00:02:41.551 --> 00:02:44.236
+eu forneço a função
+clean-state que escrevi para limpar
+
+00:02:44.236 --> 00:02:45.022
+cada estado.
+
+00:02:45.022 --> 00:02:47.383
+Observe que eu não coloco
+parênteses depois
+
+00:02:47.383 --> 00:02:51.280
+da função clean_state, não
+estou chamando a função aqui.
+
+00:02:51.280 --> 00:02:54.867
+Estou fornecendo a função inteira
+como uma entrada para apply().
+
+00:02:54.867 --> 00:02:57.829
+A vantagem principal de usar
+apply() sobre um loop é que ela
+
+00:02:57.829 --> 00:02:59.650
+torna seu código
+muito mais conciso.
+
+00:02:59.650 --> 00:03:01.566
+Ela também pode ser
+um pouco mais rápida.
+
+00:03:01.566 --> 00:03:04.041
+Mas, neste caso, a maior parte do
+tempo provavelmente será
+
+00:03:04.041 --> 00:03:06.024
+gasta na
+função clean_state.
+
+00:03:06.024 --> 00:03:08.603
+Portanto, provavelmente não
+será muito importante, de uma
+
+00:03:08.603 --> 00:03:11.190
+perspectiva de velocidade, se eu
+usar um loop ou uma apply().
+
+00:03:11.190 --> 00:03:12.560
+Agora é sua vez.
+
+00:03:12.560 --> 00:03:15.772
+Escreva um código que utilize
+uma série de nomes na forma
+
+00:03:15.772 --> 00:03:17.670
+de nome e sobrenome e
+
+00:03:17.670 --> 00:03:20.820
+coloque-os na forma
+sobrenome, nome.
+
+00:03:21.820 --> 00:03:24.950
+Você pode considerar a função split
+do Python útil, há
+
+00:03:24.950 --> 00:03:27.210
+um link para a documentação
+nas notas do instrutor.
+

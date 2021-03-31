@@ -1,0 +1,137 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.190 --> 00:00:03.520
+Talvez você esteja se perguntando se, já que pode
+somar dois vetores, pode subtrair,
+
+00:00:03.520 --> 00:00:05.700
+multiplicar ou dividir dois vetores.
+
+00:00:05.700 --> 00:00:07.190
+No NumPy a resposta é sim.
+
+00:00:07.190 --> 00:00:09.060
+Você pode vetorizar quase qualquer operação.
+
+00:00:10.160 --> 00:00:14.120
+Você pode somar dois arrays NumPy com um sinal de
+mais, subtrair com um sinal de menos,
+
+00:00:14.120 --> 00:00:17.320
+multiplicar com um asterisco,
+dividir com uma barra e
+
+00:00:17.320 --> 00:00:19.690
+exponenciar com um asterisco duplo.
+
+00:00:19.690 --> 00:00:22.200
+Todas essas operações funcionam
+com dois arrays NumPy.
+
+00:00:22.200 --> 00:00:24.220
+Ou com um array NumPy e
+um número único.
+
+00:00:25.220 --> 00:00:27.340
+Você também pode fazer operações lógicas.
+
+00:00:27.340 --> 00:00:30.310
+Se você tem dois arrays de
+Boolianos, pode usar um ampersand
+
+00:00:30.310 --> 00:00:32.110
+para obter a conjunção lógica.
+
+00:00:32.110 --> 00:00:35.820
+Você pode usar esse símbolo
+de barra vertical para obter a disjunção lógica.
+
+00:00:35.820 --> 00:00:39.650
+Ele fica perto da tecla Shift
+na maioria dos teclados.
+
+00:00:39.650 --> 00:00:43.160
+E você pode usar o til
+para obter a negação lógica.
+
+00:00:43.160 --> 00:00:46.270
+Que fica perto da tecla Enter
+na maioria dos teclados.
+
+00:00:46.270 --> 00:00:48.960
+Certifique-se de que seus arrays contenham
+Boolianos, se for realizar
+
+00:00:48.960 --> 00:00:50.380
+essas operações.
+
+00:00:50.380 --> 00:00:54.100
+Se seus arrays tiverem números inteiros,
+esses símbolos farão algo
+
+00:00:54.100 --> 00:00:59.540
+surpreendente chamado conjunção binária,
+disjunção binária e negação binária.
+
+00:00:59.540 --> 00:01:02.890
+Você pode ler sobre essas operações nas
+Notas do instrutor, se tiver curiosidade.
+
+00:01:02.890 --> 00:01:05.349
+Mas isso não é importante para este curso.
+
+00:01:05.349 --> 00:01:08.640
+Você também pode usar todas as operações de comparação
+padrão.
+
+00:01:08.640 --> 00:01:12.770
+Essas operações de vetores deixam
+muitos códigos de análise de dados bem limpos.
+
+00:01:12.770 --> 00:01:15.930
+E elas também costumam ser mais rápidas
+do que fazer as operações à mão,
+
+00:01:15.930 --> 00:01:17.300
+usando um loop.
+
+00:01:17.300 --> 00:01:20.470
+Aliás, há uma folha de cola
+na seção de downloads
+
+00:01:20.470 --> 00:01:22.670
+que vai ajudar
+você a se lembrar dessas operações.
+
+00:01:22.670 --> 00:01:26.360
+Além de muitos outros códigos
+comuns do NumPy e do Pandas.
+
+00:01:26.360 --> 00:01:29.450
+Na próxima tela, você poderá
+testar algumas operações de vetores
+
+00:01:29.450 --> 00:01:30.660
+e ver como elas funcionam.
+
+00:01:30.660 --> 00:01:33.810
+Você também vai escrever uma função que usa
+operações de vetores para calcular
+
+00:01:33.810 --> 00:01:36.520
+a taxa de conclusão
+escolar geral em cada país
+
+00:01:36.520 --> 00:01:40.290
+usando a taxa de conclusão escolar feminina
+e a masculina.
+
+00:01:40.290 --> 00:01:44.230
+Para fazer isso, suponha que metade da
+população em cada país seja masculina
+
+00:01:44.230 --> 00:01:45.010
+e a outra, feminina.
+

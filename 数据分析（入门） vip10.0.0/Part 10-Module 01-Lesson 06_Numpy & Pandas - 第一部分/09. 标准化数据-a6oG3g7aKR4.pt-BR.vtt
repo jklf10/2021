@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.340 --> 00:00:04.410
+Primeiro, veremos como
+padronizar um único ponto de dados.
+
+00:00:04.410 --> 00:00:06.689
+Digamos, o valor na posição zero.
+
+00:00:06.689 --> 00:00:10.260
+Primeiro, calculo a distância
+do valor a partir da média,
+
+00:00:10.260 --> 00:00:12.100
+que posso fazer através da subtração.
+
+00:00:12.100 --> 00:00:14.680
+Depois, para converter em um
+número de desvios
+
+00:00:14.680 --> 00:00:16.640
+padrão, preciso dividir
+pelo desvio padrão.
+
+00:00:17.740 --> 00:00:19.970
+É
+importante usar parênteses aqui.
+
+00:00:19.970 --> 00:00:23.440
+Isso calcula um
+único valor padronizado.
+
+00:00:23.440 --> 00:00:25.920
+Posso usar um loop para
+padronizar todos os valores,
+
+00:00:25.920 --> 00:00:28.690
+mas usarei
+operações de vetores.
+
+00:00:28.690 --> 00:00:32.759
+As operações de vetores tornam o
+código que opera em um array inteiro
+
+00:00:32.759 --> 00:00:36.130
+muito semelhante ao código
+que opera em um único valor.
+
+00:00:36.130 --> 00:00:38.690
+Vou simplesmente
+alterar esta variável de um único value
+
+00:00:38.690 --> 00:00:40.010
+para um array inteiro de values.
+
+00:00:41.050 --> 00:00:45.090
+Agora values é o array inteiro e
+mean ainda é um único número.
+
+00:00:45.090 --> 00:00:49.170
+Esta subtração subtrai o mean
+de cada value no array.
+
+00:00:49.170 --> 00:00:52.100
+O desvio padrão ainda é
+um único número. Esta divisão
+
+00:00:52.100 --> 00:00:57.180
+divide cada elemento
+do array pelo desvio padrão.
+
+00:00:57.180 --> 00:01:00.410
+Como isso padronizou todos os
+valores no array, vou alterar esta
+
+00:01:00.410 --> 00:01:03.580
+variável para standardized_values
+e excluir esta linha.
+
+00:01:04.750 --> 00:01:07.070
+Finalmente,
+vou retornar os valores padronizados.
+

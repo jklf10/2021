@@ -1,0 +1,71 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.210 --> 00:00:03.450
+Para escrever a função reverse_names,
+vou começar
+
+00:00:03.450 --> 00:00:06.650
+escrevendo uma função que
+inverte só um único nome.
+
+00:00:06.650 --> 00:00:09.450
+Primeiro, vou dividir o nome em um espaço,
+que deve me fornecer
+
+00:00:09.450 --> 00:00:12.970
+uma lista que contém o nome e
+o sobrenome separados.
+
+00:00:12.970 --> 00:00:16.718
+Depois, vou extrair o nome e
+o sobrenome usando split_name em 0 e
+
+00:00:16.718 --> 00:00:18.550
+split_name em 1.
+
+00:00:18.550 --> 00:00:21.380
+E, finalmente, retornarei o sobrenome,
+seguido por uma vírgula e
+
+00:00:21.380 --> 00:00:23.690
+um espaço, seguido pelo nome.
+
+00:00:23.690 --> 00:00:26.620
+Agora, antes de tentar aplicar minha função
+reverse_name a toda a
+
+00:00:26.620 --> 00:00:28.850
+série, vou testá-la
+em um valor único.
+
+00:00:29.860 --> 00:00:32.950
+Vou usar o atributo iloc para obter
+o nome na posição zero e
+
+00:00:32.950 --> 00:00:34.550
+depois inverter esse nome.
+
+00:00:34.550 --> 00:00:40.550
+Com certeza, o nome Andre Agassi
+foi transformado em Agassi, Andre.
+
+00:00:40.550 --> 00:00:43.810
+Agora, posso inverter todos os nomes
+usando a função apply.
+
+00:00:43.810 --> 00:00:47.270
+Especificamente, usarei return names.apply
+e passarei
+
+00:00:47.270 --> 00:00:49.680
+o argumento da função reverse_name.
+
+00:00:49.680 --> 00:00:52.640
+E quando eu chamar reverse_names,
+vou obter cada um dos nomes invertidos e
+
+00:00:52.640 --> 00:00:54.210
+coletados em uma série abrangente.
+

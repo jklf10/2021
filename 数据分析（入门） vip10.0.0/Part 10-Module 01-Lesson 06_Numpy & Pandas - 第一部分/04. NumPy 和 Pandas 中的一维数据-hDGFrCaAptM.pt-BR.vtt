@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:02.310
+Para mostrar a você porque o Numpy e
+o Pandas são úteis,
+
+00:00:02.310 --> 00:00:04.790
+vou revisitar algum
+código da lição anterior e
+
+00:00:04.790 --> 00:00:07.400
+ver como ele ficaria se
+eu escrevesse usando o Pandas.
+
+00:00:07.400 --> 00:00:10.980
+Este é o código para utilizar um CSV primeiro e
+lê-lo em uma lista e,
+
+00:00:10.980 --> 00:00:13.420
+em seguida, obter as contas
+exclusivas dessa lista.
+
+00:00:13.420 --> 00:00:15.920
+Estou executando este código no
+arquivo daily_engagement_full,
+
+00:00:15.920 --> 00:00:20.080
+uma vez que esse arquivo é bastante grande, e
+o Pandas lida muito bem com arquivos grandes.
+
+00:00:20.080 --> 00:00:24.900
+Agora, se eu executar o código para carregar o arquivo
+em um CSV, ele demora um pouco e,
+
+00:00:24.900 --> 00:00:26.330
+finalmente terminou.
+
+00:00:26.330 --> 00:00:29.230
+Agora, cortamos um pouco do tempo de
+carregamento do vídeo, mas
+
+00:00:29.230 --> 00:00:31.220
+ele levou cerca de um minuto.
+
+00:00:31.220 --> 00:00:35.250
+Depois disso, obter os alunos
+exclusivos também demora um pouco.
+
+00:00:35.250 --> 00:00:40.700
+Na verdade, este vai demorar
+cerca de seis segundos, e agora está pronto.
+
+00:00:40.700 --> 00:00:42.640
+Como você verá em um minuto,
+quando eu uso o Pandas,
+
+00:00:42.640 --> 00:00:44.580
+o código será executado muito mais rapidamente.
+
+00:00:44.580 --> 00:00:47.910
+Na verdade, no Pandas, isso também
+terá apenas três linhas de código.
+
+00:00:47.910 --> 00:00:49.970
+A primeira será esta declaração import.
+
+00:00:49.970 --> 00:00:54.630
+Na segunda, eu vou ler o arquivo
+usando a função read_CSV interna do Pandas.
+
+00:00:54.630 --> 00:00:58.500
+E, finalmente, eu posso especificar que
+quero olhar a coluna acct.
+
+00:00:58.500 --> 00:01:02.470
+E, em seguida, usar a função unique interna
+do Pandas para obter as contas exclusivas.
+
+00:01:02.470 --> 00:01:07.370
+Como você pode ver, o Pandas tem muitas
+funções convenientes, como read_CSV e
+
+00:01:07.370 --> 00:01:10.130
+unique, que, anteriormente,
+nós mesmos escrevemos.
+
+00:01:10.130 --> 00:01:13.530
+Agora, destas três linhas de código, a
+que realmente demora mais para
+
+00:01:13.530 --> 00:01:17.560
+mim é a importação do Pandas, que demora
+vários segundos na primeira vez que executo isto.
+
+00:01:17.560 --> 00:01:20.780
+Isso é realmente muito tempo para
+apenas importar uma biblioteca.
+
+00:01:20.780 --> 00:01:24.980
+Mas isso mais que compensa com
+a velocidade do restante do código.
+
+00:01:24.980 --> 00:01:28.930
+Depois disso, a leitura dos dados no
+CSV demora apenas alguns segundos,
+
+00:01:28.930 --> 00:01:31.380
+e não o um minuto
+que esperamos anteriormente.
+
+00:01:31.380 --> 00:01:34.610
+E, realmente, a obtenção das contas exclusivas
+termina em um piscar de olhos.
+

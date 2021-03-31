@@ -1,0 +1,321 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pandas Series apply()</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Numpy &amp; Pandas - 第一部分</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介备注.html">01. 简介备注</a>
+    </li>
+    <li class="">
+      <a href="02. 简介.html">02. 简介</a>
+    </li>
+    <li class="">
+      <a href="03. Gapminder 数据.html">03. Gapminder 数据</a>
+    </li>
+    <li class="">
+      <a href="04. NumPy 和 Pandas 中的一维数据.html">04. NumPy 和 Pandas 中的一维数据</a>
+    </li>
+    <li class="">
+      <a href="05. NumPy 数组.html">05. NumPy 数组</a>
+    </li>
+    <li class="">
+      <a href="06. 向量化运算.html">06. 向量化运算</a>
+    </li>
+    <li class="">
+      <a href="07. 乘以标量.html">07. 乘以标量</a>
+    </li>
+    <li class="">
+      <a href="08. 计算整体完成率.html">08. 计算整体完成率</a>
+    </li>
+    <li class="">
+      <a href="09. 标准化数据.html">09. 标准化数据</a>
+    </li>
+    <li class="">
+      <a href="10. NumPy 索引数组.html">10. NumPy 索引数组</a>
+    </li>
+    <li class="">
+      <a href="11. + 与 +&#x3D;.html">11. + 与 +&#x3D;</a>
+    </li>
+    <li class="">
+      <a href="12. 原地与非原地.html">12. 原地与非原地</a>
+    </li>
+    <li class="">
+      <a href="13. Pandas Series.html">13. Pandas Series</a>
+    </li>
+    <li class="">
+      <a href="14. Series 索引.html">14. Series 索引</a>
+    </li>
+    <li class="">
+      <a href="15. 向量化运算和 Series 索引.html">15. 向量化运算和 Series 索引</a>
+    </li>
+    <li class="">
+      <a href="16. 填充缺失值.html">16. 填充缺失值</a>
+    </li>
+    <li class="">
+      <a href="17. Pandas Series apply().html">17. Pandas Series apply()</a>
+    </li>
+    <li class="">
+      <a href="18. 在 Pandas 中绘图.html">18. 在 Pandas 中绘图</a>
+    </li>
+    <li class="">
+      <a href="19. 总结.html">19. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">17. Pandas Series apply()</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Pandas Series apply()</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="17. Pandas Series apply()-c8SD8zn5FTo.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="17. Pandas Series apply()-c8SD8zn5FTo.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="US" src="17. Pandas Series apply()-c8SD8zn5FTo.en-US.vtt" label="US">
+  <track default="true" kind="subtitles" srclang="en" src="17. Pandas Series apply()-c8SD8zn5FTo.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="17. Pandas Series apply()-c8SD8zn5FTo.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="17. Pandas Series apply()-c8SD8zn5FTo.zh-CN.vtt" label="CN">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#174136-pandas_series_apply-py" class="nav-item nav-link  active show" id="tab-174136-pandas_series_apply-py" data-toggle="tab" role="tab"
+      aria-controls="174136-pandas_series_apply-py" aria-selected="true">pandas_series_apply.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="174136-pandas_series_apply-py" aria-labelledby="tab-174136-pandas_series_apply-py" role="tabpanel">
+      <pre><code></code>import pandas as pd
+
+# Change False to True to see what the following block of code does
+
+# Example pandas apply() usage (although this could have been done
+# without apply() using vectorized operations)
+if False:
+    s &#x3D; pd.Series([1, 2, 3, 4, 5])
+    def add_one(x):
+        return x + 1
+    print s.apply(add_one)
+
+names &#x3D; pd.Series([
+    &#x27;Andre Agassi&#x27;,
+    &#x27;Barry Bonds&#x27;,
+    &#x27;Christopher Columbus&#x27;,
+    &#x27;Daniel Defoe&#x27;,
+    &#x27;Emilio Estevez&#x27;,
+    &#x27;Fred Flintstone&#x27;,
+    &#x27;Greta Garbo&#x27;,
+    &#x27;Humbert Humbert&#x27;,
+    &#x27;Ivan Ilych&#x27;,
+    &#x27;James Joyce&#x27;,
+    &#x27;Keira Knightley&#x27;,
+    &#x27;Lois Lane&#x27;,
+    &#x27;Mike Myers&#x27;,
+    &#x27;Nick Nolte&#x27;,
+    &#x27;Ozzy Osbourne&#x27;,
+    &#x27;Pablo Picasso&#x27;,
+    &#x27;Quirinus Quirrell&#x27;,
+    &#x27;Rachael Ray&#x27;,
+    &#x27;Susan Sarandon&#x27;,
+    &#x27;Tina Turner&#x27;,
+    &#x27;Ugueth Urbina&#x27;,
+    &#x27;Vince Vaughn&#x27;,
+    &#x27;Woodrow Wilson&#x27;,
+    &#x27;Yoji Yamada&#x27;,
+    &#x27;Zinedine Zidane&#x27;
+])
+
+def reverse_names(names):
+    &#x27;&#x27;&#x27;
+    Fill in this function to return a new series where each name
+    in the input series has been transformed from the format
+    &quot;Firstname Lastname&quot; to &quot;Lastname, FirstName&quot;.
+    
+    Try to use the Pandas apply() function rather than a loop.
+    &#x27;&#x27;&#x27;
+    return None</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="17. Pandas Series apply()-lhcl1UjM_0Q.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="17. Pandas Series apply()-lhcl1UjM_0Q.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="17. Pandas Series apply()-lhcl1UjM_0Q.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="17. Pandas Series apply()-lhcl1UjM_0Q.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="17. Pandas Series apply()-lhcl1UjM_0Q.zh-CN.vtt" label="CN">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <h3 id="split">split()</h3>
+<p>你可以在<a href="https://docs.python.org/2/library/stdtypes.html#str.split" rel="noopener noreferrer" target="_blank">此处</a> 找到有关 Python <code>split()</code> 函数的文档。</p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="18. 在 Pandas 中绘图.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('17. Pandas Series apply()')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

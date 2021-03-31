@@ -1,0 +1,146 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.130 --> 00:00:02.990
+Vou começar calculando quantos
+dos pares de pontos de dados estão
+
+00:00:02.990 --> 00:00:05.480
+na mesma direção em relação
+às respectivas médias.
+
+00:00:05.480 --> 00:00:07.770
+Ou seja, ambos acima da média ou
+ambos abaixo da média.
+
+00:00:09.000 --> 00:00:12.600
+Para fazer isso, vou criar primeiro
+um array chamado is_same_direction,
+
+00:00:12.600 --> 00:00:15.650
+que contém um booliano para
+cada par de pontos de dados.
+
+00:00:15.650 --> 00:00:18.830
+Há dois casos para como os
+pares poderiam estar na mesma direção.
+
+00:00:18.830 --> 00:00:21.570
+Eles poderiam estar ambos acima de suas
+médias ou abaixo de suas médias.
+
+00:00:22.950 --> 00:00:26.580
+Então, vou criar dois arrays separados
+de boolianos para esses dois casos.
+
+00:00:26.580 --> 00:00:29.700
+Posso usar este código para ver
+se cada valor de variable1 é
+
+00:00:29.700 --> 00:00:32.560
+maior que a média de variable1 e se
+
+00:00:32.560 --> 00:00:35.900
+cada valor de variable2 é maior
+que a média de variable2.
+
+00:00:35.900 --> 00:00:38.490
+Não se esqueça de adicionar os parêntesis.
+
+00:00:38.490 --> 00:00:42.880
+É importante fazer as comparações
+primeiro e depois fazer a lógica &amp;.
+
+00:00:42.880 --> 00:00:46.250
+O código para ver se as duas variáveis
+estão abaixo da média é idêntico,
+
+00:00:46.250 --> 00:00:49.230
+exceto que tem sinal de menor que
+em vez do sinal maior que.
+
+00:00:49.230 --> 00:00:53.610
+As duas variáveis estão na mesma
+direção se ambas estiverem acima ou
+
+00:00:53.610 --> 00:00:55.610
+abaixo de suas médias.
+
+00:00:55.610 --> 00:00:57.476
+Como mencionei no
+vídeo de instrução,
+
+00:00:57.476 --> 00:01:00.310
+você pode adicionar um array de boolianos
+para ver quantos deles são true.
+
+00:01:00.310 --> 00:01:04.321
+Então, posso encontrar o número de pares que
+estão na mesma direção calculando
+
+00:01:04.321 --> 00:01:05.961
+is_same_direction.sum.
+
+00:01:09.351 --> 00:01:14.017
+Por fim, posso calcular num_different_direction
+pegando len(variable1)
+
+00:01:14.017 --> 00:01:18.020
+menos o número de pares
+na mesma direção.
+
+00:01:18.020 --> 00:01:20.980
+Por último, vou precisar
+retornar os dois números.
+
+00:01:20.980 --> 00:01:24.940
+Agora se você executou esta função para os
+arrays de expectativa de vida e GDP dados no
+
+00:01:24.940 --> 00:01:29.115
+exercício de programação, deve
+ter visto que havia 17 pares que
+
+00:01:29.115 --> 00:01:32.485
+na mesma direção e
+três que estavam em direções diferentes.
+
+00:01:32.485 --> 00:01:35.885
+O fato de a maioria dos pares estarem na
+mesma direção indica que estas
+
+00:01:35.885 --> 00:01:38.165
+duas variáveis estão positivamente correlacionadas.
+
+00:01:38.165 --> 00:01:41.655
+Ou seja, quando uma é maior,
+a outra tende a ser maior também.
+
+00:01:41.655 --> 00:01:45.150
+Se o primeiro número for pequeno,
+e o segundo número for pequeno,
+
+00:01:45.150 --> 00:01:48.100
+isso indica que as variáveis
+estão negativamente correlacionadas.
+
+00:01:48.100 --> 00:01:51.450
+Quando uma tende a ser grande,
+a outra tende a ser pequena.
+
+00:01:51.450 --> 00:01:53.580
+E se os dois números
+forem basicamente iguais,
+
+00:01:53.580 --> 00:01:56.670
+isso indica que pode não
+haver uma relação forte.
+
+00:01:56.670 --> 00:01:58.420
+É igualmente provável que
+
+00:01:58.420 --> 00:02:02.080
+uma variável esteja positivamente correlacionada
+com a outra quanto negativamente correlacionada.
+

@@ -1,0 +1,59 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.310 --> 00:00:03.350
+A resposta para essa pergunta é
+um pouco surpreendente ou, pelo menos,
+
+00:00:03.350 --> 00:00:05.160
+foi para mim quando a recebi pela primeira vez.
+
+00:00:05.160 --> 00:00:07.750
+Porque os arrays Numpy têm comportamentos
+diferentes das listas Python.
+
+00:00:08.750 --> 00:00:13.680
+Você começa com a variável
+a referindo-se ao array 1, 2, 3, 4, 5.
+
+00:00:13.680 --> 00:00:17.630
+Entretanto, quando usa uma parte dos
+primeiros três elementos do array a, o
+
+00:00:17.630 --> 00:00:19.630
+Numpy não cria, de fato,
+um novo array.
+
+00:00:20.770 --> 00:00:25.310
+Em vez disso, essa parte refere-se ao
+que é chamado de exibição do array original.
+
+00:00:25.310 --> 00:00:27.240
+Ela se parecerá com um novo array, mas,
+
+00:00:27.240 --> 00:00:30.990
+se modificá-lo,
+o array original também será modificado.
+
+00:00:32.180 --> 00:00:34.510
+Isso torna a divisão em Numpy muito rápida,
+
+00:00:34.510 --> 00:00:38.090
+pois você não precisa criar
+um novo array nem copiar novos valores.
+
+00:00:38.090 --> 00:00:41.400
+Mas significa que você deve tomar
+muito cuidado sempre que quiser modificar
+
+00:00:41.400 --> 00:00:42.300
+uma parte de um array.
+
+00:00:43.360 --> 00:00:46.970
+Sendo assim, a resposta correta aqui é que
+a saída é a segunda opção.
+
+00:00:46.970 --> 00:00:50.634
+Um array contendo 100, 2, 3, 4 e 5.
+

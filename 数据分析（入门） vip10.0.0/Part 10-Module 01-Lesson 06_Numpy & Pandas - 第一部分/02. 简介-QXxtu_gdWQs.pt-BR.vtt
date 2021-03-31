@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.320 --> 00:00:04.240
+Na última lição, você fez uma série
+de análises de dados usando o Python.
+
+00:00:04.240 --> 00:00:07.689
+E você usou NumPy e
+matplotlib um pouco, mas para a maior parte,
+
+00:00:07.689 --> 00:00:11.150
+você concluiu a análise sem
+usar nenhuma biblioteca adicional.
+
+00:00:11.150 --> 00:00:14.120
+Nesta lição, você vai ficar
+um pouco mais familiarizado com NumPy.
+
+00:00:14.120 --> 00:00:17.110
+Também vou apresentar
+uma biblioteca chamada Pandas.
+
+00:00:17.110 --> 00:00:18.290
+Essas duas bibliotecas,
+
+00:00:18.290 --> 00:00:21.130
+principalmente Pandas
+demoram um pouco mais para aprender a usar.
+
+00:00:21.130 --> 00:00:24.640
+Mas depois que você aprender, elas tornarão a escrita
+do código de análise de dados bem mais fácil.
+
+00:00:24.640 --> 00:00:27.590
+E seu código também será executado
+de forma mais fácil quando você as utilizar.
+
+00:00:27.590 --> 00:00:31.330
+Quando usei Pandas pela primeira vez,
+gastei muito tempo lendo a documentação
+
+00:00:31.330 --> 00:00:35.640
+on-line, analisando tutoriais
+e achei muito difícil.
+
+00:00:35.640 --> 00:00:39.170
+Este curso contém as informações
+que eu queria ter tido quando comecei.
+
+00:00:39.170 --> 00:00:42.350
+Não vou conseguir tratar todos os recursos
+que talvez você queira usar, mas
+
+00:00:42.350 --> 00:00:45.260
+no fim, você estará bem preparado
+para ler a documentação e
+
+00:00:45.260 --> 00:00:46.880
+aprender mais sozinho.
+
+00:00:46.880 --> 00:00:50.370
+Nesta lição, vou focar em
+como usar NumPy e Pandas para analisar
+
+00:00:50.370 --> 00:00:53.910
+dados dimensionais, fazer algo como
+uma única coluna de uma planilha.
+
+00:00:53.910 --> 00:00:54.560
+Vamos começar.
+
