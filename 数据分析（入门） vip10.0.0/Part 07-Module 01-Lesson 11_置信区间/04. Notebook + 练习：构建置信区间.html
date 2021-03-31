@@ -1,0 +1,502 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook + 练习：构建置信区间</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>置信区间</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：从抽样分布到置信区间.html">02. 视频：从抽样分布到置信区间</a>
+    </li>
+    <li class="">
+      <a href="03. ScreenCast 抽样分布与置信区间.html">03. ScreenCast: 抽样分布与置信区间</a>
+    </li>
+    <li class="">
+      <a href="04. Notebook + 练习：构建置信区间.html">04. Notebook + 练习：构建置信区间</a>
+    </li>
+    <li class="">
+      <a href="05. ScreenCast 均数差.html">05. ScreenCast: 均数差</a>
+    </li>
+    <li class="">
+      <a href="06. Notebook  + 练习：均数差.html">06. Notebook  + 练习：均数差</a>
+    </li>
+    <li class="">
+      <a href="07. 视频：置信区间的应用.html">07. 视频：置信区间的应用</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：统计显著性与实际显著性.html">08. 视频：统计显著性与实际显著性</a>
+    </li>
+    <li class="">
+      <a href="09. 统计显著性与实际显著性.html">09. 统计显著性与实际显著性</a>
+    </li>
+    <li class="">
+      <a href="10. 视频：传统的置信区间.html">10. 视频：传统的置信区间</a>
+    </li>
+    <li class="">
+      <a href="11. ScreenCast 传统置信区间方法.html">11. ScreenCast: 传统置信区间方法</a>
+    </li>
+    <li class="">
+      <a href="12. 视频：置信区间的其他相关语言.html">12. 视频：置信区间的其他相关语言</a>
+    </li>
+    <li class="">
+      <a href="13. 置信区间的其他相关语言.html">13. 置信区间的其他相关语言</a>
+    </li>
+    <li class="">
+      <a href="14. 视频：置信区间的正确解读.html">14. 视频：置信区间的正确解读</a>
+    </li>
+    <li class="">
+      <a href="15. 置信区间的正确解读.html">15. 置信区间的正确解读</a>
+    </li>
+    <li class="">
+      <a href="16. 视频：置信区间与假设检验.html">16. 视频：置信区间与假设检验</a>
+    </li>
+    <li class="">
+      <a href="17. 文本：总结 + 下节预告.html">17. 文本：总结 + 下节预告</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Notebook + 练习：构建置信区间</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="总体平均数的置信区间">总体平均数的置信区间</h3>
+<p>在之前的视频中，你看到我们如何构建总体平均数的置信区间。为了进行一些练习，你可以采用同样的过程，创建不喝咖啡总体平均高度的置信区间。另外，python  notebook 中有一些测试问题，可以确保你结果的准确性。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <h3 id="问题-1">问题 1</h3>
+<p>使用前两个问题的结果，匹配下列描述和正确的数值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>68.12</p></button>
+  <button class="btn btn-primary"><p>0.405</p></button>
+  <button class="btn btn-primary"><p>67.58</p></button>
+  <button class="btn btn-primary"><p>0.400</p></button>
+  <button class="btn btn-primary"><p>66.78</p></button>
+  <button class="btn btn-primary"><p>0.595</p></button>
+  <button class="btn btn-primary"><p>0.600</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>喝咖啡的样本比例</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>不喝咖啡的样本比例</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>喝咖啡样本成员的平均高度</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>不喝咖啡样本成员的平均高度</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>喝咖啡样本成员的平均高度</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>68.12</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>不喝咖啡的样本比例</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.405</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>不喝咖啡样本成员的平均高度</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>66.78</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>喝咖啡的样本比例</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0.595</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>在bootstrap中的喝咖啡比例是否与初始样本的比例一致呢？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1509053299633" name="462287" id="a1509053299633">
+        <label for="a1509053299633"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509054315343" name="462287" id="a1509054315343">
+        <label for="a1509054315343"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    否
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <h3 id="问题-3">问题 3</h3>
+<p>使用 Notebook 中最后一个问题的结果，匹配下列描述和正确的数值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>是</p></button>
+  <button class="btn btn-primary"><p>否</p></button>
+  <button class="btn btn-primary"><p>否</p></button>
+  <button class="btn btn-primary"><p>65.99</p></button>
+  <button class="btn btn-primary"><p>67.58</p></button>
+  <button class="btn btn-primary"><p>是</p></button>
+  <button class="btn btn-primary"><p>66.44</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>在你的总体中，不喝咖啡人群平均高度 95% 置信区间的下限是多少？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>你的总体中，不喝咖啡人群平均高度 95% 置信区间的上限是多少？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>在你的总体中，不喝咖啡人群的平均高度数值是多少？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>你的区间是否采集了不喝咖啡的正确平均高度？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>不喝咖啡样本的平均高度是否与总体平均高度相同？</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>你的区间是否采集了不喝咖啡的正确平均高度？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>是</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>不喝咖啡样本的平均高度是否与总体平均高度相同？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>否</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>不喝咖啡样本的平均高度是否与总体平均高度相同？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>否</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在你的总体中，不喝咖啡人群平均高度 95% 置信区间的下限是多少？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>65.99</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>你的总体中，不喝咖啡人群平均高度 95% 置信区间的上限是多少？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>67.58</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>你的区间是否采集了不喝咖啡的正确平均高度？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>是</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在你的总体中，不喝咖啡人群的平均高度数值是多少？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>66.44</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>如果我们想构建 98% 的置信区间，<code>每个</code> 尾部应该截取的百分比是多少？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1510000440952" name="462289" id="a1510000440952">
+        <label for="a1510000440952"><p>0.5%</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1510000484645" name="462289" id="a1510000484645">
+        <label for="a1510000484645"><p>1%</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1510000488816" name="462289" id="a1510000488816">
+        <label for="a1510000488816"><p>2%</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1510000493790" name="462289" id="a1510000493790">
+        <label for="a1510000493790"><p>2.5%</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    1%
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. ScreenCast 均数差.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Notebook + 练习：构建置信区间')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

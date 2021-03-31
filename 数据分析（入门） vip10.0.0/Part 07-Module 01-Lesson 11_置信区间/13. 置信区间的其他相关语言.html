@@ -1,0 +1,335 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>置信区间的其他相关语言</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>置信区间</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：从抽样分布到置信区间.html">02. 视频：从抽样分布到置信区间</a>
+    </li>
+    <li class="">
+      <a href="03. ScreenCast 抽样分布与置信区间.html">03. ScreenCast: 抽样分布与置信区间</a>
+    </li>
+    <li class="">
+      <a href="04. Notebook + 练习：构建置信区间.html">04. Notebook + 练习：构建置信区间</a>
+    </li>
+    <li class="">
+      <a href="05. ScreenCast 均数差.html">05. ScreenCast: 均数差</a>
+    </li>
+    <li class="">
+      <a href="06. Notebook  + 练习：均数差.html">06. Notebook  + 练习：均数差</a>
+    </li>
+    <li class="">
+      <a href="07. 视频：置信区间的应用.html">07. 视频：置信区间的应用</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：统计显著性与实际显著性.html">08. 视频：统计显著性与实际显著性</a>
+    </li>
+    <li class="">
+      <a href="09. 统计显著性与实际显著性.html">09. 统计显著性与实际显著性</a>
+    </li>
+    <li class="">
+      <a href="10. 视频：传统的置信区间.html">10. 视频：传统的置信区间</a>
+    </li>
+    <li class="">
+      <a href="11. ScreenCast 传统置信区间方法.html">11. ScreenCast: 传统置信区间方法</a>
+    </li>
+    <li class="">
+      <a href="12. 视频：置信区间的其他相关语言.html">12. 视频：置信区间的其他相关语言</a>
+    </li>
+    <li class="">
+      <a href="13. 置信区间的其他相关语言.html">13. 置信区间的其他相关语言</a>
+    </li>
+    <li class="">
+      <a href="14. 视频：置信区间的正确解读.html">14. 视频：置信区间的正确解读</a>
+    </li>
+    <li class="">
+      <a href="15. 置信区间的正确解读.html">15. 置信区间的正确解读</a>
+    </li>
+    <li class="">
+      <a href="16. 视频：置信区间与假设检验.html">16. 视频：置信区间与假设检验</a>
+    </li>
+    <li class="">
+      <a href="17. 文本：总结 + 下节预告.html">17. 文本：总结 + 下节预告</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. 置信区间的其他相关语言</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>设想一下，我们构建了总体平均数的置信区间，得到上限为 20 和宽度为 8 的置信区间。使用这个信息，为每个附加数值进行赋值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>12</p></button>
+  <button class="btn btn-primary"><p>2</p></button>
+  <button class="btn btn-primary"><p>4</p></button>
+  <button class="btn btn-primary"><p>10</p></button>
+  <button class="btn btn-primary"><p>20</p></button>
+  <button class="btn btn-primary"><p>16</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>置信区间的上限</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>置信区间的下限</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>误差范围</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>样本平均数</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>置信区间的下限</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>12</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>误差范围</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>4</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>置信区间的上限</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>20</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>样本平均数</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>16</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>下列哪个是正确表述？</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1509076189514" name="462310" id="a1509076189514">
+      <label for="a1509076189514"><p>如果增加样本容量，其他条目保持不变，置信区间会缩小。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1509076230342" name="462310" id="a1509076230342">
+      <label for="a1509076230342"><p>如果增加样本容量，其他条目保持不变，置信区间会加大。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1509076239405" name="462310" id="a1509076239405">
+      <label for="a1509076239405"><p>如果提高置信度，其他条目保持不变，置信区间会缩小。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1509076256880" name="462310" id="a1509076256880">
+      <label for="a1509076256880"><p>如果提高置信度，其他条目保持不变，置信区间会加大。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>如果增加样本容量，其他条目保持不变，置信区间会缩小。</li>
+      <li>如果提高置信度，其他条目保持不变，置信区间会加大。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. 视频：置信区间的正确解读.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. 置信区间的其他相关语言')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

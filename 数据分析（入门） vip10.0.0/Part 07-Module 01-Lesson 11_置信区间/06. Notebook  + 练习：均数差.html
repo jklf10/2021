@@ -1,0 +1,471 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook  + 练习：均数差</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>置信区间</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：从抽样分布到置信区间.html">02. 视频：从抽样分布到置信区间</a>
+    </li>
+    <li class="">
+      <a href="03. ScreenCast 抽样分布与置信区间.html">03. ScreenCast: 抽样分布与置信区间</a>
+    </li>
+    <li class="">
+      <a href="04. Notebook + 练习：构建置信区间.html">04. Notebook + 练习：构建置信区间</a>
+    </li>
+    <li class="">
+      <a href="05. ScreenCast 均数差.html">05. ScreenCast: 均数差</a>
+    </li>
+    <li class="">
+      <a href="06. Notebook  + 练习：均数差.html">06. Notebook  + 练习：均数差</a>
+    </li>
+    <li class="">
+      <a href="07. 视频：置信区间的应用.html">07. 视频：置信区间的应用</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：统计显著性与实际显著性.html">08. 视频：统计显著性与实际显著性</a>
+    </li>
+    <li class="">
+      <a href="09. 统计显著性与实际显著性.html">09. 统计显著性与实际显著性</a>
+    </li>
+    <li class="">
+      <a href="10. 视频：传统的置信区间.html">10. 视频：传统的置信区间</a>
+    </li>
+    <li class="">
+      <a href="11. ScreenCast 传统置信区间方法.html">11. ScreenCast: 传统置信区间方法</a>
+    </li>
+    <li class="">
+      <a href="12. 视频：置信区间的其他相关语言.html">12. 视频：置信区间的其他相关语言</a>
+    </li>
+    <li class="">
+      <a href="13. 置信区间的其他相关语言.html">13. 置信区间的其他相关语言</a>
+    </li>
+    <li class="">
+      <a href="14. 视频：置信区间的正确解读.html">14. 视频：置信区间的正确解读</a>
+    </li>
+    <li class="">
+      <a href="15. 置信区间的正确解读.html">15. 置信区间的正确解读</a>
+    </li>
+    <li class="">
+      <a href="16. 视频：置信区间与假设检验.html">16. 视频：置信区间与假设检验</a>
+    </li>
+    <li class="">
+      <a href="17. 文本：总结 + 下节预告.html">17. 文本：总结 + 下节预告</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Notebook  + 练习：均数差</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>### 测试 1</p>
+<p>使用上面前两个问题的结果，匹配真假和正确的对应描述。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>真</p></button>
+  <button class="btn btn-primary"><p>真</p></button>
+  <button class="btn btn-primary"><p>真</p></button>
+  <button class="btn btn-primary"><p>假</p></button>
+  <button class="btn btn-primary"><p>假</p></button>
+  <button class="btn btn-primary"><p>真</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>陈述</p>
+      </th>
+      <th>
+        <p>真或假</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>根据第一个问题的置信区间，你得出喝咖啡人群一般高于不喝咖啡人群。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>在第一个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，喝咖啡人群的一般高于不喝咖啡人群。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>根据第二个问题的置信区间，你发现 21 岁以上的人高于 21 岁以下的人。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>在第二个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，21 岁以上的人高于 21 岁以下的人。</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>陈述</p>
+        </th>
+        <th>
+          <p>真或假</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>根据第一个问题的置信区间，你得出喝咖啡人群一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第一个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，喝咖啡人群的一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>根据第二个问题的置信区间，你发现 21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第二个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>根据第一个问题的置信区间，你得出喝咖啡人群一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第一个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，喝咖啡人群的一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>根据第二个问题的置信区间，你发现 21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第二个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>根据第一个问题的置信区间，你得出喝咖啡人群一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第一个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，喝咖啡人群的一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>根据第二个问题的置信区间，你发现 21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第二个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>根据第一个问题的置信区间，你得出喝咖啡人群一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第一个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，喝咖啡人群的一般高于不喝咖啡人群。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>根据第二个问题的置信区间，你发现 21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>在第二个问题的每个自助法 (bootstrap) 例子中，平均数差异表明，21 岁以上的人高于 21 岁以下的人。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>真</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><h3 id="测试-2">测试 2</h3>
+<p>使用上面最后两个问题的结果，选择下面一个 <strong>错误</strong> 的表述。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1509068241302" name="462294" id="a1509068241302">
+        <label for="a1509068241302"><p>最后两个问题的区间提供了统计意义的证据，各个年龄段的喝咖啡人群通常比不喝咖啡人群更矮。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509068317895" name="462294" id="a1509068317895">
+        <label for="a1509068317895"><p>最后两部分的区间大于前两部分的区间。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509068469522" name="462294" id="a1509068469522">
+        <label for="a1509068469522"><p>虽然 21 岁以上喝咖啡的人一般更矮，但 21 岁以下喝咖啡的人一般更高。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    虽然 21 岁以上喝咖啡的人一般更矮，但 21 岁以下喝咖啡的人一般更高。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>在第一个区间中，你发现喝咖啡的人更高。但是在最后一个区间中，你发现各组中喝咖啡的人实际上更矮。具体例子如下：</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1509068854343" name="462295" id="a1509068854343">
+        <label for="a1509068854343"><p>经验法则</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509068939053" name="462295" id="a1509068939053">
+        <label for="a1509068939053"><p>奥卡姆剃刀</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509068945586" name="462295" id="a1509068945586">
+        <label for="a1509068945586"><p>数学误差</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1509068951963" name="462295" id="a1509068951963">
+        <label for="a1509068951963"><p>辛普森悖论</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    辛普森悖论
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. 视频：置信区间的应用.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Notebook  + 练习：均数差')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
