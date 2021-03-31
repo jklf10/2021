@@ -1,0 +1,1191 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>字典 II</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>数据结构和循环</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 欢迎回来！.html">01. 欢迎回来！</a>
+    </li>
+    <li class="">
+      <a href="02. 列表.html">02. 列表</a>
+    </li>
+    <li class="">
+      <a href="03. 列表 II.html">03. 列表 II</a>
+    </li>
+    <li class="">
+      <a href="04. For 循环.html">04. For 循环</a>
+    </li>
+    <li class="">
+      <a href="05. For 循环 II.html">05. For 循环 II</a>
+    </li>
+    <li class="">
+      <a href="06. While 循环.html">06. While 循环</a>
+    </li>
+    <li class="">
+      <a href="07. 重构代码.html">07. 重构代码</a>
+    </li>
+    <li class="">
+      <a href="08. 集合.html">08. 集合</a>
+    </li>
+    <li class="">
+      <a href="09. 集合 II.html">09. 集合 II</a>
+    </li>
+    <li class="">
+      <a href="10. 字典.html">10. 字典</a>
+    </li>
+    <li class="">
+      <a href="11. 字典 II.html">11. 字典 II</a>
+    </li>
+    <li class="">
+      <a href="12. 复合数据结构.html">12. 复合数据结构</a>
+    </li>
+    <li class="">
+      <a href="13. 问题解决能力.html">13. 问题解决能力</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. 字典 II</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="解决方案：定义一个字典">解决方案：定义一个字典</h1>
+<p>可以按照如下所示的方法定义字典，</p>
+<pre><code class="python language-python">&gt;&gt;&gt; population = {'Shanghai': 17.8,
+              'Istanbul': 13.3,
+              'Karachi': 13.0,
+              'Mumbai': 12.5}</code></pre>
+<p>我选择把每个键值对都放在其自身的行中，因此更易读取字典的定义，但是放在何处以及是否使用换行符只是一种风格选择。下面这段代码也一样：</p>
+<pre><code class="python language-python">&gt;&gt;&gt; population = {'Shanghai': 17.8, 'Istanbul': 13.3, 'Karachi': 13.0, 'Mumbai': 12.5}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>不变键</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>哪些可以用作字典的键？提示：字典的键必须具有不可变性，也就是说，它们必须是不可修改的类型。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1484003318866" name="347100" id="a1484003318866">
+      <label for="a1484003318866"><p><code>str</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1484003333525" name="347100" id="a1484003333525">
+      <label for="a1484003333525"><p><code>list</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1484003334280" name="347100" id="a1484003334280">
+      <label for="a1484003334280"><p><code>int</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1484003335062" name="347100" id="a1484003335062">
+      <label for="a1484003335062"><p><code>float</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>`str`</li>
+      <li>`int`</li>
+      <li>`float`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>练习：查找哪些值不存在</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>如果查找字典中不存在的值，会出现什么结果？在自己的计算机上创建一个测试字典，并使用方括号来查找尚未定义的值。看看会出现什么结果？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1484003471533" name="347101" id="a1484003471533">
+        <label for="a1484003471533"><p>查找返回 <code>None</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1484003504254" name="347101" id="a1484003504254">
+        <label for="a1484003504254"><p>将默认值为 None 的键添加到字典</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1484003504878" name="347101" id="a1484003504878">
+        <label for="a1484003504878"><p>出现 <code>KeyError</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1484003505578" name="347101" id="a1484003505578">
+        <label for="a1484003505578"><p>Python 在互联网上搜索合适的值</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    出现 `KeyError`
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="字典中是什么内容？">字典中是什么内容？</h1>
+<p>我们可以使用与通过 <code>in</code> 关键字检查列表或集合中是否存在一个值的方法来查看字典中是否存在值。</p>
+<pre><code class="python language-python">if 'mithril' in elements:
+    print("That's a real element!")
+else:
+    print("There's no such element!')</code></pre>
+<p>如果集合中可能没有键，在查找之前可以使用 <code>in</code> 验证字典中是否存在这个键。</p>
+<p>字典还有一个有用的相关方法，即 <code>get</code>。<code>get</code> 用于在字典中查找值，但不同于方括号，如果不存在这个键，<code>get</code> 返回 <code>None</code> (或选择的默认值)。如果预料查找可能会失败，则相对于普通方括号来说，<code>get</code> 可能是一个更好的工具。</p>
+<pre><code class="python language-python">&gt;&gt;&gt; elements.get('dilithium')
+None
+&gt;&gt;&gt; elements['dilithium']
+KeyError: 'dilithium'
+&gt;&gt;&gt; elements.get('kryptonite', 'There\'s no such element!')
+"There's no such element!"</code></pre>
+<p>在最后一个示例中，当未找到键时，我们指定返回一个默认值 (<code>string</code> <code>'There\'s no such element!'</code>)，而不是 <code>None</code>。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="练习：用户（按国家--地区）">练习：用户（按国家 / 地区）</h1>
+<p>我们重新回顾一下此前的调查信息。在我们使用集合来确定数据集中有多少个国家之前，先假设该数据集实际上包含有关下载和安装某个应用程序的用户信息：对于每个下载和安装该应用程序的用户，其国家将出现在列表中。现在让我们用一个字典来进行更复杂的分析：每个国家有多少名用户？</p>
+<p>创建一个字典，<code>country_counts</code>，其键是国家名称，其值是国家/地区在 <code>countries</code> 列表中出现的次数。将自己的代码写在 app.py 文件中。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#347109-countries-py" class="nav-item nav-link  active show" id="tab-347109-countries-py" data-toggle="tab" role="tab"
+      aria-controls="347109-countries-py" aria-selected="true">countries.py</a>
+    <a href="#347109-app-py" class="nav-item nav-link " id="tab-347109-app-py" data-toggle="tab" role="tab"
+      aria-controls="347109-app-py" aria-selected="false">app.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="347109-countries-py" aria-labelledby="tab-347109-countries-py" role="tabpanel">
+      <pre><code></code>country_list &#x3D; [&#x27;Malta&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Oman&#x27;,
+ &#x27;Jamaica&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Netherlands&#x27;,
+ &#x27;Venezuela&#x27;,
+ &#x27;Tuvalu&#x27;,
+ &#x27;Kazakhstan&#x27;,
+ &#x27;Namibia&#x27;,
+ &#x27;Congo {Democratic Rep}&#x27;,
+ &#x27;Qatar&#x27;,
+ &#x27;El Salvador&#x27;,
+ &#x27;Macedonia&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;Netherlands&#x27;,
+ &#x27;Namibia&#x27;,
+ &#x27;Moldova&#x27;,
+ &#x27;Djibouti&#x27;,
+ &#x27;Malaysia&#x27;,
+ &#x27;Belarus&#x27;,
+ &#x27;Niger&#x27;,
+ &#x27;Thailand&#x27;,
+ &#x27;Burkina&#x27;,
+ &#x27;Panama&#x27;,
+ &#x27;Libya&#x27;,
+ &#x27;Kuwait&#x27;,
+ &#x27;Dominican Republic&#x27;,
+ &#x27;Andorra&#x27;,
+ &#x27;Nauru&#x27;,
+ &#x27;Guyana&#x27;,
+ &#x27;Austria&#x27;,
+ &#x27;Germany&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Lebanon&#x27;,
+ &#x27;Bahamas&#x27;,
+ &#x27;Austria&#x27;,
+ &#x27;Chad&#x27;,
+ &#x27;Canada&#x27;,
+ &#x27;Ivory Coast&#x27;,
+ &#x27;Papua New Guinea&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;Marshall Islands&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Angola&#x27;,
+ &#x27;New Zealand&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;Moldova&#x27;,
+ &#x27;Libya&#x27;,
+ &#x27;Bulgaria&#x27;,
+ &#x27;Honduras&#x27;,
+ &#x27;Comoros&#x27;,
+ &#x27;Tunisia&#x27;,
+ &#x27;Peru&#x27;,
+ &#x27;Greece&#x27;,
+ &#x27;Montenegro&#x27;,
+ &#x27;Austria&#x27;,
+ &#x27;Cambodia&#x27;,
+ &#x27;St Lucia&#x27;,
+ &#x27;Ecuador&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Colombia&#x27;,
+ &#x27;Liechtenstein&#x27;,
+ &#x27;Monaco&#x27;,
+ &#x27;Iraq&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;Sri Lanka&#x27;,
+ &#x27;Poland&#x27;,
+ &#x27;Vanuatu&#x27;,
+ &#x27;Barbados&#x27;,
+ &#x27;Mauritius&#x27;,
+ &#x27;Turkmenistan&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Israel&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;United Arab Emirates&#x27;,
+ &#x27;Zimbabwe&#x27;,
+ &#x27;Sao Tome &amp; Principe&#x27;,
+ &#x27;Kuwait&#x27;,
+ &#x27;Canada&#x27;,
+ &#x27;Vietnam&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;Rwanda&#x27;,
+ &#x27;Kosovo&#x27;,
+ &#x27;Nepal&#x27;,
+ &#x27;Indonesia&#x27;,
+ &#x27;Suriname&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;Chile&#x27;,
+ &#x27;Luxembourg&#x27;,
+ &#x27;Papua New Guinea&#x27;,
+ &#x27;Norway&#x27;,
+ &#x27;Brunei&#x27;,
+ &#x27;Ecuador&#x27;,
+ &#x27;Turkey&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Mozambique&#x27;,
+ &#x27;Senegal&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Laos&#x27;,
+ &#x27;Vietnam&#x27;,
+ &#x27;Kosovo&#x27;,
+ &#x27;Belize&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;Andorra&#x27;,
+ &#x27;Russian Federation&#x27;,
+ &#x27;Cambodia&#x27;,
+ &#x27;Madagascar&#x27;,
+ &#x27;Slovenia&#x27;,
+ &#x27;Malaysia&#x27;,
+ &#x27;Belgium&#x27;,
+ &#x27;Sweden&#x27;,
+ &#x27;Nepal&#x27;,
+ &#x27;Germany&#x27;,
+ &#x27;Fiji&#x27;,
+ &#x27;Australia&#x27;,
+ &#x27;Kenya&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Nepal&#x27;,
+ &#x27;Niger&#x27;,
+ &#x27;Palau&#x27;,
+ &#x27;Serbia&#x27;,
+ &#x27;Chad&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;Poland&#x27;,
+ &#x27;Nicaragua&#x27;,
+ &#x27;Barbados&#x27;,
+ &#x27;Hungary&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Ukraine&#x27;,
+ &#x27;China&#x27;,
+ &#x27;Latvia&#x27;,
+ &#x27;Panama&#x27;,
+ &#x27;Papua New Guinea&#x27;,
+ &#x27;Sweden&#x27;,
+ &#x27;Zimbabwe&#x27;,
+ &#x27;Jordan&#x27;,
+ &#x27;Sao Tome &amp; Principe&#x27;,
+ &#x27;Mexico&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Czech Republic&#x27;,
+ &#x27;New Zealand&#x27;,
+ &#x27;Uruguay&#x27;,
+ &#x27;Kuwait&#x27;,
+ &#x27;Liberia&#x27;,
+ &#x27;Canada&#x27;,
+ &#x27;Seychelles&#x27;,
+ &#x27;Liberia&#x27;,
+ &#x27;Saudi Arabia&#x27;,
+ &#x27;Sierra Leone&#x27;,
+ &#x27;South Sudan&#x27;,
+ &#x27;Bolivia&#x27;,
+ &#x27;Philippines&#x27;,
+ &#x27;Mauritania&#x27;,
+ &#x27;United States&#x27;,
+ &#x27;Hungary&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;Netherlands&#x27;,
+ &#x27;Burkina&#x27;,
+ &#x27;Congo {Democratic Rep}&#x27;,
+ &#x27;Central African Rep&#x27;,
+ &#x27;Burkina&#x27;,
+ &#x27;Poland&#x27;,
+ &#x27;Guinea&#x27;,
+ &#x27;United States&#x27;,
+ &#x27;Luxembourg&#x27;,
+ &#x27;Chile&#x27;,
+ &#x27;Kuwait&#x27;,
+ &#x27;Vatican City&#x27;,
+ &#x27;Maldives&#x27;,
+ &#x27;Ethiopia&#x27;,
+ &#x27;France&#x27;,
+ &#x27;Mozambique&#x27;,
+ &#x27;Nicaragua&#x27;,
+ &#x27;Portugal&#x27;,
+ &#x27;United States&#x27;,
+ &#x27;South Sudan&#x27;,
+ &#x27;Bangladesh&#x27;,
+ &#x27;Belize&#x27;,
+ &#x27;Mozambique&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Sao Tome &amp; Principe&#x27;,
+ &#x27;Israel&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Equatorial Guinea&#x27;,
+ &#x27;Grenada&#x27;,
+ &#x27;Liberia&#x27;,
+ &#x27;Nauru&#x27;,
+ &#x27;St Kitts &amp; Nevis&#x27;,
+ &#x27;Armenia&#x27;,
+ &#x27;Italy&#x27;,
+ &#x27;San Marino&#x27;,
+ &#x27;Congo {Democratic Rep}&#x27;,
+ &#x27;Suriname&#x27;,
+ &#x27;Mauritius&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;Samoa&#x27;,
+ &#x27;Bosnia Herzegovina&#x27;,
+ &#x27;South Sudan&#x27;,
+ &#x27;Trinidad &amp; Tobago&#x27;,
+ &#x27;Nigeria&#x27;,
+ &#x27;Bolivia&#x27;,
+ &#x27;South Africa&#x27;,
+ &#x27;Qatar&#x27;,
+ &#x27;South Sudan&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Benin&#x27;,
+ &#x27;Kuwait&#x27;,
+ &#x27;Tajikistan&#x27;,
+ &#x27;Guyana&#x27;,
+ &#x27;Indonesia&#x27;,
+ &#x27;Turkmenistan&#x27;,
+ &#x27;Sierra Leone&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Turkmenistan&#x27;,
+ &#x27;Seychelles&#x27;,
+ &#x27;Bulgaria&#x27;,
+ &#x27;Rwanda&#x27;,
+ &#x27;Czech Republic&#x27;,
+ &#x27;Philippines&#x27;,
+ &#x27;Norway&#x27;,
+ &#x27;Germany&#x27;,
+ &#x27;Tonga&#x27;,
+ &#x27;United Arab Emirates&#x27;,
+ &#x27;Syria&#x27;,
+ &#x27;Bahamas&#x27;,
+ &#x27;Armenia&#x27;,
+ &#x27;Paraguay&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;Samoa&#x27;,
+ &#x27;Senegal&#x27;,
+ &#x27;Kiribati&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Gabon&#x27;,
+ &#x27;Cuba&#x27;,
+ &#x27;Comoros&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;Seychelles&#x27;,
+ &#x27;Mexico&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;El Salvador&#x27;,
+ &#x27;Tunisia&#x27;,
+ &#x27;Liechtenstein&#x27;,
+ &#x27;Czech Republic&#x27;,
+ &#x27;Congo&#x27;,
+ &#x27;Jordan&#x27;,
+ &#x27;Djibouti&#x27;,
+ &#x27;Macedonia&#x27;,
+ &#x27;Finland&#x27;,
+ &#x27;Denmark&#x27;,
+ &#x27;San Marino&#x27;,
+ &#x27;Cuba&#x27;,
+ &#x27;Botswana&#x27;,
+ &#x27;Equatorial Guinea&#x27;,
+ &#x27;United Kingdom&#x27;,
+ &#x27;Tanzania&#x27;,
+ &#x27;Bosnia Herzegovina&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;El Salvador&#x27;,
+ &#x27;Senegal&#x27;,
+ &#x27;Myanmar, {Burma}&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Malaysia&#x27;,
+ &#x27;Oman&#x27;,
+ &#x27;Tanzania&#x27;,
+ &#x27;Gabon&#x27;,
+ &#x27;Tonga&#x27;,
+ &#x27;Vietnam&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Slovakia&#x27;,
+ &#x27;Tajikistan&#x27;,
+ &#x27;Kyrgyzstan&#x27;,
+ &#x27;Kiribati&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;San Marino&#x27;,
+ &#x27;Saudi Arabia&#x27;,
+ &#x27;South Sudan&#x27;,
+ &#x27;Mexico&#x27;,
+ &#x27;Uruguay&#x27;,
+ &#x27;Cyprus&#x27;,
+ &#x27;Syria&#x27;,
+ &#x27;Panama&#x27;,
+ &#x27;Sierra Leone&#x27;,
+ &#x27;Finland&#x27;,
+ &#x27;Iraq&#x27;,
+ &#x27;United States&#x27;,
+ &#x27;Dominican Republic&#x27;,
+ &#x27;Czech Republic&#x27;,
+ &#x27;Latvia&#x27;,
+ &#x27;Bolivia&#x27;,
+ &#x27;Korea North&#x27;,
+ &#x27;Angola&#x27;,
+ &#x27;Germany&#x27;,
+ &#x27;Malawi&#x27;,
+ &#x27;Guinea-Bissau&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;Lithuania&#x27;,
+ &#x27;East Timor&#x27;,
+ &#x27;Honduras&#x27;,
+ &#x27;Bahamas&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Luxembourg&#x27;,
+ &#x27;Eritrea&#x27;,
+ &#x27;Gabon&#x27;,
+ &#x27;Mauritania&#x27;,
+ &#x27;Cambodia&#x27;,
+ &#x27;Solomon Islands&#x27;,
+ &#x27;Haiti&#x27;,
+ &#x27;Jamaica&#x27;,
+ &#x27;Kyrgyzstan&#x27;,
+ &#x27;Tanzania&#x27;,
+ &#x27;Marshall Islands&#x27;,
+ &#x27;Lithuania&#x27;,
+ &#x27;Bahrain&#x27;,
+ &#x27;East Timor&#x27;,
+ &#x27;Botswana&#x27;,
+ &#x27;Marshall Islands&#x27;,
+ &#x27;Grenada&#x27;,
+ &#x27;France&#x27;,
+ &#x27;St Lucia&#x27;,
+ &#x27;Eritrea&#x27;,
+ &#x27;Azerbaijan&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;New Zealand&#x27;,
+ &#x27;El Salvador&#x27;,
+ &#x27;Cape Verde&#x27;,
+ &#x27;Hungary&#x27;,
+ &#x27;Botswana&#x27;,
+ &#x27;Bosnia Herzegovina&#x27;,
+ &#x27;Kuwait&#x27;,
+ &#x27;Saudi Arabia&#x27;,
+ &#x27;Indonesia&#x27;,
+ &#x27;Qatar&#x27;,
+ &#x27;Germany&#x27;,
+ &#x27;Argentina&#x27;,
+ &#x27;Georgia&#x27;,
+ &#x27;Fiji&#x27;,
+ &#x27;Tajikistan&#x27;,
+ &#x27;Vanuatu&#x27;,
+ &#x27;Samoa&#x27;,
+ &#x27;Togo&#x27;,
+ &#x27;Gambia&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Cambodia&#x27;,
+ &#x27;Argentina&#x27;,
+ &#x27;Canada&#x27;,
+ &#x27;Nepal&#x27;,
+ &#x27;Grenada&#x27;,
+ &#x27;Vietnam&#x27;,
+ &#x27;Cameroon&#x27;,
+ &#x27;Cameroon&#x27;,
+ &#x27;Lebanon&#x27;,
+ &#x27;Rwanda&#x27;,
+ &#x27;United Kingdom&#x27;,
+ &#x27;Cambodia&#x27;,
+ &#x27;Paraguay&#x27;,
+ &#x27;Guinea&#x27;,
+ &#x27;Kosovo&#x27;,
+ &#x27;Switzerland&#x27;,
+ &#x27;Mauritius&#x27;,
+ &#x27;Fiji&#x27;,
+ &#x27;Paraguay&#x27;,
+ &#x27;Thailand&#x27;,
+ &#x27;Eritrea&#x27;,
+ &#x27;Guatemala&#x27;,
+ &#x27;Suriname&#x27;,
+ &#x27;Palau&#x27;,
+ &#x27;Mozambique&#x27;,
+ &#x27;Bangladesh&#x27;,
+ &#x27;Australia&#x27;,
+ &#x27;South Africa&#x27;,
+ &#x27;Yemen&#x27;,
+ &#x27;India&#x27;,
+ &#x27;Peru&#x27;,
+ &#x27;Korea North&#x27;,
+ &#x27;Oman&#x27;,
+ &#x27;Moldova&#x27;,
+ &#x27;St Kitts &amp; Nevis&#x27;,
+ &#x27;Benin&#x27;,
+ &#x27;India&#x27;,
+ &#x27;Grenada&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Madagascar&#x27;,
+ &#x27;Paraguay&#x27;,
+ &#x27;Angola&#x27;,
+ &#x27;Saudi Arabia&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Marshall Islands&#x27;,
+ &#x27;Micronesia&#x27;,
+ &#x27;Benin&#x27;,
+ &#x27;Monaco&#x27;,
+ &#x27;Cuba&#x27;,
+ &#x27;Kuwait&#x27;,
+ &#x27;Serbia&#x27;,
+ &#x27;Oman&#x27;,
+ &#x27;Bahamas&#x27;,
+ &#x27;Norway&#x27;,
+ &#x27;Thailand&#x27;,
+ &#x27;Malawi&#x27;,
+ &#x27;Guyana&#x27;,
+ &#x27;Denmark&#x27;,
+ &#x27;South Africa&#x27;,
+ &#x27;China&#x27;,
+ &#x27;Oman&#x27;,
+ &#x27;New Zealand&#x27;,
+ &#x27;Austria&#x27;,
+ &#x27;Venezuela&#x27;,
+ &#x27;Syria&#x27;,
+ &#x27;Rwanda&#x27;,
+ &#x27;Dominican Republic&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Honduras&#x27;,
+ &#x27;Solomon Islands&#x27;,
+ &#x27;Palau&#x27;,
+ &#x27;Cape Verde&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Kenya&#x27;,
+ &#x27;Switzerland&#x27;,
+ &#x27;Malta&#x27;,
+ &#x27;China&#x27;,
+ &#x27;South Sudan&#x27;,
+ &#x27;Jamaica&#x27;,
+ &#x27;East Timor&#x27;,
+ &#x27;Malta&#x27;,
+ &#x27;Benin&#x27;,
+ &#x27;China&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;United Kingdom&#x27;,
+ &#x27;Palau&#x27;,
+ &#x27;Ireland {Republic}&#x27;,
+ &#x27;Maldives&#x27;,
+ &#x27;Swaziland&#x27;,
+ &#x27;Guinea&#x27;,
+ &#x27;Haiti&#x27;,
+ &#x27;Lesotho&#x27;,
+ &#x27;Korea South&#x27;,
+ &#x27;Italy&#x27;,
+ &#x27;Nigeria&#x27;,
+ &#x27;Kiribati&#x27;,
+ &#x27;Kyrgyzstan&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Saint Vincent &amp; the Grenadines&#x27;,
+ &#x27;United States&#x27;,
+ &#x27;Mongolia&#x27;,
+ &#x27;Saudi Arabia&#x27;,
+ &#x27;Haiti&#x27;,
+ &#x27;Czech Republic&#x27;,
+ &#x27;Portugal&#x27;,
+ &#x27;Mauritius&#x27;,
+ &#x27;Samoa&#x27;,
+ &#x27;Honduras&#x27;,
+ &#x27;Vietnam&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Marshall Islands&#x27;,
+ &#x27;Kiribati&#x27;,
+ &#x27;Fiji&#x27;,
+ &#x27;Ivory Coast&#x27;,
+ &#x27;Tajikistan&#x27;,
+ &#x27;Nicaragua&#x27;,
+ &#x27;Portugal&#x27;,
+ &#x27;Equatorial Guinea&#x27;,
+ &#x27;Ivory Coast&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;New Zealand&#x27;,
+ &#x27;Somalia&#x27;,
+ &#x27;Senegal&#x27;,
+ &#x27;Mongolia&#x27;,
+ &#x27;Montenegro&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;Bahrain&#x27;,
+ &#x27;Laos&#x27;,
+ &#x27;Paraguay&#x27;,
+ &#x27;Guinea-Bissau&#x27;,
+ &#x27;Bosnia Herzegovina&#x27;,
+ &#x27;Tanzania&#x27;,
+ &#x27;Gambia&#x27;,
+ &#x27;Sierra Leone&#x27;,
+ &#x27;Canada&#x27;,
+ &#x27;Bolivia&#x27;,
+ &#x27;Iraq&#x27;,
+ &#x27;Ivory Coast&#x27;,
+ &#x27;Zimbabwe&#x27;,
+ &#x27;Turkmenistan&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;Venezuela&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;Panama&#x27;,
+ &#x27;Philippines&#x27;,
+ &#x27;Kenya&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;Tunisia&#x27;,
+ &#x27;Turkmenistan&#x27;,
+ &#x27;Ukraine&#x27;,
+ &#x27;Egypt&#x27;,
+ &#x27;Burundi&#x27;,
+ &#x27;Qatar&#x27;,
+ &#x27;Latvia&#x27;,
+ &#x27;Slovenia&#x27;,
+ &#x27;Gambia&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Poland&#x27;,
+ &#x27;Myanmar, {Burma}&#x27;,
+ &#x27;Panama&#x27;,
+ &#x27;Myanmar, {Burma}&#x27;,
+ &#x27;Central African Rep&#x27;,
+ &#x27;United Kingdom&#x27;,
+ &#x27;Comoros&#x27;,
+ &#x27;Yemen&#x27;,
+ &#x27;Liechtenstein&#x27;,
+ &#x27;Gambia&#x27;,
+ &#x27;Ethiopia&#x27;,
+ &#x27;Malaysia&#x27;,
+ &#x27;Italy&#x27;,
+ &#x27;Brazil&#x27;,
+ &#x27;Brazil&#x27;,
+ &#x27;Russian Federation&#x27;,
+ &#x27;Nicaragua&#x27;,
+ &#x27;Switzerland&#x27;,
+ &#x27;Georgia&#x27;,
+ &#x27;Georgia&#x27;,
+ &#x27;Dominica&#x27;,
+ &#x27;Liberia&#x27;,
+ &#x27;Tonga&#x27;,
+ &#x27;St Kitts &amp; Nevis&#x27;,
+ &#x27;Vatican City&#x27;,
+ &#x27;Luxembourg&#x27;,
+ &#x27;Barbados&#x27;,
+ &#x27;Croatia&#x27;,
+ &#x27;Samoa&#x27;,
+ &#x27;St Lucia&#x27;,
+ &#x27;Comoros&#x27;,
+ &#x27;Burundi&#x27;,
+ &#x27;Philippines&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;Yemen&#x27;,
+ &#x27;Singapore&#x27;,
+ &#x27;Brazil&#x27;,
+ &#x27;Benin&#x27;,
+ &#x27;Slovenia&#x27;,
+ &#x27;Qatar&#x27;,
+ &#x27;Tajikistan&#x27;,
+ &#x27;Qatar&#x27;,
+ &#x27;Seychelles&#x27;,
+ &#x27;Somalia&#x27;,
+ &#x27;Zimbabwe&#x27;,
+ &#x27;Marshall Islands&#x27;,
+ &#x27;Ukraine&#x27;,
+ &#x27;Japan&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;St Kitts &amp; Nevis&#x27;,
+ &#x27;Botswana&#x27;,
+ &#x27;Slovakia&#x27;,
+ &#x27;Azerbaijan&#x27;,
+ &#x27;Philippines&#x27;,
+ &#x27;United States&#x27;,
+ &#x27;Nauru&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;Burundi&#x27;,
+ &#x27;Dominican Republic&#x27;,
+ &#x27;Bolivia&#x27;,
+ &#x27;France&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Georgia&#x27;,
+ &#x27;Finland&#x27;,
+ &#x27;Benin&#x27;,
+ &#x27;Oman&#x27;,
+ &#x27;Dominica&#x27;,
+ &#x27;Belize&#x27;,
+ &#x27;South Africa&#x27;,
+ &#x27;Libya&#x27;,
+ &#x27;Cyprus&#x27;,
+ &#x27;Ecuador&#x27;,
+ &#x27;France&#x27;,
+ &#x27;Namibia&#x27;,
+ &#x27;Zimbabwe&#x27;,
+ &#x27;Dominica&#x27;,
+ &#x27;Belgium&#x27;,
+ &#x27;United Arab Emirates&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Colombia&#x27;,
+ &#x27;Vatican City&#x27;,
+ &#x27;Chad&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Malaysia&#x27;,
+ &#x27;Cambodia&#x27;,
+ &#x27;Equatorial Guinea&#x27;,
+ &#x27;Slovenia&#x27;,
+ &#x27;Bolivia&#x27;,
+ &#x27;Kazakhstan&#x27;,
+ &#x27;Japan&#x27;,
+ &#x27;New Zealand&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Romania&#x27;,
+ &#x27;Mexico&#x27;,
+ &#x27;Tonga&#x27;,
+ &#x27;Eritrea&#x27;,
+ &#x27;Senegal&#x27;,
+ &#x27;Belize&#x27;,
+ &#x27;Kosovo&#x27;,
+ &#x27;Benin&#x27;,
+ &#x27;Eritrea&#x27;,
+ &#x27;Egypt&#x27;,
+ &#x27;Korea North&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Guatemala&#x27;,
+ &#x27;Slovenia&#x27;,
+ &#x27;Somalia&#x27;,
+ &#x27;Spain&#x27;,
+ &#x27;Libya&#x27;,
+ &#x27;Dominica&#x27;,
+ &#x27;Togo&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Finland&#x27;,
+ &#x27;Iraq&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;Hungary&#x27;,
+ &#x27;Angola&#x27;,
+ &#x27;St Lucia&#x27;,
+ &#x27;Seychelles&#x27;,
+ &#x27;Seychelles&#x27;,
+ &#x27;Andorra&#x27;,
+ &#x27;Serbia&#x27;,
+ &#x27;Mauritius&#x27;,
+ &#x27;Jamaica&#x27;,
+ &#x27;Ivory Coast&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Bahrain&#x27;,
+ &#x27;Australia&#x27;,
+ &#x27;France&#x27;,
+ &#x27;China&#x27;,
+ &#x27;United Kingdom&#x27;,
+ &#x27;Marshall Islands&#x27;,
+ &#x27;Guinea&#x27;,
+ &#x27;Japan&#x27;,
+ &#x27;Cuba&#x27;,
+ &#x27;Sierra Leone&#x27;,
+ &#x27;Sri Lanka&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Georgia&#x27;,
+ &#x27;India&#x27;,
+ &#x27;Germany&#x27;,
+ &#x27;Congo&#x27;,
+ &#x27;Cameroon&#x27;,
+ &#x27;Brunei&#x27;,
+ &#x27;Uganda&#x27;,
+ &#x27;South Africa&#x27;,
+ &#x27;Ecuador&#x27;,
+ &#x27;St Lucia&#x27;,
+ &#x27;Congo {Democratic Rep}&#x27;,
+ &#x27;Bahamas&#x27;,
+ &#x27;Syria&#x27;,
+ &#x27;Czech Republic&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Tanzania&#x27;,
+ &#x27;Sao Tome &amp; Principe&#x27;,
+ &#x27;Burkina&#x27;,
+ &#x27;Nigeria&#x27;,
+ &#x27;Mali&#x27;,
+ &#x27;Greece&#x27;,
+ &#x27;Vatican City&#x27;,
+ &#x27;South Sudan&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Burkina&#x27;,
+ &#x27;Switzerland&#x27;,
+ &#x27;Kosovo&#x27;,
+ &#x27;Gabon&#x27;,
+ &#x27;Paraguay&#x27;,
+ &#x27;Romania&#x27;,
+ &#x27;Mongolia&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;Syria&#x27;,
+ &#x27;Netherlands&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;Dominican Republic&#x27;,
+ &#x27;Iceland&#x27;,
+ &#x27;Libya&#x27;,
+ &#x27;Lebanon&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;Turkey&#x27;,
+ &#x27;New Zealand&#x27;,
+ &#x27;Somalia&#x27;,
+ &#x27;Guinea-Bissau&#x27;,
+ &#x27;El Salvador&#x27;,
+ &#x27;Israel&#x27;,
+ &#x27;Central African Rep&#x27;,
+ &#x27;Korea North&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;Switzerland&#x27;,
+ &#x27;Taiwan&#x27;,
+ &#x27;Namibia&#x27;,
+ &#x27;Mauritania&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;Moldova&#x27;,
+ &#x27;East Timor&#x27;,
+ &#x27;Brunei&#x27;,
+ &#x27;Swaziland&#x27;,
+ &#x27;Cambodia&#x27;,
+ &#x27;Saint Vincent &amp; the Grenadines&#x27;,
+ &#x27;Netherlands&#x27;,
+ &#x27;Papua New Guinea&#x27;,
+ &#x27;Georgia&#x27;,
+ &#x27;Tonga&#x27;,
+ &#x27;Mauritius&#x27;,
+ &#x27;Canada&#x27;,
+ &#x27;Guinea-Bissau&#x27;,
+ &#x27;Norway&#x27;,
+ &#x27;Singapore&#x27;,
+ &#x27;Morocco&#x27;,
+ &#x27;Cape Verde&#x27;,
+ &#x27;Pakistan&#x27;,
+ &#x27;Central African Rep&#x27;,
+ &#x27;Myanmar, {Burma}&#x27;,
+ &#x27;United Arab Emirates&#x27;,
+ &#x27;Maldives&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;Saudi Arabia&#x27;,
+ &#x27;Netherlands&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;Bahamas&#x27;,
+ &#x27;Papua New Guinea&#x27;,
+ &#x27;Kosovo&#x27;,
+ &#x27;Lesotho&#x27;,
+ &#x27;Panama&#x27;,
+ &#x27;Argentina&#x27;,
+ &#x27;India&#x27;,
+ &#x27;Kazakhstan&#x27;,
+ &#x27;Angola&#x27;,
+ &#x27;Guinea&#x27;,
+ &#x27;Ukraine&#x27;,
+ &#x27;Congo&#x27;,
+ &#x27;Bahrain&#x27;,
+ &#x27;Israel&#x27;,
+ &#x27;Sudan&#x27;,
+ &#x27;Qatar&#x27;,
+ &#x27;Belarus&#x27;,
+ &#x27;Ghana&#x27;,
+ &#x27;Algeria&#x27;,
+ &#x27;Macedonia&#x27;,
+ &#x27;Grenada&#x27;,
+ &#x27;Spain&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;,
+ &#x27;Comoros&#x27;,
+ &#x27;Egypt&#x27;,
+ &#x27;Belize&#x27;,
+ &#x27;Haiti&#x27;,
+ &#x27;Eritrea&#x27;,
+ &#x27;Poland&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;Cape Verde&#x27;,
+ &#x27;Uganda&#x27;,
+ &#x27;Syria&#x27;,
+ &#x27;Libya&#x27;,
+ &#x27;Thailand&#x27;,
+ &#x27;Bahrain&#x27;,
+ &#x27;Slovenia&#x27;,
+ &#x27;Luxembourg&#x27;,
+ &#x27;Tunisia&#x27;,
+ &#x27;Guinea-Bissau&#x27;,
+ &#x27;Bhutan&#x27;,
+ &#x27;Uzbekistan&#x27;,
+ &#x27;Togo&#x27;,
+ &#x27;Madagascar&#x27;,
+ &#x27;Greece&#x27;,
+ &#x27;Guinea-Bissau&#x27;,
+ &#x27;Afghanistan&#x27;,
+ &#x27;Zambia&#x27;,
+ &#x27;Hungary&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;India&#x27;,
+ &#x27;Sao Tome &amp; Principe&#x27;,
+ &#x27;Honduras&#x27;,
+ &#x27;Albania&#x27;,
+ &#x27;Cape Verde&#x27;,
+ &#x27;Turkmenistan&#x27;,
+ &#x27;Antigua &amp; Deps&#x27;]</code></pre>
+    </div>
+    <div class="tab-pane " id="347109-app-py" aria-labelledby="tab-347109-app-py" role="tabpanel">
+      <pre><code></code>from countries import country_list # Note: since the list is so large, it&#x27;s tidier
+                                   # to put in in a separate file. We&#x27;ll learn more
+                                   # about &quot;import&quot; later on.
+
+country_counts &#x3D; {}
+for country in country_list:
+    #todo: insert countries into the country_count dict.
+    # If the country isn&#x27;t in the dict already, add it and set the value to 1
+    # If the country is in the dict, increment its value by one to keep count
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="迭代字典和集合">迭代字典和集合</h1>
+<p>可以使用 for 循环迭代集合和字典，这与迭代列表的方法大体相同。采用如下所示的方法迭代集合：</p>
+<pre><code class="Python language-Python">&gt;&gt;&gt; colors = set(['Pthalo Blue', 'Indian Yellow', 'Sap Green'])
+&gt;&gt;&gt; for color in colors:
+...    print(color)
+...
+Indian Yellow
+Sap Green
+Pthalo Blue</code></pre>
+<p>请注意，for 循环没有以与插入集合相同的顺序打印颜色。集合不跟踪列表的排序方式，因此迭代集合会以任意顺序生成值。</p>
+<p>用于迭代字典的语法非常相似。不同的是字典存储键值对，循环字典时，可迭代键：</p>
+<pre><code class="python language-python">Beatles_Discography = {"Please Please Me": 1963, "With the Beatles": 1963, 
+    "A Hard Day's Night": 1964, "Beatles for Sale": 1964, "Twist and Shout": 1964,
+    "Help": 1965, "Rubber Soul": 1965, "Revolver": 1966,
+    "Sgt. Pepper's Lonely Hearts Club Band": 1967,
+    "Magical Mystery Tour": 1967, "The Beatles": 1968,
+    "Yellow Submarine": 1969 ,'Abbey Road': 1969,
+    "Let It Be": 1970}
+
+for album_title in Beatles_Discography:
+    print("title: {}, year: {}".format(album_title, Beatles_Discography[album_title]))</code></pre>
+<p>我们可以使用键 <code>album_title</code> 获取字典 <code>Beatles_Discography[album_title]</code> 中的每个值。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="练习：多产的一年">练习：多产的一年</h1>
+<p>编写一个函数 <code>most_prolific</code>，其将采用与上述 <code>Beatles_Discography</code> 示例相同的字典格式，并返回发布最多专辑的年份。如果在 <code>Beatles_Discography</code> 中调用该函数，那么应返回 1964 年，这一年相对于其他年份发行的唱片数量较多一些。</p>
+<p>如果多个年份的最大发行量相同，则该函数将返回一个年份列表。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#347106-prolificyear-py" class="nav-item nav-link  active show" id="tab-347106-prolificyear-py" data-toggle="tab" role="tab"
+      aria-controls="347106-prolificyear-py" aria-selected="true">prolificyear.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="347106-prolificyear-py" aria-labelledby="tab-347106-prolificyear-py" role="tabpanel">
+      <pre><code></code></code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. 复合数据结构.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. 字典 II')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
