@@ -1,0 +1,68 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.290 --> 00:00:04.150
+Uma estrutura de dados é particularmente
+boa para representar os conteúdos de
+
+00:00:04.150 --> 00:00:04.738
+um arquivo CSV.
+
+00:00:04.738 --> 00:00:08.360
+É uma estrutura de dados
+bidimensional com um tipo diferente para
+
+00:00:08.360 --> 00:00:12.160
+cada coluna, o que costuma ser
+o que se quer em um CSV.
+
+00:00:12.160 --> 00:00:14.920
+A Pandas tem uma função chamada read_csv,
+
+00:00:14.920 --> 00:00:18.910
+que usa o nome do arquivo CSV
+e o carrega em uma estrutura de dados.
+
+00:00:19.950 --> 00:00:22.690
+Vou usá-la para carregar os dados de previsão do tempo
+e do metrô de Nova York.
+
+00:00:23.720 --> 00:00:26.860
+Já que há muitos dados, não
+quero imprimir a estrutura de dados toda
+
+00:00:26.860 --> 00:00:28.220
+como fiz antes.
+
+00:00:28.220 --> 00:00:32.630
+Em vez disso, usarei a função head para
+imprimir só as 5 primeiras linhas.
+
+00:00:32.630 --> 00:00:35.190
+A função head devolve
+uma estrutura de dados menor, então
+
+00:00:35.190 --> 00:00:38.350
+os resultados exibem apenas
+uma pequena estrutura de dados.
+
+00:00:38.350 --> 00:00:42.420
+Também posso usar a função describe para
+ver algumas estatísticas sobre cada coluna,
+
+00:00:42.420 --> 00:00:45.130
+como média e
+desvio padrão.
+
+00:00:45.130 --> 00:00:48.960
+Há uma pré-visualização da função read.CSB
+no fim da última lição.
+
+00:00:48.960 --> 00:00:51.590
+Ela foi usada por um código base
+que foi carregada no conjunto de dados do
+
+00:00:51.590 --> 00:00:52.470
+guarda da lacuna para você.
+

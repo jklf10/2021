@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.260 --> 00:00:03.220
+Vou usar a função que escrevi mais cedo
+como ponto de partida, já que esse vai ser
+
+00:00:03.220 --> 00:00:06.950
+o código para calcular as entradas e as saídas
+por hora para um único grupo.
+
+00:00:06.950 --> 00:00:10.330
+Desta vez, nomeei
+a função hourly_for_group.
+
+00:00:10.330 --> 00:00:14.750
+A primeira coisa a fazer é
+agrupar o ridership_df por unidade.
+
+00:00:14.750 --> 00:00:17.090
+Como de costume, isso dá
+o objeto DataFrameGroupBy.
+
+00:00:18.280 --> 00:00:22.660
+Pode parecer lógico aplicar a
+função hourly_for_group neste ponto.
+
+00:00:22.660 --> 00:00:25.980
+Contudo, se eu tentar isso, vou receber
+uma mensagem que diz TypeError.
+
+00:00:25.980 --> 00:00:28.500
+unsupported operated type(s) for -:
+
+00:00:28.500 --> 00:00:30.330
+'str' and 'str'.
+
+00:00:30.330 --> 00:00:33.680
+Isso acontece porque o Pandas
+está tentando aplicar a função hourly_for_group
+
+00:00:33.680 --> 00:00:37.240
+para cada coluna da
+estrutura de dados, incluindo a unidade e as
+
+00:00:37.240 --> 00:00:38.840
+colunas de tempo.
+
+00:00:38.840 --> 00:00:42.080
+Como essas colunas contêm strings,
+a função não funciona nelas.
+
+00:00:42.080 --> 00:00:44.500
+Você não pode subtrair
+uma string de uma string.
+
+00:00:44.500 --> 00:00:47.210
+Para consertar isso,
+eu preciso selecionar somente as colunas de entrada e
+
+00:00:47.210 --> 00:00:50.540
+saída
+antes de aplicar essa função.
+
+00:00:50.540 --> 00:00:52.950
+Assim que tiver feito isso,
+a função funcionará como o esperado.
+
+00:00:54.040 --> 00:00:57.310
+Agora, vejo duas fileiras de NaNs,
+uma para cada estação.
+
+00:00:57.310 --> 00:00:59.570
+Isso porque, para
+cada estação, havia uma fileira
+
+00:00:59.570 --> 00:01:01.640
+em que não havia uma fileira
+anterior para compará-la.
+

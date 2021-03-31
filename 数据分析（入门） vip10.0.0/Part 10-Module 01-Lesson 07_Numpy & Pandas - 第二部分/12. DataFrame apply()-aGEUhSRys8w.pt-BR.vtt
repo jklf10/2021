@@ -1,0 +1,50 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.280 --> 00:00:02.150
+Para escrever a função
+padronizada,
+
+00:00:02.150 --> 00:00:05.689
+primeiro, vou escrever uma função que
+padroniza uma coluna de uma estrutura de dados,
+
+00:00:05.689 --> 00:00:07.990
+que, em seguida, eu posso chamar em cada
+coluna da estrutura de dados.
+
+00:00:09.140 --> 00:00:13.160
+Chamarei a função que funciona em
+uma única coluna, standardize_column.
+
+00:00:13.160 --> 00:00:16.660
+E espero que o código nesta
+função pareça familiar agora.
+
+00:00:16.660 --> 00:00:20.180
+Testarei essa função chamando-a
+em uma única coluna da estrutura de dados grades.
+
+00:00:21.310 --> 00:00:22.630
+E ela parece boa para mim.
+
+00:00:22.630 --> 00:00:27.010
+Em seguida, para padronizar cada coluna da
+estrutura de dados, chamarei df.apply e
+
+00:00:27.010 --> 00:00:28.970
+passarei a função
+standardize_column.
+
+00:00:30.060 --> 00:00:33.300
+Quando testo isso, posso ver que
+obtive os mesmos resultados de antes para
+
+00:00:33.300 --> 00:00:34.780
+a primeira coluna, e que
+
+00:00:34.780 --> 00:00:37.240
+os resultados da segunda
+coluna também foram computados.
+

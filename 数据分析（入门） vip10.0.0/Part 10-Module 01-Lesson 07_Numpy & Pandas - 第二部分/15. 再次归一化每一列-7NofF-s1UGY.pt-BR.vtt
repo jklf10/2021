@@ -1,0 +1,35 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.240 --> 00:00:03.060
+Mais cedo nesta lição, você escreveu um código
+para padronizar cada coluna de
+
+00:00:03.060 --> 00:00:05.330
+estrutura de dados usando apply.
+
+00:00:05.330 --> 00:00:08.350
+Agora, usando o que você acabou de aprender,
+quero que você tente a mesma coisa novamente, mas
+
+00:00:08.350 --> 00:00:10.110
+desta vez sem usar apply.
+
+00:00:10.110 --> 00:00:11.990
+Em vez disso, use operações de vetores.
+
+00:00:12.990 --> 00:00:16.720
+Como um desafio extra, em vez disso, tente padronizar
+cada linha da estrutura de dados.
+
+00:00:16.720 --> 00:00:18.640
+Novamente, sem usar apply.
+
+00:00:18.640 --> 00:00:19.860
+Esta é desafiadora.
+
+00:00:19.860 --> 00:00:22.260
+Você pode ficar tentando um
+tempo até funcionar.
+

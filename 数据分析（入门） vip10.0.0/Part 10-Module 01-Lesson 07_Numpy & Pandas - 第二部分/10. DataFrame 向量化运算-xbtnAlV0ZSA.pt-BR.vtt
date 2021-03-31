@@ -1,0 +1,102 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.360 --> 00:00:02.930
+As estruturas de dados também
+aceitam operações de vetores e
+
+00:00:02.930 --> 00:00:06.350
+elas funcionam de forma similar às operações
+vetorizadas para arrays NumPy 2D.
+
+00:00:07.400 --> 00:00:11.080
+Assim como no pandaSeries, elas
+correspondem elementos por índice e nome de coluna,
+
+00:00:11.080 --> 00:00:12.110
+em vez de por posição.
+
+00:00:12.110 --> 00:00:15.010
+Na próxima tela, você
+terá a chance de testar algumas
+
+00:00:15.010 --> 00:00:18.010
+operações de vetores diferentes e
+ver o que elas fazem.
+
+00:00:18.010 --> 00:00:21.240
+Também haverá um exercício para
+você praticar.
+
+00:00:21.240 --> 00:00:24.000
+Os dados do metrô em seu
+formato original não incluíam
+
+00:00:24.000 --> 00:00:25.320
+as entradas e saídas por hora.
+
+00:00:26.500 --> 00:00:30.320
+Eles tinham entradas e saídas
+cumulativas ou totais.
+
+00:00:30.320 --> 00:00:32.460
+Por exemplo, se o total de
+entradas fosse 10, 40, 60,
+
+00:00:32.460 --> 00:00:38.070
+65 e 85 para as primeiras cinco
+horas em que a estação estava aberta,
+
+00:00:38.070 --> 00:00:40.628
+então, as entradas por hora para
+a primeira hora seriam 10.
+
+00:00:40.628 --> 00:00:44.410
+Novamente, supondo que esta
+seja a primeira hora em que a estação esteve aberta.
+
+00:00:44.410 --> 00:00:46.700
+E as entradas para
+a próxima hora seriam 30,
+
+00:00:46.700 --> 00:00:48.930
+pois 30 pessoas entraram para
+elevar o total de 10 para 40.
+
+00:00:48.930 --> 00:00:53.510
+E o resto dos valores por
+hora seriam 20, 5 e 20.
+
+00:00:53.510 --> 00:00:58.150
+Convertemos o total de entradas e
+saídas nas entradas e saídas
+
+00:00:58.150 --> 00:01:01.860
+por hora que estão disponíveis no arquivo
+na seção para download.
+
+00:01:01.860 --> 00:01:05.670
+No próximo exercício, você escreverá uma
+função que pega uma estrutura de dados com
+
+00:01:05.670 --> 00:01:10.110
+entradas cumulativas em uma coluna e
+saídas cumulativas em uma segunda coluna,
+
+00:01:10.110 --> 00:01:13.640
+e depois retornará a estrutura de dados
+com entradas e saídas por hora.
+
+00:01:13.640 --> 00:01:16.190
+Você pode achar a função
+shift útil.
+
+00:01:16.190 --> 00:01:19.110
+O link dessa documentação
+está nas Notas do instrutor, mas
+
+00:01:19.110 --> 00:01:21.140
+recomendo que você faça apenas um teste
+e veja o que acontece.
+

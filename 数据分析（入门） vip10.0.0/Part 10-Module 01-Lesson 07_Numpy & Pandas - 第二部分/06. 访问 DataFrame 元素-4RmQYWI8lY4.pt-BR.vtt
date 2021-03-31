@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.260 --> 00:00:03.469
+Vou começar com a mesma função que
+escrevi antes para arrays NumPy e,
+
+00:00:03.469 --> 00:00:07.370
+depois, testarei cada linha para ver se
+também funciona em estruturas de dados.
+
+00:00:07.370 --> 00:00:09.210
+Primeiro, vou testar
+a primeira linha de código,
+
+00:00:09.210 --> 00:00:13.130
+que deve usar a argmax
+da primeira linha da estrutura de dados.
+
+00:00:13.130 --> 00:00:15.660
+Isso gera uma mensagem
+de erro assustadora,
+
+00:00:15.660 --> 00:00:19.510
+que começa com TypeError e
+termina com unhashable type.
+
+00:00:20.720 --> 00:00:24.040
+Pode ser difícil entender
+por que estão aparecendo mensagens de erro
+
+00:00:24.040 --> 00:00:24.540
+assim, e
+
+00:00:24.540 --> 00:00:28.460
+acho que as mensagens de erro da Pandas
+nem sempre ajudam.
+
+00:00:28.460 --> 00:00:31.950
+Em geral, tento verificar
+duas vezes os códigos que acabei de escrever.
+
+00:00:31.950 --> 00:00:36.040
+Então, por exemplo, se eu estava modificando um
+código de uma página de documentação, tenho
+
+00:00:36.040 --> 00:00:39.700
+que garantir que estou usando o mesmo
+código da página de documentação.
+
+00:00:40.750 --> 00:00:41.440
+Neste caso,
+
+00:00:41.440 --> 00:00:45.255
+o problema é que para acessar uma linha
+de uma estrutura de dados, terei que usar o iloc.
+
+00:00:46.380 --> 00:00:49.287
+E não preciso mais dos dois pontos
+para especificar todas as colunas.
+
+00:00:50.340 --> 00:00:55.335
+Desta vez, quando executo
+o código, chego ao valor R006.
+
+00:00:55.335 --> 00:01:00.278
+Parece que R006 é a quarta estação
+que é, de fato, a que tem o máximo
+
+00:01:00.278 --> 00:01:01.790
+de passageiros no primeiro dia.
+
+00:01:03.020 --> 00:01:07.030
+Perceba que, para um array NumPy, a função
+argmax retornou à posição.
+
+00:01:07.030 --> 00:01:11.180
+Mas, para uma série, a função argmax
+está devolvendo o índice da série.
+
+00:01:11.180 --> 00:01:13.980
+Ou, neste caso, o nome da
+coluna da estrutura de dados.
+
+00:01:13.980 --> 00:01:16.830
+Então, vou atualizar esta linha
+na minha função.
+
+00:01:16.830 --> 00:01:19.690
+Depois, vou testar a segunda
+linha de código da função.
+
+00:01:19.690 --> 00:01:21.920
+Usei R006 aqui como max_station.
+
+00:01:23.570 --> 00:01:26.230
+De novo, apareceu uma
+mensagem de erro assustadora e,
+
+00:01:26.230 --> 00:01:30.630
+de novo, porque não é assim que
+se acessa uma coluna de uma estrutura de dados.
+
+00:01:30.630 --> 00:01:31.820
+Não preciso de dois pontos aqui.
+
+00:01:32.930 --> 00:01:35.890
+Tentando de novo, parece
+que funcionou.
+
+00:01:37.010 --> 00:01:39.280
+Vou continuar e
+atualizar a função também.
+
+00:01:40.700 --> 00:01:43.610
+Por fim, vou testar a última
+linha de código da função.
+
+00:01:44.690 --> 00:01:46.970
+E esta linha de código funciona, mas
+
+00:01:46.970 --> 00:01:50.330
+fornece uma série que contém
+a média de cada coluna,
+
+00:01:50.330 --> 00:01:53.530
+em vez da média geral
+que eu queria.
+
+00:01:53.530 --> 00:01:55.080
+Como dito antes,
+
+00:01:55.080 --> 00:01:58.980
+não há como calcular diretamente
+a média geral da estrutura de dados, então
+
+00:01:58.980 --> 00:02:02.040
+usarei .values para tirar
+a média do array NumPy.
+
+00:02:03.190 --> 00:02:07.680
+Ao testar, dá pra ver que
+deu um número só, como esperado.
+
+00:02:07.680 --> 00:02:11.220
+De novo, vou atualizar
+a parte correspondente da função.
+
+00:02:11.220 --> 00:02:14.270
+Agora, vou tentar chamar esta função
+na minha estrutura de dados ridership.
+
+00:02:14.270 --> 00:02:17.490
+Obtive a mesma resposta de antes
+com um array NumPy, o que é bom.
+

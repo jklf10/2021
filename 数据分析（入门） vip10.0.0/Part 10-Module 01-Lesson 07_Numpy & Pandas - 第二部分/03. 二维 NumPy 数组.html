@@ -1,0 +1,325 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>二维 NumPy 数组</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Numpy &amp; Pandas - 第二部分</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 地铁数据.html">02. 地铁数据</a>
+    </li>
+    <li class="">
+      <a href="03. 二维 NumPy 数组.html">03. 二维 NumPy 数组</a>
+    </li>
+    <li class="">
+      <a href="04. NumPy 轴.html">04. NumPy 轴</a>
+    </li>
+    <li class="">
+      <a href="05. NumPy 和 Pandas 数据类型.html">05. NumPy 和 Pandas 数据类型</a>
+    </li>
+    <li class="">
+      <a href="06. 访问 DataFrame 元素.html">06. 访问 DataFrame 元素</a>
+    </li>
+    <li class="">
+      <a href="07. 将数据加载到 DataFrame 中.html">07. 将数据加载到 DataFrame 中</a>
+    </li>
+    <li class="">
+      <a href="08. 计算相关性.html">08. 计算相关性</a>
+    </li>
+    <li class="">
+      <a href="09. Pandas 轴名.html">09. Pandas 轴名</a>
+    </li>
+    <li class="">
+      <a href="10. DataFrame 向量化运算.html">10. DataFrame 向量化运算</a>
+    </li>
+    <li class="">
+      <a href="11. DataFrame applymap().html">11. DataFrame applymap()</a>
+    </li>
+    <li class="">
+      <a href="12. DataFrame apply().html">12. DataFrame apply()</a>
+    </li>
+    <li class="">
+      <a href="13. DataFrame apply() 使用案例 2.html">13. DataFrame apply() 使用案例 2</a>
+    </li>
+    <li class="">
+      <a href="14. 向 Series 添加 DataFrame.html">14. 向 Series 添加 DataFrame</a>
+    </li>
+    <li class="">
+      <a href="15. 再次归一化每一列.html">15. 再次归一化每一列</a>
+    </li>
+    <li class="">
+      <a href="16. Pandas groupby().html">16. Pandas groupby()</a>
+    </li>
+    <li class="">
+      <a href="17. 每小时入站和出站数.html">17. 每小时入站和出站数</a>
+    </li>
+    <li class="">
+      <a href="18. 合并 Pandas DataFrame.html">18. 合并 Pandas DataFrame</a>
+    </li>
+    <li class="">
+      <a href="19. 使用 DataFrame 绘制图形.html">19. 使用 DataFrame 绘制图形</a>
+    </li>
+    <li class="">
+      <a href="20. 三维数据.html">20. 三维数据</a>
+    </li>
+    <li class="">
+      <a href="21. 结论.html">21. 结论</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. 二维 NumPy 数组</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>二维 NumPy 数组</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="03. 二维 NumPy 数组-UFcCmB7Xvvs.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. 二维 NumPy 数组-UFcCmB7Xvvs.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. 二维 NumPy 数组-UFcCmB7Xvvs.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. 二维 NumPy 数组-UFcCmB7Xvvs.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. 二维 NumPy 数组-UFcCmB7Xvvs.zh-CN.vtt" label="CN">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#174141-numpy_arrays-py" class="nav-item nav-link  active show" id="tab-174141-numpy_arrays-py" data-toggle="tab" role="tab"
+      aria-controls="174141-numpy_arrays-py" aria-selected="true">numpy_arrays.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="174141-numpy_arrays-py" aria-labelledby="tab-174141-numpy_arrays-py" role="tabpanel">
+      <pre><code></code>import numpy as np
+
+# Subway ridership for 5 stations on 10 different days
+ridership &#x3D; np.array([
+    [   0,    0,    2,    5,    0],
+    [1478, 3877, 3674, 2328, 2539],
+    [1613, 4088, 3991, 6461, 2691],
+    [1560, 3392, 3826, 4787, 2613],
+    [1608, 4802, 3932, 4477, 2705],
+    [1576, 3933, 3909, 4979, 2685],
+    [  95,  229,  255,  496,  201],
+    [   2,    0,    1,   27,    0],
+    [1438, 3785, 3589, 4174, 2215],
+    [1342, 4043, 4009, 4665, 3033]
+])
+
+# Change False to True for each block of code to see what it does
+
+# Accessing elements
+if False:
+    print ridership[1, 3]
+    print ridership[1:3, 3:5]
+    print ridership[1, :]
+    
+# Vectorized operations on rows or columns
+if False:
+    print ridership[0, :] + ridership[1, :]
+    print ridership[:, 0] + ridership[:, 1]
+    
+# Vectorized operations on entire arrays
+if False:
+    a &#x3D; np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    b &#x3D; np.array([[1, 1, 1], [2, 2, 2], [3, 3, 3]])
+    print a + b
+
+def mean_riders_for_max_station(ridership):
+    &#x27;&#x27;&#x27;
+    Fill in this function to find the station with the maximum riders on the
+    first day, then return the mean riders per day for that station. Also
+    return the mean ridership overall for comparsion.
+    
+    Hint: NumPy&#x27;s argmax() function might be useful:
+    http://docs.scipy.org/doc/numpy/reference/generated/numpy.argmax.html
+    &#x27;&#x27;&#x27;
+    overall_mean &#x3D; None # Replace this with your code
+    mean_for_max &#x3D; None # Replace this with your code
+    
+    return (overall_mean, mean_for_max)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="03. 二维 NumPy 数组-dutQvWMO0AU.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. 二维 NumPy 数组-dutQvWMO0AU.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. 二维 NumPy 数组-dutQvWMO0AU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. 二维 NumPy 数组-dutQvWMO0AU.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="03. 二维 NumPy 数组-dutQvWMO0AU.zh-CN.vtt" label="CN">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <h3 id="内存布局">内存布局</h3>
+<p><a href="http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#internal-memory-layout-of-an-ndarray" rel="noopener noreferrer" target="_blank">此页面</a> 介绍了 2D NumPy 数组的内存布局。</p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. NumPy 轴.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 二维 NumPy 数组')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.160 --> 00:00:03.360
+Vejamos como escrever o código
+nesta estrutura de dados de notas com duas provas
+
+00:00:03.360 --> 00:00:04.170
+e cinco alunos.
+
+00:00:05.300 --> 00:00:07.840
+Primeiro, preciso da média
+de cada coluna, que posso obter
+
+00:00:07.840 --> 00:00:10.650
+usando grades_df.mean.
+
+00:00:10.650 --> 00:00:15.490
+Obtenho a média de exam1 e a
+média de exam2 em uma série Pandas.
+
+00:00:15.490 --> 00:00:18.170
+Também examinarei
+a estrutura de dados original.
+
+00:00:18.170 --> 00:00:20.390
+Para
+padronizar cada coluna,
+
+00:00:20.390 --> 00:00:23.680
+vou subtrair a média de cada coluna
+desta coluna.
+
+00:00:23.680 --> 00:00:28.170
+Quero subtrair a primeira média
+de cada valor na primeira coluna,
+
+00:00:28.170 --> 00:00:31.240
+e quero subtrair a segunda média de
+cada valor na segunda coluna.
+
+00:00:32.390 --> 00:00:34.690
+Isso funciona da mesma forma
+que vimos na adição.
+
+00:00:34.690 --> 00:00:38.129
+Então, grades_dr
+menos grades_df.mean.
+
+00:00:38.129 --> 00:00:41.249
+Ao verificar as duas
+primeiras notas do exam1,
+
+00:00:41.249 --> 00:00:44.789
+encontro uma nota negativa para Andre pois
+a nota dele estava abaixo da média.
+
+00:00:44.789 --> 00:00:47.916
+E uma nota positiva para Barry pois a
+nota dele estava acima da média.
+
+00:00:47.916 --> 00:00:51.992
+Depois, preciso dividir cada coluna
+por seu desvio padrão correspondente,
+
+00:00:51.992 --> 00:00:53.592
+da mesma forma.
+
+00:00:53.592 --> 00:00:57.483
+Uso grades_df.std para obter o desvio
+padrão de cada coluna. Divido
+
+00:00:57.483 --> 00:01:01.307
+a estrutura de dados pela série para
+dividir cada ponto da prova por seu
+
+00:01:01.307 --> 00:01:03.670
+desvio correspondente.
+
+00:01:03.670 --> 00:01:06.180
+Como sempre, cuidado com os parênteses.
+
+00:01:06.180 --> 00:01:07.310
+Ao revisar,
+
+00:01:07.310 --> 00:01:11.430
+percebo que cada prova foi colocada em
+unidades de desvio padrão.
+
+00:01:11.430 --> 00:01:13.930
+Note que este código
+é exatamente igual ao código
+
+00:01:13.930 --> 00:01:16.710
+usado para padronizar
+uma única série.
+
+00:01:16.710 --> 00:01:20.440
+Isso parece ótimo. Mas daqui a
+pouco, veremos como a
+
+00:01:20.440 --> 00:01:24.720
+padronização de cada linha envolve
+outras coisas.
+
+00:01:24.720 --> 00:01:27.020
+Como faço para
+padronizar cada linha?
+
+00:01:27.020 --> 00:01:29.899
+Primeiro, examinarei
+a estrutura de dados original como referência.
+
+00:01:31.070 --> 00:01:33.770
+Sei que agora precisarei
+da média de cada coluna e que,
+
+00:01:33.770 --> 00:01:36.610
+para isso, devo usar axis = columns.
+
+00:01:36.610 --> 00:01:40.110
+Isso significa que estou
+obtendo a média de cada coluna,
+
+00:01:40.110 --> 00:01:42.250
+que me dará a média de cada linha.
+
+00:01:42.250 --> 00:01:46.150
+Certamente, terei a média de cada
+aluno nas duas provas.
+
+00:01:46.150 --> 00:01:49.710
+Agora preciso subtrair a primeira média
+da primeira linha da estrutura de
+
+00:01:49.710 --> 00:01:52.560
+dados, a segunda média da segunda linha
+e assim por diante.
+
+00:01:52.560 --> 00:01:57.090
+Mas, se tentar usar grades_df menos
+grades_df.mean, como fiz antes,
+
+00:01:57.090 --> 00:02:00.880
+ele tentará subtrair o total desses valores
+de uma coluna da estrutura de dados.
+
+00:02:00.880 --> 00:02:03.380
+Isso não funcionará pois os índices desta série não
+
+00:02:03.380 --> 00:02:07.150
+se alinham com os nomes de coluna
+da estrutura de dados.
+
+00:02:07.150 --> 00:02:09.449
+Eu teria uma série de exigências.
+
+00:02:09.449 --> 00:02:12.840
+Preciso usar a função
+sub que significa subtrair e
+
+00:02:12.840 --> 00:02:16.990
+que faz o mesmo que o sinal de menos,
+mas ela também aceita o argumento access.
+
+00:02:16.990 --> 00:02:19.890
+No caso, o access deve ser
+um índice pois desejo que os
+
+00:02:19.890 --> 00:02:24.240
+elementos da série coincidam com os elementos
+da estrutura de dados, usando os índices de linha.
+
+00:02:24.240 --> 00:02:25.960
+Vamos testar isso.
+
+00:02:25.960 --> 00:02:28.170
+Repare como
+todos os valores da coluna um e
+
+00:02:28.170 --> 00:02:31.250
+todos os valores da coluna dois
+têm o mesmo valor absoluto.
+
+00:02:31.250 --> 00:02:35.400
+É isso que ocorre quando você subtrai a
+média de apenas dois valores.
+
+00:02:35.400 --> 00:02:38.650
+Vamos chamar esta
+estrutura de dados de mean_diffs.
+
+00:02:38.650 --> 00:02:41.430
+Para dividir pelo padrão de
+desvio, preciso de um código
+
+00:02:41.430 --> 00:02:42.870
+semelhante.
+
+00:02:42.870 --> 00:02:45.640
+Usarei o desvio padrão da
+coluna de notas com
+
+00:02:45.640 --> 00:02:49.090
+axis='columns' para obter o
+desvio padrão de cada linha.
+
+00:02:49.090 --> 00:02:52.860
+Depois, usarei mean_diffs.div
+para dividir a estrutura de dados mean_diffs
+
+00:02:52.860 --> 00:02:54.709
+pela série de desvios padrão.
+
+00:02:55.880 --> 00:02:59.490
+Depois usarei axis='index' para
+comparar elementos com base em índices de linhas.
+
+00:03:00.590 --> 00:03:02.340
+Veja como os
+resultados são iguais para cada
+
+00:03:02.340 --> 00:03:05.000
+linha, o que ocorre porque
+existem apenas duas colunas.
+
+00:03:06.340 --> 00:03:09.890
+Este código parece exatamente
+igual ao código para padronizar cada coluna,
+
+00:03:09.890 --> 00:03:14.870
+exceto pelo fato de cada argumento de eixo
+ser o oposto do padrão.
+
+00:03:14.870 --> 00:03:17.950
+Fique atento a isso
+quando escrever códigos Pandas.
+
+00:03:17.950 --> 00:03:21.360
+Se estiver executando uma operação
+comum, provavelmente não precisará
+
+00:03:21.360 --> 00:03:24.590
+especificar um eixo, pois
+o eixo padrão estará correto.
+
+00:03:24.590 --> 00:03:27.410
+Por outro lado, se fizer algo
+inesperado, como padronizar cada
+
+00:03:27.410 --> 00:03:30.720
+linha, e não cada coluna de uma
+estrutura de dados,
+
+00:03:30.720 --> 00:03:34.020
+será preciso especificar eixos não padrão
+em toda parte.
+

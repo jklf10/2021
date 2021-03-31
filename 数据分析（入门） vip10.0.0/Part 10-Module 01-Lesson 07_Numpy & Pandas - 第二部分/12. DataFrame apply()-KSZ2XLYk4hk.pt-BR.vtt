@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.380 --> 00:00:05.110
+Mencionei no último vídeo que as estruturas
+de dados também têm uma função apply; mas o
+
+00:00:05.110 --> 00:00:06.770
+que ela faz?
+
+00:00:06.770 --> 00:00:08.210
+Bem, de certa forma,
+
+00:00:08.210 --> 00:00:12.900
+a função apply em estruturas de dados é
+a analogia direta para apply em uma série.
+
+00:00:12.900 --> 00:00:16.400
+Isso depende do que você considera
+uma única parte de uma estrutura de dados.
+
+00:00:16.400 --> 00:00:20.960
+Você poderia dizer que uma única parte é
+uma coluna, em vez de um único elemento.
+
+00:00:22.670 --> 00:00:27.390
+A função que você passa para aplicação, que
+eu chamarei de f, usa uma série Pandas,
+
+00:00:27.390 --> 00:00:29.970
+que é uma coluna inteira
+da estrutura de dados.
+
+00:00:29.970 --> 00:00:34.670
+E retorna uma nova série Pandas,
+que é uma nova coluna da estrutura de dados.
+
+00:00:34.670 --> 00:00:36.886
+Assim, quando você chama df.apply(f),
+
+00:00:36.886 --> 00:00:40.537
+a função apply chama sua função f em
+cada coluna da estrutura de dados.
+
+00:00:43.714 --> 00:00:47.790
+Você deve estar imaginando por que faria
+isso, em vez de usar apply map.
+
+00:00:48.940 --> 00:00:51.550
+A resposta é que
+a operação que deseja fazer para
+
+00:00:51.550 --> 00:00:54.620
+cada elemento da estrutura de dados
+pode depender da coluna inteira.
+
+00:00:55.710 --> 00:00:58.780
+Considere o exemplo
+de avaliação em curva.
+
+00:00:58.780 --> 00:01:04.569
+Suponha que eu quero dar nota A para os 20%
+de alunos com maiores notas,
+
+00:01:04.569 --> 00:01:09.470
+B para os próximos 30%, C para 30%,
+D para 10% e F para 10%.
+
+00:01:09.470 --> 00:01:13.210
+Não vamos discutir se essa é uma
+política de avaliação razoável.
+
+00:01:13.210 --> 00:01:15.290
+Em vez disso, vamos falar sobre
+o código que posso escrever.
+
+00:01:16.350 --> 00:01:19.450
+Eu poderia armazenar as pontuações numéricas
+em uma estrutura de dados como fiz antes,
+
+00:01:19.450 --> 00:01:23.340
+com um exame em cada coluna
+e um aluno em cada linha.
+
+00:01:23.340 --> 00:01:25.880
+Mas, desta vez, não posso usar apply map.
+
+00:01:25.880 --> 00:01:28.960
+Se apenas olhar para uma pontuação,
+não saberei que nota de letra ela deve receber
+
+00:01:28.960 --> 00:01:31.890
+sem olhar para as outras pontuações
+do exame.
+
+00:01:31.890 --> 00:01:34.160
+Por exemplo, uma pontuação 70 é igual a A?
+
+00:01:35.170 --> 00:01:39.980
+Se as outras pontuações no exame forem todas
+altas, então 70 não receberia um A.
+
+00:01:39.980 --> 00:01:43.950
+Mas, se as outras pontuações no exame forem
+todas baixas, porque foi um exame mais difícil,
+
+00:01:43.950 --> 00:01:45.050
+então, 70 poderia receber um A.
+
+00:01:46.330 --> 00:01:50.310
+Portanto, o que devo fazer é escrever uma função
+f que obtenha as pontuações de
+
+00:01:50.310 --> 00:01:53.900
+um único exame e
+as retorne convertidas em relação a esse exame.
+
+00:01:55.080 --> 00:02:00.670
+Assim, devo chamar df.apply(f) para aplicar
+essa função a toda a estrutura de dados.
+
+00:02:00.670 --> 00:02:04.160
+Apply também usa um argumento access, de modo que
+você possa escrever uma função que
+
+00:02:04.160 --> 00:02:07.420
+opere em uma linha de cada vez
+se isso for o que você precisa.
+
+00:02:07.420 --> 00:02:11.210
+Na última lição, você escreveu uma função para
+padronizar uma única série Pandas.
+
+00:02:11.210 --> 00:02:14.636
+Ou seja, converter cada valor no
+número de desvios padrões
+
+00:02:14.636 --> 00:02:17.520
+acima ou abaixo da média.
+
+00:02:17.520 --> 00:02:20.890
+Agora, gostaria que você usasse o apply para
+padronizar cada coluna de uma estrutura de dados.
+

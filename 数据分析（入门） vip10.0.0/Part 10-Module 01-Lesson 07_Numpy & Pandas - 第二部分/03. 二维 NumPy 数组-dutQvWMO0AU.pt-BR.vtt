@@ -1,0 +1,141 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.310 --> 00:00:03.880
+Primeiro, vou escrever o código que
+funcionará neste pequeno array de exemplo,
+
+00:00:03.880 --> 00:00:06.510
+para que eu possa ver se
+está funcionando em cada etapa.
+
+00:00:06.510 --> 00:00:09.620
+Depois, quando eu terminar, vou
+usar esta função, mean_riders_for_
+
+00:00:09.620 --> 00:00:11.090
+max_station.
+
+00:00:11.090 --> 00:00:14.180
+A primeira etapa é encontrar a estação
+com o máximo de passageiros
+
+00:00:14.180 --> 00:00:15.520
+no primeiro dia.
+
+00:00:15.520 --> 00:00:20.140
+O primeiro dia é a linha 0 do array,
+que obtenho passando 0 como a
+
+00:00:20.140 --> 00:00:24.680
+posição da linha e dois-pontos, indicando
+todas as colunas, como a posição da coluna.
+
+00:00:24.680 --> 00:00:28.650
+Vou verificar se isso funcionou e
+se a primeira linha foi impressa.
+
+00:00:28.650 --> 00:00:32.980
+Para encontrar o valor máximo,
+eu localizaria a função .max.
+
+00:00:32.980 --> 00:00:37.000
+O que eu preciso mesmo é da estação
+que teve o valor máximo.
+
+00:00:37.000 --> 00:00:39.690
+Para obter isso,
+vou usar a função argmax,
+
+00:00:39.690 --> 00:00:42.760
+que retornará a posição
+do valor máximo.
+
+00:00:42.760 --> 00:00:45.570
+Dando uma olhada,
+posso ver que é a posição 3.
+
+00:00:45.570 --> 00:00:49.220
+E com certeza, a coluna 3 do
+array tem o valor máximo.
+
+00:00:49.220 --> 00:00:51.840
+Vou nomear este valor como max_station.
+
+00:00:51.840 --> 00:00:55.640
+Agora quero saber a média
+de passageiros por dia dessa estação.
+
+00:00:55.640 --> 00:00:58.430
+Primeiramente, quero obter os dados
+de passageiros dessa estação, então
+
+00:00:58.430 --> 00:01:02.010
+vou selecionar todas as linhas e
+a coluna max_station.
+
+00:01:02.010 --> 00:01:03.430
+Vou dar uma olhada e confirmar
+
+00:01:03.430 --> 00:01:06.360
+que isso dá a coluna correta
+dos dados de passageiros.
+
+00:01:06.360 --> 00:01:08.440
+Agora eu vou pegar a média desses valores.
+
+00:01:08.440 --> 00:01:13.090
+E vou chamá-la de mean_for_max, que significa
+a média para max_station.
+
+00:01:13.090 --> 00:01:16.650
+Por fim, preciso encontrar
+a média geral para comparação.
+
+00:01:16.650 --> 00:01:19.990
+Posso fazer isso simplesmente
+usando ridership.mean.
+
+00:01:19.990 --> 00:01:22.850
+Agora estou pronta mover este
+código para minha função.
+
+00:01:22.850 --> 00:01:26.560
+Como o array de exemplo e o argumento
+para a função têm o mesmo nome,
+
+00:01:26.560 --> 00:01:29.320
+ridership, não preciso
+renomear nada.
+
+00:01:29.320 --> 00:01:31.660
+E retornarei os dois valores.
+
+00:01:31.660 --> 00:01:33.830
+Depois, chamarei esta função
+no array de exemplo.
+
+00:01:35.100 --> 00:01:38.730
+Parece que a média geral
+era cerca de 2300 e a média para
+
+00:01:38.730 --> 00:01:41.190
+max_station era cerca de 3200.
+
+00:01:41.190 --> 00:01:44.530
+Então, a estação com o maior
+nº de passageiros no primeiro dia
+
+00:01:44.530 --> 00:01:48.050
+também teve o maior nº de passageiros
+em geral do que a média.
+
+00:01:48.050 --> 00:01:51.110
+É claro que isso significa que ele tem
+o máximo de passageiros em geral de
+
+00:01:51.110 --> 00:01:54.130
+qualquer estação, mas vou calcular
+isso no próximo exercício.
+

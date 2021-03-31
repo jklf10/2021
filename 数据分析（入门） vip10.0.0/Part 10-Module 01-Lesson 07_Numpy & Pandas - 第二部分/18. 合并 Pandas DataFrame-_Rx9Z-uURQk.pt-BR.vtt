@@ -1,0 +1,248 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:03.690
+Até agora nesta lição, você trabalhou
+com uma estrutura de dados de cada vez.
+
+00:00:03.690 --> 00:00:06.510
+Mas, muitas vezes,
+você desejará trabalhar com várias
+
+00:00:06.510 --> 00:00:07.910
+estruturas de dados.
+
+00:00:07.910 --> 00:00:10.890
+Por exemplo, na Lição 1,
+você tinha três CSVs.
+
+00:00:10.890 --> 00:00:12.340
+Se estivesse usando o Pandas,
+
+00:00:12.340 --> 00:00:14.950
+teria carregado-os em
+três estruturas de dados.
+
+00:00:14.950 --> 00:00:17.750
+Por exemplo, digamos que
+eu queira analisar a probabilidade de
+
+00:00:17.750 --> 00:00:20.370
+alunos cancelarem após
+enviarem um projeto.
+
+00:00:20.370 --> 00:00:23.560
+Isso exigiria informações da
+tabela de envios do projeto e da tabela
+
+00:00:23.560 --> 00:00:25.200
+de inscrições.
+
+00:00:25.200 --> 00:00:29.050
+Para facilitar, incluí apenas algumas
+colunas de cada tabela.
+
+00:00:29.050 --> 00:00:32.729
+O Pandas tem uma operação chamada merge
+que permite combinar as duas
+
+00:00:32.729 --> 00:00:34.740
+tabelas em uma tabela.
+
+00:00:34.740 --> 00:00:38.300
+Isso criará uma nova tabela com
+todas as colunas das duas tabelas.
+
+00:00:38.300 --> 00:00:40.650
+Note que não existe inscrição
+sem um envio de projeto
+
+00:00:40.650 --> 00:00:42.100
+correspondente.
+
+00:00:42.100 --> 00:00:45.620
+Neste exemplo, o que me interessa são
+os alunos que não enviaram um projeto.
+
+00:00:45.620 --> 00:00:47.430
+Não vou incluir esta linha.
+
+00:00:47.430 --> 00:00:49.640
+Daqui a pouco, veremos como fazer isso.
+
+00:00:49.640 --> 00:00:50.520
+A nova tabela
+
+00:00:50.520 --> 00:00:54.150
+conterá uma linha para cada
+linha da tabela de envios.
+
+00:00:54.150 --> 00:00:57.100
+E as colunas relativas
+à tabela de inscrições terão correspondência
+
+00:00:57.100 --> 00:00:58.540
+através da chave de conta.
+
+00:00:58.540 --> 00:01:01.270
+A join_date
+para a account_key 1 era 5/11.
+
+00:01:01.270 --> 00:01:06.760
+A join_date da
+account_key 2 era 5/13 e assim por diante.
+
+00:01:06.760 --> 00:01:09.670
+Note que, se houvesse uma entrada
+duplicada na tabela de inscrições, como
+
+00:01:09.670 --> 00:01:12.260
+duas inscrições para a
+account_key 2,
+
+00:01:12.260 --> 00:01:17.680
+quaisquer projetos enviados pela
+account_key 2 também seriam duplicados.
+
+00:01:17.680 --> 00:01:20.110
+Para o envio do mesmo projeto,
+haveria uma linha para
+
+00:01:20.110 --> 00:01:22.310
+a primeira inscrição, e
+uma linha para a segunda inscrição.
+
+00:01:23.330 --> 00:01:26.560
+Por isso, convém remover
+duplicatas da tabela de inscrições
+
+00:01:26.560 --> 00:01:30.630
+antes de executar o merge,
+dependendo do caso de uso.
+
+00:01:30.630 --> 00:01:34.667
+Eu usaria este código para executar o merge:
+submissions.merge(enrollments,
+
+00:01:34.667 --> 00:01:37.159
+on='account_key', how='left').
+
+00:01:37.159 --> 00:01:40.830
+O on='account_key' especifica como
+coincidir diferentes linhas das
+
+00:01:40.830 --> 00:01:42.130
+diferentes tabelas.
+
+00:01:42.130 --> 00:01:45.090
+Nesse caso, a
+correspondência foi feita por account_key.
+
+00:01:45.090 --> 00:01:47.960
+E how=left determina o que
+ocorre se alguns chaves de conta
+
+00:01:47.960 --> 00:01:51.680
+estão presentes em uma tabela,
+mas não na outra. Como este exemplo.
+
+00:01:51.680 --> 00:01:56.210
+As opções para este argumento
+são inner, right, left e outer.
+
+00:01:56.210 --> 00:01:59.330
+Nesse caso, how=inner
+também funcionaria.
+
+00:01:59.330 --> 00:02:03.440
+Quando você usa inner, só
+são mantidas as linhas com account_key
+
+00:02:03.440 --> 00:02:05.643
+nas duas tabelas. Esta linha foi ignorada.
+
+00:02:05.643 --> 00:02:07.037
+Se how=right, as linhas
+
+00:02:07.037 --> 00:02:10.205
+das inscrições da tabela da direita
+seriam mantidas,
+
+00:02:10.205 --> 00:02:13.900
+mesmo sem uma entrada correspondente
+na tabela de envios.
+
+00:02:13.900 --> 00:02:17.560
+Como não há dados para esta
+chave de conta na tabela de envios do projeto,
+
+00:02:17.560 --> 00:02:20.140
+NaN seria preenchido para
+essas colunas.
+
+00:02:20.140 --> 00:02:22.480
+O how=left faz exatamente o oposto.
+
+00:02:22.480 --> 00:02:25.520
+Se existem linhas na tabela esquerda
+que estão ausentes na tabela direita,
+
+00:02:25.520 --> 00:02:27.520
+ele mantém essas linhas.
+
+00:02:27.520 --> 00:02:29.390
+No caso, não existem
+linhas como essa; assim,
+
+00:02:29.390 --> 00:02:31.580
+left e inner fazem o mesmo.
+
+00:02:31.580 --> 00:02:34.960
+Com outer, todas as
+linhas das tabelas serão mantidas
+
+00:02:34.960 --> 00:02:35.980
+e NaNs preenchidos, caso necessário.
+
+00:02:36.980 --> 00:02:40.470
+Tendo a preferir usar inner como o tipo de
+merge, mas isso vai
+
+00:02:40.470 --> 00:02:42.040
+depender do exemplo.
+
+00:02:43.060 --> 00:02:44.750
+A propósito, se você usou SQL,
+
+00:02:44.750 --> 00:02:48.950
+notará que um merge no Pandas
+é semelhante a um join no SQL.
+
+00:02:48.950 --> 00:02:51.920
+Se você não usou SQL,
+não se preocupe.
+
+00:02:51.920 --> 00:02:54.030
+Para o conjunto de dados de
+Nova Iorque,
+
+00:02:54.030 --> 00:02:57.950
+os dados do metrô e da previsão do tempo
+foram obtidos de fontes distintas.
+
+00:02:57.950 --> 00:03:01.700
+No próximo exercício, use
+a função merge para combinar os
+
+00:03:01.700 --> 00:03:04.810
+dois arquivos em uma única
+estrutura de dados.
+
+00:03:04.810 --> 00:03:07.620
+Assim, o formato dos dados
+será semelhante ao que você tem usado
+
+00:03:07.620 --> 00:03:08.780
+até aqui na lição.
+

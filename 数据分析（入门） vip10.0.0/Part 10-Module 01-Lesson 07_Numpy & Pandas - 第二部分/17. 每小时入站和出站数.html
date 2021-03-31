@@ -1,0 +1,318 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>每小时入站和出站数</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Numpy &amp; Pandas - 第二部分</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 地铁数据.html">02. 地铁数据</a>
+    </li>
+    <li class="">
+      <a href="03. 二维 NumPy 数组.html">03. 二维 NumPy 数组</a>
+    </li>
+    <li class="">
+      <a href="04. NumPy 轴.html">04. NumPy 轴</a>
+    </li>
+    <li class="">
+      <a href="05. NumPy 和 Pandas 数据类型.html">05. NumPy 和 Pandas 数据类型</a>
+    </li>
+    <li class="">
+      <a href="06. 访问 DataFrame 元素.html">06. 访问 DataFrame 元素</a>
+    </li>
+    <li class="">
+      <a href="07. 将数据加载到 DataFrame 中.html">07. 将数据加载到 DataFrame 中</a>
+    </li>
+    <li class="">
+      <a href="08. 计算相关性.html">08. 计算相关性</a>
+    </li>
+    <li class="">
+      <a href="09. Pandas 轴名.html">09. Pandas 轴名</a>
+    </li>
+    <li class="">
+      <a href="10. DataFrame 向量化运算.html">10. DataFrame 向量化运算</a>
+    </li>
+    <li class="">
+      <a href="11. DataFrame applymap().html">11. DataFrame applymap()</a>
+    </li>
+    <li class="">
+      <a href="12. DataFrame apply().html">12. DataFrame apply()</a>
+    </li>
+    <li class="">
+      <a href="13. DataFrame apply() 使用案例 2.html">13. DataFrame apply() 使用案例 2</a>
+    </li>
+    <li class="">
+      <a href="14. 向 Series 添加 DataFrame.html">14. 向 Series 添加 DataFrame</a>
+    </li>
+    <li class="">
+      <a href="15. 再次归一化每一列.html">15. 再次归一化每一列</a>
+    </li>
+    <li class="">
+      <a href="16. Pandas groupby().html">16. Pandas groupby()</a>
+    </li>
+    <li class="">
+      <a href="17. 每小时入站和出站数.html">17. 每小时入站和出站数</a>
+    </li>
+    <li class="">
+      <a href="18. 合并 Pandas DataFrame.html">18. 合并 Pandas DataFrame</a>
+    </li>
+    <li class="">
+      <a href="19. 使用 DataFrame 绘制图形.html">19. 使用 DataFrame 绘制图形</a>
+    </li>
+    <li class="">
+      <a href="20. 三维数据.html">20. 三维数据</a>
+    </li>
+    <li class="">
+      <a href="21. 结论.html">21. 结论</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">17. 每小时入站和出站数</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>每小时入站和出站数</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><h2 id="使用-groupby-计算每小时入站和出站数">使用 groupby() 计算每小时入站和出站数</h2>
+<p>你在之前的测试题中，是对累计入站数的单一集合计算每小时入站和出站数。然而，在原始数据中，每个站台都有一个单独的数量集。</p>
+<p>因此，要准确计算每小时入站和出站数，有必要按每天每站台进行分组，然后计算每天每小时入站和出站数。</p>
+<p>写下能够完成此操作的一个函数。你应该使用 <code>apply()</code> 函数来调用你之前写的函数。你还应该确保将分组数据限制在入站和出站两列中，因为如果你的函数是在非数值型数据类型上被调用，那么它有可能会造成错误。</p>
+<p>如果你希望了解在 Pandas 中使用 <code>groupby()</code> 函数的更多信息，可以访问<a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html" rel="noopener noreferrer" target="_blank">此页面</a>。</p>
+<p>注意：你将无法使用此方法，在完整数据集中重新生成 <code>ENTRIESn_hourly</code> 和 <code>EXITSn_hourly</code> 列。在创建数据集时，我们做了额外的处理，删除了错误值。</p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#174155-entries_and_exits-py" class="nav-item nav-link  active show" id="tab-174155-entries_and_exits-py" data-toggle="tab" role="tab"
+      aria-controls="174155-entries_and_exits-py" aria-selected="true">entries_and_exits.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="174155-entries_and_exits-py" aria-labelledby="tab-174155-entries_and_exits-py" role="tabpanel">
+      <pre><code></code>import numpy as np
+import pandas as pd
+
+values &#x3D; np.array([1, 3, 2, 4, 1, 6, 4])
+example_df &#x3D; pd.DataFrame({
+    &#x27;value&#x27;: values,
+    &#x27;even&#x27;: values % 2 &#x3D;&#x3D; 0,
+    &#x27;above_three&#x27;: values &gt; 3 
+}, index&#x3D;[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;])
+
+# Change False to True for each block of code to see what it does
+
+# Standardize each group
+if False:
+    def standardize(xs):
+        return (xs - xs.mean()) / xs.std()
+    grouped_data &#x3D; example_df.groupby(&#x27;even&#x27;)
+    print grouped_data[&#x27;value&#x27;].apply(standardize)
+    
+# Find second largest value in each group
+if False:
+    def second_largest(xs):
+        sorted_xs &#x3D; xs.sort(inplace&#x3D;False, ascending&#x3D;False)
+        return sorted_xs.iloc[1]
+    grouped_data &#x3D; example_df.groupby(&#x27;even&#x27;)
+    print grouped_data[&#x27;value&#x27;].apply(second_largest)
+
+# --- Quiz ---
+# DataFrame with cumulative entries and exits for multiple stations
+ridership_df &#x3D; pd.DataFrame({
+    &#x27;UNIT&#x27;: [&#x27;R051&#x27;, &#x27;R079&#x27;, &#x27;R051&#x27;, &#x27;R079&#x27;, &#x27;R051&#x27;, &#x27;R079&#x27;, &#x27;R051&#x27;, &#x27;R079&#x27;, &#x27;R051&#x27;],
+    &#x27;TIMEn&#x27;: [&#x27;00:00:00&#x27;, &#x27;02:00:00&#x27;, &#x27;04:00:00&#x27;, &#x27;06:00:00&#x27;, &#x27;08:00:00&#x27;, &#x27;10:00:00&#x27;, &#x27;12:00:00&#x27;, &#x27;14:00:00&#x27;, &#x27;16:00:00&#x27;],
+    &#x27;ENTRIESn&#x27;: [3144312, 8936644, 3144335, 8936658, 3144353, 8936687, 3144424, 8936819, 3144594],
+    &#x27;EXITSn&#x27;: [1088151, 13755385,  1088159, 13755393,  1088177, 13755598, 1088231, 13756191,  1088275]
+})
+
+def get_hourly_entries_and_exits(entries_and_exits):
+    &#x27;&#x27;&#x27;
+    Fill in this function to take a DataFrame with cumulative entries
+    and exits and return a DataFrame with hourly entries and exits.
+    The hourly entries and exits should be calculated separately for
+    each station (the &#x27;UNIT&#x27; column).
+    
+    Hint: Take a look at the &#x60;get_hourly_entries_and_exits()&#x60; function
+    you wrote in a previous quiz, DataFrame Vectorized Operations. If
+    you copy it here and rename it, you can use it and the &#x60;.apply()&#x60;
+    function to help solve this problem.
+    &#x27;&#x27;&#x27;
+    return None</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="17. 每小时入站和出站数-_DBUiLAC_z8.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="17. 每小时入站和出站数-_DBUiLAC_z8.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="17. 每小时入站和出站数-_DBUiLAC_z8.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="17. 每小时入站和出站数-_DBUiLAC_z8.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="17. 每小时入站和出站数-_DBUiLAC_z8.en.vtt" label="en">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="18. 合并 Pandas DataFrame.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('17. 每小时入站和出站数')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

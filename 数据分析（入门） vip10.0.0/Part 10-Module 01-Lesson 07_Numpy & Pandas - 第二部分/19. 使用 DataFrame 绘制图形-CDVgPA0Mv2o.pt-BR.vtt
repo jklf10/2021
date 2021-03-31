@@ -1,0 +1,164 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.270 --> 00:00:03.390
+Decidi fazer um gráfico de dispersão de
+estações de metrô com latitude e
+
+00:00:03.390 --> 00:00:06.520
+longitude como os eixos x e y,
+e lotação como o tamanho do círculo.
+
+00:00:07.620 --> 00:00:11.920
+O primeiro a se fazer é agrupar
+os dados por latitude e longitude.
+
+00:00:11.920 --> 00:00:15.620
+Eu também quis encontrar a lotação
+média de cada local.
+
+00:00:15.620 --> 00:00:19.270
+Vou dar uma olhada nas primeiras
+linhas para ter certeza de que funcionou.
+
+00:00:19.270 --> 00:00:22.080
+Parece bom, mas
+a próxima coisa a se fazer é obter
+
+00:00:22.080 --> 00:00:25.760
+as latitudes e as longitudes
+para fazer o gráfico de dispersão.
+
+00:00:25.760 --> 00:00:30.480
+Mas, se eu só adicionar à latitude ao
+final deste código, vai dar erro.
+
+00:00:30.480 --> 00:00:32.130
+Isso ocorre porque latitude e
+
+00:00:32.130 --> 00:00:34.970
+longitude não são mais
+colunas da estrutura de dados.
+
+00:00:34.970 --> 00:00:39.170
+Elas foram transformadas nos
+índices de linha para a estrutura de dados.
+
+00:00:39.170 --> 00:00:44.070
+Posso evitar isso ao passar
+as_index=False para a função groupby.
+
+00:00:44.070 --> 00:00:46.260
+E, agora, posso obter
+a latitude ou,
+
+00:00:46.260 --> 00:00:47.740
+da mesma forma, a longitude.
+
+00:00:48.740 --> 00:00:51.840
+Vou adicionar %pylab inline e,
+depois, os imports.
+
+00:00:53.010 --> 00:00:56.490
+A seguir, criarei o gráfico de dispersão,
+com a latitude como coordenadas x e
+
+00:00:56.490 --> 00:00:58.880
+a longitude como coordenadas y.
+
+00:00:58.880 --> 00:01:00.020
+Agora, vou dar uma olhada.
+
+00:01:01.410 --> 00:01:04.670
+Isso funcionou na criação de um gráfico de dispersão
+de todas as estações de metrô, mas
+
+00:01:04.670 --> 00:01:08.270
+ainda não fiz o tamanho do
+círculo de acordo com a lotação.
+
+00:01:08.270 --> 00:01:11.040
+Não tinha muita certeza de como, então
+procurei por
+
+00:01:11.040 --> 00:01:13.040
+"matplotlib scatterplot bubble size" no Google.
+
+00:01:14.750 --> 00:01:18.670
+O primeiro resultado sobre
+o tamanho do marcador do diagrama parece bom.
+
+00:01:18.670 --> 00:01:20.640
+Ao olhar o exemplo de código
+aqui na primeira resposta,
+
+00:01:20.640 --> 00:01:24.510
+parece que posso dar o argumento
+S à função de dispersão.
+
+00:01:24.510 --> 00:01:26.295
+E o argumento pode estar em um array para
+
+00:01:26.295 --> 00:01:29.345
+eu poder controlar o tamanho
+de cada círculo separadamente.
+
+00:01:29.345 --> 00:01:32.235
+Então, vou tentar adicionar
+o argumento S ao meu código e
+
+00:01:32.235 --> 00:01:36.155
+dar a ele a coluna ENTRIESn_hourly
+para determinar o tamanho de cada círculo.
+
+00:01:36.155 --> 00:01:39.105
+Ao executar, parece que
+funcionou mais ou menos, mas muitos
+
+00:01:39.105 --> 00:01:42.985
+círculos ficaram enormes, o que
+dificulta o entendimento do gráfico.
+
+00:01:42.985 --> 00:01:46.204
+Para consertar isso, vou criar
+uma nova variável chamada scaled_entries.
+
+00:01:47.280 --> 00:01:50.150
+E para ajustar a escala de ENTRIESn_hourly,
+vou dividir cada valor pelo
+
+00:01:50.150 --> 00:01:52.070
+desvio padrão.
+
+00:01:52.070 --> 00:01:55.080
+Então, vou mudar o argumento de tamanho
+da função do gráfico de dispersão para
+
+00:01:55.080 --> 00:01:57.980
+scaled_entries
+em vez de entradas cruas.
+
+00:01:57.980 --> 00:02:01.460
+Ao executar este código, o gráfico
+resultante fica bem mais razoável.
+
+00:02:01.460 --> 00:02:03.700
+Os círculos talvez estejam
+um pouco pequenos agora, então
+
+00:02:03.700 --> 00:02:05.970
+eu poderia brincar com
+o fator de escala um pouco.
+
+00:02:05.970 --> 00:02:09.570
+Mas já é possível ver que há
+algumas áreas em Nova York que tendem a ter
+
+00:02:09.570 --> 00:02:10.710
+lotações maiores.
+
+00:02:10.710 --> 00:02:13.180
+Digamos que aqui embaixo e
+talvez também um pouco aqui em cima.
+

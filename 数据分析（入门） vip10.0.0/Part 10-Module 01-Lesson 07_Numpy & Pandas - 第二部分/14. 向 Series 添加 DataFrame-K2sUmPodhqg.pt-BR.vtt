@@ -1,0 +1,189 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.380 --> 00:00:03.380
+Vou executar cada parte do
+código de exemplo e ver o que ele faz.
+
+00:00:03.380 --> 00:00:07.068
+A primeira parte do código envolve a adição de
+uma série para uma estrutura de dados quadrada.
+
+00:00:07.068 --> 00:00:10.606
+Ou seja, uma estrutura de dados com o mesmo
+número de linhas e colunas.
+
+00:00:10.606 --> 00:00:16.230
+Eu já usei 0, 1, 2 e 3 como os
+valores de índice e os nomes de coluna aqui.
+
+00:00:16.230 --> 00:00:18.870
+Já imprimi
+a estrutura de dados original e
+
+00:00:18.870 --> 00:00:21.840
+o resultado da adição das séries aqui para
+comparação.
+
+00:00:21.840 --> 00:00:25.600
+Parece que o valor 1 foi adicionado
+a cada valor na primeira coluna,
+
+00:00:25.600 --> 00:00:30.400
+2 foi adicionado a cada valor na
+segunda coluna e assim por diante.
+
+00:00:30.400 --> 00:00:33.610
+Parece que cada valor da
+série foi adicionado a uma
+
+00:00:33.610 --> 00:00:35.770
+das colunas da estrutura de dados.
+
+00:00:35.770 --> 00:00:39.650
+Com isso eu tenho uma ideia do que irá
+acontecer se eu adicionar uma série a uma estrutura de dados
+
+00:00:39.650 --> 00:00:40.660
+com uma linha única.
+
+00:00:40.660 --> 00:00:41.610
+Mas vou tentar isso assim mesmo.
+
+00:00:42.760 --> 00:00:45.730
+Mais uma vez, imprimi a estrutura de
+dados aqui para comparação e
+
+00:00:45.730 --> 00:00:49.150
+novamente ela parece com cada valor da
+série que foi adicionada a uma coluna única
+
+00:00:49.150 --> 00:00:49.860
+da estrutura de dados.
+
+00:00:50.935 --> 00:00:54.470
+1 foi adicionado à primeira coluna, 2 foi
+adicionado à segunda coluna e assim por diante.
+
+00:00:55.470 --> 00:00:58.870
+Algo que talvez não seja óbvio
+com isso é o que acontecerá se eu adicionar
+
+00:00:58.870 --> 00:01:01.620
+uma série a uma estrutura de dados
+com somente uma coluna?
+
+00:01:01.620 --> 00:01:04.489
+Será que vai descobrir alguma forma
+de adicionar os valores a
+
+00:01:04.489 --> 00:01:06.990
+cada linha da estrutura de dados?
+
+00:01:06.990 --> 00:01:10.060
+Tentei isso aqui e
+você pode ver que não foi o que aconteceu.
+
+00:01:10.060 --> 00:01:13.690
+Em vez disso, o resultado da adição
+realmente tem quatro colunas, uma para
+
+00:01:13.690 --> 00:01:17.770
+cada valor da série e cada
+coluna, exceto a primeira, contém NaNs.
+
+00:01:18.900 --> 00:01:22.120
+A primeira coluna tinha 1 adicionado
+a cada valor, como antes.
+
+00:01:23.310 --> 00:01:28.670
+A propósito, o código df.add s geralmente é
+igual a df plus s,
+
+00:01:28.670 --> 00:01:31.290
+por isso, eu não chamo esta função.
+
+00:01:31.290 --> 00:01:34.040
+Mas a vantagem de usar esta
+função é que ela também pode usar
+
+00:01:34.040 --> 00:01:35.790
+um argumento de eixo.
+
+00:01:35.790 --> 00:01:41.192
+Se eu usar axis = columns,
+eu consigo o mesmo resultado de df plus s.
+
+00:01:41.192 --> 00:01:46.009
+Portanto, se eu usar axis='index', então cada
+valor da série será adicionado a
+
+00:01:46.009 --> 00:01:50.175
+uma linha da estrutura de dados, que
+pode ser o que quero em alguns casos
+
+00:01:51.635 --> 00:01:55.455
+Em todos os exemplos que tentei até
+agora, o índice da série era
+
+00:01:55.455 --> 00:01:59.530
+igual aos nomes da coluna da
+estrutura de dados 0, 1, 2 e 3.
+
+00:01:59.530 --> 00:02:02.790
+Agora eu vou verificar um exemplo
+onde isso não ocorre.
+
+00:02:02.790 --> 00:02:05.850
+Aqui o índice da série é B,C,
+D e E e
+
+00:02:05.850 --> 00:02:09.580
+o nome da coluna da estrutura de dados é A,
+B, C e D.
+
+00:02:09.580 --> 00:02:13.510
+O resultado aqui é muito semelhante ao que
+ocorreu quando adicionamos a série e os índices do Pandas
+
+00:02:13.510 --> 00:02:16.020
+que não eram exatamente correspondentes.
+
+00:02:16.020 --> 00:02:18.840
+Para cada letra que não estava
+presente na estrutura de dados e na
+
+00:02:18.840 --> 00:02:21.470
+série, o resultado é NaN.
+
+00:02:21.470 --> 00:02:23.190
+Para letras que estavam presentes em ambas,
+
+00:02:23.190 --> 00:02:25.210
+a adição foi
+correspondida com base na letra.
+
+00:02:26.220 --> 00:02:30.300
+Cada valor da coluna b
+tinha 1 adicionado a ele e
+
+00:02:30.300 --> 00:02:32.680
+1 era o valor da
+série com o índice b.
+
+00:02:33.810 --> 00:02:36.420
+Em resumo,
+adicionar uma estrutura de dados a uma série,
+
+00:02:36.420 --> 00:02:40.170
+adiciona cada valor da série
+a uma coluna da estrutura de dados.
+
+00:02:40.170 --> 00:02:43.850
+E ela corresponde a série à
+estrutura de dados usando o índice da série
+
+00:02:43.850 --> 00:02:45.390
+e os nomes da coluna da estrutura de dados.
+

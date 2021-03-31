@@ -1,0 +1,72 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.440 --> 00:00:04.950
+Você acabou de ver que as funções NumPy, como
+a mean, operam no array como um todo, mas
+
+00:00:04.950 --> 00:00:08.920
+em muitos casos, pode fazer sentido
+calcular a operação por linha
+
+00:00:08.920 --> 00:00:09.430
+ou por coluna.
+
+00:00:10.450 --> 00:00:13.710
+Por exemplo, considere o array de
+passageiros do metrô que acabou de analisar,
+
+00:00:13.710 --> 00:00:17.490
+onde cada coluna é uma estação e
+cada linha é uma data.
+
+00:00:17.490 --> 00:00:20.570
+Pode fazer sentido calcular a média de
+passageiros do metrô por dia em todas as estações,
+
+00:00:20.570 --> 00:00:24.840
+como acabamos de fazer, mas você também pode
+querer obter a média de passageiros por
+
+00:00:24.840 --> 00:00:28.280
+estação ou por data.
+
+00:00:28.280 --> 00:00:31.820
+A maioria das funções criadas em NumPy usam
+um argumento de eixo por esse motivo,
+
+00:00:31.820 --> 00:00:33.800
+que pode ser zero ou um.
+
+00:00:33.800 --> 00:00:37.390
+Se o eixo for igual a zero,
+a função será calculada para
+
+00:00:37.390 --> 00:00:42.430
+cada coluna e se o eixo for igual a um,
+será calcula para cada linha.
+
+00:00:42.430 --> 00:00:45.650
+Acho difícil lembrar qual
+eixo é zero e qual é um; por isso,
+
+00:00:45.650 --> 00:00:50.180
+sempre faço um teste
+para saber antes de usar o argumento de eixo.
+
+00:00:50.180 --> 00:00:53.310
+Para obter um pouco de prática, quero que você
+escreva um código para calcular a média
+
+00:00:53.310 --> 00:00:56.240
+de passageiros por dia
+em cada estação do metrô.
+
+00:00:56.240 --> 00:00:59.000
+Em seguida, de todas as estações do metrô,
+retornar o número máximo e
+
+00:00:59.000 --> 00:01:00.430
+mínimo de passageiros por dia.
+

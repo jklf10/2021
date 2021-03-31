@@ -1,0 +1,30 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.140 --> 00:00:03.449
+Você viu antes que pode usar
+operações de vetores para somar duas
+
+00:00:03.449 --> 00:00:06.835
+estruturas de dados, da mesma forma
+que pode somar duas séries.
+
+00:00:06.835 --> 00:00:10.930
+Também é possível, no Pandas,
+somar uma estrutura de dados com uma série.
+
+00:00:10.930 --> 00:00:12.800
+Qual você acha que será o resultado?
+
+00:00:12.800 --> 00:00:16.309
+Na próxima tela, experimente e veja
+se consegue descobrir o que está acontecendo.
+
+00:00:16.309 --> 00:00:17.720
+Quando achar que sabe como isso funciona,
+
+00:00:17.720 --> 00:00:19.650
+assista ao vídeo com a solução
+para ver se estava certo.
+

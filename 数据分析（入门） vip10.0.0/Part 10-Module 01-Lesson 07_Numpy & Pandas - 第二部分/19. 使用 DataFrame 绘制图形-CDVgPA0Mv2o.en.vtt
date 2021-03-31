@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.700
+I decided to make a scatter plot of subway stations
+
+00:00:02.700 --> 00:00:05.295
+with latitude and longitude as the X and Y axis,
+
+00:00:05.295 --> 00:00:07.260
+and ridership as the bubble size.
+
+00:00:07.260 --> 00:00:11.524
+The first thing I needed to do is group the data by latitude and longitude.
+
+00:00:11.524 --> 00:00:15.310
+And I also wanted to find the mean ridership for each location.
+
+00:00:15.310 --> 00:00:18.940
+And I'll just take a look at the first few rows to make sure that it worked.
+
+00:00:18.940 --> 00:00:20.320
+Now, this looks good,
+
+00:00:20.320 --> 00:00:22.300
+but the next thing I'd like to do is get out
+
+00:00:22.300 --> 00:00:25.405
+the latitudes and longitudes in order to make the scatter plot.
+
+00:00:25.405 --> 00:00:30.280
+However, if I just add at latitudes to the end of this code, I'll get an error.
+
+00:00:30.280 --> 00:00:34.810
+The reason is because latitude and longitude are no longer columns of the data frame.
+
+00:00:34.810 --> 00:00:38.785
+Instead, they've been transformed into the row indexes for the data frame.
+
+00:00:38.785 --> 00:00:43.870
+I can prevent this by parsing as_index=False to the groupby function.
+
+00:00:43.870 --> 00:00:48.305
+And now I'm able to get out just the latitude or similarly just the longitude.
+
+00:00:48.305 --> 00:00:52.485
+I'll add the usual percent pylab inline and imports text,
+
+00:00:52.485 --> 00:00:55.410
+and next I'll create the scatter plot with latitude as
+
+00:00:55.410 --> 00:00:58.559
+the X coordinates and longitude as the Y coordinates.
+
+00:00:58.559 --> 00:01:00.855
+Now, I'll go ahead and take a look.
+
+00:01:00.855 --> 00:01:04.455
+This worked to create a scatter plot of all the subway stations,
+
+00:01:04.455 --> 00:01:07.950
+but I haven't yet made the bubble size dependent on the ridership.
+
+00:01:07.950 --> 00:01:09.750
+I wasn't quite sure how to do this,
+
+00:01:09.750 --> 00:01:14.115
+so I decided to Google for matplotlib scatter plot bubble size.
+
+00:01:14.115 --> 00:01:18.284
+The first result here about the plot marker size looks good.
+
+00:01:18.284 --> 00:01:20.910
+Looking at the example code here in the first answer,
+
+00:01:20.910 --> 00:01:24.375
+it looks like I can give the argument s to the scatter function,
+
+00:01:24.375 --> 00:01:26.580
+and that argument can be an array so that I
+
+00:01:26.580 --> 00:01:29.055
+can control the size of each bubble separately.
+
+00:01:29.055 --> 00:01:32.310
+So, I'm going to try adding the argument s to my code and
+
+00:01:32.310 --> 00:01:35.880
+giving it the entries and hourly column to determine the size of each bubble.
+
+00:01:35.880 --> 00:01:38.445
+Running this, it looks like it more or less worked,
+
+00:01:38.445 --> 00:01:40.215
+but a lot of the bubbles are huge,
+
+00:01:40.215 --> 00:01:42.735
+which is making the plot really hard to understand.
+
+00:01:42.735 --> 00:01:46.820
+To fix this, I'm going to create a new variable called scaled_entries.
+
+00:01:46.820 --> 00:01:48.970
+And to scale the hourly entries,
+
+00:01:48.970 --> 00:01:51.775
+I'll divide each value by the standard deviation.
+
+00:01:51.775 --> 00:01:53.860
+Next, I'll change the size argument to
+
+00:01:53.860 --> 00:01:57.670
+the scatter plot function to be the scaled entries rather than the raw entries.
+
+00:01:57.670 --> 00:02:01.239
+And running this code, the resulting plot looks much more reasonable.
+
+00:02:01.239 --> 00:02:03.565
+Now, the bubbles are maybe a little small now,
+
+00:02:03.565 --> 00:02:05.890
+so I could play around with the scaling factor a bit,
+
+00:02:05.890 --> 00:02:08.350
+but already I can see that there are some areas of
+
+00:02:08.350 --> 00:02:11.020
+New York that tend to have higher ridership say,
+
+00:02:11.020 --> 00:02:14.420
+down here and maybe also up here a little bit.
+

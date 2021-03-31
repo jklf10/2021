@@ -1,0 +1,183 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.350 --> 00:00:03.872
+Na última lição, você viu que os
+arrays numpy têm dtype, que é o tipo
+
+00:00:03.872 --> 00:00:05.352
+de cada elemento do array.
+
+00:00:05.352 --> 00:00:09.253
+Por exemplo, o dtype
+deste array é int64.
+
+00:00:09.253 --> 00:00:11.360
+Int64 significa um inteiro de 64 bits.
+
+00:00:12.985 --> 00:00:16.024
+Isso também se aplica a
+arrays bidimensionais.
+
+00:00:16.024 --> 00:00:19.341
+Cada elemento do array
+deve ter o mesmo tipo.
+
+00:00:19.341 --> 00:00:23.219
+Isso pode tornar inconveniente o
+uso de arrays numpy não convencionais para
+
+00:00:23.219 --> 00:00:25.405
+representar o conteúdo de um arquivo CSV.
+
+00:00:25.405 --> 00:00:29.282
+Por exemplo, vamos supor que eu tente criar
+um array numpy para representar os
+
+00:00:29.282 --> 00:00:31.565
+dados de matrícula dos alunos da lição um.
+
+00:00:31.565 --> 00:00:34.530
+Eu recriei um pequeno
+trecho desses dados aqui.
+
+00:00:34.530 --> 00:00:37.300
+Embora eu tenha criado o array
+inserindo os inteiros e
+
+00:00:37.300 --> 00:00:41.650
+volumes sem as aspas, cada elemento
+foi convertido em uma string.
+
+00:00:41.650 --> 00:00:46.330
+O dtype também é s14,
+que indica strings de no máximo 14 de comprimento.
+
+00:00:46.330 --> 00:00:51.170
+Obviamente, não faz sentido tirar
+a média de strings como "canceled",
+
+00:00:51.170 --> 00:00:55.300
+mas faz sentido tirar a média
+apenas da coluna days_to_cancel.
+
+00:00:55.300 --> 00:00:58.910
+A coluna days_to_cancel é a coluna
+três, então, posso acessá-la assim.
+
+00:01:00.260 --> 00:01:04.828
+No entanto, se eu tirar a média
+desta coluna, isso não funciona.
+
+00:01:04.828 --> 00:01:09.320
+Em vez disso, numpy diz que não pode
+executar a redução com um tipo flexível,
+
+00:01:09.320 --> 00:01:12.230
+o que significa que ele não saber como
+tirar a média quando nem todos
+
+00:01:12.230 --> 00:01:14.070
+os valores são números.
+
+00:01:14.070 --> 00:01:18.630
+Essa é uma vantagem das estruturas de dados do Pandas
+sobre os arrays numpy bidimensionais.
+
+00:01:18.630 --> 00:01:21.710
+Uma estrutura de dados também é uma
+estrutura de dados bidimensional, mas
+
+00:01:21.710 --> 00:01:23.870
+cada coluna é considerada de
+um tipo diferente.
+
+00:01:24.870 --> 00:01:29.030
+Outra vantagem é que as estruturas de dados têm
+índices similares às teorias do Panda.
+
+00:01:29.030 --> 00:01:32.050
+Há um valor de índice para
+cada linha, e um nome para a coluna.
+
+00:01:33.350 --> 00:01:36.990
+Em vez disso, vou criar
+um DataFrame do Pandas com esses dados.
+
+00:01:36.990 --> 00:01:40.150
+Posso fazer isso passando
+nomes de colinas de mapeamento de um dicionário
+
+00:01:40.150 --> 00:01:42.710
+para listas de valores para essa coluna.
+
+00:01:42.710 --> 00:01:46.450
+Uma chave no dicionário
+seria account_key, e
+
+00:01:46.450 --> 00:01:50.160
+a lista seria todos os valores da coluna
+account_key,
+
+00:01:50.160 --> 00:01:52.740
+e, da mesma forma, para as outras colunas.
+
+00:01:52.740 --> 00:01:56.390
+Agora, quando olho para a
+estrutura de dados, ela é exibida em uma tabela legal.
+
+00:01:56.390 --> 00:01:58.191
+Os nomes das colunas ficam no início e
+
+00:01:58.191 --> 00:02:00.870
+os índices de função são inteiros
+a partir de zero.
+
+00:02:00.870 --> 00:02:03.740
+Há outras maneiras de
+criar estruturas de dados do Pandas também,
+
+00:02:03.740 --> 00:02:04.940
+o que você verá em breve.
+
+00:02:06.100 --> 00:02:08.000
+Se eu pegar a média
+da estrutura de dados,
+
+00:02:08.000 --> 00:02:11.610
+isso pegará a média de cada coluna
+numérica e ignorará as outras.
+
+00:02:11.610 --> 00:02:15.690
+is_udacity é uma coluna numérica
+aqui com trues tratados como um e
+
+00:02:15.690 --> 00:02:17.980
+falses tratados como zero.
+
+00:02:17.980 --> 00:02:21.680
+Você notará que o Pandas não tirou
+a média de toda a estrutura de dados aqui,
+
+00:02:21.680 --> 00:02:23.430
+mas sim de cada coluna.
+
+00:02:23.430 --> 00:02:26.240
+Como se presume que cada coluna
+seja de um tipo diferente,
+
+00:02:26.240 --> 00:02:28.760
+isso faz mais sentido para o Pandas.
+
+00:02:28.760 --> 00:02:32.680
+Você também pode usar o argumento de eixo para
+tirar a média de cada linha,
+
+00:02:32.680 --> 00:02:34.240
+mas isso não funcionará neste caso,
+
+00:02:34.240 --> 00:02:36.760
+já que cada linha contém
+alguns dados não numéricos.
+

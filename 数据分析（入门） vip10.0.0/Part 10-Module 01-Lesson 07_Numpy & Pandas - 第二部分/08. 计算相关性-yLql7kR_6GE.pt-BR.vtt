@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.160 --> 00:00:03.510
+Para escrever esta função, primeiro eu
+preciso padronizar x e y.
+
+00:00:04.689 --> 00:00:07.540
+Você escreveu código para padronizar
+uma variável antes, mas
+
+00:00:07.540 --> 00:00:10.450
+isso é um pouco diferente desta vez
+porque você precisará ter certeza de
+
+00:00:10.450 --> 00:00:17.274
+usar o desvio padrão não corrigido
+passando ddof = 0 para as duas variáveis.
+
+00:00:17.274 --> 00:00:20.339
+Como antes, eu também preciso ser
+cuidadoso sobre os parênteses.
+
+00:00:21.410 --> 00:00:23.670
+Em seguida, para multiplicar cada par de valores,
+
+00:00:23.670 --> 00:00:27.360
+usarei multiplicadores que fazem
+multiplicação de vetor.
+
+00:00:27.360 --> 00:00:31.810
+Em seguida, usarei mean para obter a média
+dos produtos adicionando parênteses, de forma
+
+00:00:31.810 --> 00:00:35.370
+a obter a média dos produtos
+em vez de apenas obter a média
+
+00:00:35.370 --> 00:00:37.120
+de y e, em seguida, multiplicar por x.
+
+00:00:38.300 --> 00:00:40.190
+E retornarei esse valor.
+
+00:00:40.190 --> 00:00:44.200
+O NumPy na verdade tem uma função que
+calcula o r de Pearson para você, mas
+
+00:00:44.200 --> 00:00:46.892
+pode ser útil você mesmo escrevê-la
+na primeira vez para
+
+00:00:46.892 --> 00:00:49.000
+entender o que ela está fazendo.
+
+00:00:49.000 --> 00:00:49.955
+Mas, no futuro,
+
+00:00:49.955 --> 00:00:53.290
+recomendo usar a função do NumPy
+em vez de usar a sua própria.
+
+00:00:53.290 --> 00:00:56.500
+Em seguida, usarei esta função para
+calcular a correlação entre algumas
+
+00:00:56.500 --> 00:00:58.830
+das variáveis nos dados do metrô.
+
+00:00:58.830 --> 00:01:02.090
+Primeiro, calcularei a correlação
+entre entriesn_hourly ou
+
+00:01:02.090 --> 00:01:06.760
+o número de entradas a cada hora e mean
+precipi ou a precipitação média do
+
+00:01:06.760 --> 00:01:11.050
+dia e
+posso ver que o resultado é cerca de 0,03.
+
+00:01:11.050 --> 00:01:15.000
+Este valor é positivo, o que significa
+que quando a precipitação é mais alta,
+
+00:01:15.000 --> 00:01:17.020
+o número de passageiros do metrô também é mais alto.
+
+00:01:17.020 --> 00:01:18.380
+Mas o valor também é muito pequeno,
+
+00:01:18.380 --> 00:01:20.850
+o que significa que o relacionamento
+não é particularmente forte.
+
+00:01:21.960 --> 00:01:25.160
+Para comparação, vou obter
+a correlação entre duas variáveis
+
+00:01:25.160 --> 00:01:27.295
+que espero estejam mais
+fortemente correlacionadas.
+
+00:01:27.295 --> 00:01:31.880
+ENTRIESn_hourly é o número de pessoas
+que andam de metrô a cada hora, e
+
+00:01:31.880 --> 00:01:35.610
+ENTRIESn é um total cumulativo de quantas
+pessoas andaram de metrô
+
+00:01:35.610 --> 00:01:37.680
+que aumenta a cada hora.
+
+00:01:37.680 --> 00:01:40.780
+Definitivamente, espero que essas duas
+variáveis estejam correlacionadas,
+
+00:01:40.780 --> 00:01:44.790
+embora eu não espere que o relacionamento
+seja necessariamente superforte,
+
+00:01:44.790 --> 00:01:47.450
+já que o número total de entradas
+depende do número de entradas de
+
+00:01:47.450 --> 00:01:52.410
+todas as horas anteriores assim como de todas
+as entradas da hora atual.
+
+00:01:52.410 --> 00:01:56.681
+Mas o resultado que obtenho aqui é de aproximadamente 0,58,
+que é muito mais alto que para as
+
+00:01:56.681 --> 00:01:58.923
+entriesn_hourly e meanprecipi, mas
+
+00:01:58.923 --> 00:02:03.214
+também é muito mais baixo que o valor
+máximo do r de Pearson, que é um.
+

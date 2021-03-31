@@ -1,0 +1,294 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:03.060
+Várias dúvidas que tenho
+sobre o conjunto de dados do metrô, têm
+
+00:00:03.060 --> 00:00:04.470
+algo em comum.
+
+00:00:04.470 --> 00:00:08.590
+Por exemplo, quero verificar como
+o número de passageiros varia por hora do dia.
+
+00:00:08.590 --> 00:00:11.060
+Mas o arquivo contém muitas entradas para
+
+00:00:11.060 --> 00:00:14.890
+cada hora do dia de diferentes
+dias e de diferentes estações.
+
+00:00:14.890 --> 00:00:19.560
+Primeiro, preciso separar os dados
+em um grupo para cada hora do dia,
+
+00:00:19.560 --> 00:00:25.040
+em seguida, usar a média do número de passageiros para cada
+hora, depois posso analisar esses números.
+
+00:00:25.040 --> 00:00:29.000
+Da mesma forma, quero verificar se a
+chuva afeta o número de passageiros do metrô.
+
+00:00:29.000 --> 00:00:31.690
+Uma possibilidade seria
+dividir os dados em dois grupos,
+
+00:00:31.690 --> 00:00:34.420
+dados de quando está chovendo e
+dados de quando não está chovendo,
+
+00:00:34.420 --> 00:00:36.995
+depois comparar o número de passageiros
+entre os dois grupos.
+
+00:00:36.995 --> 00:00:40.215
+Novamente, há uma etapa de agrupamento
+seguida por uma etapa de agregação
+
+00:00:40.215 --> 00:00:42.925
+quando eu somo todas as entradas
+dentro de cada grupo, ou
+
+00:00:42.925 --> 00:00:44.895
+utilizo a média de
+entradas dentro de cada grupo.
+
+00:00:46.035 --> 00:00:48.705
+Também disse que estava interessada em
+saber como o número de passageiros varia por dia da
+
+00:00:48.705 --> 00:00:49.655
+semana, onde novamente,
+
+00:00:49.655 --> 00:00:53.225
+precisaria agrupar por dia da
+semana, em seguida, agregar cada dia.
+
+00:00:53.225 --> 00:00:56.335
+Isso pode nos lembrar do código da
+lição um no qual foram agrupados
+
+00:00:56.335 --> 00:01:00.155
+dados por chave de conta e, em seguida, adicionados
+registros de envolvimento para cada chave de conta.
+
+00:01:01.400 --> 00:01:04.715
+Na lição um optei por realizar
+a primeira etapa com uma função chamada
+
+00:01:04.715 --> 00:01:09.800
+group_data e na segunda etapa com
+uma função chamada sum_grouped_items.
+
+00:01:09.800 --> 00:01:13.610
+O Pandas criou funções semelhantes
+que permitem que este tipo de análise seja
+
+00:01:13.610 --> 00:01:15.630
+feito com um código muito menor.
+
+00:01:15.630 --> 00:01:17.710
+Vamos verificar um exemplo concreto,
+
+00:01:17.710 --> 00:01:21.860
+suponha que eu tivesse os dados de envolvimento
+de cada aluno em uma estrutura de dados Pandas.
+
+00:01:21.860 --> 00:01:24.913
+Eu criei uma estrutura de dados pequena
+aqui para usar como exemplo.
+
+00:01:24.913 --> 00:01:27.730
+O código que eu escreveria para obter o
+número médio de minutos gastos na
+
+00:01:27.730 --> 00:01:30.413
+sala de aula seria
+engagement_df.groupyby
+
+00:01:30.413 --> 00:01:35.000
+('account_key').sum()['total_minutes_vi-
+sited'].mean( ).
+
+00:01:35.000 --> 00:01:37.918
+Agora vamos ver o que cada parte
+deste código faz, aos poucos.
+
+00:01:37.918 --> 00:01:41.610
+Primeiro, chamar
+engagement_df.groupby('account_key')
+
+00:01:41.610 --> 00:01:46.090
+cria um tipo especial de objeto
+chamado de DataFrameGroupBy.
+
+00:01:46.090 --> 00:01:49.500
+Acho que é como um dicionário
+que mapeia cada chave de conta para uma
+
+00:01:49.500 --> 00:01:52.830
+estrutura de dados menor que contém somente as linhas
+que correspondem a essa chave de conta.
+
+00:01:52.830 --> 00:01:56.760
+Apesar de este ser um objeto personalizado,
+em vez de um dicionário.
+
+00:01:56.760 --> 00:02:00.720
+Se quiser, você pode verificar o
+mapeamento usando o atributo .groups.
+
+00:02:00.720 --> 00:02:05.140
+Isso mostra que a chave de conta 1175
+corresponde às linhas 7 a 13 da
+
+00:02:05.140 --> 00:02:07.150
+estrutura de dados original.
+
+00:02:07.150 --> 00:02:10.320
+E a chave de conta 1200
+corresponde às linhas 0 a 6.
+
+00:02:10.320 --> 00:02:15.700
+Geralmente não é necessário examinar
+diretamente os grupos subjacentes como este,
+
+00:02:15.700 --> 00:02:19.120
+mas às vezes, isso pode ser útil para
+obter uma ideia do que está acontecendo.
+
+00:02:19.120 --> 00:02:22.190
+Em seguida, vou usar a função
+.sum no objeto groupby
+
+00:02:22.190 --> 00:02:24.950
+para adicionar cada coluna dentro de cada grupo.
+
+00:02:24.950 --> 00:02:28.720
+Você pode ver que
+o total de minutos visitados calculado para
+
+00:02:28.720 --> 00:02:30.830
+a chave de conta 1175 foi 2,7.
+
+00:02:30.830 --> 00:02:35.001
+E o total para a
+chave de conta 1200 foi de 696,6.
+
+00:02:35.001 --> 00:02:38.276
+Observe que a coluna de data
+não está incluída nesta saída porque não é possível
+
+00:02:38.276 --> 00:02:40.700
+usar a soma
+de uma série de datas.
+
+00:02:40.700 --> 00:02:43.120
+Mas se houver outras colunas
+numéricas na estrutura de dados,
+
+00:02:43.120 --> 00:02:44.290
+elas serão incluídas aqui.
+
+00:02:45.530 --> 00:02:49.910
+Agora quando adiciono total_minutes_visited,
+obtenho os mesmos dados de volta, mas
+
+00:02:49.910 --> 00:02:51.860
+em uma série do Panda.
+
+00:02:51.860 --> 00:02:55.180
+Observe que antes era
+uma estrutura de dados com somente uma coluna,
+
+00:02:55.180 --> 00:02:58.930
+o que você pode dizer que ela é convertida
+como uma tabela no bloco de anotações IPython.
+
+00:02:58.930 --> 00:03:02.362
+Mais uma vez, se houvesse mais colunas
+numéricas, elas seriam mostradas nesta estrutura de
+
+00:03:02.362 --> 00:03:06.280
+dados, mas esta série conteria
+somente a coluna total_minutes_visited.
+
+00:03:06.280 --> 00:03:10.584
+E agora, como quero a
+média de todos os alunos, adiciono .mean.
+
+00:03:10.584 --> 00:03:15.570
+E isso me fornece um número único, cerca de
+350 minutos para esses dois alunos.
+
+00:03:15.570 --> 00:03:19.050
+Ou talvez até melhor,
+eu poderia usar a função describe.
+
+00:03:19.050 --> 00:03:21.400
+Em seguida, vou obter uma série de
+métricas, incluindo a média,
+
+00:03:21.400 --> 00:03:24.770
+desvio padrão,
+mínimo e máximo.
+
+00:03:24.770 --> 00:03:28.190
+A parte deste código que achei
+mais confusa quando aprendi
+
+00:03:28.190 --> 00:03:31.190
+sobre groupby foi a função de soma.
+
+00:03:31.190 --> 00:03:34.820
+Você viu a função de soma antes, mas
+era para estrutura de dados.
+
+00:03:34.820 --> 00:03:36.670
+Este é um objeto de groupby.
+
+00:03:36.670 --> 00:03:40.440
+Fiquei imaginando, quais outras funções
+os objetos de groupby têm disponíveis.
+
+00:03:40.440 --> 00:03:43.030
+Se não há função
+o que ela faz?
+
+00:03:43.030 --> 00:03:44.520
+Semelhante a séries e
+
+00:03:44.520 --> 00:03:48.690
+estrutura de dados, os objetos groupby têm várias
+funções convenientes e
+
+00:03:48.690 --> 00:03:52.520
+se não quiser as que estão criadas,
+você poderá aplicar e escrever a sua própria.
+
+00:03:52.520 --> 00:03:53.810
+No próximo exercício,
+
+00:03:53.810 --> 00:03:56.790
+quero agrupar os dados
+do metrô por uma variável de sua escolha,
+
+00:03:56.790 --> 00:04:00.600
+talvez dia da semana, hora do dia
+ou se estava chovendo.
+
+00:04:00.600 --> 00:04:04.110
+Depois encontre a média do número de passageiros do metrô para
+cada valor diferente e
+
+00:04:04.110 --> 00:04:06.020
+crie um gráfico
+mostrando os resultados, ou
+
+00:04:06.020 --> 00:04:08.260
+simplesmente imprima os números,
+se isso fizer mais sentido.
+

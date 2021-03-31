@@ -1,0 +1,34 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.180 --> 00:00:04.700
+Na última lição, você usou NumPy e
+Pandas para analisar dados unidimensionais.
+
+00:00:04.700 --> 00:00:07.970
+Nesta lição, você aprenderá muito mais
+recursos de ambas as bibliotecas que poderá
+
+00:00:07.970 --> 00:00:10.100
+usar para analisar dados bidimensionais.
+
+00:00:10.100 --> 00:00:13.460
+Ao final da lição, você conseguirá
+reescrever muitos códigos que
+
+00:00:13.460 --> 00:00:17.510
+escreveu na lição um, mas, desta vez, usando o
+Pandas, e se estiver imaginando por que estou
+
+00:00:17.510 --> 00:00:20.760
+usando esta camiseta, é porque você
+também trabalhará com um novo conjunto de dados nesta
+
+00:00:20.760 --> 00:00:24.530
+lição contendo dados de número de passageiros do metrô e
+de previsão do tempo para Nova York.
+
+00:00:24.530 --> 00:00:25.160
+Vamos começar.
+

@@ -1,0 +1,182 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:01.888
+Como anteriormente, começarei
+
+00:00:01.888 --> 00:00:04.387
+escrevendo uma função que
+opera em uma única coluna,
+
+00:00:04.387 --> 00:00:06.790
+que chamarei de
+second_largest_in_column.
+
+00:00:06.790 --> 00:00:09.412
+Há alguma diferentes
+maneiras de encontrar
+
+00:00:09.412 --> 00:00:11.420
+o segundo maior
+valor em uma coluna.
+
+00:00:11.420 --> 00:00:14.011
+Uma maneira que me ocorre é que
+eu poderia classificar a coluna em
+
+00:00:14.011 --> 00:00:15.037
+ordem decrescente
+
+00:00:15.037 --> 00:00:17.280
+e olhar o segundo
+valor da coluna.
+
+00:00:17.280 --> 00:00:20.039
+Não classificamos uma série do
+Pandas antes, portanto,
+
+00:00:20.039 --> 00:00:22.950
+eu começo pesquisando a
+série de classificação do Pandas no Google.
+
+00:00:24.180 --> 00:00:27.440
+Este primeiro link é a página
+da documentação do Pandas para
+
+00:00:27.440 --> 00:00:29.004
+uma função chamada sort.
+
+00:00:29.004 --> 00:00:30.555
+Parece ser o que eu quero,
+mas
+
+00:00:30.555 --> 00:00:33.320
+há uma observação dizendo que essa
+função foi preterida.
+
+00:00:33.320 --> 00:00:36.389
+E que no lugar eu devo usar
+a função sort_values com
+
+00:00:36.389 --> 00:00:39.370
+inplace-true para
+classificação local.
+
+00:00:39.370 --> 00:00:41.495
+Vou clicar neste link
+na parte inferior para ver
+
+00:00:41.495 --> 00:00:44.129
+a documentação da
+função sort.values.
+
+00:00:44.129 --> 00:00:46.859
+Posso ver que o argumento
+inplace afeta se
+
+00:00:46.859 --> 00:00:48.764
+a série será
+classificada no local,
+
+00:00:48.764 --> 00:00:51.254
+e a alternativa é
+criar uma nova série.
+
+00:00:51.254 --> 00:00:54.310
+Agora, não quero modificar
+a série original.
+
+00:00:54.310 --> 00:00:56.480
+Portanto, usarei inplace
+=false,
+
+00:00:56.480 --> 00:00:59.190
+que é o valor padrão para
+inplace.
+
+00:00:59.190 --> 00:01:01.880
+Também posso ver que há
+um sinalizador chamado ascending, que
+
+00:01:01.880 --> 00:01:04.349
+controla se a série
+é classificada em ordem crescente ou
+
+00:01:04.349 --> 00:01:06.080
+decrescente.
+
+00:01:06.080 --> 00:01:07.520
+Eu quero passar false, para
+
+00:01:07.520 --> 00:01:10.160
+que a série seja
+classificada em ordem decrescente.
+
+00:01:10.160 --> 00:01:13.120
+Portanto, aqui, estou criando
+uma coluna classificada chamando
+
+00:01:13.120 --> 00:01:16.296
+a função sort_values
+com ascending=False.
+
+00:01:16.296 --> 00:01:19.100
+E como eu disse, estou usando
+o valor padrão para inplace.
+
+00:01:20.130 --> 00:01:22.560
+A coluna classificada será
+uma série do Pandas, portanto,
+
+00:01:22.560 --> 00:01:26.210
+eu posso acessar o segundo
+valor usando iloc, e
+
+00:01:26.210 --> 00:01:28.060
+o segundo valor estará
+na posição um.
+
+00:01:29.320 --> 00:01:31.590
+Agora, vou tentar chamar essa
+função em uma das colunas
+
+00:01:31.590 --> 00:01:33.150
+da estrutura de dados
+para ver se ela funciona.
+
+00:01:34.760 --> 00:01:36.430
+Ela retornou quatro,
+que é de fato
+
+00:01:36.430 --> 00:01:38.190
+o segundo maior
+valor na coluna A.
+
+00:01:39.280 --> 00:01:42.141
+Agora estou pronta para obter
+a função second_largest,
+
+00:01:42.141 --> 00:01:44.175
+que utilizará
+uma estrutura de dados inteira.
+
+00:01:44.175 --> 00:01:46.008
+O trabalho real já
+foi feito, e
+
+00:01:46.008 --> 00:01:48.815
+agora eu só preciso aplicar
+a função second_largest_in_column
+
+00:01:48.815 --> 00:01:50.310
+na estrutura de dados.
+
+00:01:50.310 --> 00:01:53.019
+Finalmente, chamarei essa
+função na estrutura
+
+00:01:53.019 --> 00:01:54.850
+de dados de teste e
+parece que ela funcionou.
+

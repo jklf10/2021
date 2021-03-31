@@ -1,0 +1,96 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.290 --> 00:00:03.530
+Decidi fazer um diagrama dos passageiros
+do metrô por dia da semana.
+
+00:00:03.530 --> 00:00:05.980
+A primeira coisa que quis fazer
+foi analisar os dados e
+
+00:00:05.980 --> 00:00:08.490
+me lembrar de onde essas
+informações eram armazenadas.
+
+00:00:08.490 --> 00:00:12.050
+E posso ver aqui que estão
+na coluna day_week.
+
+00:00:12.050 --> 00:00:14.590
+A primeira coisa que vou fazer
+é agrupar os dados do metrô por
+
+00:00:14.590 --> 00:00:16.170
+dia da semana.
+
+00:00:16.170 --> 00:00:19.470
+Isso me dá
+uma estrutura de dados agrupada por objeto, assim
+
+00:00:19.470 --> 00:00:20.860
+posso ver o que está acontecendo até o momento.
+
+00:00:21.980 --> 00:00:24.960
+Depois, quero achar a média
+de passageiros em cada dia da semana, então
+
+00:00:24.960 --> 00:00:26.570
+adicionarei .mean.
+
+00:00:26.570 --> 00:00:28.240
+Desta vez, posso ver alguns resultados.
+
+00:00:28.240 --> 00:00:32.590
+Isso está me mostrando o valor médio de
+cada coluna para cada dia semana.
+
+00:00:32.590 --> 00:00:35.500
+Estou especialmente interessada na
+coluna ENTRIESn_hourly, por isso
+
+00:00:35.500 --> 00:00:36.860
+vou analisá-la.
+
+00:00:36.860 --> 00:00:40.650
+Executando isso novamente, vejo
+uma série contendo apenas os valores da
+
+00:00:40.650 --> 00:00:42.760
+coluna ENTRIESn_hourly.
+
+00:00:42.760 --> 00:00:45.930
+Darei a esta série
+o nome de ridership_by_day.
+
+00:00:45.930 --> 00:00:48.400
+Agora estou pronta para fazer
+um diagrama desses valores.
+
+00:00:48.400 --> 00:00:52.330
+Como de costume, usarei %pylab inline para
+garantir que as marcações apareçam dentro
+
+00:00:52.330 --> 00:00:57.350
+do bloco de anotações e importem seaborn como sns
+para que minhas marcações fiquem mais legais.
+
+00:00:57.350 --> 00:00:59.724
+Em seguida, chamarei ridership_by_day.plot.
+
+00:01:00.750 --> 00:01:02.010
+E esse é o diagrama que obtenho.
+
+00:01:02.010 --> 00:01:05.080
+O mais relevante é que
+o número de passageiros é significativamente
+
+00:01:05.080 --> 00:01:08.800
+menor nos dias 5
+e 6 do que no restante da semana.
+
+00:01:08.800 --> 00:01:12.180
+Os dias 5 e 6 são sábado e
+domingo, então, faz sentido.
+

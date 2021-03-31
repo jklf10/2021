@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.360 --> 00:00:03.980
+Primeiro, quero encontrar o número médio de passageiros
+por dia em cada estação do metrô.
+
+00:00:05.170 --> 00:00:06.990
+Como cada estação é uma coluna,
+
+00:00:06.990 --> 00:00:10.820
+posso fazer isso usando a função
+mean com um eixo de 0.
+
+00:00:10.820 --> 00:00:12.960
+Como era de se esperar, isso me deu cinco médias.
+
+00:00:12.960 --> 00:00:15.510
+Uma para cada uma das
+estações do metrô neste array.
+
+00:00:15.510 --> 00:00:19.250
+Vou chamar este array de station_riders
+uma vez que ele contém o número de passageiros de
+
+00:00:19.250 --> 00:00:20.790
+cada estação.
+
+00:00:20.790 --> 00:00:24.120
+Em seguida, preciso encontrar os
+números máximo e mínimo de passageiros por dia.
+
+00:00:25.150 --> 00:00:27.990
+Posso localizar o máximo
+utilizando station_riders.max e
+
+00:00:29.030 --> 00:00:32.400
+o mínimo utilizando
+station_riders.min.
+
+00:00:32.400 --> 00:00:34.870
+Em seguida, moverei este código dentro
+de minha função e, novamente,
+
+00:00:34.870 --> 00:00:36.620
+não preciso alterar
+nenhum nome de variável.
+
+00:00:37.790 --> 00:00:42.220
+E retornarei o max_daily_ridership
+e o min_daily_ridership.
+
+00:00:42.220 --> 00:00:44.720
+Finalmente, executarei esta função
+no array de exemplo.
+
+00:00:44.720 --> 00:00:48.840
+Parece que a estação com
+o número máximo de passageiros por dia teve cerca de
+
+00:00:48.840 --> 00:00:52.760
+3.200, e estação com
+o número mínimo teve cerca de valor 1.000.
+
+00:00:52.760 --> 00:00:57.200
+O número máximo é igual ao valor que
+vimos da última vez como o número de passageiros médio da
+
+00:00:57.200 --> 00:00:59.690
+estação com o número máximo
+no primeiro dia.
+
+00:00:59.690 --> 00:01:03.080
+O que indica que a estação neste
+caso que teve o maior número de passageiros no
+
+00:01:03.080 --> 00:01:06.050
+primeiro dia também teve
+o maior número de passageiros.
+
+00:01:06.050 --> 00:01:09.460
+O valor mínimo é inferior à média geral
+que vimos antes, o que faz sentido.
+

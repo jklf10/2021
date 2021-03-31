@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.240 --> 00:00:02.540
+Mencionei que a função shift
+pode ser útil.
+
+00:00:02.540 --> 00:00:05.850
+Vamos começar verificando
+a documentação a esse respeito.
+
+00:00:05.850 --> 00:00:09.560
+A documentação diz que a função
+alternará o índice pelo número desejado
+
+00:00:09.560 --> 00:00:13.260
+de periods com uma
+frequência de tempo opcional.
+
+00:00:13.260 --> 00:00:15.440
+Isso me parece um tanto enigmático.
+
+00:00:15.440 --> 00:00:18.360
+Vou testar a função agora
+e ver os resultados.
+
+00:00:18.360 --> 00:00:19.930
+Percebo aqui que a
+
+00:00:19.930 --> 00:00:23.360
+função shift precisa de um argumento
+nomeado como periods,
+
+00:00:23.360 --> 00:00:26.090
+que é um inteiro indicando
+o número de periods a serem movidos.
+
+00:00:27.250 --> 00:00:30.540
+Vou tentar mudar, neste exemplo,
+a estrutura de dados entries_and_exits.
+
+00:00:30.540 --> 00:00:34.530
+Para começar,
+usarei shift com periods igual a um.
+
+00:00:34.530 --> 00:00:35.450
+Ao fazer isso,
+
+00:00:35.450 --> 00:00:39.520
+parece que a primeira linha do
+DataFrame resultante contém NaNs.
+
+00:00:39.520 --> 00:00:43.460
+A segunda linha corresponde à primeira
+do DataFrame original, e a
+
+00:00:43.460 --> 00:00:47.010
+terceira linha corresponde à
+segunda linha dele, e assim por diante.
+
+00:00:47.010 --> 00:00:50.870
+Para ficar bem claro, executei
+esta função com o argumento 2. Desta vez,
+
+00:00:50.870 --> 00:00:53.890
+as duas
+primeiras linhas são NaNs.
+
+00:00:53.890 --> 00:00:57.140
+E a terceira linha da estrutura de dados
+resultante corresponde à primeira linha
+
+00:00:57.140 --> 00:00:58.180
+da estrutura de dados original.
+
+00:00:59.300 --> 00:01:03.090
+Para calcular hourly_entries_and_exits,
+vou usar cada valor da
+
+00:01:03.090 --> 00:01:06.760
+estrutura de dados e subtrair o valor da linha
+anterior, o que posso fazer usando
+
+00:01:06.760 --> 00:01:11.520
+operações de vetores e
+a função shift.
+
+00:01:11.520 --> 00:01:15.040
+Note que aqui usei cada valor
+do DataFrame e subtraí
+
+00:01:15.040 --> 00:01:19.070
+o DataFrame marcado com um,
+o que me apresentará a linha anterior.
+
+00:01:19.070 --> 00:01:21.450
+Quando executo esta
+função no exemplo de DataFrame,
+
+00:01:21.450 --> 00:01:24.420
+tenho este resultado,
+que me parece razoável.
+
+00:01:24.420 --> 00:01:27.370
+O estranho é que a primeira
+linha contém NaNs, mas
+
+00:01:27.370 --> 00:01:29.710
+você acaba percebendo
+que isso faz sentido.
+
+00:01:29.710 --> 00:01:33.410
+Na verdade, você não sabe quantas
+hourly_entries_and_exits estão no
+
+00:01:33.410 --> 00:01:37.130
+DataFrame, pois não há uma
+linha anterior para comparar.
+
+00:01:37.130 --> 00:01:40.730
+Talvez faça sentido descartar esta linha
+ou substituir esses valores por zero.
+

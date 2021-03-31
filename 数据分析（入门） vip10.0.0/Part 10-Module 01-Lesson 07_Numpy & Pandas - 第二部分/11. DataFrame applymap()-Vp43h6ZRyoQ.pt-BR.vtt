@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:03.530
+Para escrever a função convert_grades,
+primeiro escreverei uma função que
+
+00:00:03.530 --> 00:00:05.000
+converta uma única nota e
+
+00:00:05.000 --> 00:00:08.220
+depois poderei aplicar essa função
+à estrutura de dados inteira.
+
+00:00:08.220 --> 00:00:11.620
+Chamarei a versão singular
+da função convert-grade.
+
+00:00:11.620 --> 00:00:14.280
+Escrevi essa função usando
+várias instruções if.
+
+00:00:14.280 --> 00:00:17.580
+Primeiro, se a nota foi de
+pelo menos 90, retornei A,
+
+00:00:17.580 --> 00:00:20.480
+se a nota foi de pelo menos
+80, retornei B, e assim por diante.
+
+00:00:21.630 --> 00:00:24.470
+Tentarei esta função
+em alguns valores únicos.
+
+00:00:24.470 --> 00:00:27.470
+Se eu converter a nota 80, obterei B.
+
+00:00:27.470 --> 00:00:31.180
+E se converter 79, obterei C,
+que é o que eu esperava.
+
+00:00:31.180 --> 00:00:33.870
+Em seguida, posso usar a função applymap
+
+00:00:33.870 --> 00:00:38.270
+para chamar a função convert_grade
+em cada elemento da estrutura de dados.
+
+00:00:38.270 --> 00:00:41.250
+Agora chamarei esta função
+na estrutura de dados da nota de exemplo, e
+
+00:00:41.250 --> 00:00:42.130
+parece que funcionou.
+

@@ -1,0 +1,324 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pandas groupby()</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Numpy &amp; Pandas - 第二部分</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 地铁数据.html">02. 地铁数据</a>
+    </li>
+    <li class="">
+      <a href="03. 二维 NumPy 数组.html">03. 二维 NumPy 数组</a>
+    </li>
+    <li class="">
+      <a href="04. NumPy 轴.html">04. NumPy 轴</a>
+    </li>
+    <li class="">
+      <a href="05. NumPy 和 Pandas 数据类型.html">05. NumPy 和 Pandas 数据类型</a>
+    </li>
+    <li class="">
+      <a href="06. 访问 DataFrame 元素.html">06. 访问 DataFrame 元素</a>
+    </li>
+    <li class="">
+      <a href="07. 将数据加载到 DataFrame 中.html">07. 将数据加载到 DataFrame 中</a>
+    </li>
+    <li class="">
+      <a href="08. 计算相关性.html">08. 计算相关性</a>
+    </li>
+    <li class="">
+      <a href="09. Pandas 轴名.html">09. Pandas 轴名</a>
+    </li>
+    <li class="">
+      <a href="10. DataFrame 向量化运算.html">10. DataFrame 向量化运算</a>
+    </li>
+    <li class="">
+      <a href="11. DataFrame applymap().html">11. DataFrame applymap()</a>
+    </li>
+    <li class="">
+      <a href="12. DataFrame apply().html">12. DataFrame apply()</a>
+    </li>
+    <li class="">
+      <a href="13. DataFrame apply() 使用案例 2.html">13. DataFrame apply() 使用案例 2</a>
+    </li>
+    <li class="">
+      <a href="14. 向 Series 添加 DataFrame.html">14. 向 Series 添加 DataFrame</a>
+    </li>
+    <li class="">
+      <a href="15. 再次归一化每一列.html">15. 再次归一化每一列</a>
+    </li>
+    <li class="">
+      <a href="16. Pandas groupby().html">16. Pandas groupby()</a>
+    </li>
+    <li class="">
+      <a href="17. 每小时入站和出站数.html">17. 每小时入站和出站数</a>
+    </li>
+    <li class="">
+      <a href="18. 合并 Pandas DataFrame.html">18. 合并 Pandas DataFrame</a>
+    </li>
+    <li class="">
+      <a href="19. 使用 DataFrame 绘制图形.html">19. 使用 DataFrame 绘制图形</a>
+    </li>
+    <li class="">
+      <a href="20. 三维数据.html">20. 三维数据</a>
+    </li>
+    <li class="">
+      <a href="21. 结论.html">21. 结论</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">16. Pandas groupby()</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Pandas groupby()</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="16. Pandas groupby()-smBMJlpWdVI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="16. Pandas groupby()-smBMJlpWdVI.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="16. Pandas groupby()-smBMJlpWdVI.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="16. Pandas groupby()-smBMJlpWdVI.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="16. Pandas groupby()-smBMJlpWdVI.en.vtt" label="en">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#174154-groupby-py" class="nav-item nav-link  active show" id="tab-174154-groupby-py" data-toggle="tab" role="tab"
+      aria-controls="174154-groupby-py" aria-selected="true">groupby.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="174154-groupby-py" aria-labelledby="tab-174154-groupby-py" role="tabpanel">
+      <pre><code></code>import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+values &#x3D; np.array([1, 3, 2, 4, 1, 6, 4])
+example_df &#x3D; pd.DataFrame({
+    &#x27;value&#x27;: values,
+    &#x27;even&#x27;: values % 2 &#x3D;&#x3D; 0,
+    &#x27;above_three&#x27;: values &gt; 3 
+}, index&#x3D;[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;])
+
+# Change False to True for each block of code to see what it does
+
+# Examine DataFrame
+if False:
+    print example_df
+    
+# Examine groups
+if False:
+    grouped_data &#x3D; example_df.groupby(&#x27;even&#x27;)
+    # The groups attribute is a dictionary mapping keys to lists of row indexes
+    print grouped_data.groups
+    
+# Group by multiple columns
+if False:
+    grouped_data &#x3D; example_df.groupby([&#x27;even&#x27;, &#x27;above_three&#x27;])
+    print grouped_data.groups
+    
+# Get sum of each group
+if False:
+    grouped_data &#x3D; example_df.groupby(&#x27;even&#x27;)
+    print grouped_data.sum()
+    
+# Limit columns in result
+if False:
+    grouped_data &#x3D; example_df.groupby(&#x27;even&#x27;)
+    
+    # You can take one or more columns from the result DataFrame
+    print grouped_data.sum()[&#x27;value&#x27;]
+    
+    print &#x27;\n&#x27; # Blank line to separate results
+    
+    # You can also take a subset of columns from the grouped data before 
+    # collapsing to a DataFrame. In this case, the result is the same.
+    print grouped_data[&#x27;value&#x27;].sum()
+    
+filename &#x3D; &#x27;/datasets/ud170/subway/nyc_subway_weather.csv&#x27;
+subway_df &#x3D; pd.read_csv(filename)
+
+### Write code here to group the subway data by a variable of your choice, then
+### either print out the mean ridership within each group or create a plot.</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="16. Pandas groupby()-w3D0no7E8uw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="16. Pandas groupby()-w3D0no7E8uw.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="16. Pandas groupby()-w3D0no7E8uw.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="16. Pandas groupby()-w3D0no7E8uw.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="16. Pandas groupby()-w3D0no7E8uw.en.vtt" label="en">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="17. 每小时入站和出站数.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('16. Pandas groupby()')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

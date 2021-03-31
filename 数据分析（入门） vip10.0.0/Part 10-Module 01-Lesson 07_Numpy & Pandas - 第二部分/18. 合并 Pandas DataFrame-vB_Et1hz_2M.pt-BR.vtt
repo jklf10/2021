@@ -1,0 +1,104 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.190 --> 00:00:03.130
+Para começar, vou ver as
+três primeiras linhas de duas estruturas de dados
+
+00:00:03.130 --> 00:00:04.530
+que quero mesclar.
+
+00:00:04.530 --> 00:00:07.980
+A primeira coisa que preciso decidir
+é o que passar para a palavra-chave on,
+
+00:00:07.980 --> 00:00:10.930
+isto é, como comparar linhas de
+duas estruturas de dados diferentes.
+
+00:00:12.080 --> 00:00:16.540
+Quero
+comparar por data e hora,
+
+00:00:16.540 --> 00:00:19.120
+latitude e longitude.
+
+00:00:19.120 --> 00:00:22.060
+Então, vou chamar subway_df.merge,
+weather_df.
+
+00:00:22.060 --> 00:00:25.510
+E depois a palavra-chave on será
+uma lista desses quatro campos.
+
+00:00:25.510 --> 00:00:29.360
+Também preciso decidir se uso
+inner, outer, left ou right,
+
+00:00:29.360 --> 00:00:32.830
+e optei por inner, pois quero apenas
+linhas que estão presentes nas duas tabelas.
+
+00:00:33.920 --> 00:00:36.910
+O resultado é uma estrutura de dados com
+todas as colunas das duas tabelas.
+
+00:00:36.910 --> 00:00:40.380
+Por exemplo, as colunas de entradas e saídas
+são dos dados do metrô e
+
+00:00:40.380 --> 00:00:43.340
+as colunas fog e pressure
+são dos dados de previsão do tempo.
+
+00:00:43.340 --> 00:00:47.040
+Elas foram comparadas por data,
+hora, latitude e longitude.
+
+00:00:47.040 --> 00:00:49.880
+O legal aqui
+é que as quatro colunas que quero
+
+00:00:49.880 --> 00:00:52.600
+mesclar têm o mesmo
+nome nas duas estruturas de dados.
+
+00:00:52.600 --> 00:00:53.890
+O que eu faria se
+isso não ocorresse?
+
+00:00:55.000 --> 00:00:58.070
+Então, o que eu faria se
+a coluna date fosse chamada DATEn
+
+00:00:58.070 --> 00:01:02.490
+nos dados do metrô e
+date em minúsculas sem n nos dados de previsão do tempo?
+
+00:01:02.490 --> 00:01:05.740
+Por isso, o Pandas permite
+que você especifique left_on
+
+00:01:05.740 --> 00:01:09.740
+para indicar as colunas da tabela esquerda
+e right_ on para indicar as colunas
+
+00:01:09.740 --> 00:01:11.950
+da tabela direita, separadamente.
+
+00:01:11.950 --> 00:01:15.060
+Para left_on,
+as colunas serão iguais as de antes.
+
+00:01:15.060 --> 00:01:18.210
+E para right-on, as colunas
+serão iguais, mas com outro nome para
+
+00:01:18.210 --> 00:01:19.730
+a coluna date.
+
+00:01:19.730 --> 00:01:21.860
+E este código deve fornecer
+os mesmos resultados de antes.
+

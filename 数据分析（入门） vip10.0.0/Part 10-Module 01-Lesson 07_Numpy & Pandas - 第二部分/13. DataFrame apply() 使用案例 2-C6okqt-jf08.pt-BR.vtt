@@ -1,0 +1,65 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.520 --> 00:00:03.990
+Há outra forma possível de usar
+a função apply em estruturas de dados.
+
+00:00:05.070 --> 00:00:08.890
+Em vez de partir de uma coluna e
+retornar uma nova coluna,
+
+00:00:08.890 --> 00:00:12.550
+a função f pode partir de uma
+coluna e retornar um único valor.
+
+00:00:14.030 --> 00:00:14.890
+No caso,
+
+00:00:14.890 --> 00:00:18.839
+em vez de criar uma nova estrutura de
+dados, apply criará uma nova série.
+
+00:00:20.010 --> 00:00:23.950
+Onde cada coluna da estrutura de dados
+foi reduzida a um único valor.
+
+00:00:25.050 --> 00:00:28.900
+Por exemplo, para localizar o
+valor máximo em cada coluna,
+
+00:00:28.900 --> 00:00:32.350
+posso chamar df.apply(np.max) para
+
+00:00:32.350 --> 00:00:36.350
+chamar a função max de NumPy em
+cada coluna da estrutura de dados.
+
+00:00:36.350 --> 00:00:40.750
+O resultado seria o mesmo. Ele é chamado
+de função interna df.max.
+
+00:00:40.750 --> 00:00:44.760
+Neste caso, seria mais simples
+usar a função interna.
+
+00:00:44.760 --> 00:00:47.760
+Mas, apply pode ser útil
+quando não há uma função interna
+
+00:00:47.760 --> 00:00:49.800
+para fazer o que você deseja.
+
+00:00:49.800 --> 00:00:54.500
+E se, por exemplo, você quiser encontrar
+o segundo maior valor em cada coluna?
+
+00:00:54.500 --> 00:00:57.710
+Nesse caso, faz sentido usar
+a função apply.
+
+00:00:57.710 --> 00:00:59.860
+No próximo exercício,
+quero que faça só isso.
+

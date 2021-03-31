@@ -1,0 +1,93 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.250 --> 00:00:03.900
+Assim como em uma série Pandas,
+às vezes, você pode querer executar algum
+
+00:00:03.900 --> 00:00:07.280
+cálculo em um DataFrame que não possa
+ser feito usando operações ou
+
+00:00:07.280 --> 00:00:07.880
+funções internas.
+
+00:00:08.910 --> 00:00:12.860
+Semelhante a uma série,
+você pode gravar uma função, digamos f,
+
+00:00:12.860 --> 00:00:17.140
+que use um único elemento do
+DataFrame e retorne um novo elemento.
+
+00:00:17.140 --> 00:00:19.720
+Você pode aplicar
+essa função f a cada
+
+00:00:19.720 --> 00:00:23.175
+elemento do DataFrame original
+para obter um novo DataFrame.
+
+00:00:25.020 --> 00:00:28.650
+Por exemplo, na última lição,
+escrevi a função clean-state
+
+00:00:28.650 --> 00:00:31.780
+para determinar um estado que poderia
+estar em um formato ou outro e
+
+00:00:31.780 --> 00:00:33.180
+retorná-lo em um formato padronizado.
+
+00:00:34.610 --> 00:00:37.240
+Para chamar essa função em cada
+elemento do DataFrame df,
+
+00:00:37.240 --> 00:00:41.940
+você chamaria df.applymap(clean_state).
+
+00:00:41.940 --> 00:00:44.750
+Agora, por que essa
+função é chamada applymap,
+
+00:00:44.750 --> 00:00:47.420
+em vez de apply, como era para série?
+
+00:00:47.420 --> 00:00:51.090
+Acho que é uma espécie de infortúnio, mas
+você verá no próximo vídeo que apply
+
+00:00:51.090 --> 00:00:54.080
+faz algo ligeiramente diferente para
+DataFrames.
+
+00:00:54.080 --> 00:00:56.870
+No próximo exercício, quero que
+você escreva uma função que converta
+
+00:00:56.870 --> 00:00:59.260
+notas numéricas em notas de letra.
+
+00:00:59.260 --> 00:01:02.360
+Você receberá um DataFrame
+em que cada coluna é um exame,
+
+00:01:02.360 --> 00:01:06.460
+cada linha é um aluno e cada valor é
+a pontuação que o aluno obteve nesse exame.
+
+00:01:07.510 --> 00:01:11.272
+Você deve usar a regra em que
+uma pontuação de 90 ou superior é um A,
+
+00:01:11.272 --> 00:01:13.322
+80 ou superior é um B, e assim por diante.
+
+00:01:13.322 --> 00:01:15.456
+Use applymap para criar um novo DataFrame,
+
+00:01:15.456 --> 00:01:18.860
+em que cada pontuação numérica
+foi substituída por uma nota de letra.
+

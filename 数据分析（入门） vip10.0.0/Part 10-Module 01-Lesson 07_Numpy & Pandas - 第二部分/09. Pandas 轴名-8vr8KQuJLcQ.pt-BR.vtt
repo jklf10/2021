@@ -1,0 +1,56 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.310 --> 00:00:04.660
+Assim como o NumPy, muitas
+funções do Panda também usam o argumento de eixo.
+
+00:00:04.660 --> 00:00:09.050
+E você pode usar axis = 0 ou
+axis = 1, como para NumPy,
+
+00:00:09.050 --> 00:00:14.000
+mas também pode usar axis = index ou
+axis = columns.
+
+00:00:14.000 --> 00:00:17.250
+Agora isso parece facilitar
+a memorização de cada versão
+
+00:00:17.250 --> 00:00:21.300
+do argumento de eixo, mas
+na verdade, isso pode ser bem confuso.
+
+00:00:21.300 --> 00:00:24.320
+Tirar a média com axis =
+columns, na verdade, não
+
+00:00:24.320 --> 00:00:25.910
+retorna a média de cada coluna.
+
+00:00:25.910 --> 00:00:27.490
+Em vez disso, retorna a média de cada linha.
+
+00:00:28.630 --> 00:00:31.710
+A ideia é que você está tirando
+a média ao longo das colunas.
+
+00:00:32.840 --> 00:00:37.850
+Da mesma forma com axis = index,
+você tira a média ao longo do índice ou
+
+00:00:37.850 --> 00:00:39.410
+das linhas.
+
+00:00:39.410 --> 00:00:42.930
+Ainda tenho problemas para lembrar de que
+maneira o argumento de eixo funciona, então,
+
+00:00:42.930 --> 00:00:45.220
+novamente, sempre tento no iPython e
+
+00:00:45.220 --> 00:00:47.060
+vejo o que acontece
+antes de usar o argumento.
+

@@ -1,0 +1,146 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.220 --> 00:00:03.860
+Depois que cria uma estrutura de dados,
+como você acessa os elementos?
+
+00:00:03.860 --> 00:00:06.780
+Como exemplo, estou usando os mesmos
+dados de ridership que você verificou
+
+00:00:06.780 --> 00:00:09.160
+antes, com os
+nomes de estação como nomes de coluna.
+
+00:00:10.220 --> 00:00:14.830
+Também vou usar o argumento index
+para adicionar datas, como os índices de linha.
+
+00:00:14.830 --> 00:00:18.250
+Quando vejo a estrutura de dados,
+o bloco de anotações iPython é exibido como uma tabela,
+
+00:00:18.250 --> 00:00:20.540
+com nomes de coluna e
+índices de linha apropriados.
+
+00:00:21.580 --> 00:00:24.200
+Acessar uma linha única de
+uma estrutura de dados é semelhante a
+
+00:00:24.200 --> 00:00:26.128
+acessar um elemento único de uma série.
+
+00:00:26.128 --> 00:00:30.120
+Você usa .loc para acessar
+linhas por seus índices.
+
+00:00:30.120 --> 00:00:32.970
+Portanto, este código fornecerá
+a segunda linha da estrutura de dados.
+
+00:00:34.060 --> 00:00:37.930
+Da mesma forma, você pode usar iloc para
+acessar linhas por posição, então
+
+00:00:37.930 --> 00:00:40.110
+este código fornece a última
+linha da estrutura de dados.
+
+00:00:41.180 --> 00:00:44.710
+Para acessar um único elemento,
+você também pode usar loc e iloc, mas por
+
+00:00:44.710 --> 00:00:47.040
+enquanto,
+indicando uma linha e uma coluna.
+
+00:00:48.050 --> 00:00:54.030
+Por exemplo, iloc em 0,
+3 fornece o elemento para a linha 0, coluna 3.
+
+00:00:54.030 --> 00:00:58.390
+Da mesma forma, usando .loc posso
+especificar uma data e uma unidade
+
+00:00:58.390 --> 00:01:00.640
+e obter o valor correspondente a
+essa data e unidade.
+
+00:01:01.860 --> 00:01:04.800
+Você também pode acessar colunas
+usando colchetes.
+
+00:01:04.800 --> 00:01:07.320
+Este código fornece
+a coluna apenas para a
+
+00:01:07.320 --> 00:01:11.980
+unidade R006 e você pode ver
+o início dessa coluna aqui.
+
+00:01:11.980 --> 00:01:15.030
+Se começar a ficar muito
+difícil de acompanhar, não se preocupe,
+
+00:01:15.030 --> 00:01:18.560
+está tudo disponível na folha de referência,
+na seção de downloads.
+
+00:01:18.560 --> 00:01:23.010
+Você também pode usar .values para obter um array
+NumPy bidimensional que contém só os valores
+
+00:01:23.010 --> 00:01:26.030
+da estrutura de dados,
+não os nomes de coluna ou índices de linha.
+
+00:01:27.040 --> 00:01:30.700
+Claro que você terá que ter cuidado
+com seus tipos de dados, se fizer isso.
+
+00:01:30.700 --> 00:01:33.550
+Um motivo para fazer isso é se
+você quiser a média de todos
+
+00:01:33.550 --> 00:01:37.190
+os valores, em vez da média
+de cada linha ou de cada coluna.
+
+00:01:37.190 --> 00:01:40.150
+Não há suporte a essa operação para
+a estrutura de dados Panda.
+
+00:01:40.150 --> 00:01:44.500
+Mas você pode chamar .mean no
+array NumPy usando .values.
+
+00:01:44.500 --> 00:01:48.190
+Na próxima tela você poderá
+usar as estruturas de dados.
+
+00:01:48.190 --> 00:01:51.450
+Também quero praticar
+o uso dessas estruturas de dados, reescrevendo
+
+00:01:51.450 --> 00:01:55.040
+uma das funções escritas antes,
+mas para estruturas de dados.
+
+00:01:55.040 --> 00:01:58.580
+Você pode chamar apenas .values e,
+em seguida, reutilizar o código escrito para
+
+00:01:58.580 --> 00:01:59.826
+arrays NumPy.
+
+00:01:59.826 --> 00:02:02.980
+Mas eu recomendo que você descubra
+quais operações executou antes
+
+00:02:02.980 --> 00:02:06.630
+de trabalhar nas estruturas de dados e
+para quais terá que usar .values.
+
