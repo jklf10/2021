@@ -1,0 +1,42 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.320 --> 00:00:03.295
+O símbolo do dólar
+na frente de uma palavra
+
+00:00:03.329 --> 00:00:05.965
+indica que ela é
+uma variável do shell.
+
+00:00:05.999 --> 00:00:11.075
+O comando
+"echo $COLUMNS X $LINES"
+
+00:00:11.300 --> 00:00:13.730
+estabelece o tamanho
+do seu terminal.
+
+00:00:13.967 --> 00:00:18.065
+80x24 é um tamanho muito comum,
+mas o meu está um pouco maior,
+
+00:00:18.099 --> 00:00:20.194
+porque este é um vídeo
+em widescreen.
+
+00:00:20.228 --> 00:00:21.365
+Mas...
+
+00:00:21.767 --> 00:00:23.929
+se você redimensionar
+o terminal,
+
+00:00:24.851 --> 00:00:26.733
+essas variáveis vão mudar.
+
+00:00:26.767 --> 00:00:30.431
+Vamos ver muito mais sobre variáveis
+do shell mais à frente neste curso.
+

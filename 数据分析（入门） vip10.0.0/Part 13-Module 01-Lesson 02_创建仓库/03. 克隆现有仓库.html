@@ -1,0 +1,384 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>克隆现有仓库</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>创建仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 从头创建仓库.html">02. 从头创建仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 克隆现有仓库.html">03. 克隆现有仓库</a>
+    </li>
+    <li class="">
+      <a href="04. 判断仓库的状态.html">04. 判断仓库的状态</a>
+    </li>
+    <li class="">
+      <a href="05. 总结.html">05. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. 克隆现有仓库</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="为何要克隆？">为何要克隆？</h2>
+<p>首先，什么是克隆？</p>
+<blockquote>
+  <p>制作完全相同的副本</p>
+</blockquote>
+<p>制作完全相同的副本有什么意义，这与 Git 和版本控制有何关系？</p>
+<p>你为何要创建一个完全相同的副本？当我在创建新的 Web 项目时，我会执行以下步骤：</p>
+<ul>
+<li><p>创建一个 <code>index.html</code> 文件</p></li>
+<li><p>创建一个 <code>js</code> 目录</p></li>
+<li><p>创建一个 <code>css</code> 目录</p></li>
+<li><p>创建一个 <code>img</code> 目录</p></li>
+<li><p>在 css 目录下创建 <code>app.css</code></p></li>
+<li><p>在 js 目录下创建 <code>app.js</code></p></li>
+<li><p>在 <code>index.html</code> 中添加起始 HTML 代码</p></li>
+<li><p>为代码检查添加配置文件（验证代码语法）</p></li>
+<li><p><a href="http://htmlhint.com/" rel="noopener noreferrer" target="_blank">HTML 代码检查</a></p></li>
+<li><p><a href="https://stylelint.io/" rel="noopener noreferrer" target="_blank">CSS 代码检查</a></p></li>
+<li><p><a href="http://eslint.org/" rel="noopener noreferrer" target="_blank">JavaScript 代码检查</a></p></li>
+<li><p><a href="http://editorconfig.org/" rel="noopener noreferrer" target="_blank">配置我的代码编辑器</a></p>
+<p>…每次新建一个项目，我都执行这些步骤！其实花费了很多精力，我不想不断重复执行同一步骤，因此我最后一次执行了上述列出的所有步骤，并为我自己创建了一个起始项目。现在，当我新建项目时，我只需制作一个与起始项目完全相同的副本！ </p></li>
+</ul>
+<p>在 Git 上进行克隆的方法是调用我们将在终端上运行的命令 <code>git clone</code>，然后传入要克隆的 Git 仓库的路径（通常是 URL）。</p>
+<p>想要尝试克隆一个现有的项目？我们来看看如何使用 Git 的 <code>clone</code> 命令！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="验证终端位置">验证终端位置</h2>
+  <p>提示：在克隆任何内容之前，确保命令行工具已定位于正确的目录下。克隆项目会新建一个目录，并将克隆的 Git 仓库放在其中。问题是无法创建嵌套的 Git 仓库。因此，确保终端的当前工作目录没有位于 Git 仓库中。如果当前工作目录没有在 shell 的提示符中显示，输入 <code>pwd</code> 输出工作目录。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="克隆-blog-仓库">克隆 blog 仓库</h2>
+<p>准备好了？我们开始克隆吧！</p>
+<p>输入命令 <code>git clone</code>，然后输入你要克隆的 Git 仓库的路径。我们将在这门课程中一直使用的项目位于以下 URL 上：<a href="https://github.com/udacity/course-git-blog-project" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-git-blog-project</a> 。因此，使用该 URL 克隆 Blog 项目的完整命令是：</p>
+<pre><code class="bash language-bash">$ git clone https://github.com/udacity/course-git-blog-project</code></pre>
+<p><strong>温馨提醒：</strong> 复制上述代码时，记得去掉 <code>$</code> 。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l2-git-clone.gif" alt="_&#x60;git clone&#x60; 命令被用于将 blog 项目仓库复制到当前目录的 &#x60;course-git-blog-project&#x60; 文件夹中。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em><code>git clone</code> 命令被用于将 blog 项目仓库复制到当前目录的 <code>course-git-blog-project</code> 文件夹中。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-clone-输出结果的简要说明">git clone 输出结果的简要说明</h2>
+<p>我们简要地介绍下 <code>git clone</code> 显示的输出结果。</p>
+<p>第一行是"Cloning into 'course-git-blog-project'…"。Git 正在创建一个目录（名称与我们要克隆的项目一样），并将仓库放在其中…很酷！</p>
+<p>其余输出结果基本都是验证信息——也就是统计远程仓库的项目数，然后压缩并接收这些项目，并解压。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="克隆项目并使用不同的名称">克隆项目并使用不同的名称</h2>
+<p>你刚刚克隆了本课程的 blog 项目。很棒！</p>
+<p>你在终端中运行的命令是：</p>
+<pre><code class="bash language-bash">$ git clone https://github.com/udacity/course-git-blog-project</code></pre>
+<pre><code>      </code></pre>
+<p>…它创建了一个叫做 <code>course-git-blog-project</code> 的目录</p>
+<p>如果你想使用除默认名外的其他名称呢？没问题，只需运行上述命令并在 Finder/Windows Explorer 中手动重命名或在终端上使用 <code>mv</code> 重命名即可。但是步骤还是太多了！我们希望一次性地克隆项目并使用不同的名称，如何实现呢？</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>克隆项目并使用不同的名称</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>请参阅 <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository" rel="noopener noreferrer" target="_blank"><code>git clone</code> 文档 - 英</a> | <a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93" rel="noopener noreferrer" target="_blank">中</a> 并从以下选项中选择正确的答案。命令应该克隆 blog 项目仓库并将其存储在叫做 <code>blog-project</code> 的目录下。</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1485552281688" name="338777" id="a1485552281688">
+        <label for="a1485552281688"><p>git clone-new-dir <a href="https://github.com/udacity/course-git-blog-project" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-git-blog-project</a> blog-project</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485552364588" name="338777" id="a1485552364588">
+        <label for="a1485552364588"><p>git clone <a href="https://github.com/udacity/course-git-blog-project" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-git-blog-project</a> --out blog-project</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485552375996" name="338777" id="a1485552375996">
+        <label for="a1485552375996"><p>git clone <a href="https://github.com/udacity/course-git-blog-project" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-git-blog-project</a> --rename blog-project</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1485552381014" name="338777" id="a1485552381014">
+        <label for="a1485552381014"><p>git clone <a href="https://github.com/udacity/course-git-blog-project" rel="noopener noreferrer" target="_blank">https://github.com/udacity/course-git-blog-project</a> blog-project</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    git clone https://github.com/udacity/course-git-blog-project blog-project
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="不在-git-仓库中？">不在 Git 仓库中？</h2>
+  <p>警告：当你第一次使用 Git 时，经常会忽略一个非常重要的步骤。在使用 <code>git clone</code> 命令克隆仓库时，它会为仓库新建一个目录…你已经知道这一点。但是，它不会改变 shell 的工作目录。它会在当前工作目录下创建新的仓库，意味着当前工作目录依然不在这个新的 Git 仓库里！确保使用 <code>cd</code> 命令切换到新的仓库中。</p>
+  <p>注意，根据终端的提示符进行判断，如果你位于 Git 仓库目录下，提示符将包含一个用小括号括起来的名称。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l2-base-directory.png" alt="_Mac 的终端应用。终端显示了起始目录。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Mac 的终端应用。终端显示了起始目录。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l2-base-directory-git-repo.png" alt="_Mac 的终端应用。终端使用 &#x60;cd&#x60; 命令从基础目录转移到 Git 仓库 course-git-blog-project 下。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Mac 的终端应用。终端使用 <code>cd</code> 命令从基础目录转移到 Git 仓库 course-git-blog-project 下。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="查看项目">查看项目</h2>
+<p>你已经将项目克隆到计算机上，并使用 <code>cd</code> 转移到该项目中。是不是该在浏览器中查看下该项目的外观了？</p>
+<p>在你喜欢的浏览器中打开 <code>index.html</code> 文件。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l2-course-git-blog-project-in-browser.png" alt="_在 Chrome 中打开的 blog 项目。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>在 Chrome 中打开的 blog 项目。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-clone-小结">git clone 小结</h2>
+<p><code>git clone</code> 命令用于创建一个与现有仓库完全相同的副本。</p>
+<pre><code class="shell language-shell">$ git clone &lt;path-to-repository-to-clone&gt;</code></pre>
+<p>该命令：</p>
+<ul>
+<li><p>会获取现有仓库的路径</p></li>
+<li><p>默认地将创建一个与被克隆的仓库名称相同的目录      </p></li>
+<li><p>可以提供第二个参数，作为该目录的名称     </p></li>
+<li><p>将在现有工作目录下创建一个新的仓库</p></li>
+</ul>
+<h2 id="实用链接">实用链接</h2>
+<ul>
+<li><p><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository" rel="noopener noreferrer" target="_blank">克隆现有仓库 - 英</a> | <a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93" rel="noopener noreferrer" target="_blank">中</a></p></li>
+<li><p><a href="https://git-scm.com/docs/git-clone" rel="noopener noreferrer" target="_blank">git 克隆文档 - 英</a></p></li>
+<li><p><a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository" rel="noopener noreferrer" target="_blank">git 克隆教程 - 英</a></p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="状态更新">状态更新</h2>
+<p>到目前为止，我们已经有了两个 Git 仓库：</p>
+<ul>
+<li>使用 <code>git init</code> 命令创建的空仓库</li>
+<li>使用 <code>git clone</code> 命令克隆的仓库</li>
+</ul>
+<p>如何查找关于这些仓库的任何信息？Git 在管理着它们，但是如何了解 Git 知道多少关于这些仓库的信息？要了解仓库的状况，我们需要使用 <code>git status</code> 命令。知道 Git 仓库的状况非常重要，因此让我们进入下节内容：判断仓库的状态。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. 判断仓库的状态.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 克隆现有仓库')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

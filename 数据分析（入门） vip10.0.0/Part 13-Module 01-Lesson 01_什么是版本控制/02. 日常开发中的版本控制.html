@@ -1,0 +1,262 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>日常开发中的版本控制</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>什么是版本控制</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 什么是版本控制.html">01. 什么是版本控制</a>
+    </li>
+    <li class="">
+      <a href="02. 日常开发中的版本控制.html">02. 日常开发中的版本控制</a>
+    </li>
+    <li class="">
+      <a href="03. Git 和版本控制术语.html">03. Git 和版本控制术语</a>
+    </li>
+    <li class="">
+      <a href="04. MacLinux 设置.html">04. Mac/Linux 设置</a>
+    </li>
+    <li class="">
+      <a href="05. Windows 设置步骤.html">05. Windows 设置步骤</a>
+    </li>
+    <li class="">
+      <a href="06. 总结.html">06. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 日常开发中的版本控制</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="版本控制随处可见">版本控制随处可见</h2>
+<p>我的工作是处理文档。我一直都在新建文档，并在文档中输入信息（希望是有用的信息！），然后编辑…编辑…编辑！你的工作也是这样吗？可能不是包含文字的文档，但是你可能处理的是某种形式的数据，并且这些数据会逐渐改变。</p>
+<p>你可能觉得，在处理文档时，你没有用到版本控制，在某种程度上，你是对的。你在编写文档时，没有经常保留不同的文档版本。但是这并不表明没有不同版本的文档。计算机一直在帮助你记录不同的版本！</p>
+<p>不相信我说的话？除了推测你是否表示怀疑的态度，我来证明下我的观点是正确的：</p>
+<ul>
+<li>打开你最喜欢的文本编辑器</li>
+<li>输入一些内容（不妨输入"version control is dull!"）</li>
+<li>更改其中一个单词（例如将 "dull" 改为 "life-changing awesome"）</li>
+<li>现在（到了精彩的部分了！）按下 <code>cmd</code> + <code>z</code> 或 <code>ctrl</code> + <code>z</code></li>
+</ul>
+<p>💥 版本控制起作用啦！（对吧？我说了我没有撒谎）我猜你肯定一直使用撤销命令。反正我是经常用！</p>
+<p>实际上，我用到的每个应用都具有撤销功能。你可以将它看做一种版本控制形式，但是却是很简单的形式。我们来看看 Google 文档，了解一种更强大的版本控制形式。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l1-git-course-outline.png" alt="_这门 Git 课程的 Google 文档大纲。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>这门 Git 课程的 Google 文档大纲。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>如果你用过 Google 文档的话，有没有注意到顶部的灰色小字，告诉你文档的状态？每当你输入内容时，它都在不断保存文档。当你输入完毕后，它会告诉你文档已保存。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l1-google-docs-saving-progress.gif" alt="_Google 文档的状态栏。当你正在编辑文档时，状态栏提示“正在保存…”，内容保存后，提示“所有更改都已保存到云端硬盘”。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Google 文档的状态栏。当你正在编辑文档时，状态栏提示“正在保存…”，内容保存后，提示“所有更改都已保存到云端硬盘”。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>真正的问题是，你知道你可以点击这个链接吗？要不要点击看看？在你自己的 Google 文档中试试。</p>
+<p>点击该链接将转到“版本历史记录（Revision history）”页面。（看到 Revision 一词了吗？Revision 和 Version<br />
+ 是同义词！表示：版本、修订）</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 11 Google 文档版本历史记录</p></h3>
+  <video controls>
+  <source src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 11 Google 文档版本历史记录-GcvvbdKEchk.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 11 Google 文档版本历史记录-GcvvbdKEchk.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 11 Google 文档版本历史记录-GcvvbdKEchk.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 11 Google 文档版本历史记录-GcvvbdKEchk.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L1 11 Google 文档版本历史记录-GcvvbdKEchk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="版本历史记录并不足够强大">版本历史记录并不足够强大</h2>
+<p>Google 文档的版本历史记录页面非常强大！我经常使用它，有时候输入了一些文字，然后删了，后来又意识到确实还要这些文字。</p>
+<p>但是虽然功能很强大，但也并非十全十美。缺少了什么？我能想到的包括：</p>
+<ul>
+<li><p>标记更改的功能</p></li>
+<li><p>做出为何更改的详细描述的功能</p></li>
+<li><p>在同一文档的不同版本之间切换的功能</p></li>
+<li><p>撤消更改 A，编辑 B，然后回到更改 A 并且不影响编辑 B 的功能</p></li>
+</ul>
+<p>版本控制工具 Git 可以实现以上所有功能，甚至更多！！！（猜测你没料到这一点吧！）我跟你提过 Git 非常强大吗？希望提过，因为我们将在下个部分详细了解 Git。 </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Git 和版本控制术语.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 日常开发中的版本控制')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
