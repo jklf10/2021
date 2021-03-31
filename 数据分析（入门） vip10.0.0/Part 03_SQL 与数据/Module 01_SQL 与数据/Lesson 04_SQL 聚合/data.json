@@ -1,0 +1,1293 @@
+{
+  "data": {
+    "lesson": {
+      "id": 403734,
+      "key": "76a484da-1f2e-4886-ba2c-684bb30e267d",
+      "title": "SQL 聚合",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "在这节课，你将学习如何使用 SUM、AVG 和 COUNT 等 SQL 函数整合数据。此外，CASE、HAVING 和 DATE 函数是非常强大的问题解决工具。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/76a484da-1f2e-4886-ba2c-684bb30e267d/403734/1544466081670/SQL+%E8%81%9A%E5%90%88+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/76a484da-1f2e-4886-ba2c-684bb30e267d/403734/1544466076603/SQL+%E8%81%9A%E5%90%88+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 403669,
+          "key": "283d9eba-2541-47ab-8111-6dd57ff3f066",
+          "title": "视频: 聚合简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "283d9eba-2541-47ab-8111-6dd57ff3f066",
+            "completed_at": "2019-02-06T02:07:10.467Z",
+            "last_viewed_at": "2019-10-09T21:08:40.668Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403533,
+              "key": "c2882ede-6eeb-4a7d-baea-e1622ff50711",
+              "title": "聚合简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "5vRf_Ntoxfw",
+                "china_cdn_id": "5vRf_Ntoxfw.mp4"
+              }
+            },
+            {
+              "id": 403535,
+              "key": "bc5e23d7-63c2-402c-a474-3284edfc4387",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "接下来，你将详细学习提到的每个聚合函数以及在 SQL 中一直用到的一些其他聚合函数。我们开始吧！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403670,
+          "key": "8b786661-faf4-4664-8fa8-af196b826d5c",
+          "title": "视频: NULL 简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8b786661-faf4-4664-8fa8-af196b826d5c",
+            "completed_at": "2019-02-06T02:12:54.428Z",
+            "last_viewed_at": "2019-10-09T21:10:27.670Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403534,
+              "key": "b6a4e6a7-bbad-4065-9282-84fd644afaf9",
+              "title": null,
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WYUkLKn6XCw",
+                "china_cdn_id": "WYUkLKn6XCw.mp4"
+              }
+            },
+            {
+              "id": 403536,
+              "key": "4d892f38-77ac-4de3-acdf-336f079e20f1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**NULL** 是一种数据类型，表示 SQL 中没有数据。它们经常在聚合函数中被忽略了，在下个部分学习使用 **COUNT** 时你将首次接触到这一现象。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403671,
+          "key": "46f30a9c-fe2e-49d5-89fb-f8984212a176",
+          "title": "视频: NULL 和聚合",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "46f30a9c-fe2e-49d5-89fb-f8984212a176",
+            "completed_at": "2019-02-06T02:17:57.764Z",
+            "last_viewed_at": "2019-10-09T21:11:19.319Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403537,
+              "key": "03ec1ef2-9d99-45e9-ba5d-f5cca46380c6",
+              "title": "数据类型和 NULL",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "RgTcYwKqtYI",
+                "china_cdn_id": "RgTcYwKqtYI.mp4"
+              }
+            },
+            {
+              "id": 403538,
+              "key": "181f5414-be83-4800-b052-36541242e85e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "注意，**NULL** 与零不同，它们表示不存在数据的单元格。 \n\n在 **WHERE** 条件中表示 **NULL** 时，我们写成 **IS NULL** 或 **IS NOT NULL**。我们不使用 `=`，因为 **NULL** 在 SQL 中不属于值。但是它是数据的一个属性。\n\n# NULL - 专家提示\n\n在以下两种常见情况下，你可能会遇到 **NULL**：\n\n*  在执行 **LEFT JOIN** 或 **RIGHT JOIN** 时，**NULL** 经常会发生。你在上节课见到了，左侧表格中的某些行在做连接时与右侧表格中的行如果不匹配，这些行在结果集中就会包含一些 **NULL** 值。<br><br>\n\n*  **NULL** 也可能是因为数据库中缺失数据。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403672,
+          "key": "9676f80f-c6a6-4592-881e-1a40712d16ed",
+          "title": "视频 + 文本：第一个聚合函数 - COUNT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9676f80f-c6a6-4592-881e-1a40712d16ed",
+            "completed_at": "2019-02-06T02:23:54.364Z",
+            "last_viewed_at": "2019-10-09T21:12:58.160Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403539,
+              "key": "0360d283-6e32-4e65-8c85-6d433ae14497",
+              "title": "COUNT",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "b4FCWAEGmLg",
+                "china_cdn_id": "b4FCWAEGmLg.mp4"
+              }
+            },
+            {
+              "id": 403540,
+              "key": "5ae6809d-9482-4923-be29-bd30da35065f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 计算表格中的行数\n\n试着手动数数每个表格的行数。以下是计算 **accounts** 表格中的行数示例：\n\n```\nSELECT COUNT(*)\nFROM accounts;\n```\n\n我们也可以轻松地选择一列来放置聚合函数：\n\n```\nSELECT COUNT(accounts.id)\nFROM accounts;\n```\n\n上述两个语句是对等的，但是并不始终这样，我们将在下个视频中见到这一例外情况。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403541,
+              "key": "a56e3033-8110-4de1-90d5-34ffb951be69",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "32b0af4c-8e70-413c-899c-456d713b1599",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403677,
+          "key": "26b6c76b-d2aa-4f97-ae90-e1f5f3d701f8",
+          "title": "视频: COUNT 与 NULL",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "26b6c76b-d2aa-4f97-ae90-e1f5f3d701f8",
+            "completed_at": "2019-02-06T02:29:06.777Z",
+            "last_viewed_at": "2019-10-09T21:13:03.420Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403549,
+              "key": "4dcbfa0e-a8d2-4d51-9b7e-43893fcab299",
+              "title": "COUNT 与 NULL",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "zwgQwUVGXa4",
+                "china_cdn_id": "zwgQwUVGXa4.mp4"
+              }
+            },
+            {
+              "id": 403550,
+              "key": "e4b6a197-9329-4374-bd2e-056ae221edf4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "注意：**COUNT** 不会考虑具有 **NULL** 值的行。因此，可以用来快速判断哪些行缺少数据。你将在下个页面中学习 **GROUP BY**，然后每个聚合函数就会更加有用。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403673,
+          "key": "e7fa8140-4c55-41fc-8bfd-8acc64bf0f4f",
+          "title": "视频: SUM",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e7fa8140-4c55-41fc-8bfd-8acc64bf0f4f",
+            "completed_at": "2019-02-06T02:33:46.856Z",
+            "last_viewed_at": "2019-10-09T21:14:39.304Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403542,
+              "key": "bcf95bb8-2386-413d-b2c9-54c2a8661c22",
+              "title": "SUM",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "0zUP14PeiXk",
+                "china_cdn_id": "0zUP14PeiXk.mp4"
+              }
+            },
+            {
+              "id": 403543,
+              "key": "68c92e9b-84ec-4034-839a-0f5ea56b4a5e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "与 **COUNT** 不同，你只能针对数字列使用 **SUM**。但是，**SUM** 将忽略 **NULL** 值，其他聚合函数也是这样（你将在接下来的课程中见到）。\n\n### 聚合函数提醒\n\n重要注意事项：**聚合函数只能垂直聚合，即聚合列的值**。如果你想对行进行计算，可以使用[简单算术表达式](https://community.modeanalytics.com/sql/tutorial/sql-operators/#arithmetic-in-sql)。\n\n如果你想复习下，我们在第一节课见过算术表达式，但是下一页面的练习应该会确保你依然记得如何跨行聚合数据。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403675,
+          "key": "a9f5ce88-e9ae-4baf-8950-1389a77816bd",
+          "title": "练习：SUM",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a9f5ce88-e9ae-4baf-8950-1389a77816bd",
+            "completed_at": "2019-02-06T02:38:09.788Z",
+            "last_viewed_at": "2019-07-31T13:16:47.232Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403544,
+              "key": "4ecfdba3-c9a8-4d8e-8824-e5bfd9a545f3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 聚合问题\n\n以下是一个 **SQL** 环境，用于计算以下每个问题的答案。如果你遇到问题或想要查看答案，可以在下一页面的顶部找到答案。\n\n1.  算出 **orders** 表格中的 **poster_qty** 纸张总订单量。<br><br>\n2.  算出 **orders** 表格中 **standard_qty** 纸张的总订单量。<br><br>\n3.  根据 **orders** 表格中的 **total_amt_usd** 得出总销售额。<br><br>\n4.  算出 orders 表格中每个订单在 **standard** 和 **gloss** 纸张上消费的数额。结果应该是表格中每个订单的金额。<br><br>\n5. 每个订单的 **price/standard_qty** 纸张各不相同。我想得出 **orders** 表格中每个销售机会的这一比例。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403545,
+              "key": "1184cbae-3284-4d84-b91b-98b921ced8a4",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "50decb65-162a-42bf-a331-6c8dc56919ee",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403674,
+          "key": "43d137b0-d718-4097-940c-3a980fd8fb41",
+          "title": "解决方案：SUM",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43d137b0-d718-4097-940c-3a980fd8fb41",
+            "completed_at": "2019-02-06T02:40:45.808Z",
+            "last_viewed_at": "2019-07-31T13:26:14.359Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403546,
+              "key": "48196471-4e3a-4d74-9c21-9fb61b3b32cd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### SUM 解决方案\n\n1.  算出 **orders** 表格中的 **poster_qty** 纸张总订单量。\n```\nSELECT SUM(poster_qty) AS total_poster_sales\nFROM orders;\n```\n\n2.  算出 **orders** 表格中 **standard_qty** 纸张的总订单量。\n```\nSELECT SUM(standard_qty) AS total_standard_sales\nFROM orders;\n```\n\n3.  根据 **orders** 表格中的 **total_amt_usd** 得出总销售额。\n```\nSELECT SUM(total_amt_usd) AS total_dollar_sales\nFROM orders;\n```\n\n4.  算出 orders 表格中每个订单在 **standard** 和 **gloss** 纸张上消费的数额。结果应该是表格中每个订单的金额。<br><br> **注意，此解决方案没有使用聚合函数**。\n```\nSELECT standard_qty + gloss_qty AS total_standard_gloss\nFROM orders;\n```\n\n5. 每个订单的 **price/standard_qty** 纸张各不相同。我想得出 **orders** 表格中每个销售机会的这一比例。<br><br>**注意，此解决方案使用了聚合函数和数学运算符**\n```\nSELECT SUM(standard_amt_usd)/SUM(standard_qty) AS standard_price_per_unit\nFROM orders;\n```\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403676,
+          "key": "be4065a1-fbd5-4d14-8175-24e44a8a25ba",
+          "title": "视频: MIN 与 MAX",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "be4065a1-fbd5-4d14-8175-24e44a8a25ba",
+            "completed_at": "2019-02-06T02:41:18.221Z",
+            "last_viewed_at": "2019-10-09T21:15:26.450Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403547,
+              "key": "050d53ed-343d-4d75-a636-88564f6bc161",
+              "title": "MIN 与 MAX",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "1ewVsgWUih8",
+                "china_cdn_id": "1ewVsgWUih8.mp4"
+              }
+            },
+            {
+              "id": 403548,
+              "key": "60be71a8-2b53-48a2-912e-9915f457b58f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "注意，此处我们同时获得了每个纸张类型的 **MIN** 和 **MAX** 订单量。但是，你也可以单独计算每个类型的订单量。\n\n注意，**MIN** 和 **MAX** 聚合函数也会忽略 **NULL** 值。请参阅以下专家提示，了解关于 **MAX** 与 **MIN** 的实用技巧。\n\n### 专家提示\n\n从功能上来说，**MIN** 和 **MAX** 与 **COUNT** 相似，它们都可以用在非数字列上。**MIN** 将返回最小的数字、最早的日期或按字母表排序的最之前的非数字值，具体取决于列类型。**MAX** 则正好相反，返回的是最大的数字、最近的日期，或与“Z”最接近（按字母表顺序排列）的非数字值。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403678,
+          "key": "cc13036e-79b8-4ed9-b034-391bd2fd6a38",
+          "title": "视频: AVG",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cc13036e-79b8-4ed9-b034-391bd2fd6a38",
+            "completed_at": "2019-02-06T02:45:18.363Z",
+            "last_viewed_at": "2019-10-09T21:16:23.113Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403551,
+              "key": "4b2accb8-7739-44be-b9be-e8728fc734d1",
+              "title": "AVG",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "diqCDztOL64",
+                "china_cdn_id": "diqCDztOL64.mp4"
+              }
+            },
+            {
+              "id": 403552,
+              "key": "096a1adb-9eda-4394-a153-0b2de732e75b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "与其他软件类似，**AVG** 返回的是数据的平均值，即列中所有的值之和除以列中值的数量。该聚合函数同样会忽略分子和分母中的 **NULL** 值。\n\n如果你想将 **NULL** 当做零，则需要使用 **SUM** 和 **COUNT**。但是，如果 **NULL** 值真的只是代表单元格的未知值，那么这么做可能不太合适。  \n\n### MEDIAN - 专家提示\n\n注意，中值可能是更好的衡量方式，但是仅使用 SQL 非常棘手，以至于有时候在面试中就会提到关于中值方面的问题。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403680,
+          "key": "cb699cd9-3391-4748-86d2-0158c1de37c0",
+          "title": "练习：MIN、MAX 与 AVG",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cb699cd9-3391-4748-86d2-0158c1de37c0",
+            "completed_at": "2019-02-06T03:02:31.108Z",
+            "last_viewed_at": "2019-10-09T21:17:19.432Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403553,
+              "key": "5a05309c-0d67-4f0e-8a44-194e8458e76a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 问题：MIN、MAX 与 AVERAGE \n\n根据 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。\n\n1. 最早的订单下于何时？<br><br>\n2. 尝试执行和第一个问题一样的查询，但是不使用聚合函数。<br><br>\n3. 最近的 **web_event** 发生在什么时候？<br><br>\n4. 尝试以另一种方式执行上个问题的查询，不使用聚合函数。<br><br>\n5. 算出每个订单在每种纸张上消费的平均 (**AVERAGE**) 金额，以及每个订单针对每种纸张购买的平均数量。最终答案应该有 6 个值，每个纸张类型平均销量对应一个值，以及平均数量对应一个值。<br><br>\n6. 我相信你都渴望知道在所有订单上消费的中值 **total_usd** 是多少？虽然这一概念已经超出我们的范围。注意，这比我们到目前为止介绍的基本内容要高深一点，但是我们可以按照以下方式对答案进行硬编码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403554,
+              "key": "41fa5ef3-669c-45d7-8dc1-ed3960c55724",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "ae645775-a409-456e-91f7-9436cf017e9b",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403679,
+          "key": "8f65cc46-cd5b-4da4-b648-24313ff8a560",
+          "title": "解决方案: MIN、MAX 与 AVG",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8f65cc46-cd5b-4da4-b648-24313ff8a560",
+            "completed_at": "2019-02-06T03:13:47.366Z",
+            "last_viewed_at": "2019-07-31T13:28:47.180Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403555,
+              "key": "dbfb427b-9e6c-4b5e-ae3c-5eda43c43f3c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解决方案：MIN、MAX 与 AVERAGE\n\n根据以下 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一部分的页面中找到我的答案。\n\n1. 最早的订单下于何时？\n```\nSELECT MIN(occurred_at) \nFROM orders;\n```\n2. 尝试执行和第一个问题一样的查询，但是不使用聚合函数。<br><br>\n```\nSELECT occurred_at \nFROM orders \nORDER BY occurred_at\nLIMIT 1;\n```\n3. 最近的 **web_event** 发生在什么时候？\n```\nSELECT MAX(occurred_at)\nFROM web_events;\n```\n4. 尝试以另一种方式执行上个问题的查询，不使用聚合函数。\n```\nSELECT occurred_at\nFROM web_events\nORDER BY occurred_at DESC\nLIMIT 1;\n```\n5. 算出每个订单在每种纸张上消费的平均 (**AVERAGE**) 金额，以及每个订单针对每种纸张购买的平均数量。最终答案应该有 6 个值，每个纸张类型平均销量对应一个值，以及平均数量对应一个值。\n```\nSELECT AVG(standard_qty) mean_standard, AVG(gloss_qty) mean_gloss, \n              AVG(poster_qty) mean_poster, AVG(standard_amt_usd) mean_standard_usd, \n              AVG(gloss_amt_usd) mean_gloss_usd, AVG(poster_amt_usd) mean_poster_usd\nFROM orders;\n```\n6. 看过视频后，你可能对如何计算中位数感兴趣。虽然这已经超出了目前我们所学的范围，但请尝试探索这个问题：对于所有订单（orders）数据，其total_usd字段的中位数是多少？请注意，构建一个此问题的通用解决方案已经超出了目前所学的课程范围，但我们可以硬写出以下这段代码：\n```\nSELECT *\nFROM (SELECT total_amt_usd\n         FROM orders\n         ORDER BY total_amt_usd\n         LIMIT 3457) AS Table1\nORDER BY total_amt_usd DESC\nLIMIT 2;\n```\n因为订单一共有6912个，因此我们需要第3456和第3457个订单（按total_amt_usd排序）的total_amt_usd字段的平均值。这样就能得出中位数结果，为**2482.855**。这显然不是一个好办法。如果我们有了新订单，再次计算时就必须修改LIMIT。SQL实际上并不会为我们计算中位数。以上代码使用了一个子查询（SUBQUERY），但你可以使用任何方法找到需要的两个值，然后再求平均即可得到中位数。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403681,
+          "key": "0a0f7f0d-8aac-4df0-a862-5a0cc6395bde",
+          "title": "视频: GROUP BY",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0a0f7f0d-8aac-4df0-a862-5a0cc6395bde",
+            "completed_at": "2019-02-06T03:14:30.685Z",
+            "last_viewed_at": "2019-10-09T21:17:22.478Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403556,
+              "key": "29b8c3b5-b521-4e96-ad5b-c2e075d248d1",
+              "title": "GROUP BY",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "9vb67TF4WV0",
+                "china_cdn_id": "9vb67TF4WV0.mp4"
+              }
+            },
+            {
+              "id": 403557,
+              "key": "12cfe3a0-fa60-49af-b60b-14498e82e79e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "主要知识点包括：\n\n* **GROUP BY** 可以用来在数据子集中聚合数据。例如，不同客户、不同区域或不同销售代表分组。<br><br>\n\n* **SELECT** 语句中的任何一列如果不在聚合函数中，则必须在 **GROUP BY** 条件中。<br><br>\n\n* **GROUP BY** 始终在 **WHERE** 和 **ORDER BY** 之间。<br><br>\n\n* **ORDER BY** 有点像电子表格软件中的 **SORT**。\n\n### GROUP BY - 专家提示\n\n在深入了解如何使用 **GROUP BY** 语句聚合函数之前，需要注意的是，SQL 在 **LIMIT** 条件之前评估聚合函数。如果不按任何列分组，则结果是 1 行，没有问题。如果按照某列分组，该列中存在大量的唯一值，超出了 **LIMIT** 上限，则系统会照常计算聚合结果，但是结果中会忽略某些行。\n\n这实际上是比较不错的方式，因为你知道你将获得正确的聚合结果。如果 SQL 将表格裁剪到 100 行，然后进行聚合，结果将完全不同。上述查询的结果超过了 100 行，因此是个很好的示例。在下一部分，使用该 SQL 表格并尝试删掉 **LIMIT**，然后再次运行查询，看看有哪些变化。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403682,
+          "key": "1d61769f-cde5-4f4a-b4db-e5c0de9b3285",
+          "title": "练习：GROUP BY",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1d61769f-cde5-4f4a-b4db-e5c0de9b3285",
+            "completed_at": "2019-02-06T03:21:44.759Z",
+            "last_viewed_at": "2019-07-31T13:28:52.129Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403558,
+              "key": "c95536d4-4393-46d0-92f2-1477919a843a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### GROUP BY 注意事项\n\n现在你已经了解了 **JOIN**、**GROUP BY** 和聚合函数，**SQL** 开始彰显真正的强大作用了。请尝试回答以下几个问题，检验下你的技能！\n\n### 问题：GROUP BY\n\n根据以下 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。  \n\n一个判断难点是，何时使用某个聚合函数或其他 SQL 功能最简单。请尝试回答以下问题，看看你能否找到最简单的解决方案。\n\n1. 哪个**客户**（按照名称）下的订单最早？你的答案应该包含订单的**客户名称**和**日期**。<br><br>\n2.  算出每个客户的总销售额（单位是**美元**）。答案应该包括两列：每个公司的订单总销售额（单位是**美元**）以及公司**名称**。<br><br>\n3. 最近的 **web_event** 是通过哪个**渠道**发生的，与此 **web_event** 相关的**客户**是哪个？你的查询应该仅返回三个值：**日期**、**渠道**和**客户名称**。<br><br>\n4. 算出 **web_events** 中每种**渠道**的次数。最终表格应该有两列：**渠道**和渠道的使用次数。<br><br>\n5. 与最早的 **web_event** 相关的**主要联系人**是谁？<br><br>\n6. 每个**客户**所下的最小订单是什么（以**总金额（美元）**为准）。答案只需两列：客户**名称**和**总金额（美元）**。从最小金额到最大金额排序。<br><br>\n7.  算出每个区域的**销售代表**人数。最早表格应该包含两列：**区域**和 **sales_reps** 数量。从最少到最多的代表人数排序。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403559,
+              "key": "da8181da-d24f-4c95-934c-1e0c80b7ce0e",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "8e4017a5-e0b7-48f9-9325-6e9efce976f9",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403683,
+          "key": "4c0c398a-b614-4d21-865e-ea99db51fd6b",
+          "title": "解决方案：GROUP BY",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4c0c398a-b614-4d21-865e-ea99db51fd6b",
+            "completed_at": "2019-02-06T03:28:02.672Z",
+            "last_viewed_at": "2019-07-31T13:30:38.174Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403560,
+              "key": "c7faeb5d-276c-4260-b85f-688cfbaa4203",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解决方案：GROUP BY\n\n根据 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。  \n\n一个判断难点是，何时使用某个聚合函数或其他 SQL 功能最简单。请尝试回答以下问题，看看你能否找到最简单的解决方案。\n\n1.  哪个**客户**（按照名称）下的订单最早？你的答案应该包含订单的**客户名称**和**日期**。\n```\nSELECT a.name, o.occurred_at\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nORDER BY occurred_at\nLIMIT 1;\n```\n2.   算出每个客户的总销售额（单位是**美元**）。答案应该包括两列：每个公司的订单总销售额（单位是**美元**）以及公司**名称**。\n```\nSELECT a.name, SUM(total_amt_usd) total_sales\nFROM orders o\nJOIN accounts a\nON a.id = o.account_id\nGROUP BY a.name;\n```\n3. 最近的 **web_event** 是通过哪个**渠道**发生的，与此 **web_event** 相关的**客户**是哪个？你的查询应该仅返回三个值：**日期**、**渠道**和**客户名称**。\n```\nSELECT w.occurred_at, w.channel, a.name\nFROM web_events w\nJOIN accounts a\nON w.account_id = a.id \nORDER BY w.occurred_at DESC\nLIMIT 1;\n```\n4. 算出 **web_events** 中每种**渠道**的次数。最终表格应该有两列：**渠道**和渠道的使用次数。\n```\nSELECT w.channel, COUNT(*)\nFROM web_events w\nJOIN accounts a\nON a.id = w.account_id\nGROUP BY w.channel\n```\n5. 与最早的 **web_event** 相关的**主要联系人**是谁？ \n```\nSELECT a.primary_poc\nFROM web_events w\nJOIN accounts a\nON a.id = w.account_id\nORDER BY w.occurred_at\nLIMIT 1;\n```\n6. 每个**客户**所下的最小订单是什么（以**总金额（美元）**为准）。答案只需两列：客户**名称**和**总金额（美元）**。从最小金额到最大金额排序。\n```\nSELECT a.name, MIN(total_amt_usd) smallest_order\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.name\nORDER BY smallest_order;\n```\n奇怪的是，很多订单没有美元金额。我们可能需要检查下这些订单。<br><br>\n7.  算出每个区域的**销售代表**人数。最终表格应该包含两列：**区域**和 **sales_reps** 数量。从最少到最多的代表人数排序。\n```\nSELECT r.name, COUNT(*) num_reps\nFROM region r\nJOIN sales_reps s\nON r.id = s.region_id\nGROUP BY r.name\nORDER BY num_reps;\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403684,
+          "key": "4fa22b85-f179-48b1-99f1-de24c2d7e92b",
+          "title": "视频: GROUP BY（第二部分）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4fa22b85-f179-48b1-99f1-de24c2d7e92b",
+            "completed_at": "2019-02-06T03:30:04.968Z",
+            "last_viewed_at": "2019-10-09T21:22:13.305Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403561,
+              "key": "f3100a94-c905-436d-b2ac-1ffa69c5348c",
+              "title": "GROUP BY（第二部分）",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "HjdhWhyF6vw",
+                "china_cdn_id": "HjdhWhyF6vw.mp4"
+              }
+            },
+            {
+              "id": 403562,
+              "key": "2afc69ea-a174-4668-9ef5-0c4d447831d5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "主要知识点：\n\n* 你可以同时按照多列**分组**，正如此处所显示的那样。这样经常可以在大量不同的细分中更好地获得聚合结果。<br><br>\n* **ORDER BY** 条件中列出的列顺序有区别。你是从左到右让列排序。\n\n### GROUP BY - 专家提示\n\n* **GROUP BY** 条件中的列名称顺序并不重要，结果还是一样的。如果运行相同的查询并颠倒 **GROUP BY** 条件中列名称的顺序，可以看到结果是一样的。<br><br>\n\n* 和 **ORDER BY** 一样，你可以在 **GROUP BY** 条件中用数字替换列名称。仅当你对大量的列分组时，或者其他原因导致 GROUP BY 条件中的文字过长时，才建议这么做。<br><br>\n\n* 提醒一下，针对 SELECT 选择出来的列，任何不在聚合函数中的列，必须出现在 GROUP BY 语句中。如果忘记了，可能会遇到错误。但是，即使查询可行，最后的结果可能也不会正确！\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403685,
+          "key": "5a403f64-56e2-4a3c-8f3e-288c5a9b51c0",
+          "title": "练习：GROUP BY（第二部分）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5a403f64-56e2-4a3c-8f3e-288c5a9b51c0",
+            "completed_at": "2019-02-06T03:32:16.601Z",
+            "last_viewed_at": "2019-07-31T13:30:42.616Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403563,
+              "key": "b65fc7d2-5fa9-4c72-87c7-06bbd5af3ad4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 问题：GROUP BY（第二部分）\n\n根据以下 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。  \n\n1. 对于每个客户，确定他们在订单中购买的每种纸张的平均数额。结果应该有四列：客户**名称**一列，每种纸张类型的平均数额一列。<br><br>\n\n2.   对于每个客户，确定在每个订单中针对每个纸张类型的平均消费数额。结果应该有四列：客户**名称**一列，每种纸张类型的平均消费数额一列。<br><br>\n\n3.  确定在 **web_events** 表格中每个**销售代表**使用特定**渠道**的次数。最终表格应该有三列：**销售代表的名称**、**渠道**和发生次数。按照最高的发生次数在最上面对表格排序。<br><br>\n\n4.  确定在 **web_events** 表格中针对每个**地区**特定**渠道**的使用次数。最终表格应该有三列：**区域名称**、**渠道**和发生次数。按照最高的发生次数在最上面对表格排序。<br><br>\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403564,
+              "key": "09edacc4-99f9-40d0-8f32-b9c4afd9ae88",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "0709170b-ed94-4a8a-af9d-e8479e11a427",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403687,
+          "key": "b5cc36bc-4bfe-41c1-aae2-281984d6c39b",
+          "title": "解决方案：GROUP BY（第二部分）",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b5cc36bc-4bfe-41c1-aae2-281984d6c39b",
+            "completed_at": "2019-02-06T03:33:10.581Z",
+            "last_viewed_at": "2019-07-31T13:31:58.951Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403565,
+              "key": "50cad11d-c0eb-49b9-bd50-eb5f1f79e032",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解决方案：GROUP BY（第二部分）\n\n1.  对于每个客户，确定他们在订单中购买的每种纸张的平均数额。结果应该有四列：客户**名称**一列，每种纸张类型的平均数额一列。 \n```\nSELECT a.name, AVG(o.standard_qty) avg_stand, AVG(gloss_qty) avg_gloss, AVG(poster_qty) avg_post\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.name;\n```\n2.   对于每个客户，确定在每个订单中针对每个纸张类型的平均消费数额。结果应该有四列：客户**名称**一列，每种纸张类型的平均消费数额一列。\n```\nSELECT a.name, AVG(o.standard_amt_usd) avg_stand, AVG(gloss_amt_usd) avg_gloss, AVG(poster_amt_usd) avg_post\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.name;\n```\n3.  确定在 **web_events** 表格中每个**销售代表**使用特定**渠道**的次数。最终表格应该有三列：**销售代表的名称**、**渠道**和发生次数。按照最高的发生次数在最上面对表格排序。\n```\nSELECT s.name, w.channel, COUNT(*) num_events\nFROM accounts a\nJOIN web_events w\nON a.id = w.account_id\nJOIN sales_reps s\nON s.id = a.sales_rep_id\nGROUP BY s.name, w.channel\nORDER BY num_events DESC;\n```\n4.  确定在 **web_events** 表格中针对每个**地区**特定**渠道**的使用次数。最终表格应该有三列：**区域名称**、**渠道**和发生次数。按照最高的发生次数在最上面对表格排序。\n```\nSELECT r.name, w.channel, COUNT(*) num_events\nFROM accounts a\nJOIN web_events w\nON a.id = w.account_id\nJOIN sales_reps s\nON s.id = a.sales_rep_id\nJOIN region r\nON r.id = s.region_id\nGROUP BY r.name, w.channel\nORDER BY num_events DESC;\n```\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403688,
+          "key": "e73c0ee2-986b-4a6c-8fd7-8d2941383084",
+          "title": "视频: DISTINCT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e73c0ee2-986b-4a6c-8fd7-8d2941383084",
+            "completed_at": "2019-02-06T03:33:36.513Z",
+            "last_viewed_at": "2019-10-09T21:23:33.009Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403566,
+              "key": "879a2d21-afce-4884-bf50-0766f809d0fc",
+              "title": "DISTINCT",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YDJEHkgKORY",
+                "china_cdn_id": "YDJEHkgKORY.mp4"
+              }
+            },
+            {
+              "id": 403568,
+              "key": "b06402ca-56a3-4002-9014-7a16ef07e515",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你可以将 **DISTINCT** 看做**仅返回特定列的唯一值**的函数。\n\n### DISTINCT - 专家提示\n\n需要注意的是，在使用 **DISTINCT** 时，尤其是在聚合函数中使用时，会让查询速度有所减慢。 ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403686,
+          "key": "a3f13925-4ff9-4769-85cd-c7c4fa346258",
+          "title": "练习：DISTINCT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a3f13925-4ff9-4769-85cd-c7c4fa346258",
+            "completed_at": "2019-02-06T03:38:48.286Z",
+            "last_viewed_at": "2019-07-31T13:32:03.229Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403567,
+              "key": "55281b88-fdc4-4155-a696-751ca1c3e78a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 问题：DISTINCT\n\n根据以下 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。  \n\n1. 使用 **DISTINCT** 检查是否有任何客户与多个区域相关联？<br><br>\n\n2. 有没有**销售代表**要处理多个客户？<br><br>\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403569,
+              "key": "ef752a50-60ad-407d-983a-49e356d611c8",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "4980491d-3210-4587-b0b3-daa3d001087d",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403689,
+          "key": "0ea17f24-c61b-445b-b33e-b7560f151c1e",
+          "title": "解决方案：DISTINCT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0ea17f24-c61b-445b-b33e-b7560f151c1e",
+            "completed_at": "2019-02-06T03:43:47.987Z",
+            "last_viewed_at": "2019-07-31T13:33:03.414Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403570,
+              "key": "2728eaf2-73c9-4556-a397-5ff635dff3b3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解决方案：DISTINCT\n\n1. 使用 **DISTINCT** 检查是否有任何客户与多个区域相关联？<br><br>\n下面的两个查询产生了相同的行数（351 行），因此我们知道每个客户仅与一个区域相关联。如果每个客户与多个区域相关联，则第一个查询返回的行数应该比第二个查询的多。\n```\nSELECT DISTINCT a.id, r.id, a.name, r.name\nFROM accounts a\nJOIN sales_reps s\nON s.id = a.sales_rep_id\nJOIN region r\nON r.id = s.region_id;\n```\nand \n```\nSELECT DISTINCT id, name\nFROM accounts;\n```\n\n2.  有没有**销售代表**要处理多个客户？<br><br>\n实际上，所有销售代表都要处理多个客户。销售代表处理的最少客户数量是 3 个。有 50 个销售代表，他们都有多个客户。在第二个查询中使用 **DISTINCT** 确保包含了第一个查询中的所有销售代表。 \n```\nSELECT s.id, s.name, COUNT(*) num_accounts\nFROM accounts a\nJOIN sales_reps s\nON s.id = a.sales_rep_id\nGROUP BY s.id, s.name\nORDER BY num_accounts;\n```\nand\n```\nSELECT DISTINCT id, name\nFROM sales_reps;\n```\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403690,
+          "key": "10e079f5-bd0c-43d9-a728-184cadfd173d",
+          "title": "视频：HAVING",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "10e079f5-bd0c-43d9-a728-184cadfd173d",
+            "completed_at": "2019-02-06T03:49:06.897Z",
+            "last_viewed_at": "2019-10-09T21:25:17.688Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403571,
+              "key": "ec834f9c-fbcd-423c-b3dc-9d0ef22307f6",
+              "title": "HAVING",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wl84TYSXQzg",
+                "china_cdn_id": "wl84TYSXQzg.mp4"
+              }
+            },
+            {
+              "id": 403572,
+              "key": "05da155c-ee23-453a-a04a-8a6cfbc1e3fe",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### HAVING - 专家提示\n\n**HAVING** 是过滤被聚合的查询的 “整洁”方式，但是通常采用[子查询](https://community.modeanalytics.com/sql/tutorial/sql-subqueries/)的方式来实现。本质上，只要你想对通过聚合创建的查询中的元素执行 **WHERE** 条件，就需要使用 **HAVING**。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403691,
+          "key": "626dbb04-14f8-4215-ac69-81d323e4bf59",
+          "title": "练习：HAVING",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "626dbb04-14f8-4215-ac69-81d323e4bf59",
+            "completed_at": "2019-02-06T03:50:46.540Z",
+            "last_viewed_at": "2019-07-31T13:33:06.753Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403574,
+              "key": "e86700eb-2305-4bf7-a252-51788d12ac30",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e86700eb-2305-4bf7-a252-51788d12ac30",
+                "completed_at": "2019-02-12T08:01:50.092Z",
+                "last_viewed_at": "2019-02-12T08:02:00.241Z",
+                "unstructured": "{\"selected_ids\":[\"a1505846169235\",\"a1505846090728\",\"a1505846120686\",\"a1505845998283\"],\"is_correct\":true}"
+              },
+              "question": {
+                "prompt": "经常你会对 **WHERE** 和 **HAVING** 之间的差别感到困惑。关于 **HAVING** 和 **WHERE** 的语句，请选出以下所有正确语句。",
+                "answers": [
+                  {
+                    "id": "a1505845998283",
+                    "text": "**WHERE** 子集根据逻辑条件对返回的数据进行筛选。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1505846090728",
+                    "text": "**WHERE** 出现在 **FROM**，**JOIN** 和 **ON** 条件之后，但是在 **GROUP BY** 之前。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1505846120686",
+                    "text": "**HAVING** 出现在 **GROUP BY** 条件之后，但是在 **ORDER BY** 条件之前。",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1505846169235",
+                    "text": "**HAVING** 和 **WHERE** 相似，但是它适合涉及聚合的逻辑语句。",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 403573,
+              "key": "5847ff51-b1ab-4560-ba88-89bcd938091d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 问题：HAVING\n\n根据以下 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。  \n\n1. 有多少位**销售代表**需要管理超过 5 个客户？<br><br>\n\n2. 有多少个**客户**具有超过 20 个订单？<br><br>\n\n3. 哪个客户的订单最多？<br><br>\n\n4. 有多少个客户在所有订单上消费的总额超过了 30,000 美元？<br><br>\n\n5. 有多少个客户在所有订单上消费的总额不到 1,000 美元？<br><br>\n\n6. 哪个客户消费的最多？<br><br>\n\n7. 哪个客户消费的最少？<br><br>\n\n8. 哪个客户使用 `facebook` 作为与消费者沟通的**渠道**超过 6 次？<br><br>\n\n9. 哪个客户使用 `facebook` 作为沟通**渠道**的次数最多？<br><br>\n\n10. 哪个渠道是客户最常用的渠道？\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403575,
+              "key": "82e5ecc5-8cbc-4ec1-b723-c5f4554cf923",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "befb72fd-3c6f-482f-b8b0-45a0b54f3af3",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403692,
+          "key": "f42c74b4-9136-4aee-8506-ac4e2833a0da",
+          "title": "解决方案：HAVING",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f42c74b4-9136-4aee-8506-ac4e2833a0da",
+            "completed_at": "2019-02-06T03:53:42.648Z",
+            "last_viewed_at": "2019-02-12T08:39:30.743Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403576,
+              "key": "4b05e255-9a5a-41c3-aa27-41395a5e998e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解决方案：HAVING \n\n1. 有多少位**销售代表**需要管理超过 5 个客户？\n```\nSELECT s.id, s.name, COUNT(*) num_accounts\nFROM accounts a\nJOIN sales_reps s\nON s.id = a.sales_rep_id\nGROUP BY s.id, s.name\nHAVING COUNT(*) > 5\nORDER BY num_accounts;\n```\n实际上，我们可以使用 **SUBQUERY** 获得这一结果，如下所示。其他查询也可以使用这一逻辑，下面就不显示了。\n```\nSELECT COUNT(*) num_reps_above5\nFROM(SELECT s.id, s.name, COUNT(*) num_accounts\n        FROM accounts a\n        JOIN sales_reps s\n        ON s.id = a.sales_rep_id\n        GROUP BY s.id, s.name\n        HAVING COUNT(*) > 5\n        ORDER BY num_accounts) AS Table1;\n```\n\n2. 有多少个**客户**具有超过 20 个订单？<br><br>\n```\nSELECT a.id, a.name, COUNT(*) num_orders\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.id, a.name\nHAVING COUNT(*) > 20\nORDER BY num_orders;\n```\n3. 哪个客户的订单最多？\n```\nSELECT a.id, a.name, COUNT(*) num_orders\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.id, a.name\nORDER BY num_orders DESC\nLIMIT 1;\n```\n\n4. 有多少个客户在所有订单上消费的总额超过了 30,000 美元？\n```\nSELECT a.id, a.name, SUM(o.total_amt_usd) total_spent\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.id, a.name\nHAVING SUM(o.total_amt_usd) > 30000\nORDER BY total_spent;\n```\n\n5. 有多少个客户在所有订单上消费的总额不到 1,000 美元？\n```\nSELECT a.id, a.name, SUM(o.total_amt_usd) total_spent\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.id, a.name\nHAVING SUM(o.total_amt_usd) < 1000\nORDER BY total_spent;\n```\n6. 哪个客户消费的最多？\n```\nSELECT a.id, a.name, SUM(o.total_amt_usd) total_spent\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.id, a.name\nORDER BY total_spent DESC\nLIMIT 1;\n```\n\n7. 哪个客户消费的最少？\n```\nSELECT a.id, a.name, SUM(o.total_amt_usd) total_spent\nFROM accounts a\nJOIN orders o\nON a.id = o.account_id\nGROUP BY a.id, a.name\nORDER BY total_spent\nLIMIT 1;\n```\n\n8. 哪个客户使用 `facebook` 作为与消费者沟通的**渠道**超过 6 次？\n```\nSELECT a.id, a.name, w.channel, COUNT(*) use_of_channel\nFROM accounts a\nJOIN web_events w\nON a.id = w.account_id\nGROUP BY a.id, a.name, w.channel\nHAVING COUNT(*) > 6 AND w.channel = 'facebook'\nORDER BY use_of_channel;\n```\n\n9. 哪个客户使用 `facebook` 作为沟通**渠道**的次数最多？ \n```\nSELECT a.id, a.name, w.channel, COUNT(*) use_of_channel\nFROM accounts a\nJOIN web_events w\nON a.id = w.account_id\nWHERE w.channel = 'facebook'\nGROUP BY a.id, a.name, w.channel\nORDER BY use_of_channel DESC\nLIMIT 1;\n```\n10. 哪个渠道是客户最常用的渠道？\n```\nSELECT a.id, a.name, w.channel, COUNT(*) use_of_channel\nFROM accounts a\nJOIN web_events w\nON a.id = w.account_id\nGROUP BY a.id, a.name, w.channel\nORDER BY use_of_channel DESC\nLIMIT 10;\n```\n上面的所有 10 列都是 `direct`。\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403693,
+          "key": "e034f651-4fa6-425f-bd73-fd21b880d485",
+          "title": "视频: DATE 函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e034f651-4fa6-425f-bd73-fd21b880d485",
+            "completed_at": "2019-02-06T03:55:55.394Z",
+            "last_viewed_at": "2019-10-09T21:28:34.757Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403577,
+              "key": "3cf618c1-b269-4638-987d-3e1f38a04375",
+              "title": "DATE 函数 I",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "E7Z6GMFVmIY",
+                "china_cdn_id": "E7Z6GMFVmIY.mp4"
+              }
+            },
+            {
+              "id": 403578,
+              "key": "d25cd0b2-f065-4b44-9add-cca7ccc3e556",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在 SQL 中，按照日期列**分组**通常不太实用，因为这些列可能包含小到一秒的交易数据。按照如此详细的级别保存信息即有好处，又存在不足之处，因为提供了非常准确的信息（好处），但是也让信息分组变得很难（不足之处）。  \n\n幸运的是，有很多 SQL 内置函数可以帮助我们改善日期处理体验。\n\n**这里，我们看到日期存储为年、月、日、小时、分钟、秒，可以帮助我们截取信息。在下个部分，你将看到在 SQL 中我们可以使用大量函数来利用这一功能。**",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403694,
+          "key": "578859bf-1a3a-4c8d-8787-2b93cd33dae7",
+          "title": "视频: DATE 函数 II",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "578859bf-1a3a-4c8d-8787-2b93cd33dae7",
+            "completed_at": "2019-02-06T03:57:00.746Z",
+            "last_viewed_at": "2019-10-09T21:31:17.086Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403579,
+              "key": "806253c6-0bf3-45ef-a455-a0f16d9ed8d3",
+              "title": "DATE 函数 II",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ZW7u1UAhj9A",
+                "china_cdn_id": "ZW7u1UAhj9A.mp4"
+              }
+            },
+            {
+              "id": 403580,
+              "key": "4ef3941a-b872-4952-8476-3edc9081cecc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "首先，我们要介绍的日期函数是 **DATE_TRUNC**。\n\n**DATE_TRUNC** 使你能够将日期截取到日期时间列的特定部分。常见的截取依据包括`日期`、`月份` 和 `年份`。[这是一篇](https://blog.modeanalytics.com/date-trunc-sql-timestamp-function-count-on/) **MODE** 发表的精彩博文，介绍了关于此函数的强大功能。 \n\n**DATE_PART** 可以用来获取日期的特定部分，但是注意获取 `month` 或 `dow` 意味着无法让年份按顺序排列。而是按照特定的部分分组，无论它们属于哪个年份。\n\n要了解其他日期函数，请参阅[这篇](https://www.postgresql.org/docs/9.1/static/functions-datetime.html)文档，但是上面介绍的函数绝对够你入门了！",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403695,
+          "key": "20715cb3-3ceb-4760-98c4-bc52017cc8e6",
+          "title": "练习：DATE 函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "20715cb3-3ceb-4760-98c4-bc52017cc8e6",
+            "completed_at": "2019-02-06T03:59:39.426Z",
+            "last_viewed_at": "2019-09-12T06:09:01.847Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403581,
+              "key": "33949888-5b08-4a2f-ba5b-4c0718887df1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 问题：使用 DATE\n\n根据以下 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。 \n\n1. Parch & Posey 在哪一年的总销售额最高？数据集中的所有年份保持均匀分布吗？<br><br>\n\n2. Parch & Posey 在哪一个月的总销售额最高？数据集中的所有月份保持均匀分布吗？<br><br>\n\n3. Parch & Posey 在哪一年的总订单量最多？数据集中的所有年份保持均匀分布吗？<br><br>\n\n4. Parch & Posey 在哪一个月的总订单量最多？数据集中的所有月份保均匀分布吗？<br><br>\n\n5. `Walmart` 在哪一年的哪一个月在铜版纸上的消费最多？<br><br>\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403582,
+              "key": "35439361-0dd6-498c-b94d-580eeff0520b",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "3456af2e-cffb-4219-926e-f71ae67ff60c",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403698,
+          "key": "21d65bc3-7dc7-4d79-a2d7-d70b2d2c18a0",
+          "title": "解决方案：DATE 函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "21d65bc3-7dc7-4d79-a2d7-d70b2d2c18a0",
+            "completed_at": "2019-02-06T04:00:15.671Z",
+            "last_viewed_at": "2019-09-12T06:15:16.136Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403583,
+              "key": "c4ed623f-3c42-45e6-8ac7-369b470d3b96",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解决方案：处理日期\n\n1. Parch & Posey 在哪一年的总销售额最高？数据集中的所有年份保持均匀分布吗？\n```\nSELECT DATE_PART('year', occurred_at) ord_year,  SUM(total_amt_usd) total_spent\nFROM orders\nGROUP BY 1\nORDER BY 2 DESC;\n```\n对于 `2013` 年和 `2017` 年来说，每一年只有一个月的销量（2013 年为 12，2017 年为 1）。\n  因此，二者都不是均匀分布。销量一年比一年高，2016 年是到目前为止最高的一年。按照这个速度，我们预计 2017 年可能是最高销量的一年。<br><br>\n\n2. Parch & Posey 在哪一个月的总销售额最高？数据集中的所有月份保持均匀分布吗？<br><br>\n为了保持公平，我们应该删掉 2013 年和 2017 年的销量。原因如上。\n```\nSELECT DATE_PART('month', occurred_at) ord_month, SUM(total_amt_usd) total_spent\nFROM orders\nWHERE occurred_at BETWEEN '2014-01-01' AND '2017-01-01'\nGROUP BY 1\nORDER BY 2 DESC; \n```\n12 月的销量最高。<br><br> \n\n3. Parch & Posey 在哪一年的总订单量最多？数据集中的所有年份保持均匀分布吗？\n```\nSELECT DATE_PART('year', occurred_at) ord_year,  COUNT(*) total_sales\nFROM orders\nGROUP BY 1\nORDER BY 2 DESC;\n``` \n同样，到目前为止，2016 年的订单量最多，但是与数据集中的其他年份相比，2013 年和 2017 年的分布不均匀。<br><br>\n4. Parch & Posey 在哪一个月的总订单量最多？数据集中的所有年份保持均匀分布吗？\n```\nSELECT DATE_PART('month', occurred_at) ord_month, COUNT(*) total_sales\nFROM orders\nWHERE occurred_at BETWEEN '2014-01-01' AND '2017-01-01'\nGROUP BY 1\nORDER BY 2 DESC; \n```\n12 月依然是销量最多的月份，但是有趣的是，11 月是销量第二多的月份。为了保持公平，删掉了 2017 年和 2013 年的数据。<br><br>\n5. `Walmart` 在哪一年的哪一个月在铜版纸上的消费最多？\n```\nSELECT DATE_TRUNC('month', o.occurred_at) ord_date, SUM(o.gloss_amt_usd) tot_spent\nFROM orders o \nJOIN accounts a\nON a.id = o.account_id\nWHERE a.name = 'Walmart'\nGROUP BY 1\nORDER BY 2 DESC\nLIMIT 1;\n``` \n在 2016 年 5 月，Walmart 在铜版纸上的消费做多。<br><br>\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403697,
+          "key": "5a1c618b-1597-4947-8980-84d49b8415e6",
+          "title": "视频: CASE 语句",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5a1c618b-1597-4947-8980-84d49b8415e6",
+            "completed_at": "2019-02-06T04:03:01.896Z",
+            "last_viewed_at": "2019-10-09T21:39:38.283Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403584,
+              "key": "5cce01b7-4f39-4174-9891-f9eed161a3d0",
+              "title": "11 CASE V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "BInXuTY_FzE",
+                "china_cdn_id": "BInXuTY_FzE.mp4"
+              }
+            },
+            {
+              "id": 403585,
+              "key": "48ab32fc-9eab-46c0-9245-a20c57298ddc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### CASE - 专家提示\n\n* CASE 语句始终位于 SELECT 条件中。<br><br>\n2. CASE 必须包含以下几个部分：WHEN、THEN 和 END。ELSE 是可选组成部分，用来包含不符合上述任一 CASE 条件的情况。<br><br>\n3. 你可以在 WHEN 和 THEN 之间使用任何条件运算符编写任何条件语句（例如 [WHERE](https://community.modeanalytics.com/sql/tutorial/sql-where/)），包括使用 AND 和 OR 连接多个条件语句。<br><br>\n4. 你可以再次包含多个 WHEN 语句以及 ELSE 语句，以便处理任何未处理的条件。\n\n\n### 示例\n\n在第一节课的练习中，你看到了以下问题：\n\n1. 创建一列用于将 `standard_amt_usd` 除以 `standard_qty`，以便计算每个订单的标准纸张的单价，将结果限制到前 10 个订单，并包含 `id` 和 `account_id` 字段。**注意 - 如果你的答案正确，系统将显示一个错误，这是因为你除以了 0。当你在下个部分学习 CASE 语句时，你将了解如何让此查询不会报错。**<br><br>  \n\n我们来看看如何使用 **CASE** 语句来避免这一错误。\n\n```\nSELECT id, account_id, standard_amt_usd/standard_qty AS unit_price\nFROM orders\nLIMIT 10;\n```\n\n现在我们使用一个 **CASE** 语句，这样的话，一旦 **standard_qty** 为 0，我们将返回 0，否则返回 **unit_price**。\n\n```\nSELECT id, account_id, CASE WHEN standard_qty = 0 OR standard_qty IS NULL THEN 0\n                        ELSE standard_amt_usd/standard_qty END AS unit_price\nFROM orders\nLIMIT 10;\n```\n\n该语句的第一部分将捕获任何分母为 0 并导致错误的情况，其他部分将按照常规步骤相除。你将发现对于标准纸张，所有客户的单价是 4.99 美元。这样比较合理，不会波动，并且比在上节课中向分母上加 1 来暂时解决错误这一方法更准确。\n\n你可以使用下面的数据自己尝试下。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403696,
+          "key": "85c05f4e-2ef1-4ee6-b2c6-ee01c1cf2ca2",
+          "title": "视频: CASE 与聚合",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "85c05f4e-2ef1-4ee6-b2c6-ee01c1cf2ca2",
+            "completed_at": "2019-02-06T04:09:21.906Z",
+            "last_viewed_at": "2019-10-09T21:40:00.854Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403586,
+              "key": "c596b8af-b610-48c5-9c4f-4cd269e8b7c1",
+              "title": "CASE 语句与聚合",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "asSXB6iD3z4",
+                "china_cdn_id": "asSXB6iD3z4.mp4"
+              }
+            },
+            {
+              "id": 403587,
+              "key": "a306ba04-a528-4383-9db7-fd39d72e4ee5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "这道题有点难。尝试自己运行查询，确保知道所发生的情况。下一部分将让你自己尝试编写 **CASE** 语句。在此视频中，我们演示了以下情况：使用 **WHERE** 条件获取相同的信息意味着一次只能从 **CASE** 中获取一组数据。  \n\n像这样将数据分成几列有一些优势，这取决于你要执行的操作。但通常，这种级别的划分可能使用其他编程语言更简单，而不是使用 SQL。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403699,
+          "key": "7d7aa4d8-98ca-4062-b868-e66863dee18d",
+          "title": "练习：CASE",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7d7aa4d8-98ca-4062-b868-e66863dee18d",
+            "completed_at": "2019-02-06T04:10:14.491Z",
+            "last_viewed_at": "2019-07-31T13:34:22.732Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403588,
+              "key": "4d10409e-a240-499a-bb28-c50b5a8bb647",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 问题：CASE\n\n根据以下 **SQL** 表格信息回答以下问题。如果你遇到问题或想要对比检查你的答案，可以在下一页面的顶部找到我的答案。  \n\n1. 我们想要根据相关的消费量了解三组不同的客户。最高的一组是终身价值（所有订单的总销售额）`大于 200,000` 美元的客户。第二组是在 `200,000 到 100,000` 美元之间的客户。最低的一组是低于 `under 100,000` 美元的客户。请提供一个表格，其中包含与每个**客户**相关的**级别**。你应该提供客户的**名称**、**所有订单的总销售额**和**级别**。消费最高的客户列在最上面。<br><br>\n\n2. 现在我们想要执行和第一个问题相似的计算过程，但是我们想要获取在 `2016` 年和 `2017` 年客户的总消费数额。级别和上一个问题保持一样。消费最高的客户列在最上面。<br><br>\n\n3. 我们想要找出绩效最高的**销售代表**，也就是有超过 200 个订单的销售代表。创建一个包含以下列的表格：**销售代表名称**、订单总量和标为 `top` 或 `not` 的列（取决于是否拥有超过 200 个订单）。销售量最高的销售代表列在最上面。<br><br>\n\n4. 之前的问题没有考虑中间水平的销售代表或销售额。管理层决定也要看看这些数据。我们想要找出绩效很高的**销售代表**，也就是有超过 `200` 个订单或总销售额超过 `750000` 美元的销售代表。`中间`级别是指有超过 150 个订单或销售额超过 `500000` 美元的销售代表。创建一个包含以下列的表格：**销售代表名称**、总订单量、所有订单的总销售额，以及标为 `top`、`middle` 或 `low` 的列（取决于上述条件）。在最终表格中将销售额最高的销售代表列在最上面。根据上述标准，你可能会见到几个表现很差的销售代表！\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 677093,
+              "key": "078076a8-0b51-4be4-98ce-c6be2a5c5058",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view32b0af4c",
+              "pool_id": "sqlwidget",
+              "view_id": "sql-evaluator-H1+_YjCm7",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "disk": null,
+                    "allowSubmit": false,
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 403700,
+          "key": "33a0f467-1bc5-4eca-b8b5-1a3bfc2281c3",
+          "title": "解决方案：CASE",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "33a0f467-1bc5-4eca-b8b5-1a3bfc2281c3",
+            "completed_at": "2019-02-06T04:14:32.396Z",
+            "last_viewed_at": "2019-07-31T13:35:28.818Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403589,
+              "key": "97891f06-5e2f-4b26-bfe4-e1d8cebf0fd6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 解决方案：CASE\n\n1. 我们想要根据相关的购买量了解三组不同的客户。最高的一组是终身价值（所有订单的总销售额）`大于 200,000` 美元的客户。第二组是在 `200,000 到 100,000` 美元之间的客户。最低的一组是低于 `under 100,000` 美元的客户。请提供一个表格，其中包含与每个**客户**相关的**级别**。你应该提供客户的**名称**、**所有订单的总销售额**和**级别**。消费最高的客户列在最上面。\n```\nSELECT a.name, SUM(total_amt_usd) total_spent, \n        CASE WHEN SUM(total_amt_usd) > 200000 THEN 'top'\n        WHEN  SUM(total_amt_usd) > 100000 THEN 'middle'\n        ELSE 'low' END AS customer_level\nFROM orders o\nJOIN accounts a\nON o.account_id = a.id \nGROUP BY a.name\nORDER BY 2 DESC;\n```\n\n2. 现在我们想要执行和第一个问题相似的计算过程，但是我们想要获取在 `2016` 年和 `2017` 年客户的总消费数额。级别和上一个问题保持一样。消费最高的客户列在最上面。\n```\nSELECT a.name, SUM(total_amt_usd) total_spent, \n        CASE WHEN SUM(total_amt_usd) > 200000 THEN 'top'\n        WHEN  SUM(total_amt_usd) > 100000 THEN 'middle'\n        ELSE 'low' END AS customer_level\nFROM orders o\nJOIN accounts a\nON o.account_id = a.id\nWHERE occurred_at > '2015-12-31' \nGROUP BY 1\nORDER BY 2 DESC;\n```\n3. 我们想要找出绩效最高的**销售代表**，也就是有超过 200 个订单的销售代表。创建一个包含以下列的表格：**销售代表名称**、订单总量和标为 `top` 或 `not` 的列（取决于是否拥有超过 200 个订单）。销售量最高的销售代表列在最上面。\n```\nSELECT s.name, COUNT(*) num_ords,\n        CASE WHEN COUNT(*) > 200 THEN 'top'\n        ELSE 'not' END AS sales_rep_level\nFROM orders o\nJOIN accounts a\nON o.account_id = a.id \nJOIN sales_reps s\nON s.id = a.sales_rep_id\nGROUP BY s.name\nORDER BY 2 DESC;\n```\n值得注意的是，上述语句假定每个名称是唯一的，好几次都是这么假定的。否则需要根据名称和 ID 拆分表格。<br><br>\n4. 之前的问题没有考虑中间水平的销售代表或销售额。管理层决定也要看看这些数据。我们想要找出绩效很高的**销售代表**，也就是有超过 `200` 个订单或总销售额超过 `750000` 美元的销售代表。`中间`级别是指有超过 150 个订单或销售额超过 `500000` 美元的销售代表。创建一个包含以下列的表格：**销售代表名称**、总订单量、所有订单的总销售额，以及标为 `top`、`middle` 或 `low` 的列（取决于上述条件）。在最终表格中将销售额最高的销售代表列在最上面。\n```\nSELECT s.name, COUNT(*), SUM(o.total_amt_usd) total_spent, \n        CASE WHEN COUNT(*) > 200 OR SUM(o.total_amt_usd) > 750000 THEN 'top'\n        WHEN COUNT(*) > 150 OR SUM(o.total_amt_usd) > 500000 THEN 'middle'\n        ELSE 'low' END AS sales_rep_level\nFROM orders o\nJOIN accounts a\nON o.account_id = a.id \nJOIN sales_reps s\nON s.id = a.sales_rep_id\nGROUP BY s.name\nORDER BY 3 DESC;\n```\n根据上述标准，你可能会见到几个表现很差的销售代表！\n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 403701,
+          "key": "d813136e-9730-4045-99cc-4d5197ed5664",
+          "title": "文本: 总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d813136e-9730-4045-99cc-4d5197ed5664",
+            "completed_at": "2019-02-06T04:16:37.081Z",
+            "last_viewed_at": "2019-10-09T21:39:26.507Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 403590,
+              "key": "53812cf1-186c-4d67-89b7-6f5716fb0acb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 总结\n\n每个部分都添加了标签，以便你回顾相应的内容。我故意将特定部分的答案没有放在带标签的部分，因为这样可以促使你自己去解决问题。 \n\n现在你已经掌握了关于 **SQL** 的大量实用技能。**连接**和**聚合**相结合是让 **SQL** 成为如此强大的工具的原因之一。\n\n如果你对某个部分不太懂，建议你再重新复习这一部分。熟能生巧，不过太长时间都陷在某个问题上也不太合适！\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

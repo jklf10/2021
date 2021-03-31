@@ -1,0 +1,748 @@
+{
+  "data": {
+    "lesson": {
+      "id": 432167,
+      "key": "03f64082-fa4d-4aff-80be-d48597867e07",
+      "title": "SQL 数据清理",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "数据清理是数据分析的重要步骤，你在本课中将会学到如何使用 SQL 进行数据清理。",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/03f64082-fa4d-4aff-80be-d48597867e07/432167/1544466060102/SQL+%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/03f64082-fa4d-4aff-80be-d48597867e07/432167/1544466057310/SQL+%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 432140,
+          "key": "d529924c-52ba-4a54-821d-549ba998272a",
+          "title": "视频: SQL 数据清理简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d529924c-52ba-4a54-821d-549ba998272a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432073,
+              "key": "5e89db5b-a41a-4f25-86f2-b4910f353234",
+              "title": "SQL 数据清理简介",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YTtH3NM2BX0",
+                "china_cdn_id": "YTtH3NM2BX0.mp4"
+              }
+            },
+            {
+              "id": 432074,
+              "key": "7431f068-782e-4fa5-80b1-d5c9c34c9527",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n在这节课，你将学习多个技能，从而能够\n\n1. 清理和重新整理混乱的数据。\n2. 将列转换为不同的数据类型。\n3. 处理 **NULL** 的技巧。\n\n这样，你将能够对原始数据进行清理，并获得适合分析的整洁数据。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432141,
+          "key": "51478407-aac0-4d29-9c4f-d0ae3a527ab7",
+          "title": "视频: LEFT 与 RIGHT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "51478407-aac0-4d29-9c4f-d0ae3a527ab7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432075,
+              "key": "c18d23b3-9907-48f9-b55e-e399b059ac8e",
+              "title": "使用字符串函数进行清理",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "y1fduSu7Ovc",
+                "china_cdn_id": "y1fduSu7Ovc.mp4"
+              }
+            },
+            {
+              "id": 432076,
+              "key": "5bb42aa7-f6c0-4856-9c1b-37587c2c301c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们查看了三个新的函数：\n\n1. **LEFT**\n2. **RIGHT**\n3. **LENGTH**\n\n**LEFT** 从起点（或左侧）开始，从特定列中的每行获取一定数量的字符。正如此处看到的，你可以使用 **LEFT(phone_number, 3)** 获取电话号码中的前三位。<br><br>\n\n**RIGHT** 从末尾（或右侧）开始，从特定列中的每行获取一定数量的字符。正如此处看到的，你可以使用 **RIGHT(phone_number, 8)** 获取电话号码的最后 8 位。<br><br>\n\n**LENGTH** 提供了特定列每行的字符数。这里，我们可以使用 **LENGTH(phone_number)** 得出每个电话号码的长度。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432142,
+          "key": "1f7e117b-0bd8-4a98-a3fb-2449e0b77d90",
+          "title": "练习：LEFT 与 RIGHT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1f7e117b-0bd8-4a98-a3fb-2449e0b77d90",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432077,
+              "key": "4cb4a25d-1e42-4a0f-91a4-577bc65e27e8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### LEFT & RIGHT 练习\n\n1. 在 **accounts** 表格中，有一个列存储的是每个公司的**网站**。最后三个字符表示他们使用的是什么类型的网址。[此处](https://iwantmyname.com/domains/domain-name-registration-list-of-extensions)给出了扩展（和价格）列表。请获取这些扩展并得出 **accounts** 表格中每个网址类型的存在数量。<br><br>\n\n2. 对于公司名称（甚至名称的第一个字母）的作用存在颇多争议 - https://www.entrepreneur.com/article/237643 。请从 **accounts** 表格中获取每个公司名称的第一个字母，看看以每个字母（数字）开头的公司名称分布情况。<br><br>\n\n3. 使用 **accounts** 表格和 **CASE** 语句创建两个群组：一个是以数字开头的公司名称群组，另一个是以字母开头的公司名称群组。以字母开头的公司名称所占的比例是多少？<br><br>\n\n4. 元音是指 `a`、`e`、`i`、`o` 和 `u`。有多少比例的公司名称以元音开头，以其他音节开头的公司名称百分比是多少？",
+              "instructor_notes": ""
+            },
+            {
+              "id": 432080,
+              "key": "e6d1abe1-0d0a-44d4-a4e4-565b8842e781",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewee50805b",
+              "pool_id": "sqlwidget",
+              "view_id": "ee50805b-cfc4-4136-8bef-2f39d82eff83",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 432143,
+          "key": "9e01ea9f-1d9e-4ffd-be75-ba4535fe262a",
+          "title": "解决方案：LEFT 与 RIGHT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e01ea9f-1d9e-4ffd-be75-ba4535fe262a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432081,
+              "key": "f0b87c0b-80f3-4758-b902-24ea4a5c27d6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### LEFT & RIGHT 解决方案\n\n1. \n```\nSELECT RIGHT(website, 3) AS domain, COUNT(*) num_companies\nFROM accounts\nGROUP BY 1\nORDER BY 2 DESC;\n```\n2. \n```\nSELECT LEFT(UPPER(name), 1) AS first_letter, COUNT(*) num_companies\nFROM accounts\nGROUP BY 1\nORDER BY 2 DESC;\n```\n3. \n```\nSELECT SUM(num) nums, SUM(letter) letters\nFROM (SELECT name, CASE WHEN LEFT(UPPER(name), 1) IN ('0','1','2','3','4','5','6','7','8','9') \n                          THEN 1 ELSE 0 END AS num, \n            CASE WHEN LEFT(UPPER(name), 1) IN ('0','1','2','3','4','5','6','7','8','9') \n                          THEN 0 ELSE 1 END AS letter\n         FROM accounts) t1;\n```\n有 350 个公司名称以字母开头，1 个公司以数字开头。因此有 350/351 的公司名称以字母开头，即百分比是 99.7%。\n4. \n```\nSELECT SUM(vowels) vowels, SUM(other) other\nFROM (SELECT name, CASE WHEN LEFT(UPPER(name), 1) IN ('A','E','I','O','U') \n                           THEN 1 ELSE 0 END AS vowels, \n             CASE WHEN LEFT(UPPER(name), 1) IN ('A','E','I','O','U') \n                          THEN 0 ELSE 1 END AS other\n            FROM accounts) t1;\n```\n有 80 的公司名称以元音开头，271 的公司以其他音节开头。元音的比例是 80/351，或 22.8%。因此，有 77.2% 的公司名称没有以元音开头。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432144,
+          "key": "eae3fb73-0218-46e8-b7f2-03b805acfb16",
+          "title": "视频: POSITION、STRPOS 和 SUBSTR",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "eae3fb73-0218-46e8-b7f2-03b805acfb16",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432082,
+              "key": "e0647bec-55f3-44d3-a695-1ffe44da559c",
+              "title": "更高级的字符串函数",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "E6cK8RbYGEc",
+                "china_cdn_id": "E6cK8RbYGEc.mp4"
+              }
+            },
+            {
+              "id": 432083,
+              "key": "52603ebe-4f2b-442e-b3cc-9f4488f40549",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在这节课，你学习了：\n\n1. **POSITION**\n2. **STRPOS**\n3. **LOWER**\n4. **UPPER**\n\n\n**POSITION** 获取字符和列，并提供该字符在每行的索引。第一个位置的索引在 SQL 中是 1。如果你之前学习了其他编程语言，就会发现很多语言的索引是从 0 开始。这里，你发现可以使用 **POSITION(',' IN city_state)** 获取逗号的索引。<br><br>\n\n**STRPOS** 和 **POSITION** 提供的结果相同，但是语法不太一样，如下所示：**STRPOS(city_state, ‘,’)**。<br><br>\n\n注意，**POSITION** 和 **STRPOS** 都区分大小写，因此查找 **A** 的位置与查找 **a** 的结果不同。<br><br>\n\n因此，如果你想获取某个字母的索引，但是不区分大小写，则需要使用 **LOWER** 或 **UPPER** 让所有字符变成小写或大写。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432146,
+          "key": "6b3baec6-5b43-4508-83f8-037cfadfea19",
+          "title": "练习：POSITION、STRPOS 和 SUBSTR - AME DATA AS QUIZ 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6b3baec6-5b43-4508-83f8-037cfadfea19",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432084,
+              "key": "746ae3a9-8afa-481c-b9fc-080fb25750ce",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 练习：POSITION 和 STRPOS\n\n对于以下练习，需要用到 **LEFT** 和 **RIGHT** 以及 **POSITION** 或 **STRPOS** 知识。\n\n1. 使用 `accounts` 表格创建一个**名字**和**姓氏**列，用于存储 `primary_poc` 的名字和姓氏。<br><br>\n\n2. 现在创建一个包含 `sales_rep` 表格中每个销售代表姓名的列，同样，需要提供名字和姓氏列。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 432085,
+              "key": "0779e461-77e9-4922-b87c-10faf4536822",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewee50805b",
+              "pool_id": "sqlwidget",
+              "view_id": "0ad2ad8c-01ef-4591-a26a-0acb13bca0e0",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 432145,
+          "key": "7a46b04b-287c-4838-aae0-406c1aaee7e7",
+          "title": "解决方案：POSITION、STRPOS 和 SUBSTR",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7a46b04b-287c-4838-aae0-406c1aaee7e7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432086,
+              "key": "2f868d9c-ea9d-4f9e-9d4c-b8bfb3001719",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### POSITION、STRPOS 和 SUBSTR 解决方案\n\n1. \n```\nSELECT LEFT(primary_poc, STRPOS(primary_poc, ' ') -1 ) first_name, \n   RIGHT(primary_poc, LENGTH(primary_poc) - STRPOS(primary_poc, ' ')) last_name\nFROM accounts;\n```\n2. \n```\nSELECT LEFT(name, STRPOS(name, ' ') -1 ) first_name, \n          RIGHT(name, LENGTH(name) - STRPOS(name, ' ')) last_name\nFROM sales_reps;\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432147,
+          "key": "4342e20d-0f4a-4243-8fdf-7d298fa3a59d",
+          "title": "视频: CONCAT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4342e20d-0f4a-4243-8fdf-7d298fa3a59d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432089,
+              "key": "4d6d55f7-0883-45b9-90b0-d4aa356017d8",
+              "title": "CONCAT",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "bCxZnQN28Y4",
+                "china_cdn_id": "bCxZnQN28Y4.mp4"
+              }
+            },
+            {
+              "id": 432090,
+              "key": "77c344e0-2527-4c6d-93c7-08fc8a4c34b4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在这节课，你学习了：\n\n1.  **CONCAT**\n2. Piping `||`\n\n这两个工具都能将不同行的列组合到一起。在此视频中，你学习了如何将存储在不同列中的名字和姓氏组合到一起，形成全名：**CONCAT(first_name, ' ', last_name)**，或者使用双竖线：**first_name || ' ' || last_name**。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432148,
+          "key": "bac53ed0-416a-4baf-b8e8-fbc5228ca992",
+          "title": "练习：CONCAT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bac53ed0-416a-4baf-b8e8-fbc5228ca992",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432091,
+              "key": "9220eaad-6c98-4b59-a5f7-73d6815c3aef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 练习：CONCAT\n\n1. `accounts` 表格中的每个客户都想为每个 `primary_poc` 创建一个电子邮箱。邮箱应该是 **primary_poc** 的名字`.`**primary_poc**的姓氏`@`公司名称`.com`。<br><br>\n\n2. 你可能注意到了，在上一个答案中，有些公司名称存在空格，肯定不适合作为邮箱地址。看看你能否通过删掉客户名称中的所有空格来创建合适的邮箱地址，否则你的答案就和问题 `1.` 的一样。[此处](https://www.postgresql.org/docs/8.1/static/functions-string.html)是一些实用的文档。<br><br>\n\n3. 我们还需要创建初始密码，在用户第一次登录时将更改。初始密码将是 `primary_poc` 的名字的第一个字母（小写），然后依次是名字的最后一个字母（小写）、姓氏的第一个字母（小写）、姓氏的最后一个字母（小写）、名字的字母数量、姓氏的字母数量，然后是合作的公司名称（全大写，没有空格）\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 432092,
+              "key": "274bf4ba-2376-4b53-ab8e-54378a283931",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewee50805b",
+              "pool_id": "sqlwidget",
+              "view_id": "4b7afa03-27c0-4220-a473-5969f57e3ef8",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 432149,
+          "key": "97c82939-844d-4bd9-88c4-76d61d8289a1",
+          "title": "解决方案：CONCAT",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "97c82939-844d-4bd9-88c4-76d61d8289a1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432093,
+              "key": "b4e44ea7-db41-4820-b230-5a5fc6720fe9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### CONCAT 解决方案\n\n1. \n```\nWITH t1 AS (\n    SELECT LEFT(primary_poc,     STRPOS(primary_poc, ' ') -1 ) first_name,  RIGHT(primary_poc, LENGTH(primary_poc) - STRPOS(primary_poc, ' ')) last_name, name\n    FROM accounts)\nSELECT first_name, last_name, CONCAT(first_name, '.', last_name, '@', name, '.com')\nFROM t1;\n```\n2. \n```\nWITH t1 AS (\n    SELECT LEFT(primary_poc,     STRPOS(primary_poc, ' ') -1 ) first_name,  RIGHT(primary_poc, LENGTH(primary_poc) - STRPOS(primary_poc, ' ')) last_name, name\n    FROM accounts)\nSELECT first_name, last_name, CONCAT(first_name, '.', last_name, '@', REPLACE(name, ' ', ''), '.com')\nFROM  t1;\n```\n3. \n```\nWITH t1 AS (\n    SELECT LEFT(primary_poc,     STRPOS(primary_poc, ' ') -1 ) first_name,  RIGHT(primary_poc, LENGTH(primary_poc) - STRPOS(primary_poc, ' ')) last_name, name\n    FROM accounts)\nSELECT first_name, last_name, CONCAT(first_name, '.', last_name, '@', name, '.com'), LEFT(LOWER(first_name), 1) || RIGHT(LOWER(first_name), 1) || LEFT(LOWER(last_name), 1) || RIGHT(LOWER(last_name), 1) || LENGTH(first_name) || LENGTH(last_name) || REPLACE(UPPER(name), ' ', '')\nFROM t1;\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432151,
+          "key": "c3338459-f5b0-455c-8a3e-163888041874",
+          "title": "视频: CAST",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c3338459-f5b0-455c-8a3e-163888041874",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432094,
+              "key": "4660520e-f0cb-4cd8-be97-20e27bd2666a",
+              "title": "CAST",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "LbyOq4ofLng",
+                "china_cdn_id": "LbyOq4ofLng.mp4"
+              }
+            },
+            {
+              "id": 432095,
+              "key": "cf7c6a03-599a-4e32-aa31-1ecd876e5b31",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在此视频中，你学习了其他数据处理功能，包括\n\n1. **TO_DATE**\n2. **CAST**\n3. 使用 `::` 进行转型\n\n**DATE_PART('month', TO_DATE(month, 'month'))** 将月份名称改成了与该月相关的数字。<br><br>\n\n然后，你可以使用 **CAST** 将字符串改为日期。**CAST** 实际上可以用来更改各种列类型。经常，你会像视频中一样，使用 **CAST(date_column AS DATE)** 将`字符串`改成`日期`。但是，你可能还会对列的数据类型做出其他更改。你可以在[此处](http://www.postgresqltutorial.com/postgresql-cast/)看到其他例子。\n\n在此示例中，除了 **CAST(date_column AS DATE)** 之外，你可以使用 **date_column::DATE**。\n\n### 专家提示\n\n在这节课演示的大部分函数都特定于字符串，它们不适用于日期、整数或浮点数。但是，使用这些函数将自动将数据转换为相应的类型。 \n\n**LEFT**、**RIGHT** 和 **TRIM** 都仅用来选择特定的字符串元素，但是使用它们选择数字或日期元素，系统会将它们处理为字符串。虽然我们没有明确地在这节课介绍 **TRIM**，但是它可以用来删掉字符串开头和末尾的字符，这样就可以删掉一行开头或末尾的空格，从 Excel 或其他存储系统转移过来的数据经常就需要这么处理。\n\n这些函数有很多变体，还有这节课没介绍的其他几个字符串函数。\n不同的数据库使用的这些函数有所不同，如果你连接的是私有数据库，一定要查看相应的数据库语法。[Postgres literature](http://www.postgresql.org/docs/9.1/static/functions-string.html) 中包含了大量相关的函数。\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432150,
+          "key": "a9de2023-ae43-4781-a5c5-050bf5c33dd9",
+          "title": "练习：CAST",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a9de2023-ae43-4781-a5c5-050bf5c33dd9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432096,
+              "key": "26e8f889-82b5-42e8-ac5b-ecedb6bd11cc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### CAST 练习\n\n对于这组练习，你将处理以下环境中的单个表格。该数据集与 Parch & Posey 数据集不同，因为后者中的所有数据类型都已清理。  ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 432098,
+              "key": "15896644-c13e-4439-9e6d-35d1e632d843",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "15896644-c13e-4439-9e6d-35d1e632d843",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "`1.` 编写一个查询来查看前 10 行，以便了解数据集 `sf_crime_data` 中的列和原始数据。",
+                "`2.` 回忆下关于日期的课程，使用该页面底部的 **练习 1** 以确保你记得在 SQL 中日期应该具备的格式。",
+                "`3.` 查看 **sf_crime_data** 表格中的`日期`列。注意，日期格式不正确。",
+                "`4.` 根据第 2 部分的练习解决方案编写一个查询，以便将日期改成正确的格式。你至少需要用到 **SUBSTR** 和 **CONCAT** 才能执行这一操作。",
+                "`5.` 创建了格式正确的列后，使用 `CAST` 或 `::` 将其转换为日期。"
+              ],
+              "positive_feedback": "很棒！",
+              "video_feedback": null,
+              "description": "‘待完成任务：'"
+            },
+            {
+              "id": 432099,
+              "key": "99a778e3-8cda-4aa2-93e8-a391836c08e2",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "view8cce1eab",
+              "pool_id": "sqlwidget",
+              "view_id": "8cce1eab-c6d2-413a-a99a-72da58caf837",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            },
+            {
+              "id": 432100,
+              "key": "04226d5f-2c47-4e89-a154-3df56364bbba",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "04226d5f-2c47-4e89-a154-3df56364bbba",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "SQL 中的正确日期格式是什么？",
+                "answers": [
+                  {
+                    "id": "a1506735519757",
+                    "text": "dd-mm-yyyy",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506735545102",
+                    "text": "mm-dd-yyyy",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1506735553198",
+                    "text": "yyyy-mm-dd",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1506735561429",
+                    "text": "yyyy-dd-mm",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 432152,
+          "key": "6f365869-afd2-430f-8c30-7644d389aa56",
+          "title": "解决方案：CAST",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6f365869-afd2-430f-8c30-7644d389aa56",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432104,
+              "key": "37110bf5-579c-41f2-9bdf-412b8aa330d0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### CAST 解决方案\n\n1. \n```\nSELECT *\nFROM sf_crime_data\nLIMIT 10;\n```\n2.  **yyyy-mm-dd**<br><br>\n3.  `date` 列的格式是 **mm/dd/yyyy**，日期末尾的时间也不正确。<br><br>\n4. \n```\nSELECT date orig_date, (SUBSTR(date, 7, 4) || '-' || LEFT(date, 2) || '-' || SUBSTR(date, 4, 2)) new_date\nFROM sf_crime_data;\n```\n5.  注意，可以像之前的课程中一样，使用 **DATE_TRUNC** 和 **DATE_PART** 处理这一新的日期。\n```\nSELECT date orig_date, (SUBSTR(date, 7, 4) || '-' || LEFT(date, 2) || '-' || SUBSTR(date, 4, 2))::DATE new_date\nFROM sf_crime_data;\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432153,
+          "key": "697bd996-0764-4e5f-9406-daefa67d266b",
+          "title": "视频: COALESCE",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "697bd996-0764-4e5f-9406-daefa67d266b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432105,
+              "key": "6b5c8620-8bc2-4ee7-b9c3-bae1db4cc8f3",
+              "title": "COALESCE",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "86vgu-ECBCQ",
+                "china_cdn_id": "86vgu-ECBCQ.mp4"
+              }
+            },
+            {
+              "id": 432106,
+              "key": "9c6e41b0-58aa-4afc-94d9-db8e9a421632",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在此视频中，你学习了如何使用 **COALESCE** 来处理 NULL 值。遗憾的是，我们的数据集没有 **NULL** 值，因此你将在下个页面通过另一个示例来学习 **COALESCE** 函数。\n\n_____\n\n通常，**COALESCE** 返回的是每行的第一个非 NULL 值。因此如果在此示例中，行中的值是 NULL，上述解决方案使用了 **no_poc**。  \n\n还有其他几个函数的作用比较相似。你可以在[此处](https://academy.vertabelo.com/blog/5-functions-manipulating-sql-strings/)详细了解这些函数。你还可以在[此处](https://community.modeanalytics.com/sql/tutorial/sql-string-functions-for-cleaning/)查看这节课介绍的很多函数。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432154,
+          "key": "a97aeca2-634e-4dac-a5f1-2a91378797e8",
+          "title": "练习：COALESCE",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a97aeca2-634e-4dac-a5f1-2a91378797e8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432107,
+              "key": "3da5a7d6-da1e-4a5c-a35f-c291a708ef13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### COALESCE 练习\n\n在此练习中，我们将使用以下任务列表来看看上一个示例。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 432108,
+              "key": "380e5e1c-7cdd-4562-a351-e58b539281ef",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "380e5e1c-7cdd-4562-a351-e58b539281ef",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "`1.` 运行以下查询，看看哪个行缺少数据。",
+                "`2.` 对于第 1 步中的表格，使用 **COALESCE** 将 `accounts.id` 列中的 NULL 值用`accounts.id`进行填充。",
+                "`3.` 对于第 1 步中的表格，使用 **COALESCE** 将 `orders.account_id` 列中 NULL 值用`accounts.id`进行填充。",
+                "`4.` 对于第 1 步中的表格，使用 **COALESCE** 将 **qty** 和 **usd** 列分别填充为 0。",
+                "`5.`运行第 `1` 步的查询，并删掉 **WHERE** 和计算 `id` 的数量。",
+                "`6.`运行第 `5` 步的查询，但是使用在第 2 - 4 步中使用的 **COALESCE** 函数。"
+              ],
+              "positive_feedback": "很棒！这道题有点难。请查看下一部分的解决方案，确保这些知识你都掌握了！",
+              "video_feedback": null,
+              "description": "‘待完成任务：'"
+            },
+            {
+              "id": 432110,
+              "key": "7c4d441f-30a4-4f58-ba60-8151fae953bb",
+              "title": null,
+              "semantic_type": "WorkspaceAtom",
+              "is_public": true,
+              "workspace_id": "viewee50805b",
+              "pool_id": "sqlwidget",
+              "view_id": "04dac27f-c7fb-474b-b4c4-d12ed186278a",
+              "gpu_capable": null,
+              "configuration": {
+                "id": "reserved",
+                "blueprint": {
+                  "conf": {
+                    "allowSubmit": false,
+                    "frameBorder": "0"
+                  },
+                  "kind": "sql-evaluator"
+                },
+                "workspaceId": "reserved"
+              },
+              "starter_files": null
+            }
+          ]
+        },
+        {
+          "id": 432155,
+          "key": "28351a6b-8d86-44a4-acb3-2356f3d884d4",
+          "title": "解决方案：COALESCE",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "28351a6b-8d86-44a4-acb3-2356f3d884d4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432114,
+              "key": "1c66bb1e-49f2-46e2-a3eb-b286436a89b2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### COALESCE 解决方案\n\n1. \n```\nSELECT *\nFROM accounts a\nLEFT JOIN orders o\nON a.id = o.account_id\nWHERE o.total IS NULL; \n```\n2. \n```\nSELECT COALESCE(a.id, a.id) filled_id, a.name, a.website, a.lat, a.long, a.primary_poc, a.sales_rep_id, o.*\nFROM accounts a\nLEFT JOIN orders o\nON a.id = o.account_id\nWHERE o.total IS NULL;\n```\n3. \n```\nSELECT COALESCE(a.id, a.id) filled_id, a.name, a.website, a.lat, a.long, a.primary_poc, a.sales_rep_id, COALESCE(o.account_id, a.id) account_id, o.occurred_at, o.standard_qty, o.gloss_qty, o.poster_qty, o.total, o.standard_amt_usd, o.gloss_amt_usd, o.poster_amt_usd, o.total_amt_usd\nFROM accounts a\nLEFT JOIN orders o\nON a.id = o.account_id\nWHERE o.total IS NULL;\n```\n4. \n```\nSELECT COALESCE(a.id, a.id) filled_id, a.name, a.website, a.lat, a.long, a.primary_poc, a.sales_rep_id, COALESCE(o.account_id, a.id) account_id, o.occurred_at, COALESCE(o.standard_qty, 0) standard_qty, COALESCE(o.gloss_qty,0) gloss_qty, COALESCE(o.poster_qty,0) poster_qty, COALESCE(o.total,0) total, COALESCE(o.standard_amt_usd,0) standard_amt_usd, COALESCE(o.gloss_amt_usd,0) gloss_amt_usd, COALESCE(o.poster_amt_usd,0) poster_amt_usd, COALESCE(o.total_amt_usd,0) total_amt_usd\nFROM accounts a\nLEFT JOIN orders o\nON a.id = o.account_id\nWHERE o.total IS NULL;\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 432156,
+          "key": "1c6b8b8b-198e-4667-9f7b-360e96597a75",
+          "title": "视频 + 文本: 总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1c6b8b8b-198e-4667-9f7b-360e96597a75",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 432115,
+              "key": "09d36f22-5f6e-49dc-b47f-c4a2f9906add",
+              "title": "数据清理总结",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "KkHqnvD9BWY",
+                "china_cdn_id": "KkHqnvD9BWY.mp4"
+              }
+            },
+            {
+              "id": 432116,
+              "key": "289b2ed1-99e2-4ed9-96f2-87cdc1fe63df",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "现在，你已经掌握了整理 SQL 中的混乱数据的大量工具。手动清理数据太枯燥，现在你可以利用新掌握的技能来清理数据了。  \n\n_______\n\n每一部分按照所学的函数设定标签，便于你复习这些数据清理功能。如果你一开始不习惯使用任何一个函数，这是正常现象，需要练习一段时间才能适应。你完全可以再看一遍这些材料，进一步磨练你的技能！\n\n不需要记住这些功能，但是你需要学会查看文档，并从所执行的查询中学习经验，从而能够解决新的问题。  \n\n终于学完了这一部分，你很棒！ ",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
