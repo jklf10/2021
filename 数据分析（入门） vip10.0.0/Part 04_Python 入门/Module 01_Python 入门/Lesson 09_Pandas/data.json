@@ -1,0 +1,578 @@
+{
+  "data": {
+    "lesson": {
+      "id": 869730,
+      "key": "0cd78a3e-68a1-4185-90a5-d94119000cce",
+      "title": "Pandas",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/0cd78a3e-68a1-4185-90a5-d94119000cce/738085/1544291115507/Pandas+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/0cd78a3e-68a1-4185-90a5-d94119000cce/738085/1544291112437/Pandas+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 592252,
+          "key": "08bfe507-6877-4d5c-9a16-6a0b743a65ac",
+          "title": "课程讲师",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "08bfe507-6877-4d5c-9a16-6a0b743a65ac",
+            "completed_at": "2019-04-03T10:48:48.622Z",
+            "last_viewed_at": "2019-04-03T10:48:49.919Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592098,
+              "key": "9d47bbca-1c87-44dc-9b46-802d8668248a",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5ab03a1f_screen-shot-2018-03-19-at-3.21.24-pm/screen-shot-2018-03-19-at-3.21.24-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9d47bbca-1c87-44dc-9b46-802d8668248a",
+              "caption": "_Juan Delgado_",
+              "alt": "",
+              "width": 300,
+              "height": 320,
+              "instructor_notes": null
+            },
+            {
+              "id": 592099,
+              "key": "eef2ee67-47d2-464e-8d9c-6a3223a9ce7d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5ab03a2e_screen-shot-2018-03-19-at-2.30.59-pm/screen-shot-2018-03-19-at-2.30.59-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/eef2ee67-47d2-464e-8d9c-6a3223a9ce7d",
+              "caption": "_Juno Lee_",
+              "alt": "",
+              "width": 300,
+              "height": 300,
+              "instructor_notes": null
+            },
+            {
+              "id": 592100,
+              "key": "43390530-caac-4c7b-a666-979d37bfcd39",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们继续学习另一个 Python 库——**Pandas**，它是一款数据操纵和分析工具，由 Juan 和 Juno 负责讲解！\n\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592253,
+          "key": "438855fc-f1ed-4e22-8a0b-732145a4d751",
+          "title": "Pandas 简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "438855fc-f1ed-4e22-8a0b-732145a4d751",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592101,
+              "key": "ddff031f-a4d3-45f8-aa25-be25ad5c9d02",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Pandas 简介\n\n**Pandas** 是 Python 中的数据操纵和分析软件包。名称“Pandas”得名自计量经济学 *Panel Data*（面板数据）一词。Pandas 为 Python 带来了两个新的数据结构，即 **Pandas Series** 和 **Pandas DataFrame**。借助这两个数据结构，我们能够轻松直观地处理*带标签*数据和*关系*数据。这些课程将简单介绍 Pandas，并讲解一些最重要的 Pandas 功能。\n\n在下面的课程中，你将学习：\n* 如何导入 Pandas\n* 如何使用各种方法创建 Pandas Series 和 DataFrame\n* 如何访问及更改 Series 和 DataFrame 中的元素\n* 如何对 Series 执行算术运算\n* 如何向 DataFrame 中加载数据\n* 如何处理非数 (NaN) 值\n\n学习以下课程的前提是你已经熟悉 NumPy，并且已经学习了之前的 NumPy 课程。因此，为了避免重复讲解，我们将忽略已经在 NumPy 课程中介绍过的大量细节内容。如果你尚未学习 NumPy 课程，建议先学习这些课程。 \n\n# 下载 Pandas\n**Anaconda** 中包含 Pandas。如果你的计算机尚未安装 Anaconda，请参阅 Anaconda 部分，详细了解如何在 PC 或 Mac 设备上安装 Anaconda。\n\n# Pandas 版本\n和很多 Python 软件包一样，Pandas 也会时不时地更新。以下课程在制作时采用的是 Pandas 0.22 版。你可以检查你的 Pandas 版本：在 Jupyter notebook 中输入 `!conda list pandas`，或在 Anaconda 提示符处输入 `conda list pandas`。如果你的计算机安装的是另一个版本的 Pandas，你可以通过在 Anaconda 提示符处输入 `conda install pandas=0.22` 更新你的 Pandas 版本。随着新版 Pandas 的推出，一些功能可能会过时或被替换掉，因此确保在运行代码前，安装正确的 Pandas 版本。这样可以保证代码顺利运行。  \n\n# Pandas 文档\nPandas 是一个强大的数据分析库，其中包含很多函数和功能。在这些入门课程中，我们将仅介绍 Pandas 的一些基本功能。如果你想深入学习 Pandas，确保参阅 Pandas 文档：\n\n[Pandas 文档](https://pandas.pydata.org/pandas-docs/stable/)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592251,
+          "key": "e0de2ca4-e95d-4e1e-bf87-6a52eba2bb0d",
+          "title": "为何要使用 Pandas？",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e0de2ca4-e95d-4e1e-bf87-6a52eba2bb0d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592103,
+              "key": "b37070ab-319f-42be-92f5-4ff55454a0fe",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 为何要使用 Pandas？\n\n机器学习算法能取得最近的飞速发展，部分原因就是我们可以用大量数据训练算法。但是，对于数据来说，数量并不是唯一重要的方面，数据质量也同等重要。经常大型数据库并不能直接馈送到学习算法中。很多时候，大型数据集缺失值、存在离群值、不正确的值，等等…例如，如果数据存在大量丢失值或糟糕值，机器学习算法将无法达到很好的性能。因此，机器学习的重要一步是首先检查数据，通过进行一些基本的数据分析，确保数据很适合你的训练算法。这时候，Pandas 就派上用场了。Pandas Series 和 DataFrame 专门用于快速进行数据分析和操纵，并且使用起来灵活简单。以下是使 Pandas 成为出色的数据分析软件包的几个功能：\n\n* 允许为行和列设定标签\n* 可以针对时间序列数据计算滚动统计学指标\n* 轻松地处理 NaN 值\n* 能够将不同格式的数据加载到 DataFrame 中\n* 可以将不同的数据集合并到一起\n* 与 NumPy 和 Matplotlib 集成\n\n因为这些原因以及其他原因，Pandas DataFrame 已经成为 Python 中最常用的数据分析 Pandas 对象之一。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592255,
+          "key": "4be561ba-ff64-4764-bcfd-db6ccd7403b8",
+          "title": "创建 Pandas Series",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4be561ba-ff64-4764-bcfd-db6ccd7403b8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592104,
+              "key": "cbc913f9-f835-4c37-bd90-1b1e670418a6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 创建 Pandas Series",
+              "instructor_notes": ""
+            },
+            {
+              "id": 592105,
+              "key": "a44f5540-6990-44d9-8dce-18941f7510e2",
+              "title": "Pandas 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "iXnYN8cnhzs",
+                "china_cdn_id": "iXnYN8cnhzs.mp4"
+              }
+            },
+            {
+              "id": 592106,
+              "key": "5deae364-b4dc-4ae1-8026-8296f981e1e8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Pandas series 是一个像数组一样的*一维*对象，可以存储很多类型的数据，例如数字或字符串。Pandas Series 和 NumPy ndarray 之间的主要区别之一是你可以为 Pandas Series 中的每个元素分配索引标签。换句话说，你可以为 Pandas Series 索引指定任何名称。Pandas Series 和 NumPy ndarrays 之间的另一个明显区别是 Pandas Series 可以存储不同类型的数据。\n\n我们先在 Python 中导入 Pandas。通常，我们使用 `pd` 导入 Pandas。因此，你可以在 Jupyter Notebook 中输入以下命令，导入 Pandas：\n\n```\nimport pandas as pd\n```\n\n我们先创建一个 Pandas Series。你可以使用 `pd.Series(data, index)` 命令创建 Pandas Series，其中 `index` 是一个索引标签列表。我们使用 Pandas Series 存储一个购物清单。我们将使用食品条目作为索引标签，使用购买数量作为数据。\n\n```\n# We import Pandas as pd into Python\nimport pandas as pd\n\n# We create a Pandas Series that stores a grocery list\ngroceries = pd.Series(data = [30, 6, 'Yes', 'No'], index = ['eggs', 'apples', 'milk', 'bread'])\n\n# We display the Groceries Pandas Series\ngroceries\n```\n\n> eggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n可以看出 Pandas Series 的显示方式为：第一列是索引，第二列是数据。注意，数据的索引不是从 0 到 3，而是采用我们设置的食品名称，即鸡蛋、苹果、等...此外注意，我们的 Pandas Series 中的数据既包括整数，又包括字符串。\n\n和 NumPy ndarray 一样，通过 Pandas Series 的一些属性，我们可以轻松地获取 series 中的信息。我们来看一些属性：\n\n```\n# We print some information about Groceries\nprint('Groceries has shape:', groceries.shape)\nprint('Groceries has dimension:', groceries.ndim)\nprint('Groceries has a total of', groceries.size, 'elements')\n```\n\n> Groceries has shape: (4,)  \nGroceries has dimension: 1  \nGroceries has a total of 4 elements\n\n我们还可以单独输出 Pandas Series 的索引标签和数据。如果你不知道 Pandas Series 的索引标签是什么，这种方法就很有用。\n\n```\n# We print the index and data of Groceries\nprint('The data in Groceries is:', groceries.values)\nprint('The index of Groceries is:', groceries.index)\n```\n\n> The data in Groceries is: [30 6 'Yes' 'No']  \nThe index of Groceries is: Index(['eggs', 'apples', 'milk', 'bread'], dtype='object')\n\n如果你处理的是非常庞大的 Pandas Series，并且不清楚是否存在某个索引标签，可以使用 `in` 命令检查是否存在该标签：\n\n```\n# We check whether bananas is a food item (an index) in Groceries\nx = 'bananas' in groceries\n\n# We check whether bread is a food item (an index) in Groceries\ny = 'bread' in groceries\n\n# We print the results\nprint('Is bananas an index label in Groceries:', x)\nprint('Is bread an index label in Groceries:', y)\n```\n\n> Is bananas an index label in Groceries: False  \nIs bread an index label in Groceries: True",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592254,
+          "key": "dc825e65-032d-4cb8-b3ed-e8ef91af620c",
+          "title": "访问和删除 Pandas Series 中的元素",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dc825e65-032d-4cb8-b3ed-e8ef91af620c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592102,
+              "key": "ca7a8f26-dd76-4ef5-a267-99e9fd603cbf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 访问和删除 Pandas Series 中的元素",
+              "instructor_notes": ""
+            },
+            {
+              "id": 592107,
+              "key": "37a282b2-4142-4f6e-9403-ab7b2ae354cd",
+              "title": "Pandas 2 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "B7MuFIwboKU",
+                "china_cdn_id": "B7MuFIwboKU.mp4"
+              }
+            },
+            {
+              "id": 592108,
+              "key": "da882df9-39e0-40ed-b9a4-0d0d7afb650f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "现在我们来了解如何访问或修改 Pandas Series 中的元素。Pandas Series 的一大优势是我们能够以很多不同的方式访问数据。我们可以通过在方括号 [ ] 内添加索引标签或数字索引访问元素，就像访问 NumPy ndarray 中的元素一样。因为我们可以使用数字索引，因此可以使用正整数从 Series 的开头访问数据，或使用负整数从末尾访问。因为我们可以通过多种方式访问元素，为了清晰地表明我们指代的是索引标签还是数字索引，Pandas Series 提供了两个属性 `.loc` 和 `.iloc`，帮助我们清晰地表明指代哪种情况。属性 `.loc` 表示 *位置*，用于明确表明我们使用的是标签索引。同样，属性 `.iloc` 表示*整型位置*，用于明确表明我们使用的是数字索引。我们来看一些示例：\n\n```\n# We access elements in Groceries using index labels:\n\n# We use a single index label\nprint('How many eggs do we need to buy:', groceries['eggs'])\nprint()\n\n# we can access multiple index labels\nprint('Do we need milk and bread:\\n', groceries[['milk', 'bread']]) \nprint()\n\n# we use loc to access multiple index labels\nprint('How many eggs and apples do we need to buy:\\n', groceries.loc[['eggs', 'apples']]) \nprint()\n\n# We access elements in Groceries using numerical indices:\n\n# we use multiple numerical indices\nprint('How many eggs and apples do we need to buy:\\n',  groceries[[0, 1]]) \nprint()\n\n# We use a negative numerical index\nprint('Do we need bread:\\n', groceries[[-1]]) \nprint()\n\n# We use a single numerical index\nprint('How many eggs do we need to buy:', groceries[0]) \nprint()\n# we use iloc to access multiple numerical indices\nprint('Do we need milk and bread:\\n', groceries.iloc[[2, 3]]) \n```\n\n> How many eggs do we need to buy: 30\n\n> Do we need milk and bread:  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n> How many eggs and apples do we need to buy:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \napples &nbsp;&nbsp;&nbsp; 6  \ndtype: object\n\n> How many eggs and apples do we need to buy:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \napples &nbsp;&nbsp;&nbsp; 6  \ndtype: object\n\n> Do we need bread:  \nbread &nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n> How many eggs do we need to buy: 30\n\n> Do we need milk and bread:  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n和 NumPy ndarray 一样，Pandas Series 也是可变的，也就是说，创建好 Pandas Series 后，我们可以更改其中的元素。例如，我们更改下购物清单中的鸡蛋购买数量\n\n```\n# We display the original grocery list\nprint('Original Grocery List:\\n', groceries)\n\n# We change the number of eggs to 2\ngroceries['eggs'] = 2\n\n# We display the changed grocery list\nprint()\nprint('Modified Grocery List:\\n', groceries)\n```\n\n> Original Grocery List:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n> Modified Grocery List:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n我们还可以使用 `.drop()` 方法删除 Pandas Series 中的条目。`Series.drop(label)` 方法会从给定 `Series` 中删除给定的 `label`。请注意，`Series.drop(label)` 方法不在原地地从 Series 中删除元素，即不会更改被修改的原始 Series。我们来看看代码编写方式\n\n```\n# We display the original grocery list\nprint('Original Grocery List:\\n', groceries)\n\n# We remove apples from our grocery list. The drop function removes elements out of place\nprint()\nprint('We remove apples (out of place):\\n', groceries.drop('apples'))\n\n# When we remove elements out of place the original Series remains intact. To see this\n# we display our grocery list again\nprint()\nprint('Grocery List after removing apples out of place:\\n', groceries)\n```\n\n> Original Grocery List:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n> We remove apples (out of place):  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n> Grocery List after removing apples out of place:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n我们可以通过在 `.drop()` 方法中将关键字 `inplace` 设为 `True`，原地地从 Pandas Series 中删除条目。我们来看一个示例：\n\n```\n# We display the original grocery list\nprint('Original Grocery List:\\n', groceries)\n\n# We remove apples from our grocery list in place by setting the inplace keyword to True\ngroceries.drop('apples', inplace = True)\n\n# When we remove elements in place the original Series its modified. To see this\n# we display our grocery list again\nprint()\nprint('Grocery List after removing apples in place:\\n', groceries)\n```\n\n> Original Grocery List:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object\n\n> Grocery List after removing apples in place:  \neggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No  \ndtype: object",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592256,
+          "key": "b042b182-8f47-4b23-a7f9-1a276baea9c9",
+          "title": "对 Pandas Series 执行算术运算",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b042b182-8f47-4b23-a7f9-1a276baea9c9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592109,
+              "key": "7e1ce3fc-4e54-4771-b47d-fb1a68c19330",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 对 Pandas Series 执行算术运算",
+              "instructor_notes": ""
+            },
+            {
+              "id": 592110,
+              "key": "69380cfb-9d88-4155-967e-f8a05e1b4229",
+              "title": "Pandas 3 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "yhMT0X6YPFA",
+                "china_cdn_id": "yhMT0X6YPFA.mp4"
+              }
+            },
+            {
+              "id": 592111,
+              "key": "ab6b327c-b830-45cd-9998-cc763f00e858",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "和 NumPy ndarray 一样，我们可以对 Pandas Series 执行元素级算术运算。在这节课，我们将了解 Pandas Series 和单个数字之间的算术运算。我们创建一个新的 Pandas Series，用于存储只有水果的购物清单。\n\n```\n# We create a Pandas Series that stores a grocery list of just fruits\nfruits= pd.Series(data = [10, 6, 3,], index = ['apples', 'oranges', 'bananas'])\n\n# We display the fruits Pandas Series\nfruits\n```\n\n> apples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  \ndtype: int64\n\n我们现在可以通过执行基本的算术运算，修改 fruits 中的数据。我们来看一些示例：\n\n```\n# We print fruits for reference\nprint('Original grocery list of fruits:\\n ', fruits)\n\n# We perform basic element-wise operations using arithmetic symbols\nprint()\nprint('fruits + 2:\\n', fruits + 2) # We add 2 to each item in fruits\nprint()\nprint('fruits - 2:\\n', fruits - 2) # We subtract 2 to each item in fruits\nprint()\nprint('fruits * 2:\\n', fruits * 2) # We multiply each item in fruits by 2 \nprint()\nprint('fruits / 2:\\n', fruits / 2) # We divide each item in fruits by 2\nprint()\n```\n\n> Original grocery list of fruits:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  \ndtype: int64\n\n> fruits + 2:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5  \ndtype: int64\n\n> fruits - 2:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  \ndtype: int64\n\n> fruits * 2:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20  \noranges &nbsp;&nbsp;&nbsp;&nbsp; 12  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \ndtype: int64\n\n> fruits / 2:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.0  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.0  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.5  \ndtype: float64\n\n我们还可以对 Pandas Series 中的所有元素应用 NumPy 中的数学函数，例如 `sqrt(x)`。\n\n```\n# We import NumPy as np to be able to use the mathematical functions\nimport numpy as np\n\n# We print fruits for reference\nprint('Original grocery list of fruits:\\n', fruits)\n\n# We apply different mathematical functions to all elements of fruits\nprint()\nprint('EXP(X) = \\n', np.exp(fruits))\nprint() \nprint('SQRT(X) =\\n', np.sqrt(fruits))\nprint()\nprint('POW(X,2) =\\n',np.power(fruits,2)) # We raise all elements of fruits to the power of 2\n```\n\n> Original grocery list of fruits:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  \ndtype: int64\n\n> EXP(X) =  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22026.465795  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 403.428793  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20.085537  \ndtype: float64\n\n> SQRT(X) =  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.162278  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.449490  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.732051  \ndtype: float64\n\n> POW(X,2) =  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 36  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9  \ndtype: int64\n\nPandas 还允许我们仅对 fruits 购物清单中的部分条目应用算术运算。我们来看一些示例：\n\n```\n# We print fruits for reference\nprint('Original grocery list of fruits:\\n ', fruits)\nprint()\n\n# We add 2 only to the bananas\nprint('Amount of bananas + 2 = ', fruits['bananas'] + 2)\nprint()\n\n# We subtract 2 from apples\nprint('Amount of apples - 2 = ', fruits.iloc[0] - 2)\nprint()\n\n# We multiply apples and oranges by 2\nprint('We double the amount of apples and oranges:\\n', fruits[['apples', 'oranges']] * 2)\nprint()\n\n# We divide apples and oranges by 2\nprint('We half the amount of apples and oranges:\\n', fruits.loc[['apples', 'oranges']] / 2)\n```\n\n> Original grocery list of fruits:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10  \noranges &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6  \nbananas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  \ndtype: int64\n\n> Amount of bananas + 2 =  5\n\n> Amount of apples - 2 =  8\n\n> We double the amount of apples and oranges:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20  \noranges &nbsp;&nbsp;&nbsp;&nbsp; 12  \ndtype: int64\n\n> We half the amount of apples and oranges:  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.0  \noranges &nbsp;&nbsp;&nbsp;&nbsp; 3.0  \ndtype: float64\n\n\n你还可以对具有混合数据类型的 Pandas Series 应用算术运算，前提是该算术运算适合 Series 中的*所有*数据类型，否则会出错。我们来看看将购物清单乘以 2 会发生什么\n\n```\n# We multiply our grocery list by 2\ngroceries * 2\n```\n\n> eggs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60  \napples &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12  \nmilk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YesYes  \nbread &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoNo  \ndtype: object\n\n可以看出，在上述示例中，我们乘以了 2，Pandas 使每个条目的数据翻倍，包括字符串。Pandas 能够这么操作是因为，乘法运算 `*` 对数字和字符串来说都可行。如果你要应用对数字有效但是对字符串无效的运算，例如 `/`，则会出错。如果 Pandas Series 中有混合类型的数据，确保对于*所有*的元素数据类型，这些算术运算都有效。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592257,
+          "key": "dc35aed8-4c0f-4ede-903c-0243f45125c3",
+          "title": "操纵 Series",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dc35aed8-4c0f-4ede-903c-0243f45125c3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592112,
+              "key": "1dc4a844-2c76-4115-844d-b9efe207ab40",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "1dc4a844-2c76-4115-844d-b9efe207ab40",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6269910888611840",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\r\n\r\n# DO NOT CHANGE THE VARIABLE NAMES\r\n\r\n# Given a list representing a few planets\r\nplanets = ['Earth','Saturn', 'Venus', 'Mars', 'Jupiter']\r\n\r\n# Given another list representing the the distance of the selected planets from the Sun\r\n# The distance from the Sun is in units of 10^6 km\r\ndistance_from_sun = [149.6, 1433.5, 108.2, 227.9, 778.6]\r\n\r\n\r\n# TO DO: Create a Pandas Series using the lists above, representing the distance of some planets from the Sun.\r\n# Use the `distance_from_sun` as your data, and `planets` as your index.\r\ndist_planets = \r\n\r\n\r\n# TO DO: Calculate the time (minutes) it takes sunlight to reach each planet. \r\n# You can do this by dividing each planet's distance from the Sun by the speed of light.\r\n# Use the speed of light, c = 18, since light travels 18 x 10^6 km/minute.\r\ntime_light = \r\n\r\n\r\n# TO DO: Use Boolean indexing to select only those planets for which sunlight takes less\r\n# than 40 minutes to reach them.\r\nclose_planets = ",
+                    "name": "sun_planets.py"
+                  },
+                  {
+                    "text": "import pandas as pd\r\n\r\ndistance_from_sun = [149.6, 1433.5, 108.2, 227.9, 778.6]\r\n\r\nplanets = ['Earth','Saturn', 'Venus', 'Mars', 'Jupiter']\r\n\r\ndist_planets = pd.Series(data = distance_from_sun, index = planets)\r\n\r\ntime_light = dist_planets / 18\r\n\r\nclose_planets = time_light[time_light < 40]",
+                    "name": "solution.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 592258,
+          "key": "173bd81d-7717-4225-b3cb-16b1a8818b14",
+          "title": "创建 Pandas DataFrame",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "173bd81d-7717-4225-b3cb-16b1a8818b14",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592113,
+              "key": "2d8c7246-29f1-4279-91b7-90b5d54bdd89",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 创建 Pandas DataFrame",
+              "instructor_notes": ""
+            },
+            {
+              "id": 592114,
+              "key": "15f35a8c-97ed-42d1-851e-5b35d5f25a55",
+              "title": "Pandas 4 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "eMHUn9v9dds",
+                "china_cdn_id": "eMHUn9v9dds.mp4"
+              }
+            },
+            {
+              "id": 592115,
+              "key": "714a6ced-450a-4d19-955a-d7f46b828f11",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Pandas DataFrames 是具有带标签的行和列的二维数据结构，可以存储很多类型的数据。如果你熟悉 Excel 的话，可以将 Pandas DataFrames 看做类似于电子表格。在接下来的课程中，我们将开始学习如何手动地通过字典创建 Pandas DataFrame，稍后，我们将学习如何将数据文件中的数据加载到 DataFrame 中。\n\n首先，我们将使用 Pandas Series 字典手动创建一个 DataFrame。第一步是创建 Pandas Series 字典。字典创建完毕后，我们可以将该字典传递给 `pd.DataFrame()` 函数。\n\n我们将创建一个字典，其中包含 Alice 和 Bob 从在线商店中购买的商品。该 Pandas Series 将使用所买商品的价格作为*数据*，所买商品作为*索引*标签。我们来看看如何编写代码：\n\n```\n# We import Pandas as pd into Python\nimport pandas as pd\n\n# We create a dictionary of Pandas Series \nitems = {'Bob' : pd.Series(data = [245, 25, 55], index = ['bike', 'pants', 'watch']),\n         'Alice' : pd.Series(data = [40, 110, 500, 45], index = ['book', 'glasses', 'bike', 'pants'])}\n\n# We print the type of items to see that it is a dictionary\nprint(type(items))\n```\n\n> class 'dict'\n\n字典已经创建完毕，我们可以通过将其传递给 `pd.DataFrame()` 函数，创建 DataFrame。我们将创建一个可以表示多位用户的购物车的 DataFrame，在此例中只有两位用户，即 Alice 和 Bob。\n\n```\n# We create a Pandas DataFrame by passing it a dictionary of Pandas Series\nshopping_carts = pd.DataFrame(items)\n\n# We display the DataFrame\nshopping_carts\n```\n\n>  |    |     ** Alice**      |  **Bob** |\n|----------|:-------------:|:------:|\n|**bike** | 500.0 | 245.0  |\n|**book** |40.0 | NaN  |\n|**glasses**|110.0|NaN  |\n|**pants**|45.0|25.0  |\n|**watch**|NaN|55.0|\n\n有几个事项需要注意。我们发现 DataFrame 以表格形式显示，和 Excel 电子表格很像，行和列的标签以**粗体**形式显示。此外注意，DataFrame 的行标签根据构建字典所用的两个 Pandas Series 的索引标签创建而成。DataFrame 的列标签来自字典的*键*。另一个注意事项是，列按照字母顺序排序，而不是字典中的顺序。稍后我们将发现，当我们从数据文件中向 DataFrame 加载数据时，不会发生这种情况。最后要注意的是，我们发现该 DataFrame 中出现了一些 `NaN` 值。`NaN` 是指*非数字*，Pandas 通过这种方式表示该行和列索引没有值。例如，如果我们查看 Alice 列，我们发现手表索引的值是 `NaN`。你可以通过查看一开始创建的字典，了解为何是这种情况。可以清晰地看出，Alice 手表标签没有条目。因此，在创建 DataFrame 时，如果特定行索引的特定列没有值，Pandas 将用 `NaN` 值填充。如果要将此数据馈送到机器学习算法中，我们首先需要删掉这些 `NaN` 值。在后面的课程中，我们将学习如何处理 `NaN` 值以及如何清理数据。暂时先将这些值留在我们的 DataFrame 中。\n\n在上述示例中，我们使用具有定义清晰的索引的 Pandas Series 字典创建了 Pandas DataFrame。如果我们不向 Pandas Series 提供索引标签，Pandas 在创建 DataFrame 时将使用数字行索引。我们来看一个示例：\n\n```\n# We create a dictionary of Pandas Series without indexes\ndata = {'Bob' : pd.Series([245, 25, 55]),\n        'Alice' : pd.Series([40, 110, 500, 45])}\n\n# We create a DataFrame\ndf = pd.DataFrame(data)\n\n# We display the DataFrame\ndf\n```\n\n>  |    |     ** Alice**      |  **Bob** |\n|----------|:-------------:|:------:|\n|**0** | 40 | 245.0  |\n|**1** |110 | 25.0  |\n|**2**|500|55.0  |\n|**3**|45|NaN  |\n\n\n可以看出，Pandas DataFrame 的行索引从 0 开始，就像 NumPy ndarray 的索引一样。\n\n现在，和 Pandas Series 一样，我们也可以使用属性从 DataFrame 中提取信息。我们输出 `shopping_carts` DataFrame 中的一些信息\n\n```\n# We print some information about shopping_carts\nprint('shopping_carts has shape:', shopping_carts.shape)\nprint('shopping_carts has dimension:', shopping_carts.ndim)\nprint('shopping_carts has a total of:', shopping_carts.size, 'elements')\nprint()\nprint('The data in shopping_carts is:\\n', shopping_carts.values)\nprint()\nprint('The row index in shopping_carts is:', shopping_carts.index)\nprint()\nprint('The column index in shopping_carts is:', shopping_carts.columns)\n```\n\n> shopping_carts has shape: (5, 2)  \nshopping_carts has dimension: 2  \nshopping_carts has a total of: 10 elements\n\n> The data in shopping_carts is:  \n[[ &nbsp;&nbsp; 500.  &nbsp;&nbsp; 245.]  \n[  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40. &nbsp;&nbsp;&nbsp; nan]  \n[ &nbsp;&nbsp;&nbsp; 110. &nbsp;&nbsp;&nbsp; nan]  \n[  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45. &nbsp;&nbsp;&nbsp;&nbsp; 25.]  \n[  &nbsp;&nbsp;&nbsp; nan &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55.]]\n\n> The row index in shopping_carts is: Index(['bike', 'book', 'glasses', 'pants', 'watch'], dtype='object')\n\n> The column index in shopping_carts is: Index(['Alice', 'Bob'], dtype='object')\n\n在 `shopping_carts` DataFrame 时，我们将整个字典传递给了 `pd.DataFrame()` 函数。但是，有时候你可能只对一部分数据感兴趣。在 Pandas 中，我们可以通过关键字 `columns` 和 `index` 选择要将哪些数据放入 DataFrame 中。我们来看一些示例：\n\n```\n# We Create a DataFrame that only has Bob's data\nbob_shopping_cart = pd.DataFrame(items, columns=['Bob'])\n\n# We display bob_shopping_cart\nbob_shopping_cart\n```\n\n>  |    |      **Bob** |\n|----------|:-------------:|:------:|\n|**bike** |245  |\n|**pants** |25  |\n|**watch**|55  |\n\n```\n# We Create a DataFrame that only has selected items for both Alice and Bob\nsel_shopping_cart = pd.DataFrame(items, index = ['pants', 'book'])\n\n# We display sel_shopping_cart\nsel_shopping_cart\n```\n\n>  |    |     ** Alice**      |  **Bob** |\n|----------|:-------------:|:------:|\n|**pants**|45|25.0  |\n|**book** |40| NaN  |\n\n\n```\n# We Create a DataFrame that only has selected items for Alice\nalice_sel_shopping_cart = pd.DataFrame(items, index = ['glasses', 'bike'], columns = ['Alice'])\n\n# We display alice_sel_shopping_cart\nalice_sel_shopping_cart\n```\n\n>  |    |      **Alice** |\n|----------|:-------------:|:------:|\n|**glasses** |110  |\n|**bike** |500  |\n\n你还可以使用列表（数组）字典手动地创建 DataFrame。流程和之前一样，首先创建一个字典，然后将该字典传递给 `pd.DataFrame()` 函数。但是在这种情况下，字典中的所有列表（数组）长度必须一样。我们来看一个示例：\n\n```\n# We create a dictionary of lists (arrays)\ndata = {'Integers' : [1,2,3],\n        'Floats' : [4.5, 8.2, 9.6]}\n\n# We create a DataFrame \ndf = pd.DataFrame(data)\n\n# We display the DataFrame\ndf\n```\n\n>  |    |     ** Floats**      |  **Integers** |\n|----------|:-------------:|:------:|\n|**0** | 4.5 | 1  |\n|**1** |8.2 | 2  |\n|**2**|9.6| 3  |\n\n注意，因为我们创建的 `data` 字典没有标签索引，因此 Pandas 在创建 DataFrame 时自动使用数字行索引。但是，我们可以通过在 `pd.DataFrame()` 函数中使用关键字 `index`，为行索引添加标签。我们来看一个示例：\n\n```\n# We create a dictionary of lists (arrays)\ndata = {'Integers' : [1,2,3],\n        'Floats' : [4.5, 8.2, 9.6]}\n\n# We create a DataFrame and provide the row index\ndf = pd.DataFrame(data, index = ['label 1', 'label 2', 'label 3'])\n\n# We display the DataFrame\ndf\n```\n\n>  |    |     ** Floats**      |  **Integers** |\n|----------|:-------------:|:------:|\n|**label 1** | 4.5 | 1  |\n|**label 2** |8.2 | 2  |\n|**label 3**|9.6| 3  |\n\n手动创建 Pandas DataFrame 的最后一种方式是使用 Python 字典列表。流程和之前一样，我们先创建字典，然后将该字典传递给 `pd.DataFrame()` 函数。\n\n```\n# We create a list of Python dictionaries\nitems2 = [{'bikes': 20, 'pants': 30, 'watches': 35}, \n          {'watches': 10, 'glasses': 50, 'bikes': 15, 'pants':5}]\n\n# We create a DataFrame \nstore_items = pd.DataFrame(items2)\n\n# We display the DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|\n|**0** |20 | NaN  |30 | 35 |\n|**1** |15 | 50.0 | 5 |10 |\n\n同样注意，因为我们创建的 `items2` 字典没有标签索引，因此 Pandas 在创建 DataFrame 时自动使用数字行索引。和之前一样，我们可以通过在 `pd.DataFrame()` 函数中使用关键字 `index`，为行索引添加标签。假设我们将使用该 DataFrame 存储某个商店的商品库存数量。我们将行索引的标签设为 **store 1** 和 **store 2**。\n\n```\n# We create a list of Python dictionaries\nitems2 = [{'bikes': 20, 'pants': 30, 'watches': 35}, \n          {'watches': 10, 'glasses': 50, 'bikes': 15, 'pants':5}]\n\n# We create a DataFrame  and provide the row index\nstore_items = pd.DataFrame(items2, index = ['store 1', 'store 2'])\n\n# We display the DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 35 |\n|**store 2** |15 | 50.0 | 5 |10 |",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592259,
+          "key": "1018da7f-6b26-4b71-9e27-679dfe799e79",
+          "title": "访问 Pandas DataFrame 中的元素",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1018da7f-6b26-4b71-9e27-679dfe799e79",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592116,
+              "key": "030e7adf-ab8b-4ee6-abd8-b453896f352f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 访问 Pandas DataFrame 中的元素",
+              "instructor_notes": ""
+            },
+            {
+              "id": 592117,
+              "key": "6f6c7d65-76ac-4a11-9888-a1d51abe2a4f",
+              "title": "Pandas 5 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lClsJnZn_7w",
+                "china_cdn_id": "lClsJnZn_7w.mp4"
+              }
+            },
+            {
+              "id": 592118,
+              "key": "9e083ac8-395d-4fc9-b2d5-8fbf7417e038",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们可以通过多种不同的方式访问 Pandas DataFrame 中的元素。通常，我们可以使用行和列标签访问 DataFrame 的行、列或单个元素。我们将使用在上节课创建的同一 `store_items` DataFrame。我们来看一些示例：\n\n```\n# We print the store_items DataFrame\nprint(store_items)\n\n# We access rows, columns and elements using labels\nprint()\nprint('How many bikes are in each store:\\n', store_items[['bikes']])\nprint()\nprint('How many bikes and pants are in each store:\\n', store_items[['bikes', 'pants']])\nprint()\nprint('What items are in Store 1:\\n', store_items.loc[['store 1']])\nprint()\nprint('How many bikes are in Store 2:', store_items['bikes']['store 2'])\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 35 |\n|**store 2** |15 | 50.0 | 5 |10 |\n\n> How many bikes are in each store:  \n\n>  |    |     ** bikes**      |  \n|----------|:-------------:|\n|**store 1** |20 | \n|**store 2** |15 |\n\n\n> How many bikes and pants are in each store:  \n\n>  |    |     ** bikes**      |  **pants** | \n|----------|:-------------:|:------:|\n|**store 1** |20  |30 |\n|**store 2** |15  | 5 |\n\n\n> What items are in Store 1:  \n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 35 |\n\n> How many bikes are in Store 2: 15\n\n请注意，在访问 DataFrame 中的单个元素时，就像上个示例一样，必须始终提供标签，并且列标签在前，格式为 `dataframe[column][row]`。例如，在检索商店 2 中的自行车数量时，我们首先使用列标签 **bikes**，然后使用行标签 **store 2**。如果先提供行标签，将出错。\n\n我们还可以通过添加行或列修改 DataFrame。我们先了解如何向 DataFrame 中添加新的列。假设我们想添加每个商店的**衬衫**库存。为此，我们需要向 `store_items` DataFrame 添加一个新列，表示每个商店的衬衫库存。我们来编写代码：\n\n```\n# We add a new column named shirts to our store_items DataFrame indicating the number of shirts in stock at each store. We\n# will put 15 shirts in store 1 and 2 shirts in store 2\nstore_items['shirts'] = [15,2]\n\n# We display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **watches** | **shirts** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 35 | 15|\n|**store 2** |15 | 50.0 | 5 |10 | 2|\n\n可以看出，当我们添加新的列时，新列添加到了 DataFrame 的末尾。\n\n还可以使用算术运算符向 DataFrame 中的其他列之间添加新列。我们来看一个示例：\n\n```\n# We make a new column called suits by adding the number of shirts and pants\nstore_items['suits'] = store_items['pants'] + store_items['shirts']\n\n# We display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **watches** | **shirts** | **suits** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 35 | 15| 45 |\n|**store 2** |15 | 50.0 | 5 |10 | 2| 7 |\n\n假设现在你开了一家新店，需要将该商店的商品库存添加到 DataFrame 中。为此，我们可以向 `store_items` Dataframe 中添加一个新行。要向 DataFrame 中添加行，我们首先需要创建新的 Dataframe，然后将其附加到原始 DataFrame 上。我们来看看代码编写方式\n\n```\n# We create a dictionary from a list of Python dictionaries that will number of items at the new store\nnew_items = [{'bikes': 20, 'pants': 30, 'watches': 35, 'glasses': 4}]\n\n# We create new DataFrame with the new_items and provide and index labeled store 3\nnew_store = pd.DataFrame(new_items, index = ['store 3'])\n\n# We display the items at the new store\nnew_store\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **watches** | \n|----------|:-------------:|:------:|:------:|:------:|\n|**store 3** |20 | 4  |30 | 35 | \n\n\n现在，我们使用 `.append()` 方法将此行添加到 `store_items` DataFrame 中。\n\n```\n# We append store 3 to our store_items DataFrame\nstore_items = store_items.append(new_store)\n\n# We display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 45.0| 35 |\n|**store 2** |15 | 50.0 | 5 |2.0 | 7.0| 10 |\n|**store 3** |20 | 4.0  |30 | NaN | NaN | 35 | \n\n注意，将新行附加到 DataFrame 后，列按照字母顺序排序了。\n\n我们还可以仅使用特定列的特定行中的数据向 DataFrame 添加新的列。例如，假设你想在商店 2 和 3 中上一批**新手表**，并且**新手表**的数量与这些商店原有手表的库存一样。我们来看看如何编写代码\n\n```\n# We add a new column using data from particular rows in the watches column\nstore_items['new watches'] = store_items['watches'][1:]\n\n# We display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **suits** | **watches** | **new watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 45.0| 35 | NaN |\n|**store 2** |15 | 50.0 | 5 |2.0 | 7.0| 10 | 10.0 |\n|**store 3** |20 | 4.0  |30 | NaN | NaN | 35 | 35.0 |\n\n我们还可以将新列插入 DataFrames 的任何位置。`dataframe.insert(loc,label,data)` 方法使我们能够将新列（具有给定列`标签`和给定`数据`）插入 `dataframe` 的 `loc` 位置。我们将名称为 **shoes** 的新列插入 **suits** 列前面。因为 **suits** 的数字索引值为 4，我们将此值作为 `loc`。我们来看看代码编写方式：\n\n```\n# We insert a new column with label shoes right before the column with numerical index 4\nstore_items.insert(4, 'shoes', [8,5,0])\n\n# we display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** | **new watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 8 | 45.0| 35 | NaN |\n|**store 2** |15 | 50.0 | 5 |2.0 | 5 |7.0| 10 | 10.0 |\n|**store 3** |20 | 4.0  |30 | NaN | 0 | NaN | 35 | 35.0 |\n\n就像我们可以添加行和列一样，我们也可以删除它们。要删除 DataFrame 中的行和列，我们将使用 `.pop()` 和 `.drop()` 方法。`.pop()` 方法仅允许我们删除列，而 `.drop()` 方法可以同时用于删除行和列，只需使用关键字 `axis` 即可。我们来看一些示例：\n\n```\n# We remove the new watches column\nstore_items.pop('new watches')\n\n# we display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 8 | 45.0| 35 | \n|**store 2** |15 | 50.0 | 5 |2.0 | 5 |7.0| 10 | \n|**store 3** |20 | 4.0  |30 | NaN | 0 | NaN | 35 | \n\n\n```\n# We remove the watches and shoes columns\nstore_items = store_items.drop(['watches', 'shoes'], axis = 1)\n\n# we display the modified DataFrame\nstore_items\n```\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **suits** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 45.0| \n|**store 2** |15 | 50.0 | 5 |2.0 | 7.0|\n|**store 3** |20 | 4.0  |30 | NaN |NaN | \n\n```\n# We remove the store 2 and store 1 rows\nstore_items = store_items.drop(['store 2', 'store 1'], axis = 0)\n\n# we display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **suits** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|\n|**store 3** |20 | 4.0  |30 | NaN |NaN | \n\n有时候，我们可能需要更改行和列标签。我们使用 `.rename()` 方法将 **bikes** 列标签改为 **hats** \n\n```\n# We change the column label bikes to hats\nstore_items = store_items.rename(columns = {'bikes': 'hats'})\n\n# we display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** hats**      |  **glasses** | **pants** | **shirts** | **suits** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|\n|**store 3** |20 | 4.0  |30 | NaN |NaN | \n\n现在再次使用 `.rename()` 方法更改行标签。\n\n```\n# We change the row label from store 3 to last store\nstore_items = store_items.rename(index = {'store 3': 'last store'})\n\n# we display the modified DataFrame\nstore_items\n```\n\n>  |    |     ** hats**      |  **glasses** | **pants** | **shirts** | **suits** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|\n|**last store** |20 | 4.0  |30 | NaN |NaN | \n\n你还可以将索引改为 DataFrame 中的某个列。\n\n```\n# We change the row index to be the data in the pants column\nstore_items = store_items.set_index('pants')\n\n# we display the modified DataFrame\nstore_items\n```\n\n>  |  **pants**   |     ** hats**      |  **glasses** | **shirts** | **suits** |\n|----------|:-------------:|:------:|:------:|:------:|\n|**30** |20 | 4.0  | NaN |NaN | ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592260,
+          "key": "9463bfe0-5181-4a87-8635-bb24a01ec246",
+          "title": "处理 NaN",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9463bfe0-5181-4a87-8635-bb24a01ec246",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592119,
+              "key": "1f02338d-cb26-45f1-a935-fa14ef887ed0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 处理 NaN",
+              "instructor_notes": ""
+            },
+            {
+              "id": 592120,
+              "key": "7ad67a78-c72c-4dd2-989b-0be4bd2da050",
+              "title": "Pandas 6 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "GS1kj04XQcM",
+                "china_cdn_id": "GS1kj04XQcM.mp4"
+              }
+            },
+            {
+              "id": 592121,
+              "key": "52023cc4-d512-4355-b391-2f50e9e68a30",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "正如之前提到的，在能够使用大型数据集训练学习算法之前，我们通常需要先清理数据。也就是说，我们需要通过某个方法检测并更正数据中的错误。虽然任何给定数据集可能会出现各种糟糕的数据，例如离群值或不正确的值，但是我们几乎始终会遇到的糟糕数据类型是缺少值。正如之前看到的，Pandas 会为缺少的值分配 `NaN` 值。在这节课，我们将学习如何检测和处理 `NaN` 值。\n\n首先，我们将创建一个具有一些 `NaN` 值的 DataFrame。\n\n```\n# We create a list of Python dictionaries\nitems2 = [{'bikes': 20, 'pants': 30, 'watches': 35, 'shirts': 15, 'shoes':8, 'suits':45},\n{'watches': 10, 'glasses': 50, 'bikes': 15, 'pants':5, 'shirts': 2, 'shoes':5, 'suits':7},\n{'bikes': 20, 'pants': 30, 'watches': 35, 'glasses': 4, 'shoes':10}]\n\n# We create a DataFrame  and provide the row index\nstore_items = pd.DataFrame(items2, index = ['store 1', 'store 2', 'store 3'])\n\n# We display the DataFrame\nstore_items\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 8 | 45.0| 35 |\n|**store 2** |15 | 50.0 | 5 |2.0 | 5 | 7.0| 10 |\n|**store 3** |20 | 4.0  |30 | NaN | 10 |NaN | 35 | \n\n可以清晰地看出，我们创建的 DataFrame 具有 3 个 `NaN` 值：商店 1 中有一个，商店 3 中有两个。但是，如果我们向 DataFrame 中加载非常庞大的数据集，可能有数百万条数据，那么就不太容易直观地发现 `NaN` 值的数量。对于这些情形，我们结合使用多种方法来计算数据中的 `NaN` 值的数量。以下示例同时使用了 `.isnull()` 和 `sum()` 方法来计算我们的 DataFrame 中的 `NaN` 值的数量。 \n\n```\n# We count the number of NaN values in store_items\nx =  store_items.isnull().sum().sum()\n\n# We print x\nprint('Number of NaN values in our DataFrame:', x)\n```\n\n> Number of NaN values in our DataFrame: 3\n\n在上述示例中，`.isnull()` 方法返回一个大小和 `store_items` 一样的*布尔型* DataFrame，并用 `True` 表示具有 `NaN` 值的元素，用 `False` 表示非 NaN 值的元素。我们来看一个示例：\n\n```\nstore_items.isnull()\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |False | True  |False | False| False | False| False |\n|**store 2** |False | False | False |False | False | False| False |\n|**store 3** |False | False  |False | True | False |True | False | \n\n在 Pandas 中，逻辑值 `True` 的数字值是 1，逻辑值 `False` 的数字值是 0。因此，我们可以通过数逻辑值 `True` 的数量数出 `NaN` 值的数量。为了数逻辑值 `True` 的总数，我们使用 `.sum()` 方法两次。要使用该方法两次，是因为第一个 sum() 返回一个 Pandas Series，其中存储了列上的逻辑值 `True` 的总数，如下所示：\n\n```\nstore_items.isnull().sum()\n```\n\n> bikes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0  \nglasses &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  \npants &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0  \nshirts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  \nshoes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0  \nsuits &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1  \nwatches &nbsp;&nbsp;&nbsp;&nbsp; 0  \ndtype: int64\n\n第二个 sum() 将上述 Pandas Series 中的 1 相加。\n\n除了数 `NaN` 值的数量之外，我们还可以采用相反的方式，我们可以数*非 NaN* 值的数量。为此，我们可以使用 `.count()` 方法，如下所示：\n\n```\n# We print the number of non-NaN values in our DataFrame\nprint()\nprint('Number of non-NaN values in the columns of our DataFrame:\\n', store_items.count())\n```\n\n> Number of non-NaN values in the columns of our DataFrame:  \nbikes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  \nglasses &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  \npants &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  \nshirts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  \nshoes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3  \nsuits &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2  \nwatches &nbsp;&nbsp;&nbsp;&nbsp; 3  \ndtype: int64\n\n现在我们已经知道如何判断数据集中是否有任何 `NaN` 值，下一步是决定如何处理这些 NaN 值。通常，我们有两种选择，可以*删除*或*替换* `NaN` 值。在下面的示例中，我们将介绍这两种方式。\n\n首先，我们将学习如何从 DataFrame 中删除包含任何 `NaN` 值的行或列。如果 `axis = 0`，`.dropna(axis)` 方法将删除包含 `NaN` 值的任何*行*，如果 `axis = 1`，`.dropna(axis)` 方法将删除包含 `NaN` 值的任何*列*。我们来看一些示例：\n\n```\n# We drop any rows with NaN values\nstore_items.dropna(axis = 0)\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 2** |15 | 50.0 | 5 |2.0 | 5 | 7.0| 10 |\n\n```\n# We drop any columns with NaN values\nstore_items.dropna(axis = 1)\n```\n\n>  |    |     ** bikes**     |  **pants** |  **shoes** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | 30 | 8 |  35 |\n|**store 2** |15 |  5 | 5 |  10 |\n|**store 3** |20 | 30 |  10 | 35 | \n\n注意，`.dropna()` 方法不在原地地删除具有 `NaN` 值的行或列。也就是说，原始 DataFrame 不会改变。你始终可以在 `dropna()` 方法中将关键字 `inplace 设为 True`，在原地删除目标行或列。\n\n现在，我们不再删除 `NaN` 值，而是将它们替换为合适的值。例如，我们可以选择将所有 `NaN` 值替换为 0。为此，我们可以使用 `.fillna()` 方法，如下所示。\n\n```\n# We replace all NaN values with 0\nstore_items.fillna(0)\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | 0.0  |30 | 15.0| 8 | 45.0| 35 |\n|**store 2** |15 | 50.0 | 5 |2.0 | 5 | 7.0| 10 |\n|**store 3** |20 | 4.0  |30 |0.0 | 10 |0.0 | 35 | \n\n我们还可以使用 `.fillna()` 方法将 `NaN` 值替换为 DataFrame 中的上个值，称之为*前向填充*。在通过前向填充替换 `NaN` 值时，我们可以使用列或行中的上个值。`.fillna(method = 'ffill', axis)` 将通过前向填充 (`ffill`) 方法沿着给定 `axis` 使用上个已知值替换 `NaN` 值。我们来看一些示例：\n\n```\n# We replace NaN values with the previous value in the column\nstore_items.fillna(method = 'ffill', axis = 0)\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 8 | 45.0| 35 |\n|**store 2** |15 | 50.0 | 5 |2.0 | 5 | 7.0| 10 |\n|**store 3** |20 | 4.0  |30 | 2.0 | 10 |7.0 | 35 | \n\n注意 **store 3** 中的两个 `NaN` 值被替换成了它们所在列中的上个值。但是注意， **store 1** 中的 `NaN` 值没有被替换掉。因为这列前面没有值，因为 `NaN` 值是该列的第一个值。但是，如果使用上个行值进行前向填充，则不会发生这种情况。我们来看看具体情形：\n\n```\n# We replace NaN values with the previous value in the row\nstore_items.fillna(method = 'ffill', axis = 1)\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20.0 | 20.0  |30.0 | 15.0| 8.0 | 45.0| 35.0 |\n|**store 2** |15.0 | 50.0 | 5.0 |2.0 | 5.0 | 7.0| 10.0 |\n|**store 3** |20.0 | 4.0  |30.0 | 30.0 | 10.0 |10.0 | 35.0 | \n\n我们看到，在这种情形下，所有 `NaN` 值都被替换成了之前的行值。\n\n同样，你可以选择用 DataFrame 中之后的值替换 `NaN` 值，称之为*后向填充*。`.fillna(method = 'backfill', axis)` 将通过后向填充 (`backfill`) 方法沿着给定 `axis` 使用下个已知值替换 `NaN` 值。和前向填充一样，我们可以选择使用行值或列值。我们来看一些示例：\n\n```\n# We replace NaN values with the next value in the column\nstore_items.fillna(method = 'backfill', axis = 0)\n```\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | 50.0  |30 | 15.0| 8 | 45.0| 35 |\n|**store 2** |15 | 50.0 | 5 |2.0 | 5 | 7.0| 10 |\n|**store 3** |20 | 4.0  |30 | NaN | 10 |NaN | 35 | \n\n注意，**store 1** 中的 `NaN` 值被替换成了它所在列的下个值。但是注意，**store 3** 中的两个 `NaN` 值没有被替换掉。因为这些列中没有下个值，这些 `NaN` 值是这些列中的最后一个值。但是，如果使用下个行值进行后向填充，则不会发生这种情况。我们来看看具体情形：\n\n```\n# We replace NaN values with the next value in the row\nstore_items.fillna(method = 'backfill', axis = 1)\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20.0 | 30.0 |30.0 | 15.0| 8.0 | 45.0| 35.0 |\n|**store 2** |15.0 | 50.0 | 5.0 |2.0 | 5.0 | 7.0| 10.0 |\n|**store 3** |20.0 | 4.0  |30.0 | 10.0 | 10.0 |35.0 | 35.0 | \n\n注意，`.fillna()` 方法不在原地地替换（填充）`NaN` 值。也就是说，原始 DataFrame 不会改变。你始终可以在 `fillna()` 函数中将关键字 `inplace 设为 True`，在原地替换 `NaN` 值。\n\n我们还可以选择使用不同的插值方法替换 `NaN` 值。例如，`.interpolate(method = 'linear', axis)` 方法将通过 `linear` 插值使用沿着给定 `axis` 的值替换 `NaN` 值。我们来看一些示例：\n\n```\n# We replace NaN values by using linear interpolation using column values\nstore_items.interpolate(method = 'linear', axis = 0)\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20 | NaN  |30 | 15.0| 8 | 45.0| 35 |\n|**store 2** |15 | 50.0 | 5 |2.0 | 5 | 7.0| 10 |\n|**store 3** |20 | 4.0  |30 | 2.0 | 10 |7.0| 35 | \n\n注意，**store 3** 中的两个 `NaN` 值被替换成了线性插值。但是注意，**store 1** 中的 `NaN` 值没有被替换掉。因为该 `NaN` 值是该列中的第一个值，因为它前面没有数据，因此插值函数无法计算值。现在，我们使用行值插入值：\n\n```\n# We replace NaN values by using linear interpolation using row values\nstore_items.interpolate(method = 'linear', axis = 1)\n```\n\n>  |    |     ** bikes**      |  **glasses** | **pants** | **shirts** | **shoes** | **suits** | **watches** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**store 1** |20.0 | 25.0  |30.0 | 15.0| 8.0 | 45.0| 35.0 |\n|**store 2** |15.0 | 50.0 | 5.0 |2.0 | 5.0 | 7.0| 10.0 |\n|**store 3** |20.0 | 4.0  |30.0 | 20.0 | 10.0 |22.5 | 35.0 | \n\n和我们看到的其他方法一样，`.interpolate()` 方法不在原地地替换 `NaN` 值。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592261,
+          "key": "869394af-48c8-416d-97db-d0709f52d82b",
+          "title": "操纵 DataFrame",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "869394af-48c8-416d-97db-d0709f52d82b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 592122,
+              "key": "bfe151fa-2c5d-4b23-bc83-2f456a5f9d5a",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "现在，你可以从上述 DataFrame 中选择评分为 5 的所有图书了，一行代码就能搞定。先尝试自己操作一遍，你将在下面找到答案：\n\n`best_rated = book_ratings[(book_ratings == 5).any(axis = 1)]['Book Title'].values`\n\n上述代码返回一个只含评分为 5 的图书名称的 NumPy ndarray",
+              "user_state": {
+                "node_key": "bfe151fa-2c5d-4b23-bc83-2f456a5f9d5a",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6488286621728768",
+                "initial_code_files": [
+                  {
+                    "text": "import pandas as pd\r\nimport numpy as np\r\n\r\n# DO NOT CHANGE THE VARIABLE NAMES\r\n\r\n# Set the precision of our dataframes to one decimal place.\r\npd.set_option('precision', 1)\r\n\r\n# Create a Pandas DataFrame that contains the ratings some users have given to a series of books. \r\n# The ratings given are in the range from 1 to 5, with 5 being the best score. \r\n# The names of the books, the corresponding authors, and the ratings of each user are given below:\r\n\r\nbooks = pd.Series(data = ['Great Expectations', 'Of Mice and Men', 'Romeo and Juliet', 'The Time Machine', 'Alice in Wonderland' ])\r\nauthors = pd.Series(data = ['Charles Dickens', 'John Steinbeck', 'William Shakespeare', ' H. G. Wells', 'Lewis Carroll' ])\r\n\r\n# User ratings are in the order of the book titles mentioned above\r\n# If a user has not rated all books, Pandas will automatically consider the missing values as NaN.\r\n# If a user has mentioned `np.nan` value, then also it means that the user has not yet rated that book.\r\nuser_1 = pd.Series(data = [3.2, np.nan ,2.5])\r\nuser_2 = pd.Series(data = [5., 1.3, 4.0, 3.8])\r\nuser_3 = pd.Series(data = [2.0, 2.3, np.nan, 4])\r\nuser_4 = pd.Series(data = [4, 3.5, 4, 5, 4.2])\r\n\r\n\r\n# Use the data above to create a Pandas DataFrame that has the following column\r\n# labels: 'Author', 'Book Title', 'User 1', 'User 2', 'User 3', 'User 4'. \r\n# Let Pandas automatically assign numerical row indices to the DataFrame. \r\n\r\n# TO DO: Create a dictionary with the data given above\r\ndat = \r\n\r\n# TO DO: Create a Pandas DataFrame using the dictionary created above\r\nbook_ratings = \r\n\r\n# TO DO:\r\n# If you created the dictionary correctly you should have a Pandas DataFrame\r\n# that has column labels: \r\n# 'Author', 'Book Title', 'User 1', 'User 2', 'User 3', 'User 4' \r\n# and row indices 0 through 4.\r\n\r\n# Now replace all the NaN values in your DataFrame with the average rating in\r\n# each column. Replace the NaN values in place. \r\n# HINT: Use the `pandas.DataFrame.fillna(value, inplace = True)` function for substituting the NaN values. \r\n# Write your code below:\r\n\r\n\r\n\r\n",
+                    "name": "book_r.py"
+                  },
+                  {
+                    "text": "import pandas as pd\r\nimport numpy as np\r\n\r\npd.set_option('precision', 1)\r\n\r\nbooks = pd.Series(data = ['Great Expectations', 'Of Mice and Men', 'Romeo and Juliet', 'The Time Machine', 'Alice in Wonderland' ])\r\nauthors = pd.Series(data = ['Charles Dickens', 'John Steinbeck', 'William Shakespeare', ' H. G. Wells', 'Lewis Carroll' ])\r\nuser_1 = pd.Series(data = [3.2, np.nan ,2.5])\r\nuser_2 = pd.Series(data = [5., 1.3, 4.0, 3.8])\r\nuser_3 = pd.Series(data = [2.0, 2.3, np.nan, 4])\r\nuser_4 = pd.Series(data = [4, 3.5, 4, 5, 4.2])\r\n\r\ndat = {'Book Title' : books,\r\n       'Author' : authors,\r\n       'User 1' : user_1,\r\n       'User 2' : user_2,\r\n       'User 3' : user_3,\r\n       'User 4' : user_4}\r\n\r\nbook_ratings = pd.DataFrame(dat)\r\n\r\nbook_ratings.fillna(book_ratings.mean(), inplace = True)\r\n",
+                    "name": "solution.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 592263,
+          "key": "5129486a-40be-4660-b91f-f42522efdd5b",
+          "title": "将数据加载到 Pandas DataFrame 中",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5129486a-40be-4660-b91f-f42522efdd5b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": {
+            "files": [
+              {
+                "name": "Goog-1",
+                "uri": "https://video.udacity-data.com/topher/2020/March/5e718900_goog-1/goog-1.csv"
+              }
+            ],
+            "google_plus_link": null,
+            "career_resource_center_link": null,
+            "coaching_appointments_link": null,
+            "office_hours_link": null,
+            "aws_provisioning_link": null
+          },
+          "atoms": [
+            {
+              "id": 592123,
+              "key": "b2a5fd09-0acf-44e6-b501-b1afb0d4555e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 将数据加载到 Pandas DataFrame 中",
+              "instructor_notes": ""
+            },
+            {
+              "id": 592124,
+              "key": "5525ff9b-cd5e-43fe-9f0d-d6d9757c1a50",
+              "title": "Pandas 7 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "ruTYp-twXO0",
+                "china_cdn_id": "ruTYp-twXO0.mp4"
+              }
+            },
+            {
+              "id": 592126,
+              "key": "d8a5c649-cc7b-4eda-900c-80e0199ba734",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "在机器学习中，你很有可能会使用来自很多来源的数据库训练学习算法。Pandas 使我们能够将不同格式的数据库加载到 DataFrame 中。用于存储数据库的最热门数据格式是 csv。CSV 是指*逗号分隔值*，是一种简单的数据存储格式。我们可以使用 `pd.read_csv()` 函数将 CSV 文件加载到 Pandas DataFrame 中。我们将 Google 股票数据加载到一个 Pandas DataFrame 中。GOOG.csv 文件包含从雅虎金融那获取的 2004 年 8 月 19 日至 2017 年 10 月 13 日 Google 股票数据。\n\n```\n# 我们将 Google 股票数据加载到 DataFrame 中\nGoogle_stock = pd.read_csv('./GOOG.csv')\n\n# 我们输出关于 Google_stock 的一些信息\nprint('Google_stock is of type:', type(Google_stock))\nprint('Google_stock has shape:', Google_stock.shape)\n```\n\n> Google_stock is of type: class 'pandas.core.frame.DataFrame'  \nGoogle_stock has shape: (3313, 7)\n\n可以看出，我们将 GOOG.csv 文件加载到了 Pandas DataFrame 中，其中包含 3,313 行和 7 列数据。现在我们来看看股票数据\n\n```\nGoogle_stock\n```\n\n> |   |  **Date** | **Open** |\t**High** | **Low** | **Close** | \t**Adj Close** | **Volume** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**0** | 2004-08-19 | 49.676899 | 51.693783 | 47.669952 | 49.845802 | 49.845802 | 44994500 |\n|**1** | 2004-08-20 | 50.178635 | 54.187561 | 49.925285 | 53.805050 | 53.805050 | 23005800 |  \n|**2** | 2004-08-23 | 55.017166 | 56.373344 | 54.172661 | 54.346527 | 54.346527 | 18393200 |\n|... \t... |\n|**3311** | 2017-10-12 | 987.450012 | 994.119995 | 985.000000 | 987.830017 | 987.830017 | 1262400 |  \n|**3312** | 2017-10-13 | 992.000000 | 997.210022 | 989.000000 | 989.679993 | 989.679993 | 1157700  |\n\n> 3313 rows × 7 columns\n\n可以看出，这是一个非常庞大的数据集，Pandas 自动为该 DataFrame 分配了数字行索引。Pandas 还使用出现在 CSV 文件中的标签为列分配标签。\n\n在处理这样的大型数据集时，通常有必要直接查看前几行数据，而不是整个数据集。我们可以使用 `.head()` 方法查看前 5 行数据，如下所示\n\n```\nGoogle_stock.head()\n```\n\n> |   |  **Date** | **Open** |\t**High** | **Low** | **Close** | \t**Adj Close** | **Volume** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**0** | 2004-08-19 | 49.676899 | 51.693783 | 47.669952 | 49.845802 | 49.845802 | 44994500 |\n|**1** | 2004-08-20 | 50.178635 | 54.187561 | 49.925285 | 53.805050 | 53.805050 | 23005800 |  \n|**2** | 2004-08-23 | 55.017166 | 56.373344 | 54.172661 | 54.346527 | 54.346527 | 18393200 |\n|**3** | 2004-08-24 | 55.260582 | 55.439419 | 51.450363 | 52.096165 | 52.096165 | 15361800 | \n|**4** | 2004-08-25 | 52.140873 | 53.651051 | 51.604362 | 52.657513 | 52.657513 | 9257400 |\n\n我们还可以使用 `.tail()` 方法查看最后 5 行数据：\n\n```\nGoogle_stock.tail()\n```\n\n> |   |  **Date** | **Open** |\t**High** | **Low** | **Close** | \t**Adj Close** | **Volume** |\n|----------|:-------------:|:------:|:------:|:------:|:------:|:------:|:------:|\n|**3308** | 2017-10-09 | 980.000000 | 985.424988 | 976.109985 | 977.000000 | 977.000000 | 891400 |  \n|**3309** | 2017-10-10 | 980.000000 | 981.570007 | 966.080017 | 972.599976 | 972.599976 | 968400 |  \n|**3310** | 2017-10-11 | 973.719971 | 990.710022 | 972.250000 | 989.250000 | 989.250000 | 1693300  | \n|**3311** | 2017-10-12 | 987.450012 | 994.119995 | 985.000000 | 987.830017 | 987.830017 | 1262400 |  \n|**3312** | 2017-10-13 | 992.000000 | 997.210022 | 989.000000 | 989.679993 | 989.679993 | 1157700  |\n\n我们还可以选择使用 `.head(N)` 或 `.tail(N)` 分别显示前 `N` 行和后 `N` 行数据。\n\n我们快速检查下数据集中是否有任何 `NaN` 值。为此，我们将使用 `.isnull()` 方法，然后是 `.any()` 方法，检查是否有任何列包含 `NaN` 值。\n\n```\nGoogle_stock.isnull().any()\n```\n\n> Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False  \nOpen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False  \nHigh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False  \nLow &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False  \nClose &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False  \nAdj Close &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False  \nVolume &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; False  \ndtype: bool\n\n可以看出没有任何 `NaN` 值。\n\n在处理大型数据集时，通常有必要获取关于数据集的统计信息。通过使用 Pandas 的 `.describe()` 方法，可以获取关于 DataFrame 每列的描述性统计信息。我们来看看代码编写方式：\n\n```\n# We get descriptive statistics on our stock data\nGoogle_stock.describe()\n```\n\n> |   |   **Open** |\t**High** | **Low** | **Close** | \t**Adj Close** | **Volume** |\n|----------|:------:|:------:|:------:|:------:|:------:|:------:|\n|**count** | 3313.000000 | 3313.000000 | 3313.000000 | 3313.000000 | 3313.000000 | 3.313000e+03 |  \n|**mean** | 380.186092 | 383.493740 | 376.519309 | 380.072458 | 380.072458 | 8.038476e+06 |  \n|**std** | 223.818650 | 224.974534 | 222.473232 | 223.853780 | 223.853780 | 8.399521e+06 |  \n|**min** | 49.274517 | 50.541279 | 47.669952 | 49.681866 | 49.681866 | 7.900000e+03 | \n|**25%** | 226.556473 | 228.394516 | 224.003082 | 226.407440 | 226.407440 | 2.584900e+06 |\n|**50%** | 293.312286 | 295.433502 | 289.929291 | 293.029114 | 293.029114 | 5.281300e+06 |  \n|**75%** | 536.650024 | 540.000000 | 532.409973 | 536.690002 | 536.690002 | 1.065370e+07 | \n|**max** | 992.000000 | 997.210022 | 989.000000 | 989.679993 | 989.679993 | 8.276810e+07 | \n\n如果有必要，我们可以对单列应用 `.describe()` 方法，如下所示：\n\n```\n# We get descriptive statistics on a single column of our DataFrame\nGoogle_stock['Adj Close'].describe()\n```\n\n> count &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3313.000000  \nmean &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 380.072458  \nstd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 223.853780  \nmin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 49.681866  \n25% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 226.407440  \n50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 293.029114  \n75% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 536.690002  \nmax &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 989.679993  \nName: Adj Close, dtype: float64\n\n同样，你可以使用 Pandas 提供的很多统计学函数查看某个统计信息。我们来看一些示例：\n\n```\n# We print information about our DataFrame  \nprint()\nprint('Maximum values of each column:\\n', Google_stock.max())\nprint()\nprint('Minimum Close value:', Google_stock['Close'].min())\nprint()\nprint('Average value of each column:\\n', Google_stock.mean())\n```\n\n> Maximum values of each column:  \nDate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017-10-13   \nOpen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 992  \nHigh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 997.21  \nLow &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 989  \nClose &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 989.68  \nAdj Close &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 989.68  \nVolume &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 82768100  \ndtype: object\n\n> Minimum Close value: 49.681866\n\n> Average value of each column:  \nOpen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.801861e+02  \nHigh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.834937e+02  \nLow &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.765193e+02  \nClose &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.800725e+02  \nAdj Close &nbsp;&nbsp;&nbsp; 3.800725e+02  \nVolume &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.038476e+06  \ndtype: float64\n\n另一个重要统计学衡量指标是数据相关性。数据相关性可以告诉我们不同列的数据是否有关联。我们可以使用 `.corr()` 方法获取不同列之间的关联性，如下所示：\n\n```\n# We display the correlation between columns\nGoogle_stock.corr()\n```\n\n> |   |   **Open** |\t**High** | **Low** | **Close** | \t**Adj Close** | **Volume** |\n|----------|:------:|:------:|:------:|:------:|:------:|:------:|\n|**Open** | 1.000000 | 0.999904 | 0.999845 | 0.999745 | 0.999745 | -0.564258 |\n|**High** | 0.999904 | 1.000000 | 0.999834 | 0.999868 | 0.999868 | -0.562749 |  \n|**Low** | 0.999845 | 0.999834 | 1.000000 | 0.999899 | 0.999899 | -0.567007 | \n|**Close** | 0.999745 | 0.999868 | 0.999899 | 1.000000 | 1.000000 | -0.564967 |   \n|**Adj Close** | 0.999745 | 0.999868 | 0.999899 | 1.000000 | 1.000000 | -0.564967 |   \n|**Volume** | -0.564258 | -0.562749 | -0.567007 | -0.564967 | -0.564967 | 1.000000 | \n\n关联性值为 1 表明关联性很高，关联性值为 0 告诉我们数据根本不相关。\n\n在这门“Pandas 入门”课程的最后，我们将讲解 `.groupby()` 方法。`.groupby()` 方法使我们能够以不同的方式对数据分组。我们来看看如何分组数据，以获得不同类型的信息。在下面的示例中，我们将加载关于虚拟公司的虚拟数据。\n\n```\n# We load fake Company data in a DataFrame\ndata = pd.read_csv('./fake_company.csv')\n\ndata\n```\n\n> |   |   **Year** | **Name** | **Department** | **Age** | **Salary** | \n|----------|:------:|:------:|:------:|:------:|:------:|\n|**0** | 1990 | Alice | HR | 25 | 50000 |  \n|**1** | 1990 | Bob | RD | 30 | 48000 | \n|**2** | 1990 | Charlie | Admin | 45 | 55000 | \n|**3** | 1991 | Alice | HR | 26 | 52000 | \n|**4** | 1991 | Bob | RD | 31 | 50000 |  \n|**5** | 1991 | Charlie | Admin | 46 | 60000 |   \n|**6** | 1992 | Alice | Admin | 27 | 60000 | \n|**7** | 1992 | Bob | RD | 32 | 52000 | \n|**8** | 1992 | Charlie | Admin | 28 | 62000|\n\n可以看出，上述数据包含从 1990 年到 1992 年的信息。对于每一年，我们都能看到员工姓名、所在的部门、年龄和年薪。现在，我们使用 `.groupby()` 方法获取信息。\n\n我们来计算公司每年在员工薪资上花费的数额。为此，我们将使用 `.groupby()` 方法按*年份*对数据分组，然后使用 `.sum()` 方法将所有员工的薪资相加。\n\n```\n# We display the total amount of money spent in salaries each year\ndata.groupby(['Year'])['Salary'].sum()\n```\n\n> Year  \n1990 &nbsp;&nbsp;&nbsp; 153000  \n1991 &nbsp;&nbsp;&nbsp; 162000  \n1992 &nbsp;&nbsp;&nbsp; 174000  \nName: Salary, dtype: int64\n\n可以看出，该公司在 1990 年的薪资花费总额为 153,000 美元，在 1991 年为 162,000 美元，在 1992 年为 174,000 美元。\n\n现在假设我们想知道每年的平均薪资是多少。为此，我们将使用 `.groupby()` 方法按*年份*对数据分组，就像之前一样，然后使用 `.mean()` 方法获取平均薪资。我们来看看代码编写方式\n\n```\n# We display the average salary per year\ndata.groupby(['Year'])['Salary'].mean()\n```\n\n> Year  \n1990 &nbsp;&nbsp;&nbsp; 51000  \n1991 &nbsp;&nbsp;&nbsp; 54000  \n1992 &nbsp;&nbsp;&nbsp; 58000  \nName: Salary, dtype: int64\n\n可以看出，1990 年的平均薪资为 51,000 美元，1991 年为 54,000 美元，1992 年为 58,000 美元。\n\n现在我们来看看在这三年的时间内每位员工都收到多少薪资。在这种情况下，我们将使用`.groupby()`方法按照*Name*来对数据分组。之后，我们会把每年的薪资加起来。让我们来看看结果。\n\n```\n# We display the total salary each employee received in all the years they worked for the company\ndata.groupby(['Name'])['Salary'].sum()\n```\n> Name  \nAlice &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 162000  \nBob &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150000  \nCharlie &nbsp;&nbsp;&nbsp; 177000  \nName: Salary, dtype: int64\n\n我们看到，Alice在公司工作的三年时间里共收到了162,000美元的薪资，Bob收到了150,000，Charlie收到了177,000。\n\n现在让我们看看每年每个部门的薪资分配状况。在这种情况下，我们将使用`.groupby()`方法按照*Year*和*Department*对数据分组，之后我们会把每个部门的薪资加起来。让我们来看看结果。\n\n```\n# We display the salary distribution per department per year.\ndata.groupby(['Year', 'Department'])['Salary'].sum()\n```\n\n> Year &nbsp;&nbsp;&nbsp; Department  \n1990 &nbsp;&nbsp; Admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 55000  \n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50000  \n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48000  \n1991 &nbsp;&nbsp; Admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60000  \n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52000  \n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50000  \n1992 &nbsp;&nbsp; Admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 122000  \n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 52000  \nName: Salary, dtype: int64\n\n我们看到，1990年，管理部门支付了55,000美元的薪资，HR部门支付了50,000，研发部门支付了48,000。1992年，管理部门支付了122,000美元的薪资，研发部门支付了52,000。",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

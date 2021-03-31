@@ -1,0 +1,759 @@
+{
+  "data": {
+    "lesson": {
+      "id": 869729,
+      "key": "f2c31417-614e-41ea-9163-8b5b0b13bc64",
+      "title": "NumPy",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/f2c31417-614e-41ea-9163-8b5b0b13bc64/738084/1544291083460/NumPy+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/f2c31417-614e-41ea-9163-8b5b0b13bc64/738084/1544291080340/NumPy+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 592219,
+          "key": "82b9575a-c63a-44c9-8495-b445503f75a0",
+          "title": "课程讲师",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "82b9575a-c63a-44c9-8495-b445503f75a0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591941,
+              "key": "3c931570-ac03-4805-aeae-14621374276c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5ab0380d_screen-shot-2018-03-19-at-3.21.24-pm/screen-shot-2018-03-19-at-3.21.24-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3c931570-ac03-4805-aeae-14621374276c",
+              "caption": "_Juan Delgado_",
+              "alt": "",
+              "width": 300,
+              "height": 320,
+              "instructor_notes": null
+            },
+            {
+              "id": 591942,
+              "key": "3116e0f1-9de0-44b4-80d7-164a74e0c282",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/March/5ab0381c_screen-shot-2018-03-19-at-2.30.59-pm/screen-shot-2018-03-19-at-2.30.59-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3116e0f1-9de0-44b4-80d7-164a74e0c282",
+              "caption": "_Juno Lee_",
+              "alt": "",
+              "width": 300,
+              "height": 300,
+              "instructor_notes": null
+            },
+            {
+              "id": 591943,
+              "key": "a57fa4c2-969d-4f9a-8a76-ac6e8a8d2521",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Python 提供了很多库，其中一个库便是 **Numpy**。在这节课，你将学习 Numpy 如何支持处理大量数据，稍后你会发现这很有用！\n\n这节课由 Juan 和 Juno 共同讲解。你之前已经在 Python 课程中见过 Juno。Juan 是一名计算物理学家，拥有天文学硕士学位。他之前在 NASA 任职，负责开发太空仪器并编写使用机器学习技术分析大量科学数据的软件。\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592220,
+          "key": "910f8478-dc21-4c3a-943f-9a22e73bc8e8",
+          "title": "NumPy 简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "910f8478-dc21-4c3a-943f-9a22e73bc8e8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591944,
+              "key": "8806f86e-96df-49ed-9dce-1a19c0180d83",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# NumPy 简介\n\n**NumPy** 是 *Numerical Python* 的简称，它是 Python 中的科学计算基本软件包。NumPy 为 Python 提供了大量数学库，使我们能够高效地进行数字计算。这些课程将简要讲解 NumPy 基本概念，并介绍一些最重要的 NumPy 功能。\n\n在下面的课程中，你将学习：\n* 如何导入 NumPy\n* 如何使用各种方法创建多维 NumPy ndarray\n* 如何访问和更改 ndarray 中的元素\n* 如何加载和保存 ndarray\n* 如何使用切片选择或更改 ndarray 的子集\n* 了解 ndarray 视图和副本之间的区别\n* 如何使用布尔型索引并设置操作以选择或更改 ndarray 的子集\n* 如何对 ndarray 排序\n* 如何对 ndarray 执行元素级操作\n* 了解 NumPy 如何使用广播对不同大小的 ndarray 执行操作。\n\n# 下载 NumPy\n**Anaconda** 中包含 NumPy。如果你的计算机尚未安装 Anaconda，请参阅 Anaconda 部分，详细了解如何在 PC 或 Mac 设备上安装 Anaconda。\n\n# NumPy 版本\n和很多 Python 软件包一样，NumPy 也会不断更新。以下课程在制作时采用的是 NumPy 1.13.0 版。你可以检查你的 NumPy 版本：在 Jupyter notebook 中输入 `!conda list numpy`，或在 Anaconda 提示符处输入 `conda list numpy`。如果你的计算机安装的是另一个版本的 NumPy，你可以通过在 Anaconda 提示符处输入 `conda install numpy=1.13` 更新你的 NumPy 版本。随着新版 NumPy 的推出，一些功能可能会过时或被替换掉，因此确保在运行代码前，安装正确的 NumPy 版本。这样可以保证代码顺利运行。\n \n# NumPy 文档\nNumPy 是一个强大的数学库，其中包含很多函数和功能。在这些入门课程中，我们将仅介绍 NumPy 的一些基本功能。如果你想深入学习 NumPy，确保参阅 NumPy 文档：\n  \n[NumPy 手册](https://docs.scipy.org/doc/numpy-1.13.0/contents.html)  \n[NumPy 用户指南](https://docs.scipy.org/doc/numpy-1.13.0/user/index.html)  \n[NumPy 参考资料](https://docs.scipy.org/doc/numpy-1.13.0/reference/index.html#reference)  \n[Scipy 讲座](http://www.scipy-lectures.org/intro/numpy/index.html)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592218,
+          "key": "20562341-873d-4994-9d6b-4634670039bc",
+          "title": "为何要使用 NumPy",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "20562341-873d-4994-9d6b-4634670039bc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591945,
+              "key": "58e82d3b-9210-454f-b6a4-dc76838d1674",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 为何要使用 NumPy\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 591946,
+              "key": "5e5fd679-be6b-44d4-b565-43241ce6b4e7",
+              "title": "NumPy 0 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vyjMs8KFHlE",
+                "china_cdn_id": "vyjMs8KFHlE.mp4"
+              }
+            },
+            {
+              "id": 591947,
+              "key": "30077050-a14b-4577-a5fb-7b049f1c3e1b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\n\n你可能会疑问，为何要使用 NumPy，毕竟你在《Python 入门》课程中已经知道 Python 可以处理列表。 \n\n虽然 Python 列表本身很强大，但是 NumPy 具有很多关键功能，从而比 Python 列表更具优势。其中一个优势便是速度。在对大型数组执行操作时，NumPy 的速度比 Python 列表的速度快了好几百倍。这是因为 NumPy 数组本身能节省内存，并且 NumPy 在执行算术、统计和线性代数运算时采用了优化算法。\n\nNumPy 的另一个强大功能是具有可以表示向量和矩阵的多维数组数据结构。稍后，你将在这门课程的线性代数部分学习向量和矩阵，很快你会发现，很多机器学习算法都依赖于矩阵运算。例如，在训练神经网络时，通常需要多次进行矩阵乘法运算。NumPy 对矩阵运算进行了优化，使我们能够高效地执行线性代数运算，使其非常适合解决机器学习问题。 \n\n与 Python 列表相比，NumPy 具有的另一个强大优势是具有大量优化的内置数学函数。这些函数使你能够非常快速地进行各种复杂的数学计算，并且用到的代码很少（无需使用复杂的循环），使程序更容易读懂和理解。 \n\n这些只是使 NumPy 成为 Python 中的科学计算必要软件包的其中一些关键功能。实际上，NumPy 已经变得非常热门，Pandas 等很多 Python 软件包都是在 NumPy 的基础上构建而成。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592221,
+          "key": "cf9e2370-5bc1-4ed6-9a59-9996606a8448",
+          "title": "创建和保存 NumPy ndarray",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cf9e2370-5bc1-4ed6-9a59-9996606a8448",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591948,
+              "key": "d0fc9836-5bfc-453b-8dcf-f3cfa1a07066",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 创建 NumPy ndarray",
+              "instructor_notes": ""
+            },
+            {
+              "id": 591949,
+              "key": "279ab391-1ba3-4ed5-960e-ef9f9d3c5d3d",
+              "title": "NumPy 1 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "EOHW29kDg7w",
+                "china_cdn_id": "EOHW29kDg7w.mp4"
+              }
+            },
+            {
+              "id": 591951,
+              "key": "340fb92f-8d63-4c52-8174-9a3cc76c2597",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "NumPy 的核心是 **ndarray**，其中 *nd* 表示 n 维。ndarray 是一个多维数组，其中的所有元素类型都一样。换句话说，ndarray 是一个形状可以多样，并且可以存储数字或字符串的网格。在很多机器学习问题中，你通常都会发现需要以多种不同的方式使用 ndarray。例如，你可能会使用 ndarray 存储一个图像的像素值，然后将该图像馈送到神经网络中以进行图像分类。  \n\n但是在深入讲解 NumPy 并开始使用 NumPy 创建 ndarray 之前，我们需要在 Python 中导入 NumPy。我们可以使用 `import` 命令在 Python 中导入软件包。通常，我们使用 `np` 导入 NumPy。因此，你可以在 Jupyter notebook 中输入以下命令，导入 NumPy：\n\n```\nimport numpy as np\n```\n\n我们可以通过多种方式在 NumPy 中创建 ndarray。在下面的课程中，我们将学习创建 ndarray 的两种方式：\n\n1. 使用普通的 Python 列表\n\n2. 使用内置 NumPy 函数\n\n在此部分，我们将通过向 NumPy `np.array()` 函数提供 Python 列表创建 ndarray。对于初学者来说，这种方法可能会造成困惑，请务必注意，`np.array()` *不是*类，它只是一个返回 ndarray 的函数。要阐明的是，这些课程中用到的示例都将使用简单的小型 ndarray。我们开始创建一维 ndarray 吧。\n\n\n```\n# We import NumPy into Python\nimport numpy as np\n\n# We create a 1D ndarray that contains only integers\nx = np.array([1, 2, 3, 4, 5])\n\n# Let's print the ndarray we just created using the print() command\nprint('x = ', x)\n```\n> x =  [1 2 3 4 5]\n\n我们先暂停一下，了解一些实用的术语。我们将一维数组称之为*秩*为 1 的数组。通常，*N* 维数组的秩为 *N*。因此，二维数组称为秩为 2 的数组。数组的另一个重要特性是*形状*。数组的形状是指每个维度的大小。例如，秩为 2 的数组的形状对应于数组的*行数*和*列数*。你将发现，NumPy ndarray 具有特殊的*属性*，使我们能够非常直观地获取关于 ndarray 的信息。例如，可以通过 `.shape` 属性获取 ndarray 的形状。shape 属性返回一个由 n 个正整数（用于指定每个维度的大小）组成的元组。在下面的示例中，我们将创建一个秩为 1 的数组，并了解如何获取其形状、类型和元素数据类型 (*dtype*)。\n\n```\n# We create a 1D ndarray that contains only integers\nx = np.array([1, 2, 3, 4, 5])\n\n# We print x\nprint()\nprint('x = ', x)\nprint()\n\n# We print information about x\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype)\n```\n\n> x =  [1 2 3 4 5]   \n  \n> x has dimensions: (5,)  \nx is an object of type: class 'numpy.ndarray'   \nThe elements in x are of type: int64\n\n可以看出，shape 属性返回了元组 `(5,)`，告诉我们 `x` 的秩为 1（即 `x` 只有一个维度），并且有 5 个元素。`type()` 函数告诉我们 `x` 的确是 NumPy ndarray。最后，`.dtype` 属性告诉我们 `x` 的元素作为*有符号 64 位整数*存储在内存中。NumPy 的另一个重要优势是能够处理的数据类型比 Python 列表要多。你可以在以下链接中查看 NumPy 支持的所有不同数据类型：\n\n[NumPy 数据类型](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.types.html)  \n\n正如之前提到的，ndarray 还可以存储字符串。我们来看看如何按照之前的相同方式创建一个秩为 1 的字符串 ndarray：向 `np.array()` 函数提供 Python 字符串列表。\n\n```\n# We create a rank 1 ndarray that only contains strings\nx = np.array(['Hello', 'World'])\n\n# We print x\nprint()\nprint('x = ', x)\nprint()\n\n# We print information about x\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype)\n```\n\n> x =  ['Hello' 'World']\n\n> x has dimensions: (2,)  \nx is an object of type: class 'numpy.ndarray'   \nThe elements in x are of type: U5\n\n可以看出，shape 属性告诉我们 `x` 现在只有 2 个元素，虽然 `x` 现在存储的是字符串，但是 `type()` 函数告诉我们 `x` 依然像之前一样是 ndarray。但是，`.dtype` 属性告诉我们 `x` 中的元素作为*具有 5 个字符的 Unicode 字符串*存储在内存中。\n\n请务必注意，Python 列表和 ndarray 之间的最大区别是：与 Python 列表不同的是，ndarray 的所有元素都必须类型相同。因此，虽然我们可以同时使用整数和字符串创建 Python 列表，但是无法在 ndarray 中同时使用这两种类型。如果向 `np.array()` 函数提供同时具有整数和字符串的 Python 列表，NumPy 会将所有元素解析为字符串。我们可以在下面的示例中见到这种情况：\n\n```\n# We create a rank 1 ndarray from a Python list that contains integers and strings\nx = np.array([1, 2, 'World'])\n\n# We print the ndarray\nprint()\nprint('x = ', x)\nprint()\n\n# We print information about x\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype)\n```\n\n> x =  ['1' '2' 'World']\n\n> x has dimensions: (3,)  \nx is an object of type: 'numpy.ndarray' 类  \nThe elements in x are of type: U21\n\n可以看出，虽然 Python 列表具有不同的数据类型，但是 `x` 中的元素类型都一样，即*具有 21 个字符的 Unicode 字符串*。在 NumPy 简介的剩余部分，我们将不使用存储字符串的 ndarray，但是请注意，ndarray 也可以存储字符串。\n\n现在看看如何利用嵌套 Python 列表创建秩为 2 的 ndarray。\n\n```\n# We create a rank 2 ndarray that only contains integers\nY = np.array([[1,2,3],[4,5,6],[7,8,9], [10,11,12]])\n\n# We print Y\nprint()\nprint('Y = \\n', Y)\nprint()\n\n# We print information about Y\nprint('Y has dimensions:', Y.shape)\nprint('Y has a total of', Y.size, 'elements')\nprint('Y is an object of type:', type(Y))\nprint('The elements in Y are of type:', Y.dtype)\n```\n\n> Y =  \n[[ 1  2  3]  \n&nbsp;[ 4  5  6]  \n&nbsp;[ 7  8  9]  \n&nbsp;[10 11 12]]\n\n> Y has dimensions: (4, 3)  \nY has a total of 12 elements  \nY is an object of type: class 'numpy.ndarray'  \nThe elements in Y are of type: int64\n\n可以看出，现在 shape 属性返回元组 `(4,3)`，告诉我们 `Y` 的秩为 2，有 4 行 3 列。`.size` 属性告诉我们 `Y` 共有 12 个元素。\n\n注意，当 NumPy 创建 ndarray 时，它会自动根据用于创建 ndarray 的元素的类型为其分配 *dtype*。到目前为止，我们只创建了包含整数和字符串的 ndarray。我们发现，当我们创建只有整数的 ndarray 时，NumPy 将自动为其元素分配 dtype int64。我们来看看当我们创建具有浮点数和整数的 ndarray 时，会发生什么。\n\n```\n# We create a rank 1 ndarray that contains integers\nx = np.array([1,2,3])\n\n# We create a rank 1 ndarray that contains floats\ny = np.array([1.0,2.0,3.0])\n\n# We create a rank 1 ndarray that contains integers and floats\nz = np.array([1, 2.5, 4])\n\n# We print the dtype of each ndarray\nprint('The elements in x are of type:', x.dtype)\nprint('The elements in y are of type:', y.dtype)\nprint('The elements in z are of type:', z.dtype)\n```\n\n> The elements in x are of type: int64  \nThe elements in y are of type: float64  \nThe elements in z are of type: float64\n\n可以看出，当我们创建只有浮点数的 ndarray 时，NumPy 将元素当做* 64 位浮点数 (float64)* 存储在内存中。但是，当我们创建同时包含浮点数和整数的 ndarray 时，就像上面的 `z` ndarray，NumPy 也会为其元素分配 *float64* dtype。这叫做*向上转型*。因为 ndarray 的所有元素都必须类型相同，因此在这种情况下，NumPy 将 `z` 中的整数向上转型为浮点数，避免在进行数学计算时丢失精度。\n\n虽然 NumPy 自动为 ndarray 选择 dtype，但是 NumPy 也允许你指定要为 ndarray 的元素分配的特定 dtype。当你在 `np.array()` 函数中创建 ndarray 时，可以使用关键字 `dtype` 指定 dtype。我们来看一个示例：\n\n```\n# We create a rank 1 ndarray of floats but set the dtype to int64\nx = np.array([1.5, 2.2, 3.7, 4.0, 5.9], dtype = np.int64)\n\n# We print x\nprint()\nprint('x = ', x)\nprint()\n\n# We print the dtype x\nprint('The elements in x are of type:', x.dtype)\n```\n\n> x =  [1 2 3 4 5]\n\n> The elements in x are of type: int64\n\n可以看出，虽然用浮点数创建了 ndarray，但是通过将 dtype 指定为 int64，NumPy 通过去除小数将浮点数转换成了整数。如果你不希望 NumPy 意外地选择错误的数据类型，或者你只希望达到一定的计算精度，从而节省内存，则指定 ndarray 的数据类型很有用。\n\n创建 ndarray 后，你可能需要将其保存到文件中，以便以后读取该文件或供另一个程序使用。NumPy 提供了一种将数组保存到文件中以供日后使用的方式。我们来看看操作方式。\n\n```\n# We create a rank 1 ndarray\nx = np.array([1, 2, 3, 4, 5])\n\n# We save x into the current directory as \nnp.save('my_array', x)\n```\n\n上述代码将 `x` ndarray 保存到叫做 `my_array.npy` 的文件中。你可以使用 `load()` 函数将保存的 ndarray *加载*到变量中。\n\n```\n# We load the saved array from our current directory into variable y\ny = np.load('my_array.npy')\n\n# We print y\nprint()\nprint('y = ', y)\nprint()\n\n# We print information about the ndarray we loaded\nprint('y is an object of type:', type(y))\nprint('The elements in y are of type:', y.dtype)\n```\n> y =  [1 2 3 4 5]\n\n> y is an object of type: class 'numpy.ndarray'  \nThe elements in y are of type: int64\n\n从文件中加载数组时，确保包含文件名和扩展名 `.npy`，否则将出错。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 868953,
+          "key": "ce35303a-5e94-4887-aba6-ea1dec524ebd",
+          "title": "练习：创建和保存 NumPy ndarrays",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ce35303a-5e94-4887-aba6-ea1dec524ebd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 867194,
+              "key": "b3e60793-0a79-4986-bd8a-69b6aa5f460e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习: ABC's\n创建一个包含字母“a”到“j”（含）字母的numpy字符串数组。 然后，使用numpy数组的属性打印有关此数组的以下信息：\n1. 数组的`dtype`\n2. 数组的`shape`\n3. 数组的`size`\n\n你在下面的代码编辑器中提交的代码将不会被人工审阅。使用下面代码中的结果以及在之前视频中学会的知识，完成代码编辑器下方的测验。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 867195,
+              "key": "ca042759-8acf-48cd-9ae2-1a30e96010b2",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "ca042759-8acf-48cd-9ae2-1a30e96010b2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5067248480419840",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\n\n# create numpy array of letters a-j\nletter_array = \nprint(\"Letter Array: \", letter_array)\n\n# get dtype of array\n\n\n# get shape of array\n\n\n# get size of array",
+                    "name": "abc_numpy.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 867196,
+              "key": "d4dfe5e1-8e2b-48c7-9fb2-7b3b00f0f6c6",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d4dfe5e1-8e2b-48c7-9fb2-7b3b00f0f6c6",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "匹配以下`letter_array`的每个属性的正确值。"
+                },
+                "concepts_label": "属性",
+                "answers_label": "值",
+                "concepts": [
+                  {
+                    "text": "dtype of `letter_array`",
+                    "correct_answer": {
+                      "id": "a1533631001236",
+                      "text": "str"
+                    }
+                  },
+                  {
+                    "text": "type of `letter_array`",
+                    "correct_answer": {
+                      "id": "a1533631097384",
+                      "text": "ndarray"
+                    }
+                  },
+                  {
+                    "text": "shape of `letter_array`",
+                    "correct_answer": {
+                      "id": "a1533631097936",
+                      "text": "(10,)"
+                    }
+                  },
+                  {
+                    "text": "size of `letter_array`",
+                    "correct_answer": {
+                      "id": "a1533631098589",
+                      "text": "10"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1533631172659",
+                    "text": "int"
+                  },
+                  {
+                    "id": "a1533631186378",
+                    "text": "(10, 1)"
+                  },
+                  {
+                    "id": "a1533631098589",
+                    "text": "10"
+                  },
+                  {
+                    "id": "a1533631001236",
+                    "text": "str"
+                  },
+                  {
+                    "id": "a1533631181060",
+                    "text": "(1, 10)"
+                  },
+                  {
+                    "id": "a1533631176826",
+                    "text": "26"
+                  },
+                  {
+                    "id": "a1533631097936",
+                    "text": "(10,)"
+                  },
+                  {
+                    "id": "a1533631097384",
+                    "text": "ndarray"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 868954,
+          "key": "e987318d-a6c1-4df7-aadb-5692c815ea46",
+          "title": "解决方案：创建和保存 NumPy ndarrays",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e987318d-a6c1-4df7-aadb-5692c815ea46",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 867198,
+              "key": "1b0867e9-0980-4d48-be60-f94871aa9c5e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 解决方案: ABC's\n```python\nimport numpy as np\n\n# create numpy array of letters a-j\nletter_array = np.array(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'])\nprint(\"Array:\", letter_array)\n\n# get dtype of array\nprint(\"Dtype:\", letter_array.dtype)\n\n# get shape of array\nprint(\"Shape:\", letter_array.shape)\n\n# get size of array\nprint(\"Size:\", letter_array.size)\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 867197,
+              "key": "93a2218b-281f-4c67-a3c4-a27bd531eac6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### 输出:\n```txt\nArray: ['a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j']\nDtype: <U1\nShape: (10,)\nSize: 10\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592226,
+          "key": "42233fd3-32a0-424d-84b3-49b96e44f1e1",
+          "title": "布尔型索引、集合运算和排序",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42233fd3-32a0-424d-84b3-49b96e44f1e1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591960,
+              "key": "a0eda410-6937-4859-b920-83b6275facaa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 布尔型索引、集合运算和排序",
+              "instructor_notes": ""
+            },
+            {
+              "id": 634278,
+              "key": "21fbfb73-6130-402c-b8ba-9f58e91d3c72",
+              "title": "NumPy 5 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vGjI-WTnEbY",
+                "china_cdn_id": "vGjI-WTnEbY.mp4"
+              }
+            },
+            {
+              "id": 591963,
+              "key": "53b42898-cd00-4bef-8825-7038c3cb4f96",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "到目前为止，我们了解了如何使用索引进行切片以及选择 ndarray 元素。当我们知道要选择的元素的确切索引时，这些方法很有用。但是，在很多情况下，我们不知道要选择的元素的索引。例如，假设有一个 10,000 x 10,000 ndarray，其中包含从 1 到 15,000 的随机整数，我们只想选择小于 20 的整数。这时候就要用到*布尔型*索引，对于布尔型索引，我们将使用逻辑参数（而不是确切的索引）选择元素。我们来看一些示例：\n\n```\n# We create a 5 x 5 ndarray that contains integers from 0 to 24\nX = np.arange(25).reshape(5, 5)\n\n# We print X\nprint()\nprint('Original X = \\n', X)\nprint()\n\n# We use Boolean indexing to select elements in X:\nprint('The elements in X that are greater than 10:', X[X > 10])\nprint('The elements in X that lees than or equal to 7:', X[X <= 7])\nprint('The elements in X that are between 10 and 17:', X[(X > 10) & (X < 17)])\n\n# We use Boolean indexing to assign the elements that are between 10 and 17 the value of -1\nX[(X > 10) & (X < 17)] = -1\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n```\n\n> Original X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]  \n&nbsp;[20 21 22 23 24]]\n\n> The elements in X that are greater than 10: [11 12 13 14 15 16 17 18 19 20 21 22 23 24]  \nThe elements in X that lees than or equal to 7: [0 1 2 3 4 5 6 7]  \nThe elements in X that are between 10 and 17: [11 12 13 14 15 16]\n\n> X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 -1 -1 -1 -1]  \n&nbsp;[-1 -1 17 18 19]  \n&nbsp;[20 21 22 23 24]]\n\n除了布尔型索引之外，NumPy 还允许进行集合运算。可以用来比较 ndarray，例如查找两个 ndarray 中的相同元素。我们来看一些示例：\n\n```\n# We create a rank 1 ndarray\nx = np.array([1,2,3,4,5])\n\n# We create a rank 1 ndarray\ny = np.array([6,7,2,8,4])\n\n# We print x\nprint()\nprint('x = ', x)\n\n# We print y\nprint()\nprint('y = ', y)\n\n# We use set operations to compare x and y:\nprint()\nprint('The elements that are both in x and y:', np.intersect1d(x,y))\nprint('The elements that are in x that are not in y:', np.setdiff1d(x,y))\nprint('All the elements of x and y:',np.union1d(x,y))\n```\n\n> x =  [1 2 3 4 5]\n\n> y =  [6 7 2 8 4]\n\n> The elements that are both in x and y: [2 4]  \nThe elements that are in x that are not in y: [1 3 5]  \nAll the elements of x and y: [1 2 3 4 5 6 7 8]\n\n我们还可以在 NumPy 中对 ndarray 进行排序。我们将了解如何使用 `np.sort()` 函数以不同的方式对秩为 1 和 2 的 ndarray 进行排序。和我们之前看到的其他函数一样，`sort` 函数也可以当做方法使用。但是，对于此函数来说，数据在内存中的存储方式有很大变化。当 `np.sort()` 当做函数使用时，它不会对ndarray进行就地排序，即不更改被排序的原始 ndarray。但是，如果将 `sort` 当做方法，`ndarray.sort()` 会就地排序 ndarray，即原始数组会变成排序后的数组。我们来看一些示例：\n\n```\n# We create an unsorted rank 1 ndarray\nx = np.random.randint(1,11,size=(10,))\n\n# We print x\nprint()\nprint('Original x = ', x)\n\n# We sort x and print the sorted array using sort as a function.\nprint()\nprint('Sorted x (out of place):', np.sort(x))\n\n# When we sort out of place the original array remains intact. To see this we print x again\nprint()\nprint('x after sorting:', x)\n```\n\n> Original x =  [9 6 4 4 9 4 8 4 4 7]\n\n> Sorted x (out of place): [4 4 4 4 4 6 7 8 9 9]\n\n> x after sorting: [9 6 4 4 9 4 8 4 4 7]\n\n注意，`np.sort()` 会对数组进行排序，但是如果被排序的 ndarray 具有重复的值，`np.sort()` 将在排好序的数组中保留这些值。但是，我们可以根据需要，同时使用 sort 函数和 unique 函数仅对 `x` 中的*唯一*元素进行排序。我们来看看如何对上述 `x` 中的唯一元素进行排序：\n\n```\n# We sort x but only keep the unique elements in x\nprint(np.sort(np.unique(x)))\n```\n\n> [4 6 7 8 9]\n\n最后，我们来看看如何将 sort 当做方法，原地对 ndarray 进行排序：\n\n```\n# We create an unsorted rank 1 ndarray\nx = np.random.randint(1,11,size=(10,))\n\n# We print x\nprint()\nprint('Original x = ', x)\n\n# We sort x and print the sorted array using sort as a method.\nx.sort()\n\n# When we sort in place the original array is changed to the sorted array. To see this we print x again\nprint()\nprint('x after sorting:', x)\n```\n\n> Original x =  [9 9 8 1 1 4 3 7 2 8]\n\n> x after sorting: [1 1 2 3 4 7 8 8 9 9]\n\n在对秩为 2 的 ndarray 进行排序时，我们需要在 `np.sort()` 函数中指定是按行排序，还是按列排序。为此，我们可以使用关键字 `axis`。我们来看一些示例：\n\n```\n# We create an unsorted rank 2 ndarray\nX = np.random.randint(1,11,size=(5,5))\n\n# We print X\nprint()\nprint('Original X = \\n', X)\nprint()\n\n# We sort the columns of X and print the sorted array\nprint()\nprint('X with sorted columns :\\n', np.sort(X, axis = 0))\n\n# We sort the rows of X and print the sorted array\nprint()\nprint('X with sorted rows :\\n', np.sort(X, axis = 1))\n```\n\n> Original X =  \n[[6 1 7 6 3]  \n&nbsp; [3 9 8 3 5]  \n&nbsp; [6 5 8 9 3]  \n&nbsp; [2 1 5 7 7]  \n&nbsp; [9 8 1 9 8]]\n\n> X with sorted columns :  \n[[2 1 1 3 3]  \n&nbsp; [3 1 5 6 3]  \n&nbsp; [6 5 7 7 5]  \n&nbsp; [6 8 8 9 7]  \n&nbsp; [9 9 8 9 8]]\n\n> X with sorted rows :  \n[[1 3 6 6 7]  \n&nbsp; [3 3 5 8 9]  \n&nbsp; [3 5 6 8 9]  \n&nbsp; [1 2 5 7 7]  \n&nbsp; [1 8 8 9 9]]",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592222,
+          "key": "f99beb57-4f9a-42d9-8148-221e1828fec7",
+          "title": "使用内置函数创建 ndarray",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f99beb57-4f9a-42d9-8148-221e1828fec7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591950,
+              "key": "e6f263a9-58f2-48b4-83af-2f4cd82c30c1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 使用内置函数创建 ndarray",
+              "instructor_notes": ""
+            },
+            {
+              "id": 634843,
+              "key": "85edcff0-716e-4fbe-83ab-2037627372d3",
+              "title": "NumPy 2 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "F4Iyfn95G_I",
+                "china_cdn_id": "F4Iyfn95G_I.mp4"
+              }
+            },
+            {
+              "id": 591954,
+              "key": "726c9e75-2765-47d7-84c5-a8949580a8ca",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "NumPy 的一个非常节省时间的功能是使用内置函数创建 ndarray。借助这些函数，我们只需编写一行代码就能创建某些类型的 ndarray。以下是一些创建 ndarray 的最实用内置函数，你在进行 AI 编程时将遇到这些函数。\n\n我们先创建一个具有指定形状的 ndarray，其中的元素全是 0。为此，我们可以使用 `np.zeros()` 函数。函数 `np.zeros(shape)` 会创建一个全是 `0` 并且为给定`形状`的 ndarray。因此，例如如果你想创建一个秩为 2 的数组，其中包含 3 行和 4 列，你将以 `(行, 列)` 的形式将该形状传递给函数，如以下示例所示：\n\n```\n# We create a 3 x 4 ndarray full of zeros. \nX = np.zeros((3,4))\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in X are of type:', X.dtype)\n```\n\n> X =  \n[[ 0.  0.  0.  0.]  \n&nbsp;[ 0.  0.  0.  0.]  \n&nbsp;[ 0.  0.  0.  0.]]\n\n> X has dimensions: (3, 4)  \nX is an object of type: class 'numpy.ndarray'  \nThe elements in X are of type: float64\n\n可以看出，`np.zeros()` 函数默认地创建一个 dtype 为 float64 的数组。你可以使用关键字 `dtype` 更改数据类型。\n\n同样，我们可以创建一个具有指定形状的 ndarray，其中的元素全是 *1*。为此，我们可以使用 `np.ones()` 函数。和 `np.zeros()` 函数一样，`np.ones()` 函数会用一个参数来指定你要创建的 ndarray 的形状。我们来看一个示例：\n\n```\n# We create a 3 x 2 ndarray full of ones. \nX = np.ones((3,2))\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in X are of type:', X.dtype) \n```\n\n> X =  \n[[ 1.  1.]  \n&nbsp;[ 1.  1.]  \n&nbsp;[ 1.  1.]]\n\n> X has dimensions: (3, 2)  \nX is an object of type: class 'numpy.ndarray'  \nThe elements in X are of type: float64\n\n可以看出，`np.ones()` 函数也默认地创建一个 dtype 为 float64 的数组。你可以使用关键字 `dtype` 更改数据类型。\n\n我们还可以创建一个具有指定形状的 ndarray，其中的元素全是我们想指定的任何数字。为此，我们可以使用 `np.full()` 函数。`np.full(shape, constant value)` 函数有两个参数。第一个参数是你要创建的 ndarray 的`形状`，第二个参数是你要向数组中填充的`常数值`。我们来看一个示例：\n\n```\n# We create a 2 x 3 ndarray full of fives. \nX = np.full((2,3), 5) \n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in X are of type:', X.dtype)  \n```\n\n> X =  \n[[5 5 5]  \n&nbsp;[5 5 5]]\n\n> X has dimensions: (2, 3)  \nX is an object of type: class 'numpy.ndarray'  \nThe elements in X are of type: int64\n\n`np.full()` 函数默认地创建一个数据类型和用于填充数组的常数值相同的数组。你可以使用关键字 `dtype` 更改数据类型。\n\n稍后你将发现，线性代数中的基本数组是单位矩阵。单位矩阵是主对角线上全是 1，其他位置全是 0 的方形矩阵。函数 `np.eye(N)` 会创建一个对应于单位矩阵的方形 `N x N` ndarray。因为所有单位矩阵都是方形，因此，`np.eye()` 函数仅接受一个整数作为参数。我们来看一个示例：\n\n```\n# We create a 5 x 5 Identity matrix. \nX = np.eye(5)\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in X are of type:', X.dtype)  \n```\n\n> X =  \n[[ 1.  0.  0.  0.  0.]  \n&nbsp;[ 0.  1.  0.  0.  0.]  \n&nbsp;[ 0.  0.  1.  0.  0.]  \n&nbsp;[ 0.  0.  0.  1.  0.]  \n&nbsp;[ 0.  0.  0.  0.  1.]]\n\n> X has dimensions: (5, 5)  \nX is an object of type: class 'numpy.ndarray'  \nThe elements in X are of type: float64\n\n可以看出，`np.eye()` 函数也默认地创建一个 dtype 为 float64 的数组。你可以使用关键字 `dtype` 更改数据类型。你将在这门课程的线性代数部分深入学习单位矩阵及其用途。我们还可以使用 `np.diag()` 函数创建对角矩阵。对角矩阵是仅在主对角线上有值的方形矩阵。`np.diag()` 函数会创建一个对应于对角矩阵的 ndarray，如以下示例所示：\n\n```\n# Create a 4 x 4 diagonal matrix that contains the numbers 10,20,30, and 50\n# on its main diagonal\nX = np.diag([10,20,30,50])\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n```\n\n> X =  \n[[10  0  0  0]  \n&nbsp;[ 0 20  0  0]  \n&nbsp;[ 0  0 30  0]  \n&nbsp;[ 0  0  0 50]]\n\nNumPy 还允许你创建在给定区间内值均匀分布的 ndarray。NumPy 的`np.arange()` 函数非常强大，可以传入一个参数、两个参数或三个参数。下面将介绍每种情况，以及如何创建不同种类的 ndarray。\n\n先仅向 `np.arange()` 中传入一个参数。如果只传入一个参数，`np.arange(N)` 将创建一个秩为 1 的 ndarray，其中包含从 `0` 到 `N - 1` 的连续整数。因此，注意，如果我希望数组具有介于 0 到 9 之间的整数，则需要将 N 设为 10，*而不是*将 N 设为 9，如以下示例所示：\n\n```\n# We create a rank 1 ndarray that has sequential integers from 0 to 9\nx = np.arange(10)\n​\n# We print the ndarray\nprint()\nprint('x = ', x)\nprint()\n\n# We print information about the ndarray\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype) \n```\n\n> x =  [0 1 2 3 4 5 6 7 8 9]\n\n> x has dimensions: (10,)  \nx is an object of type: class 'numpy.ndarray'  \nThe elements in x are of type: int64\n\n如果传入两个参数，`np.arange(start,stop)` 将创建一个秩为 1 的 ndarray，其中包含位于半开区间 `[start, stop)` 内并均匀分布的值。也就是说，均匀分布的数字将包括 `start` 数字，但是*不包括* `stop` 数字。我们来看一个示例\n\n```\n# We create a rank 1 ndarray that has sequential integers from 4 to 9. \nx = np.arange(4,10)\n\n# We print the ndarray\nprint()\nprint('x = ', x)\nprint()\n\n# We print information about the ndarray\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype) \n```\n\n> x =  [4 5 6 7 8 9]\n\n> x has dimensions: (6,)  \nx is an object of type: class 'numpy.ndarray'  \nThe elements in x are of type: int64 \n\n可以看出，函数 `np.arange(4,10)` 生成了一个包含 4 但是不含 10 的整数序列。\n\n最后，如果传入三个参数，`np.arange(start,stop,step)` 将创建一个秩为 1 的 ndarray，其中包含位于半开区间 `[start, stop)` 内并均匀分布的值，`step` 表示两个相邻值之间的差。我们来看一个示例：\n\n```\n# We create a rank 1 ndarray that has evenly spaced integers from 1 to 13 in steps of 3.\nx = np.arange(1,14,3)\n\n# We print the ndarray\nprint()\nprint('x = ', x)\nprint()\n\n# We print information about the ndarray\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype) \n```\n\n> x =  [ 1  4  7 10 13]\n\n> x has dimensions: (5,)  \nx is an object of type: class 'numpy.ndarray'  \nThe elements in x are of type: int64 \n\n可以看出，`x` 具有在 1 和 13 之间的序列整数，但是所有相邻值之间的差为 3。\n\n虽然 `np.arange()` 函数允许间隔为非整数，例如 0.3，但是由于浮点数精度有限，输出通常不一致。因此，如果需要非整数间隔，通常建议使用函数 `np.linspace()`。`np.linspace(start, stop, N)` 函数返回 `N` 个在*闭*区间 `[start, stop]` 内均匀分布的数字。即 `start` 和 `stop` 值都包括在内。此外注意，在调用 `np.linspace()` 函数时，必须至少以 `np.linspace(start,stop)` 的形式传入两个参数。在此示例中，指定区间内的默认元素数量为 *N= 50*。`np.linspace()` 比 `np.arange()` 效果更好，是因为 `np.linspace()` 使用我们希望在特定区间内的元素数量，而不是值之间的间隔。我们来看一些示例：\n\n```\n# We create a rank 1 ndarray that has 10 integers evenly spaced between 0 and 25.\nx = np.linspace(0,25,10)\n\n# We print the ndarray\nprint()\nprint('x = \\n', x)\nprint()\n\n# We print information about the ndarray\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype) \n```\n\n> x = [  0.           2.77777778   5.55555556   8.33333333  11.11111111\n  13.88888889  16.66666667  19.44444444  22.22222222  25.        ]\n\n> x has dimensions: (10,)  \nx is an object of type: class 'numpy.ndarray'  \nThe elements in x are of type: float64\n\n从上述示例中可以看出，函数 `np.linspace(0,25,10)` 返回一个 ndarray，其中包含 `10` 个在闭区间 `[0, 25]` 内均匀分布的元素。还可以看出，在此示例中，起始和结束点 `0` 和 `25` 都包含在内。但是，可以不包含区间的结束点（就像 np.arange() 函数一样），方法是在 `np.linspace()` 函数中将关键字 `endpoint 设为 False` 。我们创建和上面一样的 `x` ndarray，但是这次不包含结束点：\n\n```\n# We create a rank 1 ndarray that has 10 integers evenly spaced between 0 and 25,\n# with 25 excluded.\nx = np.linspace(0,25,10, endpoint = False)\n\n# We print the ndarray\nprint()\nprint('x = ', x)\nprint()\n\n# We print information about the ndarray\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype) \n```\n\n> x =  [  0.    2.5   5.    7.5  10.   12.5  15.   17.5  20.   22.5]\n\n> x has dimensions: (10,)  \nx is an object of type: class 'numpy.ndarray'  \nThe elements in x are of type: float64\n\n可以看出，因为排除了结束点，值之间的间隔需要更改，因为需要在给定区间内填充 10 个均匀分布的数字。\n\n到目前为止，我们仅使用了内置函数 `np.arange()` 和 `np.linspace()` 来创建秩为 1 的 ndarray。但是，我们可以将这些函数与 `np.reshape()` 函数相结合，创建秩为 2 的任何形状 ndarray。`np.reshape(ndarray, new_shape)` 函数会将给定 `ndarray` 转换为指定的 `new_shape`。请务必注意：`new_shape` 应该与给定 `ndarray` 中的元素数量保持一致。例如，你可以将秩为 1 的 6 元素 ndarray 转换为秩为 2 的 3 x 2 ndarray，或秩为 2 的 2 x 3 ndarray，因为这两个秩为 2 的数组元素总数都是 6 个。但是，你无法将秩为 1 的 6 元素 ndarray 转换为秩为 2 的 3 x 3 ndarray，因为这个秩为 2 的数组将包含 9 个元素，比原始 ndarray 中的元素数量多。我们来看一些示例：\n\n```\n# We create a rank 1 ndarray with sequential integers from 0 to 19\nx = np.arange(20)\n\n# We print x\nprint()\nprint('Original x = ', x)\nprint()\n\n# We reshape x into a 4 x 5 ndarray \nx = np.reshape(x, (4,5))\n\n# We print the reshaped x\nprint()\nprint('Reshaped x = \\n', x)\nprint()\n\n# We print information about the reshaped x\nprint('x has dimensions:', x.shape)\nprint('x is an object of type:', type(x))\nprint('The elements in x are of type:', x.dtype) \n```\n\n> Original x =  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]\n\n\n> Reshaped x =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]]\n\n> x has dimensions: (4, 5)  \nx is an object of type: class 'numpy.ndarray'  \nThe elements in x are of type: int64\n\nNumPy 的一大特性是某些函数还可以当做方法使用。这样我们便能够在一行代码中按顺序应用不同的函数。ndarray 方法和 ndarray 属性相似，它们都使用*点*记法 (`.`)。我们来看看如何只用一行代码实现上述示例中的相同结果：\n\n```\n# We create a a rank 1 ndarray with sequential integers from 0 to 19 and\n# reshape it to a 4 x 5 array \nY = np.arange(20).reshape(4, 5)\n\n# We print Y\nprint()\nprint('Y = \\n', Y)\nprint()\n\n# We print information about Y\nprint('Y has dimensions:', Y.shape)\nprint('Y is an object of type:', type(Y))\nprint('The elements in Y are of type:', Y.dtype) \n```\n\n> Y =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]]\n\n> Y has dimensions: (4, 5)  \nY is an object of type: class 'numpy.ndarray'\nThe elements in Y are of type: int64 \n\n可以看出，我们获得了和之前完全一样的结果。注意，当我们将 `reshape()` 当做方法使用时，它应用为 `ndarray.reshape(new_shape)`。这样会将 `ndarray` 转换为指定形状 `new_shape`。和之前一样，请注意，`new_shape` 应该与 `ndarray` 中的元素数量保持一致。在上述示例中，函数 `np.arange(20)` 创建了一个 ndarray 并当做将被 `reshape()` 方法调整形状的 `ndarray`。因此，如果将 `reshape()` 当做方法使用，我们不需要将 `ndarray` 当做参数传递给 `reshape()` 函数，只需传递 `new_shape` 参数。\n\n同样，我们也可以使用 `reshape()` 与 `np.linspace()` 创建秩为 2 的数组，如以下示例所示。\n\n```\n# We create a rank 1 ndarray with 10 integers evenly spaced between 0 and 50,\n# with 50 excluded. We then reshape it to a 5 x 2 ndarray\nX = np.linspace(0,50,10, endpoint=False).reshape(5,2)\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in X are of type:', X.dtype)\n```\n\n> X =  \n&nbsp;[[  0.   5.]  \n&nbsp;[ 10.  15.]  \n&nbsp;[ 20.  25.]  \n&nbsp;[ 30.  35.]  \n&nbsp;[ 40.  45.]]\n\n> X has dimensions: (5, 2)  \nX is an object of type: class 'numpy.ndarray'\nThe elements in X are of type: float64 \n\n我们将创建的最后一种 ndarray 是*随机* ndarray。随机 ndarray 是包含随机数字的数组。在机器学习中，通常需要创建随机指标，例如，在初始化神经网络的权重时。NumPy 提供了各种随机函数来帮助我们创建任何形状的随机 ndarray。\n\n我们先使用 `np.random.random(shape)` 函数创建具有给定`形状`的 ndarray，其中包含位于半开区间 [0.0, 1.0) 内的随机浮点数。\n\n```\n# We create a 3 x 3 ndarray with random floats in the half-open interval [0.0, 1.0).\nX = np.random.random((3,3))\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in x are of type:', X.dtype)\n```\n\n> X =  \n[[ 0.12379926  0.52943854  0.3443525 ]  \n&nbsp;[ 0.11169547  0.82123909  0.52864397]  \n&nbsp;[ 0.58244133  0.21980803  0.69026858]]\n\n> X has dimensions: (3, 3)  \nX is an object of type: class 'numpy.ndarray' \nThe elements in X are of type: float64\n\nNumPy 还允许我们创建由特定区间内的随机整数构成的 ndarray。函数 `np.random.randint(start, stop, size = shape)` 会创建一个具有给定`形状`的 ndarray，其中包含在半开区间 `[start, stop)` 内的随机整数。我们来看一个示例：\n\n```\n# We create a 3 x 2 ndarray with random integers in the half-open interval [4, 15).\nX = np.random.randint(4,15,size=(3,2))\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in X are of type:', X.dtype)\n```\n\n> X =  \n[[ 7 11]  \n&nbsp;[ 9 11]  \n&nbsp;[ 6  7]]\n\n> X has dimensions: (3, 2)  \nX is an object of type: class 'numpy.ndarray'\nThe elements in X are of type: int64\n\n在某些情况下，你可能需要创建由满足特定统计学特性的随机数字组成的 ndarray。例如，你可能希望 ndarray 中的随机数字平均值为 0。NumPy 使你能够创建从各种概率分布中抽样的数字组成的随机 ndarray。例如，函数 `np.random.normal(mean, standard deviation, size=shape)` 会创建一个具有给定`形状`的 ndarray，其中包含从`正态`高斯分布（具有给定`均值`和`标准差`）中抽样的随机数字。我们来创建一个 1,000 x 1,000 ndarray，其中包含从正态分布（均值为 0，标准差为 0.1）中随机抽样的浮点数。\n\n```\n# We create a 1000 x 1000 ndarray of random floats drawn from normal (Gaussian) distribution\n# with a mean of zero and a standard deviation of 0.1.\nX = np.random.normal(0, 0.1, size=(1000,1000))\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print information about X\nprint('X has dimensions:', X.shape)\nprint('X is an object of type:', type(X))\nprint('The elements in X are of type:', X.dtype)\nprint('The elements in X have a mean of:', X.mean())\nprint('The maximum value in X is:', X.max())\nprint('The minimum value in X is:', X.min())\nprint('X has', (X < 0).sum(), 'negative numbers')\nprint('X has', (X > 0).sum(), 'positive numbers')\n```\n\n> X =  \n[[ 0.04218614  0.03247225 -0.02936003 ...,  0.01586796 -0.05599115  -0.03630946]  \n&nbsp;[ 0.13879995 -0.01583122 -0.16599967 ...,  0.01859617 -0.08241612  0.09684025]  \n&nbsp;[ 0.14422252 -0.11635985 -0.04550231 ..., -0.09748604 -0.09350044  0.02514799]  \n&nbsp;...,  \n&nbsp;[-0.10472516 -0.04643974  0.08856722 ..., -0.02096011 -0.02946155  0.12930844]  \n&nbsp;[-0.26596955  0.0829783   0.11032549 ..., -0.14492074 -0.00113646  -0.03566034]  \n&nbsp;[-0.12044482  0.20355356  0.13637195 ...,  0.06047196 -0.04170031  -0.04957684]]\n\n> X has dimensions: (1000, 1000)  \nX is an object of type: class 'numpy.ndarray' \nThe elements in X are of type: float64  \nThe elements in X have a mean of: -0.000121576684405  \nThe maximum value in X is: 0.476673923106  \nThe minimum value in X is: -0.499114224706 \nX 具有 500562 个负数\nX 具有 499438 个正数\n\n可以看出，ndarray 中的随机数字的平均值接近 0，`X` 中的最大值和最小值与 0（平均值）保持对称，正数和负数的数量很接近。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592223,
+          "key": "0188424b-fa4e-48d6-bfef-265f91f6be27",
+          "title": "创建 ndarray",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0188424b-fa4e-48d6-bfef-265f91f6be27",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591953,
+              "key": "18d90c49-6132-4483-86b5-4e2fa41af08f",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "尝试使用`np.linspace()`功能来创建相同的array。答案如下：\n\n`np.linspace(2,32,16).reshape(4,4)`",
+              "user_state": {
+                "node_key": "18d90c49-6132-4483-86b5-4e2fa41af08f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6676231035158528",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\r\n\r\n# Using the Built-in functions you learned about in the\r\n# previous lesson, create a 4 x 4 ndarray that only\r\n# contains consecutive even numbers from 2 to 32 (inclusive)\r\n\r\nX = \r\n",
+                    "name": "create_ndarray.py"
+                  },
+                  {
+                    "text": "import numpy as np\r\n\r\nX = np.arange(2,34,2).reshape(4,4)",
+                    "name": "solution.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 592225,
+          "key": "5829db09-f51a-4018-b476-644b6fd19483",
+          "title": "访问和删除 ndarray 中的元素及向其中插入元素",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5829db09-f51a-4018-b476-644b6fd19483",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591956,
+              "key": "2983ef4d-80a2-424b-83cb-68dfe9b81120",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 访问和删除 ndarray 中的元素及向其中插入元素",
+              "instructor_notes": ""
+            },
+            {
+              "id": 591955,
+              "key": "925a855e-0b41-4615-b055-f02d3cc614d1",
+              "title": "NumPy 3 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Rt4aydeo9F8",
+                "china_cdn_id": "Rt4aydeo9F8.mp4"
+              }
+            },
+            {
+              "id": 591957,
+              "key": "739971be-3b07-4560-9a09-bece176053ef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "你已经知道如何创建各种 ndarray，现在将学习 NumPy 使我们如何有效地操纵 ndarray 中的数据。NumPy ndarray 是可变的，意味着 ndarray 中的元素在 ndarray 创建之后可以更改。NumPy ndarray 还可以切片，因此可以通过多种方式拆分 ndarray。例如，我们可以从 ndarray 中获取想要的任何子集。通常，在机器学习中，你需要使用切片拆分数据，例如将数据集拆分为训练集、交叉验证集和测试集。\n\n我们首先将了解如何通过索引访问或修改 ndarray 中的元素。可以在方括号 [ ] 中添加索引来访问元素。在 NumPy 中，你可以使用正索引和负索引访问 ndarray 中的元素。正索引表示从数组的开头访问元素，负索引表示从数组的末尾访问元素。我们来看看如何访问秩为 1 的 ndarray 中的元素：\n\n```\n# We create a rank 1 ndarray that contains integers from 1 to 5\nx = np.array([1, 2, 3, 4, 5])\n\n# We print x\nprint()\nprint('x = ', x)\nprint()\n\n# Let's access some elements with positive indices\nprint('This is First Element in x:', x[0]) \nprint('This is Second Element in x:', x[1])\nprint('This is Fifth (Last) Element in x:', x[4])\nprint()\n\n# Let's access the same elements with negative indices\nprint('This is First Element in x:', x[-5])\nprint('This is Second Element in x:', x[-4])\nprint('This is Fifth (Last) Element in x:', x[-1])\n```\n\n> x =  [1 2 3 4 5]\n\n> This is First Element in x: 1  \nThis is Second Element in x: 2  \nThis is Fifth (Last) Element in x: 5\n\n> This is First Element in x: 1  \nThis is Second Element in x: 2  \nThis is Fifth (Last) Element in x: 5\n\n注意，要访问 ndarray 中的第一个元素，我们需要使用索引 0，而不是 1。此外注意，可以同时使用正索引和负索引访问同一个元素。正如之前提到的，正索引用于从数组的开头访问元素，负索引用于从数组的末尾访问元素。\n\n现在我们看看如何更改秩为 1 的 ndarray 中的元素。方法是访问要更改的元素，然后使用 `=` 符号分配新的值：\n\n```\n# We create a rank 1 ndarray that contains integers from 1 to 5\nx = np.array([1, 2, 3, 4, 5])\n\n# We print the original x\nprint()\nprint('Original:\\n x = ', x)\nprint()\n\n# We change the fourth element in x from 4 to 20\nx[3] = 20\n\n# We print x after it was modified \nprint('Modified:\\n x = ', x)\n```\n\n> Original: \nx =  [1 2 3 4 5]\n\n> Modified: \nx =  [ 1  2  3 20  5]\n\n同样，我们可以访问和修改秩为 2 的 ndarray 中的特定元素。要访问秩为 2 的 ndarray 中的元素，我们需要提供两个索引，格式为 `[row, column]`。我们来看一些示例：\n\n```\n# We create a 3 x 3 rank 2 ndarray that contains integers from 1 to 9\nX = np.array([[1,2,3],[4,5,6],[7,8,9]])\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# Let's access some elements in X\nprint('This is (0,0) Element in X:', X[0,0])\nprint('This is (0,1) Element in X:', X[0,1])\nprint('This is (2,2) Element in X:', X[2,2])\n```\n\n> X =  \n[[1 2 3]  \n&nbsp;[4 5 6]  \n&nbsp;[7 8 9]]\n\n> This is (0,0) Element in X: 1  \nThis is (0,1) Element in X: 2  \nThis is (2,2) Element in X: 9\n\n注意，索引 `[0, 0]` 是指第一行第一列的元素。\n\n可以像针对秩为 1 的 ndarray 一样修改秩为 2 的 ndarray 中的元素。我们来看一个示例：\n\n```\n# We create a 3 x 3 rank 2 ndarray that contains integers from 1 to 9\nX = np.array([[1,2,3],[4,5,6],[7,8,9]])\n\n# We print the original x\nprint()\nprint('Original:\\n X = \\n', X)\nprint()\n\n# We change the (0,0) element in X from 1 to 20\nX[0,0] = 20\n\n# We print X after it was modified \nprint('Modified:\\n X = \\n', X)\n```\n\n> Original:  \nX =  \n[[1 2 3]  \n&nbsp;[4 5 6]  \n&nbsp;[7 8 9]]\n\n> Modified:  \nX =  \n[[20  2  3]  \n&nbsp;[ 4  5  6]  \n&nbsp;[ 7  8  9]]\n\n现在看看如何向 ndarray 中添加元素及删除其中的元素。我们可以使用 `np.delete(ndarray, elements, axis)` 函数删除元素。此函数会沿着指定的`轴`从给定 `ndarray` 中`删除`给定的`元素`列表。对于秩为 1 的 ndarray，不需要使用关键字 `axis`。对于秩为 2 的 ndarray，`axis = 0` 表示选择*行*，`axis = 1` 表示选择*列*。我们来看一些示例：\n\n```\n# We create a rank 1 ndarray \nx = np.array([1, 2, 3, 4, 5])\n\n# We create a rank 2 ndarray\nY = np.array([[1,2,3],[4,5,6],[7,8,9]])\n\n# We print x\nprint()\nprint('Original x = ', x)\n\n# We delete the first and last element of x\nx = np.delete(x, [0,4])\n\n# We print x with the first and last element deleted\nprint()\nprint('Modified x = ', x)\n\n# We print Y\nprint()\nprint('Original Y = \\n', Y)\n\n# We delete the first row of y\nw = np.delete(Y, 0, axis=0)\n\n# We delete the first and last column of y\nv = np.delete(Y, [0,2], axis=1)\n\n# We print w\nprint()\nprint('w = \\n', w)\n\n# We print v\nprint()\nprint('v = \\n', v)\n```\n\n> Original x =  [1 2 3 4 5]\n\n> Modified x =  [2 3 4]\n\n> Original Y =  \n[[1 2 3]  \n&nbsp;[4 5 6]  \n&nbsp;[7 8 9]]\n\n> w =  \n[[4 5 6]  \n&nbsp;[7 8 9]]\n\n> v =  \n[[2]  \n&nbsp;[5]  \n&nbsp;[8]]\n\n现在我们来看看如何向 ndarray 中附加值。我们可以使用 `np.append(ndarray, elements, axis)` 函数向 ndarray 中附加值。该函数会将给定的`元素`列表沿着指定的`轴`附加到 `ndarray` 中。我们来看一些示例：\n\n```\n# We create a rank 1 ndarray \nx = np.array([1, 2, 3, 4, 5])\n\n# We create a rank 2 ndarray \nY = np.array([[1,2,3],[4,5,6]])\n\n# We print x\nprint()\nprint('Original x = ', x)\n\n# We append the integer 6 to x\nx = np.append(x, 6)\n\n# We print x\nprint()\nprint('x = ', x)\n\n# We append the integer 7 and 8 to x\nx = np.append(x, [7,8])\n\n# We print x\nprint()\nprint('x = ', x)\n\n# We print Y\nprint()\nprint('Original Y = \\n', Y)\n\n# We append a new row containing 7,8,9 to y\nv = np.append(Y, [[7,8,9]], axis=0)\n\n# We append a new column containing 9 and 10 to y\nq = np.append(Y,[[9],[10]], axis=1)\n\n# We print v\nprint()\nprint('v = \\n', v)\n\n# We print q\nprint()\nprint('q = \\n', q)\n```\n\n> Original x =  [1 2 3 4 5]\n\n> x =  [1 2 3 4 5 6]\n\n> x =  [1 2 3 4 5 6 7 8]\n\n> Original Y =  \n[[1 2 3]  \n&nbsp;[4 5 6]]\n\n> v =  \n[[1 2 3]  \n&nbsp;[4 5 6]  \n&nbsp;[7 8 9]]\n\n> q =  \n[[ 1  2  3  9]  \n&nbsp;[ 4  5  6 10]]\n\n注意，当我们将行或列附加到秩为 2 的 ndarray 中时，行或列的形状必须正确，以与秩为 2 的 ndarray 的形状相符。\n\n现在我们来看看如何向 ndarray 中插入值。我们可以使用 `np.insert(ndarray, index, elements, axis)` 函数向 ndarray 中插入值。此函数会将给定的`元素`列表沿着指定的`轴`插入到 `ndarray` 中，并放在给定的`索引`前面。我们来看一些示例：\n\n```\n# We create a rank 1 ndarray \nx = np.array([1, 2, 5, 6, 7])\n\n# We create a rank 2 ndarray \nY = np.array([[1,2,3],[7,8,9]])\n\n# We print x\nprint()\nprint('Original x = ', x)\n\n# We insert the integer 3 and 4 between 2 and 5 in x. \nx = np.insert(x,2,[3,4])\n\n# We print x with the inserted elements\nprint()\nprint('x = ', x)\n\n# We print Y\nprint()\nprint('Original Y = \\n', Y)\n\n# We insert a row between the first and last row of y\nw = np.insert(Y,1,[4,5,6],axis=0)\n\n# We insert a column full of 5s between the first and second column of y\nv = np.insert(Y,1,5, axis=1)\n\n# We print w\nprint()\nprint('w = \\n', w)\n\n# We print v\nprint()\nprint('v = \\n', v)\n```\n\n> Original x =  [1 2 5 6 7]\n\n> x =  [1 2 3 4 5 6 7]\n\n> Original Y =  \n[[1 2 3]  \n&nbsp;[7 8 9]]\n\n> w =  \n[[1 2 3]  \n&nbsp;[4 5 6]  \n&nbsp;[7 8 9]]\n\n> v =  \n[[1 5 2 3]  \n&nbsp;[7 5 8 9]]\n\nNumPy 还允许我们将 ndarray 上下堆叠起来，或者左右堆叠。可以使用 `np.vstack()` 函数进行垂直堆叠，或使用 `np.hstack()` 函数进行水平堆叠。请务必注意，为了堆叠 ndarray，ndarray 的形状必须相符。我们来看一些示例：\n\n```\n# We create a rank 1 ndarray \nx = np.array([1,2])\n\n# We create a rank 2 ndarray \nY = np.array([[3,4],[5,6]])\n\n# We print x\nprint()\nprint('x = ', x)\n\n# We print Y\nprint()\nprint('Y = \\n', Y)\n\n# We stack x on top of Y\nz = np.vstack((x,Y))\n\n# We stack x on the right of Y. We need to reshape x in order to stack it on the right of Y. \nw = np.hstack((Y,x.reshape(2,1)))\n\n# We print z\nprint()\nprint('z = \\n', z)\n\n# We print w\nprint()\nprint('w = \\n', w)\n```\n\n> x =  [1 2]\n\n> Y =  \n[[3 4]  \n&nbsp;[5 6]]\n\n> z =  \n[[1 2]  \n&nbsp;[3 4]  \n&nbsp;[5 6]]\n\n> w =  \n[[3 4 1]  \n&nbsp;[5 6 2]]",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592224,
+          "key": "b267fa21-ebe2-4a73-b7b5-3c09c82782ff",
+          "title": "ndarray 切片",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b267fa21-ebe2-4a73-b7b5-3c09c82782ff",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591958,
+              "key": "a2434def-c303-47d0-b410-956a4cb28b70",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# ndarray 切片",
+              "instructor_notes": ""
+            },
+            {
+              "id": 591959,
+              "key": "9263e54d-de2e-4e3f-9091-54a65c133b0e",
+              "title": "NumPy 4 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jeU7lLgyMms",
+                "china_cdn_id": "jeU7lLgyMms.mp4"
+              }
+            },
+            {
+              "id": 591961,
+              "key": "c776979f-23e9-4cce-99a9-8a9f2ee5abb3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "正如之前提到的，我们除了能够一次访问一个元素之外，NumPy 还提供了访问 ndarray 子集的方式，称之为*切片*。切片方式是在方括号里用冒号 `:` 分隔起始和结束索引。通常，你将遇到三种类型的切片：\n\n```\n1. ndarray[start:end]\n2. ndarray[start:]\n3. ndarray[:end]\n```\n\n第一种方法用于选择在 `start` 和 `end` 索引之间的元素。第二种方法用于选择从 `start` 索引开始直到*最后一个*索引的所有元素。第三种方法用于选择从*第一个*索引开始直到 `end` 索引的所有元素。请注意，在第一种方法和第三种方法中，结束索引*不包括*在内。此外注意，因为 ndarray 可以是多维数组，在进行切片时，通常需要为数组的每个维度指定一个切片。\n\n现在我们将查看一些示例，了解如何使用上述方法从秩为 2 的 ndarray 中选择不同的子集。\n\n```\n# We create a 4 x 5 ndarray that contains integers from 0 to 19\nX = np.arange(20).reshape(4, 5)\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We select all the elements that are in the 2nd through 4th rows and in the 3rd to 5th columns\nZ = X[1:4,2:5]\n\n# We print Z\nprint('Z = \\n', Z)\n\n# We can select the same elements as above using method 2\nW = X[1:,2:5]\n\n# We print W\nprint()\nprint('W = \\n', W)\n\n# We select all the elements that are in the 1st through 3rd rows and in the 3rd to 5th columns\nY = X[:3,2:5]\n\n# We print Y\nprint()\nprint('Y = \\n', Y)\n\n# We select all the elements in the 3rd row\nv = X[2,:]\n\n# We print v\nprint()\nprint('v = ', v)\n\n# We select all the elements in the 3rd column\nq = X[:,2]\n\n# We print q\nprint()\nprint('q = ', q)\n\n# We select all the elements in the 3rd column but return a rank 2 ndarray\nR = X[:,2:3]\n\n# We print R\nprint()\nprint('R = \\n', R)\n```\n\n> X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]]\n\n> Z =  \n[[ 7  8  9]  \n&nbsp;[12 13 14]  \n&nbsp;[17 18 19]]\n\n> W =  \n[[ 7  8  9]  \n&nbsp;[12 13 14]  \n&nbsp;[17 18 19]]\n\n> Y =  \n[[ 2  3  4]  \n&nbsp;[ 7  8  9]  \n&nbsp;[12 13 14]]\n\n> v =  [10 11 12 13 14]\n\n> q =  [ 2  7 12 17]\n\n> R =  \n[[ 2]  \n&nbsp;[ 7]  \n&nbsp;[12]  \n&nbsp;[17]]\n\n注意，当我们选择第 3 列中的所有元素，即上述变量 `q`，切片返回一个秩为 1 的 ndarray，而不是秩为 2 的 ndarray。但是，如果以稍微不同的方式切片`X`，即上述变量 `R`，实际上可以获得秩为 2 的 ndarray。\n\n请务必注意，如果对 ndarray 进行切片并将结果保存到新的变量中，就像之前一样，数据不会复制到新的变量中。初学者对于这一点经常比较困惑。因此，我们将深入讲解这方面的知识。\n\n在上述示例中，当我们进行赋值时，例如：\n\n```\nZ = X[1:4,2:5]\n```\n\n原始数组 `X` 的切片没有复制到变量 `Z` 中。`X` 和 `Z` 现在只是*同一个* ndarray 的两个不同名称。我们提到，切片只是创建了原始数组的一个*视图*。也就是说，如果对 `Z` 做出更改，也会更改 `X` 中的元素。我们来看一个示例：\n\n```\n# We create a 4 x 5 ndarray that contains integers from 0 to 19\nX = np.arange(20).reshape(4, 5)\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We select all the elements that are in the 2nd through 4th rows and in the 3rd to 5th columns\nZ = X[1:4,2:5]\n\n# We print Z\nprint()\nprint('Z = \\n', Z)\nprint()\n\n# We change the last element in Z to 555\nZ[2,2] = 555\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n```\n\n> X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]]\n\n\n> Z =  \n[[ 7  8  9]  \n&nbsp;[12 13 14]  \n&nbsp;[17 18 19]]\n\n\n> X =  \n[[  0   1   2   3   4]  \n&nbsp;[  5   6   7   8   9]  \n&nbsp;[ 10  11  12  13  14]  \n&nbsp;[ 15  16  17  18 555]]\n\n可以从上述示例中清晰地看出，如果对 `Z` 做出更改，`X` 也会更改。\n\n但是，如果我们想创建一个新的 ndarray，其中包含切片中的值的副本，需要使用 `np.copy()` 函数。`np.copy(ndarray)` 函数会创建给定 `ndarray` 的一个副本。此函数还可以当做方法使用，就像之前使用 reshape 函数一样。我们来看看之前的相同示例，但是现在创建数组副本。我们将 `copy` 同时当做函数和方法。\n\n```\n# We create a 4 x 5 ndarray that contains integers from 0 to 19\nX = np.arange(20).reshape(4, 5)\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# create a copy of the slice using the np.copy() function\nZ = np.copy(X[1:4,2:5])\n\n#  create a copy of the slice using the copy as a method\nW = X[1:4,2:5].copy()\n\n# We change the last element in Z to 555\nZ[2,2] = 555\n\n# We change the last element in W to 444\nW[2,2] = 444\n\n# We print X\nprint()\nprint('X = \\n', X)\n\n# We print Z\nprint()\nprint('Z = \\n', Z)\n\n# We print W\nprint()\nprint('W = \\n', W)\n```\n\n> X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]]\n\n\n> X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]]\n\n> Z =  \n[[  7   8   9]  \n&nbsp;[ 12  13  14]  \n&nbsp;[ 17  18 555]]\n\n> W =  \n[[  7   8   9]  \n&nbsp;[ 12  13  14]  \n&nbsp;[ 17  18 444]]\n\n可以清晰地看出，通过使用 `copy` 命令，我们创建了完全相互独立的新 ndarray。\n\n通常，我们会使用一个 ndarray 对另一个 ndarray 进行切片、选择或更改另一个 ndarray 的元素。我们来看一些示例：\n\n```\n# We create a 4 x 5 ndarray that contains integers from 0 to 19\nX = np.arange(20).reshape(4, 5)\n\n# We create a rank 1 ndarray that will serve as indices to select elements from X\nindices = np.array([1,3])\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print indices\nprint('indices = ', indices)\nprint()\n\n# We use the indices ndarray to select the 2nd and 4th row of X\nY = X[indices,:]\n\n# We use the indices ndarray to select the 2nd and 4th column of X\nZ = X[:, indices]\n\n# We print Y\nprint()\nprint('Y = \\n', Y)\n\n# We print Z\nprint()\nprint('Z = \\n', Z)\n```\n\n> X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]]\n\n> indices =  [1 3]\n\n> Y =  \n[[ 5  6  7  8  9]  \n&nbsp;[15 16 17 18 19]]\n\n> Z =  \n[[ 1  3]  \n&nbsp;[ 6  8]  \n&nbsp;[11 13]  \n&nbsp;[16 18]]\n\nNumPy 还提供了从 ndarray 中选择特定元素的内置函数。例如，`np.diag(ndarray, k=N)` 函数会以 `N` 定义的`对角线`提取元素。默认情况下，`k=0`，表示主对角线。`k > 0` 的值用于选择在主对角线之上的对角线中的元素，`k < 0` 的值用于选择在主对角线之下的对角线中的元素。我们来看一个示例：\n\n```\n# We create a 5 x 5 ndarray that contains integers from 0 to 24\nX = np.arange(25).reshape(5, 5)\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print the elements in the main diagonal of X\nprint('z =', np.diag(X))\nprint()\n\n# We print the elements above the main diagonal of X\nprint('y =', np.diag(X, k=1))\nprint()\n\n# We print the elements below the main diagonal of X\nprint('w = ', np.diag(X, k=-1))\n```\n\n> X =  \n[[ 0  1  2  3  4]  \n&nbsp;[ 5  6  7  8  9]  \n&nbsp;[10 11 12 13 14]  \n&nbsp;[15 16 17 18 19]  \n&nbsp;[20 21 22 23 24]]\n\n> z = [ 0  6 12 18 24]\n\n> y = [ 1  7 13 19]\n\n> w =  [ 5 11 17 23]\n\n通常我们都会从 ndarray 中提取唯一的元素。我们可以使用 `np.unique()` 函数查找 ndarray 中的唯一元素。`np.unique(ndarray)` 函数会返回给定 `ndarray` 中的 `唯一`元素（去重后的元素），如以下示例所示：\n\n```\n# Create 3 x 3 ndarray with repeated values\nX = np.array([[1,2,3],[5,2,8],[1,2,3]])\n\n# We print X\nprint()\nprint('X = \\n', X)\nprint()\n\n# We print the unique elements of X \nprint('The unique elements in X are:',np.unique(X))\n```\n\n> X =  \n[[1 2 3]  \n&nbsp;[5 2 8]  \n&nbsp;[1 2 3]]\n\n> The unique elements in X are: [1 2 3 5 8]",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592227,
+          "key": "bb71e2ab-85a3-4edd-9adb-adcae5e74132",
+          "title": "操纵 ndarray",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bb71e2ab-85a3-4edd-9adb-adcae5e74132",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591964,
+              "key": "388802f3-9772-4bf2-9cd5-02d4d01769d8",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "388802f3-9772-4bf2-9cd5-02d4d01769d8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6679190938714112",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\r\n\r\n# Create a 5 x 5 ndarray with consecutive integers from 1 to 25 (inclusive).\r\n# Afterwards use Boolean indexing to pick out only the odd numbers in the array\r\n\r\n# Create a 5 x 5 ndarray with consecutive integers from 1 to 25 (inclusive).\r\nX = \r\n\r\n# Use Boolean indexing to pick out only the odd numbers in the array\r\nY = \r\n",
+                    "name": "pick_odd.py"
+                  },
+                  {
+                    "text": "import numpy as np\r\n\r\nX = np.arange(1,26).reshape(5,5)\r\n\r\nY = X[X % 2 != 0]",
+                    "name": "solution.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 592228,
+          "key": "3a468c13-4d2d-4277-a49d-8634063d53cc",
+          "title": "算术运算和广播",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3a468c13-4d2d-4277-a49d-8634063d53cc",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591965,
+              "key": "9ca16e13-d6b8-4ed7-a482-d27ac36758fa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 算术运算和广播",
+              "instructor_notes": ""
+            },
+            {
+              "id": 591966,
+              "key": "9331afff-6115-48d9-b1f9-c2f58245b1f7",
+              "title": "NumPy 6 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "wtLRuGK0kW4",
+                "china_cdn_id": "wtLRuGK0kW4.mp4"
+              }
+            },
+            {
+              "id": 591967,
+              "key": "3e918002-2143-437d-aa25-fa7c6ce04171",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "我们已经学到“ NumPy ”课程的最后一节课了。在最后一节课，我们将了解 NumPy 如何对 ndarray 进行算术运算。NumPy 允许对 ndarray 执行元素级运算以及矩阵运算。在这节课，我们将仅了解如何对 ndarray 进行元素级运算。为了进行元素级运算，NumPy 有时候会用到*广播*功能。广播一词用于描述 NumPy 如何对具有不同形状的 ndarray 进行元素级算术运算。例如，在标量和 ndarray 之间进行算术运算时，会隐式地用到广播。\n\n我们先在 ndarray 之间进行元素级加减乘除运算。为此，我们可以在 NumPy 中使用 `np.add()` 等函数，或者使用 `+` 等算术符号，后者与数学方程式的写法更像。这两种形式都执行相同的运算，唯一的区别是如果采用函数方式，函数通常都具有各种选项，可以通过关键字调整这些选项。请注意，在进行元素级运算时，对其执行运算的 ndarray 必须具有相同的形状或者可以广播。我们将在这节课的稍后阶段详细讲解这方面的知识。我们先对秩为 1 的 ndarray 执行元素级算术运算：\n\n```\n# We create two rank 1 ndarrays\nx = np.array([1,2,3,4])\ny = np.array([5.5,6.5,7.5,8.5])\n\n# We print x\nprint()\nprint('x = ', x)\n\n# We print y\nprint()\nprint('y = ', y)\nprint()\n\n# We perfrom basic element-wise operations using arithmetic symbols and functions\nprint('x + y = ', x + y)\nprint('add(x,y) = ', np.add(x,y))\nprint()\nprint('x - y = ', x - y)\nprint('subtract(x,y) = ', np.subtract(x,y))\nprint()\nprint('x * y = ', x * y)\nprint('multiply(x,y) = ', np.multiply(x,y))\nprint()\nprint('x / y = ', x / y)\nprint('divide(x,y) = ', np.divide(x,y))\n```\n\n> x =  [1 2 3 4]\n\n> y =  [ 5.5  6.5  7.5  8.5]\n\n> x + y =  [  6.5   8.5  10.5  12.5]  \nadd(x,y) =  [  6.5   8.5  10.5  12.5]\n\n> x - y =  [-4.5 -4.5 -4.5 -4.5]  \nsubtract(x,y) =  [-4.5 -4.5 -4.5 -4.5]\n\n> x * y =  [  5.5  13.   22.5  34. ]  \nmultiply(x,y) =  [  5.5  13.   22.5  34. ]\n\n> x / y =  [ 0.18181818  0.30769231  0.4         0.47058824]  \ndivide(x,y) =  [ 0.18181818  0.30769231  0.4         0.47058824]\n\n我们还可以对秩为 2 的 ndarray 执行相同的元素级算术运算。同样，为了执行这些运算，ndarray 的形状必须一样或者可广播。\n\n```\n# We create two rank 2 ndarrays\nX = np.array([1,2,3,4]).reshape(2,2)\nY = np.array([5.5,6.5,7.5,8.5]).reshape(2,2)\n\n# We print X\nprint()\nprint('X = \\n', X)\n\n# We print Y\nprint()\nprint('Y = \\n', Y)\nprint()\n\n# We perform basic element-wise operations using arithmetic symbols and functions\nprint('X + Y = \\n', X + Y)\nprint()\nprint('add(X,Y) = \\n', np.add(X,Y))\nprint()\nprint('X - Y = \\n', X - Y)\nprint()\nprint('subtract(X,Y) = \\n', np.subtract(X,Y))\nprint()\nprint('X * Y = \\n', X * Y)\nprint()\nprint('multiply(X,Y) = \\n', np.multiply(X,Y))\nprint()\nprint('X / Y = \\n', X / Y)\nprint()\nprint('divide(X,Y) = \\n', np.divide(X,Y))\n```\n\n> X =  \n[[1 2]  \n&nbsp;[3 4]]\n\n> Y =  \n[[ 5.5  6.5]  \n&nbsp;[ 7.5  8.5]]\n\n> X + Y =  \n[[  6.5   8.5]  \n&nbsp;[ 10.5  12.5]]\n\n> add(X,Y) =  \n[[  6.5   8.5]  \n&nbsp;[ 10.5  12.5]]\n\n> X - Y =  \n[[-4.5 -4.5]  \n&nbsp;[-4.5 -4.5]]\n\n> subtract(X,Y) =  \n[[-4.5 -4.5]  \n&nbsp;[-4.5 -4.5]]\n\n> X * Y =  \n[[  5.5  13. ]  \n&nbsp;[ 22.5  34. ]]\n\n> multiply(X,Y) =  \n[[  5.5  13. ]  \n&nbsp;[ 22.5  34. ]]\n\n> X / Y =  \n[[ 0.18181818  0.30769231]  \n&nbsp;[ 0.4         0.47058824]]\n\n> divide(X,Y) =  \n[[ 0.18181818  0.30769231]  \n&nbsp;[ 0.4         0.47058824]]\n\n我们还可以同时对 ndarray 的所有元素应用数学函数，例如 `sqrt(x)`。\n\n```\n# We create a rank 1 ndarray\nx = np.array([1,2,3,4])\n\n# We print x\nprint()\nprint('x = ', x)\n\n# We apply different mathematical functions to all elements of x\nprint()\nprint('EXP(x) =', np.exp(x))\nprint()\nprint('SQRT(x) =',np.sqrt(x))\nprint()\nprint('POW(x,2) =',np.power(x,2)) # We raise all elements to the power of 2\n```\n\n> x =  [1 2 3 4]\n\n> EXP(x) = [  2.71828183   7.3890561   20.08553692  54.59815003]\n\n> SQRT(x) = [ 1.  1.41421356  1.73205081  2.        ]\n\n> POW(x,2) = [ 1  4  9 16]\n\nNumPy 的另一个重要特性是具有大量不同的统计学函数。统计学函数为我们提供了关于 ndarray 中元素的统计学信息。我们来看一些示例：\n\n```\n# We create a 2 x 2 ndarray\nX = np.array([[1,2], [3,4]])\n\n# We print x\nprint()\nprint('X = \\n', X)\nprint()\n\nprint('Average of all elements in X:', X.mean())\nprint('Average of all elements in the columns of X:', X.mean(axis=0))\nprint('Average of all elements in the rows of X:', X.mean(axis=1))\nprint()\nprint('Sum of all elements in X:', X.sum())\nprint('Sum of all elements in the columns of X:', X.sum(axis=0))\nprint('Sum of all elements in the rows of X:', X.sum(axis=1))\nprint()\nprint('Standard Deviation of all elements in X:', X.std())\nprint('Standard Deviation of all elements in the columns of X:', X.std(axis=0))\nprint('Standard Deviation of all elements in the rows of X:', X.std(axis=1))\nprint()\nprint('Median of all elements in X:', np.median(X))\nprint('Median of all elements in the columns of X:', np.median(X,axis=0))\nprint('Median of all elements in the rows of X:', np.median(X,axis=1))\nprint()\nprint('Maximum value of all elements in X:', X.max())\nprint('Maximum value of all elements in the columns of X:', X.max(axis=0))\nprint('Maximum value of all elements in the rows of X:', X.max(axis=1))\nprint()\nprint('Minimum value of all elements in X:', X.min())\nprint('Minimum value of all elements in the columns of X:', X.min(axis=0))\nprint('Minimum value of all elements in the rows of X:', X.min(axis=1))\n```\n\n> X =  \n[[1 2]  \n&nbsp;[3 4]]\n\n> Average of all elements in X: 2.5  \nAverage of all elements in the columns of X: [ 2.  3.]  \nAverage of all elements in the rows of X: [ 1.5  3.5]\n\n> Sum of all elements in X: 10  \nSum of all elements in the columns of X: [4 6]  \nSum of all elements in the rows of X: [3 7]\n\n> Standard Deviation of all elements in X: 1.11803398875  \nStandard Deviation of all elements in the columns of X: [ 1.  1.]  \nStandard Deviation of all elements in the rows of X: [ 0.5  0.5]\n\n> Median of all elements in X: 2.5  \nMedian of all elements in the columns of X: [ 2.  3.]  \nMedian of all elements in the rows of X: [ 1.5  3.5]\n\n> Maximum value of all elements in X: 4  \nMaximum value of all elements in the columns of X: [3 4]  \nMaximum value of all elements in the rows of X: [2 4]\n\n> Minimum value of all elements in X: 1  \nMinimum value of all elements in the columns of X: [1 2]  \nMinimum value of all elements in the rows of X: [1 3]\n\n最后，我们来看看 NumPy 如何使 ndarray 中的所有元素与单个数字相加，而不使用复杂的循环。\n\n```\n# We create a 2 x 2 ndarray\nX = np.array([[1,2], [3,4]])\n\n# We print x\nprint()\nprint('X = \\n', X)\nprint()\n\nprint('3 * X = \\n', 3 * X)\nprint()\nprint('3 + X = \\n', 3 + X)\nprint()\nprint('X - 3 = \\n', X - 3)\nprint()\nprint('X / 3 = \\n', X / 3)\n```\n\n> X =  \n[[1 2]  \n&nbsp;[3 4]]\n\n> 3 * X =  \n[[ 3  6]  \n&nbsp;[ 9 12]]\n\n> 3 + X =  \n[[4 5]  \n&nbsp;[6 7]]\n\n> X - 3 =  \n[[-2 -1]  \n&nbsp;[ 0  1]]\n\n> X / 3 =  \n[[ 0.33333333  0.66666667]  \n&nbsp;[ 1.  1.33333333]]\n\n在上述示例中，NumPy 在后台对 ndarray 广播 `3`，使它们具有相同的形状。这样我们仅使用一行代码，就可以使 `X` 的每个元素加 3。\n\nNumpy 可以对两个形状不同的 ndarray 执行相同的操作，但是存在一些限制，如下所示。\n\n```\n# We create a rank 1 ndarray\nx = np.array([1,2,3])\n\n# We create a 3 x 3 ndarray\nY = np.array([[1,2,3],[4,5,6],[7,8,9]])\n\n# We create a 3 x 1 ndarray\nZ = np.array([1,2,3]).reshape(3,1)\n\n# We print x\nprint()\nprint('x = ', x)\nprint()\n\n# We print Y\nprint()\nprint('Y = \\n', Y)\nprint()\n\n# We print Z\nprint()\nprint('Z = \\n', Z)\nprint()\n\nprint('x + Y = \\n', x + Y)\nprint()\nprint('Z + Y = \\n',Z + Y)\n```\n\n> x = [1 2 3]\n\n> Y =  \n[[1 2 3]  \n&nbsp;[4 5 6]  \n&nbsp;[7 8 9]]\n\n\n> Z =  \n[[1]  \n&nbsp;[2]  \n&nbsp;[3]]\n\n> x + Y =  \n[[ 2  4  6]  \n&nbsp;[ 5  7  9]  \n&nbsp;[ 8 10 12]]\n\n> Z + Y =  \n[[ 2  3  4]  \n&nbsp;[ 6  7  8]  \n&nbsp;[10 11 12]]\n\n和之前一样，NumPy 能够通过沿着大的 ndarray 对更小的 ndarray 进行广播，将 1 x 3 和 3 x 1 ndarray 加到 3 x 3 ndarray 上。通常，NumPy 能够这么操作的前提是，更小的 ndarray（例如我们的示例中的 1 x 3 ndarray）可以扩展成更大的 ndarray 的形状，并且生成的广播很清晰明确。\n\n确保阅读 NumPy 文档，详细了解广播及其规则：\n[Broadcasting](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 592229,
+          "key": "b4a9d454-157b-42dc-93fe-98886e6ea25d",
+          "title": "通过广播创建 ndarray",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b4a9d454-157b-42dc-93fe-98886e6ea25d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 591968,
+              "key": "986f9819-fe75-45c1-93c9-95a1b4490e50",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "986f9819-fe75-45c1-93c9-95a1b4490e50",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "创建 ndarray",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5646204998909952",
+                "initial_code_files": [
+                  {
+                    "text": "import numpy as np\r\n\r\n# Use Broadcasting to create a 4 x 4 ndarray that has its first\r\n# column full of 1s, its second column full of 2s, its third\r\n# column full of 3s, etc.. \r\n\r\n# Do not change the name of this array. \r\n# Please don't print anything from your code! The TEST RUN button below will print your array. \r\nX = \r\n",
+                    "name": "create_ndarray.py"
+                  },
+                  {
+                    "text": "import numpy as np\r\n# We will make use of array multiplication, as demonstrated on the previous page:\r\n# \"Example 6. Arithmetic operations on 2-D arrays (Compatible shape)\"\r\n\r\n\r\n# np.ones((4,4)) will give you a 4 x 4 matrix\r\n#[[1. 1. 1. 1.],\r\n# [1. 1. 1. 1.],\r\n# [1. 1. 1. 1.],\r\n# [1. 1. 1. 1.]]\r\n\r\n# np.arange(1,5) will give you a 1 x 4 matrix\r\n# [1 2 3 4]\r\n\r\n# X can be calculated by multiplying the above two matrices, as shown below, to get:\r\n#[[1. 2. 3. 4.],\r\n# [1. 2. 3. 4.],\r\n# [1. 2. 3. 4.],\r\n# [1. 2. 3. 4.]]\r\nX = np.ones((4,4)) * np.arange(1,5)\r\n",
+                    "name": "solution.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

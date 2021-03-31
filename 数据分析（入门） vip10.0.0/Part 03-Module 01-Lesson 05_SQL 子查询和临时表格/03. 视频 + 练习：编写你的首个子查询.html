@@ -1,0 +1,451 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>视频 + 练习：编写你的首个子查询</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>SQL 子查询和临时表格</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频： 简介.html">01. 视频： 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频： 子查询简介.html">02. 视频： 子查询简介</a>
+    </li>
+    <li class="">
+      <a href="03. 视频 + 练习：编写你的首个子查询.html">03. 视频 + 练习：编写你的首个子查询</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：编写你的首个子查询.html">04. 解决方案：编写你的首个子查询</a>
+    </li>
+    <li class="">
+      <a href="05. 文本：子查询格式.html">05. 文本：子查询格式</a>
+    </li>
+    <li class="">
+      <a href="06. 视频： 关于子查询的更多内容.html">06. 视频： 关于子查询的更多内容</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：关于子查询的更多内容.html">07. 练习：关于子查询的更多内容</a>
+    </li>
+    <li class="">
+      <a href="08. 解决方案：关于子查询的更多内容.html">08. 解决方案：关于子查询的更多内容</a>
+    </li>
+    <li class="">
+      <a href="09. 练习：爱上子查询.html">09. 练习：爱上子查询</a>
+    </li>
+    <li class="">
+      <a href="10. 解决方案：爱上子查询.html">10. 解决方案：爱上子查询</a>
+    </li>
+    <li class="">
+      <a href="11. 视频： WITH.html">11. 视频： WITH</a>
+    </li>
+    <li class="">
+      <a href="12. 文本 + 练习：WITH 与子查询.html">12. 文本 + 练习：WITH 与子查询</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：WITH.html">13. 练习：WITH</a>
+    </li>
+    <li class="">
+      <a href="14. 解决方案：WITH.html">14. 解决方案：WITH</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：子查询总结.html">15. 视频：子查询总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. 视频 + 练习：编写你的首个子查询</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>你的首个子查询</p></h3>
+  <video controls>
+  <source src="03. 你的首个子查询-cTM1jPYXLoQ.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="03. 你的首个子查询-cTM1jPYXLoQ.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="03. 你的首个子查询-cTM1jPYXLoQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="03. 你的首个子查询-cTM1jPYXLoQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="uz" src="03. 你的首个子查询-cTM1jPYXLoQ.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="CN" src="03. 你的首个子查询-cTM1jPYXLoQ.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="你的首个子查询">你的首个子查询</h3>
+<p>当你第一次编写子查询时，可能会显得很复杂。我们尝试将子查询分解成几个不同的部分。  </p>
+<p>如果你遇到问题，请重新观看上述视频。我们想要算出每个渠道每天的平均事件次数。第一个表格将提供每个渠道每天的事件次数，然后我们将使用第二个查询对这些值求平均。</p>
+<p>请你尝试自己解答这个问题。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>待完成任务</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--0">
+        <label for="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--0"><p>使用下面的练习环境算出每个渠道每天的事件发生次数。</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--1">
+        <label for="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--1"><p>练习 1</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--2">
+        <label for="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--2"><p>现在创建一个子查询，只是用来提供第一个查询中的所有数据。</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--3">
+        <label for="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--3"><p>练习 2</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--4">
+        <label for="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--4"><p>‘现在算出每个渠道的事件平均数。因为之前已经按天划分，因此就是每天的平均数。’</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--5">
+        <label for="b16a8055-bea8-493b-b2d1-6aac3aeca0a6--5"><p>练习 3</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！了解如何在一个查询中嵌套另一个查询很关键，它可以回答用关系数据库存储数据的公司面临的很多问题。</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><h3 id="练习-1">练习 1</h3>
+<p>在哪个日期-渠道对中发生的事件最多？（选择所有正确的选项）</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505946676759" name="432032" id="a1505946676759">
+      <label for="a1505946676759"><p>2017 年 1 月 1 日；直接渠道</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505946822841" name="432032" id="a1505946822841">
+      <label for="a1505946822841"><p>2016 年 12 月 31 日；facebook</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505946834945" name="432032" id="a1505946834945">
+      <label for="a1505946834945"><p>2016 年 11 月 3 日；直接渠道</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505946835747" name="432032" id="a1505946835747">
+      <label for="a1505946835747"><p>2016 年 12 月 21 日；直接渠道</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>2017 年 1 月 1 日；直接渠道</li>
+      <li>2016 年 12 月 21 日；直接渠道</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><h3 id="练习-2">练习 2</h3>
+<p>标出以下所有关于编写子查询的正确描述。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1505947140879" name="432033" id="a1505947140879">
+      <label for="a1505947140879"><p>原始查询位于 <strong>FROM</strong> 语句中。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505947532354" name="432033" id="a1505947532354">
+      <label for="a1505947532354"><p>原始查询位于 <strong>SELECT</strong> 语句中。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505947544506" name="432033" id="a1505947544506">
+      <label for="a1505947544506"><p>在 <strong>SELECT</strong> 语句中使用了 <code>*</code>，以便从原始查询中获取所有数据。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1505947584030" name="432033" id="a1505947584030">
+      <label for="a1505947584030"><p>必须对嵌套在外部查询中的表格使用别名。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>原始查询位于 **FROM** 语句中。</li>
+      <li>在 **SELECT** 语句中使用了 `*`，以便从原始查询中获取所有数据。</li>
+      <li>必须对嵌套在外部查询中的表格使用别名。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>将每个渠道与相应的每日平均事件数相匹配。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>1.32</p></button>
+  <button class="btn btn-primary"><p>1.60</p></button>
+  <button class="btn btn-primary"><p>1.67</p></button>
+  <button class="btn btn-primary"><p>4.90</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>渠道</p>
+      </th>
+      <th>
+        <p>平均事件/日期数</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>direct</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>facebook</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>organic</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>twitter</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>渠道</p>
+        </th>
+        <th>
+          <p>平均事件/日期数</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>twitter</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>1.32</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>facebook</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>1.60</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>organic</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>1.67</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>direct</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>4.90</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. 解决方案：编写你的首个子查询.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 视频 + 练习：编写你的首个子查询')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

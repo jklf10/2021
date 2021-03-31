@@ -1,0 +1,240 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>视频: CAST</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>SQL 数据清理</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频 SQL 数据清理简介.html">01. 视频: SQL 数据清理简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频 LEFT 与 RIGHT.html">02. 视频: LEFT 与 RIGHT</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：LEFT 与 RIGHT.html">03. 练习：LEFT 与 RIGHT</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：LEFT 与 RIGHT.html">04. 解决方案：LEFT 与 RIGHT</a>
+    </li>
+    <li class="">
+      <a href="05. 视频 POSITION、STRPOS 和 SUBSTR.html">05. 视频: POSITION、STRPOS 和 SUBSTR</a>
+    </li>
+    <li class="">
+      <a href="06. 练习：POSITION、STRPOS 和 SUBSTR - AME DATA AS QUIZ 1.html">06. 练习：POSITION、STRPOS 和 SUBSTR - AME DATA AS QUIZ 1</a>
+    </li>
+    <li class="">
+      <a href="07. 解决方案：POSITION、STRPOS 和 SUBSTR.html">07. 解决方案：POSITION、STRPOS 和 SUBSTR</a>
+    </li>
+    <li class="">
+      <a href="08. 视频 CONCAT.html">08. 视频: CONCAT</a>
+    </li>
+    <li class="">
+      <a href="09. 练习：CONCAT.html">09. 练习：CONCAT</a>
+    </li>
+    <li class="">
+      <a href="10. 解决方案：CONCAT.html">10. 解决方案：CONCAT</a>
+    </li>
+    <li class="">
+      <a href="11. 视频 CAST.html">11. 视频: CAST</a>
+    </li>
+    <li class="">
+      <a href="12. 练习：CAST.html">12. 练习：CAST</a>
+    </li>
+    <li class="">
+      <a href="13. 解决方案：CAST.html">13. 解决方案：CAST</a>
+    </li>
+    <li class="">
+      <a href="14. 视频 COALESCE.html">14. 视频: COALESCE</a>
+    </li>
+    <li class="">
+      <a href="15. 练习：COALESCE.html">15. 练习：COALESCE</a>
+    </li>
+    <li class="">
+      <a href="16. 解决方案：COALESCE.html">16. 解决方案：COALESCE</a>
+    </li>
+    <li class="">
+      <a href="17. 视频 + 文本 总结.html">17. 视频 + 文本: 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. 视频: CAST</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>CAST</p></h3>
+  <video controls>
+  <source src="11. CAST-LbyOq4ofLng.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="11. CAST-LbyOq4ofLng.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="11. CAST-LbyOq4ofLng.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="11. CAST-LbyOq4ofLng.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="uz" src="11. CAST-LbyOq4ofLng.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="CN" src="11. CAST-LbyOq4ofLng.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在此视频中，你学习了其他数据处理功能，包括</p>
+<ol>
+<li><strong>TO_DATE</strong></li>
+<li><strong>CAST</strong></li>
+<li>使用 <code>::</code> 进行转型</li>
+</ol>
+<p><strong>DATE_PART('month', TO_DATE(month, 'month'))</strong> 将月份名称改成了与该月相关的数字。<br><br></p>
+<p>然后，你可以使用 <strong>CAST</strong> 将字符串改为日期。<strong>CAST</strong> 实际上可以用来更改各种列类型。经常，你会像视频中一样，使用 <strong>CAST(date_column AS DATE)</strong> 将<code>字符串</code>改成<code>日期</code>。但是，你可能还会对列的数据类型做出其他更改。你可以在<a href="http://www.postgresqltutorial.com/postgresql-cast/" rel="noopener noreferrer" target="_blank">此处</a>看到其他例子。</p>
+<p>在此示例中，除了 <strong>CAST(date_column AS DATE)</strong> 之外，你可以使用 <strong>date_column::DATE</strong>。</p>
+<h3 id="专家提示">专家提示</h3>
+<p>在这节课演示的大部分函数都特定于字符串，它们不适用于日期、整数或浮点数。但是，使用这些函数将自动将数据转换为相应的类型。 </p>
+<p><strong>LEFT</strong>、<strong>RIGHT</strong> 和 <strong>TRIM</strong> 都仅用来选择特定的字符串元素，但是使用它们选择数字或日期元素，系统会将它们处理为字符串。虽然我们没有明确地在这节课介绍 <strong>TRIM</strong>，但是它可以用来删掉字符串开头和末尾的字符，这样就可以删掉一行开头或末尾的空格，从 Excel 或其他存储系统转移过来的数据经常就需要这么处理。</p>
+<p>这些函数有很多变体，还有这节课没介绍的其他几个字符串函数。<br />
+不同的数据库使用的这些函数有所不同，如果你连接的是私有数据库，一定要查看相应的数据库语法。<a href="http://www.postgresql.org/docs/9.1/static/functions-string.html" rel="noopener noreferrer" target="_blank">Postgres literature</a> 中包含了大量相关的函数。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. 练习：CAST.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. 视频: CAST')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

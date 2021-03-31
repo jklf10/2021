@@ -1,0 +1,1125 @@
+{
+  "data": {
+    "lesson": {
+      "id": 869727,
+      "key": "4470db67-5f1c-44bb-a11e-1a7cbb36d8b3",
+      "title": "函数",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "zh-cn",
+      "summary": "",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": false,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/4470db67-5f1c-44bb-a11e-1a7cbb36d8b3/738083/1544291147317/Functions+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/4470db67-5f1c-44bb-a11e-1a7cbb36d8b3/738083/1544291144535/Functions+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 534059,
+          "key": "e758630d-d2f2-4a80-a2ba-eb9f852ac1e5",
+          "title": "简介",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e758630d-d2f2-4a80-a2ba-eb9f852ac1e5",
+            "completed_at": "2018-08-01T07:18:09.240Z",
+            "last_viewed_at": "2018-08-02T05:01:35.392Z",
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 533992,
+              "key": "176dfcbc-1290-4519-a707-008a443833fb",
+              "title": "L4 01 简介 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "p5L4rTV1Pgk",
+                "china_cdn_id": "p5L4rTV1Pgk.mp4"
+              }
+            },
+            {
+              "id": 533993,
+              "key": "995586a2-6592-4605-bbf4-22b878166fe4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 函数\n欢迎学习这节关于函数的课程！你将学习：\n- 函数定义\n- 变量作用域\n- 文档\n- Lambda 表达式\n- 迭代器和生成器",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534074,
+          "key": "97c1d194-e640-4dda-b7c8-770db5a4cb0f",
+          "title": "定义函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "97c1d194-e640-4dda-b7c8-770db5a4cb0f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 569353,
+              "key": "5e33764e-5058-477b-a9b9-26d637f87982",
+              "title": "Definindo funções",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "IP_tJYhynbc",
+                "china_cdn_id": "IP_tJYhynbc.mp4"
+              }
+            },
+            {
+              "id": 534000,
+              "key": "4c58bf02-08ba-4516-a9a9-8085b3b025a7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 定义函数\n函数定义示例：\n```python\ndef cylinder_volume(height, radius):\n    pi = 3.14159\n    return height * pi * radius ** 2\n```\n定义 cylinder_volume 函数后，我们可以如下所示地**调用**该函数。 \n```python\ncylinder_volume(10, 3)\n```\n函数定义包含几个重要部分。\n\n### 函数头部\n我们从函数头部开始，即函数定义的第一行。\n1. 函数头部始终以关键字 `def` 开始，表示这是函数定义。\n2. 然后是函数名称（在此例中是 `cylinder_volume`，因为函数名是要一个单词，所以需要用_进行连接），遵循的是和变量一样的命名规范。你可以在本页面下方回顾下命名规范。\n3. 名称之后是括号，其中可能包括用英文逗号分隔的参数（在此例中是 `height` 和 `radius`）。[形参（或实参）](https://stackoverflow.com/questions/3176310/difference-between-parameter-and-argument)是当函数被调用时作为输入传入的值，用在函数主体中。如果函数没有参数，这些括号留空。\n4. 头部始终以英文冒号 `:` 结束。\n\n### 函数主体\n函数的剩余部分包含在主题中，也就是函数完成操作的部分。\n1. 函数主体是在头部行之后缩进的代码。在此例中是定义 π 和返回体积的两行代码。\n2. 在此主体中，我们可以引用参数并定义新的变量，这些变量只能在这些缩进代码行内使用。\n3. 主体将经常包括 `return` 语句，用于当函数被调用时返回输出值。`return` 语句包括关键字 `return`，然后是经过评估以获得函数输出值的表达式。如果没有 `return` 语句，函数直接返回 None（例如内置 `print()` 函数）。\n\n### 函数的命名规范\n函数名称遵守和变量一样的命名规范。\n\n1. 仅在函数名称中使用普通字母、数字和下划线。不能有空格，需要以字母或下划线开头。\n2. **不能使用在 Python 中具有重要作用的保留字或内置标识符**，我们将在这门课程中学习这方面的知识。要了解 python 保留字列表，请参阅[此处](https://pentangle.net/python/handbook/node52.html)。 \n3. 尝试使用可以帮助读者了解函数作用的描述性名称。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 569356,
+              "key": "64f85f1b-6772-46f1-b561-c0c398fa31ca",
+              "title": "Argumentos padrão",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cG6UfBZX2KI",
+                "china_cdn_id": "cG6UfBZX2KI.mp4"
+              }
+            },
+            {
+              "id": 534002,
+              "key": "0d2880ff-e5d9-4d48-89e5-ef1b735acde4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 默认参数\n我们可以向函数中添加默认参数，以便为在函数调用中未指定的参数提供默认值。\n```python\ndef cylinder_volume(height, radius=5):\n    pi = 3.14159\n    return height * pi * radius ** 2\n```\n在上述示例中，如果在函数调用中忽略了 `radius`，则将该参数设为 5。如果我们调用 `cylinder_volume(10)`，该函数将使用 10 作为高度，使用 5 作为半径。但是，如果调用 `cylinder_volume(10, 7)`，7 将覆盖默认的值 5。\n\n此外注意，我们按照位置向参数传递值。可以通过两种方式传递值：按照位置和按照名称。下面两个函数的效果是一样的。 \n```python\ncylinder_volume(10, 7)  # pass in arguments by position\ncylinder_volume(height=10, radius=7)  # pass in arguments by name\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534065,
+          "key": "3487f6f7-ff59-40cf-8746-106c6bdca7a5",
+          "title": "练习：定义函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3487f6f7-ff59-40cf-8746-106c6bdca7a5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 533994,
+              "key": "961e93d7-f8cb-42ec-8d44-b4426ede550e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：人口密度函数\n\n写一个名称为 `population_density` 的函数，该函数有两个参数 `population` 和 `land_area`，并根据这两个值返回人口密度。我提供了两个测试用例，你可以用这两个用例验证你的函数是否能正常运行。写好该函数后，点击“测试答案”按钮测试你的代码。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 533995,
+              "key": "586bfa7f-f249-4c94-bbf0-39285d8ac8ea",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "586bfa7f-f249-4c94-bbf0-39285d8ac8ea",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6070447897182208",
+                "initial_code_files": [
+                  {
+                    "text": "# write your function here\n\n\n\n\n# test cases for your function\ntest1 = population_density(10, 1)\nexpected_result1 = 10\nprint(\"expected result: {}, actual result: {}\".format(expected_result1, test1))\n\ntest2 = population_density(864816, 121.4)\nexpected_result2 = 7123.6902801\nprint(\"expected result: {}, actual result: {}\".format(expected_result2, test2))",
+                    "name": "pop_density.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 533997,
+              "key": "4d6fb0e6-90ab-4da6-a38f-9405e2386a6f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习：`readable_timedelta`\n\n写一个叫做 `readable_timedelta` 的函数，该函数有一个参数：整数 `days`，并返回一个表示由多少周多少天组成的字符串。例如 `readable_timedelta(10)` 应返回“1 week(s) and 3 day(s).”。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 533998,
+              "key": "f8b35dee-8b52-4288-84c1-a60804871be8",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "f8b35dee-8b52-4288-84c1-a60804871be8",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5358155756863488",
+                "initial_code_files": [
+                  {
+                    "text": "# write your function here\n\n\n# test your function\nprint(readable_timedelta(10))",
+                    "name": "student.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534081,
+          "key": "06583dc4-befc-42dc-adad-876e43d3c8ba",
+          "title": "解决方案：定义函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "06583dc4-befc-42dc-adad-876e43d3c8ba",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534003,
+              "key": "21a01fdb-7211-45cf-9904-97b23116bc32",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习解决方案：人口密度函数\n```python\ndef population_density(population, land_area):\n    return population/land_area\n```\n\n我的函数主体部分只有一行代码，因为我个人喜欢让代码很简练，只要不影响代码的含义就行。你也可以将计算部分与返回语句分开，各占一行。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534004,
+              "key": "a1eaaddb-f212-478e-a3e6-d56cd45b7d22",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习解决方案：`readable_timedelta`\n\n```python\ndef readable_timedelta(days):\n    # use integer division to get the number of weeks\n    weeks = days // 7\n    # use % to get the number of days that remain\n    remainder = days % 7\n    return \"{} week(s) and {} day(s).\".format(weeks, remainder)\n```\n\n恭喜你写出了首个函数！你很快将看到并编写更多的函数。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 868944,
+          "key": "84896599-25d9-46b5-9902-7e1452d0b0cd",
+          "title": "小测验：函数",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "84896599-25d9-46b5-9902-7e1452d0b0cd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 867041,
+              "key": "1a9b7fea-84c0-49b8-99f9-c0597ec5ca6a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 小测验\n让我们快速回顾一下之前学到的概念。重要的是要回顾旧概念，学习新概念，才能够牢牢掌握基础。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 867042,
+              "key": "29adbb39-0c10-4c4d-9c4a-eca0fe5bef41",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "29adbb39-0c10-4c4d-9c4a-eca0fe5bef41",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "以下是一些你使用过的语句。你能将每段代码与其类型相匹配吗？"
+                },
+                "concepts_label": "代码",
+                "answers_label": "语句类型",
+                "concepts": [
+                  {
+                    "text": "`size = 8`",
+                    "correct_answer": {
+                      "id": "a1531375113544",
+                      "text": "赋值语句"
+                    }
+                  },
+                  {
+                    "text": "`42`",
+                    "correct_answer": {
+                      "id": "a1531375333819",
+                      "text": "不是一个表达"
+                    }
+                  },
+                  {
+                    "text": "```\nfor i in [1, 2, 3, 4, 5]:  \n  print(i)\n```",
+                    "correct_answer": {
+                      "id": "a1531375358325",
+                      "text": "`for` 循环"
+                    }
+                  },
+                  {
+                    "text": "`string2.lower()`",
+                    "correct_answer": {
+                      "id": "a1531375416133",
+                      "text": "函数调用"
+                    }
+                  },
+                  {
+                    "text": "```\nwhile n > 2:  \n  print(i)\n```",
+                    "correct_answer": {
+                      "id": "a1531380179084",
+                      "text": "`while` 循环"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1531380179084",
+                    "text": "`while` 循环"
+                  },
+                  {
+                    "id": "a1531375358325",
+                    "text": "`for` 循环"
+                  },
+                  {
+                    "id": "a1531375416133",
+                    "text": "函数调用"
+                  },
+                  {
+                    "id": "a1531375333819",
+                    "text": "不是一个表达"
+                  },
+                  {
+                    "id": "a1531375113544",
+                    "text": "赋值语句"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 867043,
+              "key": "c3ef67e2-e57a-4cc4-8fc9-c2545f70a940",
+              "title": "",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c3ef67e2-e57a-4cc4-8fc9-c2545f70a940",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "将每个术语与其描述相匹配。"
+                },
+                "concepts_label": "描述",
+                "answers_label": "术语",
+                "concepts": [
+                  {
+                    "text": "一个拥有名称的代码块，但在我们让它运行之前，它不会自己运行",
+                    "correct_answer": {
+                      "id": "a1531375848838",
+                      "text": "函数"
+                    }
+                  },
+                  {
+                    "text": "使函数运行的语句",
+                    "correct_answer": {
+                      "id": "a1531375890305",
+                      "text": "函数调用"
+                    }
+                  },
+                  {
+                    "text": "我们调用该函数时可以传递给函数的值",
+                    "correct_answer": {
+                      "id": "a1531375916216",
+                      "text": "参数"
+                    }
+                  },
+                  {
+                    "text": "与对象关联的函数",
+                    "correct_answer": {
+                      "id": "a1531375928400",
+                      "text": "方法"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1531375890305",
+                    "text": "函数调用"
+                  },
+                  {
+                    "id": "a1531375916216",
+                    "text": "参数"
+                  },
+                  {
+                    "id": "a1531375848838",
+                    "text": "函数"
+                  },
+                  {
+                    "id": "a1531375928400",
+                    "text": "方法"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 867044,
+              "key": "0b8799a9-d144-45ae-adc1-0c888cd98ae7",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "0b8799a9-d144-45ae-adc1-0c888cd98ae7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "这是对名为`print_list_elements`的函数的调用：`print_list_elements(list)`这段代码的哪一部分是**参数**？",
+                "answers": [
+                  {
+                    "id": "a1531375998469",
+                    "text": "`print_list_elements`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531376241017",
+                    "text": "`list`",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1531376255248",
+                    "text": "`()`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1537910152909",
+                    "text": "在这个函数调用中没有参数",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 867045,
+              "key": "141c8bef-309d-4540-bc77-062a8cea21e5",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "141c8bef-309d-4540-bc77-062a8cea21e5",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "这是对名为`print_list_elements`的函数的调用：`print_list_elements()`这段代码的哪一部分被称为**参数**？",
+                "answers": [
+                  {
+                    "id": "a1531376395605",
+                    "text": "`print_list_elements`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531376412252",
+                    "text": "`list`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531376416337",
+                    "text": "`()`",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531376418668",
+                    "text": "在这个函数调用中没有参数",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534092,
+          "key": "98b7dee3-4ce8-4d6b-8950-55d23a3e3241",
+          "title": "变量作用域",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "98b7dee3-4ce8-4d6b-8950-55d23a3e3241",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 569361,
+              "key": "15fb307c-b321-4abc-bc14-0b62eacb18cf",
+              "title": "L4 04 Escopo de variável V3",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "rYubQlAM-gw",
+                "china_cdn_id": "rYubQlAM-gw.mp4"
+              }
+            },
+            {
+              "id": 534006,
+              "key": "cecbee50-57a9-4810-976d-49b65bfff3de",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 变量作用域\n__变量作用域__是指可以在程序的哪个部分引用或使用某个变量。\n\n在函数中使用变量时，务必要考虑作用域。如果变量是在函数内创建的，则只能在该函数内使用该变量。你无法从该函数外面访问该变量。\n```python\n# This will result in an error\ndef some_function():\n    word = \"hello\"\n \nprint(word)\n```\n这意味着你可以为在不同函数内使用的不同变量使用相同的名称。\n```python\n# This works fine\ndef some_function():\n    word = \"hello\"\n \ndef another_function():\n    word = \"goodbye\"\n```\n像这样在函数之外定义的变量依然可以在函数内访问。\n```python\n# This works fine\nword = \"hello\"\n\ndef some_function():\n    print(word)\n\nprint(word)\n```\n注意，我们可以在此函数内以及函数外输出 `word`。作用域对理解信息在用 Python 和任何编程语言编写的程序中的传递方式来说很关键。\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534007,
+              "key": "4ab356fc-45e4-4d2d-9708-5a257cbc1193",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 关于变量作用域的更多信息\n\n在编程时，你经常会发现相似的想法不断出现。你将使用变量进行计数、迭代和累积要返回的值。为了编写容易读懂的代码，你会发现你需要对相似的想法使用相似的名称。一旦你将多段代码放到一起（例如，一个脚本中有多个函数或函数调用），你可能需要为两个不同的概念使用相同的名称。\n\n幸运的是，你不需要不断想出新的名称。可以为对象重复使用相同的名称，只要它们位于不同的作用域即可。\n\n良好实践：建议将变量定义在所需的最小作用域内。虽然函数_可以_引用在更大的作用域内定义的变量，但是通常不建议这么做，因为如果程序有很多变量，你可能不知道你定义了什么变量。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534062,
+          "key": "6f936f02-4ba7-46d7-9fac-5a5c5ea8de73",
+          "title": "变量作用域",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6f936f02-4ba7-46d7-9fac-5a5c5ea8de73",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 533996,
+              "key": "98d65711-9d38-410b-8c91-684077a7fe4b",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "98d65711-9d38-410b-8c91-684077a7fe4b",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "通读下面的代码段：\n\n```python\negg_count = 0\n\ndef buy_eggs():\n    egg_count += 12 # purchase a dozen eggs\n\nbuy_eggs()\n```\n\n运行这段代码后的结果是什么？如果不确定，在自己的计算机上运行一下！",
+                "answers": [
+                  {
+                    "id": "a1514481237657",
+                    "text": "`egg_count` 等于 0",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1514481246002",
+                    "text": "`egg_count` 等于 12",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1514481246513",
+                    "text": "发生错误",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 534089,
+          "key": "92cc15be-1b0d-4266-9b26-4cec6aa91f93",
+          "title": "解决方案：变量作用域",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "92cc15be-1b0d-4266-9b26-4cec6aa91f93",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534008,
+              "key": "3591a14d-fe3c-467e-8310-c0dd5781fa4d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：变量作用域\n更好的编写方式为：\n```python\negg_count = 0\n\ndef buy_eggs(count):\n    return count + 12  # purchase a dozen eggs\n\negg_count = buy_eggs(egg_count)\n```\n将这段代码与原始代码段进行比较：\n```python\negg_count = 0\n\ndef buy_eggs():\n    egg_count += 12 # purchase a dozen eggs\n\nbuy_eggs()\n```\n下面的代码段导致 `UnboundLocalError`。\n\n在上个视频中，你发现在函数内，我们可以成功地输出外部变量的值。因为我们只是访问该变量的值。当我们尝试将此变量的值__更改__或__重新赋值为__另一个值时，我们将遇到错误。Python 不允许函数修改不在函数作用域内的变量。\n\n但是上面的原则仅适用于整数和字符串，<mark>列表、字典、集合、类中可以在子程序（子函数）中通过修改局部变量达到修改全局变量的目的</mark>。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 868945,
+          "key": "6e1e37f4-56cb-4c2f-8f0f-8957573c0106",
+          "title": "小测验：变量作用域",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6e1e37f4-56cb-4c2f-8f0f-8957573c0106",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 867051,
+              "key": "d56f09a2-12b2-42ef-8379-14942a7a6fd9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 小测验\n在下面的问题中，您将对变量范围的使用进行练习。理解变量范围很重要，因为在编写解决复杂问题的代码时，这通常会导致混淆。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 867052,
+              "key": "d2dd7edf-d7b7-4da1-bf58-6240cbad6a48",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "d2dd7edf-d7b7-4da1-bf58-6240cbad6a48",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "使用下面的代码确定将打印到控制台的内容。\n```\nstr1 = 'Functions are important programming concepts.'\n\ndef print_fn():\n    str1 = 'Variable scope is an important concept.'\n    print(str1)\n\nprint_fn()```\n\n运行此代码时会发生什么？",
+                "answers": [
+                  {
+                    "id": "a1531378139946",
+                    "text": "它会打印 'Variable scope is an important concept.'",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1531378667552",
+                    "text": "它会打印 'Functions are important programming concepts.'",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531378694675",
+                    "text": "它会报出一个错误：ValueError.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 867053,
+              "key": "7b5605c8-2ef9-477e-ba6b-c509d2c8fa48",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "7b5605c8-2ef9-477e-ba6b-c509d2c8fa48",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "现在让我们调整一下代码，并注释掉`str1 = 'Variable scope is an important concept.'`\n```\nstr1 = 'Functions are important programming concepts.'\n\ndef print_fn():\n    #str1 = 'Variable scope is an important concept.'\n    print(str1)\n\nprint_fn()```\n\n运行此代码时会发生什么？",
+                "answers": [
+                  {
+                    "id": "a1531378804393",
+                    "text": "它会打印 'Functions are an important programming concept.'",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1531378919957",
+                    "text": "它会打印 'Variable scope is an important concept'.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531378940986",
+                    "text": "它不会打印任何内容",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 867054,
+              "key": "941c51eb-fa3d-4f18-946c-8eacd1df22e7",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "941c51eb-fa3d-4f18-946c-8eacd1df22e7",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "我们对代码进行了另一次调整。\n```\ndef print_fn():\n    str1 = 'Variable scope is an important concept.'\n    print(str1)\n\nprint_fn(str1)```\n\n当我们运行此代码时，你认为会发生什么？",
+                "answers": [
+                  {
+                    "id": "a1531379149544",
+                    "text": "它会报错 TypeError: print_fn() takes 0 positional arguments but 1 was given",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1531379292594",
+                    "text": "它会打印 'Variable scope is an important concept.'",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531379313517",
+                    "text": "它不会打印任何内容",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 867055,
+              "key": "dd614498-0d45-40d3-b82a-a39c903e2d4c",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "dd614498-0d45-40d3-b82a-a39c903e2d4c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "我们对代码进行了最后的调整。\n```\nstr1 = 'Functions are important programming concepts.'\n\ndef print_fn():\n    print(str1)\n\nprint_fn(str1)```\n\n现在你认为会发生什么？",
+                "answers": [
+                  {
+                    "id": "a1531379450888",
+                    "text": "它会报错 TypeError: print_fn() takes 0 positional arguments but 1 was given",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1531379673871",
+                    "text": "它会打印 'Functions are important programming concepts'",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1531379694413",
+                    "text": "它不会打印任何内容",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 867056,
+              "key": "4f1ac656-dba3-4c0a-b99d-be6c8e5ce0bb",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4f1ac656-dba3-4c0a-b99d-be6c8e5ce0bb",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "6724536018534400",
+                "initial_code_files": [
+                  {
+                    "text": "## Please use this space to test and run your code\n\n",
+                    "name": "Functions_CFU.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534101,
+          "key": "a9b3f8b5-16e2-4ca8-a11a-ee3722922eb4",
+          "title": "文档",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a9b3f8b5-16e2-4ca8-a11a-ee3722922eb4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534009,
+              "key": "5e1b616e-87f3-4e12-82a9-06273a69ceea",
+              "title": "L4 06 文档 V3 (1)",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_Vl9NJkA6JQ",
+                "china_cdn_id": "_Vl9NJkA6JQ.mp4"
+              }
+            },
+            {
+              "id": 534010,
+              "key": "5b503871-a29b-4ff3-861e-d04a78c55830",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 文档\n文档使代码更容易理解和使用。函数尤其容易理解，因为它们通常使用文档字符串，简称 docstrings。文档字符串是一种注释，用于解释函数的作用以及使用方式。下面是一个包含文档字符串的人口密度函数。\n```python\ndef population_density(population, land_area):\n    \"\"\"Calculate the population density of an area. \"\"\"\n    return population / land_area\n```\n\n\n文档字符串用三个引号引起来，第一行简要解释了函数的作用。如果你觉得信息已经足够了，可以在文档字符串中只提供这么多的信息；一行文档字符串完全可接受，如上述示例所示。\n```python\ndef population_density(population, land_area):\n    \"\"\"Calculate the population density of an area.\n\n    INPUT:\n    population: int. The population of that area\n    land_area: int or float. This function is unit-agnostic, if you pass in values in terms\n    of square km or square miles the function will return a density in those units.\n\n    OUTPUT: \n    population_density: population / land_area. The population density of a particular area.\n    \"\"\"\n    return population / land_area\n```\n如果你觉得需要更长的句子来解释函数，可以在一行摘要后面添加更多信息。在上述示例中，可以看出我们对函数的参数进行了解释，描述了每个参数的作用和类型。我们经常还会对函数输出进行说明。\n\n文档字符串的每个部分都是可选的。但是，提供文档字符串是一个良好的编程习惯。你可以在[此处](https://www.python.org/dev/peps/pep-0257)详细了解文档字符串惯例。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534096,
+          "key": "f4275609-4f8e-4096-a5cb-4cffd660153c",
+          "title": "练习：文档",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f4275609-4f8e-4096-a5cb-4cffd660153c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534012,
+              "key": "01cb8261-d4b9-4c64-8c5d-0d483ea17217",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：编写文档字符串\n为你之前定义的 `readable_timedelta` 函数写一个文档字符串！",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534013,
+              "key": "707d1857-24f0-4bdd-829c-11efe49a7aec",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "707d1857-24f0-4bdd-829c-11efe49a7aec",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5386808574214144",
+                "initial_code_files": [
+                  {
+                    "text": "def readable_timedelta(days):\n    # insert your docstring here\n\n    weeks = days // 7\n    remainder = days % 7\n    return \"{} week(s) and {} day(s)\".format(weeks, remainder)",
+                    "name": "docstring.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534108,
+          "key": "31623316-02d8-48b6-8969-9d337d04807d",
+          "title": "解决方案：文档",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "31623316-02d8-48b6-8969-9d337d04807d",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534014,
+              "key": "13567769-2dc0-4ca6-b864-8e2f964c0b28",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## 练习解决方案：`readable_timedelta`\n下面是文档字符串的一种编写方式！\n\n```python\ndef readable_timedelta(days):\n    \"\"\"Print the number of weeks and days in a number of days.\"\"\"\n    weeks = days // 7\n    remainder = days % 7\n    return \"{} week(s) and {} day(s)\".format(weeks, remainder)\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534107,
+          "key": "258ce5fc-22bc-423c-b321-e0193bd98ace",
+          "title": "Lambda 表达式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "258ce5fc-22bc-423c-b321-e0193bd98ace",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534015,
+              "key": "e63f9117-ab77-4e8a-bb49-9fe569731d2f",
+              "title": "L4 08 Lambda 表达式 V2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "vfvxIUPFv2Q",
+                "china_cdn_id": "vfvxIUPFv2Q.mp4"
+              }
+            },
+            {
+              "id": 534016,
+              "key": "81f6b3a4-ac68-46f3-9f54-ac620f1ac8a4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Lambda 表达式\n你可以使用 Lambda 表达式创建匿名函数，即没有名称的函数。lambda 表达式非常适合快速创建在代码中以后不会用到的函数。尤其对高阶函数或将其他函数作为参数的函数来说，非常实用。\n\n我们可以使用 lambda 表达式将以下函数\n```python\ndef multiply(x, y):\n    return x * y\n```\n简写为：\n```python\ndouble = lambda x, y: x * y\n```\n### Lambda 函数的组成部分\n1. 关键字 `lambda` 表示这是一个 lambda 表达式。\n2. `lambda` 之后是该匿名函数的一个或多个参数（用英文逗号分隔），然后是一个英文冒号 `:`。和函数相似，lambda 表达式中的参数名称是随意的。\n3. 最后一部分是被评估并在该函数中返回的表达式，和你可能会在函数中看到的 return 语句很像。\n\n鉴于这种结构，lambda 表达式不太适合复杂的函数，但是非常适合简短的函数。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 842297,
+              "key": "349d64fa-600d-448e-8b24-103fb4e85cac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "注释：视频里 lamba 应该是 lambda。",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534109,
+          "key": "9330654f-fbd0-4c90-bb30-cc0cb3b0a078",
+          "title": "练习：Lambda 表达式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9330654f-fbd0-4c90-bb30-cc0cb3b0a078",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534017,
+              "key": "068ad8ec-4c49-4f3b-ae1e-9736c2c4292e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：Lambda 与 Map\n`map()` 是一个高阶内置函数，接受函数和可迭代对象作为输入，并返回一个将该函数应用到可迭代对象的每个元素的迭代器。下面的代码使用 `map()` 计算 `numbers` 中每个列表的均值，并创建列表 `averages`。测试运行这段代码，看看结果如何。\n\n通过将 `mean` 函数替换为在 `map()` 的调用中定义的 lambda 表达式，重写这段代码，使代码更简练。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534018,
+              "key": "b17d66b9-a2c8-480e-abd6-f9de8988754f",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "b17d66b9-a2c8-480e-abd6-f9de8988754f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5961021085319168",
+                "initial_code_files": [
+                  {
+                    "text": "numbers = [\n              [34, 63, 88, 71, 29],\n              [90, 78, 51, 27, 45],\n              [63, 37, 85, 46, 22],\n              [51, 22, 34, 11, 18]\n           ]\n\ndef mean(num_list):\n    return sum(num_list) / len(num_list)\n\naverages = list(map(mean, numbers))\nprint(averages)",
+                    "name": "lambda_map.py"
+                  }
+                ]
+              },
+              "answer": null
+            },
+            {
+              "id": 534019,
+              "key": "f0ff76d5-29cb-49b0-80dd-0ccddb928ab1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习：Lambda 与 Filter\n`filter()` 是一个高阶内置函数，接受函数和可迭代对象作为输入，并返回一个由可迭代对象中的特定元素（该函数针对该元素会返回 True）组成的迭代器。下面的代码使用 `filter()` 从 `cities` 中获取长度少于 10 个字符的名称以创建列表 `short_cities`。测试运行这段代码，看看结果如何。\n\n通过将 `is_short` 函数替换为在 `filter()` 的调用中定义的 lambda 表达式，重写这段代码，使代码更简练。",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534020,
+              "key": "f68c8576-2d45-4bf3-a779-265f7522c74e",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "f68c8576-2d45-4bf3-a779-265f7522c74e",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "5238863929409536",
+                "initial_code_files": [
+                  {
+                    "text": "cities = [\"New York City\", \"Los Angeles\", \"Chicago\", \"Mountain View\", \"Denver\", \"Boston\"]\n\ndef is_short(name):\n    return len(name) < 10\n\nshort_cities = list(filter(is_short, cities))\nprint(short_cities)",
+                    "name": "lambda_filter.py"
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 534110,
+          "key": "7ef6a019-e4a7-4cb3-8938-440751a47960",
+          "title": "解决方案：Lambda 表达式",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7ef6a019-e4a7-4cb3-8938-440751a47960",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534021,
+              "key": "a0abdb4a-28bc-467e-8b4a-f596aef3dbf8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：Lambda 与 Map\n```python\nnumbers = [\n              [34, 63, 88, 71, 29],\n              [90, 78, 51, 27, 45],\n              [63, 37, 85, 46, 22],\n              [51, 22, 34, 11, 18]\n           ]\n\naverages = list(map(lambda x: sum(x) / len(x), numbers))\nprint(averages)\n```\n### 输出：\n```txt\n[57.0, 58.2, 50.6, 27.2]\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 534022,
+              "key": "9bba4bd0-afa6-49ce-a28f-ad9946807acb",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# 练习解决方案：Lambda 与 Filter\n```python\ncities = [\"New York City\", \"Los Angeles\", \"Chicago\", \"Mountain View\", \"Denver\", \"Boston\"]\n\nshort_cities = list(filter(lambda x: len(x) < 10, cities))\nprint(short_cities)\n```\n### 输出：\n```txt\n['Chicago', 'Denver', 'Boston']\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 534127,
+          "key": "851a31fc-8e66-4737-8262-1e402e493fec",
+          "title": "总结",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "851a31fc-8e66-4737-8262-1e402e493fec",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 534050,
+              "key": "b2993877-1af3-461c-98e0-084632420cbc",
+              "title": "L4 12 总结 V1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "QRnLr7pwHyk",
+                "china_cdn_id": "QRnLr7pwHyk.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

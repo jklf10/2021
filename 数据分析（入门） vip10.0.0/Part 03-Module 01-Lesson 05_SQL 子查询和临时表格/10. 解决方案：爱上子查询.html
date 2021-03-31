@@ -1,0 +1,437 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>解决方案：爱上子查询</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>SQL 子查询和临时表格</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频： 简介.html">01. 视频： 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频： 子查询简介.html">02. 视频： 子查询简介</a>
+    </li>
+    <li class="">
+      <a href="03. 视频 + 练习：编写你的首个子查询.html">03. 视频 + 练习：编写你的首个子查询</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：编写你的首个子查询.html">04. 解决方案：编写你的首个子查询</a>
+    </li>
+    <li class="">
+      <a href="05. 文本：子查询格式.html">05. 文本：子查询格式</a>
+    </li>
+    <li class="">
+      <a href="06. 视频： 关于子查询的更多内容.html">06. 视频： 关于子查询的更多内容</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：关于子查询的更多内容.html">07. 练习：关于子查询的更多内容</a>
+    </li>
+    <li class="">
+      <a href="08. 解决方案：关于子查询的更多内容.html">08. 解决方案：关于子查询的更多内容</a>
+    </li>
+    <li class="">
+      <a href="09. 练习：爱上子查询.html">09. 练习：爱上子查询</a>
+    </li>
+    <li class="">
+      <a href="10. 解决方案：爱上子查询.html">10. 解决方案：爱上子查询</a>
+    </li>
+    <li class="">
+      <a href="11. 视频： WITH.html">11. 视频： WITH</a>
+    </li>
+    <li class="">
+      <a href="12. 文本 + 练习：WITH 与子查询.html">12. 文本 + 练习：WITH 与子查询</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：WITH.html">13. 练习：WITH</a>
+    </li>
+    <li class="">
+      <a href="14. 解决方案：WITH.html">14. 解决方案：WITH</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：子查询总结.html">15. 视频：子查询总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. 解决方案：爱上子查询</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>以下视频演示了解决第一个问题的步骤。每个问题答案都以文本的形式显示在下面。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>子查询解决方案</p></h3>
+  <video controls>
+  <source src="10. 子查询解决方案-Y6S3S0LsMrw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="10. 子查询解决方案-Y6S3S0LsMrw.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="10. 子查询解决方案-Y6S3S0LsMrw.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="10. 子查询解决方案-Y6S3S0LsMrw.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="uz" src="10. 子查询解决方案-Y6S3S0LsMrw.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="CN" src="10. 子查询解决方案-Y6S3S0LsMrw.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="解决方案：爱上子查询">解决方案：爱上子查询</h3>
+<ol>
+<li>提供每个<strong>区域</strong>拥有最高销售额 (<strong>total_amt_usd</strong>) 的<strong>销售代表</strong>的<strong>姓名</strong>。<br><br><br />
+首先，我要算出与每个<strong>销售代表</strong>相关的总销售额 (<strong>total_amt_usd</strong>)，并且要得出他们所在的区域。以下查询提供了这一信息。</li>
+</ol>
+<pre><code>SELECT s.name rep_name, r.name region_name, SUM(o.total_amt_usd) total_amt
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY 1,2
+ORDER BY 3 DESC;</code></pre>
+<p>接着，得出每个区域的最高销售额，然后使用该信息从最终结果中获取这些行。</p>
+<pre><code>SELECT region_name, MAX(total_amt) total_amt
+FROM(SELECT s.name rep_name, r.name region_name, SUM(o.total_amt_usd) total_amt
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY 1, 2) inner1
+GROUP BY 1;</code></pre>
+<p>本质上，这是两个表格的<strong>连接</strong>，其中区域和销售额相匹配。</p>
+<pre><code>SELECT t1.rep_name, t1.region_name, t1.total_amt
+FROM(SELECT s.name rep_name, r.name region_name, SUM(o.total_amt_usd) total_amt
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY 1,2
+ORDER BY 3 DESC) t1
+JOIN (SELECT region_name, MAX(total_amt) total_amt
+FROM(SELECT s.name rep_name, r.name region_name, SUM(o.total_amt_usd) total_amt
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY 1, 2) inner1
+GROUP BY 1) t2
+ON t1.region_name = t2.region_name AND t1.total_amt = t2.total_amt;</code></pre>
+<ol start="2">
+<li>对于具有最高销售额 (<strong>total_amt_usd</strong>) 的区域，总共下了多少个订单？<br><br><br />
+我写的第一个查询是获取每个<strong>区域</strong>的 <strong>total_amt_usd</strong>。</li>
+</ol>
+<pre><code>SELECT r.name region_name, SUM(o.total_amt_usd) total_amt
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY r.name;</code></pre>
+<p>然后，我们仅从该表格中获取销售额最高的区域。可以通过两种方法来获取，一种是使用子查询后的最大值，另一种是按降序排序，然后获取最高值。</p>
+<pre><code>SELECT MAX(total_amt)
+FROM (SELECT r.name region_name, SUM(o.total_amt_usd) total_amt
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY r.name) sub;</code></pre>
+<p>最终，我们要获取具有该区域销售额的总订单量：</p>
+<pre><code>SELECT r.name, SUM(o.total) total_orders
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY r.name
+HAVING SUM(o.total_amt_usd) = (
+SELECT MAX(total_amt)
+FROM (SELECT r.name region_name, SUM(o.total_amt_usd) total_amt
+FROM sales_reps s
+JOIN accounts a
+ON a.sales_rep_id = s.id
+JOIN orders o
+ON o.account_id = a.id
+JOIN region r
+ON r.id = s.region_id
+GROUP BY r.name) sub);</code></pre>
+<p>结果就是 <strong>Northeast</strong>，总订单为 <strong>1230378</strong> 个。<br><br></p>
+<ol start="3">
+<li>对于购买标准纸张数量 (<strong>standard_qty</strong>) 最多的客户（在作为客户的整个时期内），<strong>有多少客户</strong>的购买总数依然更多？<br><br><br />
+首先，我们要得出购买标准纸张数量 (<strong>standard_qty</strong>) 最多的客户。以下查询获取了该客户，以及总消费：</li>
+</ol>
+<pre><code>SELECT a.name account_name, SUM(o.standard_qty) total_std, SUM(o.total) total
+FROM accounts a
+JOIN orders o
+ON o.account_id = a.id
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1;</code></pre>
+<p>现在，我将使用上述信息获取总消费更高的所有客户：</p>
+<pre><code>SELECT a.name
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id
+GROUP BY 1
+HAVING SUM(o.total) &gt; (SELECT total
+FROM (SELECT a.name act_name, SUM(o.standard_qty) tot_std, SUM(o.total) total
+FROM accounts a
+JOIN orders o
+ON o.account_id = a.id
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1) sub);</code></pre>
+<p>上述查询列出了具有更多订单的客户列表。我们还可以使用另一个简单的子查询获取数量。</p>
+<pre><code>SELECT COUNT(*)
+FROM (SELECT a.name
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id
+GROUP BY 1
+HAVING SUM(o.total) &gt; (SELECT total
+FROM (SELECT a.name act_name, SUM(o.standard_qty) tot_std, SUM(o.total) total
+FROM accounts a
+JOIN orders o
+ON o.account_id = a.id
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1) inner_tab)
+) counter_tab;</code></pre>
+<ol start="4">
+<li>对于（在作为客户的整个时期内）总消费 (<strong>total_amt_usd</strong>) 最多的客户，他们在每个渠道上有多少 <strong>web_events</strong>？<br><br><br />
+我们首先需要获取在整个客户时期内消费最多的客户。</li>
+</ol>
+<pre><code>SELECT a.id, a.name, SUM(o.total_amt_usd) tot_spent
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id
+GROUP BY a.id, a.name
+ORDER BY 3 DESC
+LIMIT 1;</code></pre>
+<p>现在，我们要获取该企业（可以使用 <strong>id</strong> 进行匹配）在每个渠道上的事件数。</p>
+<pre><code>SELECT a.name, w.channel, COUNT(*)
+FROM accounts a
+JOIN web_events w
+ON a.id = w.account_id AND a.id =  (SELECT id
+FROM (SELECT a.id, a.name, SUM(o.total_amt_usd) tot_spent
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id
+GROUP BY a.id, a.name
+ORDER BY 3 DESC
+LIMIT 1) inner_table)
+GROUP BY 1, 2
+ORDER BY 3 DESC;</code></pre>
+<p>我添加了 <strong>ORDER BY</strong>，其实并没特别的理由，并添加了客户名称，确保仅从一个客户那获取数据。<br><br></p>
+<ol start="5">
+<li>对于总消费前十名的客户，他们的平均终身消费 (<strong>total_amt_usd</strong>) 是多少?<br><br><br />
+首先，我们需要找出总消费 (<strong>total_amt_usd</strong>) 在前十名的客户。</li>
+</ol>
+<pre><code>SELECT a.id, a.name, SUM(o.total_amt_usd) tot_spent
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id
+GROUP BY a.id, a.name
+ORDER BY 3 DESC
+LIMIT 10;</code></pre>
+<p>现在计算这十个客户的平均消费。</p>
+<pre><code>SELECT AVG(tot_spent)
+FROM (SELECT a.id, a.name, SUM(o.total_amt_usd) tot_spent
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id
+GROUP BY a.id, a.name
+ORDER BY 3 DESC
+LIMIT 10) temp;</code></pre>
+<p><br></p>
+<ol start="6">
+<li>比所有客户的平均消费高的企业平均终身消费 (<strong>total_amt_usd</strong>) 是多少？<br><br><br />
+首先，算出所有客户的总消费 (<strong>total_amt_usd</strong>) 平均值：</li>
+</ol>
+<pre><code>SELECT AVG(o.total_amt_usd) avg_all
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id;</code></pre>
+<p>然后，只获取高于这一平均值的客户。</p>
+<pre><code>SELECT o.account_id, AVG(o.total_amt_usd)
+FROM orders o
+GROUP BY 1
+HAVING AVG(o.total_amt_usd) &gt; (SELECT AVG(o.total_amt_usd) avg_all
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id);</code></pre>
+<p>最后，算出这些值的平均值。</p>
+<pre><code>SELECT AVG(avg_amt)
+FROM (SELECT o.account_id, AVG(o.total_amt_usd) avg_amt
+FROM orders o
+GROUP BY 1
+HAVING AVG(o.total_amt_usd) &gt; (SELECT AVG(o.total_amt_usd) avg_all
+FROM orders o
+JOIN accounts a
+ON a.id = o.account_id)) temp_table;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. 视频： WITH.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 解决方案：爱上子查询')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

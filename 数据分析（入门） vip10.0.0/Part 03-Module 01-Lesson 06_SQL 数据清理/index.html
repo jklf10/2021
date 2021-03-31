@@ -1,0 +1,149 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Part 03-Module 01-Lesson 06_SQL 数据清理</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="">
+
+    <div id="">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+
+                <h1 style="">Part 03-Module 01-Lesson 06_SQL 数据清理</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul>
+  <li><a href="01. 视频 SQL 数据清理简介.html">01. 视频: SQL 数据清理简介</a></li>
+  <li><a href="02. 视频 LEFT 与 RIGHT.html">02. 视频: LEFT 与 RIGHT</a></li>
+  <li><a href="03. 练习：LEFT 与 RIGHT.html">03. 练习：LEFT 与 RIGHT</a></li>
+  <li><a href="04. 解决方案：LEFT 与 RIGHT.html">04. 解决方案：LEFT 与 RIGHT</a></li>
+  <li><a href="05. 视频 POSITION、STRPOS 和 SUBSTR.html">05. 视频: POSITION、STRPOS 和 SUBSTR</a></li>
+  <li><a href="06. 练习：POSITION、STRPOS 和 SUBSTR - AME DATA AS QUIZ 1.html">06. 练习：POSITION、STRPOS 和 SUBSTR - AME DATA AS QUIZ 1</a></li>
+  <li><a href="07. 解决方案：POSITION、STRPOS 和 SUBSTR.html">07. 解决方案：POSITION、STRPOS 和 SUBSTR</a></li>
+  <li><a href="08. 视频 CONCAT.html">08. 视频: CONCAT</a></li>
+  <li><a href="09. 练习：CONCAT.html">09. 练习：CONCAT</a></li>
+  <li><a href="10. 解决方案：CONCAT.html">10. 解决方案：CONCAT</a></li>
+  <li><a href="11. 视频 CAST.html">11. 视频: CAST</a></li>
+  <li><a href="12. 练习：CAST.html">12. 练习：CAST</a></li>
+  <li><a href="13. 解决方案：CAST.html">13. 解决方案：CAST</a></li>
+  <li><a href="14. 视频 COALESCE.html">14. 视频: COALESCE</a></li>
+  <li><a href="15. 练习：COALESCE.html">15. 练习：COALESCE</a></li>
+  <li><a href="16. 解决方案：COALESCE.html">16. 解决方案：COALESCE</a></li>
+  <li><a href="17. 视频 + 文本 总结.html">17. 视频 + 文本: 总结</a></li>
+
+
+</ul>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Part 03-Module 01-Lesson 06_SQL 数据清理')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
