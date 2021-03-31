@@ -1,0 +1,484 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>练习：For 循环</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>控制流</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 条件语句.html">02. 条件语句</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：条件语句.html">03. 练习：条件语句</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：条件语句.html">04. 解决方案：条件语句</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：更多条件语句.html">05. 练习：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：更多条件语句.html">06. 解决方案：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="07. 条件布尔表达式.html">07. 条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="08. 练习：条件布尔表达式.html">08. 练习：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="09. 解决方案：条件布尔表达式.html">09. 解决方案：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="10. For 循环.html">10. For 循环</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：For 循环.html">11. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="12. 解决方案：For 循环.html">12. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：For 循环.html">13. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="14. 解决方案：For 循环.html">14. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="15. 练习：将输入与输出匹配.html">15. 练习：将输入与输出匹配</a>
+    </li>
+    <li class="">
+      <a href="16. 建立字典.html">16. 建立字典</a>
+    </li>
+    <li class="">
+      <a href="17. 用循环遍历字典.html">17. 用循环遍历字典</a>
+    </li>
+    <li class="">
+      <a href="18. 练习：迭代字典.html">18. 练习：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="19. 解决方案：迭代字典.html">19. 解决方案：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="20. While 循环.html">20. While 循环</a>
+    </li>
+    <li class="">
+      <a href="21. 练习：While 循环.html">21. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="22. 练习：While 循环.html">22. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="23. 解决方案：While 循环.html">23. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="24. 练习：While 循环.html">24. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="25. 解决方案：While 循环.html">25. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="26. For 循环 vs. While 循环.html">26. For 循环 vs. While 循环</a>
+    </li>
+    <li class="">
+      <a href="27. 小测验：For 和 While 循环.html">27. 小测验：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="28. 解决方案：For 和 While 循环.html">28. 解决方案：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="29. Break、Continue.html">29. Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="30. 练习：Break、Continue.html">30. 练习：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="31. 解决方案：Break、Continue.html">31. 解决方案：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="32. 练习：循环.html">32. 练习：循环</a>
+    </li>
+    <li class="">
+      <a href="33. 解决方案：循环.html">33. 解决方案：循环</a>
+    </li>
+    <li class="">
+      <a href="34. Zip 和 Enumerate（选学）.html">34. Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="35. 练习：Zip 和 Enumerate（选学）.html">35. 练习：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="36. 解决方案：Zip 和 Enumerate（选学）.html">36. 解决方案：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="37. 列表推导式（选学）.html">37. 列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="38. 练习：列表推导式（选学）.html">38. 练习：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="39. 解决方案：列表推导式（选学）.html">39. 解决方案：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="40. 练习题.html">40. 练习题</a>
+    </li>
+    <li class="">
+      <a href="41. 解决方案：练习题.html">41. 解决方案：练习题</a>
+    </li>
+    <li class="">
+      <a href="42. 总结.html">42. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. 练习：For 循环</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="练习：创建用户名">练习：创建用户名</h1>
+<p>写一个遍历 <code>names</code> 列表以创建 <code>usernames</code> 列表的 <code>for</code> 循环。要为每个姓名创建用户名，使姓名全小写并用下划线代替空格。对以下列表运行 <code>for</code> 循环： </p>
+<p><code>names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]</code> </p>
+<p>应该会创建列表：</p>
+<p><code>usernames = ["joey_tribbiani", "monica_geller", "chandler_bing", "phoebe_buffay"]</code></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#534104-usernames-py" class="nav-item nav-link  active show" id="tab-534104-usernames-py" data-toggle="tab" role="tab"
+      aria-controls="534104-usernames-py" aria-selected="true">usernames.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="534104-usernames-py" aria-labelledby="tab-534104-usernames-py" role="tabpanel">
+      <pre><code></code>names &#x3D; [&quot;Joey Tribbiani&quot;, &quot;Monica Geller&quot;, &quot;Chandler Bing&quot;, &quot;Phoebe Buffay&quot;]
+usernames &#x3D; []
+
+# write your for loop here
+
+
+print(usernames)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>为何要使用 <code>range</code>？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>假设我们不想创建新的列表，而是修改 <code>names</code> 列表本身，并编写以下代码。下面的代码有什么作用？</p>
+<pre><code class="python language-python">names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
+
+for name in names:
+    name = name.lower().replace(" ", "_")
+
+print(names)</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1516599455045" name="534105" id="a1516599455045">
+        <label for="a1516599455045"><p>修改 <code>names</code> 列表，使每个姓名全小写并用下划线分隔</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1516599470763" name="534105" id="a1516599470763">
+        <label for="a1516599470763"><p>导致运行时错误</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1516599471265" name="534105" id="a1516599471265">
+        <label for="a1516599471265"><p>代码没有效果</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1516599471869" name="534105" id="a1516599471869">
+        <label for="a1516599471869"><p>删除列表</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    代码没有效果
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="练习：使用-range-修改用户名">练习：使用 Range 修改用户名</h1>
+<p>写一个使用 <code>range()</code> 遍历 <code>usernames</code> 中的职位以修改该列表的 for 循环。和上一道练习一样，将每个姓名改成全小写形式并用下划线代替空格。运行 for 循环后，以下列表</p>
+<p><code>usernames = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]</code> </p>
+<p>应该更改为：</p>
+<p><code>usernames = ["joey_tribbiani", "monica_geller", "chandler_bing", "phoebe_buffay"]</code></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#534111-usernames_range-py" class="nav-item nav-link  active show" id="tab-534111-usernames_range-py" data-toggle="tab" role="tab"
+      aria-controls="534111-usernames_range-py" aria-selected="true">usernames_range.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="534111-usernames_range-py" aria-labelledby="tab-534111-usernames_range-py" role="tabpanel">
+      <pre><code></code>usernames &#x3D; [&quot;Joey Tribbiani&quot;, &quot;Monica Geller&quot;, &quot;Chandler Bing&quot;, &quot;Phoebe Buffay&quot;]
+
+# write your for loop here
+
+
+print(usernames)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="练习：标记计数器">练习：标记计数器</h1>
+<p>写一个 <code>for</code> 循环，用于遍历字符串列表 <code>tokens</code> 并数一下有多少个 <a href="https://en.wikipedia.org/wiki/XML" rel="noopener noreferrer" target="_blank">XML 标记</a>。XML 是一种类似于 HTML 的数据语言。如果某个字符串以左尖括号“<”开始并以右尖括号“>”结束，则是 XML 标记。使用 <code>count</code> 记录这种标记的数量。</p>
+<p>你可以假设该字符串列表不包含空字符串。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#534113-xml_tag_counter-py" class="nav-item nav-link  active show" id="tab-534113-xml_tag_counter-py" data-toggle="tab" role="tab"
+      aria-controls="534113-xml_tag_counter-py" aria-selected="true">xml_tag_counter.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="534113-xml_tag_counter-py" aria-labelledby="tab-534113-xml_tag_counter-py" role="tabpanel">
+      <pre><code></code>tokens &#x3D; [&#x27;&lt;greeting&gt;&#x27;, &#x27;Hello World!&#x27;, &#x27;&lt;/greeting&gt;&#x27;]
+count &#x3D; 0
+
+# write your for loop here
+
+
+print(count)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="练习：创建-html-列表">练习：创建 HTML 列表</h1>
+<p>写一个 <code>for</code> 循环，用于遍历字符串列表并创建单个字符串 <code>html_str</code>，它是一个 HTML 列表。例如，如果列表是 <code>items = ['first string', 'second string']</code>，输出 <code>html_str</code> 应该会输出：</p>
+<pre><code class="txt language-txt">&lt;ul&gt;
+&lt;li&gt;first string&lt;/li&gt;
+&lt;li&gt;second string&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p>即该字符串的第一行应该是起始标记 <code>&lt;ul&gt;</code>。然后是源列表中的每个元素各占一行，两边是 <code>&lt;li&gt;</code> 和 <code>&lt;/li&gt;</code> 标记。该字符串的最后一行应该是结束标记 <code>&lt;/ul&gt;</code>。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#534116-htmllist-py" class="nav-item nav-link  active show" id="tab-534116-htmllist-py" data-toggle="tab" role="tab"
+      aria-controls="534116-htmllist-py" aria-selected="true">htmllist.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="534116-htmllist-py" aria-labelledby="tab-534116-htmllist-py" role="tabpanel">
+      <pre><code></code>items &#x3D; [&#x27;first string&#x27;, &#x27;second string&#x27;]
+html_str &#x3D; &quot;&lt;ul&gt;\n&quot;  # &quot;\ n&quot; is the character that marks the end of the line, it does
+                     # the characters that are after it in html_str are on the next line
+
+# write your code here
+
+
+print(html_str)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="14. 解决方案：For 循环.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. 练习：For 循环')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

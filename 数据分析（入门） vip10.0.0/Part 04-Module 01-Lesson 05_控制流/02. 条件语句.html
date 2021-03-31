@@ -1,0 +1,442 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>条件语句</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>控制流</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 条件语句.html">02. 条件语句</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：条件语句.html">03. 练习：条件语句</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：条件语句.html">04. 解决方案：条件语句</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：更多条件语句.html">05. 练习：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：更多条件语句.html">06. 解决方案：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="07. 条件布尔表达式.html">07. 条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="08. 练习：条件布尔表达式.html">08. 练习：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="09. 解决方案：条件布尔表达式.html">09. 解决方案：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="10. For 循环.html">10. For 循环</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：For 循环.html">11. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="12. 解决方案：For 循环.html">12. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：For 循环.html">13. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="14. 解决方案：For 循环.html">14. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="15. 练习：将输入与输出匹配.html">15. 练习：将输入与输出匹配</a>
+    </li>
+    <li class="">
+      <a href="16. 建立字典.html">16. 建立字典</a>
+    </li>
+    <li class="">
+      <a href="17. 用循环遍历字典.html">17. 用循环遍历字典</a>
+    </li>
+    <li class="">
+      <a href="18. 练习：迭代字典.html">18. 练习：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="19. 解决方案：迭代字典.html">19. 解决方案：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="20. While 循环.html">20. While 循环</a>
+    </li>
+    <li class="">
+      <a href="21. 练习：While 循环.html">21. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="22. 练习：While 循环.html">22. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="23. 解决方案：While 循环.html">23. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="24. 练习：While 循环.html">24. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="25. 解决方案：While 循环.html">25. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="26. For 循环 vs. While 循环.html">26. For 循环 vs. While 循环</a>
+    </li>
+    <li class="">
+      <a href="27. 小测验：For 和 While 循环.html">27. 小测验：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="28. 解决方案：For 和 While 循环.html">28. 解决方案：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="29. Break、Continue.html">29. Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="30. 练习：Break、Continue.html">30. 练习：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="31. 解决方案：Break、Continue.html">31. 解决方案：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="32. 练习：循环.html">32. 练习：循环</a>
+    </li>
+    <li class="">
+      <a href="33. 解决方案：循环.html">33. 解决方案：循环</a>
+    </li>
+    <li class="">
+      <a href="34. Zip 和 Enumerate（选学）.html">34. Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="35. 练习：Zip 和 Enumerate（选学）.html">35. 练习：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="36. 解决方案：Zip 和 Enumerate（选学）.html">36. 解决方案：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="37. 列表推导式（选学）.html">37. 列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="38. 练习：列表推导式（选学）.html">38. 练习：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="39. 解决方案：列表推导式（选学）.html">39. 解决方案：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="40. 练习题.html">40. 练习题</a>
+    </li>
+    <li class="">
+      <a href="41. 解决方案：练习题.html">41. 解决方案：练习题</a>
+    </li>
+    <li class="">
+      <a href="42. 总结.html">42. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 条件语句</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>L3 02a If 语句 V3</p></h3>
+  <video controls>
+  <source src="02. L3 02a If 语句 V3-jWiIUMrwPqA.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="02. L3 02a If 语句 V3-jWiIUMrwPqA.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="02. L3 02a If 语句 V3-jWiIUMrwPqA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. L3 02a If 语句 V3-jWiIUMrwPqA.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. L3 02a If 语句 V3-jWiIUMrwPqA.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="if-语句">If 语句</h1>
+<p><code>if</code> 语句是是一种条件语句，根据条件为 true 还是 false 运行或执行相关代码。下面是一个简单的示例：</p>
+<pre><code class="python language-python">if phone_balance &lt; 5:
+    phone_balance += 10
+    bank_balance -= 10</code></pre>
+<p>我们来详细讲解下每部分。</p>
+<ol>
+<li><code>if</code> 语句以关键字 <code>if</code> 开始，然后是要检查的条件，在此例中是 <code>phone_balance &lt; 5</code>，接着是英文冒号。条件用布尔表达式指定，结果为 True 或 False。</li>
+<li>这行之后是一个条件为 true 时将执行的缩进代码块。在此例中，仅在 <code>phone_balance</code> 小于 5 时才执行使 <code>phone_balance</code> 递增和使 <code>bank_balance</code> 递减的行。如果不小于 5，这个 <code>if</code> 块中的代码将被跳过。</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 02b If Elif Else V4</p></h3>
+  <video controls>
+  <source src="02. L3 02b If Elif Else V4-KZubH5XT0eU.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="02. L3 02b If Elif Else V4-KZubH5XT0eU.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="02. L3 02b If Elif Else V4-KZubH5XT0eU.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. L3 02b If Elif Else V4-KZubH5XT0eU.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. L3 02b If Elif Else V4-KZubH5XT0eU.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="if、elif、else">If、Elif、Else</h1>
+<p>除了 <code>if</code> 条件之外，<code>if</code> 语句经常还会使用另外两个可选条件。例如：</p>
+<pre><code class="python language-python">if season == 'spring':
+    print('plant the garden!')
+elif season == 'summer':
+    print('water the garden!')
+elif season == 'fall':
+    print('harvest the garden!')
+elif season == 'winter':
+    print('stay indoors!')
+else:
+    print('unrecognized season')</code></pre>
+<ol>
+<li><code>if</code>：<code>if</code> 语句必须始终以 <code>if</code> 条件开始，其中包含第一个要检查的条件。如果该条件为 True，Python 将运行这个 <code>if</code> 块中的缩进代码，然后跳到 <code>if</code> 语句之后的剩余代码。</li>
+<li><code>elif</code>：<code>elif</code> 条件用来检查其他条件（前提是 <code>if</code> 语句中之前的条件结果为 False）。可以从示例中看出，可以使用多个 <code>elif</code> 块处理不同的情形。</li>
+<li><code>else</code>：最后是 <code>else</code> 条件，它必须位于 <code>if</code> 语句的末尾。该条件语句不需要条件。如果 <code>if</code> 语句中所有前面的语句结果都为 False 时，将运行 <code>else</code> 块中的代码。</li>
+</ol>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 02c 缩进 V2</p></h3>
+  <video controls>
+  <source src="02. L3 02c 缩进 V2-G8qUNOTHtrM.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="02. L3 02c 缩进 V2-G8qUNOTHtrM.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="02. L3 02c 缩进 V2-G8qUNOTHtrM.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="BR" src="02. L3 02c 缩进 V2-G8qUNOTHtrM.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="CN" src="02. L3 02c 缩进 V2-G8qUNOTHtrM.zh-CN.vtt" label="CN">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="缩进">缩进</h1>
+<p>一些其他语言使用花括号来表示代码块从哪开始，从哪结束。在 Python 中，我们使用缩进来封装代码块。例如，<code>if</code> 语句使用缩进告诉 Python 哪些代码位于不同条件语句里面，哪些代码位于外面。</p>
+<p>在 Python 中，缩进通常是四个空格一组。请严格遵守该惯例，因为更改缩进会完全更改代码的含义。如果你是 Python 程序员团队的成员，则所有人都必须遵守相同的缩进惯例！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="尝试一下！">尝试一下！</h1>
+<p>请尝试运行以下代码，其中包含若干个 <code>if</code> 语句。请尝试不同的输入并使用输出语句查看输出结果。你能理清逻辑规律并判断出哪个代码将运行吗？如果不确定，请添加其他输出语句以帮助你理解代码的运行方式。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#534063-conditional_statements_playground-py" class="nav-item nav-link  active show" id="tab-534063-conditional_statements_playground-py" data-toggle="tab" role="tab"
+      aria-controls="534063-conditional_statements_playground-py" aria-selected="true">conditional_statements_playground.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="534063-conditional_statements_playground-py" aria-labelledby="tab-534063-conditional_statements_playground-py" role="tabpanel">
+      <pre><code></code>#First Example - try changing the value of phone_balance
+phone_balance &#x3D; 10
+bank_balance &#x3D; 50
+
+if phone_balance &lt; 10:
+    phone_balance +&#x3D; 10
+    bank_balance -&#x3D; 10
+
+print(phone_balance)
+print(bank_balance)
+
+#Second Example - try changing the value of number
+
+number &#x3D; 145
+if number % 2 &#x3D;&#x3D; 0:
+    print(&quot;Number &quot; + str(number) + &quot; is even.&quot;)
+else:
+    print(&quot;Number &quot; + str(number) + &quot; is odd.&quot;)
+
+#Third Example - try to change the value of age
+age &#x3D; 35
+
+# Here are the age limits for bus fares
+free_up_to_age &#x3D; 4
+child_up_to_age &#x3D; 18
+senior_from_age &#x3D; 65
+
+# These lines determine the bus fare prices
+concession_ticket &#x3D; 1.25
+adult_ticket &#x3D; 2.50
+
+# Here is the logic for bus fare prices
+if age &lt;&#x3D; free_up_to_age:
+    ticket_price &#x3D; 0
+elif age &lt;&#x3D; child_up_to_age:
+    ticket_price &#x3D; concession_ticket
+elif age &gt;&#x3D; senior_from_age:
+    ticket_price &#x3D; concession_ticket
+else:
+    ticket_price &#x3D; adult_ticket
+
+message &#x3D; &quot;Somebody who is {} years old will pay ${} to ride the bus.&quot;.format(age, ticket_price)
+print(message)</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 练习：条件语句.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 条件语句')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

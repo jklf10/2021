@@ -1,0 +1,360 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小测验：For 和 While 循环</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>控制流</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 条件语句.html">02. 条件语句</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：条件语句.html">03. 练习：条件语句</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：条件语句.html">04. 解决方案：条件语句</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：更多条件语句.html">05. 练习：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：更多条件语句.html">06. 解决方案：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="07. 条件布尔表达式.html">07. 条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="08. 练习：条件布尔表达式.html">08. 练习：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="09. 解决方案：条件布尔表达式.html">09. 解决方案：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="10. For 循环.html">10. For 循环</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：For 循环.html">11. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="12. 解决方案：For 循环.html">12. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：For 循环.html">13. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="14. 解决方案：For 循环.html">14. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="15. 练习：将输入与输出匹配.html">15. 练习：将输入与输出匹配</a>
+    </li>
+    <li class="">
+      <a href="16. 建立字典.html">16. 建立字典</a>
+    </li>
+    <li class="">
+      <a href="17. 用循环遍历字典.html">17. 用循环遍历字典</a>
+    </li>
+    <li class="">
+      <a href="18. 练习：迭代字典.html">18. 练习：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="19. 解决方案：迭代字典.html">19. 解决方案：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="20. While 循环.html">20. While 循环</a>
+    </li>
+    <li class="">
+      <a href="21. 练习：While 循环.html">21. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="22. 练习：While 循环.html">22. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="23. 解决方案：While 循环.html">23. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="24. 练习：While 循环.html">24. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="25. 解决方案：While 循环.html">25. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="26. For 循环 vs. While 循环.html">26. For 循环 vs. While 循环</a>
+    </li>
+    <li class="">
+      <a href="27. 小测验：For 和 While 循环.html">27. 小测验：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="28. 解决方案：For 和 While 循环.html">28. 解决方案：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="29. Break、Continue.html">29. Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="30. 练习：Break、Continue.html">30. 练习：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="31. 解决方案：Break、Continue.html">31. 解决方案：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="32. 练习：循环.html">32. 练习：循环</a>
+    </li>
+    <li class="">
+      <a href="33. 解决方案：循环.html">33. 解决方案：循环</a>
+    </li>
+    <li class="">
+      <a href="34. Zip 和 Enumerate（选学）.html">34. Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="35. 练习：Zip 和 Enumerate（选学）.html">35. 练习：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="36. 解决方案：Zip 和 Enumerate（选学）.html">36. 解决方案：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="37. 列表推导式（选学）.html">37. 列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="38. 练习：列表推导式（选学）.html">38. 练习：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="39. 解决方案：列表推导式（选学）.html">39. 解决方案：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="40. 练习题.html">40. 练习题</a>
+    </li>
+    <li class="">
+      <a href="41. 解决方案：练习题.html">41. 解决方案：练习题</a>
+    </li>
+    <li class="">
+      <a href="42. 总结.html">42. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">27. 小测验：For 和 While 循环</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小测验">小测验</h2>
+<p>是时候暂时一下，让我们一起来检查你对 While 循环和 for 循环的重要概念理解吧！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>当你想要使用 while 循环时，以下哪些条件是必须满足的？（多选）</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1531762256439" name="867336" id="a1531762256439">
+      <label for="a1531762256439"><p>应包括退出while循环的条件</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1531762262203" name="867336" id="a1531762262203">
+      <label for="a1531762262203"><p>检查是否满足迭代条件</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1531762262769" name="867336" id="a1531762262769">
+      <label for="a1531762262769"><p>循环体中应包含改变条件变量的值</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>应包括退出while循环的条件</li>
+      <li>检查是否满足迭代条件</li>
+      <li>循环体中应包含改变条件变量的值</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="问题：我们应该使用什么类型的循环？">问题：我们应该使用什么类型的循环？</h2>
+<p>你需要编写一个循环来获取<code>num_list</code>列表中的数字：<br></p>
+<p><code>num_list = [422, 136, 524, 85, 96, 719, 85, 92, 10, 17, 312, 542, 87, 23, 86, 191, 116, 35, 173, 45, 149, 59, 84, 69, 113, 166]</code></p>
+<p>你的代码应该将列表中的奇数加起来，但只求前5个奇数的和。如果有超过5个奇数，你应该只计算到第五个。如果少于5个奇数，则添加所有已有的奇数。</p>
+<p><strong>你会使用<code>while</code>或<code>for</code>循环来编写这段代码吗？</strong></p>
+<p>我们在下一页提供了我们的解决方案。请随意使用下面的工作区来测试你的代码。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#867339-CFU_ControlFlow-py" class="nav-item nav-link  active show" id="tab-867339-CFU_ControlFlow-py" data-toggle="tab" role="tab"
+      aria-controls="867339-CFU_ControlFlow-py" aria-selected="true">CFU_ControlFlow.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="867339-CFU_ControlFlow-py" aria-labelledby="tab-867339-CFU_ControlFlow-py" role="tabpanel">
+      <pre><code></code>## Please use this space to test and run your code
+
+</code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="28. 解决方案：For 和 While 循环.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('27. 小测验：For 和 While 循环')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>建立字典</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>控制流</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 条件语句.html">02. 条件语句</a>
+    </li>
+    <li class="">
+      <a href="03. 练习：条件语句.html">03. 练习：条件语句</a>
+    </li>
+    <li class="">
+      <a href="04. 解决方案：条件语句.html">04. 解决方案：条件语句</a>
+    </li>
+    <li class="">
+      <a href="05. 练习：更多条件语句.html">05. 练习：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="06. 解决方案：更多条件语句.html">06. 解决方案：更多条件语句</a>
+    </li>
+    <li class="">
+      <a href="07. 条件布尔表达式.html">07. 条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="08. 练习：条件布尔表达式.html">08. 练习：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="09. 解决方案：条件布尔表达式.html">09. 解决方案：条件布尔表达式</a>
+    </li>
+    <li class="">
+      <a href="10. For 循环.html">10. For 循环</a>
+    </li>
+    <li class="">
+      <a href="11. 练习：For 循环.html">11. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="12. 解决方案：For 循环.html">12. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="13. 练习：For 循环.html">13. 练习：For 循环</a>
+    </li>
+    <li class="">
+      <a href="14. 解决方案：For 循环.html">14. 解决方案：For 循环</a>
+    </li>
+    <li class="">
+      <a href="15. 练习：将输入与输出匹配.html">15. 练习：将输入与输出匹配</a>
+    </li>
+    <li class="">
+      <a href="16. 建立字典.html">16. 建立字典</a>
+    </li>
+    <li class="">
+      <a href="17. 用循环遍历字典.html">17. 用循环遍历字典</a>
+    </li>
+    <li class="">
+      <a href="18. 练习：迭代字典.html">18. 练习：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="19. 解决方案：迭代字典.html">19. 解决方案：迭代字典</a>
+    </li>
+    <li class="">
+      <a href="20. While 循环.html">20. While 循环</a>
+    </li>
+    <li class="">
+      <a href="21. 练习：While 循环.html">21. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="22. 练习：While 循环.html">22. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="23. 解决方案：While 循环.html">23. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="24. 练习：While 循环.html">24. 练习：While 循环</a>
+    </li>
+    <li class="">
+      <a href="25. 解决方案：While 循环.html">25. 解决方案：While 循环</a>
+    </li>
+    <li class="">
+      <a href="26. For 循环 vs. While 循环.html">26. For 循环 vs. While 循环</a>
+    </li>
+    <li class="">
+      <a href="27. 小测验：For 和 While 循环.html">27. 小测验：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="28. 解决方案：For 和 While 循环.html">28. 解决方案：For 和 While 循环</a>
+    </li>
+    <li class="">
+      <a href="29. Break、Continue.html">29. Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="30. 练习：Break、Continue.html">30. 练习：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="31. 解决方案：Break、Continue.html">31. 解决方案：Break、Continue</a>
+    </li>
+    <li class="">
+      <a href="32. 练习：循环.html">32. 练习：循环</a>
+    </li>
+    <li class="">
+      <a href="33. 解决方案：循环.html">33. 解决方案：循环</a>
+    </li>
+    <li class="">
+      <a href="34. Zip 和 Enumerate（选学）.html">34. Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="35. 练习：Zip 和 Enumerate（选学）.html">35. 练习：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="36. 解决方案：Zip 和 Enumerate（选学）.html">36. 解决方案：Zip 和 Enumerate（选学）</a>
+    </li>
+    <li class="">
+      <a href="37. 列表推导式（选学）.html">37. 列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="38. 练习：列表推导式（选学）.html">38. 练习：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="39. 解决方案：列表推导式（选学）.html">39. 解决方案：列表推导式（选学）</a>
+    </li>
+    <li class="">
+      <a href="40. 练习题.html">40. 练习题</a>
+    </li>
+    <li class="">
+      <a href="41. 解决方案：练习题.html">41. 解决方案：练习题</a>
+    </li>
+    <li class="">
+      <a href="42. 总结.html">42. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">16. 建立字典</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="建立字典">建立字典</h1>
+<p>到目前为止，你已经熟悉了两个重要概念：1）使用<code>for</code>循环计数和 2）字典<code>get</code>方法。 我们也可以把两者结合起来创建一个有用的计数器字典，可能在之后的学习中，你会遇到这个情况。例如，我们可以创建一个字典<code>word_counter</code>，用于存储字符串中每个单词的数量。</p>
+<p>以下是几种方法：</p>
+<h3 id="方法1：使用for循环创建一组计数器">方法1：使用<code>for</code>循环创建一组计数器</h3>
+<p>让我们从包含一系列书名中的单词的列表开始：</p>
+<pre><code>book_title =  ['great', 'expectations','the', 'adventures', 'of', 'sherlock','holmes','the','great','gasby','hamlet','adventures','of','huckleberry','fin']</code></pre>
+<p><strong>第一步：</strong> 创建一个空字典</p>
+<pre><code>word_counter = {}```
+**第二步：** 遍历列表中的每个元素。如果字典中已包含相关元素，则为其值添加1；如果没有，则将该元素添加到字典中并将其值设置为1。</code></pre>
+<p>for word in book_title:<br />
+    if word not in word_counter:<br />
+        word_counter[word] = 1<br />
+    else:<br />
+        word_counter[word] += 1```</p>
+<h5 id="这里发生了什么？">这里发生了什么？</h5>
+<ul>
+<li><code>for</code>循环遍历列表中的每个元素。对于第一次迭代，<code>word</code>取值为<code>great</code>。</li>
+<li>下一步，<code>if</code>语句检查<code>word</code>是否在<code>word_counter</code>字典中。</li>
+<li>由于没找到，则<code>word_counter [word] = 1</code>这句代码将* great *作为字典的一个键，并赋值为1。</li>
+<li>然后，它将离开if else语句并继续执行for循环的下一次迭代。<code>word</code>现在取期望的值，并重复该过程。</li>
+<li>如果if条件不满足，那是因为<code>word</code>已经存在于<code>word_counter</code>字典中，并且语句<code>word_counter [word] = word_counter [word] + 1</code>将其加1。</li>
+<li>一旦<code>for</code>循环完成迭代遍历列表，<code>for</code>循环就结束了。</li>
+</ul>
+<p>我们可以通过打印字典来查看输出。打印<code>word_counter</code>会产生以下输出。</p>
+<pre><code>{'great': 2, 'expectations': 1, 'the': 2, 'adventures': 2, 'of': 2, 'sherlock': 1, 'holmes': 1, 'gasby': 1, 'hamlet': 1, 'huckleberry': 1, 'fin': 1}</code></pre>
+<p>你可以在本页底部的代码编辑器中自行尝试。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="方法-2-使用-get-方法">方法 2: 使用 <code>get</code> 方法</h3>
+<p>我们将在此示例中使用相同的列表：</p>
+<pre><code>book_title =  ['great', 'expectations','the', 'adventures', 'of', 'sherlock','holmes','the','great','gasby','hamlet','adventures','of','huckleberry','fin']```
+
+##### **步骤 1: ** 创建一个空字典</code></pre>
+<p>word_counter = {}```</p>
+<h5 id="步骤2--遍历每个元素，get其在字典中的值，并加1。">**步骤2: ** 遍历每个元素，<code>get()</code>其在字典中的值，并加1。</h5>
+<p>让我们回想一下，字典<code>get</code>是另一种检索字典中键值的方法。如果找不到键，将返回默认值。如果未指定，则默认值设置为“None”。我们可以使用默认值为0的<code>get</code>来简化上面第一种方法的代码。</p>
+<pre><code>for word in book_title:
+    word_counter[word] = word_counter.get(word, 0) + 1```
+
+#####  这里发生了什么？
+- 正如我们之前看到的那样，`for`循环遍历列表。 `for`循环将`great`提供给`for`循环体中的下一个语句。
+-   在这一行：`word_counter [word] = word_counter.get（word，0）+ 1`，因为键*'great'*在字典中尚不存在，`get（）`将返回值0，`word_counter [word]`将设置为1。
+- 一旦遇到`word_counter`中已存在的单词（例如*'the'*的第二次出现），该键的值将增加1。在`the`的第二次出现时，键的值将再次加1，即为 2。
+- 一旦`for`循环完成迭代遍历列表，`for`循环就结束了。
+
+打印`word_counter`，可以发现我们得到的结果与方法1中的结果相同。</code></pre>
+<p>{'great': 2, 'expectations': 1, 'the': 2, 'adventures': 2, 'of': 2, 'sherlock': 1, 'holmes': 1, 'gasby': 1, 'hamlet': 1, 'huckleberry': 1, 'fin': 1}<br />
+```<br />
+同样的，你可以在下面的代码编辑器中自己尝试一下。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div class="nav nav-tabs nav-fill" role="tablist" id="question-tabs">
+    <a href="#867326-building_dictionaries-py" class="nav-item nav-link  active show" id="tab-867326-building_dictionaries-py" data-toggle="tab" role="tab"
+      aria-controls="867326-building_dictionaries-py" aria-selected="true">building_dictionaries.py</a>
+  </div>
+
+  <div class="tab-content" style="padding: 20px 0;" id="question-tab-contents">
+    <div class="tab-pane  active show" id="867326-building_dictionaries-py" aria-labelledby="tab-867326-building_dictionaries-py" role="tabpanel">
+      <pre><code></code></code></pre>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="17. 用循环遍历字典.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('16. 建立字典')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
