@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:04.260
+Avvalroq, biz o‘zlashtirish bayonoti g‘oyasi haqida suhbatlashdik,
+
+00:00:04.260 --> 00:00:07.570
+masalan, har qanday turtle.Turtle ga o‘xshash.
+
+00:00:07.570 --> 00:00:10.230
+U tenglik belgisi o‘ng tomonidagi narsalarni oladi
+
+00:00:10.230 --> 00:00:14.535
+va uni chap tomonda nomlangan o‘zgaruvchiga tayinlaydi.
+
+00:00:14.535 --> 00:00:18.210
+Bunday holda, o‘ngdagi kod
+
+00:00:18.210 --> 00:00:24.165
+yangi turtle ob’ekti yaratadi va bu turtle ob’ekti Emi nomlangan o‘zgaruvchiga tayinlanadi
+
+00:00:24.165 --> 00:00:27.665
+Ammo biz turtle ob’ektlari bilan cheklanib qolishimiz shart emas,
+
+00:00:27.665 --> 00:00:30.560
+o‘zgaruvchiga boshqa narsalarni ham tayinlashimiz mumkin.
+
+00:00:30.560 --> 00:00:33.360
+Masalan, ushbu bayonot
+
+00:00:33.360 --> 00:00:36.895
+yoqimli rang deb nomlangan o‘zgaruvchiga sariq rang tayinlaydi.
+
+00:00:36.895 --> 00:00:39.870
+Keling, shunga o‘xshash narsadan qanday foydalanishimiz mumkinligini ko‘rib chiqamiz.
+
+00:00:39.870 --> 00:00:44.635
+Mana, bizning tanish kodimiz turtle da bo‘lgan "Sariq kvadrat chizish".
+
+00:00:44.635 --> 00:00:49.810
+Faqat bu yerda bu tayinlash bayonoti qo‘shib, uni biroz o‘zgartiramiz.
+
+00:00:49.810 --> 00:00:54.140
+Endi biz sariq rangni ushbu yoqimli rang o‘zgaruvchisiga qo‘ydik,
+
+00:00:54.140 --> 00:00:58.365
+biz ushbu o‘zgaruvchidan ushbu satrga muhtoj bo‘lgan kodning istalgan joyidan foydalanishimiz mumkin.
+
+00:00:58.365 --> 00:01:01.830
+Shunday qilib, ushbu chiziqqa sariq rangni qo‘yish o‘rniga,
+
+00:01:01.830 --> 00:01:04.490
+uning o‘rniga biz chiroyli rang qo‘yamiz.
+
+00:01:04.490 --> 00:01:07.180
+Bu aniq ta’sir qiladi.
+
+00:01:07.180 --> 00:01:10.010
+turtle sariq kvadratni tortadi.
+
+00:01:10.010 --> 00:01:12.740
+Yaxshi narsalardan biri, shunday qilish
+
+00:01:12.740 --> 00:01:15.230
+bu o‘zgaruvchini bir nechta joyda ishlatishimiz mumkin.
+
+00:01:15.230 --> 00:01:19.150
+Xuddi bizda boshqa turtle lar boshqa shakllarni chizishsa.
+
+00:01:19.150 --> 00:01:21.350
+biz bir xil yoqimli rang o‘zgaruvchidan foydalanib
+
+00:01:21.350 --> 00:01:25.540
+ular chizayotgan rangni ham sozlash mumkin.
+
+00:01:26.540 --> 00:01:31.340
+Agar biz sariq rang bu yoqimli rang deb o‘ylamaslikka qaror qilsak,
+
+00:01:31.340 --> 00:01:34.075
+o‘zgaruvchiga berilgan satrni o‘zgartirishimiz mumkin.
+
+00:01:34.075 --> 00:01:37.880
+Aytaylik, hozir sariq satr o‘rniga,
+
+00:01:37.880 --> 00:01:40.655
+biz ko‘k satrni tayinlaymiz.
+
+00:01:40.655 --> 00:01:45.885
+Shunday qilib, endi bu nom yoqimli rang o‘rniga deb ko‘k rangni anglatadi.
+
+00:01:45.885 --> 00:01:51.210
+Yaxshi tomoni shundaki, biz ushbu o‘zgaruvchini faqat bitta joyda o‘zgartirishimiz kerak,
+
+00:01:51.210 --> 00:01:54.970
+ammo bu satr barcha joylarda ishlatila boshlaydi.
+
+00:01:54.970 --> 00:01:59.190
+Shunday qilib, bu turtle larning barchasi hozir ochiq ko‘k rangda chizilgan.
+

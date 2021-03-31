@@ -1,0 +1,79 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.595
+Agar bizda Emi ismli turtle bo‘lsa,
+
+00:00:02.595 --> 00:00:09.569
+keyin Emi.forward (50) bayonoti turtle ni 50 pikselga oldinga siljishiga olib keladi.
+
+00:00:09.569 --> 00:00:16.625
+Xuddi shunday, Emi.back (50) turtle ning 50 pikselga orqaga siljishiga olib keladi.
+
+00:00:16.625 --> 00:00:19.500
+Yozayotganda tushunish kerak bo‘lgan bir narsa
+
+00:00:19.500 --> 00:00:24.555
+turtle dasturlari shundaki, yo‘nalishlar barchasi turtle lar nuqtai nazaridan hisoblanadi.
+
+00:00:24.555 --> 00:00:26.550
+Bu biroz chalkash bo‘lishi mumkin
+
+00:00:26.550 --> 00:00:29.985
+avval turtle chapga yoki o‘ngga burilishini aytganda.
+
+00:00:29.985 --> 00:00:32.724
+Dasturning istalgan nuqtasida,
+
+00:00:32.724 --> 00:00:36.335
+turtle ma’lum bir yo‘nalishga qaragan.
+
+00:00:36.335 --> 00:00:39.625
+turtle 45 ga chapga burilishini aytganda,
+
+00:00:39.625 --> 00:00:45.700
+Siz uni hozir qarayotgan tarafdan 45 gradusga burishingiz kerakligini aytmoqdasiz.
+
+00:00:45.700 --> 00:00:49.195
+Shunday qilib, agar biz turtle kvadrat chizmoqchi bo‘lsak,
+
+00:00:49.195 --> 00:00:52.760
+biz 100 pikselga oldinga siljishi kerakligini aytishimiz kerak,
+
+00:00:52.760 --> 00:00:56.740
+keyin 90 gradusga chapga burilib,
+
+00:00:56.740 --> 00:00:59.695
+oldinga 100, chap 90,
+
+00:00:59.695 --> 00:01:04.105
+oldinga 100, chap 90, oldinga 100,
+
+00:01:04.105 --> 00:01:09.840
+va endi u boshqa tomonga qaragan bo‘lsa-da, boshlagan jo‘yiga qaytdi.
+
+00:01:09.840 --> 00:01:12.920
+Ba’zida bu biroz chalkash tuyulishi mumkin.
+
+00:01:12.920 --> 00:01:16.845
+Masalan, agar siz shunga o‘xshash uchburchak chizmoqchi bo‘lsangiz,
+
+00:01:16.845 --> 00:01:20.350
+turtle ni burib qo‘yishni o‘ylayotgandirsiz
+
+00:01:20.350 --> 00:01:24.375
+60 gradusga teng bo‘lgan uchburchak ichidagi burchaklarga.
+
+00:01:24.375 --> 00:01:31.370
+Aslida, siz turtle ni 120 daraja burchaklar bilan burishingizni xohlaysiz.
+
+00:01:31.370 --> 00:01:35.950
+Albatta, siz adashib qolsangiz yoki unchalik ishonchingiz komil bo‘lmasa,
+
+00:01:35.950 --> 00:01:37.764
+har doim tajriba o‘tkazishingiz mumkin.
+
+00:01:37.764 --> 00:01:42.120
+Qanday natijalarga erishishingizni ko‘rish uchun turli xil burchaklarni sinab ko‘rishdan qo‘rqmang.
+

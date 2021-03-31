@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.000
+Xo‘sh, ushbu kodda nima bo‘lyapti?
+
+00:00:03.000 --> 00:00:06.480
+Bizda bu lengths - uzunliklar deb nomlangan ro‘yxat o‘zgaruvchi bor,
+
+00:00:06.480 --> 00:00:08.895
+va uning ichidagi bu raqamlarning barchasi.
+
+00:00:08.895 --> 00:00:13.370
+Keyin bizda hozirgacha tanish bo‘lgan turtle ni sozlash kodi mavjud.
+
+00:00:13.370 --> 00:00:18.790
+Keyin biz lengths ichida to‘rtta uzunlikka egamiz. Nima u?
+
+00:00:18.790 --> 00:00:23.340
+Ushbu kod qatorini tushunishning kaliti bu lengths 
+
+00:00:23.340 --> 00:00:28.085
+sikldagi o‘zgaruvchi bu o‘zgaruvchiga narsalarni tayinlashi mumkin.
+
+00:00:28.085 --> 00:00:30.225
+U teng belgidan foydalanmaydi,
+
+00:00:30.225 --> 00:00:33.955
+lekin u ilgari ko‘rgan o‘zlashtirish bayonotiga o‘xshash narsani qilyapti,
+
+00:00:33.955 --> 00:00:40.005
+Amy = turtle.Turtle () yoki pretty_color = "blue" kabi.
+
+00:00:40.005 --> 00:00:44.570
+Esda tutingki, sikl ro‘yxatdagi har bir element uchun bir marta ishlaydi.
+
+00:00:44.570 --> 00:00:47.930
+Bunday holda, ro‘yxatda 10 ta element mavjud.
+
+00:00:47.930 --> 00:00:50.320
+Shunday qilib, sikl 10 marta ishlaydi,
+
+00:00:50.320 --> 00:00:52.415
+va siklda har safar,
+
+00:00:52.415 --> 00:00:54.710
+u ro‘yxatdagi narsalardan birini oladi,
+
+00:00:54.710 --> 00:00:58.035
+va length o‘zgaruvchiga ushbu elementni tayinlang.
+
+00:00:58.035 --> 00:01:00.230
+Sikldan birinchi o‘tishda
+
+00:01:00.230 --> 00:01:03.515
+ro‘yxatdagi birinchi elementni oladi,
+
+00:01:03.515 --> 00:01:05.540
+u 10 ga teng butun son.
+
+00:01:05.540 --> 00:01:07.560
+Ikkinchi o‘tishda
+
+00:01:07.560 --> 00:01:09.645
+length 20 ga teng bo‘ladi.
+
+00:01:09.645 --> 00:01:11.245
+Uchinchi o‘tishda
+
+00:01:11.245 --> 00:01:13.995
+unga 30 tayinlanadi va hokazo.
+
+00:01:13.995 --> 00:01:17.270
+Shunga qaramay, siz bu yerda hech qanday topshiriq haqidagi ko‘rsatmalarni ko‘rmaysiz,
+
+00:01:17.270 --> 00:01:22.285
+ammo bu juda uzoq ishlaydi, go‘yo bizda length = 10,
+
+00:01:22.285 --> 00:01:24.280
+keyin length = 20,
+
+00:01:24.280 --> 00:01:27.040
+va keyin length = 30, va hokazo.
+
+00:01:27.040 --> 00:01:30.290
+Ushbu o‘zlashtirish bayonotlari aslida bizda bo‘lishi shart emas
+
+00:01:30.290 --> 00:01:34.310
+chunki siklning bir qismi sifatida sodir bo‘ladi.
+
+00:01:34.310 --> 00:01:36.110
+Sikl shu tarzda ishlaydi,
+
+00:01:36.110 --> 00:01:40.895
+ammo bu turtle chizgan shaklga qanday ta’sir qiladi?
+
+00:01:40.895 --> 00:01:47.595
+Xo‘sh, siz uzunlik o‘zgaruvchisi ham ushbu qatorda ishlatilishini payqagan bo‘lishingiz mumkin.
+
+00:01:47.595 --> 00:01:49.590
+Har safar sikl orqali
+
+00:01:49.590 --> 00:01:52.460
+bu qator biroz boshqacha ish qiladi.
+
+00:01:52.460 --> 00:01:54.380
+Birinchi marta
+
+00:01:54.380 --> 00:01:57.125
+length ga 10 qiymat berilgan,
+
+00:01:57.125 --> 00:02:02.255
+shuning uchun qator o‘rniga siz ushbu qatorni kiritganingiz kabi ishlaydi.
+
+00:02:02.255 --> 00:02:04.525
+Ikkinchi o‘tishda
+
+00:02:04.525 --> 00:02:07.310
+length 20 qiymatini oladi,
+
+00:02:07.310 --> 00:02:11.280
+endi qator go‘yo dizzy.forward(20) .
+
+00:02:12.240 --> 00:02:16.020
+Bu ro‘yxatdagi har bir raqam uchun davom etadi.
+
+00:02:16.020 --> 00:02:19.090
+Natijada, har safar sikl orqali
+
+00:02:19.090 --> 00:02:21.910
+dizzy boshqa miqdor bilan oldinga siljiydi.
+
+00:02:21.910 --> 00:02:24.735
+Ushbu turdagi sikl haqida gapirishning usullari.
+
+00:02:24.735 --> 00:02:29.409
+Biz aytamizki, ushbu ro‘yxat aylanmoqda,
+
+00:02:29.409 --> 00:02:33.125
+bu ro‘yxatdagi har bir element uchun biror narsa qilyapti.
+
+00:02:33.125 --> 00:02:35.620
+Ehtiyot bo‘lish kerak bo‘lgan narsa,
+
+00:02:35.620 --> 00:02:39.795
+siklning birinchi qatori har doim ikki nuqta bilan tugaydi.
+
+00:02:39.795 --> 00:02:44.570
+Loop ichidagi chiziqlar har doim bir xil miqdordagi bo‘shliqlar (indentation) bilan ajratiladi.
+
+00:02:44.570 --> 00:02:46.305
+Agar siz ikki nuqtani tashlab qo‘ysangiz.
+
+00:02:46.305 --> 00:02:48.445
+yoki bo‘shliqlar miqdorda adashsangiz,
+
+00:02:48.445 --> 00:02:51.850
+Python sizga ushbu qatorda sintaksis xatosini beradi,
+
+00:02:51.850 --> 00:02:54.000
+sintaksisingizni kuzatishga ishonch hosil qiling.
+

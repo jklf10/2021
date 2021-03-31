@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:04.640
+for sikl dasturi sizning dasturingizga ba’zi ko‘rsatmalarni ma’lum marta takrorlash imkonini beradi.
+
+00:00:04.640 --> 00:00:08.610
+Shuningdek, ushbu ko‘rsatmalar ro‘yxatdagi qiymatlardan foydalanishga imkon beradi,
+
+00:00:08.610 --> 00:00:12.685
+ammo sikl ichidagi narsa aslida juda murakkab bo‘lishi mumkin,
+
+00:00:12.685 --> 00:00:15.505
+u boshqa sikl ham bo‘lishi mumkin.
+
+00:00:15.505 --> 00:00:20.610
+Agar besh marta ishlaydigan sikl olti marta ishlaydigan sikl ichida bo‘lsa,
+
+00:00:20.610 --> 00:00:25.520
+unda ichki kod besh karra olti marta ishlaydi, ya’ni 30 marta.
+
+00:00:25.520 --> 00:00:29.160
+Shunday qilib, masalan, bu yerda bizning tanish sikl
+
+00:00:29.160 --> 00:00:33.390
+kvadrat chizadi va bu yerda yana kichikroq kvadrat tortadigan yana boshqasi.
+
+00:00:33.390 --> 00:00:40.370
+Bular deyarli bir xil narsa qiladi, faqat turtle har safar 100 o‘rniga 10 piksel oldinga siljiydi.
+
+00:00:40.800 --> 00:00:46.485
+Endi men ushbu siklni olib, ikkinchisiga joylashtiraman.
+
+00:00:46.485 --> 00:00:51.160
+Men qilishim kerak bo‘lgan narsa bu kabi indeks qilishdir.
+
+00:00:51.160 --> 00:00:53.870
+Bunga ichki sikl deyiladi.
+
+00:00:53.870 --> 00:01:00.215
+Biz ushbu sikl ushbu sikl ichiga joylashtirilgan deb aytamiz.
+
+00:01:00.215 --> 00:01:03.040
+Shunday qilib, agar biz ushbu kodni ishlatsak,
+
+00:01:03.040 --> 00:01:06.890
+u katta kvadratning bir tomonini tortadi, keyin u 
+
+00:01:06.890 --> 00:01:10.750
+joylashtirilgan sikl ichiga kiradi va kichik kvadratning to‘rt tomonini tortadi.
+
+00:01:10.750 --> 00:01:14.930
+Keyin u katta siklning yuqori qismiga qaytib, keyingi katta tomonni tortadi.
+
+00:01:14.930 --> 00:01:17.150
+Keyin u ichki sikl ichiga kiradi va
+
+00:01:17.150 --> 00:01:20.850
+barchasi tugaguncha yana bir kichik kvadrat chizadi va hokazo.
+
+00:01:20.850 --> 00:01:25.055
+Umuman olganda, biz ushbu asosiy sikldan
+
+00:01:25.055 --> 00:01:32.180
+to‘rt marta o‘tdik va har safar ichki sikldan to‘rt marta o‘tdik.
+
+00:01:32.180 --> 00:01:35.925
+Shunday qilib, bu to‘rt karra to‘rt marta, ya’ni 16 marta o‘tiladi.
+
+00:01:35.925 --> 00:01:39.035
+Xop. Shunday qilib, bu ichki sikl g‘oyasi.
+
+00:01:39.035 --> 00:01:41.850
+Keling, yana bir qiziq misolni ko‘rib chiqaylik.
+
+00:01:41.850 --> 00:01:44.865
+Bu yerda birlashtirilgan ichki siklga yana bir misol.
+
+00:01:44.865 --> 00:01:50.355
+Ushbu kod shu kabi olti burchaklardan zanjir chizadi.
+
+00:01:50.355 --> 00:01:56.880
+Birinchidan, biz zanjirda sakkizta ulanish va oltita oltiburchak mavjudligini aytamiz.
+
+00:01:56.880 --> 00:02:00.995
+Shunday qilib, biz sakkizta va oltitata elementli ro‘yxat bilan ba’zi o‘zgaruvchilarni o‘rnatdik.
+
+00:02:00.995 --> 00:02:06.830
+Ushbu o‘zgaruvchiga biz bir marta ishlaydigan tashqi sikl bilan ishlov beramiz
+
+00:02:06.830 --> 00:02:13.445
+zanjirdagi har bir ulanish va ushbu ulanishlar har ikki tomonida bir marta ishlaydigan ichki sikl.
+
+00:02:13.445 --> 00:02:16.600
+Shunday qilib, ulanish uchun,
+
+00:02:16.600 --> 00:02:21.440
+biz bitta olti burchakli rasmni olamiz va keyingi ulanishga o‘tamiz
+
+00:02:21.440 --> 00:02:26.860
+buni qalamni oldinga siljitib, qalamni yana pastga qo‘yib qilamiz.
+
+00:02:26.860 --> 00:02:29.290
+Bitta olti burchak chizish uchun,
+
+00:02:29.290 --> 00:02:31.520
+biz ichki sikl qilamiz.
+
+00:02:31.520 --> 00:02:36.115
+Yon tomonlar uchun, boshqacha qilib aytganda, olti tomonning har biri uchun,
+
+00:02:36.115 --> 00:02:39.950
+biz oldinga 10 ga va o‘ngga 60 ga burilishni olamiz.
+
+00:02:39.950 --> 00:02:41.810
+Shunday qilib, bu ichki sikl qiladi
+
+00:02:41.810 --> 00:02:46.400
+bitta olti burchak va ushbu kodning qolgan qismida 
+
+00:02:46.400 --> 00:02:48.305
+bitta ulanishdan ikkinchisiga o‘tiladi.
+
+00:02:48.305 --> 00:02:52.895
+Umuman olganda, ushbu kod butun zanjirni chizadi.
+
+00:02:52.895 --> 00:02:56.915
+Endi siz boshqa kodni chizish uchun ushbu kodni o‘zgartirishingiz mumkin.
+
+00:02:56.915 --> 00:03:01.830
+Siz xohlagan naqshni yarating. Mana bir misol.
+

@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.075
+Kvadratni tortadigan ba’zi kodlar.
+
+00:00:03.075 --> 00:00:06.980
+Xuddi shu satrlarni qayta-qayta ishlatayotganimizga e’tibor bering,
+
+00:00:06.980 --> 00:00:10.055
+va bu faqat to‘rt tomonli kvadrat uchun.
+
+00:00:10.055 --> 00:00:14.085
+Agar biz yuz tomonli shakl chizmoqchi bo‘lsak nima bo‘ladi?
+
+00:00:14.085 --> 00:00:17.820
+Bu juda ko‘p ish va kerak emas ekan.
+
+00:00:17.820 --> 00:00:19.829
+for sikli yordamida
+
+00:00:19.829 --> 00:00:22.050
+biz istalgancha tomonli shaklni chizishimiz mumkin
+
+00:00:22.050 --> 00:00:25.270
+va u kod faqat uch qatorni oladi.
+
+00:00:25.270 --> 00:00:27.210
+for siklini yaratish uchun
+
+00:00:27.210 --> 00:00:28.975
+biz bu kabi chiziqdan boshlaymiz;
+
+00:00:28.975 --> 00:00:31.990
+tomonlar uchun [1, 2,
+
+00:00:31.990 --> 00:00:42.420
+3, 4]: keyin biz uni sikllash yoki takrorlashni xohlagan kod bilan birga olamiz.
+
+00:00:42.420 --> 00:00:47.590
+Ushbu chiziqlarni to‘rtta bo‘shliqqa o‘ng tomonga siljitish (indent) orqali qanday qilib ularni ajratganimizga e’tibor bering.
+
+00:00:47.590 --> 00:00:51.145
+Shunday qilib, biz ushbu qatorlar sikl ichida ekanligini ko‘rsatamiz.
+
+00:00:51.145 --> 00:00:55.850
+Boshqacha aytganda, bu takrorlanadigan qatorlar.
+
+00:00:55.850 --> 00:00:59.235
+Shunday qilib, ushbu kod bir necha bor ishlaydi,
+
+00:00:59.235 --> 00:01:00.925
+lekin necha marta?
+
+00:01:00.925 --> 00:01:06.740
+Xo‘sh, ushbu chiziqdagi yana to‘rt narsaga e’tibor bering.
+
+00:01:06.740 --> 00:01:09.920
+Aslida, bu 
+
+00:01:09.920 --> 00:01:13.835
+ushbu ro‘yxatdagi har bir narsa uchun kod bir marta ishga tushirilishini aytadi.
+
+00:01:13.835 --> 00:01:16.300
+Ro‘yxatda to‘rtta element mavjudligi sababli,
+
+00:01:16.300 --> 00:01:18.795
+sikl to‘rt marta ishlaydi.
+
+00:01:18.795 --> 00:01:20.435
+Ushbu aniq sikl uchun,
+
+00:01:20.435 --> 00:01:23.320
+ro‘yxatdagi narsalar aslida muhim emas.
+
+00:01:23.320 --> 00:01:26.930
+Biz bu raqamlarni o‘zgartirishimiz yoki hatto ularni satrlar bilan almashtirishimiz mumkin.
+
+00:01:26.930 --> 00:01:30.710
+Yana, sikl ro‘yxatdagi har bir element uchun bir martadan ishlaydi
+
+00:01:30.710 --> 00:01:35.360
+va ro‘yxatdagi to‘rtta element mavjudligi sababli, sikl to‘rt marta ishlaydi.
+

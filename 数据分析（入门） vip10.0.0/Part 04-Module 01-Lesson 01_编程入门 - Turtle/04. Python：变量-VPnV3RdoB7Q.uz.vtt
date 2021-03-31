@@ -1,0 +1,230 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.800
+Mana biz ko‘rib chiqqan kod.
+
+00:00:02.800 --> 00:00:04.500
+Agar siz shu bilan o‘ynab ko‘rgan bo‘lsangiz,
+
+00:00:04.500 --> 00:00:08.730
+Agar siz turtle nomini kodning bitta satrida o‘zgartirsangiz,
+
+00:00:08.730 --> 00:00:10.385
+dastur ishlamaydi.
+
+00:00:10.385 --> 00:00:13.285
+Uni ishga tushirishda siz xato haqida xabar olasiz.
+
+00:00:13.285 --> 00:00:16.085
+Ammo agar siz ushbu satrlarning barchasida ismni o‘zgartirsangiz,
+
+00:00:16.085 --> 00:00:17.435
+u juda yaxshi ishlaydi.
+
+00:00:17.435 --> 00:00:20.550
+Agar biz ko‘proq narsalarga qarasak, nima uchun bu sodir bo‘layotganini yaxshiroq tushunishimiz mumkin
+
+00:00:20.550 --> 00:00:25.410
+ushbu satrga yaqindan qarasak, Jorjturtle.Turtle bilan tenglashadi.
+
+00:00:25.410 --> 00:00:28.695
+Umuman olganda, biz ushbu satrni
+
+00:00:28.695 --> 00:00:32.160
+turtle yasash va bu turtle nom berish deb o‘ylashimiz mumkin.
+
+00:00:32.160 --> 00:00:35.805
+Bu qism o‘ng tomonda, turtle.Turtle va qavslar.
+
+00:00:35.805 --> 00:00:39.390
+yangi turtle hosil qiladigan qism, chap qismi esa
+
+00:00:39.390 --> 00:00:42.310
+Jorj turtle ning nomi nima bo‘lishini aytadi.
+
+00:00:42.310 --> 00:00:46.300
+Ammo bu kod turtle yaratmoqda deganda nimani tushunamiz?
+
+00:00:46.300 --> 00:00:50.870
+Xo‘sh, Python-da turtle qanday ishlashi haqida juda ko‘p ma’lumotlar mavjud,
+
+00:00:50.870 --> 00:00:53.000
+ushbu virtual robotni qanday harakatga keltirish kerak
+
+00:00:53.000 --> 00:00:55.795
+turli xil usullar bilan aylantiring va ekranda narsalarni chizib oling.
+
+00:00:55.795 --> 00:00:59.240
+Dasturimizda turtle dan foydalanish imkoniyatiga ega bo‘lish uchun
+
+00:00:59.240 --> 00:01:02.770
+avval kompyuterning xotirasida ushbu ma’lumotlarning bir qismini nusxasini olishimiz kerak.
+
+00:01:02.770 --> 00:01:06.125
+Shunday qilib, biz ushbu kodni ishlaganda, turtle.Turtle ,
+
+00:01:06.125 --> 00:01:08.270
+Python bo‘sh joy topadi
+
+00:01:08.270 --> 00:01:12.655
+kompyuter xotirasi va u bu turtle ma’lumotlarini o‘sha bo‘sh joyga joylashtiradi.
+
+00:01:12.655 --> 00:01:15.320
+Aslida, biz foydalanishimiz uchun narsalarni tayyorlayapmiz
+
+00:01:15.320 --> 00:01:18.300
+turtle biror narsa chizishimiz kerak bo‘lganida, bu ma’lumotlar.
+
+00:01:18.300 --> 00:01:21.230
+Shunday qilib, endi bizda kerakli ma’lumotlar mavjud
+
+00:01:21.230 --> 00:01:25.425
+kompyuter xotirasida ushbu o‘ziga xos joyda joylashgan virtual turtle roboti.
+
+00:01:25.425 --> 00:01:27.950
+Aytgancha, biz buni shunday deb ataganimizni eshitasiz
+
+00:01:27.950 --> 00:01:32.000
+turtle ma’lumot ob’ekti yoki shunchaki turtle ob’ekti.
+
+00:01:32.000 --> 00:01:35.455
+Agar biz ushbu turtle ob’ektidan foydalanishni istasak,
+
+00:01:35.455 --> 00:01:37.485
+shunchaki ma’lumotlarni xotiraga saqlash mumkin emas,
+
+00:01:37.485 --> 00:01:40.650
+shuningdek, bu turtle haqida qandaydir tarzda gaplashishimiz kerak
+
+00:01:40.650 --> 00:01:43.000
+unga ko‘rsatmalar berish va boshqalar.
+
+00:01:43.000 --> 00:01:45.950
+Bizga bu turtle haqida biron bir usul kerak.
+
+00:01:45.950 --> 00:01:48.470
+Shuning uchun biz unga Jorj kabi nom beramiz.
+
+00:01:48.470 --> 00:01:53.330
+turtle ma’lumot ob’ekti xotiraga joylashtirilib, unga nom berilganidan so‘ng,
+
+00:01:53.330 --> 00:01:57.000
+turtle bilan biron bir narsa qilishni xohlaganimizda, biz bu ismdan foydalanishimiz mumkin.
+
+00:01:57.000 --> 00:02:01.570
+Masalan, agar biz Jorj ismli turtle oldinga yoki orqaga burilishini istasak,
+
+00:02:01.570 --> 00:02:08.145
+biz george.forward100 va george.right90 kabi qatorlardan foydalanishimiz mumkin.
+
+00:02:08.145 --> 00:02:12.770
+Agar biz avval ushbu ma’lumotlar ob’ektiga Jorj 
+deb murojaat qilyapmiz deb aytsak, lekin
+
+00:02:12.770 --> 00:02:17.420
+keyinchalik uni Emiga o‘xshash boshqa nom bilan murojaat qilishga urinib ko‘rsak, u ishlamaydi.
+
+00:02:17.420 --> 00:02:22.175
+Bizning kodimiz Emini xotiradagi biron bir ma’lumot bilan bog‘lamagan.
+
+00:02:22.175 --> 00:02:24.770
+Biz istagan ismdan juda ko‘p foydalanishimiz mumkin,
+
+00:02:24.770 --> 00:02:30.530
+ammo biz izchil bo‘lishimiz kerak yoki Python biz qaysi ma’lumotlarga murojaat qilayotganimizni bilmaydi.
+
+00:02:30.530 --> 00:02:35.314
+Endi bu tushuncha shunchaki turtle larni nomlashga taalluqli narsa emas.
+
+00:02:35.314 --> 00:02:38.360
+Bu yerda umumiy fikr shundan iboratki, biz ba’zi ma’lumotlarni kiritamiz
+
+00:02:38.360 --> 00:02:40.525
+kompyuterning xotirasiga va keyin biz
+
+00:02:40.525 --> 00:02:43.490
+bu ma’lumotlarni bizning kodimizda foydalanishimiz mumkin bo‘lgan ismga ulanamiz.
+
+00:02:43.490 --> 00:02:48.399
+Agar ism va kod va xotiradagi ba’zi ma’lumotlar o‘rtasida aloqa mavjud bo‘lsa,
+
+00:02:48.399 --> 00:02:50.500
+buning uchun biz ishlatadigan ma’lum atama mavjud,
+
+00:02:50.500 --> 00:02:52.110
+u o‘zgaruvchi deb nomlanadi.
+
+00:02:52.110 --> 00:02:56.580
+Biz uni o‘zgaruvchi deb atashimiz sababi bu ulanish o‘zgarishi mumkin,
+
+00:02:56.580 --> 00:02:59.800
+ya’ni o‘zgaruvchining ma’lumotlari nimani anglatishini o‘zgartirishimiz mumkin.
+
+00:02:59.800 --> 00:03:04.150
+Aytishimiz mumkinki, bu o‘zgaruvchi xotirada bir joyda turgan ma’lumotga murojaat qiladi,
+
+00:03:04.150 --> 00:03:06.850
+lekin keyinroq bizning dasturimizda biz uni shunday o‘zgartirishimiz mumkinki,
+
+00:03:06.850 --> 00:03:10.125
+u xotiradagi boshqa joyda joylashgan boshqa ma’lumotga murojaat qiladi.
+
+00:03:10.125 --> 00:03:14.220
+o‘zgaruvchi bu yorliqli quti kabidir.
+
+00:03:14.220 --> 00:03:17.890
+Biz ushbu yorliqda mavjud bo‘lgan narsalarga ishora qilish uchun yorliqdan foydalanishimiz mumkin,
+
+00:03:17.890 --> 00:03:22.100
+ammo keyinroq yorliqni olib, o‘rniga boshqa qutiga yopishtirishimiz mumkin.
+
+00:03:22.100 --> 00:03:27.080
+Kompyuterga ma’lum bir ma’lumotlar ob’ekti ma’lum bir nom yorlig‘iga ega bo‘lishi kerakligini aytish uchun,
+
+00:03:27.080 --> 00:03:31.070
+bizda Jorj turtle.Turtle ga teng kabi satrlardan foydalanamiz.
+
+00:03:31.070 --> 00:03:35.825
+Ushbu satr teng belgi atrofida ikki qismga qanday bo‘linayotganiga e’tibor bering.
+
+00:03:35.825 --> 00:03:38.610
+o‘ng tomonda turtle kodi joylashgan.
+
+00:03:38.610 --> 00:03:40.380
+bu yangi turtle hosil qiladi.
+
+00:03:40.380 --> 00:03:45.125
+Chapda biz o‘zgaruvchiga beradigan nom - Jorj.
+
+00:03:45.125 --> 00:03:48.655
+o‘rtasida teng belgi,
+
+00:03:48.655 --> 00:03:52.900
+u bu narsani o‘ng tomonga oling va uni chapdagi ism bilan bog‘lang deb Pitonga aytadi.
+
+00:03:52.900 --> 00:03:56.790
+Aytgancha, ismni xotiradagi ba’zi ma’lumotlar bilan bog‘laganimizda,
+
+00:03:56.790 --> 00:03:59.610
+biz ushbu jarayonni o‘zlashtirish deb ataymiz.
+
+00:03:59.610 --> 00:04:03.960
+Biz o‘ngdagi koddan va chapdagi ismdan ma’lumotlarni tayinlaymiz.
+
+00:04:03.960 --> 00:04:09.315
+Teng belgi o‘zlashtirish operatori deb ataladi va biz 
+
+00:04:09.315 --> 00:04:11.790
+Jorj turtle teng degan kod satriga murojaat qilishimiz mumkin
+
+00:04:11.790 --> 00:04:13.860
+o‘zlashtirish bayonoti sifatida.
+
+00:04:13.860 --> 00:04:18.250
+E’tibor bergan bo‘lsangiz, topshiriq to‘g‘risidagi bayonotning o‘ng tomonidagi narsalar har doim birinchi o‘rinda turadi.
+
+00:04:18.250 --> 00:04:24.280
+Birinchidan, biz yangi turtle ni yaratamiz va keyin bu turtle ni Jorj ismiga qo‘yamiz.
+

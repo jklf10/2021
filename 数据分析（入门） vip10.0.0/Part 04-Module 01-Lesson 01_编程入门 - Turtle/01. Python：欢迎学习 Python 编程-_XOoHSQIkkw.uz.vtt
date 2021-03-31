@@ -1,0 +1,90 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.760
+Salom, Python dasturlash tili 
+darslariga xush kelibsiz! 
+
+00:00:03.760 --> 00:00:05.455
+Biz bilan birga ekanligingizdan 
+g‘oyat mamnunmiz.
+
+00:00:05.455 --> 00:00:09.970
+Bu kursda siz Python tilida 
+dasturlashni o‘rganasiz.
+
+00:00:09.970 --> 00:00:14.130
+Bugungi kunda dunyoda juda ko‘plab 
+dasturlash tillari mavjud, ammo Python 
+
+00:00:14.130 --> 00:00:18.480
+o‘rganishga oson va ishatishda qulayligi 
+bilan juda mashhur bo‘lgan tildir.
+
+00:00:18.480 --> 00:00:22.545
+Python code can run on any major kind of computer today.
+Python kodi bugungi kunda har qanday 
+asosiy turdagi kompyuterlarda ishlashi mumkin.
+
+00:00:22.545 --> 00:00:27.780
+Windows PC va Mac dan tortib yuqori 
+quvvatli Linux serveri va, hattoki, 
+
+00:00:27.780 --> 00:00:31.110
+sizning telefoningizda ham. Shuningdek, 
+Python deyarli barcha sohalarda -
+
+00:00:31.110 --> 00:00:34.850
+Web development (veb islab chiqarish) va data analysis (ma’lumotlarni tahlil qilish)dan tortib to AI - sun’iy idrokgacha qo‘llaniladi.
+
+00:00:34.850 --> 00:00:39.545
+Bu yerda o‘rganadigan ko‘nikmalaringiz sizning 
+dasturchi bo‘lib yetishishdagi sayohatingizda muhimdir.
+
+00:00:39.545 --> 00:00:44.000
+Ushbu darslarda o‘rganadigan ko‘plab 
+tushunchalar Python bilan cheklanib qolmaydi.
+
+00:00:44.000 --> 00:00:48.650
+Biz dasturlashning eng fundamental 
+qurilish bloklarini, 
+
+00:00:48.650 --> 00:00:51.050
+hamda dasturlashing qaysi sohasiga 
+qiziqshinggizdan qat’iy nazar 
+
+00:00:51.050 --> 00:00:54.040
+barchasiga birdek foydali bo‘ladigan 
+g‘oya va ko‘ikmalarni ko‘rib, o‘rganib chiqamiz.
+
+00:00:54.040 --> 00:00:55.840
+Keyingi bir necha darslarda 
+
+00:00:55.840 --> 00:01:00.050
+siz ishlatadigan dasturlar Turtle Graphics 
+(Toshbaqa Grafikasi) deb nomlangan funksiyadan foydalanadi.
+
+00:01:00.050 --> 00:01:04.490
+Turtle bu ekranda rangli shakllarni chizishi 
+mumkin bo‘lgan hayoliy robotdir.
+
+00:01:04.490 --> 00:01:08.215
+Bu usulda, siz, dasturingiz qanday ishni amalga 
+oshirayotganini tezda aytib berishingiz mumkin.
+
+00:01:08.215 --> 00:01:11.120
+Dasturlashni o‘rganishda Python kabi 
+dasturlash tilining grammatikasini o‘rganish 
+
+00:01:11.120 --> 00:01:14.270
+bir qism xolos. Dasturlash aslida, 
+
+00:01:14.270 --> 00:01:18.145
+ketma-ketliklar, takrorlanishlar, axborot va 
+jarayonlar haqida fikr yuritishni o‘rganishdir. 
+
+00:01:18.145 --> 00:01:23.280
+va Turtle bizga bularni tasavvur 
+qilishimizga yo‘l ochib beradi.
+

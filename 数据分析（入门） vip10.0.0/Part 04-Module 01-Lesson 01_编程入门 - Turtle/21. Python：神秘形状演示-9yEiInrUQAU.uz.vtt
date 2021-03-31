@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.015
+Shunday qilib, mashq bizdan buni qilishni so‘raydi
+
+00:00:03.015 --> 00:00:07.195
+burchak o‘zgaruvchisini uzun ro‘yxati bilan bu yerda joylashni.
+
+00:00:07.195 --> 00:00:12.060
+Keyin biz ushbu ro‘yxatdagi qiymatlardan foydalanadigan sikl yozishimiz kerak edi.
+
+00:00:12.060 --> 00:00:15.669
+Sikl angles dagi angle - burchakdan boshlanadi,
+
+00:00:15.669 --> 00:00:18.790
+va keyin biz sikl ichida bayonlarni yozishimiz kerak edi.
+
+00:00:18.790 --> 00:00:23.310
+Sikl ichida biz turtle ning o‘ng tomonga burilishini xohladik, ammo qanchaga?
+
+00:00:23.310 --> 00:00:28.455
+Har bir qadamda biz ushbu ro‘yxatdan olingan burchakka burilishni xohladik.
+
+00:00:28.455 --> 00:00:31.865
+Loop tomonidan o‘zgartirilgan o‘zgaruvchi mavjud va u buni bajaradi.
+
+00:00:31.865 --> 00:00:34.030
+Bu burchak o‘zgaruvchisi.
+
+00:00:34.030 --> 00:00:38.030
+Shunday qilib, builder deb nomlangan turtle o‘ng burchakka burilib,
+
+00:00:38.030 --> 00:00:41.470
+biz builder.right (angle) .
+
+00:00:41.470 --> 00:00:44.015
+Yodingizda bo‘lsin, har safar sikl ishlaganda,
+
+00:00:44.015 --> 00:00:48.510
+ushbu o‘zgaruvchiga ushbu ro‘yxatdagi element tayinlanadi.
+
+00:00:48.510 --> 00:00:53.120
+Birinchi marta sikl orqali o‘zgaruvchi -90 teng olinadi,
+
+00:00:53.120 --> 00:00:56.150
+sikl orqali ikkinchi o‘tishda nolga tushadi.
+
+00:00:56.150 --> 00:00:57.850
+Shunday qilib, u umuman burilmaydi,
+
+00:00:57.850 --> 00:01:02.855
+keyin yana nol, keyin -90 va hokazo.
+
+00:01:02.855 --> 00:01:06.970
+Burilishdan keyin biz uni 25 oldinga siljishini xohlaymiz.
+
+00:01:06.970 --> 00:01:09.940
+Biz buni qanday amalga oshirishni bilamiz builder.forward(25) .
+
+00:01:09.940 --> 00:01:13.740
+Keling, ushbu kodni ishga tushiramiz va nima bo‘lishini ko‘rib chiqamiz.
+
+00:01:14.300 --> 00:01:16.485
+Hey qarang.
+
+00:01:16.485 --> 00:01:19.405
+Bu uyga o‘xshaydi yoki ehtimol o‘qga.
+
+00:01:19.405 --> 00:01:22.905
+Shunday qilib, ushbu dastur bizga raqamlar haqida qiziqarli narsani namoyish etadi.
+
+00:01:22.905 --> 00:01:26.290
+Ular qanday ishlatilganiga qarab turli xil narsalarni anglatishi mumkin.
+
+00:01:26.290 --> 00:01:28.390
+Ushbu kursda ko‘rgan kodingizda,
+
+00:01:28.390 --> 00:01:32.625
+biz bir nechta turli xil narsalarni anglatadigan raqamlar ro‘yxatidan foydalanganmiz.
+
+00:01:32.625 --> 00:01:35.860
+Jorj va Emi bilan bo‘lgan birinchi misollarda,
+
+00:01:35.860 --> 00:01:38.660
+ro‘yxatdagi haqiqiy raqamlar umuman ishlatilmadi.
+
+00:01:38.660 --> 00:01:42.755
+turtle qancha tomonni tortganini boshqarish uchun biz ro‘yxat uzunligidan foydalanamiz;
+
+00:01:42.755 --> 00:01:44.565
+kvadrat uchun to‘rt tomon,
+
+00:01:44.565 --> 00:01:46.405
+yoki besh pentagon uchun.
+
+00:01:46.405 --> 00:01:47.925
+Dizzy bilan sahifada,
+
+00:01:47.925 --> 00:01:50.620
+turtle ko‘k kvadrat spiral chizgan,
+
+00:01:50.620 --> 00:01:54.605
+biz tomonning uzunligini boshqarish uchun ro‘yxatdagi raqamlardan foydalandik.
+35
+00:01:54,605 ​​-&gt; 00:01:57,295
+Mana, bu uyni qurishda,
+
+00:01:57.295 --> 00:02:01.150
+turtle burilishlarining burchaklarini boshqarish uchun biz raqamlardan foydalanamiz.
+
+00:02:01.150 --> 00:02:05.745
+90 raqamini uzunlik yoki burchak sifatida ishlatish mumkin edi.
+
+00:02:05.745 --> 00:02:08.620
+Agar 90 ni oldinga o‘tkazish usuliga o‘tkazsak,
+
+00:02:08.620 --> 00:02:10.545
+turtle uni uzunlik kabi qabul qiladi.
+
+00:02:10.545 --> 00:02:15.365
+Ammo agar biz uni right yoki left metodlariga o‘tkazsak, turtle uni burchak deb qabul qiladi.
+
+00:02:15.365 --> 00:02:19.655
+Bu kelajakda dasturchi sifatida ko‘p ko‘radigan narsadir.
+
+00:02:19.655 --> 00:02:24.005
+Qiymatlar turi sizga ushbu qiymatning ma’nosi haqida hamma narsani aytmaydi.
+
+00:02:24.005 --> 00:02:27.290
+Dasturchi sifatida 
+
+00:02:27.290 --> 00:02:31.125
+ma’lum bir raqamli qiymat masofani bildiradimi,
+
+00:02:31.125 --> 00:02:36.160
+yoki burchak, yoki hisob, yoki pul miqdori yoki boshqa narsalar bu sizga havola.
+

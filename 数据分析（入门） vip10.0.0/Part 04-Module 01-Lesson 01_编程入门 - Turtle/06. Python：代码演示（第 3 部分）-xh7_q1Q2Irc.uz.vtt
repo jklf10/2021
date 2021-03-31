@@ -1,0 +1,31 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:04.845
+Keyingi qatorda [1, 2,
+
+00:00:04.845 --> 00:00:08.520
+3, 4]: Shuningdek, ushbu chiziqning tugashiga e’tibor bering
+
+00:00:08.520 --> 00:00:12.495
+ikki nuqta va uning ostidaga ikkita qator oldidan bo‘sh joy qoldirilgan.
+
+00:00:12.495 --> 00:00:17.290
+Demak, bu birinchi qator kvadratning to‘rt tomoni haqida nimadir demoqda,
+
+00:00:17.290 --> 00:00:21.460
+va ikkala bo‘sh joy bilan boshlangan qatorning ikkalasi ham turtle ning nomi Emi bilan boshlanadi.
+
+00:00:21.460 --> 00:00:27.020
+Ulardan biri Emi.forward (100), boshqasi Emi.right (90) deydi.
+
+00:00:27.020 --> 00:00:32.190
+Endi orqaga qayting va ushbu dasturni yana ishga tushiring, lekin bu safar turtle ni diqqat bilan tomosha qiling
+
+00:00:32.190 --> 00:00:34.650
+yodda tuting va ushbu kod qatorlarini ko‘ring
+
+00:00:34.650 --> 00:00:37.440
+bu qatorlar turtle ni nima qilqirayotganini ko‘rish uchun.
+

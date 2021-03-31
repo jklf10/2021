@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:01.905
+Shunday qilib, kod yozganda,
+
+00:00:01.905 --> 00:00:03.620
+ba’zida men xato qilaman.
+
+00:00:03.620 --> 00:00:05.430
+Rostini aytsam, bu hammada sodir bo‘ladi,
+
+00:00:05.430 --> 00:00:07.439
+hatto eng tajribali dasturchilar ham.
+
+00:00:07.439 --> 00:00:10.320
+Yaxshiyamki, barcha dasturlash tillari juda ko‘p
+
+00:00:10.320 --> 00:00:13.020
+xatolarimizni aniqlash mexanizmlariga ega,
+
+00:00:13.020 --> 00:00:16.830
+xato xabarlarini namoyish qilish orqali ular haqida bizga ma’lumot beradi.
+
+00:00:16.830 --> 00:00:21.000
+Xato xabarlari nafaqat bizning e’tiborimizni muammoga jalb qiladi,
+
+00:00:21.000 --> 00:00:26.425
+ular ko‘pincha bizga muammoni tashxislash va uni hal qilishda yordam beradigan ma’lumotlarni ham taqdim etadi.
+
+00:00:26.425 --> 00:00:29.580
+Masalan, Python-da xato haqida xabar paydo bo‘ladi
+
+00:00:29.580 --> 00:00:32.695
+sizga qaysi qatorda xato yuz berganligini aytadi,
+
+00:00:32.695 --> 00:00:35.575
+va qanday xato yuz berdi.
+
+00:00:35.575 --> 00:00:38.265
+Siz ism xatosi kabi xabarni ko‘rasiz,
+
+00:00:38.265 --> 00:00:42.460
+yoki sintaksis xatosi va u har doim xato qatori raqami bilan birga keladi.
+
+00:00:42.460 --> 00:00:45.655
+Qator raqamlari har doim ham to‘g‘ri bo‘lavermaydi.
+
+00:00:45.655 --> 00:00:48.065
+Ba’zan ular bir yoki ikkitadan o‘chib qolishadi,
+
+00:00:48.065 --> 00:00:50.660
+lekin ular odatda juda yaxshi tarzda
+
+00:00:50.660 --> 00:00:53.625
+kodingizdagi xatoni qaerdan qidirishni boshlash kerakligini ko‘rsatadi.
+
+00:00:53.625 --> 00:00:58.015
+Keyingi, bizda bir nechta xatolar mavjud bo‘lgan kod parchasi bor.
+
+00:00:58.015 --> 00:00:59.765
+Ushbu kod bilan ishlaganda,
+
+00:00:59.765 --> 00:01:02.480
+xatolarni va chiziq raqamlarini tuzatasiz
+
+00:01:02.480 --> 00:01:06.880
+xato haqidagi xabarlar sizni diqqatni jalb qilish kerak bo‘lgan joyga yo‘naltiradi.
+
