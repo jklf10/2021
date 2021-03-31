@@ -1,0 +1,302 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>远程仓库</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>远程仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 远程仓库.html">02. 远程仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 添加远程仓库.html">03. 添加远程仓库</a>
+    </li>
+    <li class="">
+      <a href="04. 将更改推送到远程仓库.html">04. 将更改推送到远程仓库</a>
+    </li>
+    <li class="">
+      <a href="05. 从远程仓库拉取修改.html">05. 从远程仓库拉取修改</a>
+    </li>
+    <li class="">
+      <a href="06. Pull 与 Fetch.html">06. Pull 与 Fetch</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 远程仓库</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="建立协作">建立协作</h2>
+<p>作为一名独立的开发者，你可能喜欢使用<strong>本地</strong>仓库。在此第一节课中，我们将了解<strong>远程仓库</strong>并与这些远程仓库进行交互。</p>
+<p>假设你有一个朋友，我们称她为 Farrin，有一天你们聚到了一起，你向她展示了你近期的工作成果。她提出她可以向此项目添加一些功能。但你不想把<strong>自己</strong>的电脑给她，让她来进行这些更改，你希望她使用她自己的电脑。另外，你不想在她添加这些功能的时候只是<strong>等待</strong>，而是继续开发项目，然后在她完成时将她的更改合并进来。我们如何做到这一点呢？</p>
+<p>以我的经验，通过来来回回的邮件传达项目的更改，会把后期的维护很快变成一场噩梦。你已经在使用 Git 跟踪项目，那么我们就用它来管理一切事务吧。</p>
+<p>所以，Farrin 会在一个特定的分支开发此项目，她会把所做的一些更改添加到该分支上。当她在她的分支上工作的同时，你也会在你自己的特定分支上继续开发此项目。最后，当你获得 Farrin 的分支时，便可以将这两个分支合并在一起。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>## 💡 始终使用特性分支</p>
+</blockquote>
+<blockquote>
+  <p>记住，在具有描述性命名的<strong>特性分支</strong>上进行所有 commit 非常有用。分支有助于隔离不相关的更改。</p>
+</blockquote>
+<blockquote>
+  <p>所以，当你与其他开发者协作时，请确保创建一个新的分支，并使用描述性的名称说明它所包含的更改。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 - 远程仓库介绍</p></h3>
+  <video controls>
+  <source src="02. L1 - 远程仓库介绍-AnSlYftJnwA.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L1 - 远程仓库介绍-AnSlYftJnwA.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. L1 - 远程仓库介绍-AnSlYftJnwA.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L1 - 远程仓库介绍-AnSlYftJnwA.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. L1 - 远程仓库介绍-AnSlYftJnwA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="什么是远程仓库？">什么是远程仓库？</h2>
+<p>Git 是一个<strong>分布式</strong>版本控制系统，这意味着不存在<strong>一个</strong>主信息仓库。每位开发者使用的都是仓库的一个<strong>副本</strong>。因此，你可以拥有仓库的一个副本（它包含发布的 commit 和版本历史记录），并且你的朋友也可以拥有相同仓库的一个副本。每个仓库包含的信息与其他副本完全相同，没有哪一个是主要的。</p>
+<p>在此之前，你可能一直使用的都只是<strong>本地</strong>仓库。而<strong>远程</strong>仓库与你的本地 Git 仓库一样，只是它位于其他地方。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-02-local-and-remote-repos.png" alt="_本地仓库是位于你本地计算机上的仓库，而远程仓库位于其他地方（例如朋友的电脑、GitHub 等。）_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>本地仓库是位于你本地计算机上的仓库，而远程仓库位于其他地方（例如朋友的电脑、GitHub 等。）</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="访问远程仓库的方式">访问远程仓库的方式</h2>
+<p>访问远程仓库的方式有多个:</p>
+<ul>
+<li>使用 URL</li>
+<li>使用系统文件的路径</li>
+</ul>
+<p>虽然你也可以在自己的文件系统上创建远程仓库，但这种做法极少见。到目前为止，访问远程仓库的最常见方式是通过位于 Web 上的仓库的 URL。</p>
+<p>我们与远程仓库交互和控制远程仓库的方式，是使用 Git 远程命令:</p>
+<pre><code class="bash language-bash">$ git remote</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 - 向远处仓库推送分支</p></h3>
+  <video controls>
+  <source src="02. L1 - 向远处仓库推送分支-414f0ukhOTY.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L1 - 向远处仓库推送分支-414f0ukhOTY.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. L1 - 向远处仓库推送分支-414f0ukhOTY.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L1 - 向远处仓库推送分支-414f0ukhOTY.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. L1 - 向远处仓库推送分支-414f0ukhOTY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你并不限于使用一个远程仓库。你可以按需要添加尽可能多的远程仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-02-multiple-remote-repos.png" alt="_本地仓库可以连接到多个远程仓库。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>本地仓库可以连接到多个远程仓库。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="为何需要多个远程仓库？">为何需要多个远程仓库？</h2>
+<p>你为何要用多个远程仓库？我们稍后再谈这个，但简单来说，如果你跟多个开发者合作，那么你就需要在他们合并到 master 分支之前，在项目中获取<strong>他们</strong>在各自的分支上所做的更改。如果你想在决定实施自己的更改前，测试一下他们的更改，则需要这么做。</p>
+<p>另一个例子是，如果你有一个项目，其代码托管在 Github 上，但是又通过 Git 部署到 Heroku 平台上。你需要一个远端 <code>master</code> 用于管理 Github 上的代码，另一个远端 <code>depolyment</code> 用于代码部署。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="添加远程仓库">添加远程仓库</h2>
+<p>现在我们已经了解了远程仓库的用途，我们来将一个远程仓库添加到我们自己的本地仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 添加远程仓库.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 远程仓库')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

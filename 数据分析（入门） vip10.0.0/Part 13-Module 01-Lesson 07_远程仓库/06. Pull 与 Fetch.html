@@ -1,0 +1,241 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pull 与 Fetch</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>远程仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 远程仓库.html">02. 远程仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 添加远程仓库.html">03. 添加远程仓库</a>
+    </li>
+    <li class="">
+      <a href="04. 将更改推送到远程仓库.html">04. 将更改推送到远程仓库</a>
+    </li>
+    <li class="">
+      <a href="05. 从远程仓库拉取修改.html">05. 从远程仓库拉取修改</a>
+    </li>
+    <li class="">
+      <a href="06. Pull 与 Fetch.html">06. Pull 与 Fetch</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Pull 与 Fetch</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Pull 与 Fetch</p></h3>
+  <video controls>
+  <source src="06. Pull 与 Fetch-kxXdk2HcOBo.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="06. Pull 与 Fetch-kxXdk2HcOBo.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="06. Pull 与 Fetch-kxXdk2HcOBo.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="06. Pull 与 Fetch-kxXdk2HcOBo.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="06. Pull 与 Fetch-kxXdk2HcOBo.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>git fetch 用于从远程仓库分支检索 commit ，但<strong>不会</strong>在收到这些 commit 之后，自动将本地分支与远程跟踪分支合并。</p>
+<p>上面的段落有点密集，你可以多读几遍。</p>
+<p>你需要向 <code>git fetch</code> 提供和 <code>git pull</code> 完全相同的信息，也就是说要提供你想获取的远程仓库的简写名及其分支：</p>
+<pre><code class="bash language-bash">$ git fetch origin master</code></pre>
+<p>运行 <code>git fetch</code> 后，会发生以下活动：</p>
+<ul>
+<li>远程分支上的 commit 会复制到本地仓库</li>
+<li>本地跟踪分支（例如，<code>origin/master</code>）移到指向最新的 commit </li>
+</ul>
+<p>需要注意的一点是，本地分支完全不会被改变。</p>
+<p>你可以将 <code>git fetch</code> 想象成 <code>git pull</code> 它的一半操作，而 <code>git pull</code> 的另一半是合并。</p>
+<p>使用 <code>git fetch</code> 而不是 <code>git pull</code> 的一个主要情形是当你的远程分支和本地分支都拥有对方所没有的更改时。在这种情况下，你要获取远程更改，将它们存储到本地分支中，然后手动执行合并。最后，你可以将新的合并 commit 推送会远程仓库。</p>
+<p>我们来看看。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 - 获取、合并和推送</p></h3>
+  <video controls>
+  <source src="06. L1 - 获取、合并和推送-jwyQUfE1Eqw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="06. L1 - 获取、合并和推送-jwyQUfE1Eqw.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="06. L1 - 获取、合并和推送-jwyQUfE1Eqw.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="06. L1 - 获取、合并和推送-jwyQUfE1Eqw.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="06. L1 - 获取、合并和推送-jwyQUfE1Eqw.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p>你可以将 <code>git pull</code> 命令想象成执行两步操作：</p>
+<ol>
+<li>获取远程更改（这会将 commit 添加到远程仓库，并移动跟踪分支指向它们）</li>
+</ol>
+<ul>
+<li>将本地分支与跟踪分支合并</li>
+</ul>
+<p><code>git fetch</code> 命令只执行上面的第一步。它只检索 commit 和移动跟踪分支。它<em>不会</em>将本地分支与跟踪分支合并。提供给 <code>git pull</code> 的同样信息也要传递给 <code>git fetch</code>：</p>
+<ul>
+<li>远程仓库的简写名</li>
+<li>包含要取回的 commit 的分支</li>
+</ul>
+<pre><code class="bash language-bash">$ git fetch origin master</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. 总结.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Pull 与 Fetch')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

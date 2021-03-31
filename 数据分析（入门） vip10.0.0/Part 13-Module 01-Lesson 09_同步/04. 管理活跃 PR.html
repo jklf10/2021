@@ -1,0 +1,239 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>管理活跃 PR</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>同步</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 创建 Pull Request.html">02. 创建 Pull Request</a>
+    </li>
+    <li class="">
+      <a href="03. 与源项目保持同步.html">03. 与源项目保持同步</a>
+    </li>
+    <li class="">
+      <a href="04. 管理活跃 PR.html">04. 管理活跃 PR</a>
+    </li>
+    <li class="">
+      <a href="05. 压制 commit.html">05. 压制 commit</a>
+    </li>
+    <li class="">
+      <a href="06. 总结.html">06. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. 管理活跃 PR</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>项目维护者可能不会立即决定接受你的更改。他们可能会要求你对代码做一些额外更改，才会接受你的请求并合并你的更改。他们很可能会通过 Pull Request 页面的 Conversation（对话）传达他们想要的更改。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l3-04-pull-request-comment.png" alt="_项目维护者要求对 Pull Request 进行一些更改。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>项目维护者要求对 Pull Request 进行一些更改。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>可以看到源仓库的所有者进行了评论，并要求我们将 commit 结合在一起。</p>
+<p>我越来越喜欢 Git 命令行工具和 GitHub 界面的一个原因在于，它们会提供下一步操作的建议，这非常有帮助。在评论区底部附近，GitHub 有一个建议，告诉我们如何添加更多的 commit；我们需要将它们添加到同一个分支并推送到我的分支：</p>
+<blockquote>
+  <p>Add more commits by pushing to the <strong>include-richards-destinations</strong> branch on <strong>richardkalehoff/course-collaboration-travel-plan</strong>.</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在提交 Pull Request 时，记住你是要其他开发者将<strong>你的</strong>代码更改添加到他们的项目。如果他们要求你对你的 Pull Request 做一些小的（甚至是大的！）更改，这并不代表他们拒绝你的工作！只是他们希望以特定方式将你的代码添加到他们的项目中。</p>
+<p>你应按照 CONTRIBUTING.md 文件列出项目维护者所需的所有信息，所以请遵照其中的信息。但有时项目维护者可能会要求你做一些其他事情。</p>
+<p>那你该怎么做呢？如果你希望你的 Pull Request 被接受，那就执行要求的更改！记住，GitHub 中的选项卡称为"Conversation（对话）"选项卡。所以随时与项目维护者进行沟通，以明确他们希望你做什么。</p>
+<p>你也应感谢他们花时间查看你的 Pull Request。大多数开源项目的开发者都是在免费做这些事情，所以记住：</p>
+<ul>
+<li>善待他人 - 项目维护者只是像你一样的普通人</li>
+<li>耐心 - 他们会尽快回复</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Lam 要求我将我的更改结合在一起，之后她才会合并我的 Pull Request。将 commit结合在一起是一个称为压制的过程。我们来看看怎么做！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p>就像看起来那么简单，主动发起 commit 请求主要在于沟通！</p>
+<p>如果项目维护者要求更改 Pull Request，则：</p>
+<ul>
+<li>在你的 Pull Request 所基于的本地仓库的同一分支上添加一些必要 commit</li>
+<li>将该分支推送到<strong>你的</strong>源仓库 fork 副本</li>
+</ul>
+<p>这些 commit 最终将显示在 Pull Request 页面上。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. 压制 commit.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 管理活跃 PR')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

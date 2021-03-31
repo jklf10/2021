@@ -1,0 +1,604 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>重置 commit</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>回滚</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 更改最后一个 commit.html">02. 更改最后一个 commit</a>
+    </li>
+    <li class="">
+      <a href="03. 还原 commit.html">03. 还原 commit</a>
+    </li>
+    <li class="">
+      <a href="04. 重置 commit.html">04. 重置 commit</a>
+    </li>
+    <li class="">
+      <a href="05. 总结.html">05. 总结</a>
+    </li>
+    <li class="">
+      <a href="06. 课程小结.html">06. 课程小结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. 重置 commit</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="重置与还原">重置与还原</h2>
+<p>初看，<strong>重置（reset）</strong> 似乎和 <strong>还原（revert）</strong> 相似，但它们实际上差别很大。还原会创建一个新的 commit，并还原或撤消之前的 commit。但是重置会清除 commit！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-重置很危险-⚠️">⚠️ 重置很危险 ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>一定要谨慎使用 git 的重置功能。这是少数几个可以从仓库中清除 commit 的命令。如果某个 commit 不再存在于仓库中，它所包含的内容也会消失。</p>
+</blockquote>
+<blockquote>
+  <p>为了减轻你的压力，澄清下，git 会在完全清除任何内容之前，持续跟踪大约 30 天。要调用这些内容，你需要使用 <code>git reflog</code> 命令。请参阅以下链接以了解详情：</p>
+</blockquote>
+<blockquote>
+  <ul>
+  <li><a href="https://git-scm.com/docs/git-reflog" rel="noopener noreferrer" target="_blank">git-reflog (英)</a></li>
+  <li><a href="https://www.atlassian.com/git/tutorials/rewriting-history" rel="noopener noreferrer" target="_blank">重写历史记录 (英)</a></li>
+  <li><a href="http://gitready.com/intermediate/2009/02/09/reflog-your-safety-net.html" rel="noopener noreferrer" target="_blank">reflog，你的安全屏障 (英)</a></li>
+  </ul>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="相关-commit-引用">相关 commit 引用</h2>
+<p>你已经知道可以使用 SHA、标签、分支和特殊的 <code>HEAD</code> 指针引用 commit。有时候这些并不足够，你可能需要引用相对于另一个 commit 的 commit。例如，有时候你需要告诉 git 调用当前 commit 的前一个 commit，或者是前两个 commit。我们可以使用特殊的“祖先引用”字符来告诉 git 这些相对引用。这些字符为：</p>
+<ul>
+<li><code>^</code> – 表示父 commit</li>
+<li><code>~</code> – 表示第一个父 commit</li>
+</ul>
+<p>我们可以通过以下方式引用之前的 commit：</p>
+<ul>
+<li>父 commit – 以下内容表示当前 commit 的父 commit</li>
+<li>HEAD^</li>
+<li>HEAD~</li>
+<li>HEAD~1</li>
+<li>祖父 commit – 以下内容表示当前 commit 的祖父 commit</li>
+<li>HEAD^^</li>
+<li>HEAD~2</li>
+<li>曾祖父 commit – 以下内容表示当前 commit 的曾祖父 commit</li>
+<li>HEAD^^^</li>
+<li>HEAD~3</li>
+</ul>
+<p><code>^</code> 和 <code>~</code> 的区别主要体现在通过合并而创建的 commit 中。合并 commit 具有两个父级。对于合并 commit，<code>^</code> 引用用来表示第一个父 commit，而 <code>^2</code> 表示第二个父 commit。第一个父 commit 是当你运行 <code>git merge</code> 时所处的分支，而第二个父 commit 是被合并的分支。</p>
+<p>我们来看一个示例，这样更好理解。这是我的 <code>git log</code> 当前的显示结果：</p>
+<pre><code class="bash language-bash">* 9ec05ca (HEAD -&gt; master) Revert "Set page heading to "Quests &amp; Crusades""
+* db7e87a Set page heading to "Quests &amp; Crusades"
+*   796ddb0 Merge branch 'heading-update'
+|\  
+| * 4c9749e (heading-update) Set page heading to "Crusade"
+* | 0c5975a Set page heading to "Quest"
+|/  
+*   1a56a81 Merge branch 'sidebar'
+|\  
+| * f69811c (sidebar) Update sidebar with favorite movie
+| * e6c65a6 Add new sidebar content
+* | e014d91 (footer) Add links to social media
+* | 209752a Improve site heading for SEO
+* | 3772ab1 Set background color for page
+|/  
+* 5bfe5e7 Add starting HTML structure
+* 6fa5f34 Add .gitignore file
+* a879849 Add header to blog
+* 94de470 Initial commit</code></pre>
+<p>我们来看看如何引用一些之前的 commit。因为 <code>HEAD</code> 指向 <code>9ec05ca</code> commit：</p>
+<ul>
+<li><code>HEAD^</code> 是 <code>db7e87a</code> commit</li>
+<li><code>HEAD~1</code> 同样是 <code>db7e87a</code> commit</li>
+<li><code>HEAD^^</code> 是 <code>796ddb0</code> commit</li>
+<li><code>HEAD~2</code> 同样是 <code>796ddb0</code> commit</li>
+<li><code>HEAD^^^</code> 是 <code>0c5975a</code> commit</li>
+<li><code>HEAD~3</code> 同样是 <code>0c5975a</code> commit</li>
+<li><code>HEAD^^^2</code> 是 <code>4c9749e</code> commit（这是曾祖父的 (<code>HEAD^^</code>) 第二个父 commit (<code>^2</code>))</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="哪一个-commit？">哪一个 commit？</h2>
+<p>请使用此仓库回答以下练习问题：</p>
+<pre><code class="bash language-bash">* 9ec05ca (HEAD -&gt; master) Revert "Set page heading to "Quests &amp; Crusades""
+* db7e87a Set page heading to "Quests &amp; Crusades"
+*   796ddb0 Merge branch 'heading-update'
+|\  
+| * 4c9749e (heading-update) Set page heading to "Crusade"
+* | 0c5975a Set page heading to "Quest"
+|/  
+*   1a56a81 Merge branch 'sidebar'
+|\  
+| * f69811c (sidebar) Update sidebar with favorite movie
+| * e6c65a6 Add new sidebar content
+* | e014d91 (footer) Add links to social media
+* | 209752a Improve site heading for SEO
+* | 3772ab1 Set background color for page
+|/  
+* 5bfe5e7 Add starting HTML structure
+* 6fa5f34 Add .gitignore file
+* a879849 Add header to blog
+* 94de470 Initial commit</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>哪一个 commit？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p><code>HEAD~6</code> 引用的是哪一个 commit？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487200543058" name="338941" id="a1487200543058">
+        <label for="a1487200543058"><p>4c9749e</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487200564347" name="338941" id="a1487200564347">
+        <label for="a1487200564347"><p>0c5975a</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487200565134" name="338941" id="a1487200565134">
+        <label for="a1487200565134"><p>1a56a81</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487200566410" name="338941" id="a1487200566410">
+        <label for="a1487200566410"><p>f69811c</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487200566949" name="338941" id="a1487200566949">
+        <label for="a1487200566949"><p>e014d91</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487200577899" name="338941" id="a1487200577899">
+        <label for="a1487200577899"><p>209752a</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    209752a
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>上道题答的不错，再试试这道题吧！对于相同的仓库，<code>HEAD~4^2</code> 引用的是哪个 commit？</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-reset-命令"><code>git reset</code> 命令</h2>
+<p><code>git reset</code> 命令用来重置（清除）commit：</p>
+<pre><code class="bash language-bash">$ git reset &lt;reference-to-commit&gt;</code></pre>
+<p>可以用来：</p>
+<ul>
+<li>将 HEAD 和当前分支指针移到目标 commit</li>
+<li>清除 commit</li>
+<li>将 commit 的更改移到暂存区</li>
+<li>取消暂存 commit 的更改</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-reset-的选项">git reset 的选项</h2>
+<p>git 根据所使用选项来判断是清除、暂存之前 commit 的更改，还是取消暂存之前 commit 的更改。这些选项包括：</p>
+<ul>
+<li><code>--mixed</code></li>
+<li><code>--soft</code></li>
+<li><code>--hard</code></li>
+</ul>
+<p>通过动画的形式更容易理解这些选项的工作方式。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L6 17 Soft Vs Medium Vs Hard Walkthrough</p></h3>
+  <video controls>
+  <source src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L6 17 Soft Vs Medium Vs Hard Walkthrough-UN7ki2G2yKc.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L6 17 Soft Vs Medium Vs Hard Walkthrough-UN7ki2G2yKc.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L6 17 Soft Vs Medium Vs Hard Walkthrough-UN7ki2G2yKc.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L6 17 Soft Vs Medium Vs Hard Walkthrough-UN7ki2G2yKc.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L6 17 Soft Vs Medium Vs Hard Walkthrough-UN7ki2G2yKc.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-备份分支-💡">💡 备份分支 💡</h2>
+</blockquote>
+<blockquote>
+  <p>注意，使用 <code>git reset</code> 命令将清除当前分支上的 commit。因此，如果你想跟着操作接下来出现的所有重置操作，需要在当前 commit 上创建一个分支，以便用作备份。</p>
+</blockquote>
+<blockquote>
+  <p>在进行任何重置操作之前，我通常会在最近的 commit 上创建一个 <code>backup</code> 分支，因此如果出现错误，我可以返回这些 commit：</p>
+</blockquote>
+<blockquote>
+<pre><code class="bash language-bash">$ git branch backup</code></pre>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="reset-的---mixed-选项">reset 的 <code>--mixed</code> 选项</h2>
+<p>我们来看看每个选项。</p>
+<pre><code class="bash language-bash">* 9ec05ca (HEAD -&gt; master) Revert "Set page heading to "Quests &amp; Crusades""
+* db7e87a Set page heading to "Quests &amp; Crusades"
+* 796ddb0 Merge branch 'heading-update'</code></pre>
+<p>使用上述示例仓库，其中 <code>HEAD</code> 指向 <code>9ec05ca</code> 上的 <code>master</code>，运行 <code>git reset --mixed HEAD^</code> 会把 commit <code>9ec05ca</code> 中做出的更改移至工作目录中。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l6-git-revert-mixed.png" alt="_终端显示了使用 &#x60;--mixed&#x60; 选项进行重置后的结果。更改未暂存。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了使用 <code>--mixed</code> 选项进行重置后的结果。更改未暂存。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-回到正常状况💡">💡 回到正常状况💡</h2>
+</blockquote>
+<blockquote>
+  <p>如果你在重置任何内容前创建了 <code>backup</code> 分支，那么你可以轻松地让 <code>master</code> 分支指向 <code>backup</code> 分支所指向的同一 commit。你只需：</p>
+  <ol>
+  <li>从工作目录中删除未 commit 的更改</li>
+  </ol>
+  <ul>
+  <li>将 <code>backup</code> 合并到 <code>master</code>（这将导致快进合并并使 <code>master</code> 向上移到和 <code>backup</code> 一样的点）</li>
+  </ul>
+</blockquote>
+<blockquote>
+<pre><code class="bash language-bash">$ git checkout -- index.html
+$ git merge backup</code></pre>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="reset-的---soft-选项">reset 的 <code>--soft</code> 选项</h2>
+<p>我们使用相同的几个 commit 并看看 <code>--soft</code> 选项的工作方式：</p>
+<pre><code class="bash language-bash">* 9ec05ca (HEAD -&gt; master) Revert "Set page heading to "Quests &amp; Crusades""
+* db7e87a Set page heading to "Quests &amp; Crusades"
+* 796ddb0 Merge branch 'heading-update'</code></pre>
+<p>运行 <code>git reset --soft HEAD^</code> 会把 commit <code>9ec05ca</code> 中做出的更改直接移至暂存区。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l6-git-revert-soft.png" alt="_终端显示了使用 &#x60;--soft&#x60; 选项进行重置后的结果。更改被移到暂存区。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了使用 <code>--soft</code> 选项进行重置后的结果。更改被移到暂存区。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="reset-的---hard-选项">reset 的 <code>--hard</code> 选项</h2>
+<p>最后再看看 <code>--hard</code> 选项（当然并非最不重要选项）：</p>
+<pre><code class="bash language-bash">* 9ec05ca (HEAD -&gt; master) Revert "Set page heading to "Quests &amp; Crusades""
+* db7e87a Set page heading to "Quests &amp; Crusades"
+* 796ddb0 Merge branch 'heading-update'</code></pre>
+<p>运行 <code>git reset --hard HEAD^</code> 将清除 commit <code>9ec05ca</code> 中做出的更改。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l6-git-revert-hard.png" alt="_终端显示了使用 &#x60;--hard&#x60; 选项进行重置后的结果。更改被清除。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了使用 <code>--hard</code> 选项进行重置后的结果。更改被清除。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>现在该你了！</p>
+<p>对于以下仓库：</p>
+<pre><code class="bash language-bash">* e014d91 (HEAD -&gt; master, footer) Add links to social media
+* 209752a Improve site heading for SEO
+* 3772ab1 Set background color for page
+* 5bfe5e7 Add starting HTML structure
+* 6fa5f34 Add .gitignore file
+* a879849 Add header to blog
+* 94de470 Initial commit</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>内容在哪？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>如果运行 <code>git reset --hard HEAD~3</code>，<code>3772ab1</code> commit 中的更改会怎样？更改会被移入暂存区？工作目录？还是完全被清除呢？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487200983003" name="338955" id="a1487200983003">
+        <label for="a1487200983003"><p>暂存区</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487201004561" name="338955" id="a1487201004561">
+        <label for="a1487201004561"><p>工作目录</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487201005053" name="338955" id="a1487201005053">
+        <label for="a1487201005053"><p>被清除</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    被清除
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>内容在哪 2？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>如果运行 <code>git reset --soft HEAD^^</code>，<code>209752a</code> commit 中的更改将怎样？更改会进入暂存区、工作目录或完全被清除吗？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487201103314" name="338956" id="a1487201103314">
+        <label for="a1487201103314"><p>暂存区</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487201111082" name="338956" id="a1487201111082">
+        <label for="a1487201111082"><p>工作目录</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487201111663" name="338956" id="a1487201111663">
+        <label for="a1487201111663"><p>被清除</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+     暂存区
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="reset-小结">reset 小结</h2>
+<p>总结下，<code>git reset</code> 命令被用来清除 commit：</p>
+<pre><code class="bash language-bash">$ git reset &lt;reference-to-commit&gt;</code></pre>
+<p>它可以用来：</p>
+<ul>
+<li>将 HEAD 和当前分支指针移到引用的 commit</li>
+<li>使用 <code>--hard</code> 选项清除 commit</li>
+<li>使用 <code>--soft</code> 选项将 commit 的更改移至暂存区</li>
+<li>使用 <code>--mixed</code> 选项取消暂存已被 commit 的更改</li>
+</ul>
+<p>我们通常会用到祖先引用来指代之前的 commit。祖先引用包含：</p>
+<ul>
+<li><code>^</code> – 表示父 commit</li>
+<li><code>~</code> – 表示第一个父 commit</li>
+</ul>
+<h3 id="进一步研究">进一步研究</h3>
+<ul>
+<li>来自 Git 文档的 <a href="https://git-scm.com/docs/git-reset" rel="noopener noreferrer" target="_blank">git-reset (英)</a> </li>
+<li>来自 Git Blog 的 <a href="https://git-scm.com/blog" rel="noopener noreferrer" target="_blank">Reset Demystified (英)</a> </li>
+<li>来自 Git Book 的 <em>祖先引用</em> <a href="https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#Ancestry-References" rel="noopener noreferrer" target="_blank">英</a>|<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%80%89%E6%8B%A9%E4%BF%AE%E8%AE%A2%E7%89%88%E6%9C%AC" rel="noopener noreferrer" target="_blank">中</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. 总结.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 重置 commit')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>从远程仓库拉取修改</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>远程仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 远程仓库.html">02. 远程仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 添加远程仓库.html">03. 添加远程仓库</a>
+    </li>
+    <li class="">
+      <a href="04. 将更改推送到远程仓库.html">04. 将更改推送到远程仓库</a>
+    </li>
+    <li class="">
+      <a href="05. 从远程仓库拉取修改.html">05. 从远程仓库拉取修改</a>
+    </li>
+    <li class="">
+      <a href="06. Pull 与 Fetch.html">06. Pull 与 Fetch</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. 从远程仓库拉取修改</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="从远程仓库拉取修改">从远程仓库拉取修改</h2>
+<p>假如说我们处于这样一种情况：<strong>远程</strong>仓库上存在一些 commit ，但我们的<strong>本地</strong>仓库上没有这些 commit 。这种情况的原因有多个：你参与了团队协作，有一名同事将新更改推送到了远程仓库。或者，你在不同的电脑上开展同一个项目 -- 例如，你有一个办公电脑和一个私人电脑，你在两个电脑上都向仓库做了贡献。如果你从办公电脑上向远程仓库推送更改，则个人电脑上的本地仓库就不会反映这些更改。我们如何将远程仓库上的更改同步到本地仓库呢？这正是我们接下来要看的。我们先来看看拉取远程仓库修改的方式，然后我们将实际操作！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 - Git 拉取理论</p></h3>
+  <video controls>
+  <source src="05. L1 - Git 拉取理论-MjNU2LTDVAA.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L1 - Git 拉取理论-MjNU2LTDVAA.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. L1 - Git 拉取理论-MjNU2LTDVAA.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L1 - Git 拉取理论-MjNU2LTDVAA.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. L1 - Git 拉取理论-MjNU2LTDVAA.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>虽然我已经说过了，但我要再强调一次。<strong>本地</strong>仓库中出现的分支实际上在跟踪<strong>远程</strong>仓库中的一个分支（例如，本地仓库中的 <code>origin/master</code> 称为<strong>跟踪分支</strong>，因为它在跟踪远程仓库上简写名为 "origin" 的 <code>master</code> 分支）。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="添加远程更改">添加远程更改</h2>
+<p>由于我们的远程仓库中没有任何 commit ，且我们未与任何人协作，我们模拟协作环境。并通过 GitHub 的 Web 界面手动添加一些 commit 。</p>
+<p>下面是一个演练视频。使用下面的代码片段跟着视频一起操作。</p>
+<h3 id="新的-css-内容">新的 CSS 内容</h3>
+<p>添加以下新规则集：</p>
+<pre><code class="css language-css">.destination:hover h2 {
+    transform: rotate(0deg);
+}</code></pre>
+<p>将 <code>transition: transform 0.5s;</code> 添加到 <code>h2</code> 规则集，现在它应该是：</p>
+<pre><code class="css language-css">h2 {
+    margin: 0;
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
+    text-shadow: 0 0 5px #01579b;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 - 在 GitHub 上添加 commit</p></h3>
+  <video controls>
+  <source src="05. L1 - 在 GitHub 上添加 commit-UBYxcTg6VLU.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="05. L1 - 在 GitHub 上添加 commit-UBYxcTg6VLU.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="05. L1 - 在 GitHub 上添加 commit-UBYxcTg6VLU.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="05. L1 - 在 GitHub 上添加 commit-UBYxcTg6VLU.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="05. L1 - 在 GitHub 上添加 commit-UBYxcTg6VLU.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-首选在本地工作-⚠️">⚠️ 首选在本地工作 ⚠️</h2>
+</blockquote>
+<blockquote>
+  <p>由于 GitHub 有一个 Web 界面，它允许你通过其界面手动添加 commit 。虽然你<strong>可以</strong>这么做，并不代表你<strong>应该</strong>这么做。我演示了用这种方式进行更改，是为了模拟远程仓库上的 commit ，而不是本地仓库上的 commit 。但是我建议你应该始终在本地开展项目工作，然后将更改推送到远程仓库。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="取回远程-commit">取回远程 commit</h2>
+<p>现在我们比较本地仓库与远程仓库。我们的本地仓库中只有<strong>三个</strong> commit :</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-04-commit-count-local.png" alt="_我们的本地仓库中只有三个 commit。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>我们的本地仓库中只有三个 commit。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>但远程仓库中实际有<strong>四个</strong> commit：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-04-commit-count-remote.png" alt="_GitHub 上的远程仓库中有四个 commit 。其中三个来自我们的本地仓库，一个是我们在 GitHub 上手动添加的。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>GitHub 上的远程仓库中有四个 commit 。其中三个来自我们的本地仓库，一个是我们在 GitHub 上手动添加的。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="使用-git-pull-拉取更改">使用 <code>git pull</code> 拉取更改</h2>
+<p>本地 commit 在 <code>5a010d1</code> 处结束，而远程仓库有额外两个 commit  -  commit  <code>4b81b2a</code> 和 <code>b847434</code>。</p>
+<p>另外，注意在我们的<strong>本地</strong>仓库中，当我们使用 <code>git log</code> 命令时，<code>origin/master</code> 分支仍然指向 commit <code>5a010d1</code>。</p>
+<p>记住，<code>origin/master</code> 分支不实时映射远程仓库 master 分支所在的位置。如果远程仓库的 <code>master</code> 分支移动，本地 <code>origin/master</code> 分支仍会待在原地。要更新此分支，我们需要同步两个仓库。</p>
+<p><code>git push</code> 会同步<strong>远程</strong>仓库与<strong>本地</strong>仓库。要执行相反操作（将<strong>本地仓库</strong>与<strong>远程仓库</strong>同步），我们需要使用 <code>git pull</code>。<code>git pull</code> 的格式与 <code>git push</code> 的非常相似 - 提供远程仓库的简写名，以及你要拉取 commit 的分支名称。</p>
+<pre><code class="bash language-bash">$ git pull origin master</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-04-git-pull.png" alt="_运行 &#x60;git pull origin master&#x60; 会检索 &#x60;origin&#x60; 远程仓库 &#x60;master&#x60; 分支中的 commit 。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>运行 <code>git pull origin master</code> 会检索 <code>origin</code> 远程仓库 <code>master</code> 分支中的 commit 。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>运行此代码时需要注意几点：</p>
+<ul>
+<li>格式与 <code>git push</code> 非常相似 - 要对项目计数、压缩和打包</li>
+<li>它有一个短语 "fast-forward"，这意味着 Git 进行了快进合并（我们一会儿深入研究）<ul>
+<li>它显示类似于 <code>git log --stat</code> 的信息，其中显示更改的文件以及添加或删除了多少行</li></ul></li>
+</ul>
+<p>如果你不想自动将本地分支与跟踪分支合并，则不应使用 <code>git pull</code>，而是使用另一个命令 <code>git fetch</code>。当远程仓库包含你没有的 commit ，<strong>但</strong>本地仓库也包含远程仓库所没有的 commit 时，你可能想这么做。</p>
+<p>我们来看看 <code>git fetch</code>。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p>如果你想在本地仓库中包含远程仓库中的更改，那么你要<em>拉取</em>这些更改。要使用 Git 这样做，你需要使用 <code>git pull</code> 命令。你告诉 Git 你想获取修改的远程仓库的简写名以及包含你需要的更改的分支：</p>
+<pre><code class="bash language-bash">$ git pull origin master</code></pre>
+<p>在运行 <code>git pull</code> 时，会发生以下活动：</p>
+<ul>
+<li>远程分支上的 commit 会被复制到本地仓库</li>
+<li>本地跟踪分支（<code>origin/master</code>）移到指向最新的 commit </li>
+<li>本地跟踪分支（<code>origin/master</code>）合并到本地分支（<code>master</code>）</li>
+</ul>
+<p>另外，可以在 GitHub 上手动添加更改（但不建议这样做，所以别这样做）。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Pull 与 Fetch.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. 从远程仓库拉取修改')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

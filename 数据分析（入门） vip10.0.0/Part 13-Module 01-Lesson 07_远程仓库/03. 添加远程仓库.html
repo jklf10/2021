@@ -1,0 +1,803 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>添加远程仓库</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>远程仓库</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 远程仓库.html">02. 远程仓库</a>
+    </li>
+    <li class="">
+      <a href="03. 添加远程仓库.html">03. 添加远程仓库</a>
+    </li>
+    <li class="">
+      <a href="04. 将更改推送到远程仓库.html">04. 将更改推送到远程仓库</a>
+    </li>
+    <li class="">
+      <a href="05. 从远程仓库拉取修改.html">05. 从远程仓库拉取修改</a>
+    </li>
+    <li class="">
+      <a href="06. Pull 与 Fetch.html">06. Pull 与 Fetch</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. 添加远程仓库</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-remote-命令">git remote 命令</h2>
+<p><code>git remote</code> 命令可以让你管理远程仓库和与之交互。</p>
+<pre><code class="bash language-bash">$ git remote</code></pre>
+<p>试着对你尚未与任何人分享过的本地仓库运行此命令。你会得到什么结果？</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-git-remote-no-remote.png" alt="_终端在运行 &#x60;git remote&#x60; 命令。未显示任何输出，因为该仓库尚未连接到远程仓库。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端在运行 <code>git remote</code> 命令。未显示任何输出，因为该仓库尚未连接到远程仓库。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>如果你尚未配置远程仓库，那么此名称将不会显示任何内容。需要注意的是在你<strong>克隆</strong>仓库后的情况。如果你克隆了，那么你将自动获得一个远程仓库，因为它是从你所提供的 URL 上的仓库克隆来的。我们来看一个被克隆的仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-git-remote-shortname.png" alt="_终端正在运行 &#x60;git remote&#x60; 命令。它输出了单词 &#x60;origin&#x60;。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端正在运行 <code>git remote</code> 命令。它输出了单词 <code>origin</code>。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我所克隆的项目是 Google 的一个名为 <a href="https://github.com/GoogleChrome/lighthouse" rel="noopener noreferrer" target="_blank">Lighthouse</a> 的项目。项目克隆自 GitHub，用于提供审查、性能度量和渐进式网页应用最佳实践。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="远程仓库的简写名（shortname）">远程仓库的简写名（Shortname）</h3>
+<p><code>git remote</code> 的输出只是一个单词 <code>origin</code>。这挺奇怪的。这里的 "origin" 一词称为"简写名"。简写名只是远程仓库所在位置的简略表示。简写名仅局部用于<strong>当前</strong>仓库（如在你的<strong>本地</strong>仓库中）。"origin" 一词是指代主远程仓库的专用名称。你也可以将它重命名为别的东西，但通常会被命名为 "origin"。</p>
+<p>我们为何关心引用远程仓库路径的简便性？这是因为，你很快会发现我们将在很多命令中，用到远程仓库的路径。而这时，只使用一个名称就比使用远程仓库的完整路径简单多了。</p>
+<p>举个例子，下列哪段描述更好理解：</p>
+<ul>
+<li><p>向北行驶大约四分之一英里，然后左转，沿那条路直行约 5 英里，然后右转，直行约 300 英尺，走过蓝色邮箱后，左转至杰克街，前进 50 英尺后再次左转至欧文路，这条路弯弯曲曲，但你最终会到达芬兰巷，然后左手边第三个建筑就是</p></li>
+<li><p>外婆家</p></li>
+</ul>
+<p>。可以看出，直接用简写名“外婆家”比写出从当前位置到那里的整个路线要简单得多。😉</p>
+<p>如果你想查看远程仓库的完整路径，只需使用 <code>-v</code> 选项即可：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-git-remote-from-clone.png" alt="
+_终端在运行 &#x60;git remote&#x60; 命令。输出包含简写名及其所指的完整 URL。_
+" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端在运行 <code>git remote</code> 命令。输出包含简写名及其所指的完整 URL。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在这里你可以看到，当使用 <code>origin</code> 一词时，实际上使用的是路径 <code>https://github.com/GoogleChrome/lighthouse.git</code>。这看起来可能有点奇怪：现在有<strong>两个</strong>远程仓库，都是 "origin" 且链接到相同的 URL。唯一的区别在结尾处：<br />
+<code>(fetch)</code> 部分和 <code>(push)</code> 部分</p>
+<p>我们将在后面的部分详细说明 <code>fetch</code> 和 <code>push</code>。</p>
+<p>我们现在讲得差不多了。下面我们就来进行一些实际操作，创建一个简单的项目并将其推送到远程仓库！ </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="创建一个简单的项目">创建一个简单的项目</h2>
+<p>在此课程中，我们需要一个使用示例项目以测试远程仓库的使用，向远程仓库推送更新，以及从远程仓库获取更改等操作。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>如果你没有想要使用的项目，则可以跟着我操作！</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1492638392333" name="339148" id="a1492638392333">
+      <label for="a1492638392333"><p>为你的项目创建一个名为 <code>my-travel-plans</code> 的新目录</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492638431615" name="339148" id="a1492638431615">
+      <label for="a1492638431615"><p>使用 <code>git init</code> 将 <code>my-travel-plans</code> 目录转换成一个 Git 仓库</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492638437655" name="339148" id="a1492638437655">
+      <label for="a1492638437655"><p>创建一个 <code>README.md</code> 文件</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492638447432" name="339148" id="a1492638447432">
+      <label for="a1492638447432"><p>创建 <code>index.html</code></p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492638452460" name="339148" id="a1492638452460">
+      <label for="a1492638452460"><p>创建 <code>app.css</code></p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>为你的项目创建一个名为 `my-travel-plans` 的新目录</li>
+      <li>使用 `git init` 将 `my-travel-plans` 目录转换成一个 Git 仓库</li>
+      <li>创建一个 `README.md` 文件</li>
+      <li>创建 `index.html`</li>
+      <li>创建 `app.css`</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="readme-文件内容">README 文件内容</h3>
+<pre><code class="text language-text"># Travel Destinations
+
+这是一个简单的应用，用来跟踪我想去旅行的目的地。</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="html-文件内容">HTML 文件内容</h3>
+<p>将以下内容添加到 index.html 文件:</p>
+<pre><code class="html language-html">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Travels&lt;/title&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;link rel="stylesheet" href="css/app.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="destination-container"&gt;
+            &lt;div class="destination" id="florida"&gt;
+                &lt;h2&gt;Florida&lt;/h2&gt;
+            &lt;/div&gt;
+
+            &lt;div class="destination" id="paris"&gt;
+                &lt;h2&gt;Paris&lt;/h2&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="css-文件内容">CSS 文件内容</h3>
+<p>将以下信息添加到 CSS 文件：</p>
+<pre><code class="css language-css">html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    padding: 1em;
+    width: 80%;
+}
+
+.destination-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.destination {
+    background: #03a9f4;
+    box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+    margin: 0.5em;
+    min-height: 200px;
+    flex: 0 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    transform: rotate(-45deg);
+    text-shadow: 0 0 5px #01579b;
+}
+
+#florida {
+    background-color: #03a9f4;
+}
+
+#paris {
+    background-color: #d32f2f;
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>目前，我的项目看起来是这样的，但记住你可以按照自己的意愿创建项目，只需要确保项目中有一些 commit 即可。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-my-travel-plans-project.png" alt="_Chrome 浏览器中打开了显示我想去旅行的目的地（弗罗里达和巴黎）的简单网页应用。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>Chrome 浏览器中打开了显示我想去旅行的目的地（弗罗里达和巴黎）的简单网页应用。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>让我们先确保你已经完成设置并准备继续。请勾掉下面这些中已完成的项：</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1492638982361" name="339154" id="a1492638982361">
+      <label for="a1492638982361"><p>我为我的项目创建了一个名为 <code>my-travel-plans</code> 的新目录</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492639054167" name="339154" id="a1492639054167">
+      <label for="a1492639054167"><p>我将项目转变成了 Git 仓库</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492639084428" name="339154" id="a1492639084428">
+      <label for="a1492639084428"><p>我至少将一个文件添加到了项目</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492639094139" name="339154" id="a1492639094139">
+      <label for="a1492639094139"><p>我使用 git commit 提交了文件（例如 <code>Initial commit</code>)</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>我为我的项目创建了一个名为 `my-travel-plans` 的新目录</li>
+      <li>我将项目转变成了 Git 仓库</li>
+      <li>我至少将一个文件添加到了项目</li>
+      <li>我使用 git commit 提交了文件（例如 `Initial commit`)</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="在-github-上托管">在 GitHub 上托管</h2>
+<p>托管 Git 项目的方式有多种。但最受欢迎的托管网站被称为 <a href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub</a>，你可能以前听说过。现在 GitHub 的问题是，这个名字与 Git 非常相似，有时候人们会将 Git 和 GitHub 混淆，认为它们是完全一样的，而事实上它们大相径庭。</p>
+<ul>
+<li>Git 是一个版本控制工具</li>
+<li>GitHub 是一个托管 Git 项目的服务</li>
+</ul>
+<p>如果你已熟悉 GitHub，知道如何在<strong>不</strong>初始化 README 的情况下创建一个仓库，你可以跳过此视频，并使用与示例项目相同的名称创建仓库，记住不要初始化 readme 文件。</p>
+<p>如果你还没有帐户，请在 <a href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub 的加入页面</a> 注册一个帐户。可以注册的 GitHub 帐户类型有很多，但我们在此课程中需要的是免费的类型。反正大多数人使用的都是免费帐户。创建好帐户后，登录 GitHub，你将位于主页：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-github-homepage.png" alt="_这是我登录后在我的帐户显示的页面。根据你拥有的仓库的数量以及你关注的其他用户和仓库，你的信息将会有所不同。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>这是我登录后在我的帐户显示的页面。根据你拥有的仓库的数量以及你关注的其他用户和仓库，你的信息将会有所不同。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>与其他网站一样，GitHub 经常更新其界面，所以如果你看到的内容与上面显示的不同，不用担心，其中的重要功能还是一样的。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>现在我们要学习的重点是如何创建新的仓库。实际上，从主页创建仓库的方式有两种：</p>
+<ol>
+<li>从导航栏创建</li>
+</ol>
+<ul>
+<li>页面右侧最下面的绿色"New repository"（新建仓库）按钮</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-github-homepage-new-repo-button.png" alt="_GitHub 有两个可以创建新仓库的位置。位于页面标题中的加号图标和页面中间的&quot;New repository&quot;按钮。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>GitHub 有两个可以创建新仓库的位置。位于页面标题中的加号图标和页面中间的"New repository"按钮。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我使用的是导航栏中的按钮，因为导航栏在每个页面上都可用，它使我们可以轻松创建新仓库链接。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-nav-bar-new-repo-link.png" alt="_点击 GitHub 标题中的加号图标会显示一个选项下拉列表，其中一个选项是&quot;New repository&quot;链接。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>点击 GitHub 标题中的加号图标会显示一个选项下拉列表，其中一个选项是"New repository"链接。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>下拉列表中的 <code>New repository</code> 链接会将你转至仓库创建页面。我们只需填写此表中的一个字段 - Repository name（仓库名称）字段。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-github-create-repo-page.png" alt="_GitHub 的创建新仓库页面。唯一必填的字段为 &#x60;Repository name&#x60; 字段。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>GitHub 的创建新仓库页面。唯一必填的字段为 <code>Repository name</code> 字段。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>通常情况下，你可以使用项目名称作为仓库的名称。创建、修改或删除仓库都非常容易，所以不必执着于在此页上赋予它一个完美的名称。我将创建一个名为 "my-travel-plans" 的仓库，与我创建的示例项目名称一样。</p>
+<p>你可以暂时将描述留白（如果你想，也可以添加描述）。由于我现在使用的是免费计划，我的仓库必须是 public（公开的，这意味着任何人都可以免费查看我的仓库和所有代码）。如果我想让它成为一个私有仓库，则要选择"Private"（私有），这时 GitHub 会向我索要信用卡信息，并将我升级至付费计划。</p>
+<p>我还要<strong>取消勾选</strong>"Initialize this repository with the README"（使用 README 初始化此仓库）选项，因为我不希望 GitHub 为我添加一个 README 文件。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="⚠️-不使用-readme-初始化-⚠️">⚠️ 不使用 README 初始化 ⚠️</h3>
+<p>确保你<strong>未勾选</strong>"Initialize this repository with the README"选项。我们将提供自己的 README，所以不需要 GitHub 自动提供。</p>
+<p>另外，如果我们让 GitHub 自动为我们生成新的 README 文件，它将不会给我们提供要在终端运行的相关配置命令。我们仍然有办法获得该信息，但它会被默认隐藏。</p>
+<p>所以只需确保未勾选该字段，就没问题了！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>现在，点击那个显眼的"Create repository"（创建仓库）按钮，以创建你的远程仓库！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L1 - GitHub 上的新建仓库命令</p></h3>
+  <video controls>
+  <source src="03. L1 - GitHub 上的新建仓库命令-myuGLZLYpYY.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. L1 - GitHub 上的新建仓库命令-myuGLZLYpYY.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. L1 - GitHub 上的新建仓库命令-myuGLZLYpYY.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. L1 - GitHub 上的新建仓库命令-myuGLZLYpYY.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. L1 - GitHub 上的新建仓库命令-myuGLZLYpYY.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>记住 <code>git remote</code> 命令用于创建和管理远程仓库。所以我将使用一个命令，在我的本地仓库与 GitHub 帐户上刚创建的远程仓库之间创建连接。</p>
+<pre><code class="bash language-bash">$ git remote add origin https://github.com/richardkalehoff/RichardsFantasticProject.git</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="⚠️-远程仓库与权限-⚠️">⚠️ 远程仓库与权限 ⚠️</h2>
+<p>警告：你需要使用<strong>你</strong>刚在<strong>自己的</strong> GitHub 帐户中创建的新仓库的 URL。请<strong>不要</strong>使用上面的那个，因此它是我在<strong>自己的</strong>账户上创建的项目。并且由于此项目在<strong>我的</strong>帐户上，会导致<strong>你</strong>无法访问并推送更改。</p>
+<p>所以确保使用你的项目中的 URL。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Kagure、Jack、Owen 和 Finn 这些朋友们都有自己的 <code>my-travel-plans</code> 项目，它们位于：</p>
+<ul>
+<li><p><a href="https://github.com/kagure/my-travel-plans.git" rel="noopener noreferrer" target="_blank">https://github.com/kagure/my-travel-plans.git</a></p></li>
+<li><p><a href="https://github.com/jack/my-travel-plans.git" rel="noopener noreferrer" target="_blank">https://github.com/jack/my-travel-plans.git</a></p></li>
+<li><p><a href="https://github.com/owen/my-travel-plans.git" rel="noopener noreferrer" target="_blank">https://github.com/owen/my-travel-plans.git</a></p></li>
+<li><p><a href="https://github.com/finn/my-travel-plans.git" rel="noopener noreferrer" target="_blank">https://github.com/finn/my-travel-plans.git</a></p>
+<p>(注：上述列表中的链接都是虚拟链接，实际不存在)</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>下面的命令中克隆了谁的仓库？</p>
+<pre><code class="bash language-bash">$ git clone https://github.com/owen/my-travel-plans.git</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1492644108682" name="339170" id="a1492644108682">
+        <label for="a1492644108682"><p>Kagure 的</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492644126645" name="339170" id="a1492644126645">
+        <label for="a1492644126645"><p>Jack 的</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492644127187" name="339170" id="a1492644127187">
+        <label for="a1492644127187"><p>Owen 的</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492644127951" name="339170" id="a1492644127951">
+        <label for="a1492644127951"><p>Finn 的</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Owen 的
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Jonathan 和 Allison 在一起开展项目。Jonathan 在 GitHub 上创建了一个项目，URL 为 <code>https://github.com/docsrus/brain-mapping.git</code>。</p>
+<p>如果 Allison 运行 <code>git clone https://github.com/docsrus/brain-mapping.git</code>，她有权限对 Jonathan 在 GitHub 上的项目做出更改吗？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1492643594333" name="339171" id="a1492643594333">
+        <label for="a1492643594333"><p>是</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1492643598300" name="339171" id="a1492643598300">
+        <label for="a1492643598300"><p>否</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    否
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>对于你刚在命令行中运行的命令，有几点需要注意：</p>
+<ol>
+<li>首先，这条命令包含一个子命令 <code>add</code></li>
+</ol>
+<ul>
+<li><p>这里使用了 <code>origin</code> 一词，设置了我们之前所说的简写名</p>
+<ul>
+<li>记住， <code>origin</code> 一词并没什么特殊性。</li>
+<li>如果你想将它改为 <code>repo-on-GitHub</code>，那么只需（在运行命令之前）将 "origin" 改为 "repo-on-GitHub"：</li></ul>
+<p><code>$ git remote add repo-on-GitHub https://github.com/richardkalehoff/RichardsFantasticProject.git</code></p></li>
+<li><p>第三，添加了仓库的完整路径（即 Web 上的远程仓库 URL）</p></li>
+</ul>
+<p>现在，我要使用 <code>git remote -v</code> 来验证我已经正确添加了远程仓库：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud456-l1-git-remote-add-terminal.png" alt="_&#x60;git remote add&#x60; 用于创建一个 &#x60;origin&#x60; 简写名，指向 GitHub 上的项目。运行 &#x60;git remote -v&#x60; 会显示简写名和 URL。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em><code>git remote add</code> 用于创建一个 <code>origin</code> 简写名，指向 GitHub 上的项目。运行 <code>git remote -v</code> 会显示简写名和 URL。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>棒极了！一切都很不错。我使用 <code>git remote add</code> 命令添加了一个远程仓库的链接，然后我用 <code>git remote -v</code> 检验是否一切正常。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>为了确保我们的步调一致，请确认你完成了以下所有操作：</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1492642338989" name="339175" id="a1492642338989">
+      <label for="a1492642338989"><p>我在 GitHub 上创建了我的远程仓库</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492642376776" name="339175" id="a1492642376776">
+      <label for="a1492642376776"><p>我使用 <code>git remote add</code> 在我的本地仓库与远程仓库之间建立了连接</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1492642377462" name="339175" id="a1492642377462">
+      <label for="a1492642377462"><p>我使用 <code>git remote -v</code> 验证了简写名是否对应正确的 URL</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>我在 GitHub 上创建了我的远程仓库</li>
+      <li>我使用 `git remote add` 在我的本地仓库与远程仓库之间建立了连接</li>
+      <li>我使用 `git remote -v` 验证了简写名是否对应正确的 URL</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p>远程仓库与你使用的本地仓库一样，只是存储在不同的位置。要管理远程仓库，可使用 <code>git remote</code> 命令：</p>
+<pre><code class="bash language-bash">$ git remote</code></pre>
+<ul>
+<li>你可以连接到多个不同的远程仓库。</li>
+<li>简写名是用于指代远程仓库位置的名称。通常该位置为 URL，但也可能是同一台计算机上的文件路径。</li>
+<li><code>git remote add</code> 用于添加到新的远程仓库的连接。</li>
+<li><code>git remote -v</code> 用于查看远程仓库与连接之间的详细信息。</li>
+</ul>
+<h3 id="进一步研究">进一步研究</h3>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#_showing_your_remotes" rel="noopener noreferrer" target="_blank">使用远程仓库</a>：来自 Gitbook (<strong>英</strong>)</li>
+<li><a href="https://git-scm.com/docs/git-remote" rel="noopener noreferrer" target="_blank"><code>git remote</code> 命令</a>：来自 Git 文档 (<strong>英</strong>)</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. 将更改推送到远程仓库.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 添加远程仓库')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

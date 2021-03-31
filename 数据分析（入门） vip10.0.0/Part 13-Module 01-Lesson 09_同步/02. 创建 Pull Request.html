@@ -1,0 +1,285 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>创建 Pull Request</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>同步</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 创建 Pull Request.html">02. 创建 Pull Request</a>
+    </li>
+    <li class="">
+      <a href="03. 与源项目保持同步.html">03. 与源项目保持同步</a>
+    </li>
+    <li class="">
+      <a href="04. 管理活跃 PR.html">04. 管理活跃 PR</a>
+    </li>
+    <li class="">
+      <a href="05. 压制 commit.html">05. 压制 commit</a>
+    </li>
+    <li class="">
+      <a href="06. 总结.html">06. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 创建 Pull Request</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>Pull Request（拉取请求）</strong>是向<strong>初始</strong>或<strong>源仓库的</strong>维护者发出的请求，以让其将你在他们项目的 fork 上所做的更改应用在他们的项目中。你请求他们<strong>拉取</strong>你做的更改。</p>
+<p>我们先对后面的内容进行简要概述，然后再深入学习。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - Pull Request 理论</p></h3>
+  <video controls>
+  <source src="02. L3 - Pull Request 理论-twLr9ndsf90.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L3 - Pull Request 理论-twLr9ndsf90.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. L3 - Pull Request 理论-twLr9ndsf90.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L3 - Pull Request 理论-twLr9ndsf90.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. L3 - Pull Request 理论-twLr9ndsf90.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>接下来我们演练发出 Pull Request 的步骤！如果你一直在跟着我操作，那么现在应该已经将 Lam 的<a href="https://github.com/udacity/course-collaboration-travel-plans" rel="noopener noreferrer" target="_blank">旅行计划仓库</a> fork 到了自己的帐户，并对 fork 的版本做了一两个额外 commit。</p>
+<p>在上一课中，我创建了一个名为 <code>include-richards-destinations</code> 的特性分支，向其中添加了一些 commit，并将该分支推送到了 GitHub。记住，当你创建一个 Pull Request 时，你要将所有更改放在一个专用于这些更改的分支上，还记得我们如何称呼这种类型的分支吗？…特性分支！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>我们要创建 Pull Request 了（多么令人激动呀！），先确保我们具有相同的设置。请回答以下问题：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="0cb6d0f1-458f-4995-bc17-d79a83f9d201--0">
+        <label for="0cb6d0f1-458f-4995-bc17-d79a83f9d201--0"><p>我 <strong>fork</strong> 了 Lam 的<a href="https://github.com/udacity/course-collaboration-travel-plans" rel="noopener noreferrer" target="_blank">项目</a></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0cb6d0f1-458f-4995-bc17-d79a83f9d201--1">
+        <label for="0cb6d0f1-458f-4995-bc17-d79a83f9d201--1"><p>我创建了一个特性分支，并赋予了它一个描述性名称</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0cb6d0f1-458f-4995-bc17-d79a83f9d201--2">
+        <label for="0cb6d0f1-458f-4995-bc17-d79a83f9d201--2"><p>我在我的分支上至少做了一个 commit</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0cb6d0f1-458f-4995-bc17-d79a83f9d201--3">
+        <label for="0cb6d0f1-458f-4995-bc17-d79a83f9d201--3"><p>我将我的更改推送至<strong>我的</strong> fork</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>棒极了，让我们继续！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>L3 - Pull Request 练习</p></h3>
+  <video controls>
+  <source src="02. L3 - Pull Request 练习-d3AGtKmHxUk.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. L3 - Pull Request 练习-d3AGtKmHxUk.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. L3 - Pull Request 练习-d3AGtKmHxUk.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. L3 - Pull Request 练习-d3AGtKmHxUk.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. L3 - Pull Request 练习-d3AGtKmHxUk.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你刚创建了一个Pull Request！恭喜！ 🙌🏼  </p>
+<p>如你所见，创建 Pull Request 实际上并不难。当我第一次学习 Git、GitHub 以及如何进行协作时，我对提交 commit 和使用远程仓库感到非常紧张，但<em>尤其</em>担心向其他开发者的项目提交 Pull Request！只要你遵循上一节课中介绍的步骤：</p>
+<ul>
+<li>阅读项目的 CONTRIBUTING.md 文件</li>
+<li>查看项目现有的 Issues </li>
+<li>与项目维护者交流</li>
+</ul>
+<p>…你的 Pull Request 一定会被采用！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="小结">小结</h2>
+<p>Pull Request 是让源仓库拉取你的 commit，并融合在其项目中的<strong>请求</strong>。要创建 Pull Request，你需要完成一些操作：</p>
+<ul>
+<li>你必须 <strong>fork</strong> 源仓库</li>
+<li>将你的 fork 克隆到你的计算机</li>
+<li>进行一些 commit（最好是在特性分支上！）</li>
+<li>将 commit 推送回<strong>你的 fork</strong></li>
+<li>创建一个新的 Pull Request，并选择包含你的新 commit 的分支</li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 与源项目保持同步.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 创建 Pull Request')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
