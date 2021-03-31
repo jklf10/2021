@@ -1,0 +1,515 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>git add</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Git Commit</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. git add.html">02. git add</a>
+    </li>
+    <li class="">
+      <a href="03. git commit.html">03. git commit</a>
+    </li>
+    <li class="">
+      <a href="04. 提交说明.html">04. 提交说明</a>
+    </li>
+    <li class="">
+      <a href="05. git diff.html">05. git diff</a>
+    </li>
+    <li class="">
+      <a href="06. 让 git 忽略某些文件.html">06. 让 git 忽略某些文件</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. git add</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="移至正确的项目">移至正确的项目</h2>
+<p>如果你一直跟着操作，那么现在你的计算机中，应该在两个目录下有 git 项目：</p>
+<ul>
+<li><p>new-git-project - 使用 <code>git init</code> 转换为 git 仓库的空目录</p></li>
+<li><p>course-git-blog-project - 使用 <code>git clone</code> 获得的现有博客项目</p></li>
+</ul>
+<p>为了避免与已有的 commit 产生混淆，我们将向 new-git-project 仓库提交 commit。</p>
+<p>在终端上，确保使用 <code>cd</code> 命令转到 <code>new-git-project</code> 目录中。如果你没有 <code>new-git-project</code> 目录，现在创建一个。位于该目录中后，运行 <code>git init</code> 命令。如果你之前已经运行了 <code>git init</code>，没关系。多次运行 <code>git init</code> 不会导致任何问题，因为它只是重新初始化 Git 目录。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>正确设置</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>现在该确保我们的配置是一样的了：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="cdcbff85-6406-4030-9c2c-3aa7f7d1dc9b--0">
+        <label for="cdcbff85-6406-4030-9c2c-3aa7f7d1dc9b--0"><p>我已经在终端上使用 <code>cd</code> 命令转到 <code>new-git-project</code> 目录中</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="cdcbff85-6406-4030-9c2c-3aa7f7d1dc9b--1">
+        <label for="cdcbff85-6406-4030-9c2c-3aa7f7d1dc9b--1"><p>我已经运行 <code>git init</code> 创建了新的 git 仓库</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你的终端应该如下图所示：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-new-git-project.png" alt="_位于 new-git-project 目录中的终端。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>位于 new-git-project 目录中的终端。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="状态！状态！状态！">状态！状态！状态！</h2>
+<p>我已经多次提到，但是还是要提下，<code>git status</code> 命令在这节课将非常有用。你应该在任何一个其他 git 命令之前和之后运行 <code>git status</code> 命令。</p>
+<p>我们立即运行该命令吧！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-status.png" alt="_终端显示了 &#x60;git status&#x60; 命令的输出结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git status</code> 命令的输出结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-status-输出总结">git status 输出总结</h2>
+<p>以下是输出：</p>
+<pre><code class="bash language-bash">On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)</code></pre>
+<p>注意最后一行 – <code>nothing to commit (create/copy files and use "git add" to track)</code>。注意到它推荐使用的 <code>git add</code> 命令了吗？这很有帮助！<code>git status</code> 的输出结果将给出下一步应该怎么做的建议或提示。</p>
+<p>我们根据反馈的建议操作，并创建一些文件。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="创建-html-文件">创建 HTML 文件</h2>
+<p>首先，创建一个叫做 <code>index.html</code> 的文件，并添加一些起始代码：</p>
+<pre><code class="html language-html">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Blog Project&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;link rel="stylesheet" href="css/app.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;script src="js/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>注意，代码引用了 CSS 文件和 JavaScript 文件。</p>
+<p>现在创建这些 CSS 和 JavaScript 文件。你可以让这两个文件留空。稍后我们将向文件中添加内容。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>验证项目设置</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>在继续之前，确保我们的设置相同。完成后请清点一下这些状态进行确认：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="c83b76a7-f7a7-4434-a463-e62c7ff3840c--0">
+        <label for="c83b76a7-f7a7-4434-a463-e62c7ff3840c--0"><p>我已经创建了 <code>index.html</code> 并加入了上述起始代码（并保存了文件）</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="c83b76a7-f7a7-4434-a463-e62c7ff3840c--1">
+        <label for="c83b76a7-f7a7-4434-a463-e62c7ff3840c--1"><p>我已经创建了 <code>css</code> 文件夹并在其中创建了 <code>app.css</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="c83b76a7-f7a7-4434-a463-e62c7ff3840c--2">
+        <label for="c83b76a7-f7a7-4434-a463-e62c7ff3840c--2"><p>我已经创建了 <code>js</code> 文件夹并在其中创建了 <code>app.js</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="快速检查-git-状态">快速检查 git 状态</h2>
+<p>我们刚刚通过添加了文件和内容对仓库进行了几个更改。现在该快速检查下 git 的状态了：</p>
+<pre><code class="bash language-bash">          $ git status</code></pre>
+<p>我的终端显示了以下内容：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-status-with-untracked.png" alt="_终端在新加入的&quot;Untracked files&quot;部分显示了 index.html 文件，以及 css 与 js 文件夹。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端在新加入的"Untracked files"部分显示了 index.html 文件，以及 css 与 js 文件夹。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="整体回顾">整体回顾</h2>
+<p>很酷吧？我们尚未对 git 执行任何特殊操作，但是它已经在观察这个目录（因为它是 git 项目），并且知道我们创建了几个新的文件。<code>git status</code> 命令的输出同样十分简洁地告诉我们 git 没有跟踪这些文件。</p>
+<p>我们快速回顾一下正在进行的操作以及将要执行的操作：</p>
+<ul>
+<li><p>我们新建了几个希望 git 开始跟踪的文件</p></li>
+<li><p>为了让 git 能跟踪文件，需要将该文件提交到仓库中</p></li>
+<li><p>要提交文件，需要将该文件放入暂存区</p></li>
+<li><p>可以使用 <code>git add</code> 命令将文件从工作目录移到暂存区</p></li>
+<li><p>工作目录中目前有三个未跟踪文件</p></li>
+<li><p><code>index.html</code></p></li>
+<li><p><code>css</code> 目录下的 <code>app.css</code></p></li>
+<li><p><code>js</code> 目录下的 <code>app.js</code></p></li>
+</ul>
+<p>要将所有文件提交到仓库中，首先需要将这些文件从工作目录移到暂存区。我们将使用 <code>git add</code> 命令将这三个文件移到暂存区。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-add-to-staging-recap.gif" alt="_未跟踪的 HTML、CSS 和 JavaScript 文件从工作目录添加到了暂存区。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>未跟踪的 HTML、CSS 和 JavaScript 文件从工作目录添加到了暂存区。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="暂存文件">暂存文件</h2>
+<p>是时候行动了！在终端上运行以下命令，使用 <code>git add</code> 将 <code>index.html</code> 添加到暂存区：</p>
+<pre><code class="bash language-bash">$ git add index.html</code></pre>
+<p>注意：我们仅添加了 <code>index.html</code> 文件。稍后我们将添加 CSS 和 JavaScript 文件。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-add.gif" alt="_终端正在输入命令&quot;git add index.html&quot;以将该文件添加到暂存区。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端正在输入命令"git add index.html"以将该文件添加到暂存区。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>运行 <code>git add</code> 命令没有任何输出（同样也没有错误）。如何让 git 告诉我们它执行了什么操作以及添加的 <code>index.html</code> 文件发生了什么呢？<code>git status</code> 就可以告诉我们这些信息。你可能对我一直在强调 <code>git status</code> 命令的重要性开始感到厌烦了，但是它是非常重要的命令，特别是在你对版本控制/命令行工具不是非常熟练的时期，更要注重该命令。</p>
+<p>我们来看看项目的状态：</p>
+<pre><code class="bash language-bash"> $ git status</code></pre>
+<p>这是我获得的输出结果：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-status-after-git-add.png" alt="_终端运行 &#x60;git status&#x60; 命令的结果如下。它显示 index.html 现在位于&quot;Changes to be committed&quot;分类下。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端运行 <code>git status</code> 命令的结果如下。它显示 index.html 现在位于"Changes to be committed"分类下。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="changes-to-be-committed">Changes to be committed</h2>
+<p>输出结果中现在出现了全新的区域："Changes to be committed"区域！这一新的"Changes to be committed"区域显示了位于暂存区的文件！目前只显示了 <code>index.html</code> 文件，因此暂存区只有这个文件。继续这一思路，如果我们现在提交 commit，则只有 index.html 文件会被提交。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>提示：你注意到"Changes to be committed"下方的帮助文本了吗？它提示 <code>(use "git rm --cached &lt;file&gt;..." to unstage)</code>，也就是当你不小心运行了 <code>git add</code> 并提供了错误文件，它会提示你应该怎么操作。</p>
+</blockquote>
+<blockquote>
+  <p>顺便提下，<code>git rm --cached</code> 与 shell 的 <code>rm</code> 命令不同。<code>git rm --cached</code> 不会破坏任何属于你的文件，它只是从暂存区删掉了文件。</p>
+</blockquote>
+<blockquote>
+  <p>此外，帮助文本中出现了"unstage"（撤消暂存）字眼。将文件从工作目录移到暂存区叫做"staging"（暂存）。如果已移动文件，则叫做"staged"（已暂存）。从暂存区将文件移回工作目录将"unstage"（撤消暂存）。如果你阅读的文档中提示“stage the following files”，则表明你应该使用 <code>git add</code> 命令。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="暂存剩余的文件">暂存剩余的文件</h2>
+<p><code>index.html</code> 文件已暂存。我们再暂存另外两个文件。现在我们可以运行以下命令：</p>
+<pre><code class="bash language-bash">$ git add css/app.css js/app.js</code></pre>
+<p>但是要输入的内容好多啊。我们可以使用一个特殊的命令行字符：</p>
+<h3 id="句点-">句点 <code>.</code></h3>
+<p>句点指代当前目录，可以用来表示所有文件和目录（包括所有嵌套文件和目录！）。</p>
+<pre><code>      ```bash
+      $ git add css/app.css js/app.js
+      # 等同于
+      $ git add .
+      ```</code></pre>
+<p>唯一要注意的是，你可能会不小心包含多余的文件。现在，我们希望同时暂存 <code>css/app.css</code> 和 <code>js/app.js</code>，因此运行该命令没问题。现在假设你向 <code>img</code> 目录添加了一些图片，但是暂时不想暂存这些图片。运行 <code>git add .</code> 将暂存这些图片。如果你暂存了不想暂存的文件，<code>git status</code> 会告诉你撤消暂存需要用到的命令。</p>
+<h2 id="暂存剩余的文件-1">暂存剩余的文件</h2>
+<p>我们使用以下简写命令暂存剩余的文件：</p>
+<pre><code class="bash language-bash">$ git add .</code></pre>
+<p>然后运行 <code>git status</code>：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l4-git-status-all-files.png" alt="_终端显示 index.html、css/app.css 和 js/app.js 已被暂存。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示 index.html、css/app.css 和 js/app.js 已被暂存。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-add-小结">git add 小结</h2>
+<p><code>git add</code> 命令用于将文件从工作目录移到暂存区。</p>
+<pre><code class="bash language-bash">$ git add &lt;file1&gt; &lt;file2&gt; … &lt;fileN&gt;</code></pre>
+<p>此命令：</p>
+<ul>
+<li><p>可接受多个文件名（用空格分隔）</p></li>
+<li><p>此外，可以使用句点 <code>.</code> 来代替文件列表，告诉 git 添加当前目录至暂存区（以及所有嵌套文件）</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. git commit.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. git add')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

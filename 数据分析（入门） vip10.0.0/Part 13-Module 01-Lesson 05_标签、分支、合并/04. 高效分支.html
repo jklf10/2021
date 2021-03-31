@@ -1,0 +1,732 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>高效分支</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>标签、分支、合并</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 标签.html">02. 标签</a>
+    </li>
+    <li class="">
+      <a href="03. 分支.html">03. 分支</a>
+    </li>
+    <li class="">
+      <a href="04. 高效分支.html">04. 高效分支</a>
+    </li>
+    <li class="">
+      <a href="05. 合并.html">05. 合并</a>
+    </li>
+    <li class="">
+      <a href="06. 合并冲突.html">06. 合并冲突</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. 高效分支</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你已经学会了如何创建、列出和删除分支，我们来运用下所学的知识吧！</p>
+<p>首先，确保我们保持相同的进度，并拥有相同的起始代码。我们将在 <code>new-git-project</code> 项目中进行操作。该项目具有以下文件：</p>
+<ul>
+<li><p><code>index.html</code></p></li>
+<li><p><code>css/app.css</code>（空文件）</p></li>
+<li><p><code>js/app.js</code>（空文件）</p></li>
+</ul>
+<p>CSS 和 JavaScript 文件是空的。确保 index 文件具有以下内容：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="html language-html">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Blog Project&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;link rel="stylesheet" href="css/app.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;h1&gt;Expedition&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;div class="container"&gt;
+        &lt;main&gt;
+
+        &lt;/main&gt;
+    &lt;/div&gt;
+
+    &lt;footer&gt;
+        Made with ♥ @ Udacity
+    &lt;/footer&gt;
+    &lt;script src="js/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>项目设置完毕</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>在继续之前，确保我们的设置保持一致。请检查以下各项：</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--0">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--0"><p>我有一个包含上述起始代码的 <code>index.html</code> 文件</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--1">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--1"><p>我在 <code>css</code> 目录中有一个 <code>app.css</code> 文件</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--2">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--2"><p>我在 <code>js</code> 目录中有一个 <code>app.js</code> 文件</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--3">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--3"><p>所有文件已被保存</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--4">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--4"><p>所有文件已暂存并提交至仓库</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--5">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--5"><p>当前分支是 <code>master</code> 分支</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--6">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--6"><p>我已删除所有其他分支</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="144ad1c9-ca59-40c9-af3f-45479b5fffe0--7">
+        <label for="144ad1c9-ca59-40c9-af3f-45479b5fffe0--7"><p>在命令行上运行 <code>git status</code> 后的输出结果包括 <code>working directory clean</code></p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！继续保持！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="策略">策略</h2>
+<p>现在，所有代码都位于 <code>master</code> 分支（默认分支）上。我们通过以下操作利用分支进行工作：</p>
+<ul>
+<li><p>向分支中添加内容</p></li>
+<li><p>创建新的分支</p></li>
+<li><p>在分支之间切换</p></li>
+</ul>
+<p>让我们使用分支完成以下更改：</p>
+<ol>
+<li>在 master 分支上 - 向页面添加默认颜色</li>
+</ol>
+<ul>
+<li><p>创建一个 sidebar 分支 - 为页面创建侧栏</p></li>
+<li><p>在 master 分支上 - 更改页面的标题</p></li>
+<li><p>在 sidebar 分支上 - 向侧栏中添加更多内容</p></li>
+<li><p>创建一个 footer 分支 - 向脚注中添加社交链接</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="更改-1---添加页面颜色">更改 1 - 添加页面颜色</h2>
+<p>确保位于 <code>master</code> 分支上，并向 <code>css/app.css</code> 添加以下内容：</p>
+<pre><code class="css language-css">body {
+    background-color: #00cae4;
+}</code></pre>
+<p>保存文件，然后将该文件添加到暂存区，并将其 commit 到仓库。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-changes-add-color.png" alt="_终端显示了 &#x60;git log --oneline --decorate&#x60; 命令的输出结果。最近的 commit 向页面上添加了默认背景色。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --oneline --decorate</code> 命令的输出结果。最近的 commit 向页面上添加了默认背景色。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="更改-2---添加侧栏">更改 2 - 添加侧栏</h2>
+<p>我们向页面上添加一个侧栏。但是假定我们不确定是否喜欢新的背景色。因此我们要将 sidebar 分支放在设置页面颜色的 commit 之前。你的 SHA 可能会不一样，但对我来说，在添加颜色的 commit 之前的 commit 具有 SHA <code>5bfe5e7</code>。因此向该 commit 添加分支的命令是：</p>
+<pre><code class="bash language-bash">$ git branch sidebar 5bfe5e7</code></pre>
+<pre><code>     </code></pre>
+<p>现在使用 <code>git checkout</code> 命令切换到新的 <code>sidebar</code> 分支。运行 <code>git log --oneline --decorate</code> 显示以下结果：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-branch-sidebar.png" alt="_终端显示了 &#x60;git log --oneline --decorate&#x60; 的输出结果。输出结果**不**包含 &#x60;master&#x60; 分支 - 它消失了。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --oneline --decorate</code> 的输出结果。输出结果<strong>不</strong>包含 <code>master</code> 分支 - 它消失了。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>你是否注意到 <code>master</code> 分支没有显示在输出结果中？它去哪了？丢失了？别担心，它还在那儿，稍后我们将了解如何显示该分支。</p>
+<p>但首先，在代码编辑器中切换到 <code>app.css</code> 文件。注意它没有我们之前输入的 CSS！因此，如果你在浏览器中加载该项目，页面将没有背景色。这很正常，因为 CSS 文件是空的，但是你知道为什么吗？</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>CSS 在哪？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>回忆下上节课的分支仓库视频，为何 CSS 文件是空的？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487195917493" name="339014" id="a1487195917493">
+        <label for="a1487195917493"><p>内容已被清除。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487195933402" name="339014" id="a1487195933402">
+        <label for="a1487195933402"><p>内容存储在另一个分支上。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487195934091" name="339014" id="a1487195934091">
+        <label for="a1487195934091"><p>内容在需要保存的临时文件上。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487195934667" name="339014" id="a1487195934667">
+        <label for="a1487195934667"><p>被熊吃了。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    内容存储在另一个分支上。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 54 不同分支上的内容</p></h3>
+  <video controls>
+  <source src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 54 不同分支上的内容-Px6EUylw8Uw.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 54 不同分支上的内容-Px6EUylw8Uw.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 54 不同分支上的内容-Px6EUylw8Uw.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 54 不同分支上的内容-Px6EUylw8Uw.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="04. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 54 不同分支上的内容-Px6EUylw8Uw.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>通过向 HTML 文件添加以下 <code>&lt;aside&gt;</code> 代码添加一个侧栏：</p>
+<pre><code class="html language-html">&lt;div class="container"&gt;
+    &lt;main&gt;
+
+    &lt;/main&gt;
+&lt;/div&gt;
+
+&lt;!-- start of new content --&gt;
+&lt;aside&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, debitis earum molestias veniam suscipit aliquam totam exercitationem tempore neque vitae. Minima, corporis pariatur facere at quo porro beatae similique! Odit.&lt;/p&gt;
+&lt;/aside&gt;
+&lt;!-- end of new content --&gt;
+
+&lt;footer&gt;
+    Made with ♥ @ Udacity
+&lt;/footer&gt;</code></pre>
+<p>我将 <code>&lt;aside&gt;</code> 内容添加到 <code>&lt;main&gt;</code> 元素旁边，作为 <code>&lt;div class="container"&gt;</code> 元素的子级。</p>
+<p>你可以在 <code>&lt;aside&gt;</code> 元素中添加任何内容！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="⚠️-请勿更改-css">⚠️ 请勿更改 CSS</h2>
+</blockquote>
+<blockquote>
+  <p>警告：千万不要更改 CSS 文件。</p>
+</blockquote>
+<blockquote>
+  <p>稍后我们将更改该文件，但是暂时请勿更改，否则会出现“合并冲突”（merge conflict）。稍后我们将手动操作出合并冲突，但是现在我们还不想有冲突，因此暂时不要更改 CSS 文件。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>这一步已经操作完毕，可以 commit 任何更改了。</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="0607a90d-8aef-419f-b523-1f65a097472c--0">
+        <label for="0607a90d-8aef-419f-b523-1f65a097472c--0"><p>我已经保存 <code>index.html</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0607a90d-8aef-419f-b523-1f65a097472c--1">
+        <label for="0607a90d-8aef-419f-b523-1f65a097472c--1"><p>我已经暂存 <code>index.html</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="0607a90d-8aef-419f-b523-1f65a097472c--2">
+        <label for="0607a90d-8aef-419f-b523-1f65a097472c--2"><p>我已经将 <code>index.html</code> commit 到仓库</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！ 🎉</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="更改-3---更改-master-上的标题">更改 3 - 更改 master 上的标题</h2>
+<p>切换到 master 分支并更新页面标题。</p>
+<p>使用 <code>git checkout</code> 命令切换到 <code>master</code> 分支。（注意，新的侧栏的 HTML 不在了！因为所有代码都妥善地保存在 <code>sidebar</code> 分支上。）</p>
+<p>现在将页面的 <code>&lt;h1&gt;</code> 标题从"Expedition"改为其他内容。要不改为吸引人的"Adventure"？！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>看到所做的更改了吗？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>小练习时间！如何让 git 显示你已经保存但是尚未 commit 的更改？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487196644318" name="339020" id="a1487196644318">
+        <label for="a1487196644318"><p>git show --diff</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487196658665" name="339020" id="a1487196658665">
+        <label for="a1487196658665"><p>git log -p</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487196659223" name="339020" id="a1487196659223">
+        <label for="a1487196659223"><p>git diff</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487196659848" name="339020" id="a1487196659848">
+        <label for="a1487196659848"><p>git log --stat</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    git diff
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>标题更改已被保存并 commit</p></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>现在该保存 <code>index.html</code> 文件并进行 commit 以将此更改添加到仓库中。（我使用了 commit 消息"Improve site heading for SEO"，但是你也可以想一个更好的消息）</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="25e377f2-2537-4b52-8f43-6ea3731bc5dd--0">
+        <label for="25e377f2-2537-4b52-8f43-6ea3731bc5dd--0"><p>我已经保存 <code>index.html</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="25e377f2-2537-4b52-8f43-6ea3731bc5dd--1">
+        <label for="25e377f2-2537-4b52-8f43-6ea3731bc5dd--1"><p>我已经暂存 <code>index.html</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="25e377f2-2537-4b52-8f43-6ea3731bc5dd--2">
+        <label for="25e377f2-2537-4b52-8f43-6ea3731bc5dd--2"><p>我已经将 <code>index.html</code> commit 到仓库</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="更改-4---向侧栏中添加更多内容">更改 4 - 向侧栏中添加更多内容</h2>
+<p>切换到 <code>sidebar</code> 分支（注意，我们添加到 <code>master</code> 分支的内容在 <code>sidebar</code> 分支上不可见）。</p>
+<p>现在，在 <code>&lt;aside&gt;</code> 元素中添加一些内容。添加一些个人信息，例如你喜欢的电影或书籍（我最喜欢的是《指环王》！）。任何内容都可以，只需添加一些内容。</p>
+<p>同样确保不要更改 CSS 文件。</p>
+<p>保存 <code>index.html</code> 文件并提交 commit。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="更改-5---向脚注中添加社交链接">更改 5 - 向脚注中添加社交链接</h2>
+<p>我们已经做出了好几个更改，下面要进行最后一项更改了。我们向页面脚注中添加一些社交图标。为了加以区分，我们在基于 <code>master</code> 分支的新 footer 分支上做出这一更改，因此需要先创建一个新的 <code>footer</code> 分支。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <h2 id="💡-用一个命令切换并创建分支💡">💡 用一个命令切换并创建分支💡</h2>
+</blockquote>
+<blockquote>
+  <p>目前，我们处理分支的方式是使用 <code>git branch</code> 命令创建一个分支，然后使用 <code>git checkout</code> 命令切换到这个新建的分支。</p>
+</blockquote>
+<blockquote>
+  <p>但是你知道吗？<code>git checkout</code> 命令也可以创建一个新的分支。如果你添加 <code>-b</code> 选项，则能够用一个命令创建分支并切换到该分支。</p>
+</blockquote>
+<blockquote>
+<pre><code class="bash language-bash">$ git checkout -b richards-branch-for-awesome-changes</code></pre>
+</blockquote>
+<blockquote>
+  <p>这是一个很实用的命令，我经常会用到它。</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>我们使用新的 <code>git checkout</code> 命令来创建新的 <code>footer</code> 分支并让此 footer 分支的起点位置与 master 分支的一样：</p>
+<pre><code class="bash language-bash">$ git checkout -b footer master</code></pre>
+<p>现在如果运行 <code>git log --oneline --decorate</code>，应该能看到以下结果（你的 commit 消息可能不一样）：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-checkout-b-footer-master.png" alt="_终端显示了 &#x60;git log --oneline --decorate&#x60; 的输出结果。特殊的 &#x60;HEAD&#x60; 指针指向 &#x60;footer&#x60; 分支。&#x60;footer&#x60; 分支与 &#x60;master&#x60; 分支位于同一 commit 上。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --oneline --decorate</code> 的输出结果。特殊的 <code>HEAD</code> 指针指向 <code>footer</code> 分支。<code>footer</code> 分支与 <code>master</code> 分支位于同一 commit 上。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="添加社交链接">添加社交链接</h3>
+<p>现在我们已经位于新分支上，我们向页面脚注中添加一些社交链接。我添加了以下内容：</p>
+<pre><code class="html language-html">&lt;footer&gt;
+    &lt;!-- start of new content --&gt;
+    &lt;section&gt;
+        &lt;h3 class="visuallyhidden"&gt;Social Links&lt;/h3&gt;
+        &lt;a class="social-link" href="https://twitter.com/udacity"&gt;
+            &lt;img src="img/social-twitter.png" alt="Twitter"&gt;
+        &lt;/a&gt;
+        &lt;a class="social-link" href="https://www.instagram.com/udacity/"&gt;
+            &lt;img src="img/social-instagram.png" alt="Instagram"&gt;
+        &lt;/a&gt;
+        &lt;a class="social-link" href="https://plus.google.com/+Udacity"&gt;
+            &lt;img src="img/social-google.png" alt="Google Plus"&gt;
+        &lt;/a&gt;
+    &lt;/section&gt;
+    &lt;!-- end of new content --&gt;
+&lt;/footer&gt;</code></pre>
+<p>你也可以添加你自己的社交帐户链接。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>现在保存文件并提交 commit。（我使用了 commit 消息"Add links to social media"，当然你也可以想出更好的消息）</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="9eafbeff-a750-40c1-8d97-0c98d288b9e8--0">
+        <label for="9eafbeff-a750-40c1-8d97-0c98d288b9e8--0"><p>我已经保存  <code>index.html</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="9eafbeff-a750-40c1-8d97-0c98d288b9e8--1">
+        <label for="9eafbeff-a750-40c1-8d97-0c98d288b9e8--1"><p>我已经暂存<code>index.html</code></p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="9eafbeff-a750-40c1-8d97-0c98d288b9e8--2">
+        <label for="9eafbeff-a750-40c1-8d97-0c98d288b9e8--2"><p>我已经 <code>index.html</code> commit 到仓库</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p>很棒！ 👏</p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="同时查看所有分支">同时查看所有分支</h2>
+<p>我们已经做出了所有需要做出的更改！很棒！</p>
+<p>我们已经在三个不同的分支上进行了多项更改。我们在 <code>git log</code> 输出结果中看不到其他分支，触发切换到某个分支。如果能在 <code>git log</code> 输出结果中看到所有分支，是不是很棒？</p>
+<p>你到现在为止已经知道，<code>git log</code> 命令非常强大，可以显示此信息。我们将使用新的 <code>--graph</code> 和 <code>--all</code> 选项：</p>
+<pre><code class="bash language-bash">$ git log --oneline --decorate --graph --all</code></pre>
+<p><code>--graph</code> 选项将条目和行添加到输出的最左侧。显示了实际的分支。<code>--all</code> 选项会显示仓库中的所有分支。</p>
+<p>运行此命令将显示仓库中的所有分支和 commit：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-log-graph-all.png" alt="_终端显示了 &#x60;git log --oneline --graph --decorate --all&#x60; 的输出结果。它会显示仓库中的所有分支，以及所有 commit。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --oneline --graph --decorate --all</code> 的输出结果。它会显示仓库中的所有分支，以及所有 commit。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 更改小结</p>
+<p>我们做出了以下更改：</p>
+<ol>
+<li>我们在 master 分支上向页面添加了默认颜色</li>
+</ol>
+<ul>
+<li><p>我们创建了 sidebar 分支并为侧栏添加了代码</p></li>
+<li><p>我们在 master 分支上更改了页面的标题</p></li>
+<li><p>我们在 sidebar 分支上向侧栏添加了更多内容</p></li>
+<li><p>我们创建了 footer 分支并向脚注中添加了社交链接</p></li>
+</ul>
+<p>这些更改都发生在不同的分支上。让我们用 git 合并所有这些更改吧。将分支组合到一起称为<strong>合并</strong>（merge）。</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. 合并.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. 高效分支')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

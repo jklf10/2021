@@ -1,0 +1,511 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>显示仓库的 commit</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>查看仓库历史</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 显示仓库的 commit.html">02. 显示仓库的 commit</a>
+    </li>
+    <li class="">
+      <a href="03. 更改 git log 显示信息的方式.html">03. 更改 git log 显示信息的方式</a>
+    </li>
+    <li class="">
+      <a href="04. 查看修改后的文件.html">04. 查看修改后的文件</a>
+    </li>
+    <li class="">
+      <a href="05. 查看文件更改.html">05. 查看文件更改</a>
+    </li>
+    <li class="">
+      <a href="06. 查看特定的 commit.html">06. 查看特定的 commit</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. 显示仓库的 commit</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <blockquote>
+  <p>提示：在第 2 节课，你使用 <code>git clone</code> 克隆了博客项目。我们将在这节课用到该项目。如果你在上节课没有克隆该项目，则运行以下命令来获得该项目：</p>
+</blockquote>
+<blockquote>
+<pre><code class="bash language-bash">$ git clone https://github.com/udacity/course-git-blog-project</code></pre>
+</blockquote>
+<blockquote>
+  <p>克隆之后，别忘了 <code>cd</code> 到该项目。</p>
+</blockquote>
+<blockquote>
+  <p>如果遇到问题，请参阅<a href="https://classroom.udacity.com/courses/ud123/lessons/437a88fc-15f5-48b8-a6a5-0cf3347e6183/concepts/59082be0-c1af-4839-8ae5-0a182dc5bfe8#" rel="noopener noreferrer" target="_blank">克隆现有仓库相关概念</a> 或在<a href="https://discussions.youdaxue.com/c/Git-and-GitHub" rel="noopener noreferrer" target="_blank">论坛</a>上咨询他人！</p>
+</blockquote>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>首要任务</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>克隆博客项目仓库后，使用命令行转到项目的目录下。当你位于博客项目中时，你应该在 git 仓库中首先执行什么？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1486769275063" name="338803" id="a1486769275063">
+        <label for="a1486769275063"><p>运行 <code>git status</code> 命令</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486769282496" name="338803" id="a1486769282496">
+        <label for="a1486769282496"><p>在代码编辑器中打开项目</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486769283048" name="338803" id="a1486769283048">
+        <label for="a1486769283048"><p>判断应该构建什么新功能</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    运行 `git status` 命令
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-git-status-output.png" alt="_终端显示了 &#x60;git status&#x60; 命令的输出结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git status</code> 命令的输出结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-status-和打开项目">git status 和打开项目</h2>
+<p>你可以看到 <code>git status</code> 的输出结果是："nothing to commit, working directory clean"，意味着我们可以继续并检出该项目了！</p>
+<p>在你喜欢的代码编辑器中打开该项目。花几分钟时间看看项目，包括 CSS 和 JavaScript 文件，但是重点看一下 HTML 文件。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-project-in-editor.png" alt="_在代码编辑器中打开了课程的博客项目。正在显示 &#x60;index.html&#x60; 文件。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>在代码编辑器中打开了课程的博客项目。正在显示 <code>index.html</code> 文件。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>何时添加的标题？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>看看 <code>index.html</code> 文件中第 15 行的 <code>&lt;h1&gt;Expedition&lt;/h1&gt;</code> 标题。</p>
+<p>根据你所看到的内容，你觉得该标题是何时被添加的？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1486769594727" name="338807" id="a1486769594727">
+        <label for="a1486769594727"><p>是在周二添加的，对，周二。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486769626903" name="338807" id="a1486769626903">
+        <label for="a1486769626903"><p>三周以前</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486769627713" name="338807" id="a1486769627713">
+        <label for="a1486769627713"><p>只看代码的话，不知道是什么时候。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    只看代码的话，不知道是什么时候。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>谁添加了这个标题？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>所以我们不确定何时添加的标题。那么，再回答一个更简单的问题：谁添加了这个标题？或者说，你能在只看代码的情况下告诉我是谁添加的吗？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1486769793801" name="338808" id="a1486769793801">
+        <label for="a1486769793801"><p>是 Richard 添加的！</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486769810745" name="338808" id="a1486769810745">
+        <label for="a1486769810745"><p>不清楚</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    不清楚
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-log-命令">git log 命令</h2>
+<p>要回答这些问题，就要用到 <code>git log</code> 命令！与其逐条解释它的所有作用，不如直接体验一下吧！请在终端运行 <code>git log</code> 命令：</p>
+<pre><code class="bash language-bash">$ git log</code></pre>
+<p>终端应该显示以下界面。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l3-git-log-output.png" alt="_终端显示了 &#x60;git log&#x60; 命令的输出结果。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log</code> 命令的输出结果。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 11 git log 输出说明</p></h3>
+  <video controls>
+  <source src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 11 git log 输出说明-xJfurQcVYfo.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 11 git log 输出说明-xJfurQcVYfo.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 11 git log 输出说明-xJfurQcVYfo.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 11 git log 输出说明-xJfurQcVYfo.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="02. Nd016 WebND Ud123 Gitcourse BETAMOJITO L3 11 git log 输出说明-xJfurQcVYfo.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="了解日志内容">了解日志内容</h2>
+<p>如果你不习惯在命令行上使用分页器，那么 <a href="https://en.wikipedia.org/wiki/Less_(Unix)" target="_blank">less(英)</a> 用起来会比较奇怪。以下是一些实用技巧：</p>
+<ul>
+<li><p>要<strong>向下</strong>滚动，按下</p></li>
+<li><p><code>j</code> 或  <code>↓</code> 一次向下移动一行</p></li>
+<li><p><code>d</code> 按照一半的屏幕幅面移动</p></li>
+<li><p><code>f</code> 按照整个屏幕幅面移动</p></li>
+<li><p>要 <strong>向上</strong>滚动，按上</p></li>
+<li><p><code>k</code> 或 <code>↑</code> 一次向上移动一行</p></li>
+<li><p><code>u</code> 按照一半的屏幕幅面移动</p></li>
+<li><p><code>b</code> 按照整个屏幕幅面移动</p></li>
+<li><p>按下 <code>q</code> 可以<strong>退出</strong>日志（返回普通的命令提示符）</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在进行 commit 时，git 会记录大量信息。看看你能否通过 <code>git log</code> 回答以下问题！</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>谁提交了 commit？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>使用 <code>git log</code> 查找 SHA 以 <code>f9720a</code> 开头的 commit。谁提交了这条 commit？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1486770186155" name="338814" id="a1486770186155">
+        <label for="a1486770186155"><p>James Parkes</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486770215935" name="338814" id="a1486770215935">
+        <label for="a1486770215935"><p>Richard Kalehoff</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486770216498" name="338814" id="a1486770216498">
+        <label for="a1486770216498"><p>Colt Steele</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486770217058" name="338814" id="a1486770217058">
+        <label for="a1486770217058"><p>Julia Van Cleve</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486770217623" name="338814" id="a1486770217623">
+        <label for="a1486770217623"><p>Godzilla McFiddlebrunches</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Richard Kalehoff
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>消息是什么？</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>使用 <code>git log</code> 查找 SHA 以 <code>8aa6668</code> 开头的 commit。这条 commit 的消息是什么？</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>何时提交的 commit？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>使用 <code>git log</code> 查找 SHA 以 <code>f9720a9</code> 开头的 commit。这条 commit 是何时提交的？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1486770633648" name="338816" id="a1486770633648">
+        <label for="a1486770633648"><p>Mon Dec 5 10:25:22 2016</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486770644087" name="338816" id="a1486770644087">
+        <label for="a1486770644087"><p>Mon Dec 5 10:11:51 2016</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486770644615" name="338816" id="a1486770644615">
+        <label for="a1486770644615"><p>Sat Dec 3 16:09:00 2016</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1486770645166" name="338816" id="a1486770645166">
+        <label for="a1486770645166"><p>Fri Dec 2 16:58:27 2016</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    Mon Dec 5 10:11:51 2016
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>SHA 是什么？</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>使用 <code>git log</code> 查找消息是 <code>Set article timestamp color</code> 的 commit。这条 commit 的 SHA 是多少？请提供该 SHA 的前 7 个字符。</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-log-小结">git log 小结</h2>
+<p>很棒！是不是觉得掌握的 git 知识越来越多了？</p>
+<p>我们快速总结下 <code>git log</code> 命令。<code>git log</code> 命令用于显示仓库中所有 commit 的信息。</p>
+<pre><code class="bash language-bash">$ git log</code></pre>
+<p><em>默认情况下</em>，该命令会显示仓库中每个 commit 的：</p>
+<ul>
+<li><p>SHA</p></li>
+<li><p>作者</p></li>
+<li><p>日期</p></li>
+<li><p>消息</p>
+<p>我强调了“默认情况下”是因为 <code>git log</code> 命令显示的信息远不止这些。 </p></li>
+</ul>
+<p>git 使用命令行分页器 less 浏览所有信息。以下是 less 的重要快捷键：</p>
+<ul>
+<li><p>要按行向下滚动，使用 <code>j</code> 或 <code>↓</code> </p></li>
+<li><p>要按行向上滚动，使用 <code>k</code> 或 <code>↑</code> </p></li>
+<li><p>要按页向下滚动，使用空格键或 Page Down 按钮</p></li>
+<li><p>要按页向下滚动，使用 <code>b</code> 或 Page Up 按钮</p></li>
+<li><p>要退出，使用 <code>q</code> </p></li>
+</ul>
+<p>我们将在下节课中提升我们的 <code>git log</code> 使用技巧以显示更多信息。</p>
+<p>还在等什么呢？点击下面的链接转到下节课吧！</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. 更改 git log 显示信息的方式.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. 显示仓库的 commit')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

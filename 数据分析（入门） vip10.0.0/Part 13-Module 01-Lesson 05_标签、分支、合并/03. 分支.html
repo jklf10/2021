@@ -1,0 +1,468 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>分支</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>标签、分支、合并</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 简介.html">01. 简介</a>
+    </li>
+    <li class="">
+      <a href="02. 标签.html">02. 标签</a>
+    </li>
+    <li class="">
+      <a href="03. 分支.html">03. 分支</a>
+    </li>
+    <li class="">
+      <a href="04. 高效分支.html">04. 高效分支</a>
+    </li>
+    <li class="">
+      <a href="05. 合并.html">05. 合并</a>
+    </li>
+    <li class="">
+      <a href="06. 合并冲突.html">06. 合并冲突</a>
+    </li>
+    <li class="">
+      <a href="07. 总结.html">07. 总结</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. 分支</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>现在该学习强大的分支功能了！git 中的分支非常灵活，使你能够实现一些很强大的功能。在详细了解一些具体的命令之前，我们先从宏观层面了解下什么是分支以及它们的工作方式。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 26 分支概述</p></h3>
+  <video controls>
+  <source src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 26 分支概述-ywcOC6CLG4s.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="zh-CN" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 26 分支概述-ywcOC6CLG4s.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 26 分支概述-ywcOC6CLG4s.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 26 分支概述-ywcOC6CLG4s.pt-BR.vtt" label="pt-BR">
+  <track default="true" kind="subtitles" srclang="en" src="03. Nd016 WebND Ud123 Gitcourse BETAMOJITO L5 26 分支概述-ywcOC6CLG4s.en.vtt" label="en">
+</video>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>这就是分支的工作原理以及如何在分支之间切换的概述。其实你已经在命令行上见过 master 分支了。因为你在第一节课进行了文件设置，因此命令行中显示了当前分支。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-branch-current.png" alt="_终端在提示符中显示了当前分支。当前分支是&quot;master&quot;分支。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端在提示符中显示了当前分支。当前分支是"master"分支。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-branch-命令"><code>git branch</code> 命令</h2>
+<p><code>git branch</code> 命令用来与 git 的分支进行交互：</p>
+<pre><code class="bash language-bash">$ git branch</code></pre>
+<p>它可以用来：</p>
+<ul>
+<li><p>列出仓库中的所有分支名称</p></li>
+<li><p>创建新的分支</p></li>
+<li><p>删除分支</p></li>
+</ul>
+<p>如果我们只输入 <code>git branch</code>，则 git 将列出仓库中的分支：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-branch.png" alt="_终端显示了 &#x60;git branch&#x60; 命令的输出结果，并显示了 master 分支。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git branch</code> 命令的输出结果，并显示了 master 分支。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 创建分支</p>
+<p>要创建分支，只需使用 <code>git branch</code> 并提供要创建的分支对应的名称。因此，如果你想创建一个叫做"sidebar"的分支，只需运行以下命令：</p>
+<pre><code class="bash language-bash">$ git branch sidebar</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>提示符改变了吗？</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>注意，仓库中有多个分支，但是提示符显示的是当前分支。         </p>
+<p>现在我们新建了"sidebar"分支，提示符会显示 <code>sidebar</code> 还是 <code>master</code>？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487193375843" name="338993" id="a1487193375843">
+        <label for="a1487193375843"><p>sidebar</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487193402877" name="338993" id="a1487193402877">
+        <label for="a1487193402877"><p>master</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    master
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-checkout-命令"><code>git checkout</code> 命令</h2>
+<p>注意，在进行 commit 时，该 commit 将添加到当前分支上。虽然我们创建了新的 <code>sidebar</code> 分支，但是没有向其添加新的 commit，因为我们尚未切换到该分支。如果我们现在进行 commit 的话，该 commit 将添加到 <code>master</code> 分支，而不是 <code>sidebar</code> 分支。我们已经在演示中看到这一情况，要在分支之间进行切换，我们需要使用 git 的 <code>checkout</code> 命令。</p>
+<pre><code class="bash language-bash">$ git checkout sidebar</code></pre>
+<p>请务必了解该命令的工作方式。运行该命令将：</p>
+<ul>
+<li><p>从工作目录中删除 git 跟踪的所有文件和目录</p>
+<ul>
+<li>(git 跟踪的文件存储在仓库中，因此什么也不会丢失)</li></ul></li>
+<li><p>转到仓库，并提取分支指向的 commit 所对应的所有文件和目录</p></li>
+</ul>
+<p>因此此命令将删除 master 分支中的 commit 引用的所有文件。它会将这些文件替换为 sidebar 分支中的 commit 引用的文件。理解这一部分十分重要，所以请务必多读几遍工作方式。</p>
+<p>有趣的是，<code>sidebar</code> 和 <code>master</code> 都指向同一 commit，因此当你在这两个分支之间切换时，看起来什么也没变。但是提示符现在会显示"sidebar"：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-checkout-sidebar.png" alt="_终端在提示符中显示了&quot;sidebar&quot;分支。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端在提示符中显示了"sidebar"分支。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 日志中的分支</p>
+<p>提示符中的分支信息很有用，但是最清晰的查看方式是查看 <code>git log</code> 的输出结果。就像我们需要使用 <code>--decorate</code> 选项来显示 git 标签一样，我们也需要该选项来显示分支。</p>
+<pre><code class="bash language-bash">$ git log --oneline --decorate</code></pre>
+<p>我的日志输出结果如下所示（你的可能不太一样，取决于你提交的 commit）：</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-log-branches.png" alt="_终端显示了 &#x60;git log --oneline --decorate&#x60; 命令的输出结果。单词&quot;HEAD&quot;具有一个指向&quot;sidebar&quot;的箭头，后者是当前分支。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git log --oneline --decorate</code> 命令的输出结果。单词"HEAD"具有一个指向"sidebar"的箭头，后者是当前分支。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>在上述输出中，注意我们之前见到的特殊指示符"HEAD"具有一个指向 sidebar 分支的箭头。它指向 sidebar 是因为 sidebar 分支是当前分支，现在提交的任何 commit 将添加到 sidebar 分支。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="活跃分支">活跃分支</h2>
+<p>提示符将显示活跃分支。但这是我们对提示符进行的特殊自定义，如果你使用的是不同的计算机，判断活跃分支的最快速方式是查看 <code>git branch</code> 命令的输出结果。活跃分支名称旁边会显示一个星号。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/ud123-l5-git-branch-asterisk.png" alt="_终端显示了 &#x60;git branch&#x60; 命令的输出结果。活跃分支（这里是 &quot;sidebar&quot;分支）旁边有一个星号。_" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p><em>终端显示了 <code>git branch</code> 命令的输出结果。活跃分支（这里是 "sidebar"分支）旁边有一个星号。</em></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>在某一位置创建 git 分支</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>根据你所掌握的 <code>git branch</code> 和 <code>git tag</code> 命令方面的知识，你认为下面的命令将有何作用？</p>
+<pre><code class="bash language-bash">$ git branch alt-sidebar-loc 42a69f</code></pre></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1487193898208" name="339000" id="a1487193898208">
+        <label for="a1487193898208"><p>将创建一个 <code>alt</code> 分支，并且指向与 <code>master</code> 分支相同的 commit</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487193910461" name="339000" id="a1487193910461">
+        <label for="a1487193910461"><p>将创建以下 3 个分支：<code>alt</code>、<code>sidebar</code>、<code>loc</code></p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487193911811" name="339000" id="a1487193911811">
+        <label for="a1487193911811"><p>将使 master 分支移到 SHA 为 <code>42a69f</code> 的 commit 上</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1487193912349" name="339000" id="a1487193912349">
+        <label for="a1487193912349"><p>将创建 <code>alt-sidebar-loc</code> 分支并使其指向 SHA 为 <code>42a69f</code> 的 commit</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    将创建 `alt-sidebar-loc` 分支并使其指向 SHA 为 `42a69f` 的 commit
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>哪个分支是活跃分支？</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>假设 <code>git branch</code> 的输出如下所示：</p>
+<pre><code class="bash language-bash">$ git branch
+  barbara
+* footer-fix
+  master
+  richard
+  sidebar
+  social-icons</code></pre>
+<p>哪个分支是活跃分支？</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>## 删除分支</p>
+<p>分支用来进行开发或对项目进行修正，不会影响到项目（因为更改是在分支上进行的）。在分支上做出更改后，你可以将该分支组合到 <code>master</code> 分支上（这种“分支组合过程”叫做“合并”（merge），稍后将详细讲解）</p>
+<p>合并了分支的更改后，你可能不再需要该分支了。如果你想删除分支，可以使用 <code>-d</code> 选项。下面的命令包含 <code>-d</code> 选项，告诉 git 删掉给出的分支（这里是"sidebar"分支）。</p>
+<pre><code class="bash language-bash">$ git branch -d sidebar</code></pre>
+<p>注意，无法删除当前所在的分支。因此要删除 <code>sidebar</code> 分支，你需要切换到 <code>master</code> 分支，或者创建并切换到新的分支。</p>
+<p>删除内容让人比较紧张。但是不用担心。如果某个分支上有任何其他分支上都没有包含的 commit（也就是这个 commit 是要被删除的分支独有的），git 不会删除该分支。如果你创建了 <code>sidebar</code> 分支，向其添加了 commit，然后尝试使用 <code>git branch -d sidebar</code> 删除该分支，git 不会让你删除该分支，因为你无法删除当前所在的分支。如果你切换到 <code>master</code> 分支并尝试删除 <code>sidebar</code> 分支，git 也不会让你删除，因为 <code>sidebar</code> 分支上的新 commit 会丢失！要强制删除，你需要使用大写的 D 选项 - <code>git branch -D sidebar</code>。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="git-branch-小结">git branch 小结</h2>
+<p>总结下，<code>git branch</code> 命令用来管理 git 中的分支：</p>
+<pre><code class="bash language-bash"># 列出所有分支
+
+$ git branch
+
+
+# 创建新的"footer-fix"分支
+
+$ git branch footer-fix
+
+
+# 删除"footer-fix"分支
+
+$ git branch -d footer-fix</code></pre>
+<p>此命令用来：</p>
+<ul>
+<li><p>列出本地分支</p></li>
+<li><p>创建新的分支</p></li>
+<li><p>删除分支</p></li>
+</ul>
+<h3 id="深入研究">深入研究</h3>
+<ul>
+<li><p>git 分支 - 分支的新建与合并：<a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging" rel="noopener noreferrer" target="_blank">英</a>|<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" rel="noopener noreferrer" target="_blank">中</a> git 文档</p></li>
+<li><p><a href="http://learngitbranching.js.org/" rel="noopener noreferrer" target="_blank">了解 git 分支</a></p></li>
+<li><p><a href="https://www.atlassian.com/git/tutorials/using-branches" rel="noopener noreferrer" target="_blank">git 分支教程</a> Atlassian 博客(<strong>英</strong>)</p></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. 高效分支.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. 分支')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
