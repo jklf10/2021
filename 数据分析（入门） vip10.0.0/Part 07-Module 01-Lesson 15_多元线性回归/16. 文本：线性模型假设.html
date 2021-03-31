@@ -1,0 +1,309 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>文本：线性模型假设</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>多元线性回归</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：多元线性回归.html">02. 视频：多元线性回归</a>
+    </li>
+    <li class="">
+      <a href="03. 录屏视频：拟合多元线性回归模型.html">03. 录屏视频：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="04. Notebook + 练习：拟合多元线性回归模型.html">04. Notebook + 练习：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="05. 录屏视频 + 文本：多元线性回归的工作原理是什么？.html">05. 录屏视频 + 文本：多元线性回归的工作原理是什么？</a>
+    </li>
+    <li class="">
+      <a href="06. 视频：多元线性回归的模型结果.html">06. 视频：多元线性回归的模型结果</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：解释多元线性回归的系数.html">07. 练习：解释多元线性回归的系数</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：虚拟变量.html">08. 视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="09. 文本：虚拟变量.html">09. 文本：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="10. 虚拟变量.html">10. 虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="11. 录屏视频：虚拟变量.html">11. 录屏视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="12. Notebook + 练习：虚拟变量.html">12. Notebook + 练习：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="13. 视频：复习虚拟变量.html">13. 视频：复习虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="14. 【选修】 Notebook + 练习：其它编码.html">14. 【选修】 Notebook + 练习：其它编码</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：潜在问题.html">15. 视频：潜在问题</a>
+    </li>
+    <li class="">
+      <a href="16. 文本：线性模型假设.html">16. 文本：线性模型假设</a>
+    </li>
+    <li class="">
+      <a href="17. 录屏视频：多重共线性与 VIF.html">17. 录屏视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="18. 视频：多重共线性与 VIF.html">18. 视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="19. Notebook + 练习：多重共线性与 VIF.html">19. Notebook + 练习：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="20. 【选修】视频：高阶项.html">20. 【选修】视频：高阶项</a>
+    </li>
+    <li class="">
+      <a href="21. 【选修】录屏视频 + 文本：高阶项.html">21. 【选修】录屏视频 + 文本：高阶项</a>
+    </li>
+    <li class="">
+      <a href="22. 【选修】视频：解释交互项.html">22. 【选修】视频：解释交互项</a>
+    </li>
+    <li class="">
+      <a href="23. 【选修】Notebook + 练习：解释模型系数.html">23. 【选修】Notebook + 练习：解释模型系数</a>
+    </li>
+    <li class="">
+      <a href="24. 视频：特征工程与特征选择——第一部分.html">24. 视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="25. 录屏视频：特征工程与特征选择——第一部分.html">25. 录屏视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="26. Notebook + 练习：特征工程与特征选择.html">26. Notebook + 练习：特征工程与特征选择</a>
+    </li>
+    <li class="">
+      <a href="27. 视频：模型拟合.html">27. 视频：模型拟合</a>
+    </li>
+    <li class="">
+      <a href="28. 视频：交叉验证.html">28. 视频：交叉验证</a>
+    </li>
+    <li class="">
+      <a href="29. K 折交叉验证.html">29. K 折交叉验证</a>
+    </li>
+    <li class="">
+      <a href="30. 录屏视频：模型评估.html">30. 录屏视频：模型评估</a>
+    </li>
+    <li class="">
+      <a href="31. Notebook + 练习：案例研究 I.html">31. Notebook + 练习：案例研究 I</a>
+    </li>
+    <li class="">
+      <a href="32. 视频：复习.html">32. 视频：复习</a>
+    </li>
+    <li class="">
+      <a href="33. 文本：复习.html">33. 文本：复习</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">16. 文本：线性模型假设</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="模型假设及相应的解决方法">模型假设及相应的解决方法</h3>
+<p>之前的视频曾提到 <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf" rel="noopener noreferrer" target="_blank">统计学习简介</a> 一书，其中就提到了如下五个假设：</p>
+<ol>
+<li>因变量-自变量关系的非线性</li>
+<li>误差项的相关性</li>
+<li>非恒定方差和正态分布误差</li>
+<li>异常值/高杠杆点</li>
+<li>共线性</li>
+</ol>
+<p>本文总结了判断上述问题是否存在的方法以及相应的解决办法。这是统计学家面试时经常提出的问题，但该问题是否有实际意义取决于你创建模型的目的。在接下来的概念中，我们会更仔细地研究某些相关知识点，因为我觉得我们需要额外注意那些，但下方为你列出了各知识点的详尽介绍，我们先来仔细看看下文涉及的每一项。</p>
+<h4 id="线性">线性</h4>
+<p>线性是假设因变量和自变量之间真的存在可用线性模型解释的关系。如果线性假设不为真，那你的预测结果就不会很准确，此外，与系数有关的线性关系也就没什么用了。</p>
+<p>为了评估某段线性关系是否合理，一个很实用的方法是做预测值 <span class="mathquill ud-math">(\hat{y})</span> 的残差 <span class="mathquill ud-math">(y - \hat{y})</span> 图。如果图中出现多个曲线部分，那就意味着线性模型实际上可能并不拟合数据，自变量和因变量存在其它关系。创建非线性模型的办法有很多（甚至可以线性模型的形式来创建），其中几种办法会在本课后面的内容中提及。</p>
+<p>在本页底部的图片里，这些称为 <strong>偏差</strong> 模型。理想来说，我们想要的是像图片左上角残差图那样的随机散点图。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h4 id="相关误差">相关误差</h4>
+<p>如果我们是随时间变化来收集的数据（比如预测未来股价或利率），或数据与空间有关（如预测洪涝或干旱地区），那就很容易出现相关误差。通常，我们可以用过去数据点提供的信息（针对与时间有关的数据）或用相邻数据点提供的信息（针对与空间有关的数据）来提高预测结果。</p>
+<p>不考虑相关误差的主要问题在于：往往你会利用这一相关性，得到更好的未来事件预测数据或空间关联事件预测数据。</p>
+<p>要判断是否有相关误差，最常用的方法是观察收集数据的域。要是你不确定的话，你可以试试一个叫 <a href="https://en.wikipedia.org/wiki/Durbin%E2%80%93Watson_statistic" rel="noopener noreferrer" target="_blank">Durbin-Watson</a> 的检验方法，人们常用该测试来评估误差相关性是否造成问题。还有 <a href="http://www.statsref.com/HTML/index.html?arima.html" rel="noopener noreferrer" target="_blank">ARIMA 或 ARMA</a> 模型，人们常用这两个模型来利用误差相关性，以便做出更佳预测。</p>
+<h4 id="非恒定方差和正态分布误差">非恒定方差和正态分布误差</h4>
+<p>你预测的值不同，得到的预测值范围也不同，那就意味着方差不恒定。非恒定方差对预测好坏影响不大，但会导致置信区间和 p 值不准确，这种时候，在预测值接近实际值的那部分区域，系数的置信区间会太泛，而在预测值较远离实际值的区域则会太窄。</p>
+<p>通常来说，对数函数（或使用其它反应变量的变换方式）能够 “摆脱” 非恒定方差，而要选择合适的变换方式，我们一般会用 <a href="http://www.statisticshowto.com/box-cox-transformation/" rel="noopener noreferrer" target="_blank">Box-Cox</a>。</p>
+<p>用预测值的残差图也可以评估非恒定方差。在本页底部的图片中，非恒定方差的标签为 <strong>异方差</strong>。理想来说，我们要的是一个有异方差残差的无偏模型（其异方差残差在一定数值范围内保持不变）。</p>
+<p>虽然本文并不探讨残差的正态性，如果你想创建可靠的置信区间，正态性回归假设就十分重要了，更多相关信息详见 <a href="http://www.itl.nist.gov/div898/handbook/pri/section2/pri24.htm" rel="noopener noreferrer" target="_blank">这里</a>。</p>
+<h4 id="异常值杠杆点">异常值/杠杆点</h4>
+<p>异常值和杠杆点是远离数据正常趋势的点。这些点会对你的解造成很大的影响，在现实中，这些点甚至可能是错误的。如果从不同来源收集数据，你就可能在记录或收集过程中造成某些数据值出错。</p>
+<p>异常值也可能是准确真实的数据点，而不一定是测量或数据输入错误。在这种情况下，'修复'就会变得更为主观。要如何处理这些异常值往往取决于你的分析目的。线性模型，特别是使用最小二乘法的线性模型，比较容易受到影响，也就是说，大异常值可能会大幅度地左右我们的结果。当然，异常值也有一些解决技巧，也就是我们常说的 <strong>正则化</strong>。本课不会谈及这些技巧，但在 <a href="https://classroom.udacity.com/courses/ud120" rel="noopener noreferrer" target="_blank">机器学习纳米学位免费课程</a>中，我们对这些技巧做了粗略的介绍。</p>
+<p>而在宾夕法尼亚州立大学提供的完整回归课程里，就有特别长的篇幅在探讨杠杆点的问题，详见 <a href="https://onlinecourses.science.psu.edu/stat501/node/336" rel="noopener noreferrer" target="_blank">这里</a>。</p>
+<h4 id="共线性（多重共线性）">共线性（多重共线性）</h4>
+<p>如果我们的自变量彼此相关，就会出现多重共线性。多重共线性的一个主要问题在于：它会导致简单线性回归系数偏离我们想要的方向。</p>
+<p>要判断是否有多重共线性，最常见的办法是借助二变量图或 <strong>方差膨胀因子 (即 VIFs)</strong>。下一概念我们就要更深入地探讨多重共线性，因而在此不做赘述。</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/resid-plots.gif" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="17. 录屏视频：多重共线性与 VIF.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('16. 文本：线性模型假设')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.050 --> 00:00:02.050
+Depois deste vídeo,
+você treinará
+
+00:00:02.083 --> 00:00:04.200
+muito do que vimos nesta aula.
+
+00:00:04.233 --> 00:00:06.050
+Mas, neste vídeo,
+eu vou ensinar
+
+00:00:06.083 --> 00:00:08.800
+a criar um train_test_split rápido
+usando Scikit-learn.
+
+00:00:08.833 --> 00:00:10.700
+Aqui vemos a documentação
+
+00:00:10.733 --> 00:00:13.200
+para criar um conjunto de dados
+de treinamento e teste
+
+00:00:13.233 --> 00:00:14.333
+usando Scikit-learn.
+
+00:00:14.366 --> 00:00:19.150
+Neste vídeo, faremos
+apenas um train_test_split.
+
+00:00:19.183 --> 00:00:20.750
+Mas é comum, na prática,
+
+00:00:20.783 --> 00:00:22.550
+fazer um train_test_split,
+
+00:00:22.583 --> 00:00:26.000
+realizar validação cruzada
+nos dados de treinamento
+
+00:00:26.033 --> 00:00:28.950
+e usar dados de teste
+como um teste final.
+
+00:00:28.983 --> 00:00:32.400
+A documentação consta abaixo
+para sua referência.
+
+00:00:32.433 --> 00:00:35.800
+Primeiro vamos separar nossos dados
+em dados de treinamento e teste.
+
+00:00:40.100 --> 00:00:43.500
+Certo, aqui estão nossos dados
+e as bibliotecas necessárias.
+
+00:00:43.533 --> 00:00:45.350
+Vamos criar
+um train_test_split.
+
+00:00:46.900 --> 00:00:50.300
+Em essência,
+o que isso deve receber...
+
+00:00:50.333 --> 00:00:51.700
+Se olharmos na documentação,
+
+00:00:53.050 --> 00:00:56.850
+aqui embaixo...
+Ele recebe um X e um Y.
+
+00:00:56.883 --> 00:00:59.200
+Recebe seu X e seu Y,
+
+00:00:59.233 --> 00:01:03.350
+recebe o tamanho do teste,
+
+00:01:03.383 --> 00:01:06.800
+uma percentagem dos seus dados
+que você quer no conjunto,
+
+00:01:06.833 --> 00:01:08.700
+e recebe um estado aleatório.
+
+00:01:10.000 --> 00:01:13.050
+E isso é para que a separação
+que você obtém
+
+00:01:13.083 --> 00:01:17.900
+possa ser obtida por qualquer um,
+se você assim desejar.
+
+00:01:22.500 --> 00:01:25.700
+Devemos criar X e Y.
+
+00:01:25.733 --> 00:01:30.000
+Vou dizer "X = df",
+
+00:01:30.033 --> 00:01:34.700
+que se igualará a tudo
+que não é o preço.
+
+00:01:34.733 --> 00:01:37.150
+E não me interessa
+o ID da casa,
+
+00:01:37.183 --> 00:01:39.050
+então vou deixar de fora.
+
+00:01:44.700 --> 00:01:48.200
+Ótimo. Veja que temos
+uma resposta de treinamento
+
+00:01:48.233 --> 00:01:49.750
+e uma de teste,
+
+00:01:49.783 --> 00:01:53.300
+a resposta de treinamento
+e a resposta de teste,
+
+00:01:53.333 --> 00:01:56.800
+além de um conjunto de treinamento
+de recursos explicativos...
+
+00:01:57.850 --> 00:02:01.100
+e de um conjunto de teste
+de recursos explicativos.
+
+00:02:02.150 --> 00:02:04.500
+Isso é algo
+que você deve fazer imediatamente.
+
+00:02:04.533 --> 00:02:08.800
+Muitas vezes as pessoas fazem isso
+após a engenharia de recursos,
+
+00:02:08.833 --> 00:02:10.750
+como você viu anteriormente.
+
+00:02:10.783 --> 00:02:13.650
+Subtraem a média
+e dividem pelo desvio padrão
+
+00:02:13.683 --> 00:02:16.350
+antes de separar.
+Isso é trapaça.
+
+00:02:16.383 --> 00:02:18.950
+Usar essa informação
+do conjunto de teste
+
+00:02:18.983 --> 00:02:23.150
+é usar algo que você não tem
+no seu conjunto de treinamento.
+
+00:02:23.183 --> 00:02:27.450
+Se você tirar a média dos seus dados
+antes de separá-los,
+
+00:02:27.483 --> 00:02:30.400
+essa média será baseada
+em informações do conjunto de teste,
+
+00:02:30.433 --> 00:02:32.950
+que você não deveria ter
+nos seus dados de treinamento.
+
+00:02:32.983 --> 00:02:35.950
+Agora tentaremos ajustar
+modelos lineares a este conjunto.
+
+00:02:35.983 --> 00:02:37.350
+Usaremos Scikit-learn,
+
+00:02:37.383 --> 00:02:39.700
+o que será um pouco diferente
+do que você viu
+
+00:02:39.733 --> 00:02:42.050
+nas partes anteriores,
+usando modelos estatísticos.
+
+00:02:42.083 --> 00:02:45.800
+Voltemos à documentação.
+Veja que dá para importar assim.
+
+00:02:45.833 --> 00:02:48.800
+Aqui, especificamos
+que queremos "intercept=True",
+
+00:02:48.833 --> 00:02:50.350
+o que já é o padrão,
+
+00:02:50.383 --> 00:02:54.250
+então não precisamos informar
+o intercept, como fizemos antes.
+
+00:02:54.283 --> 00:02:57.900
+Eles usam o pré-processamento,
+como vimos antes.
+
+00:02:57.933 --> 00:03:00.400
+E este "normalize",
+se especificarmos como "True",
+
+00:03:00.433 --> 00:03:01.950
+o que não é o padrão,
+
+00:03:01.983 --> 00:03:05.950
+evita que seja preciso pré-processar
+seus dados antecipadamente.
+
+00:03:05.983 --> 00:03:07.850
+Depois, há esta parte aqui.
+
+00:03:07.883 --> 00:03:10.000
+Em geral,
+instanciamos nosso modelo
+
+00:03:10.033 --> 00:03:12.500
+de regressão linear antes.
+
+00:03:12.533 --> 00:03:16.150
+Vou chamar isto de "lm".
+E usarei os padrões,
+
+00:03:16.183 --> 00:03:18.750
+sejam lá quais forem.
+
+00:03:18.783 --> 00:03:21.600
+Instanciamos, ajustamos,
+
+00:03:21.633 --> 00:03:24.950
+e, analisando a documentação,
+vemos que, para o ajuste,
+
+00:03:24.983 --> 00:03:27.900
+devemos passar o X e o Y.
+
+00:03:27.933 --> 00:03:30.350
+Em geral,
+ajustamos nosso modelo
+
+00:03:30.383 --> 00:03:32.300
+com base
+nos dados de treinamento.
+
+00:03:34.000 --> 00:03:36.050
+E isto é algo
+que será armazenado
+
+00:03:36.083 --> 00:03:37.850
+naquela função "lm".
+
+00:03:37.883 --> 00:03:40.800
+Quem tem traquejo
+com programação orientada a objetos
+
+00:03:40.833 --> 00:03:45.600
+sabe que isso é armazenado
+como informação-atributo em "lm".
+
+00:03:45.633 --> 00:03:48.550
+O que geralmente fazemos
+é prever e dar um conceito.
+
+00:03:48.583 --> 00:03:50.050
+A previsão...
+
+00:03:50.083 --> 00:03:52.400
+nós fazemos
+só nos dados de teste,
+
+00:03:52.433 --> 00:03:57.650
+e depois damos o conceito
+de quanto nossa previsão dos testes
+
+00:03:57.683 --> 00:03:59.900
+corresponde aos valores
+do teste verdadeiro.
+
+00:03:59.933 --> 00:04:04.500
+Instanciamos, ajustamos,
+prevemos e damos um conceito.
+
+00:04:06.200 --> 00:04:09.150
+Normalmente prevemos
+sobre o conjunto de teste
+
+00:04:10.150 --> 00:04:13.250
+e damos um conceito
+sobre o conjunto de teste.
+
+00:04:13.283 --> 00:04:15.250
+Também podemos usar o padrão.
+
+00:04:15.283 --> 00:04:18.800
+O conceito padrão
+é um valor R-squared.
+
+00:04:18.833 --> 00:04:20.800
+Podemos ver como ele se sai.
+
+00:04:20.833 --> 00:04:25.450
+Perceba que, usando o nativo,
+ele pega o X e o Y.
+
+00:04:26.650 --> 00:04:29.700
+Não precisamos fazer isso
+
+00:04:29.733 --> 00:04:31.950
+se não usarmos
+algum dos outros,
+
+00:04:31.983 --> 00:04:34.450
+o que depende
+do que você quer.
+
+00:04:34.483 --> 00:04:36.000
+Se não quiser
+um valor R-squared,
+
+00:04:36.033 --> 00:04:37.900
+a forma que usaremos aqui
+não funcionará.
+
+00:04:39.750 --> 00:04:42.700
+Ele sabe qual é o modelo
+depois de ajustar,
+
+00:04:42.733 --> 00:04:46.650
+usa estes dados de teste X
+
+00:04:46.683 --> 00:04:48.100
+e estes dados de teste Y
+
+00:04:48.133 --> 00:04:50.800
+junto com o que preveria
+a partir do modelo
+
+00:04:50.833 --> 00:04:52.300
+e retorna o conceito.
+
+00:04:52.333 --> 00:04:56.300
+Bem, ainda precisamos
+criar as variáveis fictícias.
+
+00:04:56.333 --> 00:04:58.950
+Tentamos passar
+todas essas coisas...
+
+00:04:58.983 --> 00:05:00.900
+Você poderia passar
+as variáveis fictícias,
+
+00:05:00.933 --> 00:05:03.950
+mas vamos simplificar.
+
+00:05:03.983 --> 00:05:07.850
+Vamos nos livrar de "style"
+e de "neighborhood".
+
+00:05:09.950 --> 00:05:13.350
+Vamos passar só "area".
+
+00:05:15.150 --> 00:05:18.050
+Ótimo. Veja que o conceito
+dos nossos dados de teste
+
+00:05:18.083 --> 00:05:20.200
+é de aproximadamente 68%
+
+00:05:20.233 --> 00:05:23.150
+usando "área",
+"quartos" e "banheiros".
+
+00:05:23.183 --> 00:05:26.200
+Em geral, usar o conceito
+dos seus dados de teste
+
+00:05:26.233 --> 00:05:29.700
+é muito preferível a usar
+o conceito de dados de treinamento.
+
+00:05:29.733 --> 00:05:33.700
+Mostra como seu modelo se comporta
+frente a dados inéditos.
+
+00:05:33.733 --> 00:05:37.750
+Isso é algo que podemos fazer
+mudando estas variáveis aqui,
+
+00:05:37.783 --> 00:05:40.900
+vendo quais modelos se dão melhor
+com os dados de teste
+
+00:05:40.933 --> 00:05:44.000
+e usando estes modelos na prática,
+futuramente.
+

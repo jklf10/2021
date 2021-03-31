@@ -1,0 +1,57 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.450 --> 00:00:03.150
+VALIDAÇÃO CRUZADA
+
+00:00:03.183 --> 00:00:04.400
+No vídeo anterior,
+
+00:00:04.433 --> 00:00:07.500
+falei sobre como adicionar
+cada vez mais variáveis ao modelo
+
+00:00:07.533 --> 00:00:10.350
+melhora os valores
+de R-squared e MSC,
+
+00:00:10.383 --> 00:00:13.200
+o que nos trouxe à ideia
+de validação cruzada,
+
+00:00:13.233 --> 00:00:15.900
+na qual treinamos
+nosso modelo de regressão
+
+00:00:15.933 --> 00:00:18.800
+em um subconjunto de dados
+chamado "dados de treinamento"
+
+00:00:18.833 --> 00:00:20.850
+e testamos a performance
+do modelo
+
+00:00:20.883 --> 00:00:23.050
+no que chamamos
+de conjunto de teste.
+
+00:00:23.083 --> 00:00:24.500
+Na validação cruzada,
+
+00:00:24.533 --> 00:00:27.150
+queremos assegurar
+que o modelo se generaliza bem
+
+00:00:27.183 --> 00:00:29.650
+realizando
+diversas separações.
+
+00:00:29.683 --> 00:00:33.150
+Sebastian mostrará
+como funciona passo a passo
+
+00:00:33.183 --> 00:00:35.500
+e depois nós tentaremos
+no Python.
+

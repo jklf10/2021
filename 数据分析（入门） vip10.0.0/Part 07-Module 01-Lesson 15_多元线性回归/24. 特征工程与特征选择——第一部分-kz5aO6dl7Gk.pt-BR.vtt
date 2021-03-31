@@ -1,0 +1,143 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.700 --> 00:00:02.700
+ENGENHARIA
+E SELEÇÃO DE RECURSOS
+
+00:00:02.733 --> 00:00:04.600
+Quando construímos um modelo,
+
+00:00:04.633 --> 00:00:08.300
+seja de regressão
+ou um modelo mais avançado,
+
+00:00:08.333 --> 00:00:13.400
+um dos maiores ganhos é alcançado
+através da engenharia
+
+00:00:13.433 --> 00:00:15.000
+e da seleção de recursos.
+
+00:00:15.033 --> 00:00:16.550
+O que isso significa?
+
+00:00:16.583 --> 00:00:19.300
+Bem, selecionar um recurso
+trata-se de escolher
+
+00:00:19.333 --> 00:00:22.500
+quais variáveis explicativas
+usar em seu modelo.
+
+00:00:22.533 --> 00:00:24.400
+Já vimos alguns motivos
+
+00:00:24.433 --> 00:00:27.900
+para manter ou remover
+dadas variáveis,
+
+00:00:27.933 --> 00:00:31.200
+como nível de significância
+associado com o coeficiente
+
+00:00:31.233 --> 00:00:33.450
+ou os VIFs.
+
+00:00:33.483 --> 00:00:35.950
+Outra forma de considerar
+quais recursos manter
+
+00:00:35.983 --> 00:00:39.150
+é via validação cruzada
+ou regularização.
+
+00:00:39.183 --> 00:00:42.050
+Falaremos de validação cruzada
+brevemente nesta aula,
+
+00:00:42.083 --> 00:00:43.950
+mas um curso Udacity
+adicional e gratuito
+
+00:00:43.983 --> 00:00:46.200
+está disponível
+nas notas do instrutor.
+
+00:00:47.100 --> 00:00:48.850
+Já a engenharia de recursos
+
+00:00:48.883 --> 00:00:52.350
+dá conta de preencher ou remover
+linhas com valores faltantes
+
+00:00:52.383 --> 00:00:56.250
+ou criar novas colunas,
+reescalando os recursos originais,
+
+00:00:56.283 --> 00:01:00.500
+além de transformar
+texto e imagem em números
+
+00:01:00.533 --> 00:01:03.900
+e criar variáveis fictícias,
+como vimos anteriormente.
+
+00:01:03.933 --> 00:01:06.450
+Quando se realizam certos tipos
+de engenharia de recurso,
+
+00:01:06.483 --> 00:01:07.800
+como a normalização
+
+00:01:07.833 --> 00:01:10.150
+ou o uso de logaritmos
+e valores exponenciais,
+
+00:01:10.183 --> 00:01:13.500
+dentre outras transformações
+que veremos adiante,
+
+00:01:13.533 --> 00:01:16.750
+os coeficientes de regressão
+podem tornar-se ininterpretáveis.
+
+00:01:16.783 --> 00:01:19.600
+Então não sou favorável a isso
+em modelos de regressão.
+
+00:01:19.633 --> 00:01:21.600
+Mas outros tipos
+de engenharia de recursos,
+
+00:01:21.633 --> 00:01:25.400
+como criar variáveis fictícias
+ou trabalhar com dados ausentes
+
+00:01:25.433 --> 00:01:27.250
+são imperativos para o sucesso
+
+00:01:27.283 --> 00:01:29.850
+e a interpretação
+dos resultados do seu modelo.
+
+00:01:29.883 --> 00:01:32.250
+Se seu maior interesse
+forem as previsões,
+
+00:01:32.283 --> 00:01:36.100
+você pode escolher realizar
+transformações significativas.
+
+00:01:36.133 --> 00:01:38.750
+Isso o ajudará a prever melhor
+as respostas.
+
+00:01:38.783 --> 00:01:42.600
+Lembrando que outro curso gratuito
+da Udacity consta das notas abaixo,
+
+00:01:42.633 --> 00:01:44.550
+junto com recursos extras.
+

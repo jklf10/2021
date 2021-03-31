@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.799 --> 00:00:05.480
+There's a pretty large debate amongst
+
+00:00:05.480 --> 00:00:08.750
+different methods for model evaluation in terms of metrics.
+
+00:00:08.750 --> 00:00:12.304
+Common metrics include R-squared and MSE.
+
+00:00:12.304 --> 00:00:14.449
+There are also metrics called AIC,
+
+00:00:14.449 --> 00:00:16.835
+BIC and Mallow's CP.
+
+00:00:16.835 --> 00:00:20.105
+And there are so many other metrics that I won't even mention,
+
+00:00:20.105 --> 00:00:23.089
+that'll evaluate whether or not your regression model
+
+00:00:23.089 --> 00:00:25.934
+or any other model fits the data well.
+
+00:00:25.934 --> 00:00:29.119
+The values for these metrics depend on the scaling in the data,
+
+00:00:29.120 --> 00:00:32.390
+and the variables that you have available to predict the response.
+
+00:00:32.390 --> 00:00:37.560
+In my experience, people tend to use the R-squared or MSE a lot in practice.
+
+00:00:37.560 --> 00:00:41.060
+But really, these can be misleading in terms of model fit
+
+00:00:41.060 --> 00:00:44.840
+if we only validate what we're doing on the same set of data.
+
+00:00:44.840 --> 00:00:48.500
+It turns out that no matter what variable we add into the model,
+
+00:00:48.500 --> 00:00:50.369
+these will both improve.
+
+00:00:50.369 --> 00:00:54.244
+That is the R-squared value will increase and the MSE will decrease.
+
+00:00:54.244 --> 00:00:56.524
+So, how do we know if adding a variable
+
+00:00:56.524 --> 00:00:59.649
+actually improves how well our model fits the data?
+
+00:00:59.649 --> 00:01:02.750
+There's a very useful technique known as Cross-Validation,
+
+00:01:02.750 --> 00:01:05.629
+to predict from exactly this idea of adding
+
+00:01:05.629 --> 00:01:09.329
+more and more variables and thinking your model is always improving.
+
+00:01:09.329 --> 00:01:11.030
+In the upcoming concepts,
+
+00:01:11.030 --> 00:01:13.790
+you will learn how Cross-Validation works and
+
+00:01:13.790 --> 00:01:16.520
+you'll put this to practice using Scikit-Learn's built
+

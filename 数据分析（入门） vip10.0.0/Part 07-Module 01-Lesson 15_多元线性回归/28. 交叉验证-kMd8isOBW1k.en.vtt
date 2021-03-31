@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.450 --> 00:00:04.530
+In the last video,
+
+00:00:04.530 --> 00:00:07.710
+I discussed how simply adding more and more variables to our model,
+
+00:00:07.710 --> 00:00:10.379
+will lead to better R-squared in MSC values,
+
+00:00:10.380 --> 00:00:13.245
+which introduced this idea of cross validation.
+
+00:00:13.244 --> 00:00:15.149
+In cross validation, we train
+
+00:00:15.150 --> 00:00:18.810
+our regression model on a subset of the data, called the training data.
+
+00:00:18.809 --> 00:00:22.859
+And we test how well the model performs on what is known as a test set.
+
+00:00:22.859 --> 00:00:26.070
+In cross validation, we try to make sure that our model
+
+00:00:26.070 --> 00:00:29.910
+generalize as well by performing these splits multiple times.
+
+00:00:29.910 --> 00:00:33.189
+Sebastian will show you how this works step by step,
+
+00:00:33.189 --> 00:00:35.000
+and then we'll try it out in Python.
+

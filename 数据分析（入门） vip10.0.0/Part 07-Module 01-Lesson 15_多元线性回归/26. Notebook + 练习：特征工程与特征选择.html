@@ -1,0 +1,405 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook + 练习：特征工程与特征选择</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>多元线性回归</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：多元线性回归.html">02. 视频：多元线性回归</a>
+    </li>
+    <li class="">
+      <a href="03. 录屏视频：拟合多元线性回归模型.html">03. 录屏视频：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="04. Notebook + 练习：拟合多元线性回归模型.html">04. Notebook + 练习：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="05. 录屏视频 + 文本：多元线性回归的工作原理是什么？.html">05. 录屏视频 + 文本：多元线性回归的工作原理是什么？</a>
+    </li>
+    <li class="">
+      <a href="06. 视频：多元线性回归的模型结果.html">06. 视频：多元线性回归的模型结果</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：解释多元线性回归的系数.html">07. 练习：解释多元线性回归的系数</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：虚拟变量.html">08. 视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="09. 文本：虚拟变量.html">09. 文本：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="10. 虚拟变量.html">10. 虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="11. 录屏视频：虚拟变量.html">11. 录屏视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="12. Notebook + 练习：虚拟变量.html">12. Notebook + 练习：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="13. 视频：复习虚拟变量.html">13. 视频：复习虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="14. 【选修】 Notebook + 练习：其它编码.html">14. 【选修】 Notebook + 练习：其它编码</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：潜在问题.html">15. 视频：潜在问题</a>
+    </li>
+    <li class="">
+      <a href="16. 文本：线性模型假设.html">16. 文本：线性模型假设</a>
+    </li>
+    <li class="">
+      <a href="17. 录屏视频：多重共线性与 VIF.html">17. 录屏视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="18. 视频：多重共线性与 VIF.html">18. 视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="19. Notebook + 练习：多重共线性与 VIF.html">19. Notebook + 练习：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="20. 【选修】视频：高阶项.html">20. 【选修】视频：高阶项</a>
+    </li>
+    <li class="">
+      <a href="21. 【选修】录屏视频 + 文本：高阶项.html">21. 【选修】录屏视频 + 文本：高阶项</a>
+    </li>
+    <li class="">
+      <a href="22. 【选修】视频：解释交互项.html">22. 【选修】视频：解释交互项</a>
+    </li>
+    <li class="">
+      <a href="23. 【选修】Notebook + 练习：解释模型系数.html">23. 【选修】Notebook + 练习：解释模型系数</a>
+    </li>
+    <li class="">
+      <a href="24. 视频：特征工程与特征选择——第一部分.html">24. 视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="25. 录屏视频：特征工程与特征选择——第一部分.html">25. 录屏视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="26. Notebook + 练习：特征工程与特征选择.html">26. Notebook + 练习：特征工程与特征选择</a>
+    </li>
+    <li class="">
+      <a href="27. 视频：模型拟合.html">27. 视频：模型拟合</a>
+    </li>
+    <li class="">
+      <a href="28. 视频：交叉验证.html">28. 视频：交叉验证</a>
+    </li>
+    <li class="">
+      <a href="29. K 折交叉验证.html">29. K 折交叉验证</a>
+    </li>
+    <li class="">
+      <a href="30. 录屏视频：模型评估.html">30. 录屏视频：模型评估</a>
+    </li>
+    <li class="">
+      <a href="31. Notebook + 练习：案例研究 I.html">31. Notebook + 练习：案例研究 I</a>
+    </li>
+    <li class="">
+      <a href="32. 视频：复习.html">32. 视频：复习</a>
+    </li>
+    <li class="">
+      <a href="33. 文本：复习.html">33. 文本：复习</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">26. Notebook + 练习：特征工程与特征选择</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>运行线性模型时，你会得到哪些结果？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1511490816904" name="469567" id="a1511490816904">
+        <label for="a1511490816904"><p>出错了，因为缺乏数据，所以算法不能收敛。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511490869985" name="469567" id="a1511490869985">
+        <label for="a1511490869985"><p>出错了，这是列中字符串引起的。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511490888318" name="469567" id="a1511490888318">
+        <label for="a1511490888318"><p>成功了，我们得到了结果。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    出错了，因为缺乏数据，所以算法不能收敛。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>填充好缺失值后，下列哪项说法最符合线性模型的结果？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1511562071102" name="469568" id="a1511562071102">
+        <label for="a1511562071102"><p>出错了，因为缺乏数据，所以算法不能收敛。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511562402676" name="469568" id="a1511562402676">
+        <label for="a1511562402676"><p>出错了，这是列中字符串引起的。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511562403552" name="469568" id="a1511562403552">
+        <label for="a1511562403552"><p>成功了，我们得到了结果。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    成功了，我们得到了结果。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>正则化数据后，观察结果，根据描述选出相应的值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>3</p></button>
+  <button class="btn btn-primary"><p>1.4</p></button>
+  <button class="btn btn-primary"><p>0</p></button>
+  <button class="btn btn-primary"><p>1</p></button>
+  <button class="btn btn-primary"><p>2.2</p></button>
+  <button class="btn btn-primary"><p>2</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>在 'x4' 中，所有返回值都是 <strong>_</strong>，这是因为每个值都是一样的 （所以都等于平均值）。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>列 'x3' 中，最大的值为 <strong><em><strong>，意味着它比本列的平均值大 </strong></em></strong> 个标准差。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>列 'x2' 中，有 <strong>_</strong> 个值等于平均值，我们都知道，这是因为最后的数据框里有这么多个 0。</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>在 'x4' 中，所有返回值都是 <strong>_</strong>，这是因为每个值都是一样的 （所以都等于平均值）。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>列 'x3' 中，最大的值为 <strong><em><strong>，意味着它比本列的平均值大 </strong></em></strong> 个标准差。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>2.2</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>列 'x2' 中，有 <strong>_</strong> 个值等于平均值，我们都知道，这是因为最后的数据框里有这么多个 0。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>2</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="27. 视频：模型拟合.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('26. Notebook + 练习：特征工程与特征选择')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

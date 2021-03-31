@@ -1,0 +1,103 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.909 --> 00:00:04.719
+When building any sort of model,
+
+00:00:04.719 --> 00:00:06.144
+whether it be regression,
+
+00:00:06.144 --> 00:00:08.369
+or a more advanced machine learning model,
+
+00:00:08.369 --> 00:00:11.139
+some of the largest gains in building a model are
+
+00:00:11.140 --> 00:00:14.980
+frequently achieved due to feature engineering and feature selection.
+
+00:00:14.980 --> 00:00:18.609
+So, what does this mean? Well feature selection is
+
+00:00:18.609 --> 00:00:22.565
+about choosing which explanatory variables you should use in your model.
+
+00:00:22.565 --> 00:00:25.329
+And we already saw some reasons of why we might
+
+00:00:25.329 --> 00:00:28.479
+keep or remove particular variables such as,
+
+00:00:28.480 --> 00:00:31.240
+the significance level associated with the coefficient,
+
+00:00:31.239 --> 00:00:33.384
+or we could look at VIFs.
+
+00:00:33.384 --> 00:00:39.134
+Another way to consider which features to keep is via cross validation or regularisation.
+
+00:00:39.134 --> 00:00:42.399
+We will discuss cross validation quickly in this class but
+
+00:00:42.399 --> 00:00:46.614
+an additional free Udacity course is linked in the instructor notes below.
+
+00:00:46.615 --> 00:00:49.600
+And in terms of feature engineering this includes
+
+00:00:49.600 --> 00:00:52.420
+filling in or removing rows with missing values,
+
+00:00:52.420 --> 00:00:56.260
+or creating new columns with different scalings of the original features,
+
+00:00:56.259 --> 00:01:00.445
+and also doing things like turning text and images into numbers,
+
+00:01:00.445 --> 00:01:02.109
+or creating dummy variables,
+
+00:01:02.109 --> 00:01:03.894
+which you saw in an earlier section.
+
+00:01:03.895 --> 00:01:06.505
+When performing certain types of feature engineering,
+
+00:01:06.504 --> 00:01:10.224
+like standardizing or using logs and exponential values,
+
+00:01:10.224 --> 00:01:13.599
+or even other transformations that you'll see in the next concept,
+
+00:01:13.599 --> 00:01:16.869
+these can lead to regression coefficients being uninterpretable.
+
+00:01:16.870 --> 00:01:20.079
+So, I'm not a huge fan of this in regression models but,
+
+00:01:20.079 --> 00:01:23.424
+other types of feature engineering like creating dummy variables,
+
+00:01:23.424 --> 00:01:26.439
+or working with missing values are imperative to
+
+00:01:26.439 --> 00:01:29.980
+the success and interpretation of your model results.
+
+00:01:29.980 --> 00:01:32.335
+If you're most interested in prediction,
+
+00:01:32.334 --> 00:01:36.339
+you might choose to do some crazy scalings and transformations.
+
+00:01:36.340 --> 00:01:39.040
+These will help you better predict the response.
+
+00:01:39.040 --> 00:01:42.745
+Again, another free course in Udacity is in the link below,
+
+00:01:42.745 --> 00:01:44.260
+with some additional resources.
+

@@ -1,0 +1,387 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>虚拟变量</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>多元线性回归</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：多元线性回归.html">02. 视频：多元线性回归</a>
+    </li>
+    <li class="">
+      <a href="03. 录屏视频：拟合多元线性回归模型.html">03. 录屏视频：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="04. Notebook + 练习：拟合多元线性回归模型.html">04. Notebook + 练习：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="05. 录屏视频 + 文本：多元线性回归的工作原理是什么？.html">05. 录屏视频 + 文本：多元线性回归的工作原理是什么？</a>
+    </li>
+    <li class="">
+      <a href="06. 视频：多元线性回归的模型结果.html">06. 视频：多元线性回归的模型结果</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：解释多元线性回归的系数.html">07. 练习：解释多元线性回归的系数</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：虚拟变量.html">08. 视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="09. 文本：虚拟变量.html">09. 文本：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="10. 虚拟变量.html">10. 虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="11. 录屏视频：虚拟变量.html">11. 录屏视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="12. Notebook + 练习：虚拟变量.html">12. Notebook + 练习：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="13. 视频：复习虚拟变量.html">13. 视频：复习虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="14. 【选修】 Notebook + 练习：其它编码.html">14. 【选修】 Notebook + 练习：其它编码</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：潜在问题.html">15. 视频：潜在问题</a>
+    </li>
+    <li class="">
+      <a href="16. 文本：线性模型假设.html">16. 文本：线性模型假设</a>
+    </li>
+    <li class="">
+      <a href="17. 录屏视频：多重共线性与 VIF.html">17. 录屏视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="18. 视频：多重共线性与 VIF.html">18. 视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="19. Notebook + 练习：多重共线性与 VIF.html">19. Notebook + 练习：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="20. 【选修】视频：高阶项.html">20. 【选修】视频：高阶项</a>
+    </li>
+    <li class="">
+      <a href="21. 【选修】录屏视频 + 文本：高阶项.html">21. 【选修】录屏视频 + 文本：高阶项</a>
+    </li>
+    <li class="">
+      <a href="22. 【选修】视频：解释交互项.html">22. 【选修】视频：解释交互项</a>
+    </li>
+    <li class="">
+      <a href="23. 【选修】Notebook + 练习：解释模型系数.html">23. 【选修】Notebook + 练习：解释模型系数</a>
+    </li>
+    <li class="">
+      <a href="24. 视频：特征工程与特征选择——第一部分.html">24. 视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="25. 录屏视频：特征工程与特征选择——第一部分.html">25. 录屏视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="26. Notebook + 练习：特征工程与特征选择.html">26. Notebook + 练习：特征工程与特征选择</a>
+    </li>
+    <li class="">
+      <a href="27. 视频：模型拟合.html">27. 视频：模型拟合</a>
+    </li>
+    <li class="">
+      <a href="28. 视频：交叉验证.html">28. 视频：交叉验证</a>
+    </li>
+    <li class="">
+      <a href="29. K 折交叉验证.html">29. K 折交叉验证</a>
+    </li>
+    <li class="">
+      <a href="30. 录屏视频：模型评估.html">30. 录屏视频：模型评估</a>
+    </li>
+    <li class="">
+      <a href="31. Notebook + 练习：案例研究 I.html">31. Notebook + 练习：案例研究 I</a>
+    </li>
+    <li class="">
+      <a href="32. 视频：复习.html">32. 视频：复习</a>
+    </li>
+    <li class="">
+      <a href="33. 文本：复习.html">33. 文本：复习</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. 虚拟变量</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>如果你想往回归模型里添加一个分类变量，说明路灯的颜色：<strong>红色</strong>、 <strong>黄色</strong> 以及 <strong>绿色</strong>，那你要往线性回归模型里添加多少个虚拟变量列呢？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512497823173" name="469525" id="a1512497823173">
+        <label for="a1512497823173"><p>1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512497827143" name="469525" id="a1512497827143">
+        <label for="a1512497827143"><p>2</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512497828713" name="469525" id="a1512497828713">
+        <label for="a1512497828713"><p>3</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512497830262" name="469525" id="a1512497830262">
+        <label for="a1512497830262"><p>4</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    2
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>如果有这么个分类变量，变量有两个水平，分别为 <strong>是</strong> 和 <strong>不是</strong>，请问要使用该变量的话，需要往线性模型里添加多少个虚拟变量呢？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512498195812" name="469526" id="a1512498195812">
+        <label for="a1512498195812"><p>1</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512498259173" name="469526" id="a1512498259173">
+        <label for="a1512498259173"><p>2</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512498262498" name="469526" id="a1512498262498">
+        <label for="a1512498262498"><p>3</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    1
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>想象你是餐厅老板，餐厅的评级有：很好、好、还行、差、很差。你想根据这个评级来了解小费情况，所以建立了一个线性模型，那么请问 <strong>你的模型里总共有多少个系数？</strong></p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1512497862913" name="469527" id="a1512497862913">
+        <label for="a1512497862913"><p>3</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512498004853" name="469527" id="a1512498004853">
+        <label for="a1512498004853"><p>4</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512498006299" name="469527" id="a1512498006299">
+        <label for="a1512498006299"><p>5</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1512498007801" name="469527" id="a1512498007801">
+        <label for="a1512498007801"><p>6</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    5
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>关于我们加入多元线性回归模型的虚拟变量，下列哪些说法是正确的？其中， X 代表之前录屏视频定义的 X 矩阵。<strong>请勾选所有正确选项。</strong></p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1512499139642" name="469528" id="a1512499139642">
+      <label for="a1512499139642"><p>要加入 X 矩阵的虚拟变量数总是等于相应分类变量水平数减 1 的值。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512499151556" name="469528" id="a1512499151556">
+      <label for="a1512499151556"><p>之所以要舍弃一个虚拟变量，是为了保证所有列都是线性独立的。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512499160805" name="469528" id="a1512499160805">
+      <label for="a1512499160805"><p>之所以要舍弃一个虚拟变量，是为了保证 X'X 的数量积是可逆的。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1512499169738" name="469528" id="a1512499169738">
+      <label for="a1512499169738"><p>之所以要舍弃一个虚拟变量，是为了保证 X 是满秩矩阵。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>要加入 X 矩阵的虚拟变量数总是等于相应分类变量水平数减 1 的值。</li>
+      <li>之所以要舍弃一个虚拟变量，是为了保证所有列都是线性独立的。</li>
+      <li>之所以要舍弃一个虚拟变量，是为了保证 X'X 的数量积是可逆的。</li>
+      <li>之所以要舍弃一个虚拟变量，是为了保证 X 是满秩矩阵。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. 录屏视频：虚拟变量.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. 虚拟变量')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.350 --> 00:00:03.800
+Há vários métodos de engenharia
+dos dados coletados.
+
+00:00:03.833 --> 00:00:05.300
+Seja criando variáveis fictícias
+
+00:00:05.333 --> 00:00:08.200
+ou termos de ordem mais elevada,
+como você fez anteriormente,
+
+00:00:08.233 --> 00:00:11.000
+dentre diversas
+outras técnicas,
+
+00:00:11.033 --> 00:00:14.500
+de preencher dados ausentes
+a transformar seus dados.
+
+00:00:14.533 --> 00:00:17.500
+Scikit-learn e Pandas
+são duas bibliotecas ótimas
+
+00:00:17.533 --> 00:00:19.350
+para engenharia de recursos.
+
+00:00:19.383 --> 00:00:21.950
+No pré-processamento
+da Scikit-learn...
+
+00:00:21.983 --> 00:00:24.100
+Scikit-learn,
+importar pré-processamento...
+
+00:00:24.133 --> 00:00:26.750
+Dá para ver uma escala,
+
+00:00:26.783 --> 00:00:29.950
+tem algo chamado
+"StandardScaler",
+
+00:00:30.181 --> 00:00:36.000
+"MinMaxScaler",
+"MaxAbsScaler",
+
+00:00:36.033 --> 00:00:38.950
+"QuantileTransformer",
+
+00:00:38.983 --> 00:00:41.450
+"Normalização", "Binarização",
+
+00:00:41.483 --> 00:00:43.500
+"Codificando
+recursos categóricos",
+
+00:00:43.533 --> 00:00:47.000
+"Inserindo dados ausentes",
+"Transformações personalizadas"...
+
+00:00:47.800 --> 00:00:49.400
+Vamos colocar alguns
+em prática
+
+00:00:49.433 --> 00:00:52.900
+usando um conjunto de dados pequeno
+só para você ver como funciona.
+
+00:00:52.933 --> 00:00:55.750
+Aqui eu criei o DataFrame...
+
+00:00:55.783 --> 00:00:58.000
+Se olharmos aqui,
+parece com este.
+
+00:00:58.033 --> 00:01:01.850
+Tem a resposta,
+x1, x2, x3, x4, x5,
+
+00:01:01.883 --> 00:01:04.000
+alguns dados ausentes,
+
+00:01:04.033 --> 00:01:06.750
+números negativos e positivos,
+
+00:01:06.783 --> 00:01:08.800
+uma coluna
+só com números "1"...
+
+00:01:09.550 --> 00:01:13.350
+Perceba que a maioria das técnicas
+tem um "fit_transform"
+
+00:01:13.383 --> 00:01:16.050
+que realiza um ajuste
+no conjunto de dados
+
+00:01:16.083 --> 00:01:19.700
+e o transforma
+usando a transformação descrita.
+
+00:01:19.733 --> 00:01:23.550
+Essa é uma forma comum
+de usar muitas funções Scikit-learn.
+
+00:01:23.583 --> 00:01:25.400
+O motivo para usar
+essas técnicas
+
+00:01:25.433 --> 00:01:28.150
+é criar modelos mais robustos
+
+00:01:28.183 --> 00:01:30.550
+e não influenciáveis
+pela escala dos seus dados.
+
+00:01:30.583 --> 00:01:34.300
+A regressão é uma técnica
+muito impactada
+
+00:01:34.333 --> 00:01:37.000
+por pontos
+que distam muito uns dos outros.
+
+00:01:37.033 --> 00:01:40.450
+Isso melhora as suas previsões
+a partir dos seus modelos,
+
+00:01:40.483 --> 00:01:42.600
+mas muda suas interpretações,
+
+00:01:42.633 --> 00:01:44.750
+assim como termos
+de ordem mais elevada
+
+00:01:44.783 --> 00:01:47.200
+mudam suas interpretações.
+
+00:01:47.233 --> 00:01:50.850
+Vamos experimentar alguns
+para você entender como funciona.
+
+00:01:50.883 --> 00:01:53.250
+O Pandas tem muitos recursos
+bem legais,
+
+00:01:53.283 --> 00:01:57.000
+como você pode ver
+na documentação,
+
+00:01:57.033 --> 00:01:58.650
+para preencher dados ausentes.
+
+00:01:59.750 --> 00:02:02.200
+Veja que, usando "df.mean",
+
+00:02:02.233 --> 00:02:04.800
+o padrão é preencher
+os dados ausentes
+
+00:02:04.833 --> 00:02:06.800
+usando a média das colunas.
+
+00:02:07.900 --> 00:02:10.450
+Então estes números 1
+são a média...
+
+00:02:10.483 --> 00:02:12.800
+dos quatro restantes,
+aqui embaixo,
+
+00:02:12.833 --> 00:02:16.150
+e para preencher estes aqui
+usou-se a média
+
+00:02:16.183 --> 00:02:19.300
+dos valores não ausentes
+desta coluna.
+
+00:02:20.050 --> 00:02:21.850
+Então aqui,
+
+00:02:21.883 --> 00:02:24.500
+onde havia dados ausentes
+na coluna categórica,
+
+00:02:24.533 --> 00:02:26.500
+não obtivemos nada
+para preencher,
+
+00:02:26.533 --> 00:02:29.950
+pois calcular
+a média de letras
+
+00:02:29.983 --> 00:02:31.650
+não faz o menor sentido.
+
+00:02:31.683 --> 00:02:33.900
+Vamos tentar
+alguns de pré-processamento.
+
+00:02:33.933 --> 00:02:36.650
+Podemos usar "scale".
+
+00:02:36.683 --> 00:02:40.450
+Queremos lidar
+somente com as colunas X,
+
+00:02:40.483 --> 00:02:44.750
+então vamos inserir "x2".
+
+00:02:45.550 --> 00:02:48.250
+Veja que isso nos deu
+uma escala diferente,
+
+00:02:48.283 --> 00:02:49.500
+usando "min" e "max",
+
+00:02:49.533 --> 00:02:52.900
+e a documentação diz
+como foi calculado
+
+00:02:52.933 --> 00:02:54.100
+e por que usar.
+
+00:02:54.133 --> 00:02:56.950
+"A motivação da reescala
+inclui robustez
+
+00:02:56.983 --> 00:02:59.300
+a desvios padrões pequenos
+de recursos
+
+00:02:59.333 --> 00:03:03.800
+e a preservação dos atributos '0'
+em um conjunto de dados esparsos."
+
+00:03:03.833 --> 00:03:06.150
+Essa documentação é ótima
+
+00:03:06.183 --> 00:03:08.850
+e dá muitos exemplos
+de funcionamento.
+

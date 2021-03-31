@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.765
+There are many ways you might want to engineer the data you've collected.
+
+00:00:03.765 --> 00:00:06.509
+Whether it's creating dummy variables or higher order terms,
+
+00:00:06.509 --> 00:00:08.219
+as you did earlier in this lesson,
+
+00:00:08.220 --> 00:00:12.945
+or one of a number of other techniques from filling in missing values,
+
+00:00:12.945 --> 00:00:14.560
+to scaling your data.
+
+00:00:14.560 --> 00:00:19.504
+Scikit-learn and Pandas are two great libraries for feature engineering.
+
+00:00:19.504 --> 00:00:21.910
+So in the pre-processing for scikit-learn,
+
+00:00:21.910 --> 00:00:26.664
+scikit-learn import pre-processing, and then you can see there's like a scale,
+
+00:00:26.664 --> 00:00:30.064
+and then there's this thing called Standard scaler,
+
+00:00:30.065 --> 00:00:36.109
+there's MinMax scaler, MaxAbs Scaler,
+
+00:00:36.109 --> 00:00:40.905
+quantile transformer, normalization, binarization,
+
+00:00:40.905 --> 00:00:47.954
+encoding categorical features, imputing missing values, custom transformations.
+
+00:00:47.954 --> 00:00:49.979
+Let's put a few of these to practice using
+
+00:00:49.979 --> 00:00:53.079
+a small data set just so you can see how they work.
+
+00:00:53.079 --> 00:00:55.899
+So here I've created the data frame,
+
+00:00:55.899 --> 00:00:57.149
+and if we take a look at this,
+
+00:00:57.149 --> 00:00:58.210
+you can see it looks like this,
+
+00:00:58.210 --> 00:01:00.810
+so I have a response X1, X2, X3,
+
+00:01:00.810 --> 00:01:03.852
+X4, X5, you can see I have some missing values,
+
+00:01:03.851 --> 00:01:05.519
+I have some negative numbers,
+
+00:01:05.519 --> 00:01:08.959
+some positive numbers, this column has only ones in it.
+
+00:01:08.959 --> 00:01:13.859
+Notice most of these techniques have a fit transform that you
+
+00:01:13.859 --> 00:01:19.920
+can fit on your data set and then it'll transform it using the transformation described.
+
+00:01:19.920 --> 00:01:23.820
+This is a common way of using many of the scikit-learn functions.
+
+00:01:23.819 --> 00:01:25.589
+The reason for performing these techniques,
+
+00:01:25.590 --> 00:01:28.290
+is often to create models that are more robust,
+
+00:01:28.290 --> 00:01:30.600
+and are not influenced by the scale of your data.
+
+00:01:30.599 --> 00:01:33.209
+Regression is one technique that is
+
+00:01:33.209 --> 00:01:37.129
+impacted quite heavily by points that are far away from other points.
+
+00:01:37.129 --> 00:01:40.479
+This can improve your predictions from the models that you make.
+
+00:01:40.480 --> 00:01:42.674
+But it does change your interpretations,
+
+00:01:42.674 --> 00:01:47.420
+similar to the way that higher order terms changed in their interpretations.
+
+00:01:47.420 --> 00:01:50.879
+Now let's try a few of these out so you can get a handle on how they work.
+
+00:01:50.879 --> 00:01:53.399
+So Pandas has a lot of really nice features,
+
+00:01:53.400 --> 00:01:56.760
+which you can see here in the documentation,
+
+00:01:56.760 --> 00:01:59.185
+for filling in missing values.
+
+00:01:59.185 --> 00:02:03.219
+So, you could see by using DF mean the default was
+
+00:02:03.219 --> 00:02:07.495
+to fill in the missing values using the mean for the columns.
+
+00:02:07.495 --> 00:02:12.830
+So the ones here were the mean of their remaining four ones down here,
+
+00:02:12.830 --> 00:02:16.190
+and then filling in these ones with the mean of
+
+00:02:16.189 --> 00:02:19.997
+basically the values that weren't missing in this particular column.
+
+00:02:19.997 --> 00:02:24.649
+Then, over here where we had missing values in the categorical column,
+
+00:02:24.650 --> 00:02:27.260
+we actually didn't get anything to fill in because taking
+
+00:02:27.259 --> 00:02:31.709
+the mean of letters doesn't really make any sense.
+
+00:02:31.710 --> 00:02:34.805
+Let's try some of the pre-processing now so,
+
+00:02:34.805 --> 00:02:40.515
+we could do something like scale and we need to be dealing with only the X columns,
+
+00:02:40.514 --> 00:02:45.169
+so let's use X2.
+
+00:02:45.169 --> 00:02:49.669
+So you can see that that gave us a little bit different scaling using the min and max,
+
+00:02:49.669 --> 00:02:51.814
+and then the documentation can tell you exactly
+
+00:02:51.814 --> 00:02:54.289
+how it was calculated or why you might use it.
+
+00:02:54.289 --> 00:02:58.664
+The motivation for scaling includes a robust to very small standard deviations of
+
+00:02:58.664 --> 00:03:03.919
+features and for preserving the zero entries and sparse data.
+
+00:03:03.919 --> 00:03:05.599
+The documentation for this stuff is really
+
+00:03:05.599 --> 00:03:09.000
+great and they try to give you examples of how they work here.
+

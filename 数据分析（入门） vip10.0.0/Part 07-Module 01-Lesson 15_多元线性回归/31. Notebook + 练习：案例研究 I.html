@@ -1,0 +1,686 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notebook + 练习：案例研究 I</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>多元线性回归</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. 视频：简介.html">01. 视频：简介</a>
+    </li>
+    <li class="">
+      <a href="02. 视频：多元线性回归.html">02. 视频：多元线性回归</a>
+    </li>
+    <li class="">
+      <a href="03. 录屏视频：拟合多元线性回归模型.html">03. 录屏视频：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="04. Notebook + 练习：拟合多元线性回归模型.html">04. Notebook + 练习：拟合多元线性回归模型</a>
+    </li>
+    <li class="">
+      <a href="05. 录屏视频 + 文本：多元线性回归的工作原理是什么？.html">05. 录屏视频 + 文本：多元线性回归的工作原理是什么？</a>
+    </li>
+    <li class="">
+      <a href="06. 视频：多元线性回归的模型结果.html">06. 视频：多元线性回归的模型结果</a>
+    </li>
+    <li class="">
+      <a href="07. 练习：解释多元线性回归的系数.html">07. 练习：解释多元线性回归的系数</a>
+    </li>
+    <li class="">
+      <a href="08. 视频：虚拟变量.html">08. 视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="09. 文本：虚拟变量.html">09. 文本：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="10. 虚拟变量.html">10. 虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="11. 录屏视频：虚拟变量.html">11. 录屏视频：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="12. Notebook + 练习：虚拟变量.html">12. Notebook + 练习：虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="13. 视频：复习虚拟变量.html">13. 视频：复习虚拟变量</a>
+    </li>
+    <li class="">
+      <a href="14. 【选修】 Notebook + 练习：其它编码.html">14. 【选修】 Notebook + 练习：其它编码</a>
+    </li>
+    <li class="">
+      <a href="15. 视频：潜在问题.html">15. 视频：潜在问题</a>
+    </li>
+    <li class="">
+      <a href="16. 文本：线性模型假设.html">16. 文本：线性模型假设</a>
+    </li>
+    <li class="">
+      <a href="17. 录屏视频：多重共线性与 VIF.html">17. 录屏视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="18. 视频：多重共线性与 VIF.html">18. 视频：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="19. Notebook + 练习：多重共线性与 VIF.html">19. Notebook + 练习：多重共线性与 VIF</a>
+    </li>
+    <li class="">
+      <a href="20. 【选修】视频：高阶项.html">20. 【选修】视频：高阶项</a>
+    </li>
+    <li class="">
+      <a href="21. 【选修】录屏视频 + 文本：高阶项.html">21. 【选修】录屏视频 + 文本：高阶项</a>
+    </li>
+    <li class="">
+      <a href="22. 【选修】视频：解释交互项.html">22. 【选修】视频：解释交互项</a>
+    </li>
+    <li class="">
+      <a href="23. 【选修】Notebook + 练习：解释模型系数.html">23. 【选修】Notebook + 练习：解释模型系数</a>
+    </li>
+    <li class="">
+      <a href="24. 视频：特征工程与特征选择——第一部分.html">24. 视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="25. 录屏视频：特征工程与特征选择——第一部分.html">25. 录屏视频：特征工程与特征选择——第一部分</a>
+    </li>
+    <li class="">
+      <a href="26. Notebook + 练习：特征工程与特征选择.html">26. Notebook + 练习：特征工程与特征选择</a>
+    </li>
+    <li class="">
+      <a href="27. 视频：模型拟合.html">27. 视频：模型拟合</a>
+    </li>
+    <li class="">
+      <a href="28. 视频：交叉验证.html">28. 视频：交叉验证</a>
+    </li>
+    <li class="">
+      <a href="29. K 折交叉验证.html">29. K 折交叉验证</a>
+    </li>
+    <li class="">
+      <a href="30. 录屏视频：模型评估.html">30. 录屏视频：模型评估</a>
+    </li>
+    <li class="">
+      <a href="31. Notebook + 练习：案例研究 I.html">31. Notebook + 练习：案例研究 I</a>
+    </li>
+    <li class="">
+      <a href="32. 视频：复习.html">32. 视频：复习</a>
+    </li>
+    <li class="">
+      <a href="33. 文本：复习.html">33. 文本：复习</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">31. Notebook + 练习：案例研究 I</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div class="jumbotron">
+  <h3>Code</h3>
+
+  <p class="lead">If you need a code on the <a href="https://github.com/udacity"
+    target="_blank">https://github.com/udacity</a>. </p>
+
+  </ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>根据描述选出相应的值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>0%</p></button>
+  <button class="btn btn-primary"><p>77.95</p></button>
+  <button class="btn btn-primary"><p>69.03</p></button>
+  <button class="btn btn-primary"><p>7%</p></button>
+  <button class="btn btn-primary"><p>0</p></button>
+  <button class="btn btn-primary"><p>0</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>数值</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>数据集的缺失值数。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>数据集的分类变量数。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>数据集的年龄中位数。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>观察 <code>CHAS</code> 一列，沿着查尔斯河的住宅占多大比例？</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>数值</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>数据集的年龄中位数。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>77.95</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>观察 <code>CHAS</code> 一列，沿着查尔斯河的住宅占多大比例？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>7%</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>数据集的缺失值数。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>数据集的分类变量数。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>数据集的缺失值数。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>数据集的分类变量数。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>0</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>观察每对观测数据的相关性，根据描述选出相应的值。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>RAD</p></button>
+  <button class="btn btn-primary"><p>No</p></button>
+  <button class="btn btn-primary"><p>RM</p></button>
+  <button class="btn btn-primary"><p>INDUS</p></button>
+  <button class="btn btn-primary"><p>Maybe</p></button>
+  <button class="btn btn-primary"><p>LSTAT</p></button>
+  <button class="btn btn-primary"><p>Yes</p></button>
+  <button class="btn btn-primary"><p>DIS</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>描述</p>
+      </th>
+      <th>
+        <p>变量</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>这个变量与 <code>房价中位数</code>（MedianHomePrice）的线性相关性最强。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>这个变量与 <code>TAX</code> 的相关性最强。</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>如果你想用其它所有的变量来预测 <code>房价中位数</code>，你觉得多重共线性会是问题吗？</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>这个变量与 <code>NOX</code> 的相关性最强。</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>描述</p>
+        </th>
+        <th>
+          <p>变量</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>这个变量与 <code>TAX</code> 的相关性最强。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>RAD</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>这个变量与 <code>房价中位数</code>（MedianHomePrice）的线性相关性最强。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>LSTAT</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>如果你想用其它所有的变量来预测 <code>房价中位数</code>，你觉得多重共线性会是问题吗？</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>Yes</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>这个变量与 <code>NOX</code> 的相关性最强。</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>DIS</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><strong>QUIZ QUESTION:</strong>: <p>观察由线性模型得出的 p 值，标注下列变量为具统计 <code>显著性</code> 或 <code>无显著性</code>。</p></p>
+  <p><strong>ANSWER CHOICES:</strong></p>
+  <button class="btn btn-primary"><p>无显著性</p></button>
+  <button class="btn btn-primary"><p>显著性</p></button>
+  <button class="btn btn-primary"><p>显著性</p></button>
+  <button class="btn btn-primary"><p>无显著性</p></button>
+
+  <br><br>
+
+  <table class="table">
+    <tr class="thead-dark table-hover">
+      <th>
+        <p>变量</p>
+      </th>
+      <th>
+        <p>统计显著性</p>
+      </th>
+    </tr>
+
+    <tr>
+      <td><p>B</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>NOX</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>INDUS</p></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><p>AGE</p></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+
+    <table class="table">
+      <tr class="thead-dark table-hover">
+        <th>
+          <p>变量</p>
+        </th>
+        <th>
+          <p>统计显著性</p>
+        </th>
+      </tr>
+
+      <tr>
+        <td>
+          <p>INDUS</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>无显著性</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>AGE</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>无显著性</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>B</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>显著性</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>NOX</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>显著性</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>B</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>显著性</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>NOX</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>显著性</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>INDUS</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>无显著性</p></button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>AGE</p>
+        </td>
+        <td>
+            <button class="btn btn-primary"><p>无显著性</p></button>
+        </td>
+      </tr>
+    </table>
+  </details>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>假设你真的很在乎 <code>RAD</code> 和 <code>INDUS</code> 变量，而且你认为最好把模型的所有 VIF 值都限制在 4 以内，那么你会删除哪些变量呢？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1511658770544" name="469580" id="a1511658770544">
+        <label for="a1511658770544"><p>你需要删除 <code>NOX</code>、 <code>TAX</code>、 <code>RAD</code> 和 <code>INDUS</code>，因为这四个变量的 VIF 都大于 4。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511658773444" name="469580" id="a1511658773444">
+        <label for="a1511658773444"><p>你肯定需要删除 <code>TAX</code> 和 <code>RAD</code>，删掉后另外两个 VIF 就会变小。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511658908462" name="469580" id="a1511658908462">
+        <label for="a1511658908462"><p>你需要删除 <code>TAX</code> 和 <code>NOX</code>，删掉后另外两个 VIF 就会变小。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511658935696" name="469580" id="a1511658935696">
+        <label for="a1511658935696"><p>我们可以试着一次删除一个变量，看看删掉哪个能最大程度地减小 VIF。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    你需要删除 `TAX` 和 `NOX`，删掉后另外两个 VIF 就会变小。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>把第二个模型的结果同第一个模型的进行比较，选出下列所有正确的说法。</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1511659407829" name="469581" id="a1511659407829">
+      <label for="a1511659407829"><p>现在第二个模型的所有变量都具有显著性。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1511659458123" name="469581" id="a1511659458123">
+      <label for="a1511659458123"><p>根据 p 值，我们应该删除 <code>RAD</code>，但保留其它变量。</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1511659492195" name="469581" id="a1511659492195">
+      <label for="a1511659492195"><p>绝对是第一个模型好些，因为它的决定系数更高。</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>根据 p 值，我们应该删除 `RAD`，但保留其它变量。</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>这三个模型中，哪个对测试数据的预测效果更好？</p></legend>
+    </fieldset>
+
+      <div>
+        <input type="radio" value="a1511664175981" name="469582" id="a1511664175981">
+        <label for="a1511664175981"><p>使用所有变量的全模型。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511664227447" name="469582" id="a1511664227447">
+        <label for="a1511664227447"><p>删除了 ''AGE''、''NOX'' 和 ''TAX''的模型。</p></label>
+      </div>
+      <div>
+        <input type="radio" value="a1511664279105" name="469582" id="a1511664279105">
+        <label for="a1511664279105"><p>删除了 ''AGE''、''NOX''、''TAX'' 和 ''RAD''的模型。</p></label>
+      </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    使用所有变量的全模型。
+  </details>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="32. 视频：复习.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('31. Notebook + 练习：案例研究 I')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

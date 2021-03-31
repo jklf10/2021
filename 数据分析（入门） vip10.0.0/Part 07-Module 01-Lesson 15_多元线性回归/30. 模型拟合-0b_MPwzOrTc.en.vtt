@@ -1,0 +1,307 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.740
+Following this video, you will get
+
+00:00:01.740 --> 00:00:04.419
+some practice with much of what we have done in this lesson.
+
+00:00:04.419 --> 00:00:06.449
+But in this video, we are going to cover how to
+
+00:00:06.450 --> 00:00:08.974
+make a quick train to split using scikit-learn.
+
+00:00:08.974 --> 00:00:11.519
+Here, you can see the documentation for creating
+
+00:00:11.519 --> 00:00:14.504
+a training and testing dataset using scikit-learn.
+
+00:00:14.505 --> 00:00:19.323
+In this video, we will be doing just a single train test split.
+
+00:00:19.323 --> 00:00:20.879
+But often in practice,
+
+00:00:20.879 --> 00:00:24.750
+you'll do a train test split and then you will perform cross validation
+
+00:00:24.750 --> 00:00:29.109
+on the training data and you will use the test data as a final test.
+
+00:00:29.109 --> 00:00:32.604
+The documentation is provided below for your reference as well.
+
+00:00:32.604 --> 00:00:39.140
+First, let's split our data into training and testing data.
+
+00:00:39.140 --> 00:00:43.644
+Okay, so here's our data and the necessary libraries.
+
+00:00:43.645 --> 00:00:46.105
+Let's create a train test split.
+
+00:00:46.104 --> 00:00:50.464
+And essentially, what this should take is,
+
+00:00:50.465 --> 00:00:52.425
+if we look at the docs,
+
+00:00:52.424 --> 00:00:56.799
+see down here, it should take an X and a Y.
+
+00:00:56.799 --> 00:00:59.334
+So, it takes your X and your Y.
+
+00:00:59.335 --> 00:01:03.640
+It takes the test size value so,
+
+00:01:03.640 --> 00:01:05.890
+this is a percentage of your data that you want to be in
+
+00:01:05.890 --> 00:01:09.805
+the test set and then it takes a random state.
+
+00:01:09.805 --> 00:01:12.880
+And that's just so that the random split that you
+
+00:01:12.879 --> 00:01:16.209
+get is something that you can make sure other people can get,
+
+00:01:16.209 --> 00:01:19.679
+if that's what you are trying to do.
+
+00:01:20.569 --> 00:01:25.809
+And we should create those X's and Y's,
+
+00:01:25.810 --> 00:01:30.790
+so I'm just going to say X equals df and it basically
+
+00:01:30.790 --> 00:01:36.935
+equals everything that's not the price and I don't actually care about that house ID,
+
+00:01:36.935 --> 00:01:41.885
+so I'm going to leave it out as well.
+
+00:01:41.885 --> 00:01:49.930
+Great, now you can see we have a training response and a testing response.
+
+00:01:49.930 --> 00:01:53.145
+So the training response and a testing response.
+
+00:01:53.144 --> 00:01:55.500
+As well as a training set of
+
+00:01:55.500 --> 00:02:01.704
+explanatory features and a testing set of explanatory features.
+
+00:02:01.704 --> 00:02:04.784
+This is something you should do right away.
+
+00:02:04.784 --> 00:02:09.030
+Oftentimes people will do this after they do feature engineering,
+
+00:02:09.030 --> 00:02:10.784
+like you saw in an earlier concept,
+
+00:02:10.784 --> 00:02:15.289
+like subtracting the mean and dividing by the standard deviation before splitting.
+
+00:02:15.289 --> 00:02:16.394
+But this is cheating,
+
+00:02:16.395 --> 00:02:19.050
+because using that information from the test set,
+
+00:02:19.050 --> 00:02:23.415
+is using something that you don't actually have in your training set.
+
+00:02:23.414 --> 00:02:27.479
+Great, if you take the mean of your data before you split it,
+
+00:02:27.479 --> 00:02:29.909
+then that mean is based on information on
+
+00:02:29.909 --> 00:02:33.090
+the test set that you shouldn't actually have in your training data.
+
+00:02:33.090 --> 00:02:36.050
+Now, we're going to try fitting a few linear models to this data set.
+
+00:02:36.050 --> 00:02:37.500
+We'll be using scikit-learn,
+
+00:02:37.500 --> 00:02:39.509
+which is going to be a little bit different than what you
+
+00:02:39.509 --> 00:02:42.189
+saw in the previous parts using stat's models.
+
+00:02:42.189 --> 00:02:45.949
+We end up at the docs and you can see we can import it like this.
+
+00:02:45.949 --> 00:02:50.474
+Here, we can specify that we want a true intercept and actually that's the default.
+
+00:02:50.474 --> 00:02:54.454
+So, we don't have to give it that intercept that we've been doing in the previous parts.
+
+00:02:54.455 --> 00:02:56.490
+And you'll notice that they use the pre-processing,
+
+00:02:56.490 --> 00:02:59.025
+like we saw in the previous part, in this normalize,
+
+00:02:59.025 --> 00:03:00.569
+if we specify this is true,
+
+00:03:00.569 --> 00:03:02.789
+by default it doesn't do that but that gets
+
+00:03:02.789 --> 00:03:06.114
+away from having to pre-process your data ahead of time.
+
+00:03:06.115 --> 00:03:07.985
+And then, there are these parts down here.
+
+00:03:07.985 --> 00:03:12.525
+In general, what we do is we instantiate our linear regression model first.
+
+00:03:12.525 --> 00:03:14.189
+So, I'm just going to call this lm.
+
+00:03:14.189 --> 00:03:16.349
+Okay, so I'll use all the defaults.
+
+00:03:16.349 --> 00:03:18.604
+I'll just use whatever the default values are.
+
+00:03:18.604 --> 00:03:23.549
+So, we instantiate it and then we fit it and if we go back and look at the docs,
+
+00:03:23.550 --> 00:03:25.043
+you can see using the fit,
+
+00:03:25.043 --> 00:03:27.825
+we should pass in the X and then the Y.
+
+00:03:27.824 --> 00:03:33.174
+And in general, we fit our model based on the training data.
+
+00:03:33.175 --> 00:03:38.060
+And then that's something that's actually going to be stored within the lm function.
+
+00:03:38.060 --> 00:03:40.895
+So, if you're comfortable with object oriented programming,
+
+00:03:40.895 --> 00:03:45.620
+basically this is stored as attribute information within lm.
+
+00:03:45.620 --> 00:03:48.629
+And then usually, what we do is we predict and then we score.
+
+00:03:48.629 --> 00:03:53.780
+So, the prediction is something where we predict only on the test data and then we score
+
+00:03:53.780 --> 00:04:00.026
+on how well our test predictions match our actual test values.
+
+00:04:00.026 --> 00:04:02.284
+We instantiate, we fit,
+
+00:04:02.284 --> 00:04:05.314
+we predict, and then we score.
+
+00:04:05.314 --> 00:04:08.439
+And actually, we usually predict on
+
+00:04:08.439 --> 00:04:13.400
+the test set and then we'll score on our task set as well.
+
+00:04:13.400 --> 00:04:15.265
+We can also just use the default,
+
+00:04:15.264 --> 00:04:18.964
+so the default score here is an R-squared value.
+
+00:04:18.964 --> 00:04:20.929
+So, we can see how well it does.
+
+00:04:20.930 --> 00:04:23.360
+And you'll notice if we use the built in,
+
+00:04:23.360 --> 00:04:26.480
+it just takes the X and the Y.
+
+00:04:26.480 --> 00:04:29.825
+And so we don't actually have to do this,
+
+00:04:29.824 --> 00:04:32.104
+if we're not using one of the other ones,
+
+00:04:32.105 --> 00:04:34.610
+which it just depends on what you want.
+
+00:04:34.610 --> 00:04:36.170
+Like if you don't want an R-squared value,
+
+00:04:36.170 --> 00:04:38.819
+the way that we're going to do it here doesn't work.
+
+00:04:38.819 --> 00:04:44.709
+Right. So, it knows what the model is once it's fit and then basically it uses
+
+00:04:44.709 --> 00:04:48.269
+this X test data and this Y test data
+
+00:04:48.269 --> 00:04:52.449
+along with what it would predict from the model here and it gives you a score back.
+
+00:04:52.449 --> 00:04:56.495
+So, you still have to build your dummy variables, right.
+
+00:04:56.495 --> 00:04:59.069
+So, we just tried to pass all of these things in,
+
+00:04:59.069 --> 00:05:01.079
+so you could just pass in the dummy variables.
+
+00:05:01.079 --> 00:05:03.774
+But let's make this simple.
+
+00:05:03.774 --> 00:05:08.904
+We'll get rid of style and we'll get rid of the neighborhood.
+
+00:05:08.904 --> 00:05:14.209
+And we'll just pass the area here.
+
+00:05:14.209 --> 00:05:17.349
+Great, and you can see that our score on
+
+00:05:17.350 --> 00:05:21.410
+the test data is approximately 68 percent using the area,
+
+00:05:21.410 --> 00:05:23.035
+the bedrooms, and the bathrooms.
+
+00:05:23.035 --> 00:05:26.245
+In general, using your score from the test data
+
+00:05:26.245 --> 00:05:29.899
+is much preferred to just using the score from a training dataset.
+
+00:05:29.899 --> 00:05:33.814
+It shows how well your model performs on new data it hasn't seen.
+
+00:05:33.814 --> 00:05:38.529
+This is something that we could do by changing these variables here and seeing
+
+00:05:38.529 --> 00:05:40.974
+which models perform best on the test data
+
+00:05:40.975 --> 00:05:44.000
+and then using that model in practice moving forward.
+
