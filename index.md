@@ -1,1 +1,0 @@
-<a href="数据分析（入门） vip10.0.0/index.html"><strong>数据分析入门VIP</a>
